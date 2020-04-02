@@ -1,0 +1,57 @@
+@import '../../scss/vars.scss';
+
+.code-box {
+  width: 100%;
+  background-color: var(--rc-color--500);
+  border-radius: $border-radius;
+}
+
+.code-box-header {
+  padding: 1rem 2rem;
+  border-bottom: 1px dashed var(--rc-color--400);
+}
+
+.code-box-demo {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.code-box-description {
+  padding: 1rem 2rem;
+
+  pre {
+    font-size: 0.9rem;
+  }
+}
+
+.code-box-description.--hidden {
+  display: none;
+}
+
+.code-box-guide {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+
+  &.--hidden {
+    display: none;
+  }
+
+  &.--expanded {
+    .code-box-code {
+      display: block;
+    }
+  }
+}
+
+.code-box-collapse-code-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+.code-box-code {
+  display: none;
+  font-size: 0.9rem;
+  font-family: monospace;
+}

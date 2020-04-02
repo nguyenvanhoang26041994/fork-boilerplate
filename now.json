@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "rc-components",
+  "builds": [{
+    "src": "package.json",
+    "use": "@now/static-build",
+    "config": { "distDir": "dist" }
+  }],
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/(.*)", "destination": "/index.html"
+    }
+  ]
+}
