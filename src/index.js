@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import { Workbox } from 'workbox-window';
 import App from './App';
 
-import './scss/begin.scss';
-import 'rc-neumorphism/src/scss/neumorphism.scss';
+require('rc-neumorphism/lib/rc-neumorphism.css');
 
 ReactDOM.render(<App />, document.getElementById('app'));
 

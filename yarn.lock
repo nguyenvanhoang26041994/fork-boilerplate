@@ -6193,7 +6193,7 @@ node-releases@^1.1.50:
   dependencies:
     semver "^6.3.0"
 
-node-sass@^4.13.0:
+node-sass@^4.13.0, node-sass@^4.13.1:
   version "4.13.1"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.13.1.tgz#9db5689696bb2eec2c32b98bfea4c7a2e992d0a3"
   integrity sha512-TTWFx+ZhyDx1Biiez2nB0L3YrCZ/8oHagaDalbuBSlqXgUPsdkUSzJsVxeDO9LtPB49+Fh3WQl3slABo6AotNw==
@@ -7773,12 +7773,13 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-rc-neumorphism@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/rc-neumorphism/-/rc-neumorphism-1.3.0.tgz#5e797580adb2152855621e266a59b2481d953579"
-  integrity sha512-xSdy6TL8A0Vi1Pi7zVqBpKYZtMzBLnXfK2b1DtVxi+N5FB4ZImOUMYGCSE9hk4t0bJPE7INX63938s3BHTtKQg==
+rc-neumorphism@1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/rc-neumorphism/-/rc-neumorphism-1.7.1.tgz#9b3022f9d48e37061e658adf74bd8a36f1f0449b"
+  integrity sha512-R12cuB75GezqbW3qMc5y6LhWq19Jk9JiVg2hig/DBSzMnXXAdm7a2fgg0LdysJHkWcaLQekH8209gqBBQ7RmVg==
   dependencies:
     classnames "^2.2.6"
+    node-sass "^4.13.1"
     prop-types "^15.7.2"
     react "^16.9.0"
     react-dom "^16.9.0"
