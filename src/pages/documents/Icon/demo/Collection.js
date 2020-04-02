@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon, Tooltip } from '@/components';
+import list from '../../../../../rc-neumorphism/src/components/Icon/svg';
 
 require('./Collection.scss');
 
@@ -16,9 +17,9 @@ const IconBox = ({ name }) => {
 const Demo = () => {
   return (
     <div className="flex flex-wrap">
-      {/* {Object.keys(list).map(key => (
+      {Object.keys(list).map(key => (
         <IconBox name={key} key={key} />
-      ))} */}
+      ))}
     </div>
   );
 };
