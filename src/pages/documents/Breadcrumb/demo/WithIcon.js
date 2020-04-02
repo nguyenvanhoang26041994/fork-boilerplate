@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb, Icon } from 'rc-neumorphism';
+import { Breadcrumb, Icon } from '@/components';
 
 const Demo = () => {
   return (

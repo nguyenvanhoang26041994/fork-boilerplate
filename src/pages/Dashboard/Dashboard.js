@@ -4,7 +4,7 @@ import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
 import LeftSidebar from './LeftSidebar';
 import TopNavigation from './TopNavigation';
 import loadable from '../../utils/loadable';
-import { Breadcrumb, Icon } from 'rc-neumorphism';
+import { Breadcrumb, Icon } from '@/components';
 
 const CheckboxDocument = loadable(() => import('../documents/Checkbox'));
 const RadioDocument = loadable(() => import('../documents/Radio'));

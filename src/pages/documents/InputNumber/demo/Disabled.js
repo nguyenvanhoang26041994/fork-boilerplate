@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputNumber } from 'rc-neumorphism';
+import { InputNumber } from '@/components';
 
 const Demo = () => {
   return (

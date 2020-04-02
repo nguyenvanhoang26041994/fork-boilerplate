@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Icon } from 'rc-neumorphism';
+import { Carousel, Icon } from '@/components';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

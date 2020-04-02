@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-import { Badge } from 'rc-neumorphism';
+import { Badge } from '@/components';
 
 const FancyBox = ({
   size = '50px',

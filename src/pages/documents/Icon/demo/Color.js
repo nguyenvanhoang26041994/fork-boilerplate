@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from 'rc-neumorphism';
+import { Icon } from '@/components';
 
 const Demo = () => {
   return (

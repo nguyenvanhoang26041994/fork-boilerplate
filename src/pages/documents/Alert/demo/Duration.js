@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Button, helper } from 'rc-neumorphism';
+import { Button, helper } from '@/components';
 
 const Demo = () => {
   const onOpen5 = useCallback(() => {

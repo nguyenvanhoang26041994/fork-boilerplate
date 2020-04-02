@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-import { Switch } from 'rc-neumorphism';
+import { Switch } from '@/components';
 
 require('./DarkModeToggle.scss');
 

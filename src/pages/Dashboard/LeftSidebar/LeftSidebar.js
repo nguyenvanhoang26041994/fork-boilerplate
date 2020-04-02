@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import cn from 'classnames';
 import { useHistory, useLocation } from 'react-router-dom';
 
-import { Icon, Menu } from 'rc-neumorphism';
+import { Icon, Menu } from '@/components';
 
 require('./LeftSidebar.scss');
 

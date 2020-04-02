@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Tabs } from 'rc-neumorphism';
+import { Tabs } from '@/components';
 
 const Description = ({ content }) => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Checkbox } from 'rc-neumorphism';
+import { Checkbox } from '@/components';
 
 const Demo = () => {
   const [checked, setChecked] = useState(false);

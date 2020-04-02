@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Password } from 'rc-neumorphism';
+import { Password } from '@/components';
 
 const Demo = () => {
   const [value, setValue] = useState('');

@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Rater } from 'rc-neumorphism';
+import { Rater } from '@/components';
 
 const Demo = () => {
   const [star, setStar] = useState(1);

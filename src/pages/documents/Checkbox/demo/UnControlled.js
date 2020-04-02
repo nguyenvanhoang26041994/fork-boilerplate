@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox } from 'rc-neumorphism';
+import { Checkbox } from '@/components';
 
 const Demo = () => {
   return (

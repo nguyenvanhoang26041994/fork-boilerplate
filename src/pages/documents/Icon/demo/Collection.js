@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Tooltip } from 'rc-neumorphism';
+import { Icon, Tooltip } from '@/components';
 
 require('./Collection.scss');
 

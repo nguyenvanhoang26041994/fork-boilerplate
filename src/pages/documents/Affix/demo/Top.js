@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Affix } from 'rc-neumorphism';
+import { Button, Affix } from '@/components';
 
 const Demo = () => {
   return (

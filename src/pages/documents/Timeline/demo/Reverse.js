@@ -1,5 +1,5 @@
 import React from 'react';
-import { Timeline, Icon } from 'rc-neumorphism';
+import { Timeline, Icon } from '@/components';
 
 const NotificationBox = ({ requester, time }) => {
   return (

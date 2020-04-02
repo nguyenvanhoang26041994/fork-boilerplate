@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stepper } from 'rc-neumorphism';
+import { Stepper } from '@/components';
 
 const Demo = () => {
   return (

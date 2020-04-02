@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Badge } from 'rc-neumorphism';
+import { Badge } from '@/components';
 
 const FancyBox = ({ size }) => (
   <div
@@ -28,7 +28,7 @@ const Demo = () => {
 
 Demo.code = `
 import React, { useState, useEffect } from 'react';
-import { Badge } from 'rc-neumorphism';
+import { Badge } from '@/components';
 
 const FancyBox = ({ size }) => (
   <div

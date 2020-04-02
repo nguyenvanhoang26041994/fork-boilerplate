@@ -1,5 +1,5 @@
 import React from 'react';
-import { Anchor } from 'rc-neumorphism';
+import { Anchor } from '@/components';
 
 const Link = ({ id, children }) => (
   <a className="px-5" id={id} style={{ height: '150px'}}>

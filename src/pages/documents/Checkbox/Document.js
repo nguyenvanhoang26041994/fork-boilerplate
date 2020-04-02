@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from 'rc-neumorphism';
+import { Icon } from '@/components';
 import Codebox from '../../../others-component/Codebox';
 
 import UnControlled from './demo/UnControlled';

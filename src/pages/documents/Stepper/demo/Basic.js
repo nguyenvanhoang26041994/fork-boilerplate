@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Stepper, ButtonGroup, Button } from 'rc-neumorphism';
+import { Stepper, ButtonGroup, Button } from '@/components';
 
 const Demo = () => {
   const [activeStep, setActiveStep] = useState(0);

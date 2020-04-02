@@ -16,6 +16,11 @@ module.exports = (options) => ({
   mode: options.mode,
   entry: options.entry,
   output: options.output,
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '../src/'),
+    },
+  },
   module: {
     rules: [
       {

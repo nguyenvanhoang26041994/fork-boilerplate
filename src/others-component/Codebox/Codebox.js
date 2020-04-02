@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import cn from 'classnames';
-import { Icon, Divider } from 'rc-neumorphism';
+import { Icon, Divider } from '@/components';
 
 require('./Codebox.scss');
 
