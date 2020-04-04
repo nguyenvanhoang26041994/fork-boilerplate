@@ -8,6 +8,7 @@ require('./LeftSidebar.scss');
 
 const mapRouter = Object.freeze({
   '/document/form': 'form',
+  '/document/popover': 'popover',
   '/document/badge': 'badge',
   '/document/button': 'button',
   '/document/icon': 'icon',
@@ -98,6 +99,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
               <Menu.Item icon="angle-right" key="anchor" titleOnly title="Anchor" />
               <Menu.Item icon="angle-right" key="confirm" titleOnly title="Confirm" />
               <Menu.Item icon="angle-right" key="tooltip" titleOnly title="Tooltip" />
+              <Menu.Item icon="angle-right" key="popover" titleOnly title="Popover" />
               <Menu.Item icon="angle-right" key="alert" titleOnly title="Alert" />
               <Menu.Item icon="angle-right" key="notification" titleOnly title="Notification" />
             </Menu.Sub>

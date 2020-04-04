@@ -41,6 +41,7 @@ const SelectDocument = loadable(() => import('../documents/Select'));
 const BadgeDocument = loadable(() => import('../documents/Badge'));
 const AnchorDocument = loadable(() => import('../documents/Anchor'));
 const FormDocument = loadable(() => import('../documents/Form'));
+const PopoverDocument = loadable(() => import('../documents/Popover'));
 
 const _home = {
   key: 'home',
@@ -122,6 +123,11 @@ const mapRouter = Object.freeze({
     key: 'confirm',
     title: 'Confirm',
     _href: '/document/confirm',
+  }],
+  '/document/popover': [_home, _overlay, {
+    key: 'popover',
+    title: 'Popover',
+    _href: '/document/popover',
   }],
   '/document/alert': [_home, _overlay, {
     key: 'alert',
@@ -294,6 +300,7 @@ const Dashboard = ({}) => {
               <Route path="/document/badge" component={BadgeDocument} />
               <Route path="/document/anchor" component={AnchorDocument} />
               <Route path="/document/form" component={FormDocument} />
+              <Route path="/document/popover" component={PopoverDocument} />
             </Switch>
           </div>
         </div>
