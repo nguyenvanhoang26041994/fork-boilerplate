@@ -6,6 +6,8 @@ import TopNavigation from './TopNavigation';
 import loadable from '../../utils/loadable';
 import { Breadcrumb, Icon } from '@/components';
 
+const Board = loadable(() => import('./Board'));
+
 const CheckboxDocument = loadable(() => import('../documents/Checkbox'));
 const RadioDocument = loadable(() => import('../documents/Radio'));
 const SwitchDocument = loadable(() => import('../documents/Switch'));
@@ -65,6 +67,7 @@ const _forms = {
 };
 
 const mapRouter = Object.freeze({
+  '/': [],
   '/document/form': [_home, {
     key: 'form',
     title: 'Form',
@@ -257,6 +260,7 @@ const Dashboard = ({}) => {
         <div className="flex">
           <div className="flex-1">
             <Switch>
+              <Route exact path="/" component={Board} />
               <Route path="/document/checkbox" component={CheckboxDocument} />
               <Route path="/document/switch" component={SwitchDocument} />
               <Route path="/document/radio" component={RadioDocument} />
