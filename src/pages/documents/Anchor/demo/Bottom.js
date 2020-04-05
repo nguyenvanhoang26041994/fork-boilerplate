@@ -10,7 +10,7 @@ const Link = ({ id, children }) => (
 const Demo = () => {
   return (
     <div className="flex w-full">
-      <Anchor offsetBottom={10}>
+      <Anchor>
         <Anchor.Link href="#_1" title="_1" />
         <Anchor.Link href="#_2" title="_2" />
         <Anchor.Link href="#_3" title="_3" />
