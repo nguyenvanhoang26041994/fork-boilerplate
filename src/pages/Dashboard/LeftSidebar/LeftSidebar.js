@@ -12,6 +12,7 @@ const mapRouter = Object.freeze({
   '/document/badge': 'badge',
   '/document/button': 'button',
   '/document/icon': 'icon',
+  '/document/typography': 'typography',
   '/document/tooltip': 'tooltip',
   '/document/checkbox': 'checkbox',
   '/document/radio': 'radio',
@@ -62,6 +63,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
           >
             <Menu.ItemGroup title="POPULAR" key="group-popular">
               <Menu.Item icon="icons" key="icon" title="Icon" />
+              <Menu.Item icon="heading" key="typography" title="Typography" />
               <Menu.Item icon="mouse" key="button" title="Button" />
               <Menu.Item icon="keyboard" key="form" title="Form" />
               <Menu.Item icon="table" key="table" title="Table" />

@@ -34,6 +34,7 @@ const MenuDocument = loadable(() => import('../documents/Menu'));
 const ProgressDocument = loadable(() => import('../documents/Progress'));
 const AffixDocument = loadable(() => import('../documents/Affix'));
 const TextboxDocument = loadable(() => import('../documents/Textbox'));
+const TypographyDocument = loadable(() => import('../documents/Typography'));
 const PasswordDocument = loadable(() => import('../documents/Password'));
 const TextareaDocument = loadable(() => import('../documents/Textarea'));
 const InputNumberDocument = loadable(() => import('../documents/InputNumber'));
@@ -88,6 +89,11 @@ const mapRouter = Object.freeze({
     key: 'icon',
     title: 'Icon',
     _href: '/document/icon',
+  }],
+  '/document/typography': [_home, {
+    key: 'typography',
+    title: 'typography',
+    _href: '/document/typography',
   }],
   '/document/tooltip': [_home, _overlay, {
     key: 'tooltip',
@@ -293,6 +299,7 @@ const Dashboard = ({}) => {
               <Route path="/document/progress" component={ProgressDocument} />
               <Route path="/document/affix" component={AffixDocument} />
               <Route path="/document/textbox" component={TextboxDocument} />
+              <Route path="/document/typography" component={TypographyDocument} />
               <Route path="/document/password" component={PasswordDocument} />
               <Route path="/document/textarea" component={TextareaDocument} />
               <Route path="/document/input-number" component={InputNumberDocument} />

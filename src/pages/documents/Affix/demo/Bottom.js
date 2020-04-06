@@ -28,21 +28,9 @@ import { Button, Affix } from '@/components/core';
 
 export default () => {
   return (
-    <div
-      className="flex flex-col justify-end w-full"
-      style={{
-        height: '1300px',
-      }}
-    >
-      <div className="flex w-full">
-        <Affix bottom={100}>
-          <Button className="mr-10">Bottom 100px</Button>
-        </Affix>
-        <div className="flex-1">
-          <Button>Button Right</Button>
-        </div>
-      </div>
-    </div>
+    <Affix bottom={100}>
+      <Button className="mr-10">Bottom 100px</Button>
+    </Affix>
   );
 };
 `;
