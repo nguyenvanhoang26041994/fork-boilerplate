@@ -87,6 +87,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
               <Menu.Item key="divider" icon="angle-right" titleOnly title="Divider" />
               <Menu.Item key="pagination" icon="angle-right" titleOnly title="Pagination" />
               <Menu.Item key="progress" icon="angle-right" titleOnly title="Progress" />
+              <Menu.Item key="slider" icon="angle-right" titleOnly title="Slider" />
               <Menu.Item key="rater" icon="angle-right" titleOnly title="Rater" />
             </Menu.Sub>
             <Menu.Sub title="Form" key="sub-fom" icon="keyboard">
