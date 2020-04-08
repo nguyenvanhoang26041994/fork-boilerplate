@@ -43,6 +43,7 @@ const BadgeDocument = loadable(() => import('../documents/Badge'));
 const AnchorDocument = loadable(() => import('../documents/Anchor'));
 const FormDocument = loadable(() => import('../documents/Form'));
 const PopoverDocument = loadable(() => import('../documents/Popover'));
+const LoaderDocument = loadable(() => import('../documents/Loader'));
 const SliderDocument = loadable(() => import('../documents/Slider'));
 
 const _home = {
@@ -246,7 +247,7 @@ const mapRouter = Object.freeze({
     title: 'Anchor',
     _href: '/document/anchor',
   }],
-  '/document/anchor': [_home, {
+  '/document/slider': [_home, {
     key: 'slider',
     title: 'Slider',
     _href: '/document/slider',
@@ -314,6 +315,7 @@ const Dashboard = ({}) => {
               <Route path="/document/anchor" component={AnchorDocument} />
               <Route path="/document/form" component={FormDocument} />
               <Route path="/document/popover" component={PopoverDocument} />
+              <Route path="/document/loader" component={LoaderDocument} />
               <Route path="/document/slider" component={SliderDocument} />
             </Switch>
           </div>
