@@ -41,6 +41,7 @@ const mapRouter = Object.freeze({
   '/document/textarea': 'textarea',
   '/document/input-number': 'input-number',
   '/document/anchor': 'anchor',
+  '/document/loader': 'loader',
 });
 
 const LeftSidebar = ({ isExpanded, ...otherProps }) => {
@@ -88,6 +89,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
               <Menu.Item key="pagination" icon="angle-right" titleOnly title="Pagination" />
               <Menu.Item key="progress" icon="angle-right" titleOnly title="Progress" />
               <Menu.Item key="rater" icon="angle-right" titleOnly title="Rater" />
+              <Menu.Item key="loader" icon="angle-right" titleOnly title="Loader" />
             </Menu.Sub>
             <Menu.Sub title="Form" key="sub-fom" icon="keyboard">
               <Menu.Item icon="angle-right" key="textbox" titleOnly title="Textbox" />

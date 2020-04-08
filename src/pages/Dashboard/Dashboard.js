@@ -43,6 +43,7 @@ const BadgeDocument = loadable(() => import('../documents/Badge'));
 const AnchorDocument = loadable(() => import('../documents/Anchor'));
 const FormDocument = loadable(() => import('../documents/Form'));
 const PopoverDocument = loadable(() => import('../documents/Popover'));
+const LoaderDocument = loadable(() => import('../documents/Loader'));
 
 const _home = {
   key: 'home',
@@ -308,6 +309,7 @@ const Dashboard = ({}) => {
               <Route path="/document/anchor" component={AnchorDocument} />
               <Route path="/document/form" component={FormDocument} />
               <Route path="/document/popover" component={PopoverDocument} />
+              <Route path="/document/loader" component={LoaderDocument} />
             </Switch>
           </div>
         </div>
