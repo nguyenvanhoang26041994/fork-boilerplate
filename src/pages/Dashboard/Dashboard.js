@@ -247,7 +247,7 @@ const mapRouter = Object.freeze({
     title: 'Anchor',
     _href: '/document/anchor',
   }],
-  '/document/anchor': [_home, {
+  '/document/slider': [_home, {
     key: 'slider',
     title: 'Slider',
     _href: '/document/slider',
@@ -315,11 +315,8 @@ const Dashboard = ({}) => {
               <Route path="/document/anchor" component={AnchorDocument} />
               <Route path="/document/form" component={FormDocument} />
               <Route path="/document/popover" component={PopoverDocument} />
-<<<<<<< HEAD
               <Route path="/document/loader" component={LoaderDocument} />
-=======
               <Route path="/document/slider" component={SliderDocument} />
->>>>>>> master-upstream
             </Switch>
           </div>
         </div>
