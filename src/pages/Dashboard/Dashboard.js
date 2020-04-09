@@ -45,6 +45,7 @@ const FormDocument = loadable(() => import('../documents/Form'));
 const PopoverDocument = loadable(() => import('../documents/Popover'));
 const LoaderDocument = loadable(() => import('../documents/Loader'));
 const SliderDocument = loadable(() => import('../documents/Slider'));
+const SkeletonDocument = loadable(() => import('../documents/Skeleton'));
 
 const _home = {
   key: 'home',
@@ -317,6 +318,7 @@ const Dashboard = ({}) => {
               <Route path="/document/popover" component={PopoverDocument} />
               <Route path="/document/loader" component={LoaderDocument} />
               <Route path="/document/slider" component={SliderDocument} />
+              <Route path="/document/skeleton" component={SkeletonDocument} />
             </Switch>
           </div>
         </div>

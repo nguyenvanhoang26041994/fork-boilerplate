@@ -42,6 +42,7 @@ const mapRouter = Object.freeze({
   '/document/input-number': 'input-number',
   '/document/anchor': 'anchor',
   '/document/loader': 'loader',
+  '/document/skeleton': 'skeleton',
 });
 
 const LeftSidebar = ({ isExpanded, ...otherProps }) => {
@@ -91,6 +92,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
               <Menu.Item key="slider" icon="angle-right" titleOnly title="Slider" />
               <Menu.Item key="rater" icon="angle-right" titleOnly title="Rater" />
               <Menu.Item key="loader" icon="angle-right" titleOnly title="Loader" />
+              <Menu.Item key="skeleton" icon="angle-right" titleOnly title="Skeleton" />
             </Menu.Sub>
             <Menu.Sub title="Form" key="sub-fom" icon="keyboard">
               <Menu.Item icon="angle-right" key="textbox" titleOnly title="Textbox" />
