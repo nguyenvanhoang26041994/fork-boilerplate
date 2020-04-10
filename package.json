@@ -13,7 +13,10 @@
     "build": "yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/prod.config.js",
     "build-core": "yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/core.config.js",
     "dev": "cross-env NODE_ENV=development node dev-server",
-    "deploy": "yarn build && now --prod"
+    "deploy": "yarn build && now --prod",
+    "build-neu-scss": "node-sass rc-neumorphism/src --output rc-neumorphism/lib --output-style",
+    "build-neu-js": "babel --config-file rc-neumorphism/babel.config.js --out-dir rc-neumorphism/lib rc-neumorphism/src --verbose",
+    "build-neu": "yarn rimraf \"rc-neumorphism\/lib\" && yarn build-neu-js && yarn build-neu-scss"
   },
   "repository": {
     "type": "git",
