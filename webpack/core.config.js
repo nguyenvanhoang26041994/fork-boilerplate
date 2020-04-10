@@ -6,11 +6,11 @@ const { GenerateSW } = require('workbox-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: [
-    path.join(process.cwd(), 'src/components/core.js'),
-  ],
+  entry: {
+    'rc-neumorphism': path.join(process.cwd(), './rc-neumorphism/src/components/core'),
+  },
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].js',
     chunkFilename: '[name].[chunkhash].js',
     publicPath: '/',
   },
