@@ -7773,10 +7773,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-rc-neumorphism@1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/rc-neumorphism/-/rc-neumorphism-1.7.1.tgz#9b3022f9d48e37061e658adf74bd8a36f1f0449b"
-  integrity sha512-R12cuB75GezqbW3qMc5y6LhWq19Jk9JiVg2hig/DBSzMnXXAdm7a2fgg0LdysJHkWcaLQekH8209gqBBQ7RmVg==
+rc-neumorphism@1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/rc-neumorphism/-/rc-neumorphism-1.7.3.tgz#7d402c2a78f188c97438cacabe82516f4038c36d"
+  integrity sha512-Xd51uA7/oTb4o4oGL9R1PbRhV70TQMxHEU0eGDU7chFzVCnaNUO36rNAxOT0FsdXeLygBVXmYZ50U9LU+nsu7Q==
   dependencies:
     classnames "^2.2.6"
     node-sass "^4.13.1"

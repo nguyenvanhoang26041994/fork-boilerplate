@@ -2,8 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 import { Switch } from '@/components';
 
-require('./DarkModeToggle.scss');
-
 const DarkModeToggle = (props) => {
   const [isDark, setIsDark] = useState();
 
