@@ -23,7 +23,7 @@ const Demo = () => {
 
   return (
     <div className="flex flex-col w-full">
-      <Progress.Line bottom={isBottom} percent={percent} />
+      <Progress.Linear bottom={isBottom} percent={percent} />
       <div className="flex items-center mt-20">
         <ButtonGroup>
           <Button icon="minus" onClick={onMinus} />
@@ -67,7 +67,7 @@ export default () => {
 
   return (
     <div className="flex flex-col w-full">
-      <Progress.Line bottom={isBottom} percent={percent} />
+      <Progress.Linear bottom={isBottom} percent={percent} />
       <div className="flex items-center mt-20">
         <ButtonGroup>
           <Button icon="minus" onClick={onMinus} />

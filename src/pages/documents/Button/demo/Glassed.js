@@ -4,9 +4,7 @@ import { Button } from '@/components';
 const Demo = () => {
   return (
     <div className="flex">
-      <Button primary className="mr-2">PRIMARY</Button>
-      <Button danger className="mr-2">DANGER</Button>
-      <Button green className="mr-2">GREEN</Button>
+      <Button glassed>GLASSED</Button>
     </div>
   );
 };
@@ -18,9 +16,7 @@ import { Button } from '@/components/core';
 export default () => {
   return (
     <div className="flex">
-      <Button primary className="mr-2">PRIMARY</Button>
-      <Button danger className="mr-2">DANGER</Button>
-      <Button green className="mr-2">GREEN</Button>
+      <Button glassed>GLASSED</Button>
     </div>
   );
 };

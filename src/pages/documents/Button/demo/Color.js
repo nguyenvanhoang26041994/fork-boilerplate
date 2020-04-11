@@ -6,7 +6,7 @@ const Demo = () => {
     <div className="flex">
       <Button className="mr-2" color="blueviolet">Blueviolet</Button>
       <Button className="mr-2" color="orangered">Orangered</Button>
-      <Button className="mr-2" color="#00ffe9">#00ffe9</Button>
+      <Button className="mr-2" color="green">Green</Button>
     </div>
   );
 };
@@ -20,7 +20,7 @@ export default () => {
     <div className="flex">
       <Button className="mr-2" color="blueviolet">Blueviolet</Button>
       <Button className="mr-2" color="orangered">Orangered</Button>
-      <Button className="mr-2" color="#00ffe9">#00ffe9</Button>
+      <Button className="mr-2" color="green">Green</Button>
     </div>
   );
 };

@@ -17,6 +17,7 @@ shape
 - Tránh truyền trực tiếp function vào props kiểu onChange={() => {}} vì nó luôn tạo một clourse mới khi re-render
 - state luôn chưa data, không bao giờ chứa DOM. nếu có chứa thì dùng trực tiếp.
 - follow BEM with customize
+- move import css trong /style/core
 
 # Loader
 - <Loader.Spinner />

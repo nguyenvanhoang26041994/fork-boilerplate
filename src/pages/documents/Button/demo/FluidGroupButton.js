@@ -3,29 +3,25 @@ import { Button, ButtonGroup } from '@/components';
 
 const Demo = () => {
   return (
-    <div className="flex w-full">
-      <ButtonGroup className="mr-5" fluid>
-        <Button>Prev</Button>
-        <Button>1</Button>
-        <Button>Next</Button>
-      </ButtonGroup>
-    </div>
+    <ButtonGroup className="mr-2" fluid>
+      <Button icon="power-off" />
+      <Button icon="comments" />
+      <Button icon="bell" />
+    </ButtonGroup>
   );
 };
 
 Demo.code = `
 import React from 'react';
-import { Button, ButtonGroup } from '@/components/core';
+import { Button, ButtonGroup } from '@/components';
 
-export default () => {
+const Demo = () => {
   return (
-    <div className="flex" w-full>
-      <ButtonGroup className="mr-5" fluid>
-        <Button>Prev</Button>
-        <Button>1</Button>
-        <Button>Next</Button>
-      </ButtonGroup>
-    </div>
+    <ButtonGroup className="mr-2">
+      <Button icon="power-off" />
+      <Button icon="comments" />
+      <Button icon="bell" />
+    </ButtonGroup>
   );
 };
 `;

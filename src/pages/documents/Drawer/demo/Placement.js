@@ -11,10 +11,10 @@ const Demo = () => {
     <div className="flex">
       <Drawer
         open={open}
+        left
         onClose={onClose}
         title="Drawer Title"
         className="w-1/3"
-        placement="left"
       >
         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       </Drawer>

@@ -5,7 +5,6 @@ const NotificationBox = ({ requester, time }) => {
   return (
     <div
       className="flex flex-col px-3 pb-3 mb-10 rounded-lg"
-      style={{ borderBottom: '1px dashed #38383e' }}
     >
       <span>
         <a className="text-blue-600">{requester} </a>

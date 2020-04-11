@@ -6,7 +6,8 @@ import GroupButton from './demo/GroupButton';
 import Color from './demo/Color';
 import Size from './demo/Size';
 import WithIcon from './demo/WithIcon';
-import ColorButton from './demo/ColorButton';
+import Glassed from './demo/Glassed';
+import Popular from './demo/Popular';
 import FluidGroupButton from './demo/FluidGroupButton';
 
 export default () => {
@@ -16,8 +17,8 @@ export default () => {
         <Codebox className="mb-2" header="BASIC" href="button-basic" code={Basic.code}>
           <Basic />
         </Codebox>
-        <Codebox className="mb-2" header="COLOR BUTTON" href="button-bg-color" code={ColorButton.code}>
-          <ColorButton />
+        <Codebox className="mb-2" header="POPULAR BUTTON" href="button-bg-color" code={Popular.code}>
+          <Popular />
         </Codebox>
         <Codebox className="mb-2" header="GROUP BUTTON" href="button-group-button" code={GroupButton.code}>
           <GroupButton />
@@ -30,9 +31,12 @@ export default () => {
         <Codebox className="mb-2" header="COLOR" href="button-color" code={Color.code}>
           <Color />
         </Codebox>
+        <Codebox className="mb-2" header="GLASSED" href="button-glassed" code={Glassed.code}>
+          <Glassed />
+        </Codebox>
       </div>
       <div className="w-1/3">
-        <Codebox className="mb-2" header="FONT SIZE" href="button-font-size" code={Size.code}>
+        <Codebox className="mb-2" header="SIZE" href="button-font-size" code={Size.code}>
           <Size />
         </Codebox>
         <Codebox className="mb-2" header="FLUID GROUP BUTTON" href="button-group-fluid" code={FluidGroupButton.code}>
