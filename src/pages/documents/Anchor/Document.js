@@ -2,7 +2,6 @@ import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
 import Top from './demo/Top';
-import Bottom from './demo/Bottom';
 
 export default () => {
   return (
@@ -13,9 +12,6 @@ export default () => {
         </Codebox>
       </div>
       <div className="w-1/2">
-        <Codebox className="mb-2" header="BOTTOM" href="anchor-bottom" code={Bottom.code}>
-          <Bottom />
-        </Codebox>
       </div>
     </div>
   );

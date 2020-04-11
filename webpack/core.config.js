@@ -1,13 +1,11 @@
 const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
-const { GenerateSW } = require('workbox-webpack-plugin');
 
 module.exports = {
   mode: 'production',
   entry: {
     'rc-neumorphism': path.join(process.cwd(), './rc-neumorphism/src/components/core'),
+    'rc-neumorphism-css': path.join(process.cwd(), './rc-neumorphism/src/style/core.scss'),
   },
   output: {
     filename: '[name].js',
