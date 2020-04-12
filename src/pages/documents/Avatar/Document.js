@@ -10,22 +10,14 @@ export default () => {
   return (
     <div className="flex">
       <div className="w-1/3 pr-2">
-        <Codebox className="mb-2" header="BASIC" href="avatar-basic" code={Basic.code} description={Basic.description}>
-          <Basic />
-        </Codebox>
-        <Codebox className="mb-2" header="ONLINE" href="avatar-online" code={WithOnline.code}>
-          <WithOnline />
-        </Codebox>
+        <Codebox className="mb-2" Component={Basic} />
+        <Codebox className="mb-2" Component={WithOnline} />
       </div>
       <div className="w-1/3 pr-2">
-        <Codebox className="mb-2" header="WITHOUT AVATAR" href="avatar-no-image" code={NoImage.code}>
-          <NoImage />
-        </Codebox>
+        <Codebox className="mb-2" Component={NoImage} />
       </div>
       <div className="w-1/3">
-        <Codebox className="mb-2" header="SIZE" href="avatar-size" code={Size.code}>
-          <Size />
-        </Codebox>
+        <Codebox className="mb-2" Component={Size} />
       </div>
     </div>
   );

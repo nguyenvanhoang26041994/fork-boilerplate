@@ -9,19 +9,12 @@ export default () => {
   return (
     <div className="flex">
       <div className="w-1/2 pr-2">
-        <Codebox className="mb-2" header="HEADER" href="typography-header" code={Header.code}>
-          <Header />
-        </Codebox>
-        <Codebox className="mb-2" header="SPAN" href="typography-span" code={Span.code}>
-          <Span />
-        </Codebox>
+        <Codebox className="mb-2" Component={Header} />
+        <Codebox className="mb-2" Component={Span} />
       </div>
       <div className="w-1/2 pr-2">
-        <Codebox header="PARAGRAPH" href="typography-paragraph" code={Paragraph.code}>
-          <Paragraph />
-        </Codebox>
+        <Codebox className="mb-2" Component={Paragraph} />
       </div>
     </div>
   );
 };
-

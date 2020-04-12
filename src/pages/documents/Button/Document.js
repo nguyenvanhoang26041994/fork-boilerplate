@@ -14,34 +14,18 @@ export default () => {
   return (
     <div className="flex">
       <div className="w-1/3 pr-2">
-        <Codebox className="mb-2" {...Basic}>
-          <Basic />
-        </Codebox>
-        <Codebox className="mb-2" {...Popular}>
-          <Popular />
-        </Codebox>
-        <Codebox className="mb-2" {...GroupButton}>
-          <GroupButton />
-        </Codebox>
+        <Codebox className="mb-2" Component={Basic} />
+        <Codebox className="mb-2" Component={Popular} />
+        <Codebox className="mb-2" Component={GroupButton} />
       </div>
       <div className="w-1/3 pr-2">
-        <Codebox className="mb-2" {...WithIcon}>
-          <WithIcon />
-        </Codebox>
-        <Codebox className="mb-2" {...Color}>
-          <Color />
-        </Codebox>
-        <Codebox className="mb-2" {...WithBadge}>
-          <WithBadge />
-        </Codebox>
+        <Codebox className="mb-2" Component={WithIcon} />
+        <Codebox className="mb-2" Component={Color} />
+        <Codebox className="mb-2" Component={WithBadge} />
       </div>
       <div className="w-1/3">
-        <Codebox className="mb-2" {...Size}>
-          <Size />
-        </Codebox>
-        <Codebox className="mb-2" {...FluidGroupButton}>
-          <FluidGroupButton />
-        </Codebox>
+        <Codebox className="mb-2" Component={Size} />
+        <Codebox className="mb-2" Component={FluidGroupButton} />
       </div>
     </div>
   );

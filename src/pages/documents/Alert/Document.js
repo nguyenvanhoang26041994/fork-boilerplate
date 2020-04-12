@@ -14,34 +14,18 @@ export default () => {
   return (
     <div className="flex">
       <div className="w-1/3 pr-2">
-        <Codebox className="mb-2" header="PURE ALERT" href="alert-pure" code={Pure.code}>
-          <Pure />
-        </Codebox>
-        <Codebox className="mb-2" header="BASIC" href="alert-basic" code={Basic.code}>
-          <Basic />
-        </Codebox>
-        <Codebox className="mb-2" header="CUSTOM" href="alert-custom" code={Custom.code}>
-          <Custom />
-        </Codebox>
+        <Codebox className="mb-2" Component={Pure} />
+        <Codebox className="mb-2" Component={Basic} />
+        <Codebox className="mb-2" Component={Custom} />
       </div>
       <div className="w-1/3 pr-2">
-        <Codebox className="mb-2" header="PUSH" href="alert-push" code={Push.code}>
-          <Push />
-        </Codebox>
-        <Codebox className="mb-2" header="WITH MORE DETAIL" href="alert-content" code={Content.code}>
-          <Content />
-        </Codebox>
-        <Codebox className="mb-2" header="WITHOUT CLOSE ICON" href="alert-closable" code={Closable.code}>
-          <Closable />
-        </Codebox>
+        <Codebox className="mb-2" Component={Push} />
+        <Codebox className="mb-2" Component={Content} />
+        <Codebox className="mb-2" Component={Closable} />
       </div>
       <div className="w-1/3">
-        <Codebox className="mb-2" header="SEMANTIC" href="alert-semantic" code={Semantic.code} description={Semantic.description}>
-          <Semantic />
-        </Codebox>
-        <Codebox className="mb-2" header="AUTO CLOSE" href="alert-duration" code={Duration.code}>
-          <Duration />
-        </Codebox>
+        <Codebox className="mb-2" Component={Semantic} />
+        <Codebox className="mb-2" Component={Duration} />
       </div>
     </div>
   );

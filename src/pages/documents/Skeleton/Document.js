@@ -8,14 +8,10 @@ export default () => {
   return (
     <div className="flex">
       <div className="w-1/2 pr-2">
-        <Codebox className="mb-2" header="SKELETON ACTIVE" href="#">
-          <SkeletonActive />
-        </Codebox>
+        <Codebox className="mb-2" Component={SkeletonActive} />
       </div>
       <div className="w-1/2 pr-2">
-        <Codebox className="mb-2" header="SKELETON STATIC" href="#">
-          <SkeletonStatic />
-        </Codebox>
+        <Codebox className="mb-2" Component={SkeletonStatic} />
       </div>
     </div>
   );
