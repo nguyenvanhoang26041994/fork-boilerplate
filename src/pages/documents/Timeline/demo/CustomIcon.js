@@ -31,13 +31,13 @@ const Demo = () => {
             time="5 day ago"
           />
         </Timeline.Item>
-        <Timeline.Item icon="comments">
+        <Timeline.Item icon="message">
           <NotificationBox
             requester="Hoàng Nguyễn"
             time="4 day ago"
           />
         </Timeline.Item>
-        <Timeline.Item icon="power-off">
+        <Timeline.Item icon="power">
           <NotificationBox
             requester="Seventeen"
             time="3 day ago"
@@ -95,13 +95,13 @@ export default () => {
             time="5 day ago"
           />
         </Timeline.Item>
-        <Timeline.Item icon="comments">
+        <Timeline.Item icon="message">
           <NotificationBox
             requester="Hoàng Nguyễn"
             time="4 day ago"
           />
         </Timeline.Item>
-        <Timeline.Item icon="power-off">
+        <Timeline.Item icon="power">
           <NotificationBox
             requester="Seventeen"
             time="3 day ago"

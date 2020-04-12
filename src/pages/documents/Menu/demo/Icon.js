@@ -5,11 +5,11 @@ const Demo = () => {
   return (
     <Menu>
       <Menu.Item key="copy" icon="copy" title="Copy" />
-      <Menu.Item key="cog" icon="cog" title="Config" />
+      <Menu.Item key="tool" icon="tool" title="Config" />
       <Menu.Item
-        key="comments"
-        icon="comments"
-        title="Comments"
+        key="message"
+        icon="message"
+        title="Message"
       />
       <Menu.Item key="heart" icon="heart" title="Love" />
     </Menu>
@@ -24,10 +24,10 @@ export default () => {
   return (
     <Menu>
       <Menu.Item key="copy" icon="copy" title="Copy" />
-      <Menu.Item key="cog" icon="cog" title="Config" />
+      <Menu.Item key="tool" icon="tool" title="Config" />
       <Menu.Item
-        key="comments"
-        icon="comments" title="Comments"
+        key="message"
+        icon="message" title="message"
       />
       <Menu.Item key="heart" icon="heart" title="Love" />
     </Menu>

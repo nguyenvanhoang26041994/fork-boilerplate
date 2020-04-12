@@ -35,7 +35,7 @@ const Demo = () => {
           key="tab-2"
           iconRight={(
             <Badge className="ml-2" count={122}>
-              <Icon name="comments" />
+              <Icon name="messages" />
             </Badge>
           )}
         >
@@ -90,7 +90,7 @@ export default () => {
           key="tab-2"
           iconRight={(
             <Badge className="ml-2" count={122}>
-              <Icon name="comments" />
+              <Icon name="messages" />
             </Badge>
           )}
         >

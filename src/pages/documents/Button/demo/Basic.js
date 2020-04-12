@@ -8,7 +8,7 @@ const Demo = () => {
       <Button pressed className="mr-2">Pressed</Button>
       <Button disabled className="mr-2">Disabled</Button>
       <Button rounded className="mr-2">Rounded</Button>
-      <Button circle icon="power-off" className="mr-2" />
+      <Button circle icon="power" className="mr-2" />
     </div>
   );
 };
@@ -24,7 +24,7 @@ export default () => {
       <Button pressed className="mr-2">Pressed</Button>
       <Button disabled className="mr-2">Disabled</Button>
       <Button rounded className="mr-2">Rounded</Button>
-      <Button circle icon="power-off" className="mr-2" />
+      <Button circle icon="power" className="mr-2" />
     </div>
   );
 };

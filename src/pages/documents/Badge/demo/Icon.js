@@ -15,7 +15,7 @@ const FancyBox = ({ size, circle }) => (
 const Demo = () => {
   return (
     <div className="flex">
-      <Badge icon="exclamation" className="mr-5">
+      <Badge icon="message" className="mr-5">
         <FancyBox size="50px" />
       </Badge>
       <Badge

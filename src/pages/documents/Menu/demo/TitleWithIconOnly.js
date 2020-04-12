@@ -23,14 +23,14 @@ const Demo = () => {
             title="Copy"
           />
           <Menu.Item
-            key="cog"
-            icon="cog"
+            key="tool"
+            icon="tool"
             title="Config"
           />
           <Menu.Item
-            key="comments"
-            icon="comments"
-            title="Comments"
+            key="message"
+            icon="message"
+            title="Message"
           />
           <Menu.Item key="heart" icon="heart" title="Love" />
         </Menu.ItemGroup>
@@ -51,7 +51,7 @@ const Demo = () => {
         <Menu.Sub
           key="sub-order"
           title="Order"
-          icon="ellipsis-h"
+          icon="dots"
         >
           <Menu.Item
             key="alarm"
@@ -95,14 +95,14 @@ export default () => {
             title="Copy"
           />
           <Menu.Item
-            key="cog"
-            icon="cog"
+            key="tool"
+            icon="tool"
             title="Config"
           />
           <Menu.Item
-            key="comments"
-            icon="comments"
-            title="Comments"
+            key="message"
+            icon="message"
+            title="message"
           />
           <Menu.Item key="heart" icon="heart" title="Love" />
         </Menu.ItemGroup>
@@ -123,7 +123,7 @@ export default () => {
         <Menu.Sub
           key="sub-order"
           title="Order"
-          icon="ellipsis-h"
+          icon="dots"
         >
           <Menu.Item
             key="alarm"

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button } from '@/components';
+import { Button, Badge } from '@/components';
 
 const Demo = () => {
   return (
-    <div className="flex">
-      <Button glassed>GLASSED</Button>
-    </div>
+   <Badge count={2}>
+    <Button icon="bell" />
+   </Badge>
   );
 };
 

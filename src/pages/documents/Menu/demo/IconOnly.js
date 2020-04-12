@@ -6,11 +6,11 @@ const Demo = () => {
     <Menu iconOnly>
       <Menu.ItemGroup key="group-action" title="Action">
         <Menu.Item key="copy" icon="copy" title="Copy" />
-        <Menu.Item key="cog" icon="cog" title="Config" />
+        <Menu.Item key="tool" icon="tool" title="Config" />
         <Menu.Item
-          key="comments"
-          icon="comments"
-          title="Comments"
+          key="message"
+          icon="message"
+          title="Message"
         />
         <Menu.Item key="heart" icon="heart" title="Love" />
       </Menu.ItemGroup>
@@ -18,8 +18,8 @@ const Demo = () => {
         <Menu.Item key="rating" icon="star" title="Rating" />
         <Menu.Item key="follow" icon="bell" title="Follow" />
       </Menu.ItemGroup>
-      <Menu.Sub key="sub-order" title="Order" icon="ellipsis-h">
-        <Menu.Item key="alarm" icon="clock" title="Alarm" />
+      <Menu.Sub key="sub-order" title="Order" icon="dots">
+        <Menu.Item key="alarm" icon="alarm" title="Alarm" />
         <Menu.Item
           key="break-down"
           icon="caret-down"
@@ -39,11 +39,11 @@ export default = () => {
     <Menu iconOnly>
       <Menu.ItemGroup key="group-action" title="Action">
         <Menu.Item key="copy" icon="copy" title="Copy" />
-        <Menu.Item key="cog" icon="cog" title="Config" />
+        <Menu.Item key="tool" icon="tool" title="Config" />
         <Menu.Item
-          key="comments"
-          icon="comments"
-          title="Comments"
+          key="message"
+          icon="message"
+          title="message"
         />
         <Menu.Item key="heart" icon="heart" title="Love" />
       </Menu.ItemGroup>
@@ -51,8 +51,8 @@ export default = () => {
         <Menu.Item key="rating" icon="star" title="Rating" />
         <Menu.Item key="follow" icon="bell" title="Follow" />
       </Menu.ItemGroup>
-      <Menu.Sub key="sub-order" title="Order" icon="ellipsis-h">
-        <Menu.Item key="alarm" icon="clock" title="Alarm" />
+      <Menu.Sub key="sub-order" title="Order" icon="dots">
+        <Menu.Item key="alarm" icon="alarm" title="Alarm" />
         <Menu.Item
           key="break-down"
           icon="caret-down"

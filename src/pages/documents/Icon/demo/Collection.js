@@ -16,10 +16,12 @@ const IconBox = ({ name }) => {
 
 const Demo = () => {
   return (
-    <div className="flex flex-wrap">
-      {Object.keys(list).map(key => (
-        <IconBox name={key} key={key} />
-      ))}
+    <div className="flex flex-col">
+      <div className="flex flex-wrap">
+        {Object.keys(list).map(key => (
+          <IconBox name={key} key={key} />
+        ))}
+      </div>
     </div>
   );
 };

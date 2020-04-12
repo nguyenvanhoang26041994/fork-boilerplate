@@ -4,21 +4,21 @@ import { Menu } from '@/components';
 const Demo = () => {
   return (
     <Menu>
-      <Menu.Sub key="sub-action" title="Action" icon="ellipsis-h">
+      <Menu.Sub key="sub-action" title="Action" icon="dots">
         <Menu.Item
           key="copy"
           icon="copy"
           title="Copy"
         />
         <Menu.Item
-          key="cog"
-          icon="cog"
+          key="tool"
+          icon="tool"
           title="Config"
         />
         <Menu.Item
-          key="comments"
-          icon="comments"
-          title="Comments"
+          key="message"
+          icon="message"
+          title="Message"
         />
         <Menu.Item
           key="heart"
@@ -29,7 +29,7 @@ const Demo = () => {
       <Menu.Sub
         key="sub-other"
         title="Other"
-        icon="power-off"
+        icon="power"
       >
         <Menu.Item
           key="rating"
@@ -53,21 +53,21 @@ import { Menu } from '@/components';
 const Demo = () => {
   return (
     <Menu>
-      <Menu.Sub key="sub-action" title="Action" icon="ellipsis-h">
+      <Menu.Sub key="sub-action" title="Action" icon="dots">
         <Menu.Item
           key="copy"
           icon="copy"
           title="Copy"
         />
         <Menu.Item
-          key="cog"
-          icon="cog"
+          key="tool"
+          icon="tool"
           title="Config"
         />
         <Menu.Item
-          key="comments"
-          icon="comments"
-          title="Comments"
+          key="message"
+          icon="message"
+          title="message"
         />
         <Menu.Item
           key="heart"
@@ -78,7 +78,7 @@ const Demo = () => {
       <Menu.Sub
         key="sub-other"
         title="Other"
-        icon="power-off"
+        icon="power"
       >
         <Menu.Item
           key="rating"

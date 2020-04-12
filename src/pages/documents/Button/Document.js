@@ -6,7 +6,7 @@ import GroupButton from './demo/GroupButton';
 import Color from './demo/Color';
 import Size from './demo/Size';
 import WithIcon from './demo/WithIcon';
-import Glassed from './demo/Glassed';
+import WithBadge from './demo/WithBadge';
 import Popular from './demo/Popular';
 import FluidGroupButton from './demo/FluidGroupButton';
 
@@ -31,8 +31,8 @@ export default () => {
         <Codebox className="mb-2" header="COLOR" href="button-color" code={Color.code}>
           <Color />
         </Codebox>
-        <Codebox className="mb-2" header="GLASSED" href="button-glassed" code={Glassed.code}>
-          <Glassed />
+        <Codebox className="mb-2" header="WITH BADGE" href="button-badge" code={WithBadge.code}>
+          <WithBadge />
         </Codebox>
       </div>
       <div className="w-1/3">

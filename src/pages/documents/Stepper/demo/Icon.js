@@ -14,7 +14,7 @@ const Demo = () => {
         </Stepper.Step>
         <Stepper.Step
           title="Step Two"
-          icon="comments"
+          icon="message"
         >
           Description Two
         </Stepper.Step>
@@ -28,7 +28,7 @@ const Demo = () => {
         <Stepper.Step
           title="Step Four"
           processing
-          icon="power-off"
+          icon="power"
         >
           Description Four
         </Stepper.Step>
@@ -54,7 +54,7 @@ export default () => {
         </Stepper.Step>
         <Stepper.Step
           title="Step Two"
-          icon="comments"
+          icon="message"
         >
           Description Two
         </Stepper.Step>
@@ -68,7 +68,7 @@ export default () => {
         <Stepper.Step
           title="Step Four"
           processing
-          icon="power-off"
+          icon="power"
         >
           Description Four
         </Stepper.Step>

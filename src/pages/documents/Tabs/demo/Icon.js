@@ -19,16 +19,16 @@ const Demo = () => {
   return (
     <div className="flex flex-col w-full">
       <Tabs activeTab={activeTab} onChange={onChange}>
-        <Tabs.Item title="Tab One" key="tab-1" icon="desktop">
+        <Tabs.Item title="Tab One" key="tab-1" icon="device-desktop">
           <Description content="Description One" />
         </Tabs.Item>
-        <Tabs.Item title="Tab Two" key="tab-2" iconRight="comments">
+        <Tabs.Item title="Tab Two" key="tab-2" iconRight="message">
           <Description content="Description Two" />
         </Tabs.Item>
         <Tabs.Item title="Tab Three" key="tab-3" icon="copy">
           <Description content="Description Three" />
         </Tabs.Item>
-        <Tabs.Item title="Tab Four" key="tab-4" icon="cog">
+        <Tabs.Item title="Tab Four" key="tab-4" icon="tool">
           <Description content="Description Four" />
         </Tabs.Item>
       </Tabs>
@@ -58,16 +58,16 @@ export default () => {
   return (
     <div className="flex flex-col w-full">
       <Tabs activeTab={activeTab} onChange={onChange}>
-        <Tabs.Item title="Tab One" key="tab-1" icon="desktop">
+        <Tabs.Item title="Tab One" key="tab-1" icon="device-desktop">
           <Description content="Description One" />
         </Tabs.Item>
-        <Tabs.Item title="Tab Two" key="tab-2" iconRight="comments">
+        <Tabs.Item title="Tab Two" key="tab-2" iconRight="message">
           <Description content="Description Two" />
         </Tabs.Item>
         <Tabs.Item title="Tab Three" key="tab-3" icon="copy">
           <Description content="Description Three" />
         </Tabs.Item>
-        <Tabs.Item title="Tab Four" key="tab-4" icon="cog">
+        <Tabs.Item title="Tab Four" key="tab-4" icon="tool">
           <Description content="Description Four" />
         </Tabs.Item>
       </Tabs>

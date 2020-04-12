@@ -32,12 +32,12 @@ const Demo = () => {
         <Select.Option
           key="male"
           title="Male"
-          icon="comments"
+          icon="message"
         />
         <Select.Option
           key="female"
           title="Female"
-          icon="power-off"
+          icon="power"
         />
         <Select.Option
           key="other"
@@ -56,7 +56,7 @@ const Demo = () => {
         required
         label="Comment"
         placeholder="Comment here"
-        name="comments"
+        name="message"
         onChange={onChange}
       />
     </Form>
@@ -98,12 +98,12 @@ export default () => {
         <Select.Option
           key="male"
           title="Male"
-          icon="comments"
+          icon="message"
         />
         <Select.Option
           key="female"
           title="Female"
-          icon="power-off"
+          icon="power"
         />
         <Select.Option
           key="other"
@@ -122,7 +122,7 @@ export default () => {
         required
         label="Comment"
         placeholder="Comment here"
-        name="comments"
+        name="message"
         onChange={onChange}
       />
     </Form>

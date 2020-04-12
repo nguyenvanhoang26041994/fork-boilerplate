@@ -4,8 +4,8 @@ import { Button, ButtonGroup } from '@/components';
 const Demo = () => {
   return (
     <ButtonGroup className="mr-2" fluid>
-      <Button icon="power-off" />
-      <Button icon="comments" />
+      <Button icon="power" />
+      <Button icon="message" />
       <Button icon="bell" />
     </ButtonGroup>
   );
@@ -18,8 +18,8 @@ import { Button, ButtonGroup } from '@/components';
 const Demo = () => {
   return (
     <ButtonGroup className="mr-2">
-      <Button icon="power-off" />
-      <Button icon="comments" />
+      <Button icon="power" />
+      <Button icon="message" />
       <Button icon="bell" />
     </ButtonGroup>
   );
