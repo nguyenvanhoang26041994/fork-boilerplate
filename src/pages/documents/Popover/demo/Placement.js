@@ -87,36 +87,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React from 'react';
-import { Button, Stepper, Popover } from '@/components';
-
-const StepperDemo = () => {
-  return (
-    <Stepper
-      activeStep={3}
-      style={{
-        width: '400px'
-      }}
-    >
-      <Stepper.Step title="Ordered" />
-      <Stepper.Step title="Prepared" />
-      <Stepper.Step title="Shiped" />
-      <Stepper.Step title="Completed" />
-    </Stepper>
-  );
-};
-
-export default () => {
-  return (
-    <Popover
-      overlay={<StepperDemo />}
-      placement="top"
-    >
-      <Button className="mr-2">Hover</Button>
-    </Popover>
-  );
-};
-`;
-
 export default Demo;

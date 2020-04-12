@@ -1,8 +1,8 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Max from './demo/Max';
+import Basic from './_demo/Basic';
+import Max from './_demo/Max';
 
 export default () => {
   return (

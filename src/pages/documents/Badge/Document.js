@@ -1,16 +1,16 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Placement from './demo/Placement';
-import Overlap from './demo/Overlap';
-import Dot from './demo/Dot';
-import CountUpAnimation from './demo/CountUpAnimation';
-import CustomColor from './demo/CustomColor';
-import OverflowCount from './demo/OverflowCount';
-import Invisible from './demo/Invisible';
-import SemanticProps from './demo/SemanticProps';
-import IconBadge from './demo/Icon';
+import Basic from './_demo/Basic';
+import Placement from './_demo/Placement';
+import Overlap from './_demo/Overlap';
+import Dot from './_demo/Dot';
+import CountUpAnimation from './_demo/CountUpAnimation';
+import CustomColor from './_demo/CustomColor';
+import OverflowCount from './_demo/OverflowCount';
+import Invisible from './_demo/Invisible';
+import SemanticProps from './_demo/SemanticProps';
+import IconBadge from './_demo/Icon';
 
 export default () => {
   return (

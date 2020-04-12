@@ -1,10 +1,10 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Max from './demo/Max';
-import Size from './demo/Size';
-import IconDemo from './demo/Icon';
+import Basic from './_demo/Basic';
+import Max from './_demo/Max';
+import Size from './_demo/Size';
+import IconDemo from './_demo/Icon';
 
 export default () => {
   return (

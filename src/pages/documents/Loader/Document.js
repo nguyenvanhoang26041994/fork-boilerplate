@@ -1,8 +1,8 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Dot from './demo/Dot';
-import Linear from './demo/Linear';
+import Dot from './_demo/Dot';
+import Linear from './_demo/Linear';
 
 export default () => {
   return (

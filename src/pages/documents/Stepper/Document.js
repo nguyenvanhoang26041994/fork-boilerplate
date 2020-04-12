@@ -1,12 +1,12 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Vertical from './demo/Vertical';
-import Static from './demo/Static';
-import Semantic from './demo/Semantic';
-import Complex from './demo/Complex';
-import IconDemo from './demo/Icon';
+import Basic from './_demo/Basic';
+import Vertical from './_demo/Vertical';
+import Static from './_demo/Static';
+import Semantic from './_demo/Semantic';
+import Complex from './_demo/Complex';
+import IconDemo from './_demo/Icon';
 
 export default () => {
   return (

@@ -1,16 +1,16 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import IconDemo from './demo/Icon';
-import Group from './demo/Group';
-import Sub from './demo/Sub';
-import IconOnly from './demo/IconOnly';
-import Disabled from './demo/Disabled';
-import TitleWithIconOnly from './demo/TitleWithIconOnly';
-import Multiple from './demo/Multiple';
-import Controlled from './demo/Controlled';
-import SubInGroup from './demo/SubInGroup';
+import Basic from './_demo/Basic';
+import IconDemo from './_demo/Icon';
+import Group from './_demo/Group';
+import Sub from './_demo/Sub';
+import IconOnly from './_demo/IconOnly';
+import Disabled from './_demo/Disabled';
+import TitleWithIconOnly from './_demo/TitleWithIconOnly';
+import Multiple from './_demo/Multiple';
+import Controlled from './_demo/Controlled';
+import SubInGroup from './_demo/SubInGroup';
 
 export default () => {
   return (

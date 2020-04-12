@@ -1,0 +1,11 @@
+@import '../../../../style/vars.scss';
+
+.icon-box {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: $border-radius;
+}

@@ -17,7 +17,8 @@
     "build-neu-scss": "node-sass rc-neumorphism/src --output rc-neumorphism/lib",
     "build-neu-js": "babel --config-file rc-neumorphism/babel.config.js --out-dir rc-neumorphism/lib rc-neumorphism/src --verbose",
     "build-neu": "yarn rimraf \"rc-neumorphism\/lib\" && yarn build-neu-js && yarn build-neu-scss",
-    "make-icons": "node tools/make-icons"
+    "make-icons": "node tools/make-icons",
+    "make-demos": "node tools/make-demos"
   },
   "repository": {
     "type": "git",

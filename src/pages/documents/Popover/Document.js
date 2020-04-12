@@ -1,10 +1,10 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Placement from './demo/Placement';
-import DefaultVisible from './demo/DefaultVisible';
-import SemanticPlacement from './demo/SemanticPlacement';
+import Basic from './_demo/Basic';
+import Placement from './_demo/Placement';
+import DefaultVisible from './_demo/DefaultVisible';
+import SemanticPlacement from './_demo/SemanticPlacement';
 
 export default () => {
   return (

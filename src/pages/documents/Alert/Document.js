@@ -1,14 +1,14 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Pure from './demo/Pure';
-import Basic from './demo/Basic';
-import Push from './demo/Push';
-import Content from './demo/Content';
-import Semantic from './demo/Semantic';
-import Closable from './demo/Closable';
-import Duration from './demo/Duration';
-import Custom from './demo/Custom';
+import Pure from './_demo/Pure';
+import Basic from './_demo/Basic';
+import Push from './_demo/Push';
+import Content from './_demo/Content';
+import Semantic from './_demo/Semantic';
+import Closable from './_demo/Closable';
+import Duration from './_demo/Duration';
+import Custom from './_demo/Custom';
 
 export default () => {
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import LineBasic from './demo/LineBasic';
-import Size from './demo/Size';
-import NoText from './demo/NoText';
+import Basic from './_demo/Basic';
+import LineBasic from './_demo/LineBasic';
+import Size from './_demo/Size';
+import NoText from './_demo/NoText';
 
 export default () => {
   return (

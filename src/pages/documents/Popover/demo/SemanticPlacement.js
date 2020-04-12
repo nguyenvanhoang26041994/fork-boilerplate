@@ -87,48 +87,4 @@ const Demo = () => {
   );
 };
 
-Demo.description = `
-<Popover top /> ~ <Popover placement="top" /> 
-<Popover topRight /> ~ <Popover placement="top-right" />
-Must be better
-
-<Popover top topRight /> ~ <Popover placement="top-right" />
-The last one will be work
-
-<Popover placement="top-right" top left /> ~ <Popover placement="top-right" />
-'placement' will override semantic prop
-`;
-
-Demo.code = `
-import React from 'react';
-import { Button, Stepper, Popover } from '@/components';
-
-const StepperDemo = () => {
-  return (
-    <Stepper
-      activeStep={3}
-      style={{
-        width: '400px'
-      }}
-    >
-      <Stepper.Step title="Ordered" />
-      <Stepper.Step title="Prepared" />
-      <Stepper.Step title="Shiped" />
-      <Stepper.Step title="Completed" />
-    </Stepper>
-  );
-};
-
-export default () => {
-  return (
-    <Popover
-      topLeft
-      overlay={<StepperDemo />}
-    >
-      <Button className="mr-2">Hover</Button>
-    </Popover>
-  );
-};
-`;
-
 export default Demo;

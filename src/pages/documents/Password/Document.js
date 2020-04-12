@@ -1,11 +1,11 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Controlled from './demo/Controlled';
-import WithRef from './demo/WithRef';
-import Disabled from './demo/Disabled';
-import NoEye from './demo/NoEye';
+import Basic from './_demo/Basic';
+import Controlled from './_demo/Controlled';
+import WithRef from './_demo/WithRef';
+import Disabled from './_demo/Disabled';
+import NoEye from './_demo/NoEye';
 
 export default () => {
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Header from './demo/Header';
-import Span from './demo/Span';
-import Paragraph from './demo/Paragraph';
+import Header from './_demo/Header';
+import Span from './_demo/Span';
+import Paragraph from './_demo/Paragraph';
 
 export default () => {
   return (

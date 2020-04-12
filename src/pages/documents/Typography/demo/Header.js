@@ -19,20 +19,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React from 'react';
-import { Typo } from '@/components/core';
-
-export default () => {
-  return (
-    <>
-      <Typo h1>h1. Neumorphism Pro</Typo>
-      <Typo h2>h2. Neumorphism Pro</Typo>
-      <Typo h3>h3. Neumorphism Pro</Typo>
-      <Typo h4>h4. Neumorphism Pro</Typo>
-    </>
-  );
-};
-`;
-
 export default Demo;

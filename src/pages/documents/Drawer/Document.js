@@ -1,11 +1,11 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import ClickOutside from './demo/ClickOutside';
-import Placement from './demo/Placement';
-import Width from './demo/Width';
-import Closable from './demo/Closable';
+import Basic from './_demo/Basic';
+import ClickOutside from './_demo/ClickOutside';
+import Placement from './_demo/Placement';
+import Width from './_demo/Width';
+import Closable from './_demo/Closable';
 
 export default () => {
   return (

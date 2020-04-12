@@ -71,32 +71,4 @@ const Demo = () => {
   );
 };
 
-Demo.description = `
-<Tooltip top /> ~ <Tooltip placement="top" /> 
-<Tooltip topRight /> ~ <Tooltip placement="top-right" />
-Must be better
-
-<Tooltip top topRight /> ~ <Tooltip placement="top-right" />
-The last one will be work
-
-<Tooltip placement="top-right" top left /> ~ <Tooltip placement="top-right" />
-'placement' will override semantic prop
-`;
-
-Demo.code = `
-import React from 'react';
-import { Button, Tooltip } from '@/components/core';
-
-export default () => {
-  return (
-    <Tooltip
-      topLeft
-      title="tooltip title"
-    >
-      <Button className="mr-2">Hover</Button>
-    </Tooltip>
-  );
-};
-`;
-
 export default Demo;

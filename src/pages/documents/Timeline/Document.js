@@ -2,10 +2,10 @@ import React from 'react';
 import { Icon } from '@/components';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Reverse from './demo/Reverse';
-import Right from './demo/Right';
-import CustomIcon from './demo/CustomIcon';
+import Basic from './_demo/Basic';
+import Reverse from './_demo/Reverse';
+import Right from './_demo/Right';
+import CustomIcon from './_demo/CustomIcon';
 
 export default () => {
   return (

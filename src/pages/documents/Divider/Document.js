@@ -1,10 +1,10 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Text from './demo/Text';
-import IconDemo from './demo/Icon';
-import DirectionTitle from './demo/DirectionTitle';
+import Basic from './_demo/Basic';
+import Text from './_demo/Text';
+import IconDemo from './_demo/Icon';
+import DirectionTitle from './_demo/DirectionTitle';
 
 export default () => {
   return (

@@ -71,20 +71,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React from 'react';
-import { Button, Tooltip } from '@/components/core';
-
-export default () => {
-  return (
-    <Tooltip
-      title="tooltip title"
-      placement="top"
-    >
-      <Button className="mr-2">Hover</Button>
-    </Tooltip>
-  );
-};
-`;
-
 export default Demo;

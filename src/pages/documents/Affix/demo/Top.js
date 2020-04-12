@@ -19,17 +19,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React from 'react';
-import { Button, Affix } from '@/components/core';
-
-export default () => {
-  return (
-    <Affix top={200}>
-      <Button className="mr-10">Top 200px</Button>
-    </Affix>
-  );
-};
-`;
-
 export default Demo;

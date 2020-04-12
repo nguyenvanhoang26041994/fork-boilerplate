@@ -24,21 +24,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React from 'react';
-import { Loader } from '@/components';
-
-const { Dot } = Loader;
-
-export default () => {
-  return (
-   <>
-    <Dot small />
-    <Dot />
-    <Dot large />
-   </> 
-  );
-}
-`;
-
 export default Demo;

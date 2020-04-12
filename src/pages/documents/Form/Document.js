@@ -1,9 +1,9 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Required from './demo/Required';
-import Status from './demo/Status';
+import Basic from './_demo/Basic';
+import Required from './_demo/Required';
+import Status from './_demo/Status';
 
 export default () => {
   return (

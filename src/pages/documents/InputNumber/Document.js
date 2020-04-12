@@ -1,11 +1,11 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import WithRef from './demo/WithRef';
-import Disabled from './demo/Disabled';
-import MinAndMax from './demo/MinAndMax';
-import Step from './demo/Step';
+import Basic from './_demo/Basic';
+import WithRef from './_demo/WithRef';
+import Disabled from './_demo/Disabled';
+import MinAndMax from './_demo/MinAndMax';
+import Step from './_demo/Step';
 
 export default () => {
   return (

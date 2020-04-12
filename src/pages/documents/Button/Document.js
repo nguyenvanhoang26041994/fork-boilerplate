@@ -1,45 +1,45 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import GroupButton from './demo/GroupButton';
-import Color from './demo/Color';
-import Size from './demo/Size';
-import WithIcon from './demo/WithIcon';
-import WithBadge from './demo/WithBadge';
-import Popular from './demo/Popular';
-import FluidGroupButton from './demo/FluidGroupButton';
+import Basic from './_demo/Basic';
+import GroupButton from './_demo/GroupButton';
+import Color from './_demo/Color';
+import Size from './_demo/Size';
+import WithIcon from './_demo/WithIcon';
+import WithBadge from './_demo/WithBadge';
+import Popular from './_demo/Popular';
+import FluidGroupButton from './_demo/FluidGroupButton';
 
 export default () => {
   return (
     <div className="flex">
       <div className="w-1/3 pr-2">
-        <Codebox className="mb-2" header="BASIC" href="button-basic" code={Basic.code}>
+        <Codebox className="mb-2" {...Basic}>
           <Basic />
         </Codebox>
-        <Codebox className="mb-2" header="POPULAR BUTTON" href="button-bg-color" code={Popular.code}>
+        <Codebox className="mb-2" {...Popular}>
           <Popular />
         </Codebox>
-        <Codebox className="mb-2" header="GROUP BUTTON" href="button-group-button" code={GroupButton.code}>
+        <Codebox className="mb-2" {...GroupButton}>
           <GroupButton />
         </Codebox>
       </div>
       <div className="w-1/3 pr-2">
-        <Codebox className="mb-2" header="WITH ICON" href="button-with-icon" code={WithIcon.code}>
+        <Codebox className="mb-2" {...WithIcon}>
           <WithIcon />
         </Codebox>
-        <Codebox className="mb-2" header="COLOR" href="button-color" code={Color.code}>
+        <Codebox className="mb-2" {...Color}>
           <Color />
         </Codebox>
-        <Codebox className="mb-2" header="WITH BADGE" href="button-badge" code={WithBadge.code}>
+        <Codebox className="mb-2" {...WithBadge}>
           <WithBadge />
         </Codebox>
       </div>
       <div className="w-1/3">
-        <Codebox className="mb-2" header="SIZE" href="button-font-size" code={Size.code}>
+        <Codebox className="mb-2" {...Size}>
           <Size />
         </Codebox>
-        <Codebox className="mb-2" header="FLUID GROUP BUTTON" href="button-group-fluid" code={FluidGroupButton.code}>
+        <Codebox className="mb-2" {...FluidGroupButton}>
           <FluidGroupButton />
         </Codebox>
       </div>

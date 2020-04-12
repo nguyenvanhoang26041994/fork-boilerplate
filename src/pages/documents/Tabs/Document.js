@@ -1,11 +1,11 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Disabled from './demo/Disabled';
-import Fluid from './demo/Fluid';
-import IconDemo from './demo/Icon';
-import WithBadge from './demo/WithBadge';
+import Basic from './_demo/Basic';
+import Disabled from './_demo/Disabled';
+import Fluid from './_demo/Fluid';
+import IconDemo from './_demo/Icon';
+import WithBadge from './_demo/WithBadge';
 
 export default () => {
   return (

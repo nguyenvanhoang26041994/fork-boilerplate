@@ -1,8 +1,8 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Top from './demo/Top';
-import Bottom from './demo/Bottom';
+import Top from './_demo/Top';
+import Bottom from './_demo/Bottom';
 
 export default () => {
   return (

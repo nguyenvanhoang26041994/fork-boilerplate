@@ -1,9 +1,9 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import WithIcon from './demo/WithIcon';
-import Redirect from './demo/Redirect';
+import Basic from './_demo/Basic';
+import WithIcon from './_demo/WithIcon';
+import Redirect from './_demo/Redirect';
 
 export default () => {
   return (

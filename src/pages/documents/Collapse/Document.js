@@ -1,12 +1,12 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Disabled from './demo/Disabled';
-import Accordion from './demo/Accordion';
-import IconCustom from './demo/Icon';
-import Controlled from './demo/Controlled';
-import OnChangeEvent from './demo/OnChangeEvent';
+import Basic from './_demo/Basic';
+import Disabled from './_demo/Disabled';
+import Accordion from './_demo/Accordion';
+import IconCustom from './_demo/Icon';
+import Controlled from './_demo/Controlled';
+import OnChangeEvent from './_demo/OnChangeEvent';
 
 export default () => {
   return (

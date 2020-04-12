@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from '@/components';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
+import Basic from './_demo/Basic';
 
 export default () => {
   return (

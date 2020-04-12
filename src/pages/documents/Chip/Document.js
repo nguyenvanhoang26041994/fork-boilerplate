@@ -1,11 +1,11 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Closable from './demo/Closable';
-import Avatar from './demo/Avatar';
-import Size from './demo/Size';
-import Custom from './demo/Custom';
+import Basic from './_demo/Basic';
+import Closable from './_demo/Closable';
+import Avatar from './_demo/Avatar';
+import Size from './_demo/Size';
+import Custom from './_demo/Custom';
 
 export default () => {
   return (

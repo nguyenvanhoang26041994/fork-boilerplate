@@ -10,18 +10,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React from 'react';
-import { Textarea } from '@/components/core';
-
-export default () => {
-  return (
-    <Textarea
-      disabled
-      placeholder="The placeholder"
-    />
-  );
-};
-`;
-
 export default Demo;

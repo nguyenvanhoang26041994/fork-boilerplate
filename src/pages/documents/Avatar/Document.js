@@ -1,10 +1,10 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Size from './demo/Size';
-import NoImage from './demo/NoImage';
-import WithOnline from './demo/WithOnline';
+import Basic from './_demo/Basic';
+import Size from './_demo/Size';
+import NoImage from './_demo/NoImage';
+import WithOnline from './_demo/WithOnline';
 
 export default () => {
   return (

@@ -2,10 +2,10 @@ import React from 'react';
 import { Icon } from '@/components';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Color from './demo/Color';
-import Size from './demo/Size';
-import Collection from './demo/Collection';
+import Basic from './_demo/Basic';
+import Color from './_demo/Color';
+import Size from './_demo/Size';
+import Collection from './_demo/Collection';
 
 export default () => {
   return (

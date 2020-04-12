@@ -2,8 +2,8 @@ import React from 'react';
 import { Icon } from '@/components';
 import Codebox from '../../../others-component/Codebox';
 
-import UnControlled from './demo/UnControlled';
-import Controlled from './demo/Controlled';
+import UnControlled from './_demo/UnControlled';
+import Controlled from './_demo/Controlled';
 
 export default () => {
   return (

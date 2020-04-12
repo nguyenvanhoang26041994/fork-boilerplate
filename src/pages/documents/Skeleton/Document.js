@@ -1,8 +1,8 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import SkeletonStatic from './demo/SkeletonStatic';
-import SkeletonActive from './demo/SkeletonActive';
+import SkeletonStatic from './_demo/SkeletonStatic';
+import SkeletonActive from './_demo/SkeletonActive';
 
 export default () => {
   return (

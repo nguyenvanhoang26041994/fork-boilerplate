@@ -1,10 +1,10 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Basic from './demo/Basic';
-import Controlled from './demo/Controlled';
-import WithRef from './demo/WithRef';
-import Disabled from './demo/Disabled';
+import Basic from './_demo/Basic';
+import Controlled from './_demo/Controlled';
+import WithRef from './_demo/WithRef';
+import Disabled from './_demo/Disabled';
 
 export default () => {
   return (

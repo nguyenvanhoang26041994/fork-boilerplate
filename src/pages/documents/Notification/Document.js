@@ -1,11 +1,11 @@
 import React from 'react';
 import Codebox from '../../../others-component/Codebox';
 
-import Pure from './demo/Pure';
-import Basic from './demo/Basic';
-import Push from './demo/Push';
-import Duration from './demo/Duration';
-import Custom from './demo/Custom';
+import Pure from './_demo/Pure';
+import Basic from './_demo/Basic';
+import Push from './_demo/Push';
+import Duration from './_demo/Duration';
+import Custom from './_demo/Custom';
 
 export default () => {
   return (
