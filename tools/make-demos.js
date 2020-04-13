@@ -2,9 +2,22 @@ const fs = require('fs');
 const path = require('path');
 const makeFile = require('./utils/make-file');
 
-const makeHeader = function(fileName) {
-  // Default Visible
-  // { display: 'DEFAULT VISIBALE', snood: 'default-visible' }
+const SPLIT_STRING_REGEX = /([A-Z]{1}[a-z0-9]+)/g;
+
+const makeHeader = function(filename) {
+  const fileName = filename.replace(SPLIT_STRING_REGEX, function(text) {
+    return `${text} `;
+  });
+  const display = fileName.toUpperCase();
+  const arrayName = fileName.toLowerCase().split(' ');
+
+  arrayName.pop();
+
+  const kebab = arrayName.join('-');
+  return {
+    display,
+    kebab,
+  };
 };
 
 const makeDemo = function(name) {
@@ -15,14 +28,14 @@ const makeDemo = function(name) {
     }
     const text = fs.readFileSync(path.resolve(`src/pages/documents/${name}/demo/${file}`));
     const _code = `\`${text}\``;
-    const _header = String(file).replace(/.js$/, '').toUpperCase();
-    const _href = `${String(name).toLowerCase()}-${_header.toLowerCase()}`;
-    let demo = `${text}\nDemo.header = '${_header}';\nDemo.href = '${_href}';\nDemo.code = ${_code};\n`;
+    const _filename = String(file).replace(/.js$/, '');
+    const { display, kebab } = makeHeader(_filename);
+    let demo = `${text}\nDemo.header = '${display}';\nDemo.href = '${kebab}';\nDemo.code = ${_code};\n`;
     makeFile(path.resolve(`src/pages/documents/${name}/_demo/${file}`), demo);
 
     return true;
   });
-}
+};
 
 const makeDemos = function() {
   const folders = fs.readdirSync(path.resolve(`src/pages/documents`));
