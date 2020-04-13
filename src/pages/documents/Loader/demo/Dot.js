@@ -22,19 +22,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React from 'react';
-import { Loader } from '@/components';
-
-export default () => {
-  return (
-   <>
-    <Loader.Dot color="red" />
-    <Loader.Dot className="your-custom" />
-    <Loader.Dot size="2rem" />
-   </> 
-  );
-}
-`;
-
 export default Demo;

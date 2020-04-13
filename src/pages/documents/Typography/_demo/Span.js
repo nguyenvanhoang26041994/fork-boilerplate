@@ -28,24 +28,8 @@ const Demo = () => {
           Neumorphism Pro Strong
         </Typo>
         <br />
-        <Typo span info>
-          Neumorphism Pro Info
-        </Typo>
-        <br />
-        <Typo span success>
-          Neumorphism Pro Success
-        </Typo>
-        <br />
-        <Typo span warning>
-          Neumorphism Pro Warning
-        </Typo>
-        <br />
-        <Typo span error>
-          Neumorphism Pro Error
-        </Typo>
-        <br />
-        <Typo span code>
-          Neumorphism Pro Code
+        <Typo span italic>
+          Neumorphism Pro Strong
         </Typo>
         <br />
         <Typo span style={{ color: '#d800ff' }}>
@@ -91,24 +75,8 @@ const Demo = () => {
           Neumorphism Pro Strong
         </Typo>
         <br />
-        <Typo span info>
-          Neumorphism Pro Info
-        </Typo>
-        <br />
-        <Typo span success>
-          Neumorphism Pro Success
-        </Typo>
-        <br />
-        <Typo span warning>
-          Neumorphism Pro Warning
-        </Typo>
-        <br />
-        <Typo span error>
-          Neumorphism Pro Error
-        </Typo>
-        <br />
-        <Typo span code>
-          Neumorphism Pro Code
+        <Typo span italic>
+          Neumorphism Pro Strong
         </Typo>
         <br />
         <Typo span style={{ color: '#d800ff' }}>
