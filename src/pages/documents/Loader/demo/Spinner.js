@@ -6,17 +6,17 @@ const Demo = () => {
     <div
       className="flex w-full"
       style={{
-        height: '100px'
+        height: '100px',
       }}
     >
       <div className="flex-1">
-        <Loader.Dot color="red" />
+        <Loader.Spinner color="red" />
       </div>
       <div className="flex-1">
-        <Loader.Dot className="your-custom" />
+        <Loader.Spinner />
       </div>
       <div className="flex-1">
-        <Loader.Dot size="2rem" />
+        <Loader.Spinner size="3em" />
       </div>
     </div>
   );

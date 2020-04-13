@@ -15,7 +15,7 @@ const Demo = () => {
         height: 2000,
       }}
     >
-      <Anchor affix top={100}>
+      <Anchor>
         <Anchor.Link key='#things' title="Things" />
         <Anchor.Link key='#stuff' title="Stuff" />
         <Anchor.Link key='#stuff2' title="Stuff 2" />
@@ -41,8 +41,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'TOP';
-Demo.href = 'anchor-top';
+Demo.header = 'STATIC';
+Demo.href = 'anchor-static';
 Demo.code = `import React from 'react';
 import { Anchor } from '@/components';
 
@@ -60,7 +60,7 @@ const Demo = () => {
         height: 2000,
       }}
     >
-      <Anchor affix top={100}>
+      <Anchor>
         <Anchor.Link key='#things' title="Things" />
         <Anchor.Link key='#stuff' title="Stuff" />
         <Anchor.Link key='#stuff2' title="Stuff 2" />
