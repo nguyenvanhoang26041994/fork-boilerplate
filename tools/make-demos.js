@@ -2,6 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const makeFile = require('./utils/make-file');
 
+const makeHeader = function(fileName) {
+  // Default Visible
+  // { display: 'DEFAULT VISIBALE', snood: 'default-visible' }
+};
+
 const makeDemo = function(name) {
   const files = fs.readdirSync(path.resolve(`src/pages/documents/${name}/demo`));
   files && files.map && files.map(file => {
