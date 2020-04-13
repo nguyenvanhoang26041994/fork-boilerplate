@@ -21,8 +21,13 @@ const makeTablerIcons = function() {
   });
 };
 
+const makeFlagIcons = function() {
+
+}
+
 const makeIcons = function() {
   makeTablerIcons();
+  makeFlagIcons();
 };
 
 makeIcons();

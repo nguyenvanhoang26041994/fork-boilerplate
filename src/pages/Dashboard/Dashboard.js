@@ -55,13 +55,13 @@ const _home = {
 
 const _components = {
   key: 'components',
-  title: <Icon name="devive-desktop" />,
+  title: <Icon name="device-desktop" />,
   _href: '/',
 };
 
 const _overlay = {
   key: 'overlay',
-  title: <Icon name="devive-desktop" />,
+  title: <Icon name="bell" />,
   _href: '/',
 };
 

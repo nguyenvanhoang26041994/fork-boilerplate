@@ -7,60 +7,17 @@
 # common
 animated
 circle
+square
+rect
 left, top, topLeft
 color(text-color, background-color)
 bgColor(background-color)
+textColor
 size
 shape
+placement
 
-# Anchor
-- Tránh truyền trực tiếp function vào props kiểu onChange={() => {}} vì nó luôn tạo một clourse mới khi re-render
-- state luôn chưa data, không bao giờ chứa DOM. nếu có chứa thì dùng trực tiếp.
-- follow BEM with customize
-- move import css trong /style/core
-
-# Loader
-- <Loader.Spinner />
-- <Loader.Linear />
-- <Loader.Dot />
-- <Loader.Dot
-    color="#ffffff"
-    color="red"
-    color="var(--rc-color--500)"
-    color="rgba(124,123,212)"
-    size="1.2rem"
-    size="1.5em"
-    size"22px"
-    className="text-lg text-blue--500"
-  />
-# Skeleton
-semanic props: "shape" -> circle typo rect
-
-rc-skeleton --circle --type --rect
-var(--rc-color--200) var(--rc-color--300);
-
-.rc-skeleton.--typo, .rc-skeleton.--rect {
-  border-radius: $border-radius;
-}
-
-.--typo {
-  height: 1rem;
-}
-
-<Sekeleton  />
-
-# Typo
-- color
-
-<Typo disabled />
-<Typo strong ilaty /> => fStyle="strong ilaty" ,mFStyle
-<Typo underline linethought uppderline /> => tDecoreation="underline" mTDerarion
-
-NO NEED size, fontSize,
-ND NEED promary error warning
-default tag is p
-
-React.createElement(tag || 'p', props, chidlren );
+border-radius: 50% => border-radiú: 100rem;
 
 # Scroll Up
 
@@ -68,11 +25,11 @@ ______________________________________ JUST HERE AND ABOVE____________________
 
 
 --------------
-Anchor, Affix, Loader, Skeleton, Typography
+Anchor, Affix, Loader, Skeleton, Typography -- DONE
 
 
 
-Icon, Button, ButtonGroup, Pagination, Avatar, Breadcrumb, Divider, Scroll Up, Chip (4h)
+Icon, Button, ButtonGroup, Pagination, Avatar, Breadcrumb, Divider, Scroll Up, Chip (4h) -- COMMING
 
 Radio, Checkbox, Switch
 Portal, Alert, Confirm, Notifation, Drawer, Modal
