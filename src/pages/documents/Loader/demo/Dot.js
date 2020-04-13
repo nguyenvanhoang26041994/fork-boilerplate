@@ -1,8 +1,6 @@
 import React from 'react';
 import { Loader } from '@/components';
 
-const { Dot } = Loader;
-
 const Demo = () => {
   return (
     <div
@@ -12,13 +10,13 @@ const Demo = () => {
       }}
     >
       <div className="flex-1">
-        <Dot small />
+        <Loader.Dot color="red" />
       </div>
       <div className="flex-1">
-        <Dot />
+        <Loader.Dot className="your-custom" />
       </div>
       <div className="flex-1">
-        <Dot large />
+        <Loader.Dot size="2rem" />
       </div>
     </div>
   );
@@ -28,14 +26,12 @@ Demo.code = `
 import React from 'react';
 import { Loader } from '@/components';
 
-const { Dot } = Loader;
-
 export default () => {
   return (
    <>
-    <Dot small />
-    <Dot />
-    <Dot large />
+    <Loader.Dot color="red" />
+    <Loader.Dot className="your-custom" />
+    <Loader.Dot size="2rem" />
    </> 
   );
 }

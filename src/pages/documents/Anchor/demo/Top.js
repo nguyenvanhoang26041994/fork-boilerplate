@@ -15,7 +15,7 @@ const Demo = () => {
         height: 2000,
       }}
     >
-      <Anchor top={200}>
+      <Anchor affix top={100}>
         <Anchor.Link key='#things' title="Things" />
         <Anchor.Link key='#stuff' title="Stuff" />
         <Anchor.Link key='#stuff2' title="Stuff 2" />
