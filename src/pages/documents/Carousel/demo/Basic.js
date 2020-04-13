@@ -24,27 +24,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React from 'react';
-import { Avatar } from '@/components/core';
-
-export default () => {
-  return (
-    <div className="flex">
-      <Avatar
-        src={avatarLink}
-        className="mr-3"
-        name="Hoàng Nguyễn"
-      />
-      <Avatar
-        src={avatarLink}
-        className="mr-3"
-        square
-        name="Hoàng Nguyễn"
-      />
-    </div>
-  );
-};
-`;
-
 export default Demo;

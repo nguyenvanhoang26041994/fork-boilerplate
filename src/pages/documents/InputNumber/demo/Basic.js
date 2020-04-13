@@ -10,18 +10,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React from 'react';
-import { InputNumber } from '@/components/core';
-
-export default () => {
-  return (
-    <InputNumber
-      placeholder="The placeholder"
-      onChange={e => console.log(e.target.value)}
-    />
-  );
-};
-`;
-
 export default Demo;

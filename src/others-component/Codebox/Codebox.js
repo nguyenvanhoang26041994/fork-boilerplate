@@ -4,23 +4,23 @@ import { Icon, Divider } from '@/components';
 
 require('./Codebox.scss');
 
-const Codebox = ({ children, header, defaultExpanded, href, code, description, className }) => {
+const Codebox = ({ defaultExpanded, className, Component }) => {
   const [expanded, setExpanded] = useState(defaultExpanded);
   const toggleExpanded = useCallback(() => setExpanded(prev => !prev), []);
 
   return (
-    <div className={cn('code-box', className)} id={href}>
-      <h2 className="code-box-header">{header}</h2>
+    <div className={cn('code-box', className)} id={Component.href}>
+      <h2 className="code-box-header">{Component.header}</h2>
       <div className="code-box-demo">
-        {children}
+        <Component />
       </div>
-      <div className={cn('code-box-description', { '--hidden': !description })}>
+      <div className={cn('code-box-description', { '--hidden': !Component.description })}>
         <Divider dashed />
         <pre>
-          {description}
+          {Component.description}
         </pre>
       </div>
-      <div className={cn('code-box-guide', { '--expanded': expanded, '--hidden': !code })}>
+      <div className={cn('code-box-guide', { '--expanded': expanded, '--hidden': !Component.code })}>
         <Divider
           dashed
           transparent={!expanded}
@@ -32,7 +32,7 @@ const Codebox = ({ children, header, defaultExpanded, href, code, description, c
           )}
         />
         <pre className="code-box-code">
-          {code}
+          {Component.code}
         </pre>
       </div>
     </div>

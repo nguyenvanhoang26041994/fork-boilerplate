@@ -25,28 +25,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React  from 'react';
-import { Chip, Avatar } from '@/components/core';
-
-export default () => {
-  return (
-    <div className="flex">
-      <Chip
-        avatar={<Avatar src={avatarLink} name="Hoàng Nguyễn" />}
-        className="mr-2"
-        label="Hoàng Nguyễn"
-        onClick={() => console.log('Hoàng Nguyễn')}
-      />
-      <Chip
-        avatar={<Avatar name="Sơn Lê" />}
-        className="mr-2"
-        label="Sơn Lê"
-        onClick={() => console.log('Sơn Lê')}
-      />
-    </div>
-  );
-};
-`;
-
 export default Demo;

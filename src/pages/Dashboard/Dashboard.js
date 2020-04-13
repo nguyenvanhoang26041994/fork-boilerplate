@@ -55,19 +55,19 @@ const _home = {
 
 const _components = {
   key: 'components',
-  title: <Icon name="desktop" />,
+  title: <Icon name="devive-desktop" />,
   _href: '/',
 };
 
 const _overlay = {
   key: 'overlay',
-  title: <Icon name="desktop" />,
+  title: <Icon name="devive-desktop" />,
   _href: '/',
 };
 
 const _forms = {
   key: 'forms',
-  title: <Icon name="keyboard" />,
+  title: <Icon name="box" />,
   _href: '/',
 };
 

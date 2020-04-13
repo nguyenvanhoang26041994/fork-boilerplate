@@ -4,26 +4,11 @@ import { Divider, Icon } from '@/components';
 const Demo = () => {
   return (
     <div className="w-full">
-      <Divider title={<Icon name="power-off" />} />
+      <Divider title={<Icon name="power" />} />
       <Divider dashed title={<Icon name="copy" />} />
-      <Divider dotted title={<Icon name="comments" />} />
+      <Divider dotted title={<Icon name="messages" />} />
     </div>
   );
 };
-
-Demo.code = `
-import React from 'react';
-import { Divider, Icon } from '@/components/core';
-
-export default () => {
-  return (
-    <div className="w-full">
-      <Divider title={<Icon name="power-off" />} />
-      <Divider dashed title={<Icon name="copy" />} />
-      <Divider dotted title={<Icon name="comments" />} />
-    </div>
-  );
-};
-`;
 
 export default Demo;

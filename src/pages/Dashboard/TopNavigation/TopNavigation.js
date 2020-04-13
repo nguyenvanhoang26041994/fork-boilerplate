@@ -11,12 +11,12 @@ const TopNavigation = ({ toggleExpand, isExpanded }) => {
       <div className={cn('top-navigation-wrapper', { '--expanded': isExpanded })}>
         <div className={cn('top-navigation', { '--expanded': isExpanded })}>
           <div className="__left">
-            <Icon name="bars" onClick={toggleExpand} />
+            <Icon name={isExpanded ? 'indent-decrease' : 'indent-increase'} onClick={toggleExpand} />
             <Icon name="search" className="ml-8" />
           </div>
           <div className="__right">
             <Badge count={14} className="mr-8">
-              <Icon name="comments" fontSize="1.28rem"/>
+              <Icon name="message-circle" fontSize="1.28rem"/>
             </Badge>
             <Badge count={5} className="mr-8">
               <Icon name="bell" fontSize="1.25rem"/>

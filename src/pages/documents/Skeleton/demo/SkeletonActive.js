@@ -16,8 +16,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-
-`;
-
 export default Demo;

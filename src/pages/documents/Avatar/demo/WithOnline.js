@@ -14,20 +14,4 @@ const Demo = () => {
   );
 };
 
-Demo.code = `
-import React from 'react';
-import { Avatar, Badge } from '@/components/core';
-
-export default () => {
-  return (
-    <Badge dot color="#0df316" overlap bottomRight>
-      <Avatar
-        src={avatarLink}
-        name="Hoàng Nguyễn"
-      />
-    </Badge>
-  );
-};
-`;
-
 export default Demo;
