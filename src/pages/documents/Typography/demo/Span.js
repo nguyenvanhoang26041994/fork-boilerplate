@@ -3,39 +3,27 @@ import { Typo } from '@/components';
 
 const Demo = () => {
   return (
-    <div
-      className="flex w-full"
-      style={{
-        height: '200px'
-      }}
-    >
+    <div className="w-full">
       <div className="w-full">
-        <Typo span>Neumorphism Pro Span</Typo>
-        <br />
-        <Typo span underline>
-          Neumorphism Pro Underline
+        <Typo>Typo Span</Typo>
+        <Typo underline>
+          Typo Underline
         </Typo>
-        <br />
-        <Typo span disabled>
-          Neumorphism Pro Disabled
+        <Typo disabled>
+          Typo Disabled
         </Typo>
-        <br />
-        <Typo span lineTrough>
-          Neumorphism Pro Line-Through
+        <Typo through>
+          Typo Line-Through
         </Typo>
-        <br />
-        <Typo span strong>
-          Neumorphism Pro Strong
+        <Typo strong>
+          Typo Strong
         </Typo>
-        <br />
-        <Typo span italic>
-          Neumorphism Pro Strong
+        <Typo italic>
+          Typo Italic
         </Typo>
-        <br />
-        <Typo span style={{ color: '#d800ff' }}>
-          Neumorphism Pro Customized Style
+        <Typo color="#d800ff">
+          Typo Color
         </Typo>
-        <br />
       </div>
     </div>
   );

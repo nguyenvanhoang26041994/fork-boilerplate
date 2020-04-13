@@ -10,7 +10,7 @@ const Demo = () => {
       }}
     >
       <div className="w-full">
-        <Typo p>
+        <Typo>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab illo inventore veritatis et quasi architecto beatae vitae dicta
@@ -25,7 +25,7 @@ const Demo = () => {
           ea voluptate velit esse quam nihil molestiae consequatur, vel illum
           qui dolorem eum fugiat quo voluptas nulla pariatur?
         </Typo>
-        <Typo p>
+        <Typo>
           1914 translation by H. Rackham. But I must explain to you how all this
           mistaken idea of denouncing pleasure and praising pain was born and I
           will give you a complete account of the system, and expound the actual
