@@ -5,13 +5,12 @@ const makeFile = require('./utils/make-file');
 const SPLIT_STRING_REGEX = /([A-Z]{1}[a-z0-9]+)/g;
 
 const makeHeader = function(filename) {
-  const fileName = filename.replace(SPLIT_STRING_REGEX, function(text) {
+  const f = filename.replace(SPLIT_STRING_REGEX, function(text) {
     return `${text} `;
   });
+  const fileName = f.trim();
   const display = fileName.toUpperCase();
   const arrayName = fileName.toLowerCase().split(' ');
-
-  arrayName.pop();
 
   const kebab = arrayName.join('-');
   return {
