@@ -71,8 +71,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'TITLEWITHICONONLY';
-Demo.href = 'menu-titlewithicononly';
+Demo.header = 'TITLE WITH ICON ONLY';
+Demo.href = 'menu-title-with-icon-only';
 Demo.code = `import React, { useState } from 'react';
 import { Menu, Switch } from '@/components';
 

@@ -29,7 +29,7 @@ const makeDemo = function(name) {
     const _code = `\`${text}\``;
     const _filename = String(file).replace(/.js$/, '');
     const { display, kebab } = makeHeader(_filename);
-    let demo = `${text}\nDemo.header = '${display}';\nDemo.href = '${kebab}';\nDemo.code = ${_code};\n`;
+    let demo = `${text}\nDemo.header = '${display}';\nDemo.href = '${String(name).toLowerCase()}-${kebab}';\nDemo.code = ${_code};\n`;
     makeFile(path.resolve(`src/pages/documents/${name}/_demo/${file}`), demo);
 
     return true;

@@ -19,8 +19,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'WITHREF';
-Demo.href = 'textbox-withref';
+Demo.header = 'WITH REF';
+Demo.href = 'textbox-with-ref';
 Demo.code = `import React, { useCallback, useRef } from 'react';
 import { Textbox } from '@/components';
 

@@ -34,8 +34,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'ONCHANGEEVENT';
-Demo.href = 'collapse-onchangeevent';
+Demo.header = 'ON CHANGE EVENT';
+Demo.href = 'collapse-on-change-event';
 Demo.code = `import React from 'react';
 import { Collapse } from '@/components';
 

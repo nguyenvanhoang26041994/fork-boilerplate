@@ -22,8 +22,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'NOIMAGE';
-Demo.href = 'avatar-noimage';
+Demo.header = 'NO IMAGE';
+Demo.href = 'avatar-no-image';
 Demo.code = `import React from 'react';
 import { Avatar } from '@/components';
 

@@ -98,8 +98,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'SEMANTICPROPS';
-Demo.href = 'badge-semanticprops';
+Demo.header = 'SEMANTIC PROPS';
+Demo.href = 'badge-semantic-props';
 Demo.code = `import React from 'react';
 import cn from 'classnames';
 

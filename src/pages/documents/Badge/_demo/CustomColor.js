@@ -27,8 +27,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'CUSTOMCOLOR';
-Demo.href = 'badge-customcolor';
+Demo.header = 'CUSTOM COLOR';
+Demo.href = 'badge-custom-color';
 Demo.code = `import React from 'react';
 import { Badge } from '@/components';
 

@@ -11,8 +11,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'WITHBADGE';
-Demo.href = 'button-withbadge';
+Demo.header = 'WITH BADGE';
+Demo.href = 'button-with-badge';
 Demo.code = `import React from 'react';
 import { Button, Badge } from '@/components';
 

@@ -62,8 +62,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'CUSTOMICON';
-Demo.href = 'timeline-customicon';
+Demo.header = 'CUSTOM ICON';
+Demo.href = 'timeline-custom-icon';
 Demo.code = `import React from 'react';
 import { Timeline, Icon } from '@/components';
 

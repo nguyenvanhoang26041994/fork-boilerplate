@@ -14,8 +14,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'UNCONTROLLED';
-Demo.href = 'switch-uncontrolled';
+Demo.header = 'UN CONTROLLED';
+Demo.href = 'switch-un-controlled';
 Demo.code = `import React from 'react';
 import { Switch } from '@/components';
 

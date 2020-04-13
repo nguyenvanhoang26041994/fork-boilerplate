@@ -23,8 +23,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'WITHICON';
-Demo.href = 'button-withicon';
+Demo.header = 'WITH ICON';
+Demo.href = 'button-with-icon';
 Demo.code = `import React from 'react';
 import { Button, Icon } from '@/components';
 

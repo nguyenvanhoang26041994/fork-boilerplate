@@ -14,8 +14,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'MINANDMAX';
-Demo.href = 'inputnumber-minandmax';
+Demo.header = 'MIN AND MAX';
+Demo.href = 'inputnumber-min-and-max';
 Demo.code = `import React from 'react';
 import { InputNumber } from '@/components';
 

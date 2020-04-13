@@ -54,8 +54,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'WITHBADGE';
-Demo.href = 'tabs-withbadge';
+Demo.header = 'WITH BADGE';
+Demo.href = 'tabs-with-badge';
 Demo.code = `import React, { useState, useCallback } from 'react';
 import { Tabs, Badge, Icon } from '@/components';
 

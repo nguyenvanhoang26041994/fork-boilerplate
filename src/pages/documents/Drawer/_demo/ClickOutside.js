@@ -25,8 +25,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'CLICKOUTSIDE';
-Demo.href = 'drawer-clickoutside';
+Demo.header = 'CLICK OUTSIDE';
+Demo.href = 'drawer-click-outside';
 Demo.code = `import React, { useState, useCallback } from 'react';
 import { Button, Drawer } from '@/components';
 

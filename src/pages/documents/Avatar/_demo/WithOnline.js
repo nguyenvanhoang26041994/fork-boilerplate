@@ -16,8 +16,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'WITHONLINE';
-Demo.href = 'avatar-withonline';
+Demo.header = 'WITH ONLINE';
+Demo.href = 'avatar-with-online';
 Demo.code = `import React from 'react';
 import { Avatar, Badge } from '@/components';
 

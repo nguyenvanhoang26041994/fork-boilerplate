@@ -13,8 +13,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'FLUIDGROUPBUTTON';
-Demo.href = 'button-fluidgroupbutton';
+Demo.header = 'FLUID GROUP BUTTON';
+Demo.href = 'button-fluid-group-button';
 Demo.code = `import React from 'react';
 import { Button, ButtonGroup } from '@/components';
 

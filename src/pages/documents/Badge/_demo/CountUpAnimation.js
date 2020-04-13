@@ -28,8 +28,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'COUNTUPANIMATION';
-Demo.href = 'badge-countupanimation';
+Demo.header = 'COUNT UP ANIMATION';
+Demo.href = 'badge-count-up-animation';
 Demo.code = `import React, { useState, useEffect } from 'react';
 import { Badge } from '@/components';
 

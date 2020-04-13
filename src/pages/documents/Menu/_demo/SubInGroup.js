@@ -24,8 +24,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'SUBINGROUP';
-Demo.href = 'menu-subingroup';
+Demo.header = 'SUB IN GROUP';
+Demo.href = 'menu-sub-in-group';
 Demo.code = `import React from 'react';
 import { Menu } from '@/components';
 

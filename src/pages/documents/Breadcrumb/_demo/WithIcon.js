@@ -13,8 +13,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'WITHICON';
-Demo.href = 'breadcrumb-withicon';
+Demo.header = 'WITH ICON';
+Demo.href = 'breadcrumb-with-icon';
 Demo.code = `import React from 'react';
 import { Breadcrumb, Icon } from '@/components';
 

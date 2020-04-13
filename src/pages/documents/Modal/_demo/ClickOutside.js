@@ -24,8 +24,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'CLICKOUTSIDE';
-Demo.href = 'modal-clickoutside';
+Demo.header = 'CLICK OUTSIDE';
+Demo.href = 'modal-click-outside';
 Demo.code = `import React, { useState, useCallback } from 'react';
 import { Button, Modal } from '@/components';
 

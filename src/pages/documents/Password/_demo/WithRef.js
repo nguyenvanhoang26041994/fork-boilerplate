@@ -19,8 +19,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'WITHREF';
-Demo.href = 'password-withref';
+Demo.header = 'WITH REF';
+Demo.href = 'password-with-ref';
 Demo.code = `import React, { useCallback, useRef } from 'react';
 import { Password } from '@/components';
 

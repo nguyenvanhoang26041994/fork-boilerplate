@@ -23,8 +23,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'DIRECTIONTITLE';
-Demo.href = 'divider-directiontitle';
+Demo.header = 'DIRECTION TITLE';
+Demo.href = 'divider-direction-title';
 Demo.code = `import React from 'react';
 import { Divider, Icon } from '@/components';
 

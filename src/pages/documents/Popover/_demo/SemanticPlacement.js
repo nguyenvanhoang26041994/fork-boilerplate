@@ -89,8 +89,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'SEMANTICPLACEMENT';
-Demo.href = 'popover-semanticplacement';
+Demo.header = 'SEMANTIC PLACEMENT';
+Demo.href = 'popover-semantic-placement';
 Demo.code = `import React from 'react';
 import { Button, Stepper, Popover } from '@/components';
 

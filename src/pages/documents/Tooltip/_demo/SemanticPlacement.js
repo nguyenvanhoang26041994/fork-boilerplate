@@ -73,8 +73,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'SEMANTICPLACEMENT';
-Demo.href = 'tooltip-semanticplacement';
+Demo.header = 'SEMANTIC PLACEMENT';
+Demo.href = 'tooltip-semantic-placement';
 Demo.code = `import React from 'react';
 import { Button, Tooltip } from '@/components';
 

@@ -23,8 +23,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'OVERFLOWCOUNT';
-Demo.href = 'badge-overflowcount';
+Demo.header = 'OVERFLOW COUNT';
+Demo.href = 'badge-overflow-count';
 Demo.code = `import React from 'react';
 import { Badge } from '@/components';
 

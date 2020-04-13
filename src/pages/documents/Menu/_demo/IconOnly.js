@@ -32,8 +32,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'ICONONLY';
-Demo.href = 'menu-icononly';
+Demo.header = 'ICON ONLY';
+Demo.href = 'menu-icon-only';
 Demo.code = `import React from 'react';
 import { Menu } from '@/components';
 

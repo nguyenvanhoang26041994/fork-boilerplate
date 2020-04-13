@@ -13,8 +13,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'DEFAULTVISIBLE';
-Demo.href = 'tooltip-defaultvisible';
+Demo.header = 'DEFAULT VISIBLE';
+Demo.href = 'tooltip-default-visible';
 Demo.code = `import React from 'react';
 import { Button, Tooltip } from '@/components';
 

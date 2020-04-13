@@ -32,8 +32,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'DEFAULTVISIBLE';
-Demo.href = 'popover-defaultvisible';
+Demo.header = 'DEFAULT VISIBLE';
+Demo.href = 'popover-default-visible';
 Demo.code = `import React from 'react';
 import { Button, Popover, Stepper } from '@/components';
 

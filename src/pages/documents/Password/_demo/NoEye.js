@@ -13,8 +13,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'NOEYE';
-Demo.href = 'password-noeye';
+Demo.header = 'NO EYE';
+Demo.href = 'password-no-eye';
 Demo.code = `import React from 'react';
 import { Password } from '@/components';
 

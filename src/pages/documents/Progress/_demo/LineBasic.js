@@ -43,8 +43,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'LINEBASIC';
-Demo.href = 'progress-linebasic';
+Demo.header = 'LINE BASIC';
+Demo.href = 'progress-line-basic';
 Demo.code = `import React, { useState, useCallback }  from 'react';
 import { Progress, Button, ButtonGroup, Switch } from '@/components';
 

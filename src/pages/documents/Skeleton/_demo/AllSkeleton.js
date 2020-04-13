@@ -24,8 +24,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'ALLSKELETON';
-Demo.href = 'skeleton-allskeleton';
+Demo.header = 'ALL SKELETON';
+Demo.href = 'skeleton-all-skeleton';
 Demo.code = `import React  from 'react';
 import { Skeleton } from '@/components';
 

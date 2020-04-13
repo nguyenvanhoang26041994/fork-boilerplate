@@ -40,8 +40,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'GROUPBUTTON';
-Demo.href = 'button-groupbutton';
+Demo.header = 'GROUP BUTTON';
+Demo.href = 'button-group-button';
 Demo.code = `import React from 'react';
 import { Button, ButtonGroup } from '@/components';
 

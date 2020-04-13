@@ -19,8 +19,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'WITHREF';
-Demo.href = 'inputnumber-withref';
+Demo.header = 'WITH REF';
+Demo.href = 'inputnumber-with-ref';
 Demo.code = `import React, { useCallback, useRef } from 'react';
 import { InputNumber } from '@/components';
 

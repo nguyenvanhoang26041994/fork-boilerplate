@@ -19,8 +19,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'WITHREF';
-Demo.href = 'textarea-withref';
+Demo.header = 'WITH REF';
+Demo.href = 'textarea-with-ref';
 Demo.code = `import React, { useCallback, useRef } from 'react';
 import { Textarea } from '@/components';
 

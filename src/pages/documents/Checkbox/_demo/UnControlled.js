@@ -14,8 +14,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'UNCONTROLLED';
-Demo.href = 'checkbox-uncontrolled';
+Demo.header = 'UN CONTROLLED';
+Demo.href = 'checkbox-un-controlled';
 Demo.code = `import React from 'react';
 import { Checkbox } from '@/components';
 
