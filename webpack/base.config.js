@@ -18,7 +18,8 @@ module.exports = (options) => ({
   output: options.output,
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '../src/'),
+      '@': path.resolve('src'),
+      '@@': path.resolve(),
     },
   },
   module: {

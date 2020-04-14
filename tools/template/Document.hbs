@@ -1,0 +1,33 @@
+import React from 'react';
+import { Anchor } from '@/components';
+import Codebox from '@/others-component/Codebox';
+
+{{#each importers}}
+import {{this}} from './demo/{{this}}';
+{{/each}}
+
+export default () => {
+  return (
+    <div className="flex">
+      <div className="flex flex-col flex-1">
+        {{#each importers}}
+         <Codebox className="mb-2" Component={ {{this}} } />
+        {{/each}}
+      </div>
+      <div className="pl-3" style={ { flexBasis: '250px' } }>
+        <Anchor
+          top={90}
+          style={ {
+            backgroundColor: 'var(--rc-color--500)',
+            height: 'calc(100vh - 10rem',
+            borderRadius: '0.5rem',
+          } }
+        >
+          {{#each importers}}
+           <Anchor.Link key={`#${ {{this}}.href}` } title={ {{this}}.header } />
+          {{/each}}
+        </Anchor>
+      </div>
+    </div>
+  );
+};

@@ -27,7 +27,7 @@ const Codebox = ({ defaultExpanded, className, Component }) => {
           right
           title={(
             <span onClick={toggleExpanded} className="code-box-collapse-code-header">
-              <Icon name="caret-down" /> Code
+              <Icon name="code" />
             </span>
           )}
         />
