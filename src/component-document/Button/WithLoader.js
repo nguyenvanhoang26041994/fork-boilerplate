@@ -4,7 +4,7 @@ import { Button } from '@/components';
 const Demo = () => {
   return (
     <div className="flex flex-col">
-      <div className="flex">
+      <div className="flex mb-2">
         <Button loading className="mr-2">Basic</Button>
         <Button loading pressed className="mr-2">Pressed</Button>
         <Button loading disabled className="mr-2">Disabled</Button>
