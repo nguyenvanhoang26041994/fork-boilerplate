@@ -9,6 +9,7 @@ import WithIcon from './_demo/WithIcon';
 import WithBadge from './_demo/WithBadge';
 import Popular from './_demo/Popular';
 import FluidGroupButton from './_demo/FluidGroupButton';
+import WithLoader from './_demo/WithLoader';
 
 export default () => {
   return (
@@ -26,6 +27,7 @@ export default () => {
       <div className="w-1/3">
         <Codebox className="mb-2" Component={Size} />
         <Codebox className="mb-2" Component={FluidGroupButton} />
+        <Codebox className="mb-2" Component={WithLoader} />
       </div>
     </div>
   );
