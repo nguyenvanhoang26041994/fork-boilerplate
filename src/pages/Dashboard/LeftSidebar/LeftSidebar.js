@@ -54,8 +54,10 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
     <div className={cn('left-sidebar-container', { '--expanded': isExpanded })}>
       <div className={cn('left-sidebar-wrapper', { '--expanded': isExpanded } )}>
         <div className={cn('left-sidebar', { '--expanded': isExpanded } )} {...otherProps}>
-          <div className="__logo">
-            <Icon name="home" style={{ fontSize: '1.75rem' }} onClick={() => history.push('/')} />
+          <div className="__top">
+            <div className="__logo">
+              <Icon name="home" style={{ fontSize: '1.75rem' }} onClick={() => history.push('/')} />
+            </div>
           </div>
           <Menu
             className="__menu"

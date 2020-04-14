@@ -33,7 +33,13 @@
     display: none;
   }
 
-  > .__logo {
+  .__top {
+    position: sticky;
+    top: 0;
+    background-color: var(--rc-color--500);
+  }
+
+  .__logo {
     height: 5rem;
     width: 5rem;
     display: flex;
