@@ -1,11 +1,11 @@
 @import '../../../style/vars.scss';
 
 .left-sidebar-container {
-  width: 7rem;
+  width: 6rem;
   height: 100vh;
 
   &.--expanded {
-    width: 21rem;
+    width: 20rem;
   }
 }
 

@@ -6,8 +6,6 @@ import TopNavigation from './TopNavigation';
 import loadable from '../../utils/loadable';
 import { Breadcrumb, Icon } from '@/components';
 
-const Board = loadable(() => import('./Board'));
-
 const CheckboxDocument = loadable(() => import('@/_component-document/Checkbox'));
 const RadioDocument = loadable(() => import('@/_component-document/Radio'));
 const SwitchDocument = loadable(() => import('@/_component-document/Switch'));
@@ -270,7 +268,7 @@ const Dashboard = ({}) => {
       <LeftSidebar isExpanded={isExpanded} />
       <div className="flex-1 flex flex-col">
         <TopNavigation toggleExpand={toggleExpand} isExpanded={isExpanded} />
-        <Breadcrumb className="mb-5">
+        <Breadcrumb className="mb-3">
           {breadcrumb.map(props => (
             <Breadcrumb.Item {...props} href={props._href} />
           ))}
@@ -278,7 +276,6 @@ const Dashboard = ({}) => {
         <div className="flex">
           <div className="flex-1">
             <Switch>
-              <Route exact path="/" component={Board} />
               <Route path="/document/checkbox" component={CheckboxDocument} />
               <Route path="/document/switch" component={SwitchDocument} />
               <Route path="/document/radio" component={RadioDocument} />

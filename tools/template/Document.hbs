@@ -11,15 +11,15 @@ export default () => {
     <div className="flex">
       <div className="flex flex-col flex-1">
         {{#each importers}}
-         <Codebox className="mb-2" Component={ {{this}} } />
+         <Codebox className="mb-1" Component={ {{this}} } />
         {{/each}}
       </div>
-      <div className="pl-3" style={ { flexBasis: '250px' } }>
+      <div className="pl-1" style={ { flexBasis: '200px' } }>
         <Anchor
-          top={90}
+          top={75}
           style={ {
-            backgroundColor: 'var(--rc-color--500)',
-            height: 'calc(100vh - 10rem',
+            backgroundColor: 'var(--rc-color--300)',
+            height: 'calc(100vh - 75px',
             borderRadius: '0.5rem',
           } }
         >

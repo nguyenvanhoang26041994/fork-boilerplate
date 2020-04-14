@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css">
   <title>RC-Components</title>
 </head>
-<body class="">
+<style>
+  .common-scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .common-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgba(141, 141, 141, 0.35), rgba(141, 141, 141, 0.5), rgba(141, 141, 141, 0.35));
+    border-radius: 100rem;
+  }
+
+  .common-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+</style>
+<body class="common-scrollbar">
   <noscript>If you're seeing this message, that means
     <strong>JavaScript has been disabled on your browser</strong>, please
     <strong>enable JS</strong> to make this app work.
