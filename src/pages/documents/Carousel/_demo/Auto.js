@@ -5,7 +5,7 @@ const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Demo = () => {
   return (
-    <Carousel>
+    <Carousel auto={1000} loop>
       {listProduct.map(id => (
         <Carousel.Item key={id} className="neumorphism--500" style={{ borderRadius: '0.5rem' }}>
           <div
@@ -28,8 +28,8 @@ const Demo = () => {
 
 export default Demo;
 
-Demo.header = 'BASIC';
-Demo.href = 'carousel-basic';
+Demo.header = 'AUTO';
+Demo.href = 'carousel-auto';
 Demo.code = `import React from 'react';
 import { Carousel, Icon, Badge } from '@/components';
 
@@ -37,7 +37,7 @@ const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Demo = () => {
   return (
-    <Carousel>
+    <Carousel auto={1000} loop>
       {listProduct.map(id => (
         <Carousel.Item key={id} className="neumorphism--500" style={{ borderRadius: '0.5rem' }}>
           <div

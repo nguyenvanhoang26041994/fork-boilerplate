@@ -5,7 +5,7 @@ const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Demo = () => {
   return (
-    <Carousel>
+    <Carousel focus>
       {listProduct.map(id => (
         <Carousel.Item key={id} className="neumorphism--500" style={{ borderRadius: '0.5rem' }}>
           <div
