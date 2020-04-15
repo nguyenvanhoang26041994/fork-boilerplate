@@ -1,4 +1,4 @@
-import leftSidebar from '@@/guide-config';
+import leftSidebar from '@@/guide.config';
 
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
