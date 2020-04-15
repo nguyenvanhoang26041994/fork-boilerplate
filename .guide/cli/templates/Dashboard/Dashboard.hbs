@@ -4,11 +4,25 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import LeftSidebar from './LeftSidebar';
 import TopNavigation from './TopNavigation';
 import loadable from '@/utils/loadable';
-import { Breadcrumb, Icon } from '@/rc-neumorphism/core';
+import { Breadcrumb, Icon, Loader } from '@/rc-neumorphism/core';
 import { mapBreadcrumb } from '../map-config';
 
+const fallback = (
+  <div
+    style={ {
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
+      zIndex: 10000,
+      transform: 'translate(-50%, -50%)',
+    } }
+  >
+    <Loader.Dot size="2rem" />
+  </div>
+);
+
 {{#each importers}}
-const {{this.key}}Document = loadable(() => import('../_documents/{{this.key}}'));
+const {{this.key}}Document = loadable(() => import('../_documents/{{this.key}}'), { fallback });
 {{/each}}
 
 const Dashboard = ({}) => {

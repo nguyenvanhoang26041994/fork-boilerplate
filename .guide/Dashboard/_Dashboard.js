@@ -4,47 +4,61 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import LeftSidebar from './LeftSidebar';
 import TopNavigation from './TopNavigation';
 import loadable from '@/utils/loadable';
-import { Breadcrumb, Icon } from '@/rc-neumorphism/core';
+import { Breadcrumb, Icon, Loader } from '@/rc-neumorphism/core';
 import { mapBreadcrumb } from '../map-config';
 
-const AffixDocument = loadable(() => import('../_documents/Affix'));
-const AlertDocument = loadable(() => import('../_documents/Alert'));
-const AnchorDocument = loadable(() => import('../_documents/Anchor'));
-const AvatarDocument = loadable(() => import('../_documents/Avatar'));
-const BadgeDocument = loadable(() => import('../_documents/Badge'));
-const BreadcrumbDocument = loadable(() => import('../_documents/Breadcrumb'));
-const ButtonDocument = loadable(() => import('../_documents/Button'));
-const CarouselDocument = loadable(() => import('../_documents/Carousel'));
-const CheckboxDocument = loadable(() => import('../_documents/Checkbox'));
-const ChipDocument = loadable(() => import('../_documents/Chip'));
-const CollapseDocument = loadable(() => import('../_documents/Collapse'));
-const ConfirmDocument = loadable(() => import('../_documents/Confirm'));
-const DividerDocument = loadable(() => import('../_documents/Divider'));
-const DrawerDocument = loadable(() => import('../_documents/Drawer'));
-const FormDocument = loadable(() => import('../_documents/Form'));
-const IconDocument = loadable(() => import('../_documents/Icon'));
-const InputNumberDocument = loadable(() => import('../_documents/InputNumber'));
-const LoaderDocument = loadable(() => import('../_documents/Loader'));
-const MenuDocument = loadable(() => import('../_documents/Menu'));
-const ModalDocument = loadable(() => import('../_documents/Modal'));
-const NotificationDocument = loadable(() => import('../_documents/Notification'));
-const PaginationDocument = loadable(() => import('../_documents/Pagination'));
-const PasswordDocument = loadable(() => import('../_documents/Password'));
-const PopoverDocument = loadable(() => import('../_documents/Popover'));
-const ProgressDocument = loadable(() => import('../_documents/Progress'));
-const RadioDocument = loadable(() => import('../_documents/Radio'));
-const RaterDocument = loadable(() => import('../_documents/Rater'));
-const SelectDocument = loadable(() => import('../_documents/Select'));
-const SkeletonDocument = loadable(() => import('../_documents/Skeleton'));
-const SliderDocument = loadable(() => import('../_documents/Slider'));
-const StepperDocument = loadable(() => import('../_documents/Stepper'));
-const SwitchDocument = loadable(() => import('../_documents/Switch'));
-const TabsDocument = loadable(() => import('../_documents/Tabs'));
-const TextareaDocument = loadable(() => import('../_documents/Textarea'));
-const TextboxDocument = loadable(() => import('../_documents/Textbox'));
-const TimelineDocument = loadable(() => import('../_documents/Timeline'));
-const TooltipDocument = loadable(() => import('../_documents/Tooltip'));
-const TypographyDocument = loadable(() => import('../_documents/Typography'));
+const fallback = (
+  <div
+    style={ {
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
+      zIndex: 10000,
+      transform: 'translate(-50%, -50%)',
+    } }
+  >
+    <Loader.Dot size="2rem" />
+  </div>
+);
+
+const AffixDocument = loadable(() => import('../_documents/Affix'), { fallback });
+const AlertDocument = loadable(() => import('../_documents/Alert'), { fallback });
+const AnchorDocument = loadable(() => import('../_documents/Anchor'), { fallback });
+const AvatarDocument = loadable(() => import('../_documents/Avatar'), { fallback });
+const BadgeDocument = loadable(() => import('../_documents/Badge'), { fallback });
+const BreadcrumbDocument = loadable(() => import('../_documents/Breadcrumb'), { fallback });
+const ButtonDocument = loadable(() => import('../_documents/Button'), { fallback });
+const CarouselDocument = loadable(() => import('../_documents/Carousel'), { fallback });
+const CheckboxDocument = loadable(() => import('../_documents/Checkbox'), { fallback });
+const ChipDocument = loadable(() => import('../_documents/Chip'), { fallback });
+const CollapseDocument = loadable(() => import('../_documents/Collapse'), { fallback });
+const ConfirmDocument = loadable(() => import('../_documents/Confirm'), { fallback });
+const DividerDocument = loadable(() => import('../_documents/Divider'), { fallback });
+const DrawerDocument = loadable(() => import('../_documents/Drawer'), { fallback });
+const FormDocument = loadable(() => import('../_documents/Form'), { fallback });
+const IconDocument = loadable(() => import('../_documents/Icon'), { fallback });
+const InputNumberDocument = loadable(() => import('../_documents/InputNumber'), { fallback });
+const LoaderDocument = loadable(() => import('../_documents/Loader'), { fallback });
+const MenuDocument = loadable(() => import('../_documents/Menu'), { fallback });
+const ModalDocument = loadable(() => import('../_documents/Modal'), { fallback });
+const NotificationDocument = loadable(() => import('../_documents/Notification'), { fallback });
+const PaginationDocument = loadable(() => import('../_documents/Pagination'), { fallback });
+const PasswordDocument = loadable(() => import('../_documents/Password'), { fallback });
+const PopoverDocument = loadable(() => import('../_documents/Popover'), { fallback });
+const ProgressDocument = loadable(() => import('../_documents/Progress'), { fallback });
+const RadioDocument = loadable(() => import('../_documents/Radio'), { fallback });
+const RaterDocument = loadable(() => import('../_documents/Rater'), { fallback });
+const SelectDocument = loadable(() => import('../_documents/Select'), { fallback });
+const SkeletonDocument = loadable(() => import('../_documents/Skeleton'), { fallback });
+const SliderDocument = loadable(() => import('../_documents/Slider'), { fallback });
+const StepperDocument = loadable(() => import('../_documents/Stepper'), { fallback });
+const SwitchDocument = loadable(() => import('../_documents/Switch'), { fallback });
+const TabsDocument = loadable(() => import('../_documents/Tabs'), { fallback });
+const TextareaDocument = loadable(() => import('../_documents/Textarea'), { fallback });
+const TextboxDocument = loadable(() => import('../_documents/Textbox'), { fallback });
+const TimelineDocument = loadable(() => import('../_documents/Timeline'), { fallback });
+const TooltipDocument = loadable(() => import('../_documents/Tooltip'), { fallback });
+const TypographyDocument = loadable(() => import('../_documents/Typography'), { fallback });
 
 const Dashboard = ({}) => {
   const [isExpanded, setIsExpanded] = useState(true);
