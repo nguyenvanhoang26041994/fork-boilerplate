@@ -1,0 +1,56 @@
+import React, { useState, useCallback, useMemo } from 'react';
+import { Switch, Route, useLocation } from 'react-router-dom';
+
+import LeftSidebar from './LeftSidebar';
+import TopNavigation from './TopNavigation';
+import loadable from '@/utils/loadable';
+import { Breadcrumb, Icon } from '@/rc-neumorphism/core';
+import { mapBreadcrumb } from '../map-config';
+
+{{#each importers}}
+const {{this.key}}Document = loadable(() => import('../_documents/{{this.key}}'));
+{{/each}}
+
+const Dashboard = ({}) => {
+  const [isExpanded, setIsExpanded] = useState(true);
+  const toggleExpand = useCallback(() => setIsExpanded(prev => !prev), []);
+
+  const location = useLocation();
+
+  const breadcrumb = useMemo(() => {
+    return mapBreadcrumb[location.pathname] || [];
+  }, [location.pathname]);
+
+  return (
+    <div id="main-admin" className="flex pr-2">
+      <LeftSidebar isExpanded={isExpanded} />
+      <div className="flex-1 flex flex-col">
+        <TopNavigation toggleExpand={toggleExpand} isExpanded={isExpanded} />
+        <Breadcrumb className="mb-3">
+          {breadcrumb.map(props => (
+            <Breadcrumb.Item
+              key={props.key}
+              title={props.icon ? (<Icon name={props.icon} />) : props.title}
+              href={props._href}
+            />
+          ))}
+        </Breadcrumb>
+        <div className="flex">
+          <div className="flex-1">
+            <Switch>
+              {{#each importers}}
+              <Route path="/document/{{this.keyLowerCase}}" component={ {{this.key}}Document } />
+              {{/each}}
+            </Switch>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+};
+
+Dashboard.displayName = 'Dashboard';
+Dashboard.propTypes = {};
+Dashboard.defaultProps = {};
+
+export default Dashboard;

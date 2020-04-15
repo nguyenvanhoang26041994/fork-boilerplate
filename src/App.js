@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import loadable from './utils/loadable';
 
-const Dashboard = loadable(() => import('../documents-guide/Dashboard'));
+const Dashboard = loadable(() => import('@@/.guide/Dashboard'));
 
 const App = () => {
   return (

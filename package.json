@@ -10,17 +10,15 @@
   "scripts": {
     "lint": "eslint ./src --",
     "clean-dist": "rimraf \"dist\"",
-    "build": "yarn make-demos && yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/prod.config.js",
+    "build": "yarn make-guide && yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/prod.config.js",
     "build-core": "yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/core.config.js",
-    "dev": "yarn make-demos && cross-env NODE_ENV=development node dev-server",
+    "dev": "yarn make-guide && cross-env NODE_ENV=development node dev-server",
     "deploy": "yarn build && now --prod",
     "build-neu-scss": "node-sass rc-neumorphism/src --output rc-neumorphism/lib",
     "build-neu-js": "babel --config-file rc-neumorphism/babel.config.js --out-dir rc-neumorphism/lib rc-neumorphism/src --verbose",
     "build-neu": "yarn rimraf \"rc-neumorphism/lib\" && yarn build-neu-js && yarn build-neu-scss",
-    "make-icons": "node documents-guide/cli/make-icons",
-    "make-demos": "node documents-guide/cli/make-demos",
-    "make-dashboard": "node documents-guide/cli/make-dashboard",
-    "make-guide": "node documents-guide/cli/make-guide"
+    "make-icons": "node .guide/cli/make-icons",
+    "make-guide": "node .guide/cli/make-guide"
   },
   "repository": {
     "type": "git",
