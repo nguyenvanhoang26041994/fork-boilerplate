@@ -21,8 +21,8 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Controlled.href}` } title={ Controlled.header } />
-           <Anchor.Link key={`#${ UnControlled.href}` } title={ UnControlled.header } />
+           <Anchor.Link key={`#${ Controlled.href}` } title={ Controlled.anchorTitle } />
+           <Anchor.Link key={`#${ UnControlled.href}` } title={ UnControlled.anchorTitle } />
         </Anchor>
       </div>
     </div>

@@ -27,7 +27,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Auto';
+Demo.header = 'AUTO';
+Demo.anchorTitle = 'Auto';
 Demo.href = 'carousel-auto';
 
 Demo.code = `import React from 'react';

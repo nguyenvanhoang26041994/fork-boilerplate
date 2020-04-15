@@ -23,7 +23,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Width';
+Demo.header = 'WIDTH';
+Demo.anchorTitle = 'Width';
 Demo.href = 'modal-width';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

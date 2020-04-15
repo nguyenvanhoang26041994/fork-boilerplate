@@ -1,51 +1,40 @@
 import React from 'react';
-import { Button, Affix } from '@/rc-neumorphism/core';
+import { Affix, Button } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (
     <div
-      className="flex flex-col justify-end w-full"
+      className="flex w-full flex-col"
       style={{
-        height: '1300px',
+        height: 2000,
       }}
     >
-      <div className="flex w-full">
-        <Affix bottom={100}>
-          <Button className="mr-10">Bottom 100px</Button>
-        </Affix>
-        <div className="flex-1">
-          <Button>Button Right</Button>
-        </div>
-      </div>
-      <div style={{ height: '300px' }} className="w-full" />
+      <Affix bottom={100}>
+        <Button>Bottom 100px</Button>
+      </Affix>
     </div>
   );
 };
 
 export default Demo;
-Demo.header = 'Bottom';
+Demo.header = 'BOTTOM';
+Demo.anchorTitle = 'Bottom';
 Demo.href = 'affix-bottom';
 
 Demo.code = `import React from 'react';
-import { Button, Affix } from '@/rc-neumorphism/core';
+import { Affix, Button } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (
     <div
-      className="flex flex-col justify-end w-full"
+      className="flex w-full flex-col"
       style={{
-        height: '1300px',
+        height: 2000,
       }}
     >
-      <div className="flex w-full">
-        <Affix bottom={100}>
-          <Button className="mr-10">Bottom 100px</Button>
-        </Affix>
-        <div className="flex-1">
-          <Button>Button Right</Button>
-        </div>
-      </div>
-      <div style={{ height: '300px' }} className="w-full" />
+      <Affix bottom={100}>
+        <Button>Bottom 100px</Button>
+      </Affix>
     </div>
   );
 };

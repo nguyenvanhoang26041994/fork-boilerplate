@@ -26,7 +26,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Invisible';
+Demo.header = 'INVISIBLE';
+Demo.anchorTitle = 'Invisible';
 Demo.href = 'badge-invisible';
 
 Demo.code = `import React, { useState } from 'react';

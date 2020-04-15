@@ -7,6 +7,7 @@ import loadable from '@/utils/loadable';
 import { Breadcrumb, Icon } from '@/rc-neumorphism/core';
 import { mapBreadcrumb } from '../map-config';
 
+const AffixDocument = loadable(() => import('../_documents/Affix'));
 const AlertDocument = loadable(() => import('../_documents/Alert'));
 const AnchorDocument = loadable(() => import('../_documents/Anchor'));
 const AvatarDocument = loadable(() => import('../_documents/Avatar'));
@@ -72,6 +73,7 @@ const Dashboard = ({}) => {
         <div className="flex">
           <div className="flex-1">
             <Switch>
+              <Route path="/document/affix" component={ AffixDocument } />
               <Route path="/document/alert" component={ AlertDocument } />
               <Route path="/document/anchor" component={ AnchorDocument } />
               <Route path="/document/avatar" component={ AvatarDocument } />

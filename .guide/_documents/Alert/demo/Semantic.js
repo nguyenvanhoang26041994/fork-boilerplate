@@ -19,7 +19,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Semantic';
+Demo.header = 'SEMANTIC';
+Demo.anchorTitle = 'Semantic';
 Demo.href = 'alert-semantic';
 
 Demo.code = `import React from 'react';

@@ -18,7 +18,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'With Ref';
+Demo.header = 'WITH REF';
+Demo.anchorTitle = 'With ref';
 Demo.href = 'inputnumber-with-ref';
 
 Demo.code = `import React, { useCallback, useRef } from 'react';

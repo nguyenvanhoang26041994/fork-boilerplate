@@ -11,7 +11,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Basic';
+Demo.header = 'BASIC';
+Demo.anchorTitle = 'Basic';
 Demo.href = 'textarea-basic';
 
 Demo.code = `import React from 'react';

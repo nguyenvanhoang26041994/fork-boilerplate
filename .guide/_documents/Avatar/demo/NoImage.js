@@ -21,7 +21,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'No Image';
+Demo.header = 'NO IMAGE';
+Demo.anchorTitle = 'No image';
 Demo.href = 'avatar-no-image';
 
 Demo.code = `import React from 'react';

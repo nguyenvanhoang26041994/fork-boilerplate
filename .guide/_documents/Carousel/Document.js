@@ -27,11 +27,11 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Auto.href}` } title={ Auto.header } />
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Focus.href}` } title={ Focus.header } />
-           <Anchor.Link key={`#${ Loop.href}` } title={ Loop.header } />
-           <Anchor.Link key={`#${ Multiple.href}` } title={ Multiple.header } />
+           <Anchor.Link key={`#${ Auto.href}` } title={ Auto.anchorTitle } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Focus.href}` } title={ Focus.anchorTitle } />
+           <Anchor.Link key={`#${ Loop.href}` } title={ Loop.anchorTitle } />
+           <Anchor.Link key={`#${ Multiple.href}` } title={ Multiple.anchorTitle } />
         </Anchor>
       </div>
     </div>

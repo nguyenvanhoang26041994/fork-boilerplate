@@ -25,10 +25,10 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Controlled.href}` } title={ Controlled.header } />
-           <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.header } />
-           <Anchor.Link key={`#${ WithRef.href}` } title={ WithRef.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Controlled.href}` } title={ Controlled.anchorTitle } />
+           <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.anchorTitle } />
+           <Anchor.Link key={`#${ WithRef.href}` } title={ WithRef.anchorTitle } />
         </Anchor>
       </div>
     </div>

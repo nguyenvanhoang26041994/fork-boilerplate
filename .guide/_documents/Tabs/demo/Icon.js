@@ -37,7 +37,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Icon';
+Demo.header = 'ICON';
+Demo.anchorTitle = 'Icon';
 Demo.href = 'tabs-icon';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

@@ -12,7 +12,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Text';
+Demo.header = 'TEXT';
+Demo.anchorTitle = 'Text';
 Demo.href = 'divider-text';
 
 Demo.code = `import React from 'react';

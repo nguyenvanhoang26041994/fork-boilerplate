@@ -22,7 +22,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Direction Title';
+Demo.header = 'DIRECTION TITLE';
+Demo.anchorTitle = 'Direction title';
 Demo.href = 'divider-direction-title';
 
 Demo.code = `import React from 'react';

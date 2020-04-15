@@ -31,7 +31,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Icon Only';
+Demo.header = 'ICON ONLY';
+Demo.anchorTitle = 'Icon only';
 Demo.href = 'menu-icon-only';
 
 Demo.code = `import React from 'react';

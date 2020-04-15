@@ -27,7 +27,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Loop';
+Demo.header = 'LOOP';
+Demo.anchorTitle = 'Loop';
 Demo.href = 'carousel-loop';
 
 Demo.code = `import React from 'react';

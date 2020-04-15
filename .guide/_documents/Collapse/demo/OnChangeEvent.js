@@ -33,7 +33,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'On Change Event';
+Demo.header = 'ON CHANGE EVENT';
+Demo.anchorTitle = 'On change event';
 Demo.href = 'collapse-on-change-event';
 
 Demo.code = `import React from 'react';

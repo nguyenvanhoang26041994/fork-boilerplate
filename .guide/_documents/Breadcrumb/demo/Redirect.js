@@ -22,7 +22,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Redirect';
+Demo.header = 'REDIRECT';
+Demo.anchorTitle = 'Redirect';
 Demo.href = 'breadcrumb-redirect';
 
 Demo.code = `import React from 'react';

@@ -13,7 +13,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Header';
+Demo.header = 'HEADER';
+Demo.anchorTitle = 'Header';
 Demo.href = 'typography-header';
 
 Demo.code = `import React from 'react';

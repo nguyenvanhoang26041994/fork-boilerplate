@@ -97,7 +97,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Semantic Props';
+Demo.header = 'SEMANTIC PROPS';
+Demo.anchorTitle = 'Semantic props';
 Demo.href = 'badge-semantic-props';
 
 Demo.code = `import React from 'react';

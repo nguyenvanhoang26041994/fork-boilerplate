@@ -12,7 +12,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Step';
+Demo.header = 'STEP';
+Demo.anchorTitle = 'Step';
 Demo.href = 'inputnumber-step';
 
 Demo.code = `import React from 'react';

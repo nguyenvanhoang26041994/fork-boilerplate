@@ -15,7 +15,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'With Online';
+Demo.header = 'WITH ONLINE';
+Demo.anchorTitle = 'With online';
 Demo.href = 'avatar-with-online';
 
 Demo.code = `import React from 'react';

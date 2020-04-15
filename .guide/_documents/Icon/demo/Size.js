@@ -12,7 +12,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Size';
+Demo.header = 'SIZE';
+Demo.anchorTitle = 'Size';
 Demo.href = 'icon-size';
 
 Demo.code = `import React from 'react';

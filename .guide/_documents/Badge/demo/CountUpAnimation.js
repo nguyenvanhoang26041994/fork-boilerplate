@@ -27,7 +27,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Count Up Animation';
+Demo.header = 'COUNT UP ANIMATION';
+Demo.anchorTitle = 'Count up animation';
 Demo.href = 'badge-count-up-animation';
 
 Demo.code = `import React, { useState, useEffect } from 'react';

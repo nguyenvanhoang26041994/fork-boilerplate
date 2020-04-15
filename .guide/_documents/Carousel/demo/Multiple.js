@@ -27,7 +27,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Multiple';
+Demo.header = 'MULTIPLE';
+Demo.anchorTitle = 'Multiple';
 Demo.href = 'carousel-multiple';
 
 Demo.code = `import React from 'react';

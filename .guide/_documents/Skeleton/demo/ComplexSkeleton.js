@@ -13,7 +13,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Complex Skeleton';
+Demo.header = 'COMPLEX SKELETON';
+Demo.anchorTitle = 'Complex skeleton';
 Demo.href = 'skeleton-complex-skeleton';
 
 Demo.code = `import React from 'react';

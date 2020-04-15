@@ -12,7 +12,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Fluid Group Button';
+Demo.header = 'FLUID GROUP BUTTON';
+Demo.anchorTitle = 'Fluid group button';
 Demo.href = 'button-fluid-group-button';
 
 Demo.code = `import React from 'react';

@@ -15,7 +15,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Size';
+Demo.header = 'SIZE';
+Demo.anchorTitle = 'Size';
 Demo.href = 'rater-size';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

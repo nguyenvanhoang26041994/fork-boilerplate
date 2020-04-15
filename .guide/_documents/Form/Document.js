@@ -23,9 +23,9 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Required.href}` } title={ Required.header } />
-           <Anchor.Link key={`#${ Status.href}` } title={ Status.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Required.href}` } title={ Required.anchorTitle } />
+           <Anchor.Link key={`#${ Status.href}` } title={ Status.anchorTitle } />
         </Anchor>
       </div>
     </div>

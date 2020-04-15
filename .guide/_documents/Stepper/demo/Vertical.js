@@ -41,7 +41,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Vertical';
+Demo.header = 'VERTICAL';
+Demo.anchorTitle = 'Vertical';
 Demo.href = 'stepper-vertical';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

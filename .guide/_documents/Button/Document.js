@@ -35,15 +35,15 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Color.href}` } title={ Color.header } />
-           <Anchor.Link key={`#${ FluidGroupButton.href}` } title={ FluidGroupButton.header } />
-           <Anchor.Link key={`#${ GroupButton.href}` } title={ GroupButton.header } />
-           <Anchor.Link key={`#${ Popular.href}` } title={ Popular.header } />
-           <Anchor.Link key={`#${ Size.href}` } title={ Size.header } />
-           <Anchor.Link key={`#${ WithBadge.href}` } title={ WithBadge.header } />
-           <Anchor.Link key={`#${ WithIcon.href}` } title={ WithIcon.header } />
-           <Anchor.Link key={`#${ WithLoader.href}` } title={ WithLoader.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Color.href}` } title={ Color.anchorTitle } />
+           <Anchor.Link key={`#${ FluidGroupButton.href}` } title={ FluidGroupButton.anchorTitle } />
+           <Anchor.Link key={`#${ GroupButton.href}` } title={ GroupButton.anchorTitle } />
+           <Anchor.Link key={`#${ Popular.href}` } title={ Popular.anchorTitle } />
+           <Anchor.Link key={`#${ Size.href}` } title={ Size.anchorTitle } />
+           <Anchor.Link key={`#${ WithBadge.href}` } title={ WithBadge.anchorTitle } />
+           <Anchor.Link key={`#${ WithIcon.href}` } title={ WithIcon.anchorTitle } />
+           <Anchor.Link key={`#${ WithLoader.href}` } title={ WithLoader.anchorTitle } />
         </Anchor>
       </div>
     </div>

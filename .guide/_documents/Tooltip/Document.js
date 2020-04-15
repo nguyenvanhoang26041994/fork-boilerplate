@@ -25,10 +25,10 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ DefaultVisible.href}` } title={ DefaultVisible.header } />
-           <Anchor.Link key={`#${ Placement.href}` } title={ Placement.header } />
-           <Anchor.Link key={`#${ SemanticPlacement.href}` } title={ SemanticPlacement.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ DefaultVisible.href}` } title={ DefaultVisible.anchorTitle } />
+           <Anchor.Link key={`#${ Placement.href}` } title={ Placement.anchorTitle } />
+           <Anchor.Link key={`#${ SemanticPlacement.href}` } title={ SemanticPlacement.anchorTitle } />
         </Anchor>
       </div>
     </div>

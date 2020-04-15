@@ -55,7 +55,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Complex';
+Demo.header = 'COMPLEX';
+Demo.anchorTitle = 'Complex';
 Demo.href = 'stepper-complex';
 
 Demo.code = `import React from 'react';

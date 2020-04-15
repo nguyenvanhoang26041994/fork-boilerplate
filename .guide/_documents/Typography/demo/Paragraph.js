@@ -48,7 +48,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Paragraph';
+Demo.header = 'PARAGRAPH';
+Demo.anchorTitle = 'Paragraph';
 Demo.href = 'typography-paragraph';
 
 Demo.code = `import React from 'react';

@@ -27,11 +27,11 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Custom.href}` } title={ Custom.header } />
-           <Anchor.Link key={`#${ Duration.href}` } title={ Duration.header } />
-           <Anchor.Link key={`#${ Pure.href}` } title={ Pure.header } />
-           <Anchor.Link key={`#${ Push.href}` } title={ Push.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Custom.href}` } title={ Custom.anchorTitle } />
+           <Anchor.Link key={`#${ Duration.href}` } title={ Duration.anchorTitle } />
+           <Anchor.Link key={`#${ Pure.href}` } title={ Pure.anchorTitle } />
+           <Anchor.Link key={`#${ Push.href}` } title={ Push.anchorTitle } />
         </Anchor>
       </div>
     </div>

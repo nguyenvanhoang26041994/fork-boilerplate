@@ -27,11 +27,11 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.header } />
-           <Anchor.Link key={`#${ Fluid.href}` } title={ Fluid.header } />
-           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.header } />
-           <Anchor.Link key={`#${ WithBadge.href}` } title={ WithBadge.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.anchorTitle } />
+           <Anchor.Link key={`#${ Fluid.href}` } title={ Fluid.anchorTitle } />
+           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.anchorTitle } />
+           <Anchor.Link key={`#${ WithBadge.href}` } title={ WithBadge.anchorTitle } />
         </Anchor>
       </div>
     </div>

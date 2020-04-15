@@ -2,7 +2,7 @@ import React from 'react';
 import { Anchor } from '@/rc-neumorphism/core';
 
 const Link = ({ id, children }) => (
-  <a className="px-5" id={id} style={{ height: '200px'}}>
+  <a className="px-5" id={id} style={{ height: '100px'}}>
     {children}
   </a>
 );
@@ -12,26 +12,26 @@ const Demo = () => {
     <div
       className="flex w-full flex-col"
       style={{
-        height: 2000,
+        height: 1000,
       }}
     >
-      <Anchor affix top={100}>
-        <Anchor.Link key='#things' title="Things" />
-        <Anchor.Link key='#stuff' title="Stuff" />
-        <Anchor.Link key='#stuff2' title="Stuff 2" />
+      <Anchor top={100}>
+        <Anchor.Link key='#things-top' title="Things" />
+        <Anchor.Link key='#stuff-top' title="Stuff" />
+        <Anchor.Link key='#stuff2-top' title="Stuff 2" />
       </Anchor>
 
       <div className="flex flex-col flex-1 items-end">
         <Link id='22'>
           <h2>22</h2>
         </Link>
-        <Link id='things'>
+        <Link id='things-top'>
           <h2>Things</h2>
         </Link>
-        <Link id='stuff'>
+        <Link id='stuff-top'>
           <h2>Stuff</h2>
         </Link>
-        <Link id='stuff2'>
+        <Link id='stuff2-top'>
           <h2>Stuff 2</h2>
         </Link>
       </div>
@@ -40,14 +40,15 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Top';
+Demo.header = 'TOP';
+Demo.anchorTitle = 'Top';
 Demo.href = 'anchor-top';
 
 Demo.code = `import React from 'react';
 import { Anchor } from '@/rc-neumorphism/core';
 
 const Link = ({ id, children }) => (
-  <a className="px-5" id={id} style={{ height: '200px'}}>
+  <a className="px-5" id={id} style={{ height: '100px'}}>
     {children}
   </a>
 );
@@ -57,26 +58,26 @@ const Demo = () => {
     <div
       className="flex w-full flex-col"
       style={{
-        height: 2000,
+        height: 1000,
       }}
     >
-      <Anchor affix top={100}>
-        <Anchor.Link key='#things' title="Things" />
-        <Anchor.Link key='#stuff' title="Stuff" />
-        <Anchor.Link key='#stuff2' title="Stuff 2" />
+      <Anchor top={100}>
+        <Anchor.Link key='#things-top' title="Things" />
+        <Anchor.Link key='#stuff-top' title="Stuff" />
+        <Anchor.Link key='#stuff2-top' title="Stuff 2" />
       </Anchor>
 
       <div className="flex flex-col flex-1 items-end">
         <Link id='22'>
           <h2>22</h2>
         </Link>
-        <Link id='things'>
+        <Link id='things-top'>
           <h2>Things</h2>
         </Link>
-        <Link id='stuff'>
+        <Link id='stuff-top'>
           <h2>Stuff</h2>
         </Link>
-        <Link id='stuff2'>
+        <Link id='stuff2-top'>
           <h2>Stuff 2</h2>
         </Link>
       </div>

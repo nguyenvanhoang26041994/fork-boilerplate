@@ -33,7 +33,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Custom';
+Demo.header = 'CUSTOM';
+Demo.anchorTitle = 'Custom';
 Demo.href = 'chip-custom';
 
 Demo.code = `import React  from 'react';

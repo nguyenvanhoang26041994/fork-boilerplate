@@ -30,7 +30,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Basic';
+Demo.header = 'BASIC';
+Demo.anchorTitle = 'Basic';
 Demo.href = 'radio-basic';
 
 Demo.code = `import React, { useState } from 'react';

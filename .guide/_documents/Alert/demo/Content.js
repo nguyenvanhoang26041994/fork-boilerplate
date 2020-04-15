@@ -37,7 +37,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Content';
+Demo.header = 'CONTENT';
+Demo.anchorTitle = 'Content';
 Demo.href = 'alert-content';
 
 Demo.code = `import React from 'react';

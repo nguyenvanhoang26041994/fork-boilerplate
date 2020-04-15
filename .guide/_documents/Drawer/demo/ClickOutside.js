@@ -24,7 +24,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Click Outside';
+Demo.header = 'CLICK OUTSIDE';
+Demo.anchorTitle = 'Click outside';
 Demo.href = 'drawer-click-outside';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

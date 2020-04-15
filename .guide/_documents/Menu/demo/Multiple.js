@@ -16,7 +16,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Multiple';
+Demo.header = 'MULTIPLE';
+Demo.anchorTitle = 'Multiple';
 Demo.href = 'menu-multiple';
 
 Demo.code = `import React from 'react';

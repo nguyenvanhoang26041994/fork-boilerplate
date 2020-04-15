@@ -12,7 +12,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'With Icon';
+Demo.header = 'WITH ICON';
+Demo.anchorTitle = 'With icon';
 Demo.href = 'breadcrumb-with-icon';
 
 Demo.code = `import React from 'react';

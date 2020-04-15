@@ -37,7 +37,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Fluid';
+Demo.header = 'FLUID';
+Demo.anchorTitle = 'Fluid';
 Demo.href = 'tabs-fluid';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

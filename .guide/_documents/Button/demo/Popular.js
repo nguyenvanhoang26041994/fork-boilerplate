@@ -12,7 +12,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Popular';
+Demo.header = 'POPULAR';
+Demo.anchorTitle = 'Popular';
 Demo.href = 'button-popular';
 
 Demo.code = `import React from 'react';

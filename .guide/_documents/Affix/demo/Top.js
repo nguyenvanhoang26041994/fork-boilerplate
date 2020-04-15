@@ -1,45 +1,40 @@
 import React from 'react';
-import { Button, Affix } from '@/rc-neumorphism/core';
+import { Affix, Button } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (
     <div
-      className="flex w-full"
+      className="flex w-full flex-col"
       style={{
-        height: '1300px',
+        height: 2000,
       }}
     >
-      <Affix top={200}>
-        <Button className="mr-10">Top 200px</Button>
+      <Affix top={100}>
+        <Button>Top 100px</Button>
       </Affix>
-      <div className="flex-1">
-        <Button>Button Right</Button>
-      </div>
     </div>
   );
 };
 
 export default Demo;
-Demo.header = 'Top';
+Demo.header = 'TOP';
+Demo.anchorTitle = 'Top';
 Demo.href = 'affix-top';
 
 Demo.code = `import React from 'react';
-import { Button, Affix } from '@/rc-neumorphism/core';
+import { Affix, Button } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (
     <div
-      className="flex w-full"
+      className="flex w-full flex-col"
       style={{
-        height: '1300px',
+        height: 2000,
       }}
     >
-      <Affix top={200}>
-        <Button className="mr-10">Top 200px</Button>
+      <Affix top={100}>
+        <Button>Top 100px</Button>
       </Affix>
-      <div className="flex-1">
-        <Button>Button Right</Button>
-      </div>
     </div>
   );
 };

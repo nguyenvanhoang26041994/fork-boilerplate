@@ -12,7 +12,8 @@ const Demo = () => {
   );
 };
 
-export default Demo;Demo.header = 'Basic Skeleton';
+export default Demo;Demo.header = 'BASIC SKELETON';
+Demo.anchorTitle = 'Basic skeleton';
 Demo.href = 'skeleton-basic-skeleton';
 
 Demo.code = `import React from 'react';

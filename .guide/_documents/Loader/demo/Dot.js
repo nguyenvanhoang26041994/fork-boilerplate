@@ -23,7 +23,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Dot';
+Demo.header = 'DOT';
+Demo.anchorTitle = 'Dot';
 Demo.href = 'loader-dot';
 
 Demo.code = `import React from 'react';

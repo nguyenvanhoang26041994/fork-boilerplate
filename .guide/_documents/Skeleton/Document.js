@@ -23,9 +23,9 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ AllSkeleton.href}` } title={ AllSkeleton.header } />
-           <Anchor.Link key={`#${ BasicSkeleton.href}` } title={ BasicSkeleton.header } />
-           <Anchor.Link key={`#${ ComplexSkeleton.href}` } title={ ComplexSkeleton.header } />
+           <Anchor.Link key={`#${ AllSkeleton.href}` } title={ AllSkeleton.anchorTitle } />
+           <Anchor.Link key={`#${ BasicSkeleton.href}` } title={ BasicSkeleton.anchorTitle } />
+           <Anchor.Link key={`#${ ComplexSkeleton.href}` } title={ ComplexSkeleton.anchorTitle } />
         </Anchor>
       </div>
     </div>

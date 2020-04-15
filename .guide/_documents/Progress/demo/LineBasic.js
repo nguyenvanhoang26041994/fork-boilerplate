@@ -42,7 +42,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Line Basic';
+Demo.header = 'LINE BASIC';
+Demo.anchorTitle = 'Line basic';
 Demo.href = 'progress-line-basic';
 
 Demo.code = `import React, { useState, useCallback }  from 'react';

@@ -59,7 +59,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Basic';
+Demo.header = 'BASIC';
+Demo.anchorTitle = 'Basic';
 Demo.href = 'form-basic';
 
 Demo.code = `import React, { useCallback } from 'react';

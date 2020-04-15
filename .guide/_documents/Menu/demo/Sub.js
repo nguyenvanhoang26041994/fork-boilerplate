@@ -47,7 +47,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Sub';
+Demo.header = 'SUB';
+Demo.anchorTitle = 'Sub';
 Demo.href = 'menu-sub';
 
 Demo.code = `import React from 'react';

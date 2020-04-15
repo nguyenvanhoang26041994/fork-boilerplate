@@ -12,7 +12,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Color';
+Demo.header = 'COLOR';
+Demo.anchorTitle = 'Color';
 Demo.href = 'icon-color';
 
 Demo.code = `import React from 'react';

@@ -28,7 +28,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Collection';
+Demo.header = 'COLLECTION';
+Demo.anchorTitle = 'Collection';
 Demo.href = 'icon-collection';
 
 Demo.code = `import React from 'react';

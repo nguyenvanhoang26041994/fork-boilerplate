@@ -35,7 +35,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'No Text';
+Demo.header = 'NO TEXT';
+Demo.anchorTitle = 'No text';
 Demo.href = 'progress-no-text';
 
 Demo.code = `import React, { useState, useCallback }  from 'react';

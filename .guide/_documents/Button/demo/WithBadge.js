@@ -10,7 +10,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'With Badge';
+Demo.header = 'WITH BADGE';
+Demo.anchorTitle = 'With badge';
 Demo.href = 'button-with-badge';
 
 Demo.code = `import React from 'react';

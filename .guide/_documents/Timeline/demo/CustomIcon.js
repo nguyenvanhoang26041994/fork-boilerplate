@@ -61,7 +61,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Custom Icon';
+Demo.header = 'CUSTOM ICON';
+Demo.anchorTitle = 'Custom icon';
 Demo.href = 'timeline-custom-icon';
 
 Demo.code = `import React from 'react';

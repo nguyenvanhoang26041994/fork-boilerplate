@@ -21,8 +21,8 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Max.href}` } title={ Max.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Max.href}` } title={ Max.anchorTitle } />
         </Anchor>
       </div>
     </div>

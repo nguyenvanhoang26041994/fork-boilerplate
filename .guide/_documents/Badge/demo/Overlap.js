@@ -98,7 +98,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Overlap';
+Demo.header = 'OVERLAP';
+Demo.anchorTitle = 'Overlap';
 Demo.href = 'badge-overlap';
 
 Demo.code = `import React from 'react';

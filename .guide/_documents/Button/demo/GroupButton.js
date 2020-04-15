@@ -39,7 +39,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Group Button';
+Demo.header = 'GROUP BUTTON';
+Demo.anchorTitle = 'Group button';
 Demo.href = 'button-group-button';
 
 Demo.code = `import React from 'react';

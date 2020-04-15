@@ -29,12 +29,12 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Complex.href}` } title={ Complex.header } />
-           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.header } />
-           <Anchor.Link key={`#${ Semantic.href}` } title={ Semantic.header } />
-           <Anchor.Link key={`#${ Static.href}` } title={ Static.header } />
-           <Anchor.Link key={`#${ Vertical.href}` } title={ Vertical.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Complex.href}` } title={ Complex.anchorTitle } />
+           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.anchorTitle } />
+           <Anchor.Link key={`#${ Semantic.href}` } title={ Semantic.anchorTitle } />
+           <Anchor.Link key={`#${ Static.href}` } title={ Static.anchorTitle } />
+           <Anchor.Link key={`#${ Vertical.href}` } title={ Vertical.anchorTitle } />
         </Anchor>
       </div>
     </div>

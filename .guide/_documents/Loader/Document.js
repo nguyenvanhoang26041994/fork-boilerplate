@@ -21,8 +21,8 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Dot.href}` } title={ Dot.header } />
-           <Anchor.Link key={`#${ Spinner.href}` } title={ Spinner.header } />
+           <Anchor.Link key={`#${ Dot.href}` } title={ Dot.anchorTitle } />
+           <Anchor.Link key={`#${ Spinner.href}` } title={ Spinner.anchorTitle } />
         </Anchor>
       </div>
     </div>

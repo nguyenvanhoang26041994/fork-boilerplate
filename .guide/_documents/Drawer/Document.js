@@ -27,11 +27,11 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ ClickOutside.href}` } title={ ClickOutside.header } />
-           <Anchor.Link key={`#${ Closable.href}` } title={ Closable.header } />
-           <Anchor.Link key={`#${ Placement.href}` } title={ Placement.header } />
-           <Anchor.Link key={`#${ Width.href}` } title={ Width.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ ClickOutside.href}` } title={ ClickOutside.anchorTitle } />
+           <Anchor.Link key={`#${ Closable.href}` } title={ Closable.anchorTitle } />
+           <Anchor.Link key={`#${ Placement.href}` } title={ Placement.anchorTitle } />
+           <Anchor.Link key={`#${ Width.href}` } title={ Width.anchorTitle } />
         </Anchor>
       </div>
     </div>

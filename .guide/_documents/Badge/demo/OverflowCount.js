@@ -22,7 +22,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Overflow Count';
+Demo.header = 'OVERFLOW COUNT';
+Demo.anchorTitle = 'Overflow count';
 Demo.href = 'badge-overflow-count';
 
 Demo.code = `import React from 'react';

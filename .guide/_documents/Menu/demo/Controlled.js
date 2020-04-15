@@ -41,7 +41,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Controlled';
+Demo.header = 'CONTROLLED';
+Demo.anchorTitle = 'Controlled';
 Demo.href = 'menu-controlled';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

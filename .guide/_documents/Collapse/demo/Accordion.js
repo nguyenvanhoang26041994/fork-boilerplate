@@ -31,7 +31,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Accordion';
+Demo.header = 'ACCORDION';
+Demo.anchorTitle = 'Accordion';
 Demo.href = 'collapse-accordion';
 
 Demo.code = `import React from 'react';

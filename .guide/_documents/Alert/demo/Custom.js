@@ -54,7 +54,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Custom';
+Demo.header = 'CUSTOM';
+Demo.anchorTitle = 'Custom';
 Demo.href = 'alert-custom';
 
 Demo.code = `import React, { useCallback } from 'react';

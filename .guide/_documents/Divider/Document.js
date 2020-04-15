@@ -25,10 +25,10 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ DirectionTitle.href}` } title={ DirectionTitle.header } />
-           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.header } />
-           <Anchor.Link key={`#${ Text.href}` } title={ Text.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ DirectionTitle.href}` } title={ DirectionTitle.anchorTitle } />
+           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.anchorTitle } />
+           <Anchor.Link key={`#${ Text.href}` } title={ Text.anchorTitle } />
         </Anchor>
       </div>
     </div>

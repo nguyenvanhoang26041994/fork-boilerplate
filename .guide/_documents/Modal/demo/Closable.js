@@ -23,7 +23,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Closable';
+Demo.header = 'CLOSABLE';
+Demo.anchorTitle = 'Closable';
 Demo.href = 'modal-closable';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

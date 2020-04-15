@@ -38,7 +38,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Icon';
+Demo.header = 'ICON';
+Demo.anchorTitle = 'Icon';
 Demo.href = 'badge-icon';
 
 Demo.code = `import React from 'react';

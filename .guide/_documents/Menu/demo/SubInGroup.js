@@ -23,7 +23,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Sub In Group';
+Demo.header = 'SUB IN GROUP';
+Demo.anchorTitle = 'Sub in group';
 Demo.href = 'menu-sub-in-group';
 
 Demo.code = `import React from 'react';

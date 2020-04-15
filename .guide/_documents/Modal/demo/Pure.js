@@ -10,7 +10,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Pure';
+Demo.header = 'PURE';
+Demo.anchorTitle = 'Pure';
 Demo.href = 'modal-pure';
 
 Demo.code = `import React from 'react';

@@ -11,7 +11,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Size';
+Demo.header = 'SIZE';
+Demo.anchorTitle = 'Size';
 Demo.href = 'progress-size';
 
 Demo.code = `import React  from 'react';

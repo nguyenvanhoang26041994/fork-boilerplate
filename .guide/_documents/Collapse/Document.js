@@ -29,12 +29,12 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Accordion.href}` } title={ Accordion.header } />
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Controlled.href}` } title={ Controlled.header } />
-           <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.header } />
-           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.header } />
-           <Anchor.Link key={`#${ OnChangeEvent.href}` } title={ OnChangeEvent.header } />
+           <Anchor.Link key={`#${ Accordion.href}` } title={ Accordion.anchorTitle } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Controlled.href}` } title={ Controlled.anchorTitle } />
+           <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.anchorTitle } />
+           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.anchorTitle } />
+           <Anchor.Link key={`#${ OnChangeEvent.href}` } title={ OnChangeEvent.anchorTitle } />
         </Anchor>
       </div>
     </div>

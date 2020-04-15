@@ -12,7 +12,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Default Visible';
+Demo.header = 'DEFAULT VISIBLE';
+Demo.anchorTitle = 'Default visible';
 Demo.href = 'tooltip-default-visible';
 
 Demo.code = `import React from 'react';

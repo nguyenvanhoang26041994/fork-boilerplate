@@ -25,10 +25,10 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Collection.href}` } title={ Collection.header } />
-           <Anchor.Link key={`#${ Color.href}` } title={ Color.header } />
-           <Anchor.Link key={`#${ Size.href}` } title={ Size.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Collection.href}` } title={ Collection.anchorTitle } />
+           <Anchor.Link key={`#${ Color.href}` } title={ Color.anchorTitle } />
+           <Anchor.Link key={`#${ Size.href}` } title={ Size.anchorTitle } />
         </Anchor>
       </div>
     </div>

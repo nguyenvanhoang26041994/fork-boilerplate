@@ -70,7 +70,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Title With Icon Only';
+Demo.header = 'TITLE WITH ICON ONLY';
+Demo.anchorTitle = 'Title with icon only';
 Demo.href = 'menu-title-with-icon-only';
 
 Demo.code = `import React, { useState } from 'react';

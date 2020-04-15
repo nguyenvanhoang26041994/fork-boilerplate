@@ -53,7 +53,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'With Badge';
+Demo.header = 'WITH BADGE';
+Demo.anchorTitle = 'With badge';
 Demo.href = 'tabs-with-badge';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

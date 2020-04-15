@@ -72,7 +72,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Semantic Placement';
+Demo.header = 'SEMANTIC PLACEMENT';
+Demo.anchorTitle = 'Semantic placement';
 Demo.href = 'tooltip-semantic-placement';
 
 Demo.code = `import React from 'react';

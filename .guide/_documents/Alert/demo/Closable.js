@@ -15,7 +15,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Closable';
+Demo.header = 'CLOSABLE';
+Demo.anchorTitle = 'Closable';
 Demo.href = 'alert-closable';
 
 Demo.code = `import React from 'react';

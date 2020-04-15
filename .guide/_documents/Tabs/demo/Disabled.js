@@ -37,7 +37,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Disabled';
+Demo.header = 'DISABLED';
+Demo.anchorTitle = 'Disabled';
 Demo.href = 'tabs-disabled';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

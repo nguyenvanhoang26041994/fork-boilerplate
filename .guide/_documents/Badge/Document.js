@@ -3,12 +3,12 @@ import { Anchor } from '@/rc-neumorphism/core';
 import Codebox from '@/components/Codebox';
 
 import Basic from './demo/Basic';
-import CountUpAnimation from './demo/CountUpAnimation';
-import CustomColor from './demo/CustomColor';
 import Dot from './demo/Dot';
 import Icon from './demo/Icon';
 import Invisible from './demo/Invisible';
 import OverflowCount from './demo/OverflowCount';
+import CustomColor from './demo/CustomColor';
+import CountUpAnimation from './demo/CountUpAnimation';
 import Overlap from './demo/Overlap';
 import Placement from './demo/Placement';
 import SemanticProps from './demo/SemanticProps';
@@ -18,12 +18,12 @@ export default () => {
     <div className="flex">
       <div className="flex flex-col flex-1">
          <Codebox className="mb-1" Component={ Basic } />
-         <Codebox className="mb-1" Component={ CountUpAnimation } />
-         <Codebox className="mb-1" Component={ CustomColor } />
          <Codebox className="mb-1" Component={ Dot } />
          <Codebox className="mb-1" Component={ Icon } />
          <Codebox className="mb-1" Component={ Invisible } />
          <Codebox className="mb-1" Component={ OverflowCount } />
+         <Codebox className="mb-1" Component={ CustomColor } />
+         <Codebox className="mb-1" Component={ CountUpAnimation } />
          <Codebox className="mb-1" Component={ Overlap } />
          <Codebox className="mb-1" Component={ Placement } />
          <Codebox className="mb-1" Component={ SemanticProps } />
@@ -37,16 +37,16 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ CountUpAnimation.href}` } title={ CountUpAnimation.header } />
-           <Anchor.Link key={`#${ CustomColor.href}` } title={ CustomColor.header } />
-           <Anchor.Link key={`#${ Dot.href}` } title={ Dot.header } />
-           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.header } />
-           <Anchor.Link key={`#${ Invisible.href}` } title={ Invisible.header } />
-           <Anchor.Link key={`#${ OverflowCount.href}` } title={ OverflowCount.header } />
-           <Anchor.Link key={`#${ Overlap.href}` } title={ Overlap.header } />
-           <Anchor.Link key={`#${ Placement.href}` } title={ Placement.header } />
-           <Anchor.Link key={`#${ SemanticProps.href}` } title={ SemanticProps.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Dot.href}` } title={ Dot.anchorTitle } />
+           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.anchorTitle } />
+           <Anchor.Link key={`#${ Invisible.href}` } title={ Invisible.anchorTitle } />
+           <Anchor.Link key={`#${ OverflowCount.href}` } title={ OverflowCount.anchorTitle } />
+           <Anchor.Link key={`#${ CustomColor.href}` } title={ CustomColor.anchorTitle } />
+           <Anchor.Link key={`#${ CountUpAnimation.href}` } title={ CountUpAnimation.anchorTitle } />
+           <Anchor.Link key={`#${ Overlap.href}` } title={ Overlap.anchorTitle } />
+           <Anchor.Link key={`#${ Placement.href}` } title={ Placement.anchorTitle } />
+           <Anchor.Link key={`#${ SemanticProps.href}` } title={ SemanticProps.anchorTitle } />
         </Anchor>
       </div>
     </div>

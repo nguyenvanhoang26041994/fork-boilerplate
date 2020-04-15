@@ -97,7 +97,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Placement';
+Demo.header = 'PLACEMENT';
+Demo.anchorTitle = 'Placement';
 Demo.href = 'badge-placement';
 
 Demo.code = `import React from 'react';

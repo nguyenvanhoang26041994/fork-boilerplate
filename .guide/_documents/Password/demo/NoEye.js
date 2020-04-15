@@ -12,7 +12,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'No Eye';
+Demo.header = 'NO EYE';
+Demo.anchorTitle = 'No eye';
 Demo.href = 'password-no-eye';
 
 Demo.code = `import React from 'react';

@@ -61,7 +61,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Right';
+Demo.header = 'RIGHT';
+Demo.anchorTitle = 'Right';
 Demo.href = 'timeline-right';
 
 Demo.code = `import React from 'react';

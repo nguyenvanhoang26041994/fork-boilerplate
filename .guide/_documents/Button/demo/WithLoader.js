@@ -22,7 +22,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'With Loader';
+Demo.header = 'WITH LOADER';
+Demo.anchorTitle = 'With loader';
 Demo.href = 'button-with-loader';
 
 Demo.code = `import React from 'react';

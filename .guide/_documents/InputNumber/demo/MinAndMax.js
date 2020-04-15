@@ -13,7 +13,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Min And Max';
+Demo.header = 'MIN AND MAX';
+Demo.anchorTitle = 'Min and max';
 Demo.href = 'inputnumber-min-and-max';
 
 Demo.code = `import React from 'react';

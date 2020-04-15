@@ -61,7 +61,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Reverse';
+Demo.header = 'REVERSE';
+Demo.anchorTitle = 'Reverse';
 Demo.href = 'timeline-reverse';
 
 Demo.code = `import React from 'react';

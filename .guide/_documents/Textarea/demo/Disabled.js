@@ -11,7 +11,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Disabled';
+Demo.header = 'DISABLED';
+Demo.anchorTitle = 'Disabled';
 Demo.href = 'textarea-disabled';
 
 Demo.code = `import React from 'react';

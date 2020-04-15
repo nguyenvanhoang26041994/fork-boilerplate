@@ -15,7 +15,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Max';
+Demo.header = 'MAX';
+Demo.anchorTitle = 'Max';
 Demo.href = 'rater-max';
 
 Demo.code = `import React, { useState, useCallback } from 'react';

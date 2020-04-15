@@ -49,7 +49,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Push';
+Demo.header = 'PUSH';
+Demo.anchorTitle = 'Push';
 Demo.href = 'notification-push';
 
 Demo.code = `import React, { useCallback } from 'react';

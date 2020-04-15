@@ -64,7 +64,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Required';
+Demo.header = 'REQUIRED';
+Demo.anchorTitle = 'Required';
 Demo.href = 'form-required';
 
 Demo.code = `import React, { useCallback } from 'react';

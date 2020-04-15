@@ -23,9 +23,9 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Redirect.href}` } title={ Redirect.header } />
-           <Anchor.Link key={`#${ WithIcon.href}` } title={ WithIcon.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Redirect.href}` } title={ Redirect.anchorTitle } />
+           <Anchor.Link key={`#${ WithIcon.href}` } title={ WithIcon.anchorTitle } />
         </Anchor>
       </div>
     </div>

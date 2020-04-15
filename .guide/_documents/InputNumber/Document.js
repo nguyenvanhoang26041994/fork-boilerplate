@@ -27,11 +27,11 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.header } />
-           <Anchor.Link key={`#${ MinAndMax.href}` } title={ MinAndMax.header } />
-           <Anchor.Link key={`#${ Step.href}` } title={ Step.header } />
-           <Anchor.Link key={`#${ WithRef.href}` } title={ WithRef.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.anchorTitle } />
+           <Anchor.Link key={`#${ MinAndMax.href}` } title={ MinAndMax.anchorTitle } />
+           <Anchor.Link key={`#${ Step.href}` } title={ Step.anchorTitle } />
+           <Anchor.Link key={`#${ WithRef.href}` } title={ WithRef.anchorTitle } />
         </Anchor>
       </div>
     </div>

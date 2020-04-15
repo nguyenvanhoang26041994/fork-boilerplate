@@ -32,7 +32,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Static';
+Demo.header = 'STATIC';
+Demo.anchorTitle = 'Static';
 Demo.href = 'stepper-static';
 
 Demo.code = `import React from 'react';

@@ -37,16 +37,16 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Controlled.href}` } title={ Controlled.header } />
-           <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.header } />
-           <Anchor.Link key={`#${ Group.href}` } title={ Group.header } />
-           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.header } />
-           <Anchor.Link key={`#${ IconOnly.href}` } title={ IconOnly.header } />
-           <Anchor.Link key={`#${ Multiple.href}` } title={ Multiple.header } />
-           <Anchor.Link key={`#${ Sub.href}` } title={ Sub.header } />
-           <Anchor.Link key={`#${ SubInGroup.href}` } title={ SubInGroup.header } />
-           <Anchor.Link key={`#${ TitleWithIconOnly.href}` } title={ TitleWithIconOnly.header } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Controlled.href}` } title={ Controlled.anchorTitle } />
+           <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.anchorTitle } />
+           <Anchor.Link key={`#${ Group.href}` } title={ Group.anchorTitle } />
+           <Anchor.Link key={`#${ Icon.href}` } title={ Icon.anchorTitle } />
+           <Anchor.Link key={`#${ IconOnly.href}` } title={ IconOnly.anchorTitle } />
+           <Anchor.Link key={`#${ Multiple.href}` } title={ Multiple.anchorTitle } />
+           <Anchor.Link key={`#${ Sub.href}` } title={ Sub.anchorTitle } />
+           <Anchor.Link key={`#${ SubInGroup.href}` } title={ SubInGroup.anchorTitle } />
+           <Anchor.Link key={`#${ TitleWithIconOnly.href}` } title={ TitleWithIconOnly.anchorTitle } />
         </Anchor>
       </div>
     </div>

@@ -19,7 +19,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Push';
+Demo.header = 'PUSH';
+Demo.anchorTitle = 'Push';
 Demo.href = 'confirm-push';
 
 Demo.code = `import React, { useCallback } from 'react';

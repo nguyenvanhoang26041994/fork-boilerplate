@@ -23,7 +23,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Spinner';
+Demo.header = 'SPINNER';
+Demo.anchorTitle = 'Spinner';
 Demo.href = 'loader-spinner';
 
 Demo.code = `import React from 'react';

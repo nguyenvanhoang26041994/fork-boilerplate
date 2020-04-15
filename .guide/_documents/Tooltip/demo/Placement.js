@@ -72,7 +72,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Placement';
+Demo.header = 'PLACEMENT';
+Demo.anchorTitle = 'Placement';
 Demo.href = 'tooltip-placement';
 
 Demo.code = `import React from 'react';

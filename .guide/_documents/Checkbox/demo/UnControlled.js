@@ -13,7 +13,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Un Controlled';
+Demo.header = 'UN CONTROLLED';
+Demo.anchorTitle = 'Un controlled';
 Demo.href = 'checkbox-un-controlled';
 
 Demo.code = `import React from 'react';

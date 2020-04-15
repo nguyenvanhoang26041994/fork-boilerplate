@@ -30,7 +30,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Span';
+Demo.header = 'SPAN';
+Demo.anchorTitle = 'Span';
 Demo.href = 'typography-span';
 
 Demo.code = `import React from 'react';

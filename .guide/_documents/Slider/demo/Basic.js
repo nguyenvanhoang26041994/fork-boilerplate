@@ -10,7 +10,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Basic';
+Demo.header = 'BASIC';
+Demo.anchorTitle = 'Basic';
 Demo.href = 'slider-basic';
 
 Demo.code = `import React, { useState, useCallback }  from 'react';

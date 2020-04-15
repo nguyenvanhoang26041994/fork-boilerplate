@@ -29,7 +29,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Pure';
+Demo.header = 'PURE';
+Demo.anchorTitle = 'Pure';
 Demo.href = 'alert-pure';
 
 Demo.code = `import React from 'react';

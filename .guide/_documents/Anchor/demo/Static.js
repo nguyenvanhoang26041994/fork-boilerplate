@@ -2,7 +2,7 @@ import React from 'react';
 import { Anchor } from '@/rc-neumorphism/core';
 
 const Link = ({ id, children }) => (
-  <a className="px-5" id={id} style={{ height: '200px'}}>
+  <a className="px-5" id={id} style={{ height: '100px'}}>
     {children}
   </a>
 );
@@ -12,10 +12,10 @@ const Demo = () => {
     <div
       className="flex w-full flex-col"
       style={{
-        height: 2000,
+        height: 1000,
       }}
     >
-      <Anchor>
+      <Anchor affix={false}>
         <Anchor.Link key='#things' title="Things" />
         <Anchor.Link key='#stuff' title="Stuff" />
         <Anchor.Link key='#stuff2' title="Stuff 2" />
@@ -40,14 +40,15 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Static';
+Demo.header = 'STATIC';
+Demo.anchorTitle = 'Static';
 Demo.href = 'anchor-static';
 
 Demo.code = `import React from 'react';
 import { Anchor } from '@/rc-neumorphism/core';
 
 const Link = ({ id, children }) => (
-  <a className="px-5" id={id} style={{ height: '200px'}}>
+  <a className="px-5" id={id} style={{ height: '100px'}}>
     {children}
   </a>
 );
@@ -57,10 +58,10 @@ const Demo = () => {
     <div
       className="flex w-full flex-col"
       style={{
-        height: 2000,
+        height: 1000,
       }}
     >
-      <Anchor>
+      <Anchor affix={false}>
         <Anchor.Link key='#things' title="Things" />
         <Anchor.Link key='#stuff' title="Stuff" />
         <Anchor.Link key='#stuff2' title="Stuff 2" />

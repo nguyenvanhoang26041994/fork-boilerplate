@@ -27,7 +27,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Focus';
+Demo.header = 'FOCUS';
+Demo.anchorTitle = 'Focus';
 Demo.href = 'carousel-focus';
 
 Demo.code = `import React from 'react';

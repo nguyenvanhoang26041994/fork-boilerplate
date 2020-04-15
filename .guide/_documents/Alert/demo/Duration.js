@@ -28,7 +28,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Duration';
+Demo.header = 'DURATION';
+Demo.anchorTitle = 'Duration';
 Demo.href = 'alert-duration';
 
 Demo.code = `import React, { useCallback } from 'react';

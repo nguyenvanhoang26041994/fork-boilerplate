@@ -26,7 +26,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Closable';
+Demo.header = 'CLOSABLE';
+Demo.anchorTitle = 'Closable';
 Demo.href = 'chip-closable';
 
 Demo.code = `import React  from 'react';

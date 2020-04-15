@@ -23,7 +23,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Group';
+Demo.header = 'GROUP';
+Demo.anchorTitle = 'Group';
 Demo.href = 'menu-group';
 
 Demo.code = `import React from 'react';

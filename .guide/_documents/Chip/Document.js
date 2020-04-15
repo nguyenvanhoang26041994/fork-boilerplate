@@ -27,11 +27,11 @@ export default () => {
             borderRadius: '0.5rem',
           } }
         >
-           <Anchor.Link key={`#${ Avatar.href}` } title={ Avatar.header } />
-           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.header } />
-           <Anchor.Link key={`#${ Closable.href}` } title={ Closable.header } />
-           <Anchor.Link key={`#${ Custom.href}` } title={ Custom.header } />
-           <Anchor.Link key={`#${ Size.href}` } title={ Size.header } />
+           <Anchor.Link key={`#${ Avatar.href}` } title={ Avatar.anchorTitle } />
+           <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Closable.href}` } title={ Closable.anchorTitle } />
+           <Anchor.Link key={`#${ Custom.href}` } title={ Custom.anchorTitle } />
+           <Anchor.Link key={`#${ Size.href}` } title={ Size.anchorTitle } />
         </Anchor>
       </div>
     </div>

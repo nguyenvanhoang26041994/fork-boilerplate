@@ -21,7 +21,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'Controlled';
+Demo.header = 'CONTROLLED';
+Demo.anchorTitle = 'Controlled';
 Demo.href = 'checkbox-controlled';
 
 Demo.code = `import React, { useState } from 'react';

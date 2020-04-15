@@ -24,7 +24,7 @@ export default () => {
           } }
         >
           {{#each importers}}
-           <Anchor.Link key={`#${ {{this}}.href}` } title={ {{this}}.header } />
+           <Anchor.Link key={`#${ {{this}}.href}` } title={ {{this}}.anchorTitle } />
           {{/each}}
         </Anchor>
       </div>

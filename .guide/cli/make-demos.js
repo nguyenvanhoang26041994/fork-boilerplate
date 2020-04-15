@@ -4,6 +4,10 @@ const makeFile = require('./utils/make-file');
 const readFile = require('./utils/read-file');
 const readFolder = require('./utils/read-folder');
 
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 const SPLIT_STRING_REGEX = /([A-Z]{1}[a-z0-9]+)/g;
 
 const makeHeader = function(demoName, componentName) {
@@ -13,9 +17,30 @@ const makeHeader = function(demoName, componentName) {
 
   const href = `${componentName.toLowerCase()}-${header.toLowerCase().split(' ').join('-')}`;
   return {
-    header,
     href,
+    header: header.toUpperCase(),
+    anchorTitle: capitalizeFirstLetter(header.toLowerCase()),
   };
+};
+
+/**
+ * 
+ * @param {*} autoOrder // ['A', 'B', 'C', 'D']
+ * @param {*} configOrder // ['B', 'D']
+ * @return ['B', 'D', 'A', 'C']
+ */
+
+const reOrder = function(autoOrder, configOrder) {
+  const _autoOrder = autoOrder || [];
+  const _configOrder = configOrder || [];
+
+  const order = new Set(_configOrder);
+  _autoOrder.forEach(key => {
+    if (!order.has(key)) {
+      order.add(key);
+    }
+  });
+  return [...order];
 };
 
 const DemoTemplate = readFile(path.join(__dirname, '/templates/Document/demo/Demo.hbs'));
@@ -42,9 +67,12 @@ const makeDocument = function(documentName) {
 
     demos.map(demoName => makeDemo(documentName, demoName));
 
+    const config = require(`../documents/${documentName}/config`);
+    const configOrder = Object.keys(config);
+
     makeFile(
       path.join(__dirname, `../_documents/${documentName}/Document.js`),
-      Handlebars.compile(DocumentTemplate)({ importers: demos })
+      Handlebars.compile(DocumentTemplate)({ importers: reOrder(demos, configOrder) })
     );
 };
 

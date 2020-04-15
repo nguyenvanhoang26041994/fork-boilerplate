@@ -23,7 +23,8 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'All Skeleton';
+Demo.header = 'ALL SKELETON';
+Demo.anchorTitle = 'All skeleton';
 Demo.href = 'skeleton-all-skeleton';
 
 Demo.code = `import React  from 'react';
