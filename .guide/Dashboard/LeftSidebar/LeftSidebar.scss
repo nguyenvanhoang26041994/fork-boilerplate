@@ -25,7 +25,8 @@
   height: 100%;
   border-radius: 0.5rem;
   background-color: var(--rc-color--500);
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   &::-webkit-scrollbar {
     display: none;
