@@ -1,0 +1,10 @@
+const mapMenuItem = {
+{{#each importers}}
+  {{this.key}}: {
+    key: '{{this.keyLowerCase}}',
+    title: '{{this.key}}'
+  },
+{{/each}}
+};
+
+export default mapMenuItem;

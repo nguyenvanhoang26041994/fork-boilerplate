@@ -1,4 +1,3 @@
-const fs = require('fs');
 const path = require('path');
 const Handlebars = require('handlebars');
 const makeFile = require('./utils/make-file');
@@ -7,6 +6,7 @@ const readFolder = require('./utils/read-folder');
 
 const DashboardTemplate = readFile(path.join(__dirname, '/templates/Dashboard/Dashboard.hbs'));
 const mapRouterTemplate = readFile(path.join(__dirname, '/templates/Dashboard/mapRouter.hbs'));
+const mapMenuItemrTemplate = readFile(path.join(__dirname, '/templates/Dashboard/mapMenuItem.hbs'));
 
 const genVars = function(documents) {
   return {
@@ -26,9 +26,11 @@ const makeDashboard = function() {
 
   let injectedDashboardStr = Handlebars.compile(DashboardTemplate)(vars);
   let injectedMapRouterStr = Handlebars.compile(mapRouterTemplate)(vars);
+  let injectedMapMenuItemrStr = Handlebars.compile(mapMenuItemrTemplate)(vars);
 
   makeFile(path.join(__dirname, `../Dashboard/Dashboard.js`), injectedDashboardStr);
   makeFile(path.join(__dirname, `../Dashboard/mapRouter.js`), injectedMapRouterStr);
+  makeFile(path.join(__dirname, `../Dashboard/mapMenuItem.js`), injectedMapMenuItemrStr);
 };
 
 makeDashboard();

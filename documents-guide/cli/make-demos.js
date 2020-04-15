@@ -1,4 +1,3 @@
-const fs = require('fs');
 const path = require('path');
 const Handlebars = require('handlebars');
 const makeFile = require('./utils/make-file');

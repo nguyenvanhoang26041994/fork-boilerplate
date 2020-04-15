@@ -19,7 +19,8 @@
     "build-neu": "yarn rimraf \"rc-neumorphism/lib\" && yarn build-neu-js && yarn build-neu-scss",
     "make-icons": "node documents-guide/cli/make-icons",
     "make-demos": "node documents-guide/cli/make-demos",
-    "make-dashboard": "node documents-guide/cli/make-dashboard"
+    "make-dashboard": "node documents-guide/cli/make-dashboard",
+    "make-guide": "node documents-guide/cli/make-guide"
   },
   "repository": {
     "type": "git",
