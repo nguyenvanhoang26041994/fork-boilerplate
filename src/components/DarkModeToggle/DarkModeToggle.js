@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-import { Switch } from '@/components';
+import { Switch } from '@/rc-neumorphism/core';
 
 const DarkModeToggle = (props) => {
   const [isDark, setIsDark] = useState();

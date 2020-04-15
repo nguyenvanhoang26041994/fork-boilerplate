@@ -1,5 +1,5 @@
 import React, { useState, useCallback }  from 'react';
-import { Slider, Button, ButtonGroup, Switch } from '@/components';
+import { Slider, Button, ButtonGroup, Switch } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (

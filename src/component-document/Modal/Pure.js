@@ -1,5 +1,5 @@
 import React from 'react';
-import { PureModal } from '@/components';
+import { PureModal } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (

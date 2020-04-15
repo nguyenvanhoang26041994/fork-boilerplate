@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Badge } from '@/components';
+import { Button, Badge } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (

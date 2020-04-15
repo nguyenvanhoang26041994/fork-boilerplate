@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from 'react';
-import { Password } from '@/components';
+import { Password } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const ref = useRef();

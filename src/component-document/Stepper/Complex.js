@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stepper, ButtonGroup, Button } from '@/components';
+import { Stepper, ButtonGroup, Button } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const {

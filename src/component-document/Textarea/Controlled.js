@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Textarea } from '@/components';
+import { Textarea } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const [value, setValue] = useState('');

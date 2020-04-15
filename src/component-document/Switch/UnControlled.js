@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from '@/components';
+import { Switch } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (

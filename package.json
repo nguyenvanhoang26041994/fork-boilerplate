@@ -12,7 +12,7 @@
     "clean-dist": "rimraf \"dist\"",
     "build": "yarn make-demos && yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/prod.config.js",
     "build-core": "yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/core.config.js",
-    "dev": "cross-env NODE_ENV=development yarn make-demos && node dev-server",
+    "dev": "yarn make-demos && cross-env NODE_ENV=development node dev-server",
     "deploy": "yarn build && now --prod",
     "build-neu-scss": "node-sass rc-neumorphism/src --output rc-neumorphism/lib",
     "build-neu-js": "babel --config-file rc-neumorphism/babel.config.js --out-dir rc-neumorphism/lib rc-neumorphism/src --verbose",
@@ -33,11 +33,14 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
+    "markdown": "^0.5.0",
     "prop-types": "^15.7.2",
     "rc-neumorphism": "1.7.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-markdown": "^4.3.1",
     "react-router-dom": "^5.0.1",
+    "react-syntax-highlighter": "^12.2.1",
     "workbox-window": "^4.3.1"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Form } from '@/components';
+import { Form } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const onChange = useCallback((e) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider } from '@/components';
+import { Divider } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (

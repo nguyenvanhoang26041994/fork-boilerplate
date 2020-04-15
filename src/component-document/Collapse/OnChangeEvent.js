@@ -1,5 +1,5 @@
 import React from 'react';
-import { Collapse } from '@/components';
+import { Collapse } from '@/rc-neumorphism/core';
 
 const Description = () => {
   return (

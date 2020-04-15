@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Switch } from '@/components';
+import { Menu, Switch } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const [isIconOnly, setIsIconOnly] = useState(true);

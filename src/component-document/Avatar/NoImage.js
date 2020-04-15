@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '@/components';
+import { Avatar } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from 'react';
-import { Textarea } from '@/components';
+import { Textarea } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const ref = useRef();

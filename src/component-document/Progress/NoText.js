@@ -1,5 +1,5 @@
 import React, { useState, useCallback }  from 'react';
-import { Progress, Button, ButtonGroup } from '@/components';
+import { Progress, Button, ButtonGroup } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const [percent, setPercent] = useState(0.1);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { PureAlert } from '@/components';
+import { PureAlert } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Textbox } from '@/components';
+import { Textbox } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const [value, setValue] = useState('');

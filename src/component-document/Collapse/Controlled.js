@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Collapse, Divider } from '@/components';
+import { Collapse, Divider } from '@/rc-neumorphism/core';
 
 const Description = () => {
   return (

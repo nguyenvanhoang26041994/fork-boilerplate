@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Button, Drawer } from '@/components';
+import { Button, Drawer } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const [open, setOpen] = useState();

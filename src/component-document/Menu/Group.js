@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu } from '@/components';
+import { Menu } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (

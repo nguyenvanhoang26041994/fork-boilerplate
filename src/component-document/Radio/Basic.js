@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Radio } from '@/components';
+import { Radio } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const [value, setValue] = useState();

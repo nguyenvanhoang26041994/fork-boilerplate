@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Tooltip } from '@/components';
+import { Icon, Tooltip } from '@/rc-neumorphism/core';
 import list from '@@/rc-neumorphism/src/components/Icon/svg';
 
 const IconBox = ({ name }) => {

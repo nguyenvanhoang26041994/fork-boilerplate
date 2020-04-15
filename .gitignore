@@ -1,9 +1,9 @@
 node_modules
-dist
+/dist
 .DS_Store
 npm-debug.log
 .idea
-rc-neumorphism
-tabler-icons
-result-tools
-_component-document
+/rc-neumorphism
+/tabler-icons
+/result-tools
+/src/_component-document

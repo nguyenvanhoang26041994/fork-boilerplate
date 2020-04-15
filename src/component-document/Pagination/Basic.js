@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Pagination } from '@/components';
+import { Pagination } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const [activePage, setActivePage] = useState(1);

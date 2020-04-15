@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Tabs, Badge, Icon } from '@/components';
+import { Tabs, Badge, Icon } from '@/rc-neumorphism/core';
 
 const Description = ({ content }) => {
   return (

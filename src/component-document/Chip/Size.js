@@ -1,5 +1,5 @@
 import React  from 'react';
-import { Chip } from '@/components';
+import { Chip } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (

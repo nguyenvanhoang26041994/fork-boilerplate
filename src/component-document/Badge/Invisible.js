@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Badge, Switch } from '@/components';
+import { Badge, Switch } from '@/rc-neumorphism/core';
 
 const FancyBox = ({ size }) => (
   <div
