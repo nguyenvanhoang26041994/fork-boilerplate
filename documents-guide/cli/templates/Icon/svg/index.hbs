@@ -1,0 +1,7 @@
+const icons = {
+  {{#each importers}}
+  '{{this}}': require('./{{this}}').default,
+  {{/each}}
+};
+
+export default icons;

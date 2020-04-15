@@ -1,0 +1,30 @@
+.top-navigation-container {
+  position: sticky;
+  top: 0;
+  height: 6rem;
+  width: 100%;
+  z-index: 10;
+  padding: 0.5rem 0;
+}
+
+.top-navigation-wrapper {
+  z-index: 10;
+  height: 100%;
+}
+
+.top-navigation {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--rc-color--400);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.top-navigation > .__right {
+  display: flex;
+  align-items: center;
+}
+
