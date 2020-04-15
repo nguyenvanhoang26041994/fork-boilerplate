@@ -1,49 +1,10 @@
 import React, { useMemo } from 'react';
 import cn from 'classnames';
 import { useHistory, useLocation } from 'react-router-dom';
-
 import { Icon, Menu } from '@/rc-neumorphism/core';
+import mapRouter from '../mapRouter';
 
 require('./LeftSidebar.scss');
-
-const mapRouter = Object.freeze({
-  '/document/form': 'form',
-  '/document/popover': 'popover',
-  '/document/badge': 'badge',
-  '/document/button': 'button',
-  '/document/icon': 'icon',
-  '/document/typography': 'typography',
-  '/document/tooltip': 'tooltip',
-  '/document/checkbox': 'checkbox',
-  '/document/radio': 'radio',
-  '/document/switch': 'switch',
-  '/document/drawer': 'drawer',
-  '/document/modal': 'modal',
-  '/document/confirm': 'confirm',
-  '/document/alert': 'alert',
-  '/document/notification': 'notification',
-  '/document/timeline': 'timeline',
-  '/document/stepper': 'stepper',
-  '/document/tabs': 'tabs',
-  '/document/collapse': 'collapse',
-  '/document/pagination': 'pagination',
-  '/document/rater': 'rater',
-  '/document/avatar': 'avatar',
-  '/document/chip': 'chip',
-  '/document/divider': 'divider',
-  '/document/breadcrumb': 'breadcrumb',
-  '/document/carousel': 'carousel',
-  '/document/menu': 'menu',
-  '/document/progress': 'progress',
-  '/document/affix': 'affix',
-  '/document/textbox': 'textbox',
-  '/document/password': 'password',
-  '/document/textarea': 'textarea',
-  '/document/input-number': 'input-number',
-  '/document/anchor': 'anchor',
-  '/document/loader': 'loader',
-  '/document/skeleton': 'skeleton',
-});
 
 const LeftSidebar = ({ isExpanded, ...otherProps }) => {
   const history = useHistory();

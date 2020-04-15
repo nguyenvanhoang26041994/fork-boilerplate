@@ -6,6 +6,7 @@ const readFile = require('./utils/read-file');
 const readFolder = require('./utils/read-folder');
 
 const DashboardTemplate = readFile(path.join(__dirname, '/templates/Dashboard/Dashboard.hbs'));
+const mapRouterTemplate = readFile(path.join(__dirname, '/templates/Dashboard/mapRouter.hbs'));
 
 const genVars = function(documents) {
   return {
@@ -21,9 +22,13 @@ const genVars = function(documents) {
 const makeDashboard = function() {
   let documents = readFolder(path.join(__dirname, '../documents')) || [];
 
-  let injectedStr = Handlebars.compile(DashboardTemplate)(genVars(documents));
+  const vars = genVars(documents);
 
-  makeFile(path.join(__dirname, `../Dashboard/Dashboard.js`), injectedStr);
+  let injectedDashboardStr = Handlebars.compile(DashboardTemplate)(vars);
+  let injectedMapRouterStr = Handlebars.compile(mapRouterTemplate)(vars);
+
+  makeFile(path.join(__dirname, `../Dashboard/Dashboard.js`), injectedDashboardStr);
+  makeFile(path.join(__dirname, `../Dashboard/mapRouter.js`), injectedMapRouterStr);
 };
 
 makeDashboard();
