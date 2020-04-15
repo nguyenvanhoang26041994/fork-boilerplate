@@ -26,13 +26,16 @@ const makeHeader = function(demoName, componentName) {
 /**
  * 
  * @param {*} autoOrder // ['A', 'B', 'C', 'D']
- * @param {*} configOrder // ['B', 'D']
+ * @param {*} configOrder // ['B', 'D', 'Z']
  * @return ['B', 'D', 'A', 'C']
  */
 
 const reOrder = function(autoOrder, configOrder) {
   const _autoOrder = autoOrder || [];
-  const _configOrder = configOrder || [];
+  let _configOrder = configOrder || [];
+  _configOrder = _configOrder.filter(function(item) {
+    return _autoOrder.indexOf(item) >= 0
+  });
 
   const order = new Set(_configOrder);
   _autoOrder.forEach(key => {

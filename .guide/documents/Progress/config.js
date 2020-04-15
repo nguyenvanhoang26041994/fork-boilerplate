@@ -1,1 +1,6 @@
-module.exports = {};
+module.exports = {
+  Basic: {},
+  Size: {},
+  LineBasic: {},
+  NoText: {},
+};
