@@ -3,13 +3,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Switch } from '@/rc-neumorphism/core';
 
 const DarkModeToggle = (props) => {
-  const [isDark, setIsDark] = useState();
+  const [isDark, setIsDark] = useState(true);
 
   const onChange = useCallback(e => setIsDark(e.target.checked), []);
-
-  useEffect(() => {
-    setIsDark(document.body.classList.contains('dark-mode'));
-  }, []);
 
   useEffect(() => {
     if (isDark) {

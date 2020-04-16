@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Collapse } from '@/rc-neumorphism/core';
 
 const Description = () => {
@@ -13,9 +13,11 @@ const Description = () => {
 };
 
 const Demo = () => {
+  const onActiveKeysChange = useCallback(keys => console.log(keys), []);
+
   return (
     <div className="flex flex-col w-full">
-      <Collapse accordion>
+      <Collapse accordion onActiveKeysChange={onActiveKeysChange}>
         <Collapse.Item title="Collapse One" key="panel-1">
           <Description />
         </Collapse.Item>
@@ -35,7 +37,7 @@ Demo.header = 'ACCORDION';
 Demo.anchorTitle = 'Accordion';
 Demo.href = 'collapse-accordion';
 
-Demo.code = `import React from 'react';
+Demo.code = `import React, { useCallback } from 'react';
 import { Collapse } from 'rc-neumorphism/core';
 
 const Description = () => {
@@ -50,9 +52,11 @@ const Description = () => {
 };
 
 const Demo = () => {
+  const onActiveKeysChange = useCallback(keys => console.log(keys), []);
+
   return (
     <div className="flex flex-col w-full">
-      <Collapse accordion>
+      <Collapse accordion onActiveKeysChange={onActiveKeysChange}>
         <Collapse.Item title="Collapse One" key="panel-1">
           <Description />
         </Collapse.Item>

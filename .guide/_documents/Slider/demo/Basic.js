@@ -1,5 +1,5 @@
-import React, { useState, useCallback }  from 'react';
-import { Slider, Button, ButtonGroup, Switch } from '@/rc-neumorphism/core';
+import React from 'react';
+import { Slider } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (
@@ -14,8 +14,8 @@ Demo.header = 'BASIC';
 Demo.anchorTitle = 'Basic';
 Demo.href = 'slider-basic';
 
-Demo.code = `import React, { useState, useCallback }  from 'react';
-import { Slider, Button, ButtonGroup, Switch } from 'rc-neumorphism/core';
+Demo.code = `import React from 'react';
+import { Slider } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Collapse } from '@/rc-neumorphism/core';
 
 const Description = () => {

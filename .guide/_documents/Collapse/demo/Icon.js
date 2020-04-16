@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Collapse } from '@/rc-neumorphism/core';
 
 const Description = () => {
@@ -19,21 +19,21 @@ const Demo = () => {
         <Collapse.Item
           title="Collapse One"
           key="panel-1"
-          icon="comments"
+          icon="messages"
         >
           <Description />
         </Collapse.Item>
         <Collapse.Item
           title="Collapse Two"
           key="panel-2"
-          icon="desktop"
+          icon="device-desktop"
         >
           <Description />
         </Collapse.Item>
         <Collapse.Item
           title="Collapse Three"
           key="panel-3"
-          icon="power-off"
+          icon="power"
         >
           <Description />
         </Collapse.Item>
@@ -47,7 +47,7 @@ Demo.header = 'ICON';
 Demo.anchorTitle = 'Icon';
 Demo.href = 'collapse-icon';
 
-Demo.code = `import React from 'react';
+Demo.code = `import React, { useCallback } from 'react';
 import { Collapse } from 'rc-neumorphism/core';
 
 const Description = () => {
@@ -68,21 +68,21 @@ const Demo = () => {
         <Collapse.Item
           title="Collapse One"
           key="panel-1"
-          icon="comments"
+          icon="messages"
         >
           <Description />
         </Collapse.Item>
         <Collapse.Item
           title="Collapse Two"
           key="panel-2"
-          icon="desktop"
+          icon="device-desktop"
         >
           <Description />
         </Collapse.Item>
         <Collapse.Item
           title="Collapse Three"
           key="panel-3"
-          icon="power-off"
+          icon="power"
         >
           <Description />
         </Collapse.Item>

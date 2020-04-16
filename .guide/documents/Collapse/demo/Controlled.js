@@ -13,13 +13,13 @@ const Description = () => {
 };
 
 const Demo = () => {
-  const [activePanels, setActivePanels] = useState([]);
-  const onPanelClick = useCallback(key => setActivePanels([key]));
+  const [activeKeys, setActiveKeys] = useState([]);
+  const onPanelClick = useCallback(key => setActiveKeys([key]));
+  const onActiveKeysChange = useCallback(keys => console.log(keys), []);
 
   return (
     <div className="flex flex-col w-full">
-      {/* First option, you and using onClick of Item props */}
-      <Collapse activePanels={activePanels}>
+      <Collapse activeKeys={activeKeys} onActiveKeysChange={onActiveKeysChange}>
         <Collapse.Item
           title="Collapse One"
           key="panel-1"
@@ -42,13 +42,11 @@ const Demo = () => {
           <Description />
         </Collapse.Item>
       </Collapse>
-
       <Divider dashed title="OTHER WAY BUT MORE SHORT" />
-
-       {/* Second option: onPanelClick will auto passed thougth to item from collapse */}
       <Collapse
-        activePanels={activePanels}
+        activePanels={activeKeys}
         onPanelClick={onPanelClick}
+        onActiveKeysChange={onActiveKeysChange}
         className="mt-10"
       >
         <Collapse.Item title="Collapse One" key="panel-1">

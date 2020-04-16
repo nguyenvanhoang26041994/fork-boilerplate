@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Collapse } from '@/rc-neumorphism/core';
 
 const Description = () => {
@@ -13,9 +13,10 @@ const Description = () => {
 };
 
 const Demo = () => {
+  const onActiveKeysChange = useCallback(keys => console.log(keys), []);
   return (
     <div className="flex flex-col w-full">
-      <Collapse defaultActivePanels={['panel-2']}>
+      <Collapse defaultActiveKeys={['panel-2']} onActiveKeysChange={onActiveKeysChange}>
         <Collapse.Item title="Collapse One" key="panel-1">
           <Description />
         </Collapse.Item>
@@ -35,7 +36,7 @@ Demo.header = 'BASIC';
 Demo.anchorTitle = 'Basic';
 Demo.href = 'collapse-basic';
 
-Demo.code = `import React from 'react';
+Demo.code = `import React, { useCallback } from 'react';
 import { Collapse } from 'rc-neumorphism/core';
 
 const Description = () => {
@@ -50,9 +51,10 @@ const Description = () => {
 };
 
 const Demo = () => {
+  const onActiveKeysChange = useCallback(keys => console.log(keys), []);
   return (
     <div className="flex flex-col w-full">
-      <Collapse defaultActivePanels={['panel-2']}>
+      <Collapse defaultActiveKeys={['panel-2']} onActiveKeysChange={onActiveKeysChange}>
         <Collapse.Item title="Collapse One" key="panel-1">
           <Description />
         </Collapse.Item>
