@@ -8,15 +8,7 @@ import { Breadcrumb, Icon, Loader } from '@/rc-neumorphism/core';
 import { mapBreadcrumb } from '../map-config';
 
 const fallback = (
-  <div
-    style={ {
-      position: 'fixed',
-      top: '50%',
-      left: '50%',
-      zIndex: 10000,
-      transform: 'translate(-50%, -50%)',
-    } }
-  >
+  <div className="flex items-center justify-center h-screen">
     <Loader.Dot size="2rem" />
   </div>
 );

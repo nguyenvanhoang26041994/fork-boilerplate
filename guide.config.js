@@ -35,6 +35,7 @@ const leftSidebar = {
     type: 'sub',
     icon: 'device-desktop',
     items: {
+      Box: {},
       Badge: {},
       Checkbox: {},
       Radio: {},

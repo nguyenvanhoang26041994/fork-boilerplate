@@ -8,15 +8,7 @@ import { Breadcrumb, Icon, Loader } from '@/rc-neumorphism/core';
 import { mapBreadcrumb } from '../map-config';
 
 const fallback = (
-  <div
-    style={ {
-      position: 'fixed',
-      top: '50%',
-      left: '50%',
-      zIndex: 10000,
-      transform: 'translate(-50%, -50%)',
-    } }
-  >
+  <div className="flex items-center justify-center h-screen">
     <Loader.Dot size="2rem" />
   </div>
 );
@@ -26,6 +18,7 @@ const AlertDocument = loadable(() => import('../_documents/Alert'), { fallback }
 const AnchorDocument = loadable(() => import('../_documents/Anchor'), { fallback });
 const AvatarDocument = loadable(() => import('../_documents/Avatar'), { fallback });
 const BadgeDocument = loadable(() => import('../_documents/Badge'), { fallback });
+const BoxDocument = loadable(() => import('../_documents/Box'), { fallback });
 const BreadcrumbDocument = loadable(() => import('../_documents/Breadcrumb'), { fallback });
 const ButtonDocument = loadable(() => import('../_documents/Button'), { fallback });
 const CarouselDocument = loadable(() => import('../_documents/Carousel'), { fallback });
@@ -92,6 +85,7 @@ const Dashboard = ({}) => {
               <Route path="/document/anchor" component={ AnchorDocument } />
               <Route path="/document/avatar" component={ AvatarDocument } />
               <Route path="/document/badge" component={ BadgeDocument } />
+              <Route path="/document/box" component={ BoxDocument } />
               <Route path="/document/breadcrumb" component={ BreadcrumbDocument } />
               <Route path="/document/button" component={ ButtonDocument } />
               <Route path="/document/carousel" component={ CarouselDocument } />
