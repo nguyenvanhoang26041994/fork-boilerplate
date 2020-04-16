@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import { Tabs } from '@/rc-neumorphism/core';
 
 const Description = ({ content }) => {
@@ -13,12 +13,9 @@ const Description = ({ content }) => {
 };
 
 const Demo = () => {
-  const [activeTab, setActiveTab] = useState('tab-1');
-  const onChange = useCallback(tab => setActiveTab(tab), []);
-
   return (
     <div className="flex flex-col w-full">
-      <Tabs activeTab={activeTab} onChange={onChange} fluid>
+      <Tabs fluid>
         <Tabs.Item title="Tab One" key="tab-1">
           <Description content="Description One" />
         </Tabs.Item>

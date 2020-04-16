@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Tabs } from '@/rc-neumorphism/core';
 
 const Description = ({ content }) => {
@@ -13,19 +13,22 @@ const Description = ({ content }) => {
 };
 
 const Demo = () => {
+  const [activeTab, setActiveTab] = useState('tab-1');
+  const onChange = useCallback(tab => setActiveTab(tab), []);
+
   return (
     <div className="flex flex-col w-full">
-      <Tabs>
-        <Tabs.Item title="Tab One" key="tab-1" icon="device-desktop">
+      <Tabs activeTab={activeTab} onChange={onChange}>
+        <Tabs.Item title="Tab One" key="tab-1">
           <Description content="Description One" />
         </Tabs.Item>
-        <Tabs.Item title="Tab Two" key="tab-2" iconRight="message">
+        <Tabs.Item title="Tab Two" key="tab-2">
           <Description content="Description Two" />
         </Tabs.Item>
-        <Tabs.Item title="Tab Three" key="tab-3" icon="copy">
+        <Tabs.Item title="Tab Three" key="tab-3">
           <Description content="Description Three" />
         </Tabs.Item>
-        <Tabs.Item title="Tab Four" key="tab-4" icon="tool">
+        <Tabs.Item title="Tab Four" key="tab-4">
           <Description content="Description Four" />
         </Tabs.Item>
       </Tabs>
@@ -34,11 +37,11 @@ const Demo = () => {
 };
 
 export default Demo;
-Demo.header = 'ICON';
-Demo.anchorTitle = 'Icon';
-Demo.href = 'tabs-icon';
+Demo.header = 'CONTROLLED';
+Demo.anchorTitle = 'Controlled';
+Demo.href = 'tabs-controlled';
 
-Demo.code = `import React from 'react';
+Demo.code = `import React, { useState, useCallback } from 'react';
 import { Tabs } from 'rc-neumorphism/core';
 
 const Description = ({ content }) => {
@@ -53,19 +56,22 @@ const Description = ({ content }) => {
 };
 
 const Demo = () => {
+  const [activeTab, setActiveTab] = useState('tab-1');
+  const onChange = useCallback(tab => setActiveTab(tab), []);
+
   return (
     <div className="flex flex-col w-full">
-      <Tabs>
-        <Tabs.Item title="Tab One" key="tab-1" icon="device-desktop">
+      <Tabs activeTab={activeTab} onChange={onChange}>
+        <Tabs.Item title="Tab One" key="tab-1">
           <Description content="Description One" />
         </Tabs.Item>
-        <Tabs.Item title="Tab Two" key="tab-2" iconRight="message">
+        <Tabs.Item title="Tab Two" key="tab-2">
           <Description content="Description Two" />
         </Tabs.Item>
-        <Tabs.Item title="Tab Three" key="tab-3" icon="copy">
+        <Tabs.Item title="Tab Three" key="tab-3">
           <Description content="Description Three" />
         </Tabs.Item>
-        <Tabs.Item title="Tab Four" key="tab-4" icon="tool">
+        <Tabs.Item title="Tab Four" key="tab-4">
           <Description content="Description Four" />
         </Tabs.Item>
       </Tabs>

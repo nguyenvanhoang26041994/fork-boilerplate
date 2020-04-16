@@ -3,6 +3,7 @@ import { Anchor } from '@/rc-neumorphism/core';
 import Codebox from '@/components/Codebox';
 
 import Basic from './demo/Basic';
+import Controlled from './demo/Controlled';
 import Disabled from './demo/Disabled';
 import Fluid from './demo/Fluid';
 import Icon from './demo/Icon';
@@ -13,6 +14,7 @@ export default () => {
     <div className="flex">
       <div className="flex flex-col flex-1">
          <Codebox className="mb-1" Component={ Basic } />
+         <Codebox className="mb-1" Component={ Controlled } />
          <Codebox className="mb-1" Component={ Disabled } />
          <Codebox className="mb-1" Component={ Fluid } />
          <Codebox className="mb-1" Component={ Icon } />
@@ -28,6 +30,7 @@ export default () => {
           } }
         >
            <Anchor.Link key={`#${ Basic.href}` } title={ Basic.anchorTitle } />
+           <Anchor.Link key={`#${ Controlled.href}` } title={ Controlled.anchorTitle } />
            <Anchor.Link key={`#${ Disabled.href}` } title={ Disabled.anchorTitle } />
            <Anchor.Link key={`#${ Fluid.href}` } title={ Fluid.anchorTitle } />
            <Anchor.Link key={`#${ Icon.href}` } title={ Icon.anchorTitle } />

@@ -13,9 +13,12 @@ const Description = ({ content }) => {
 };
 
 const Demo = () => {
+  const [activeTab, setActiveTab] = useState('tab-1');
+  const onChange = useCallback(tab => setActiveTab(tab), []);
+
   return (
     <div className="flex flex-col w-full">
-      <Tabs defaultActiveTab="tab-2">
+      <Tabs activeTab={activeTab} onChange={onChange}>
         <Tabs.Item title="Tab One" key="tab-1">
           <Description content="Description One" />
         </Tabs.Item>
