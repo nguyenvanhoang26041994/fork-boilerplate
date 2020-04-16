@@ -20,7 +20,7 @@ Demo.anchorTitle = 'Controlled';
 Demo.href = 'password-controlled';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Password } from '@/rc-neumorphism/core';
+import { Password } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [value, setValue] = useState('');

@@ -31,7 +31,7 @@ Demo.anchorTitle = 'Closable';
 Demo.href = 'chip-closable';
 
 Demo.code = `import React  from 'react';
-import { Chip, Avatar } from '@/rc-neumorphism/core';
+import { Chip, Avatar } from 'rc-neumorphism/core';
 
 const avatarLink = '';
 

@@ -36,7 +36,7 @@ Demo.anchorTitle = 'Icon only';
 Demo.href = 'menu-icon-only';
 
 Demo.code = `import React from 'react';
-import { Menu } from '@/rc-neumorphism/core';
+import { Menu } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

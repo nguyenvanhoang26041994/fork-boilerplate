@@ -16,7 +16,7 @@ Demo.anchorTitle = 'Disabled';
 Demo.href = 'password-disabled';
 
 Demo.code = `import React from 'react';
-import { Password } from '@/rc-neumorphism/core';
+import { Password } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

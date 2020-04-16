@@ -27,7 +27,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'badge-basic';
 
 Demo.code = `import React from 'react';
-import { Badge } from '@/rc-neumorphism/core';
+import { Badge } from 'rc-neumorphism/core';
 
 const FancyBox = ({ size }) => (
   <div

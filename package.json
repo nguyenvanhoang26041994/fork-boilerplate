@@ -10,15 +10,17 @@
   "scripts": {
     "lint": "eslint ./src --",
     "clean-dist": "rimraf \"dist\"",
-    "build": "yarn make-guide && yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/prod.config.js",
+    "build": "yarn guide && yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/prod.config.js",
     "build-core": "yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/core.config.js",
-    "dev": "yarn make-guide && cross-env NODE_ENV=development node dev-server",
+    "dev": "yarn guide && cross-env NODE_ENV=development node dev-server",
     "deploy": "yarn build && now --prod",
+    "make-icons": "node .guide/cli/make-icons",
+    "guide": "node .guide/cli/make-guide",
+
     "build-neu-scss": "node-sass rc-neumorphism/src --output rc-neumorphism/lib",
     "build-neu-js": "babel --config-file rc-neumorphism/babel.config.js --out-dir rc-neumorphism/lib rc-neumorphism/src --verbose",
     "build-neu": "yarn rimraf \"rc-neumorphism/lib\" && yarn build-neu-js && yarn build-neu-scss",
-    "make-icons": "node .guide/cli/make-icons",
-    "make-guide": "node .guide/cli/make-guide"
+    "neu:lint": "eslint --config ./rc-neumorphism/.eslintrc ./rc-neumorphism/src"
   },
   "repository": {
     "type": "git",

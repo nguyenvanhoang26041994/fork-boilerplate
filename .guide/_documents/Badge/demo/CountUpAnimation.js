@@ -32,7 +32,7 @@ Demo.anchorTitle = 'Count up animation';
 Demo.href = 'badge-count-up-animation';
 
 Demo.code = `import React, { useState, useEffect } from 'react';
-import { Badge } from '@/rc-neumorphism/core';
+import { Badge } from 'rc-neumorphism/core';
 
 const FancyBox = ({ size }) => (
   <div

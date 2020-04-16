@@ -20,7 +20,7 @@ Demo.anchorTitle = 'With online';
 Demo.href = 'avatar-with-online';
 
 Demo.code = `import React from 'react';
-import { Avatar, Badge } from '@/rc-neumorphism/core';
+import { Avatar, Badge } from 'rc-neumorphism/core';
 
 const avatarLink = '';
 

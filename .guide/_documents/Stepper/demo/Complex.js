@@ -60,7 +60,7 @@ Demo.anchorTitle = 'Complex';
 Demo.href = 'stepper-complex';
 
 Demo.code = `import React from 'react';
-import { Stepper, ButtonGroup, Button } from '@/rc-neumorphism/core';
+import { Stepper, ButtonGroup, Button } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const {

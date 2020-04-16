@@ -28,7 +28,7 @@ Demo.anchorTitle = 'Width';
 Demo.href = 'drawer-width';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Button, Drawer } from '@/rc-neumorphism/core';
+import { Button, Drawer } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [open, setOpen] = useState();

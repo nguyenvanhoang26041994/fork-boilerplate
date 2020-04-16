@@ -27,7 +27,7 @@ Demo.anchorTitle = 'Direction title';
 Demo.href = 'divider-direction-title';
 
 Demo.code = `import React from 'react';
-import { Divider, Icon } from '@/rc-neumorphism/core';
+import { Divider, Icon } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

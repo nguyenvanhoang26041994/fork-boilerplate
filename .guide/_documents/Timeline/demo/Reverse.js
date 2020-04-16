@@ -66,7 +66,7 @@ Demo.anchorTitle = 'Reverse';
 Demo.href = 'timeline-reverse';
 
 Demo.code = `import React from 'react';
-import { Timeline, Icon } from '@/rc-neumorphism/core';
+import { Timeline, Icon } from 'rc-neumorphism/core';
 
 const NotificationBox = ({ requester, time }) => {
   return (

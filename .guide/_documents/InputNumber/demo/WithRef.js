@@ -23,7 +23,7 @@ Demo.anchorTitle = 'With ref';
 Demo.href = 'inputnumber-with-ref';
 
 Demo.code = `import React, { useCallback, useRef } from 'react';
-import { InputNumber } from '@/rc-neumorphism/core';
+import { InputNumber } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const ref = useRef();

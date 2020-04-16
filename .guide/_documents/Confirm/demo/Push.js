@@ -24,7 +24,7 @@ Demo.anchorTitle = 'Push';
 Demo.href = 'confirm-push';
 
 Demo.code = `import React, { useCallback } from 'react';
-import { Button, helper } from '@/rc-neumorphism/core';
+import { Button, helper } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const onOpen = useCallback(() => {

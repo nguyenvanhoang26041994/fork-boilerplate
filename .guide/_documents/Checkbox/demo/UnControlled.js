@@ -18,7 +18,7 @@ Demo.anchorTitle = 'Un controlled';
 Demo.href = 'checkbox-un-controlled';
 
 Demo.code = `import React from 'react';
-import { Checkbox } from '@/rc-neumorphism/core';
+import { Checkbox } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

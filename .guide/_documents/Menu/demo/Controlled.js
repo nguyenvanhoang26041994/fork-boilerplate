@@ -46,7 +46,7 @@ Demo.anchorTitle = 'Controlled';
 Demo.href = 'menu-controlled';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Menu, Divider } from '@/rc-neumorphism/core';
+import { Menu, Divider } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);

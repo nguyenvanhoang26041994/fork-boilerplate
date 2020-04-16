@@ -34,7 +34,7 @@ Demo.anchorTitle = 'Pure';
 Demo.href = 'alert-pure';
 
 Demo.code = `import React from 'react';
-import { PureAlert } from '@/rc-neumorphism/core';
+import { PureAlert } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

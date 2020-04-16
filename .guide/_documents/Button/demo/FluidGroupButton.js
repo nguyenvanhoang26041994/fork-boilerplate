@@ -17,7 +17,7 @@ Demo.anchorTitle = 'Fluid group button';
 Demo.href = 'button-fluid-group-button';
 
 Demo.code = `import React from 'react';
-import { Button, ButtonGroup } from '@/rc-neumorphism/core';
+import { Button, ButtonGroup } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

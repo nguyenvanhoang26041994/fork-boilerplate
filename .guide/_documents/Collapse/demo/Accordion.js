@@ -36,7 +36,7 @@ Demo.anchorTitle = 'Accordion';
 Demo.href = 'collapse-accordion';
 
 Demo.code = `import React from 'react';
-import { Collapse } from '@/rc-neumorphism/core';
+import { Collapse } from 'rc-neumorphism/core';
 
 const Description = () => {
   return (

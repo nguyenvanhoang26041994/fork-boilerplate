@@ -77,7 +77,7 @@ Demo.anchorTitle = 'Placement';
 Demo.href = 'tooltip-placement';
 
 Demo.code = `import React from 'react';
-import { Button, Tooltip } from '@/rc-neumorphism/core';
+import { Button, Tooltip } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

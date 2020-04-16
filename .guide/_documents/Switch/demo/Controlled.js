@@ -18,7 +18,7 @@ Demo.anchorTitle = 'Controlled';
 Demo.href = 'switch-controlled';
 
 Demo.code = `import React, { useState } from 'react';
-import { Switch } from '@/rc-neumorphism/core';
+import { Switch } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [checked, setChecked] = useState(false);

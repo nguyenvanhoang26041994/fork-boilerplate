@@ -27,7 +27,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'avatar-basic';
 
 Demo.code = `import React from 'react';
-import { Avatar } from '@/rc-neumorphism/core';
+import { Avatar } from 'rc-neumorphism/core';
 
 const avatarLink = '';
 

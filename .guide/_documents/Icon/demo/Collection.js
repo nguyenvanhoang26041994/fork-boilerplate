@@ -33,7 +33,7 @@ Demo.anchorTitle = 'Collection';
 Demo.href = 'icon-collection';
 
 Demo.code = `import React from 'react';
-import { Icon, Tooltip } from '@/rc-neumorphism/core';
+import { Icon, Tooltip } from 'rc-neumorphism/core';
 import list from '@@/rc-neumorphism/src/components/Icon/svg';
 
 const IconBox = ({ name }) => {

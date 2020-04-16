@@ -31,7 +31,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'select-basic';
 
 Demo.code = `import React from 'react';
-import { Select } from '@/rc-neumorphism/core';
+import { Select } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

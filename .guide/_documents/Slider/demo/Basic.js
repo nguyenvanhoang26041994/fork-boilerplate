@@ -15,7 +15,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'slider-basic';
 
 Demo.code = `import React, { useState, useCallback }  from 'react';
-import { Slider, Button, ButtonGroup, Switch } from '@/rc-neumorphism/core';
+import { Slider, Button, ButtonGroup, Switch } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

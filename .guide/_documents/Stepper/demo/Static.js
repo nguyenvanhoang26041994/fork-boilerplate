@@ -37,7 +37,7 @@ Demo.anchorTitle = 'Static';
 Demo.href = 'stepper-static';
 
 Demo.code = `import React from 'react';
-import { Stepper } from '@/rc-neumorphism/core';
+import { Stepper } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

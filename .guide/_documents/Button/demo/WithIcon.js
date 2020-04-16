@@ -27,7 +27,7 @@ Demo.anchorTitle = 'With icon';
 Demo.href = 'button-with-icon';
 
 Demo.code = `import React from 'react';
-import { Button, Icon } from '@/rc-neumorphism/core';
+import { Button, Icon } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

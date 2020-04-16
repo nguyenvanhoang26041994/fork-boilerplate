@@ -42,7 +42,7 @@ Demo.anchorTitle = 'Icon';
 Demo.href = 'tabs-icon';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Tabs } from '@/rc-neumorphism/core';
+import { Tabs } from 'rc-neumorphism/core';
 
 const Description = ({ content }) => {
   return (

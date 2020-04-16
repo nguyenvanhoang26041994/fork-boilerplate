@@ -17,7 +17,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'breadcrumb-basic';
 
 Demo.code = `import React from 'react';
-import { Breadcrumb } from '@/rc-neumorphism/core';
+import { Breadcrumb } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

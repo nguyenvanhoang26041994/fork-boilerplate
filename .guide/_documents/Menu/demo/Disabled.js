@@ -22,7 +22,7 @@ Demo.anchorTitle = 'Disabled';
 Demo.href = 'menu-disabled';
 
 Demo.code = `import React from 'react';
-import { Menu } from '@/rc-neumorphism/core';
+import { Menu } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

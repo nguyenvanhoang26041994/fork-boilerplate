@@ -3,20 +3,12 @@ import { Skeleton } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (
-    <div className="flex flex-col w-full items-start">
-      <Skeleton circle className="mb-2" />
-      <Skeleton rect className="mb-2" />
-      <Skeleton rect w="50%" className="mb-2" />
-      <Skeleton rect w="70%" className="mb-2" />
-      <Skeleton rect h="10rem" className="mb-2" />
-      <Skeleton circle size="3rem" className="mb-2" />
-      <Skeleton p w="50%" />
-      <Skeleton p w="20%" />
-      <Skeleton p w="10%" />
-      <Skeleton p w="50%" />
-      <Skeleton p w="70%" />
-      <Skeleton p w="40%" />
-      <Skeleton p w="70%" />
+    <div className="w-full">
+      <Skeleton circle />
+      <Skeleton rect />
+      <Skeleton rect w="70%" />
+      <Skeleton rect h="10rem" />
+      <Skeleton circle size="3rem" />
       <Skeleton p w="90%" />
     </div>
   );

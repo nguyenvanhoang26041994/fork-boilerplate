@@ -54,7 +54,7 @@ const makeDemo = function(documentName, demoName) {
   let demoStr = readFile(path.join(__dirname, `../documents/${documentName}/demo/${demoName}.js`));
   let injectedStr = demoStr;
   injectedStr += Handlebars.compile(DemoTemplate)(makeHeader(demoName, documentName));
-  injectedStr += `\nDemo.code = \`${demoStr}\`;\n`;
+  injectedStr += `\nDemo.code = \`${demoStr.replace('@/rc-neumorphism', 'rc-neumorphism')}\`;\n`;
 
   makeFile(path.join(__dirname, `../_documents/${documentName}/demo/${demoName}.js`), injectedStr);
 };

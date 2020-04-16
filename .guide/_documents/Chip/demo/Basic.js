@@ -29,7 +29,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'chip-basic';
 
 Demo.code = `import React  from 'react';
-import { Chip } from '@/rc-neumorphism/core';
+import { Chip } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

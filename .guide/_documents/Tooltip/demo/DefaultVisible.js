@@ -17,7 +17,7 @@ Demo.anchorTitle = 'Default visible';
 Demo.href = 'tooltip-default-visible';
 
 Demo.code = `import React from 'react';
-import { Button, Tooltip } from '@/rc-neumorphism/core';
+import { Button, Tooltip } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

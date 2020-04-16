@@ -34,7 +34,7 @@ Demo.anchorTitle = 'Size';
 Demo.href = 'avatar-size';
 
 Demo.code = `import React from 'react';
-import { Avatar } from '@/rc-neumorphism/core';
+import { Avatar } from 'rc-neumorphism/core';
 
 const avatarLink = '';
 

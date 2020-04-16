@@ -43,7 +43,7 @@ Demo.anchorTitle = 'Icon';
 Demo.href = 'stepper-icon';
 
 Demo.code = `import React from 'react';
-import { Stepper } from '@/rc-neumorphism/core';
+import { Stepper } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

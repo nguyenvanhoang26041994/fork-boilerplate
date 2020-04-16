@@ -36,7 +36,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'collapse-basic';
 
 Demo.code = `import React from 'react';
-import { Collapse } from '@/rc-neumorphism/core';
+import { Collapse } from 'rc-neumorphism/core';
 
 const Description = () => {
   return (

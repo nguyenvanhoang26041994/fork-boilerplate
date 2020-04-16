@@ -93,7 +93,7 @@ import {
   Avatar,
   Icon,
   helper,
-} from '@/rc-neumorphism/core';
+} from 'rc-neumorphism/core';
 
 const avatarLink = '';
 

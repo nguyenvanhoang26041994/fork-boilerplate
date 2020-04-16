@@ -26,7 +26,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'alert-basic';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Button, Alert } from '@/rc-neumorphism/core';
+import { Button, Alert } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [open, setOpen] = useState();

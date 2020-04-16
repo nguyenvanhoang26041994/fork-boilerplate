@@ -23,7 +23,7 @@ Demo.anchorTitle = 'With ref';
 Demo.href = 'textbox-with-ref';
 
 Demo.code = `import React, { useCallback, useRef } from 'react';
-import { Textbox } from '@/rc-neumorphism/core';
+import { Textbox } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const ref = useRef();

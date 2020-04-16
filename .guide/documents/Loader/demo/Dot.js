@@ -3,21 +3,10 @@ import { Loader } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (
-    <div
-      className="flex w-full"
-      style={{
-        height: '100px'
-      }}
-    >
-      <div className="flex-1">
-        <Loader.Dot color="red" />
-      </div>
-      <div className="flex-1">
-        <Loader.Dot className="your-custom" />
-      </div>
-      <div className="flex-1">
-        <Loader.Dot size="2rem" />
-      </div>
+    <div className="flex">
+      <Loader.Dot className="mr-10" />
+      <Loader.Dot color="red" className="mr-10" />
+      <Loader.Dot size="2rem" />
     </div>
   );
 };

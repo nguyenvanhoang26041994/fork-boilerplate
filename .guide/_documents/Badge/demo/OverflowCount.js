@@ -27,7 +27,7 @@ Demo.anchorTitle = 'Overflow count';
 Demo.href = 'badge-overflow-count';
 
 Demo.code = `import React from 'react';
-import { Badge } from '@/rc-neumorphism/core';
+import { Badge } from 'rc-neumorphism/core';
 
 const FancyBox = ({ size }) => (
   <div

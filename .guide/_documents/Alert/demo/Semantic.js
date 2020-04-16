@@ -24,7 +24,7 @@ Demo.anchorTitle = 'Semantic';
 Demo.href = 'alert-semantic';
 
 Demo.code = `import React from 'react';
-import { PureAlert } from '@/rc-neumorphism/core';
+import { PureAlert } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

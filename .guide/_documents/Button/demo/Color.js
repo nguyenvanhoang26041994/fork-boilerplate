@@ -17,7 +17,7 @@ Demo.anchorTitle = 'Color';
 Demo.href = 'button-color';
 
 Demo.code = `import React from 'react';
-import { Button } from '@/rc-neumorphism/core';
+import { Button } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

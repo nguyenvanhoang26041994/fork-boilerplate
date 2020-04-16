@@ -17,7 +17,7 @@ Demo.anchorTitle = 'Icon';
 Demo.href = 'divider-icon';
 
 Demo.code = `import React from 'react';
-import { Divider, Icon } from '@/rc-neumorphism/core';
+import { Divider, Icon } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

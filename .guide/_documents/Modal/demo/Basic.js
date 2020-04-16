@@ -23,7 +23,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'modal-basic';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Button, Modal } from '@/rc-neumorphism/core';
+import { Button, Modal } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [open, setOpen] = useState();

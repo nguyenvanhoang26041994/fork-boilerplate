@@ -23,7 +23,7 @@ Demo.anchorTitle = 'With ref';
 Demo.href = 'textarea-with-ref';
 
 Demo.code = `import React, { useCallback, useRef } from 'react';
-import { Textarea } from '@/rc-neumorphism/core';
+import { Textarea } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const ref = useRef();

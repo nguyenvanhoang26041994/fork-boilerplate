@@ -27,7 +27,7 @@ Demo.anchorTitle = 'With loader';
 Demo.href = 'button-with-loader';
 
 Demo.code = `import React from 'react';
-import { Button } from '@/rc-neumorphism/core';
+import { Button } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

@@ -16,7 +16,7 @@ Demo.anchorTitle = 'Size';
 Demo.href = 'progress-size';
 
 Demo.code = `import React  from 'react';
-import { Progress } from '@/rc-neumorphism/core';
+import { Progress } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

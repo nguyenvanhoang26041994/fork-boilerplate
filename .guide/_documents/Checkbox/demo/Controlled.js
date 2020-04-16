@@ -26,7 +26,7 @@ Demo.anchorTitle = 'Controlled';
 Demo.href = 'checkbox-controlled';
 
 Demo.code = `import React, { useState } from 'react';
-import { Checkbox } from '@/rc-neumorphism/core';
+import { Checkbox } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [checked, setChecked] = useState(false);

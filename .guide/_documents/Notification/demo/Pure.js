@@ -71,7 +71,7 @@ import {
   PureNotification,
   Avatar,
   Icon,
-} from '@/rc-neumorphism/core';
+} from 'rc-neumorphism/core';
 
 const avatarLink = '';
 

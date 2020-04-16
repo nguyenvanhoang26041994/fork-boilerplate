@@ -15,7 +15,7 @@ Demo.anchorTitle = 'Pure';
 Demo.href = 'modal-pure';
 
 Demo.code = `import React from 'react';
-import { PureModal } from '@/rc-neumorphism/core';
+import { PureModal } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

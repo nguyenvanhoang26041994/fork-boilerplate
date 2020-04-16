@@ -31,7 +31,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'confirm-basic';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Button, Confirm } from '@/rc-neumorphism/core';
+import { Button, Confirm } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [open, setOpen] = useState();

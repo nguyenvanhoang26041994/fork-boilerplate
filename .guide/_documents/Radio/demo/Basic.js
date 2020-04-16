@@ -35,7 +35,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'radio-basic';
 
 Demo.code = `import React, { useState } from 'react';
-import { Radio } from '@/rc-neumorphism/core';
+import { Radio } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [value, setValue] = useState();

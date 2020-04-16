@@ -23,7 +23,7 @@ Demo.anchorTitle = 'With ref';
 Demo.href = 'password-with-ref';
 
 Demo.code = `import React, { useCallback, useRef } from 'react';
-import { Password } from '@/rc-neumorphism/core';
+import { Password } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const ref = useRef();

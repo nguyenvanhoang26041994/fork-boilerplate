@@ -20,7 +20,7 @@ Demo.anchorTitle = 'Closable';
 Demo.href = 'alert-closable';
 
 Demo.code = `import React from 'react';
-import { PureAlert } from '@/rc-neumorphism/core';
+import { PureAlert } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

@@ -75,7 +75,7 @@ Demo.anchorTitle = 'Title with icon only';
 Demo.href = 'menu-title-with-icon-only';
 
 Demo.code = `import React, { useState } from 'react';
-import { Menu, Switch } from '@/rc-neumorphism/core';
+import { Menu, Switch } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [isIconOnly, setIsIconOnly] = useState(true);

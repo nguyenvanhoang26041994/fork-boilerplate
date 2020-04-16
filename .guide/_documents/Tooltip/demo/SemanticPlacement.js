@@ -77,7 +77,7 @@ Demo.anchorTitle = 'Semantic placement';
 Demo.href = 'tooltip-semantic-placement';
 
 Demo.code = `import React from 'react';
-import { Button, Tooltip } from '@/rc-neumorphism/core';
+import { Button, Tooltip } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

@@ -16,7 +16,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'inputnumber-basic';
 
 Demo.code = `import React from 'react';
-import { InputNumber } from '@/rc-neumorphism/core';
+import { InputNumber } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

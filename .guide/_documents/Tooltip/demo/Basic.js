@@ -20,7 +20,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'tooltip-basic';
 
 Demo.code = `import React from 'react';
-import { Button, Tooltip } from '@/rc-neumorphism/core';
+import { Button, Tooltip } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

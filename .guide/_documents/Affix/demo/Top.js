@@ -22,7 +22,7 @@ Demo.anchorTitle = 'Top';
 Demo.href = 'affix-top';
 
 Demo.code = `import React from 'react';
-import { Affix, Button } from '@/rc-neumorphism/core';
+import { Affix, Button } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

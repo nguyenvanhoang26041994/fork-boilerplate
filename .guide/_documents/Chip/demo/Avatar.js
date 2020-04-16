@@ -28,7 +28,7 @@ Demo.anchorTitle = 'Avatar';
 Demo.href = 'chip-avatar';
 
 Demo.code = `import React  from 'react';
-import { Chip, Avatar } from '@/rc-neumorphism/core';
+import { Chip, Avatar } from 'rc-neumorphism/core';
 
 const avatarLink = '';
 

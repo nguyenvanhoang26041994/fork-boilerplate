@@ -36,7 +36,7 @@ Demo.anchorTitle = 'Default visible';
 Demo.href = 'popover-default-visible';
 
 Demo.code = `import React from 'react';
-import { Button, Popover, Stepper } from '@/rc-neumorphism/core';
+import { Button, Popover, Stepper } from 'rc-neumorphism/core';
 
 const StepperDemo = () => {
   return (

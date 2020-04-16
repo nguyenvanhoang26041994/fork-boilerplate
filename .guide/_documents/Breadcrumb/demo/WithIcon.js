@@ -17,7 +17,7 @@ Demo.anchorTitle = 'With icon';
 Demo.href = 'breadcrumb-with-icon';
 
 Demo.code = `import React from 'react';
-import { Breadcrumb, Icon } from '@/rc-neumorphism/core';
+import { Breadcrumb, Icon } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

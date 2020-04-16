@@ -21,7 +21,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'pagination-basic';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Pagination } from '@/rc-neumorphism/core';
+import { Pagination } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [activePage, setActivePage] = useState(1);

@@ -15,7 +15,7 @@ Demo.anchorTitle = 'With badge';
 Demo.href = 'button-with-badge';
 
 Demo.code = `import React from 'react';
-import { Button, Badge } from '@/rc-neumorphism/core';
+import { Button, Badge } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

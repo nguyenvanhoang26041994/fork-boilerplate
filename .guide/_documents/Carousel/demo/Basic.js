@@ -32,7 +32,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'carousel-basic';
 
 Demo.code = `import React from 'react';
-import { Carousel, Icon, Badge } from '@/rc-neumorphism/core';
+import { Carousel, Icon, Badge } from 'rc-neumorphism/core';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

@@ -18,7 +18,7 @@ Demo.anchorTitle = 'Size';
 Demo.href = 'button-size';
 
 Demo.code = `import React from 'react';
-import { Button } from '@/rc-neumorphism/core';
+import { Button } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

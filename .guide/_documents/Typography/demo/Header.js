@@ -18,7 +18,7 @@ Demo.anchorTitle = 'Header';
 Demo.href = 'typography-header';
 
 Demo.code = `import React from 'react';
-import { Typo } from '@/rc-neumorphism/core';
+import { Typo } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

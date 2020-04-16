@@ -17,7 +17,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'icon-basic';
 
 Demo.code = `import React from 'react';
-import { Icon } from '@/rc-neumorphism/core';
+import { Icon } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

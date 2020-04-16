@@ -31,7 +31,7 @@ Demo.anchorTitle = 'Custom color';
 Demo.href = 'badge-custom-color';
 
 Demo.code = `import React from 'react';
-import { Badge } from '@/rc-neumorphism/core';
+import { Badge } from 'rc-neumorphism/core';
 
 const FancyBox = ({ size }) => (
   <div

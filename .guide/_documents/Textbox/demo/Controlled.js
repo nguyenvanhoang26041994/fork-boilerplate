@@ -20,7 +20,7 @@ Demo.anchorTitle = 'Controlled';
 Demo.href = 'textbox-controlled';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Textbox } from '@/rc-neumorphism/core';
+import { Textbox } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [value, setValue] = useState('');

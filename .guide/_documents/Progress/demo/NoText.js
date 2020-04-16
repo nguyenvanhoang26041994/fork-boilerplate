@@ -40,7 +40,7 @@ Demo.anchorTitle = 'No text';
 Demo.href = 'progress-no-text';
 
 Demo.code = `import React, { useState, useCallback }  from 'react';
-import { Progress, Button, ButtonGroup } from '@/rc-neumorphism/core';
+import { Progress, Button, ButtonGroup } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [percent, setPercent] = useState(0.1);

@@ -33,7 +33,7 @@ Demo.anchorTitle = 'Status';
 Demo.href = 'form-status';
 
 Demo.code = `import React, { useCallback } from 'react';
-import { Form } from '@/rc-neumorphism/core';
+import { Form } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const onChange = useCallback((e) => {

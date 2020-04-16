@@ -18,7 +18,7 @@ Demo.anchorTitle = 'Un controlled';
 Demo.href = 'switch-un-controlled';
 
 Demo.code = `import React from 'react';
-import { Switch } from '@/rc-neumorphism/core';
+import { Switch } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

@@ -21,7 +21,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'menu-basic';
 
 Demo.code = `import React from 'react';
-import { Menu } from '@/rc-neumorphism/core';
+import { Menu } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

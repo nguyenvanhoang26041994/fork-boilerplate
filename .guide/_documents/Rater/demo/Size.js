@@ -20,7 +20,7 @@ Demo.anchorTitle = 'Size';
 Demo.href = 'rater-size';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Rater } from '@/rc-neumorphism/core';
+import { Rater } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [star, setStar] = useState(1);

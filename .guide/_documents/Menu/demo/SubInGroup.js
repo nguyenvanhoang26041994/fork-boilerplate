@@ -28,7 +28,7 @@ Demo.anchorTitle = 'Sub in group';
 Demo.href = 'menu-sub-in-group';
 
 Demo.code = `import React from 'react';
-import { Menu } from '@/rc-neumorphism/core';
+import { Menu } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

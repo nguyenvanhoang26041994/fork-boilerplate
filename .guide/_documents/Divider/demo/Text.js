@@ -17,7 +17,7 @@ Demo.anchorTitle = 'Text';
 Demo.href = 'divider-text';
 
 Demo.code = `import React from 'react';
-import { Divider } from '@/rc-neumorphism/core';
+import { Divider } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

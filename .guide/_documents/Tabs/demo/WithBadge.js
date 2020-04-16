@@ -58,7 +58,7 @@ Demo.anchorTitle = 'With badge';
 Demo.href = 'tabs-with-badge';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Tabs, Badge, Icon } from '@/rc-neumorphism/core';
+import { Tabs, Badge, Icon } from 'rc-neumorphism/core';
 
 const Description = ({ content }) => {
   return (

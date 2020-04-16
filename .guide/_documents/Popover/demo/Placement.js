@@ -93,7 +93,7 @@ Demo.anchorTitle = 'Placement';
 Demo.href = 'popover-placement';
 
 Demo.code = `import React from 'react';
-import { Button, Stepper, Popover } from '@/rc-neumorphism/core';
+import { Button, Stepper, Popover } from 'rc-neumorphism/core';
 
 const StepperDemo = () => {
   return (

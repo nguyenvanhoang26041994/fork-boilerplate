@@ -16,7 +16,7 @@ Demo.anchorTitle = 'Basic';
 Demo.href = 'password-basic';
 
 Demo.code = `import React from 'react';
-import { Password } from '@/rc-neumorphism/core';
+import { Password } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

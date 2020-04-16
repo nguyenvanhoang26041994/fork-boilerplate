@@ -66,7 +66,7 @@ Demo.anchorTitle = 'Custom icon';
 Demo.href = 'timeline-custom-icon';
 
 Demo.code = `import React from 'react';
-import { Timeline, Icon } from '@/rc-neumorphism/core';
+import { Timeline, Icon } from 'rc-neumorphism/core';
 
 const NotificationBox = ({ requester, time }) => {
   return (

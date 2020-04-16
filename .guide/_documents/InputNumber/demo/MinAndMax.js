@@ -18,7 +18,7 @@ Demo.anchorTitle = 'Min and max';
 Demo.href = 'inputnumber-min-and-max';
 
 Demo.code = `import React from 'react';
-import { InputNumber } from '@/rc-neumorphism/core';
+import { InputNumber } from 'rc-neumorphism/core';
 
 const Demo = () => {
   return (

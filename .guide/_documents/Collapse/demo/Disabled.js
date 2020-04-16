@@ -40,7 +40,7 @@ Demo.anchorTitle = 'Disabled';
 Demo.href = 'collapse-disabled';
 
 Demo.code = `import React from 'react';
-import { Collapse } from '@/rc-neumorphism/core';
+import { Collapse } from 'rc-neumorphism/core';
 
 const Description = () => {
   return (

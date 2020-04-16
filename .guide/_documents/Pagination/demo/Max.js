@@ -22,7 +22,7 @@ Demo.anchorTitle = 'Max';
 Demo.href = 'pagination-max';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Pagination } from '@/rc-neumorphism/core';
+import { Pagination } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const [activePage, setActivePage] = useState(1);

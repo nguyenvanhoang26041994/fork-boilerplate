@@ -38,7 +38,7 @@ Demo.anchorTitle = 'On change event';
 Demo.href = 'collapse-on-change-event';
 
 Demo.code = `import React from 'react';
-import { Collapse } from '@/rc-neumorphism/core';
+import { Collapse } from 'rc-neumorphism/core';
 
 const Description = () => {
   return (

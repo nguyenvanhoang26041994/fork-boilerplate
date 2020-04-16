@@ -45,7 +45,7 @@ Demo.anchorTitle = 'Top';
 Demo.href = 'anchor-top';
 
 Demo.code = `import React from 'react';
-import { Anchor } from '@/rc-neumorphism/core';
+import { Anchor } from 'rc-neumorphism/core';
 
 const Link = ({ id, children }) => (
   <a className="px-5" id={id} style={{ height: '100px'}}>

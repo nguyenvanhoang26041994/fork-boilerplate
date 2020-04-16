@@ -69,7 +69,7 @@ Demo.anchorTitle = 'Required';
 Demo.href = 'form-required';
 
 Demo.code = `import React, { useCallback } from 'react';
-import { Form, Select } from '@/rc-neumorphism/core';
+import { Form, Select } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const onChange = useCallback((e) => {

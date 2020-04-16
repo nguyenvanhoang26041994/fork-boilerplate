@@ -33,7 +33,7 @@ Demo.anchorTitle = 'Duration';
 Demo.href = 'alert-duration';
 
 Demo.code = `import React, { useCallback } from 'react';
-import { Button, helper } from '@/rc-neumorphism/core';
+import { Button, helper } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const onOpen5 = useCallback(() => {

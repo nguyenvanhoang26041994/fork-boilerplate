@@ -42,7 +42,7 @@ Demo.anchorTitle = 'Disabled';
 Demo.href = 'tabs-disabled';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Tabs } from '@/rc-neumorphism/core';
+import { Tabs } from 'rc-neumorphism/core';
 
 const Description = ({ content }) => {
   return (

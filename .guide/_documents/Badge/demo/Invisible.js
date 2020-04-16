@@ -31,7 +31,7 @@ Demo.anchorTitle = 'Invisible';
 Demo.href = 'badge-invisible';
 
 Demo.code = `import React, { useState } from 'react';
-import { Badge, Switch } from '@/rc-neumorphism/core';
+import { Badge, Switch } from 'rc-neumorphism/core';
 
 const FancyBox = ({ size }) => (
   <div

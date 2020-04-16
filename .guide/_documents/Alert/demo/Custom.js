@@ -59,7 +59,7 @@ Demo.anchorTitle = 'Custom';
 Demo.href = 'alert-custom';
 
 Demo.code = `import React, { useCallback } from 'react';
-import { Button, Avatar, Icon, helper } from '@/rc-neumorphism/core';
+import { Button, Avatar, Icon, helper } from 'rc-neumorphism/core';
 
 const avatarLink = '';
 

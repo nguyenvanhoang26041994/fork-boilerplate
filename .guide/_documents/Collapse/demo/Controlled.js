@@ -71,7 +71,7 @@ Demo.anchorTitle = 'Controlled';
 Demo.href = 'collapse-controlled';
 
 Demo.code = `import React, { useState, useCallback } from 'react';
-import { Collapse, Divider } from '@/rc-neumorphism/core';
+import { Collapse, Divider } from 'rc-neumorphism/core';
 
 const Description = () => {
   return (

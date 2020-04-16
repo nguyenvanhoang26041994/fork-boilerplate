@@ -29,7 +29,7 @@ Demo.href = 'breadcrumb-redirect';
 Demo.code = `import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { Breadcrumb } from '@/rc-neumorphism/core';
+import { Breadcrumb } from 'rc-neumorphism/core';
 
 const Demo = () => {
   const history = useHistory();

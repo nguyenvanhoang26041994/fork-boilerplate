@@ -104,7 +104,7 @@ Demo.href = 'badge-semantic-props';
 Demo.code = `import React from 'react';
 import cn from 'classnames';
 
-import { Badge } from '@/rc-neumorphism/core';
+import { Badge } from 'rc-neumorphism/core';
 
 const FancyBox = ({
   size = '50px',
