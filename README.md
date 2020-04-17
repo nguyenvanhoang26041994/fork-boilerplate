@@ -84,4 +84,30 @@ return children;
 /core
 /chart
 /icon
+require('rc-neumorphism/core').use(
+ 'home',
+  'heart',
+);
+
+// import { Icon } from 'rc-neumorphism/core';
+
+
+//register-icon.js
+const icons = {
+  'caret-down': require('./caret-down').default,
+};
+
+function use() {
+  arguments.forEach(iconName => {
+    icons[iconName] = require('./caret-down').default;
+  });
+}
+
+function add(name, svg) {
+  icons[name] = svg;
+}
+
+module.exports = { use, svgs: icons };
+
+---------------------------------------
 /chat
