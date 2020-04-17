@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { Icon, Badge } from '@/rc-neumorphism/core';
+import { Icon, Badge, Avatar, Popover, Menu } from '@/rc-neumorphism/core';
 import DarkModeToggle from '@/components/DarkModeToggle';
 
 require('./TopNavigation.scss');
@@ -22,6 +22,18 @@ const TopNavigation = ({ toggleExpand, isExpanded }) => {
               <Icon name="bell" fontSize="1.25rem"/>
             </Badge>
             <DarkModeToggle className="mx-5" />
+            <Popover
+              absolute
+              bottomRight
+              overlay={(
+                <Menu>
+                  <Menu.Item title="Change password" />
+                  <Menu.Item title="Logout" />
+                </Menu>
+              )}
+            >
+              <Avatar name="Hoàng Nguyễn" />
+            </Popover>
           </div>
         </div>
       </div>

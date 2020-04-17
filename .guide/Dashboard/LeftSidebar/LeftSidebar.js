@@ -33,7 +33,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
           }
           if (mapMenuItem[key].type === 'sub') {
             return (
-              <Menu.Sub title={mapMenuItem[key].title} key={mapMenuItem[key].key} icon={mapMenuItem[key].icon}>
+              <Menu.Sub title={mapMenuItem[key].title} key={mapMenuItem[key].key} icon={mapMenuItem[key].icon} defaultExpanded>
                 {Object.keys(mapMenuItem[key].items).map(_key => {
                   return (
                     <Menu.Item {...mapMenuItem[key].items[_key]} />

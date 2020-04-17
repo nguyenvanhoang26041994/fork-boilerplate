@@ -1,10 +1,10 @@
 .top-navigation-container {
   position: sticky;
   top: 0;
-  height: 6rem;
+  height: 5rem;
   width: 100%;
   z-index: 10;
-  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
 
 .top-navigation-wrapper {
@@ -15,8 +15,8 @@
 .top-navigation {
   height: 100%;
   width: 100%;
-  border-radius: 0.5rem;
   background-color: var(--rc-color--500);
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12);
   display: flex;
   align-items: center;
   justify-content: space-between;

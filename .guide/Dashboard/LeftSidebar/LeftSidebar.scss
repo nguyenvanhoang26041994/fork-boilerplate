@@ -1,18 +1,17 @@
 .left-sidebar-container {
-  width: 6rem;
+  width: 5.5rem;
   height: 100vh;
 
   &.--expanded {
-    width: 20rem;
+    width: 20.5rem;
   }
 }
 
 .left-sidebar-wrapper {
   position: fixed;
   z-index: 10;
-  width: 6rem;
+  width: 5rem;
   height: inherit;
-  padding: 0.5rem;
   transition: width 0.25s;
 
   &.--expanded {
@@ -23,8 +22,8 @@
 .left-sidebar {
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
   background-color: var(--rc-color--500);
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12);
   overflow-x: hidden;
   overflow-y: auto;
 

@@ -3,17 +3,19 @@ import { Button, Popover, Stepper } from '@/rc-neumorphism/core';
 
 const StepperDemo = () => {
   return (
-    <Stepper
-      activeStep={3}
-      style={{
-        width: '400px'
-      }}
-    >
-      <Stepper.Step title="Ordered" />
-      <Stepper.Step title="Prepared" />
-      <Stepper.Step title="Shiped" />
-      <Stepper.Step title="Completed" />
-    </Stepper>
+    <div className="p-2">
+      <Stepper
+        activeStep={3}
+        style={{
+          width: '400px'
+        }}
+      >
+        <Stepper.Step title="Ordered" />
+        <Stepper.Step title="Prepared" />
+        <Stepper.Step title="Shiped" />
+        <Stepper.Step title="Completed" />
+      </Stepper>
+    </div>
   );
 };
 
