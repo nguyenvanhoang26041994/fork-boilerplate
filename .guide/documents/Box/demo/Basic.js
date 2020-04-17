@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import { Box, Form, Button, Select, Skeleton } from '@/rc-neumorphism/core';
+import { Box, Form, Button, Select } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const [loading, setLoading] = useState(false);
