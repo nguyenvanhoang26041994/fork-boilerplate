@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import { Icon, Badge, Avatar, Popover, Menu } from '@/rc-neumorphism/core';
-import DarkModeToggle from '@/components/DarkModeToggle';
+import DarkModeToggle from '@/containers/DarkModeToggle';
 
 require('./TopNavigation.scss');
 
