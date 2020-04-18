@@ -7,7 +7,7 @@ const IconBox = ({ name }) => {
     <Tooltip title={name}>
       <div
         style={{ width: '3rem', height: '3rem'}}
-        className="flex itemx-center justify-center"
+        className="flex items-center justify-center"
       >
         <Icon name={name} />
       </div>

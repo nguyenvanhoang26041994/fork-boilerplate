@@ -22,7 +22,7 @@ const Demo = () => {
 
   return (
     <div className="flex flex-col w-full">
-      <Progress.Linear percent={percent} noText />
+      <Progress.Linear percent={percent} droplet={false} />
       <ButtonGroup className="mt-10">
         <Button icon="minus" onClick={onMinus} />
         <Button onClick={() =>setPercent(0.1)}>10%</Button>
