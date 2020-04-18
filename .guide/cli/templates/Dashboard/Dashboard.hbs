@@ -4,7 +4,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import LeftSidebar from './LeftSidebar';
 import TopNavigation from './TopNavigation';
 import loadable from '@/utils/loadable';
-import { Breadcrumb, Icon, Loader } from '@/rc-neumorphism/core';
+import { Breadcrumb, Icon, Loader, ScrollUp } from '@/rc-neumorphism/core';
 import { mapBreadcrumb } from '../map-config';
 
 const fallback = (
@@ -51,6 +51,7 @@ const Dashboard = ({}) => {
           </div>
         </div>
       </div>
+      <ScrollUp />
     </div>
   )
 };
