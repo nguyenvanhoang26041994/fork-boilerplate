@@ -5,13 +5,13 @@ const formSkeleton = (
   <div className="w-full">
     <Skeleton p w="10%" />
     <Skeleton rect h="3rem" />
-    <Skeleton p w="10%" />
+    <Skeleton p w="20%" />
     <Skeleton rect h="3rem" />
-    <Skeleton p w="10%" />
+    <Skeleton p w="40%" />
     <Skeleton rect h="3rem" />
-    <Skeleton p w="10%" />
+    <Skeleton p w="15%" />
     <Skeleton rect h="3rem" />
-    <Skeleton p w="10%" />
+    <Skeleton p w="30%" />
     <Skeleton rect h="10rem" />
     <Skeleton rect w="5rem" h="2.5rem" />
   </div>
