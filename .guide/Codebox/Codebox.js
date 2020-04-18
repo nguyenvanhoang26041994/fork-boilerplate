@@ -1,16 +1,19 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useContext } from 'react';
 import cn from 'classnames';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { okaidia, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import AppContext from '@/AppContext';
 
 require('./Codebox.scss');
 
 const CodeBlock = ({ language, value }) => {
+  const { isDark } = useContext(AppContext);
+
   return (
     <SyntaxHighlighter
       language={language}
-      style={okaidia}
+      style={isDark ? okaidia : coy}
     >
       {value}
     </SyntaxHighlighter>

@@ -17,6 +17,12 @@
   > pre {
     margin: 0 !important;
     border-radius: 0 !important;
-    background-color: #393939 !important;
+    background-color: var(--rc-color--500) !important;
+    padding: 1em !important;
+
+    .token,
+    .token.arrow {
+      background-color: transparent !important;
+    }
   }
 }
