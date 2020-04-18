@@ -16,7 +16,6 @@
     "deploy": "yarn build && now --prod",
     "make-icons": "node .guide/cli/make-icons",
     "guide": "node .guide/cli/make-guide",
-
     "build-neu-scss": "node-sass rc-neumorphism/src --output rc-neumorphism/lib",
     "build-neu-js": "babel --config-file rc-neumorphism/babel.config.js --out-dir rc-neumorphism/lib rc-neumorphism/src --verbose",
     "build-neu": "yarn rimraf \"rc-neumorphism/lib\" && yarn build-neu-js && yarn build-neu-scss",
@@ -43,7 +42,8 @@
     "react-markdown": "^4.3.1",
     "react-router-dom": "^5.0.1",
     "react-syntax-highlighter": "^12.2.1",
-    "workbox-window": "^4.3.1"
+    "workbox-window": "^4.3.1",
+    "yarn": "^1.22.4"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

@@ -1,5 +1,16 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import { Box, Form, Button, Select } from '@/rc-neumorphism/core';
+import { Box, Form, Button, Select, Skeleton } from '@/rc-neumorphism/core';
+
+const formSkeleton = (
+  <div className="w-full">
+    <Skeleton rect />
+    <Skeleton rect />
+    <Skeleton rect />
+    <Skeleton rect />
+    <Skeleton rect h="10rem" />
+    <Skeleton rect w="10%" />
+  </div>
+);
 
 const Demo = () => {
   const [loading, setLoading] = useState(false);
@@ -25,7 +36,7 @@ const Demo = () => {
   }, []);
 
   return (
-    <Box loading={loading}>
+    <Box loading={loading} skeleton={formSkeleton}>
       <Form className="w-full">
         <Form.Textbox
           label="Account"
