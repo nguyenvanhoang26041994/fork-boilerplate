@@ -3,10 +3,15 @@ import { Box, Form, Button, Select, Skeleton } from '@/rc-neumorphism/core';
 
 const formSkeleton = (
   <div className="w-full">
-    <Skeleton rect />
-    <Skeleton rect />
-    <Skeleton rect />
-    <Skeleton rect />
+    <Skeleton rect w="10%" />
+    <Skeleton rect h="2rem" />
+    <Skeleton rect w="10%" />
+    <Skeleton rect h="2rem" />
+    <Skeleton rect w="10%" />
+    <Skeleton rect h="2rem" />
+    <Skeleton rect w="10%" />
+    <Skeleton rect h="2rem" />
+    <Skeleton rect w="10%" />
     <Skeleton rect h="10rem" />
     <Skeleton rect w="10%" />
   </div>
