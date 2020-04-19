@@ -1,9 +1,8 @@
 import React, { useState, useCallback }  from 'react';
-import { Progress, Button, ButtonGroup, Switch } from '@/rc-neumorphism/core';
+import { Progress, Button, ButtonGroup } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   const [percent, setPercent] = useState(0.1);
-  const [isBottom, setIsBottom] = useState(false);
 
   const onMinus = useCallback(() => setPercent(prev => {
     if (prev <= 0.05) {
@@ -23,7 +22,7 @@ const Demo = () => {
 
   return (
     <div className="flex flex-col w-full">
-      <Progress.Linear bottom={isBottom} percent={percent} />
+      <Progress.Linear percent={percent} />
       <div className="flex items-center mt-20">
         <ButtonGroup>
           <Button icon="minus" onClick={onMinus} />
@@ -32,10 +31,6 @@ const Demo = () => {
           <Button onClick={() =>setPercent(0.9)}>90%</Button>
           <Button icon="plus" onClick={onPlus} />
         </ButtonGroup>
-        <div className="flex items-center ml-3">
-          <Switch checked={isBottom} onChange={e => setIsBottom(e.target.checked)} />
-          <span className="ml-3">Bottom</span>
-        </div>
       </div>
     </div>
   );
