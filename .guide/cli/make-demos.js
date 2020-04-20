@@ -1,3 +1,4 @@
+const fs = require('fs-extra');
 const path = require('path');
 const Handlebars = require('handlebars');
 const makeFile = require('./utils/make-file');
@@ -50,11 +51,37 @@ const DemoTemplate = readFile(path.join(__dirname, '/templates/Document/demo/Dem
 const IndexTemplate = readFile(path.join(__dirname, '/templates/Document/index.hbs'));
 const DocumentTemplate = readFile(path.join(__dirname, '/templates/Document/Document.hbs'));
 
+const injectMarkdown = function(documentName, demoName) {
+  const markdownPath = path.join(__dirname, `../documents/${documentName}/markdown/${demoName}.md`);
+
+  if (fs.pathExistsSync(markdownPath)) {
+    return readFile(markdownPath).replace(/\`/g, '\\\`');
+  }
+
+  return '';
+};
+
+const injectREADME = function(documentName) {
+  const markdownPath = path.join(__dirname, `../documents/${documentName}/README.md`);
+
+  if (fs.pathExistsSync(markdownPath)) {
+    return readFile(markdownPath).replace(/\`/g, '\\\`');
+  }
+
+  return '';
+};
+
 const makeDemo = function(documentName, demoName) {
   let demoStr = readFile(path.join(__dirname, `../documents/${documentName}/demo/${demoName}.js`));
   let injectedStr = demoStr;
   injectedStr += Handlebars.compile(DemoTemplate)(makeHeader(demoName, documentName));
-  injectedStr += `\nDemo.code = \`${demoStr.replace('@/rc-neumorphism', 'rc-neumorphism')}\`;\n`;
+  injectedStr += `\nDemo.code = \`${
+    demoStr
+      .replace(/@\/rc-neumorphism/g, 'rc-neumorphism')
+      .replace(/\`/g, '\\\`')
+  }\`;`;
+
+  injectedStr += `\nDemo.markdown = \`${injectMarkdown(documentName, demoName)}\``;
 
   makeFile(path.join(__dirname, `../_documents/${documentName}/demo/${demoName}.js`), injectedStr);
 };
@@ -73,9 +100,16 @@ const makeDocument = function(documentName) {
     const config = require(`../documents/${documentName}/config`);
     const configOrder = Object.keys(config);
 
+    let injectStr = Handlebars.compile(DocumentTemplate)({
+      importers: reOrder(demos, configOrder)
+    });
+
+
+    injectStr = injectStr.replace('const README = \'\';', `const README = \`${injectREADME(documentName)}\`;`);
+
     makeFile(
       path.join(__dirname, `../_documents/${documentName}/Document.js`),
-      Handlebars.compile(DocumentTemplate)({ importers: reOrder(demos, configOrder) })
+      injectStr
     );
 };
 

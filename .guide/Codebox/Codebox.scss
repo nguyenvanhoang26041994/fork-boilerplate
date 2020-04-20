@@ -13,11 +13,22 @@
   padding: 2rem 1rem;
 }
 
+.code-box-description {
+  padding: 1rem;
+
+  code {
+    background-color: #bfc0c7;
+    color: #000;
+    border-radius: 3px;
+    padding: 0 3px;
+  }
+}
+
 .code-box-code {
   > pre {
     margin: 0 !important;
     border-radius: 0 !important;
-    background-color: var(--rc-color--500) !important;
+    background-color: var(--rc-color--450) !important;
     padding: 1em !important;
 
     .token,

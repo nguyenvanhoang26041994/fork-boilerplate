@@ -53,6 +53,7 @@ const leftSidebar = {
       Rater: {},
       Loader: {},
       Skeleton: {},
+      Upload: {},
     },
   },
   Form: {

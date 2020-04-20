@@ -33,6 +33,16 @@ const CodeMarkdown = ({ children }) => {
   );
 };
 
+const DescriptionMarkdown = ({ children }) => {
+  return (
+    <div className="code-box-description">
+      <ReactMarkdown
+        source={children}
+      />
+    </div>
+  );
+};
+
 const Codebox = ({ className, Component }) => {
   return (
     <div className={cn('code-box', className)} id={Component.href}>
@@ -40,6 +50,9 @@ const Codebox = ({ className, Component }) => {
       <div className="code-box-demo">
         <Component />
       </div>
+      <DescriptionMarkdown>
+        {Component.markdown}
+      </DescriptionMarkdown>
       <CodeMarkdown>
         {Component.code}
       </CodeMarkdown>

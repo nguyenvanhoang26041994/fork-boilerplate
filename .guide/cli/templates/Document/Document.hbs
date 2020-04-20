@@ -1,4 +1,5 @@
 import React from 'react';
+import Readme from '@@/.guide/Readme';
 import { Anchor } from '@/rc-neumorphism/core';
 import Codebox from '@@/.guide/Codebox';
 
@@ -6,10 +7,13 @@ import Codebox from '@@/.guide/Codebox';
 import {{this}} from './demo/{{this}}';
 {{/each}}
 
+const README = '';
+
 export default () => {
   return (
     <div className="flex">
       <div className="flex flex-col flex-1">
+        <Readme README={README} />
         {{#each importers}}
          <Codebox className="mb-1" Component={ {{this}} } />
         {{/each}}

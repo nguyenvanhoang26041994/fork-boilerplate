@@ -1,16 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Button } from '@/rc-neumorphism/core';
 
-const Demo = () => {
-  return (
-    <div className="flex">
-      <Button className="mr-2">Basic</Button>
-      <Button pressed className="mr-2">Pressed</Button>
-      <Button disabled className="mr-2">Disabled</Button>
-      <Button rounded className="mr-2">Rounded</Button>
-      <Button circle icon="power" className="mr-2" />
-    </div>
-  );
-};
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
+
+const Demo = () => (
+  <Wrapper>
+    <Button>Basic</Button>
+    <Button rounded>Rounded</Button>
+    <Button circle>C</Button>
+  </Wrapper>
+);
 
 export default Demo;
