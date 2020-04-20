@@ -75,6 +75,7 @@ const leftSidebar = {
       Anchor: {},
       Confirm: {},
       Tooltip: {},
+      Popconfirm: {},
       Popover: {},
       Alert: {},
       Notification: {},
