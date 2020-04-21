@@ -2,6 +2,9 @@ const leftSidebar = {
   Popular: {
     type: 'group',
     items: {
+      Flex: {
+        icon: 'template',
+      },
       Icon: {
         icon: 'apps',
       },
