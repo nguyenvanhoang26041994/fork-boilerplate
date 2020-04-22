@@ -63,19 +63,13 @@ const MenuStyled = styled(Menu)`
     background-color: #0d0c1c;
   }
 
-  .rc-menu-sub-list,
-  .rc-menu-sub-title:hover {
+  .rc-menu-sub-list {
     background-color: #232236;
     color: #fff;
   }
 
   .rc-menu-sub-title:hover {
-    color: #0099ff;
-  }
-
-  .rc-menu-item:hover {
-    color: #fff;
-    background-color: #0099ff;
+    background-color: #232236;
   }
 `;
 
