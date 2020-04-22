@@ -5,7 +5,7 @@ import { okaidia, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import AppContext from '@/AppContext';
 
-require('./Readme.scss');
+require('./Markdown.scss');
 
 const CodeBlock = ({ language, value }) => {
   const { isDark } = useContext(AppContext);
@@ -20,15 +20,15 @@ const CodeBlock = ({ language, value }) => {
   );
 };
 
-const Readme = ({ README }) => {
+const Markdown = ({ md }) => {
   return (
-    <div className="guide-readme">
+    <div className="guide-md">
       <ReactMarkdown
-        source={README}
+        source={md}
         renderers={{ code: CodeBlock }}
       />
     </div>
   );
 };
 
-export default Readme;
+export default Markdown;
