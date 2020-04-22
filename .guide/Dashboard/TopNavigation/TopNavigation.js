@@ -1,20 +1,56 @@
 import React from 'react';
-import cn from 'classnames';
-import { Icon, Badge, Avatar, Popover, Menu } from '@/rc-neumorphism/core';
+import styled from 'styled-components';
+import { Icon, Badge, Avatar, Popover, Menu, Button } from '@/rc-neumorphism/core';
 import DarkModeToggle from '@/containers/DarkModeToggle';
 
-require('./TopNavigation.scss');
+const TopNavContainer = styled.nav`
+  position: sticky;
+  top: 0;
+  height: 5rem;
+  width: 100%;
+  z-index: 10;
+  margin-bottom: 0.5rem;
+`;
+
+const TopNavWrapper = styled.div`
+  z-index: 10;
+  height: 100%;
+`;
+
+const MainTopNav = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: var(--rc-color--500);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+`;
+
+const NavLeft = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const NavRight = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 const TopNavigation = ({ toggleExpand, isExpanded }) => {
   return (
-    <div className={cn('top-navigation-container', { '--expanded': isExpanded })}>
-      <div className={cn('top-navigation-wrapper', { '--expanded': isExpanded })}>
-        <div className={cn('top-navigation', { '--expanded': isExpanded })}>
-          <div className="__left">
-            <Icon name={isExpanded ? 'indent-decrease' : 'indent-increase'} onClick={toggleExpand} />
-            <Icon name="search" className="ml-8" />
-          </div>
-          <div className="__right">
+    <TopNavContainer>
+      <TopNavWrapper>
+        <MainTopNav>
+          <NavLeft>
+            <Button
+              circle
+              glassed
+              icon={isExpanded ? 'indent-decrease' : 'indent-increase'}
+              onClick={toggleExpand}
+            />
+            <Button circle glassed icon="search" className="ml-2" />
+          </NavLeft>
+          <NavRight>
             <Badge count={14} className="mr-8">
               <Icon name="message-circle" fontSize="1.28rem"/>
             </Badge>
@@ -34,10 +70,10 @@ const TopNavigation = ({ toggleExpand, isExpanded }) => {
             >
               <Avatar name="Hoàng Nguyễn" />
             </Popover>
-          </div>
-        </div>
-      </div>
-    </div>
+          </NavRight>
+        </MainTopNav>
+      </TopNavWrapper>
+    </TopNavContainer>
   );
 };
 

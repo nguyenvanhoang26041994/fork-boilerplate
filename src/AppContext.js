@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
 export default createContext({
-  isDark: true,
+  isDark: false,
   setIsDark: f => f,
 });
