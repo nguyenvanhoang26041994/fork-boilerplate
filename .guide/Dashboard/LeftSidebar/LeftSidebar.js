@@ -29,7 +29,8 @@ const LeftSidebarWrapper = styled.div`
 const MainLeftSidebar = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #0d0c1c;
+  background-color: #404e66;
+  color: #fff;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -41,7 +42,7 @@ const MainLeftSidebar = styled.div`
 const TopWrapper = styled.div`
   position: sticky;
   top: 0;
-  background-color: #0d0c1c;
+  background-color: #404e66;
 `;
 
 const LogoWrapper = styled.div`
@@ -50,26 +51,23 @@ const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0d0c1c;
-  color: #fff;
 `;
 
 const MenuStyled = styled(Menu)`
   border-radius: 0;
-  background-color: #0d0c1c;
-  color: #7575a3;
+  background-color: #404e66;
+  color: #fff;
 
   .rc-menu-sub-title {
-    background-color: #0d0c1c;
+    background-color: #404e66;
   }
 
   .rc-menu-sub-list {
-    background-color: #232236;
-    color: #fff;
+    background-color: #353e4e;
   }
 
   .rc-menu-sub-title:hover {
-    background-color: #232236;
+    background-color: #353e4e;
   }
 `;
 
