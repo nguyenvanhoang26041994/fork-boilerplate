@@ -29,7 +29,7 @@ const LeftSidebarWrapper = styled.div`
 const MainLeftSidebar = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #404e66;
+  background-color: #222831;
   color: #fff;
   overflow-x: hidden;
   overflow-y: auto;
@@ -42,7 +42,7 @@ const MainLeftSidebar = styled.div`
 const TopWrapper = styled.div`
   position: sticky;
   top: 0;
-  background-color: #404e66;
+  background-color: #222831;
 `;
 
 const LogoWrapper = styled.div`
@@ -55,19 +55,19 @@ const LogoWrapper = styled.div`
 
 const MenuStyled = styled(Menu)`
   border-radius: 0;
-  background-color: #404e66;
+  background-color: #222831;
   color: #fff;
 
   .rc-menu-sub-title {
-    background-color: #404e66;
+    background-color: #222831;
   }
 
   .rc-menu-sub-list {
-    background-color: #353e4e;
+    background-color: #393e46;
   }
 
   .rc-menu-sub-title:hover {
-    background-color: #353e4e;
+    background-color: #393e46;
   }
 `;
 
