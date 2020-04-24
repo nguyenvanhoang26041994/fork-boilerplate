@@ -1,0 +1,1 @@
+A dots | spinner for displaying loading state of a page or a section.
