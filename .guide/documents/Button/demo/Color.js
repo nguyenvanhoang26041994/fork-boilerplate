@@ -1,13 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Button } from '@/rc-neumorphism/core';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const Demo = () => {
   return (
-    <div className="flex">
-      <Button className="mr-2" color="blueviolet">Blueviolet</Button>
-      <Button className="mr-2" color="orangered">Orangered</Button>
-      <Button className="mr-2" color="green">Green</Button>
-    </div>
+    <Wrapper>
+      <Button color="blueviolet">Blueviolet</Button>
+      <Button color="orangered">Orangered</Button>
+      <Button color="green">Green</Button>
+    </Wrapper>
   );
 };
 

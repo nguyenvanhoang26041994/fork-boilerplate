@@ -20,7 +20,7 @@ const TopNavWrapper = styled.div`
 const MainTopNav = styled.div`
   height: 100%;
   width: 100%;
-  background-color: var(--rc-color--500);
+  background-color: var(--bg);
   display: flex;
   align-items: center;
   justify-content: space-between;

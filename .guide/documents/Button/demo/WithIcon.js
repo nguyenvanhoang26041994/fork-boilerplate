@@ -1,23 +1,33 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Button, Icon } from '@/rc-neumorphism/core';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const Demo = () => {
   return (
-    <div className="flex">
-      <Button className="mr-2">
-        <Icon name="power" className="mr-2" />
+    <Wrapper>
+      <Button icon="power" />
+      <Button>
+        <Icon name="power" />
         <span>Shutdown</span>
       </Button>
-      <Button className="mr-2">
+      <Button>
         <span>Shutdown</span>
-        <Icon name="power" className="ml-2" />
+        <Icon name="power" />
       </Button>
-      <Button className="mr-2">
-        <Icon name="power" className="mr-2" />
+      <Button>
+        <Icon name="power" />
         <span>Shutdown</span>
-        <Icon name="power" className="ml-2" />
+        <Icon name="power" />
       </Button>
-    </div>
+    </Wrapper>
   );
 };
 

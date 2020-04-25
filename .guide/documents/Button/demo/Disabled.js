@@ -13,8 +13,12 @@ const Wrapper = styled.div`
 const Demo = () => {
   return (
     <Wrapper>
-      <Button loading>Basic</Button>
-      <Button loading circle icon="power" />
+      <Button disabled>BASIC</Button>
+      <Button disabled primary>PRIMARY</Button>
+      <Button disabled danger>DANGER</Button>
+      <Button disabled glassed>GLASSED</Button>
+      <Button disabled icon="home" />
+      <Button disabled transparent>BASIC</Button>
     </Wrapper>
   );
 };

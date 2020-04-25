@@ -1,40 +1,35 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import { Button, ButtonGroup } from '@/rc-neumorphism/core';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 1rem;
+  }
+`;
 
 const Demo = () => {
   return (
-    <div>
-      <ButtonGroup className="mb-2">
+    <Wrapper>
+      <ButtonGroup>
         <Button icon="power" />
         <Button icon="message" />
         <Button icon="bell" />
       </ButtonGroup>
-      <ButtonGroup className="mb-2" primary>
+      <ButtonGroup primary>
         <Button icon="power" />
         <Button icon="message" />
         <Button icon="bell" />
       </ButtonGroup>
-      <ButtonGroup className="mb-2" danger>
+      <ButtonGroup glassed>
         <Button icon="power" />
         <Button icon="message" />
         <Button icon="bell" />
       </ButtonGroup>
-      <ButtonGroup className="mb-2" glassed>
-        <Button icon="power" />
-        <Button icon="message" />
-        <Button icon="bell" />
-      </ButtonGroup>
-      <ButtonGroup className="mb-2" color="purple">
-        <Button icon="power" />
-        <Button icon="message" />
-        <Button icon="bell" />
-      </ButtonGroup>
-      <ButtonGroup className="mb-2" size="1.25rem">
-        <Button icon="power" />
-        <Button icon="message" />
-        <Button icon="bell" />
-      </ButtonGroup>
-    </div>
+    </Wrapper>
   );
 };
 

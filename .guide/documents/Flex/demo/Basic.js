@@ -3,31 +3,30 @@ import { Flex } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (
-    <div
-      className='flex w-full flex-col'
-      style={{
-        height: 200
-      }}
-    >
-      <Flex margin={2}>
-        <div className="w-full h-12" style={{ backgroundColor: '#1d8dd8' }} />
+    <Flex col span="full">
+      <Flex
+        style={{
+          backgroundColor: 'var(--primary--500)',
+          height: '5rem',
+        }}
+      />
+      <Flex row>
+        <Flex
+          span="1/3"
+          style={{
+            backgroundColor: 'var(--primary--400)',
+            height: '5rem',
+          }}
+        />
+        <Flex
+          span="2/3"
+          style={{
+            backgroundColor: 'var(--primary--600)',
+            height: '5rem',
+          }}
+        />
       </Flex>
-      <Flex margin={2}>
-        <Flex span="1/2"><div className="w-full h-12" style={{ backgroundColor: '#1d8dd8' }} /></Flex>
-        <Flex span="1/2"><div className="w-full h-12" style={{ backgroundColor: '#0099ff33' }} /></Flex>
-      </Flex>
-      <Flex margin={2}>
-        <Flex span="1/3"><div className="w-full h-12" style={{ backgroundColor: '#1d8dd8' }} /></Flex>
-        <Flex span="1/3"><div className="w-full h-12" style={{ backgroundColor: '#0099ff33' }} /></Flex>
-        <Flex span="1/3"><div className="w-full h-12" style={{ backgroundColor: '#1d8dd8' }} /></Flex>
-      </Flex>
-      <Flex margin={2}>
-        <Flex span="1/4"><div className="w-full h-12" style={{ backgroundColor: '#1d8dd8' }} /></Flex>
-        <Flex span="1/4"><div className="w-full h-12" style={{ backgroundColor: '#0099ff33' }} /></Flex>
-        <Flex span="1/4"><div className="w-full h-12" style={{ backgroundColor: '#1d8dd8' }} /></Flex>
-        <Flex span="1/4"><div className="w-full h-12" style={{ backgroundColor: '#0099ff33' }} /></Flex>
-      </Flex>
-    </div>
+    </Flex>
   );
 };
 
