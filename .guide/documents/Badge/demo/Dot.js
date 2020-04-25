@@ -1,10 +1,14 @@
 import React from 'react';
 import { Badge } from '@/rc-neumorphism/core';
 
-const FancyBox = ({ size }) => (
+const FancyBox = ({ size, circle }) => (
   <div
-    className="neumorphism--500"
-    style={{ height: size, width: size }}
+    style={{
+      height: size,
+      width: size,
+      backgroundColor: 'var(--secondary-bg)',
+      borderRadius: circle ? '100rem' : '0.5rem',
+    }}
   />
 );
 

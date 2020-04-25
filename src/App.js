@@ -6,7 +6,7 @@ import AppContext from './AppContext';
 const Dashboard = loadable(() => import('@@/.guide/Dashboard'));
 
 const App = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const appValue = useMemo(() => ({
     isDark,
     setIsDark,

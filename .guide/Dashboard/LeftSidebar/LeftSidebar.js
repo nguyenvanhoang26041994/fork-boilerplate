@@ -29,7 +29,8 @@ const LeftSidebarWrapper = styled.div`
 const MainLeftSidebar = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #0d0c1c;
+  background-color: var(--bg);
+  color: var(--text-color);
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -41,7 +42,7 @@ const MainLeftSidebar = styled.div`
 const TopWrapper = styled.div`
   position: sticky;
   top: 0;
-  background-color: #0d0c1c;
+  background-color: var(--bg);
 `;
 
 const LogoWrapper = styled.div`
@@ -50,26 +51,24 @@ const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0d0c1c;
-  color: #fff;
 `;
 
 const MenuStyled = styled(Menu)`
   border-radius: 0;
-  background-color: #0d0c1c;
-  color: #7575a3;
 
+  &,
   .rc-menu-sub-title {
-    background-color: #0d0c1c;
+    background-color: var(--bg);
   }
 
   .rc-menu-sub-list {
-    background-color: #232236;
-    color: #fff;
+    background-color: var(--secondary-bg);
   }
 
-  .rc-menu-sub-title:hover {
-    background-color: #232236;
+  .rc-menu-sub-title {
+    &:hover {
+      background-color: var(--secondary-bg);
+    }
   }
 `;
 
@@ -116,7 +115,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
   return (
     <LeftSidebarContainer className={cn({ '--expanded': isExpanded })}>
       <LeftSidebarWrapper className={cn({ '--expanded': isExpanded } )}>
-        <MainLeftSidebar className={cn({ 'common-scrollbar': isExpanded })} {...otherProps}>
+        <MainLeftSidebar className={cn({ 'hide-scrollbar': isExpanded })} {...otherProps}>
           <TopWrapper>
             <LogoWrapper>
               <Icon name="home" size="1.75rem" onClick={() => history.push('/')} />

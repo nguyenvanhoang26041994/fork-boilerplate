@@ -1,13 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Button } from '@/rc-neumorphism/core';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const Demo = () => {
   return (
-    <div className="flex">
-      <Button primary className="mr-2">PRIMARY</Button>
-      <Button danger className="mr-2">DANGER</Button>
-      <Button glassed className="mr-2">GLASSED</Button>
-    </div>
+    <Wrapper>
+      <Button primary>PRIMARY</Button>
+      <Button danger>DANGER</Button>
+      <Button glassed>GLASSED</Button>
+      <Button transparent>TRANSPARENT</Button>
+    </Wrapper>
   );
 };
 

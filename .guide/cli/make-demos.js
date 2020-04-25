@@ -130,8 +130,24 @@ const makeDocument = function(documentName) {
     const config = require(`../documents/${documentName}/config`);
     const configOrder = Object.keys(config);
 
+    const importers = reOrder(demos, configOrder);
+    const importersLeft = []
+    const importersRight = [];
+
+    const count = importers.length;
+
+    for (let i = 0; i < count; i++) {
+      if (i % 2 === 0) {
+        importersLeft.push(importers[i]);
+      } else {
+        importersRight.push(importers[i]);
+      }
+    }
+
     let injectStr = Handlebars.compile(DocumentTemplate)({
-      importers: reOrder(demos, configOrder)
+      importers: importers,
+      importersLeft: importersLeft,
+      importersRight: importersRight,
     });
 
     const README = injectREADME(documentName);

@@ -12,15 +12,26 @@ const API = '';
 
 export default () => {
   return (
-    <div className="flex">
-      <div className="flex flex-col flex-1">
-        <Markdown md={README} />
-        {{#each importers}}
-         <Codebox className="mb-1" Component={ {{this}} } />
+    <div className="flex flex-wrap">
+      <div className="flex flex-col w-1/2">
+        {{!-- <Markdown md={README} /> --}}
+        {{#each importersLeft}}
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ {{this}} } />
+        </div>
         {{/each}}
-        <Markdown md={API} />
+        {{!-- <Markdown md={API} /> --}}
       </div>
-      <div className="pl-1" style={ { flexBasis: '200px' } }>
+      <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
+        {{!-- <Markdown md={README} /> --}}
+        {{#each importersRight}}
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ {{this}} } />
+        </div>
+        {{/each}}
+        {{!-- <Markdown md={API} /> --}}
+      </div>
+      {{!-- <div className="pl-1" style={ { flexBasis: '200px' } }>
         <Anchor
           top={69}
           style={ {
@@ -32,7 +43,7 @@ export default () => {
            <Anchor.Link key={`#${ {{this}}.href}` } title={ {{this}}.anchorTitle } />
           {{/each}}
         </Anchor>
-      </div>
+      </div> --}}
     </div>
   );
 };
