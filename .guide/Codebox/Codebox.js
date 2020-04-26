@@ -3,7 +3,7 @@ import cn from 'classnames';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
-import { Icon, Button } from '@/rc-neumorphism/core';
+import { Icon, Typo } from '@/rc-neumorphism/core';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -78,6 +78,7 @@ const CodeboxWrapper = styled.div`
 `;
 
 const CodeboxHeader = styled.h2`
+  font-size: 1em;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -97,7 +98,17 @@ const Codebox = ({ className, Component }) => {
     <CodeboxWrapper className={className} id={Component.href}>
       <CodeboxHeader>
         {Component.header}
-        <Icon className="__code" glassed name="code" onClick={toggleShowCode} />
+        <div>
+          <Icon
+            className="__code mr-3"
+            glassed name="code"
+            onClick={toggleShowCode}
+          />
+          <Icon
+            className="__option"
+            glassed name="dots-vertical"
+          />
+        </div>
       </CodeboxHeader>
       <CodeboxDemo>
         <Component />
