@@ -14,7 +14,7 @@ const leftSidebar = {
       Button: {
         icon: 'mouse',
       },
-      LazyImage: {
+      Image: {
         icon: 'photo',
       },
       Form: {
