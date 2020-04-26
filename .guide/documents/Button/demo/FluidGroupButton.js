@@ -3,7 +3,7 @@ import { Button, ButtonGroup } from '@/rc-neumorphism/core';
 
 const Demo = () => {
   return (
-    <ButtonGroup className="mr-2" fluid>
+    <ButtonGroup fluid>
       <Button icon="power" />
       <Button icon="message" />
       <Button icon="bell" />

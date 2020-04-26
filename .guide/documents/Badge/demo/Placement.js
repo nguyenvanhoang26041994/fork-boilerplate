@@ -12,13 +12,14 @@ const FancyBox = ({
 }) => (
   <div
     className={cn(
-      'neumorphism--500 flex items-center justify-center',
+      'flex items-center justify-center',
       className,
     )}
     style={{
       height: size,
       width: size,
       visibility: hidden ? 'hidden' : null,
+      backgroundColor: 'var(--secondary-bg)',
       ...style
     }}
   >

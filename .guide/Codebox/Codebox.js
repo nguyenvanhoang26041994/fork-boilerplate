@@ -1,11 +1,13 @@
-import React, { useMemo, useContext } from 'react';
+import React, { useMemo, useContext, useState, useCallback } from 'react';
 import cn from 'classnames';
+import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
+
+import { Icon, Button } from '@/rc-neumorphism/core';
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import AppContext from '@/AppContext';
-
-require('./Codebox.scss');
 
 const CodeBlock = ({ language, value }) => {
   const { isDark } = useContext(AppContext);
@@ -20,16 +22,32 @@ const CodeBlock = ({ language, value }) => {
   );
 };
 
-const CodeMarkdown = ({ children }) => {
+const CodeMarkdownWrapper = styled.div`
+  display: ${props => props.show ? 'block' : 'none'};
+
+  > pre {
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background-color: var(--bg) !important;
+    padding: 1em !important;
+
+    .token,
+    .token.arrow {
+      background-color: transparent !important;
+    }
+  }
+`;
+
+const CodeMarkdown = ({ show, children }) => {
   const source = useMemo(() => `\`\`\`jsx\n${children}\n\`\`\``, [children]);
 
   return (
-    <div className="code-box-code">
+    <CodeMarkdownWrapper className="code-box-code" show={show}>
       <ReactMarkdown
         source={source}
         renderers={{ code: CodeBlock }}
       />
-    </div>
+    </CodeMarkdownWrapper>
   );
 };
 
@@ -43,20 +61,54 @@ const DescriptionMarkdown = ({ children }) => {
   );
 };
 
+const CodeboxWrapper = styled.div`
+  width: 100%;
+  background-color: var(--bg);
+
+  .__code {
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  &:hover {
+    .__code {
+      opacity: 1;
+    }
+  }
+`;
+
+const CodeboxHeader = styled.h2`
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const CodeboxDemo = styled.div`
+    display: flex;
+    padding: 2rem 1rem;
+`;
+
 const Codebox = ({ className, Component }) => {
+  const [showCode, setShowCode] = useState(true);
+  const toggleShowCode = useCallback(() => setShowCode(prev => !prev), [setShowCode]);
+
   return (
-    <div className={cn('code-box', className)} id={Component.href}>
-      <h2 className="code-box-header">{Component.header}</h2>
-      <div className="code-box-demo">
+    <CodeboxWrapper className={className} id={Component.href}>
+      <CodeboxHeader>
+        {Component.header}
+        <Icon className="__code" glassed name="code" onClick={toggleShowCode} />
+      </CodeboxHeader>
+      <CodeboxDemo>
         <Component />
-      </div>
-      <DescriptionMarkdown>
+      </CodeboxDemo>
+      {/* <DescriptionMarkdown>
         {Component.markdown}
-      </DescriptionMarkdown>
-      <CodeMarkdown>
+      </DescriptionMarkdown> */}
+      <CodeMarkdown show={showCode}>
         {Component.code}
       </CodeMarkdown>
-    </div>
+    </CodeboxWrapper>
   );
 };
 
