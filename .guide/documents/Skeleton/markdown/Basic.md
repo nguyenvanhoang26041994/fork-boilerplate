@@ -1,0 +1,1 @@
+Skeleton shape is dynamic and depends on your passed props.

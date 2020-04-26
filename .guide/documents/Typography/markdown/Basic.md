@@ -1,0 +1,1 @@
+Provide consistently text, include heading, paragraph, span and more.
