@@ -7,12 +7,6 @@ const formSkeleton = (
     <Skeleton rect h="3rem" />
     <Skeleton p w="20%" />
     <Skeleton rect h="3rem" />
-    <Skeleton p w="40%" />
-    <Skeleton rect h="3rem" />
-    <Skeleton p w="15%" />
-    <Skeleton rect h="3rem" />
-    <Skeleton p w="30%" />
-    <Skeleton rect h="10rem" />
     <Skeleton rect w="5rem" h="2.5rem" />
   </div>
 );
@@ -52,25 +46,6 @@ const Demo = () => {
           label="Password"
           placeholder="Your password"
           name="password"
-        />
-        <Form.Select
-          label="Sex"
-          placeholder="Your gender"
-          name="password"
-        >
-          <Select.Option key="male" title="Male" icon="message" />
-          <Select.Option key="female" title="Female" icon="power" />
-          <Select.Option key="other" title="Other" icon="copy" />
-        </Form.Select>
-        <Form.InputNumber
-          label="Age"
-          placeholder="Your age"
-          name="age"
-        />
-        <Form.Textarea
-          label="Comment"
-          placeholder="Comment here"
-          name="message"
         />
         <Button onClick={handleSubmit}>Submit</Button>
       </Form>

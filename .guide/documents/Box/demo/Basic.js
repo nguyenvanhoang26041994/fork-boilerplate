@@ -37,25 +37,6 @@ const Demo = () => {
           placeholder="Your password"
           name="password"
         />
-        <Form.Select
-          label="Sex"
-          placeholder="Your gender"
-          name="password"
-        >
-          <Select.Option key="male" title="Male" icon="message" />
-          <Select.Option key="female" title="Female" icon="power" />
-          <Select.Option key="other" title="Other" icon="copy" />
-        </Form.Select>
-        <Form.InputNumber
-          label="Age"
-          placeholder="Your age"
-          name="age"
-        />
-        <Form.Textarea
-          label="Comment"
-          placeholder="Comment here"
-          name="message"
-        />
         <Button onClick={handleSubmit}>Submit</Button>
       </Form>
     </Box>
