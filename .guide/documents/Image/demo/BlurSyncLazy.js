@@ -4,7 +4,8 @@ import { Image } from '@/rc-neumorphism/core';
 const Demo = () => (
   <Image
     lazyload
-    src="https://c4.wallpaperflare.com/wallpaper/629/410/568/5c1f9ff278d88-wallpaper-preview.jpg"
+    blur
+    src="https://www.100hdwallpapers.com/wallpapers/3840x2160/ferrari_sf90_stradale_2019_4k_1-hd_wallpapers.jpg"
     alt="lazyload image"
     w="100%"
     h="600px"
