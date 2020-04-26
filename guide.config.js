@@ -14,6 +14,9 @@ const leftSidebar = {
       Button: {
         icon: 'mouse',
       },
+      Image: {
+        icon: 'photo',
+      },
       Form: {
         icon: 'box',
       },
