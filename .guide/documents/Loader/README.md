@@ -1,6 +1,6 @@
 # Loader
 
-## Dot
+## Dots
 
 Default
 - `color` - primary

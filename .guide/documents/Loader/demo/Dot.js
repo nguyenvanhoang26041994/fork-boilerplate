@@ -4,9 +4,9 @@ import { Loader } from '@/rc-neumorphism/core';
 const Demo = () => {
   return (
     <div className="flex">
-      <Loader.Dot className="mr-10" />
-      <Loader.Dot color="red" className="mr-10" />
-      <Loader.Dot size="2rem" />
+      <Loader.Dots className="mr-10" />
+      <Loader.Dots color="red" className="mr-10" />
+      <Loader.Dots size="2rem" />
     </div>
   );
 };
