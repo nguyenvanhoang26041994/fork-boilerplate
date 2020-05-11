@@ -85,6 +85,7 @@ const leftSidebar = {
       Popover: {},
       Alert: {},
       Notification: {},
+      SpeedDial: {},
     },
   },
 };
