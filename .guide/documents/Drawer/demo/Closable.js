@@ -12,11 +12,13 @@ const Demo = () => {
       <Drawer
         open={open}
         onClose={onClose}
-        title="Drawer Title"
         className="w-1/3"
         closable={false}
       >
-        <Button onClick={onClose}>Close</Button>
+        <Drawer.Header closable={false}>Drawer Title</Drawer.Header>
+        <Drawer.Body>
+          <Button onClick={onClose}>Close</Button>
+        </Drawer.Body>
       </Drawer>
       <Button onClick={onOpen}>Open Drawer</Button>
     </div>

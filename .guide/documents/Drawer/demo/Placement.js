@@ -13,10 +13,10 @@ const Demo = () => {
         open={open}
         left
         onClose={onClose}
-        title="Drawer Title"
         className="w-1/3"
       >
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        <Drawer.Header>Drawer Title</Drawer.Header>
+        <Drawer.Body>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Drawer.Body>
       </Drawer>
       <Button onClick={onOpen}>Open Drawer</Button>
     </div>

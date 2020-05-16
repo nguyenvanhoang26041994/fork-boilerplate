@@ -9,13 +9,11 @@ const Demo = () => {
 
   return (
     <div className="flex">
-      <Modal
-        open={open}
-        onClose={onClose}
-        title="Modal Title"
-        className="w-1/2"
-      >
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      <Modal open={open} onClose={onClose} className="w-1/2">
+        <Modal.Header>Modal Title</Modal.Header>
+        <Modal.Body>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </Modal.Body>
       </Modal>
       <Button onClick={onOpen}>Open Modal</Button>
     </div>

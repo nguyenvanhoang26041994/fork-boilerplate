@@ -8,8 +8,8 @@ const TopNavContainer = styled.nav`
   top: 0;
   height: 5rem;
   width: 100%;
-  z-index: 10;
-  margin-bottom: 0.5rem;
+  z-index: 1;
+  margin-bottom: 1px;
 `;
 
 const TopNavWrapper = styled.div`

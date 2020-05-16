@@ -23,7 +23,7 @@ const {{this.key}}Document = loadable(() => import('../_documents/{{this.key}}')
 {{/each}}
 
 const Dashboard = ({}) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = useCallback(() => setIsExpanded(prev => !prev), []);
 
   const location = useLocation();
@@ -37,7 +37,7 @@ const Dashboard = ({}) => {
       <LeftSidebar isExpanded={isExpanded} />
       <div className="flex-1 flex flex-col">
         <TopNavigation toggleExpand={toggleExpand} isExpanded={isExpanded} />
-        <Breadcrumb className="mb-3">
+        <Breadcrumb style={ { marginBottom: '1px' } }>
           {breadcrumb.map(props => (
             <Breadcrumb.Item
               key={props.key}

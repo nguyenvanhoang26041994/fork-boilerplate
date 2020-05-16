@@ -16,9 +16,12 @@ const Demo = () => {
       <Button disabled>BASIC</Button>
       <Button disabled primary>PRIMARY</Button>
       <Button disabled danger>DANGER</Button>
+      <Button disabled outlined color="green">Green</Button>
+      <Button disabled outlined primary>PRIMARY</Button>
       <Button disabled glassed>GLASSED</Button>
       <Button disabled icon="home" />
       <Button disabled transparent>BASIC</Button>
+      
     </Wrapper>
   );
 };

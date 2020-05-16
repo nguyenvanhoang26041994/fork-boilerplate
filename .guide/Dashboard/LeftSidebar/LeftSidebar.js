@@ -6,11 +6,11 @@ import { Icon, Menu } from '@/rc-neumorphism/core';
 import { mapRouter, mapMenuItem } from '../../map-config';
 
 const LeftSidebarContainer = styled.div`
-  width: 5.5rem;
+  width: calc(5rem + 1px);
   height: 100vh;
 
   &.--expanded {
-    width: 20.5rem;
+    width: calc(20rem + 1px);
   }
 `;
 
@@ -43,6 +43,7 @@ const TopWrapper = styled.div`
   position: sticky;
   top: 0;
   background-color: var(--bg);
+  z-index: 1;
 `;
 
 const LogoWrapper = styled.div`
@@ -114,7 +115,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
 
   return (
     <LeftSidebarContainer className={cn({ '--expanded': isExpanded })}>
-      <LeftSidebarWrapper className={cn({ '--expanded': isExpanded } )}>
+      <LeftSidebarWrapper className={cn('dark-mode', { '--expanded': isExpanded } )}>
         <MainLeftSidebar className={cn({ 'hide-scrollbar': isExpanded })} {...otherProps}>
           <TopWrapper>
             <LogoWrapper>
