@@ -37,7 +37,7 @@ const Dashboard = ({}) => {
       <LeftSidebar isExpanded={isExpanded} />
       <div className="flex-1 flex flex-col">
         <TopNavigation toggleExpand={toggleExpand} isExpanded={isExpanded} />
-        <Breadcrumb style={ { marginBottom: '1px' } }>
+        {{!-- <Breadcrumb className="m-1">
           {breadcrumb.map(props => (
             <Breadcrumb.Item
               key={props.key}
@@ -45,8 +45,8 @@ const Dashboard = ({}) => {
               href={props._href}
             />
           ))}
-        </Breadcrumb>
-        <div className="flex">
+        </Breadcrumb> --}}
+        <div className="flex m-1">
           <div className="flex-1">
             <Switch>
               {{#each importers}}

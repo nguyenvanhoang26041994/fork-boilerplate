@@ -6,11 +6,11 @@ import { Icon, Menu } from '@/rc-neumorphism/core';
 import { mapRouter, mapMenuItem } from '../../map-config';
 
 const LeftSidebarContainer = styled.div`
-  width: calc(5rem + 1px);
+  width: 5rem;
   height: 100vh;
 
   &.--expanded {
-    width: calc(20rem + 1px);
+    width: 20rem;
   }
 `;
 

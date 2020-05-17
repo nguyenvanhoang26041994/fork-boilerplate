@@ -8,8 +8,7 @@ const TopNavContainer = styled.nav`
   top: 0;
   height: 5rem;
   width: 100%;
-  z-index: 1;
-  margin-bottom: 1px;
+  z-index: 10;
 `;
 
 const TopNavWrapper = styled.div`
@@ -38,7 +37,7 @@ const NavRight = styled.div`
 
 const TopNavigation = ({ toggleExpand, isExpanded }) => {
   return (
-    <TopNavContainer>
+    <TopNavContainer className="dark-mode">
       <TopNavWrapper>
         <MainTopNav>
           <NavLeft>

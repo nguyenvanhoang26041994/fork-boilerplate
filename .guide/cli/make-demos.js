@@ -133,20 +133,28 @@ const makeDocument = function(documentName) {
     const importers = reOrder(demos, configOrder);
     const importersLeft = []
     const importersRight = [];
+    const importersMiddle = [];
 
     const count = importers.length;
 
     for (let i = 0; i < count; i++) {
-      if (i % 2 === 0) {
+      const _i = i + 1;
+      if (_i - (3 * Math.floor(_i / 3)) === 1) {
         importersLeft.push(importers[i]);
-      } else {
-        importersRight.push(importers[i]);
+        continue;
       }
+      if (_i - (2 * Math.floor(_i / 2)) === 1) {
+        importersMiddle.push(importers[i]);
+        continue;
+      }
+
+      importersRight.push(importers[i]);
     }
 
     let injectStr = Handlebars.compile(DocumentTemplate)({
       importers: importers,
       importersLeft: importersLeft,
+      importersMiddle: importersMiddle,
       importersRight: importersRight,
     });
 

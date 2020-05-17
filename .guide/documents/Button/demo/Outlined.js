@@ -18,8 +18,6 @@ const Demo = () => {
       <Button outlined color="green">Green</Button>
       <Button outlined primary>PRIMARY</Button>
       <Button outlined danger>DANGER</Button>
-      <Button outlined glassed>GLASSED</Button>
-      <Button outlined transparent>TRANSPARENT</Button>
     </Wrapper>
   );
 };
