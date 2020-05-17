@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
+import styled from 'styled-components';
 import { Switch } from '@/rc-neumorphism/core';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const Demo = () => {
   const [checked, setChecked] = useState(false);
+  const onChange = useCallback(e => setChecked(e.target.checked));
 
   return (
-    <div className="flex">
-      <Switch checked={checked} className="mr-5" onChange={e => setChecked(e.target.checked)} />
-      <Switch checked={checked} className="mr-5" onChange={e => setChecked(e.target.checked)} />
-    </div>
+    <Wrapper>
+      <Switch checked={checked} onChange={onChange} />
+      <Switch checked={checked} onChange={onChange} />
+    </Wrapper>
   );
 };
 

@@ -7,7 +7,7 @@ const Demo = () => {
       <Tooltip title="tooltip title">
         <Button className="mr-2">Hover</Button>
       </Tooltip>
-      <Tooltip title="tooltip title" trigger={['click']}>
+      <Tooltip title="tooltip title" trigger="click">
         <Button className="mr-2">Click</Button>
       </Tooltip>
     </div>
