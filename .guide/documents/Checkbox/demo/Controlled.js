@@ -1,22 +1,30 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+
 import { Checkbox } from '@/rc-neumorphism/core';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const Demo = () => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <div className="flex">
+    <Wrapper>
       <Checkbox
         checked={checked}
-        className="mr-5"
         onChange={e => setChecked(e.target.checked)}
       />
       <Checkbox
         checked={checked}
-        className="mr-5"
         onChange={e => setChecked(e.target.checked)}
       />
-    </div>
+    </Wrapper>
   );
 };
 

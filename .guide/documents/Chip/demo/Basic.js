@@ -1,25 +1,32 @@
 import React  from 'react';
+import styled from 'styled-components';
+
 import { Chip } from '@/rc-neumorphism/core';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const Demo = () => {
   return (
-    <div className="flex">
+    <Wrapper>
       <Chip
-        className="mr-2"
         label="Hoàng Nguyễn"
         onClick={() => console.log('Hoàng Nguyễn')}
       />
       <Chip
-        className="mr-2"
         label="Sơn Lê"
         onClick={() => console.log('Sơn Lê')}
       />
       <Chip
-        className="mr-2"
         label="Owner"
         onClick={() => console.log('Owner')}
       />
-    </div>
+    </Wrapper>
   );
 };
 

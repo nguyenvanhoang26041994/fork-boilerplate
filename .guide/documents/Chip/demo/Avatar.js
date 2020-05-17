@@ -1,24 +1,32 @@
 import React  from 'react';
+import styled from 'styled-components';
+
 import { Chip, Avatar } from '@/rc-neumorphism/core';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const avatarLink = '';
 
 const Demo = () => {
   return (
-    <div className="flex">
+    <Wrapper>
       <Chip
         avatar={<Avatar src={avatarLink} name="Hoàng Nguyễn" />}
-        className="mr-2"
         label="Hoàng Nguyễn"
         onClick={() => console.log('Hoàng Nguyễn')}
       />
       <Chip
         avatar={<Avatar name="Sơn Lê" />}
-        className="mr-2"
         label="Sơn Lê"
         onClick={() => console.log('Sơn Lê')}
       />
-    </div>
+    </Wrapper>
   );
 };
 

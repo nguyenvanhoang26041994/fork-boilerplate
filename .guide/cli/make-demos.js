@@ -137,18 +137,10 @@ const makeDocument = function(documentName) {
 
     const count = importers.length;
 
-    for (let i = 0; i < count; i++) {
-      const _i = i + 1;
-      if (_i - (3 * Math.floor(_i / 3)) === 1) {
-        importersLeft.push(importers[i]);
-        continue;
-      }
-      if (_i - (2 * Math.floor(_i / 2)) === 1) {
-        importersMiddle.push(importers[i]);
-        continue;
-      }
-
-      importersRight.push(importers[i]);
+    for (let i = 0; i < count; i+= 3) {
+      importersLeft.push(importers[i]);
+      count > i + 1 && importersMiddle.push(importers[i + 1]);
+      count > i + 2 && importersRight.push(importers[i + 2]);
     }
 
     let injectStr = Handlebars.compile(DocumentTemplate)({
