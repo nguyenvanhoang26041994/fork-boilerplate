@@ -37,7 +37,7 @@ const NavRight = styled.div`
 
 const TopNavigation = ({ toggleExpand, isExpanded }) => {
   return (
-    <TopNavContainer className="dark-mode">
+    <TopNavContainer>
       <TopNavWrapper>
         <MainTopNav>
           <NavLeft>
