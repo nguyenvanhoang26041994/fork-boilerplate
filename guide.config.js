@@ -2,6 +2,9 @@ const leftSidebar = {
   Popular: {
     type: 'group',
     items: {
+      QueryBuilder: {
+        icon: 'template',
+      },
       Flex: {
         icon: 'template',
       },

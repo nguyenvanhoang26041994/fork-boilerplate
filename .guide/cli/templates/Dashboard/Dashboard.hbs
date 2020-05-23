@@ -3,6 +3,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 
 import LeftSidebar from './LeftSidebar';
 import TopNavigation from './TopNavigation';
+import SystemUI from '../../src/SystemUI';
 import loadable from '@/utils/loadable';
 import { Breadcrumb, Icon, Loader, ScrollUp } from '@/rc-neumorphism/core';
 import { mapBreadcrumb } from '../map-config';
@@ -52,6 +53,7 @@ const Dashboard = ({}) => {
               {{#each importers}}
               <Route path="/document/{{this.keyLowerCase}}" component={ {{this.key}}Document } />
               {{/each}}
+              <Route path="/" component={SystemUI} />
             </Switch>
           </div>
         </div>

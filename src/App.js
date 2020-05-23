@@ -8,9 +8,10 @@ import loadable from './utils/loadable';
 import AppContext from './AppContext';
 
 const Dashboard = loadable(() => import('@@/.guide/Dashboard'));
+const SystemUI = loadable(() => import('./SystemUI'));
 
 const App = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const appValue = useMemo(() => ({
     isDark,
     setIsDark,

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icon, Badge, Avatar, Popover, Menu, Button } from '@/rc-neumorphism/core';
+import { Icon, Badge, Avatar, Popover, Menu, Button, QueryBuilder } from '@/rc-neumorphism/core';
 import DarkModeToggle from '@/containers/DarkModeToggle';
 
 const TopNavContainer = styled.nav`
