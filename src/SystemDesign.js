@@ -96,23 +96,25 @@ const Section = ({ ...otherProps }) => {
 };
 
 const Loren = () => (
-  <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full">
-    <Flex items="center" className="mb-5">
-      <Badge
-        dot
-        overlap
-        color="#0df316"
-        bottomRight
-      >
-        <Avatar name="Hoang Nguyen" size="1.5rem" />
-      </Badge>
-      <Flex col className="ml-2 flex-1">
-        <Skeleton p  w="70%" />
-        <Skeleton p  w="20%" />
+  <div className="w-full">
+    <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full">
+      <Flex items="center" className="mb-5">
+        <Badge
+          dot
+          overlap
+          color="#0df316"
+          bottomRight
+        >
+          <Avatar name="Hoang Nguyen" size="1.5rem" />
+        </Badge>
+        <Flex col className="ml-2 flex-1">
+          <Skeleton p  w="70%" />
+          <Skeleton p  w="20%" />
+        </Flex>
       </Flex>
+      <Skeleton rect w="100%" h="200px" />
     </Flex>
-    <Skeleton rect w="100%" h="200px" />
-  </Flex>
+  </div>
 );
 
 const Boxer = styled.div`
@@ -291,7 +293,7 @@ export default () => {
           </Timeline>
           </div>
         </Section>
-        <Section className="--space-5 w-full">
+        <Section className="w-full">
           <Carousel>
             {listProduct.map(id => (
               <Carousel.Item key={id}>
