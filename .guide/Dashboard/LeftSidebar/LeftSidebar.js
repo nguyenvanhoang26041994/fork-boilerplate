@@ -115,7 +115,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
 
   return (
     <LeftSidebarContainer className={cn({ '--expanded': isExpanded })}>
-      <LeftSidebarWrapper className={cn('dark-mode', { '--expanded': isExpanded } )}>
+      <LeftSidebarWrapper className={cn({ '--expanded': isExpanded })}>
         <MainLeftSidebar className={cn({ 'hide-scrollbar': isExpanded })} {...otherProps}>
           <TopWrapper>
             <LogoWrapper>

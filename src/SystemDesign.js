@@ -36,6 +36,7 @@ import {
   Breadcrumb,
   Carousel,
   Typo,
+  Calendar,
 } from './rc-neumorphism/core';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -431,6 +432,11 @@ export default () => {
             <Breadcrumb.Item title={<div className="flex items-center"><Icon name="apps" className="mr-2" /><span>Application</span></div>} />
             <Breadcrumb.Item title={<div className="flex items-center"><Icon name="send" className="mr-2" /><span>Button</span></div>} />
           </Breadcrumb>
+        </Section>
+        <Section style={{ paddingTop: '10px', paddingBottom: '30px' }}>
+          <div>
+            <Calendar />
+          </div>
         </Section>
         <Section col className="--col --space-5" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
           <Textbox placeholder="The placeholder" defaultValue="hoang.nguyen@notexsist.com" />
