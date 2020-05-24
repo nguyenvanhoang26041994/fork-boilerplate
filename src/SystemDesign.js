@@ -37,6 +37,7 @@ import {
   Carousel,
   Typo,
   Calendar,
+  DatePicker,
 } from './rc-neumorphism/core';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -435,7 +436,7 @@ export default () => {
         </Section>
         <Section style={{ paddingTop: '10px', paddingBottom: '30px' }}>
           <div>
-            <Calendar />
+            <DatePicker.SingleCalendar />
           </div>
         </Section>
         <Section col className="--col --space-5" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
