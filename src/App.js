@@ -8,7 +8,7 @@ import loadable from './utils/loadable';
 import AppContext from './AppContext';
 
 const Dashboard = loadable(() => import('@@/.guide/Dashboard'));
-const SystemUI = loadable(() => import('./SystemUI'));
+const SystemDesign = loadable(() => import('./SystemDesign'));
 
 const App = () => {
   const [isDark, setIsDark] = useState(true);

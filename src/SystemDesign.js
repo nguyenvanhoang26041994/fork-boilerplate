@@ -111,7 +111,7 @@ const Loren = () => (
         <Skeleton p  w="20%" />
       </Flex>
     </Flex>
-    <Skeleton rect w="100%" h="100px" />
+    <Skeleton rect w="100%" h="200px" />
   </Flex>
 );
 
@@ -162,7 +162,7 @@ const ReactTab = () => {
             <Skeleton p  w="20%" />
           </Flex>
         </Flex>
-        <Skeleton rect w="100%" h="100px" />
+        <Skeleton rect w="100%" h="200px" />
       </Flex>
     )
   }
@@ -216,7 +216,7 @@ export default () => {
               <Skeleton p  w="20%" />
             </Flex>
           </Flex>
-          <Skeleton rect w="100%" h="100px" />
+          <Skeleton rect w="100%" h="200px" />
         </Section>
         <Section style={{ paddingTop: '30px', paddingBottom: '30px' }}>
           <Tabs>
@@ -294,11 +294,9 @@ export default () => {
         <Section className="--space-5 w-full">
           <Carousel>
             {listProduct.map(id => (
-              <Carousel.Item key={id} style={{ borderRadius: '0.5rem' }}>
+              <Carousel.Item key={id}>
                 <Flex col items="center" justify="center"
                   style={{
-                    borderRadius: '1rem',
-                    height: '20rem',
                     minWidth: '16rem',
                   }}
                 >
@@ -311,7 +309,7 @@ export default () => {
         <Section col style={{ paddingTop: '30px', paddingBottom: '30px' }}>
           <Divider left dashed title={<Icon name="power" />} />
           <Divider left title="LEFT TITLE" />
-          <Divider right dashed title={<Icon name="copy" />} />
+          <Divider center dashed title={<Icon name="copy" />} />
           <Divider
             right
             dashed
@@ -374,7 +372,12 @@ export default () => {
           </Flex>
         </Section>
         <Section className="--space-10" style={{ paddingTop: '10px', paddingBottom: '30px' }}>
-          <Slider defaultValue={80} className="w-full" />
+          <Loader.Dots />
+          <Loader.Dots wave />
+          <Loader.Spinner />
+          <div class="flex-1">
+            <Slider defaultValue={80} className="w-full" />
+          </div>
         </Section>
         <Section className="--space-10" style={{ paddingTop: '30px', paddingBottom: '10px' }}>
           <Pagination
@@ -384,9 +387,6 @@ export default () => {
             max={10}
             onChange={onChange}
           />
-          <Loader.Dots />
-          <Loader.Dots wave />
-          <Loader.Spinner />
         </Section>
         <Section className="--space-5" style={{ paddingTop: '10px', paddingBottom: '10px' }} items="center">
           <Avatar name="Hoang Nguyen" />
@@ -492,7 +492,7 @@ export default () => {
                   <Skeleton p  w="20%" />
                 </Flex>
               </Flex>
-              <Skeleton rect w="100%" h="100px" />
+              <Skeleton rect w="100%" h="200px" />
             </Flex>
             </div>
         </Section>
@@ -508,7 +508,7 @@ export default () => {
                     <Skeleton p  w="20%" />
                   </Flex>
                 </Flex>
-                <Skeleton rect w="100%" h="100px" />
+                <Skeleton rect w="100%" h="200px" />
               </Flex>
             </Dialog.Body>
             <Dialog.Footer className="flex justify-end">
