@@ -89,6 +89,12 @@ const SectionWrapper = styled(Flex)`
       margin-bottom: 1em;
     }
   }
+
+  &.--space-20 {
+    > * {
+      margin-right: 3em;
+    }
+  }
 `;
 
 const Section = ({ ...otherProps }) => {
@@ -434,9 +440,12 @@ export default () => {
             <Breadcrumb.Item title={<div className="flex items-center"><Icon name="send" className="mr-2" /><span>Button</span></div>} />
           </Breadcrumb>
         </Section>
-        <Section style={{ paddingTop: '10px', paddingBottom: '30px' }}>
+        <Section className="--space-10" style={{ paddingTop: '10px', paddingBottom: '30px' }}>
           <div>
             <DatePicker.SingleCalendar />
+          </div>
+          <div>
+            <DatePicker.RangeCalendar />
           </div>
         </Section>
         <Section col className="--col --space-5" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
