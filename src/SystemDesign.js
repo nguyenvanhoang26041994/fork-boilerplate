@@ -448,6 +448,11 @@ export default () => {
             <DatePicker.RangeCalendar />
           </div>
         </Section>
+        <Section className="--space-10" style={{ paddingTop: '10px', paddingBottom: '30px' }}>
+          <div>
+            <DatePicker.CoupleCalendar />
+          </div>
+        </Section>
         <Section col className="--col --space-5" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
           <Textbox placeholder="The placeholder" defaultValue="hoang.nguyen@notexsist.com" />
           <Password placeholder="The placeholder" defaultValue="123456789" />
