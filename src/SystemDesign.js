@@ -38,7 +38,7 @@ import {
   Typo,
   Calendar,
   DatePicker,
-} from './rc-neumorphism/core';
+} from './fork-ui/core';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '@/rc-neumorphism/core';
+import { Avatar } from '@/fork-ui/core';
 
 const avatarLink = '';
 

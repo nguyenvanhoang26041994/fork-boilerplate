@@ -5,7 +5,7 @@ const readFolder = require('./utils/read-folder');
 const readFile = require('./utils/read-file');
 const makeFile = require('./utils/make-file');
 
-const rcNeumorphismRoot = path.resolve('rc-neumorphism');
+const rcNeumorphismRoot = path.resolve('fork-ui');
 const TablerIconTemplate = readFile(path.join(__dirname, '/templates/Icon/svg/tabler-icon.hbs'));
 const IndexTemplate = readFile(path.join(__dirname, '/templates/Icon/svg/index.hbs'));
 

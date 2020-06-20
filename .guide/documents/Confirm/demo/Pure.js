@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { PureConfirm } from '@/rc-neumorphism/core';
+import { PureConfirm } from '@/fork-ui/core';
 
 const Demo = () => {
   const onCancel = useCallback(() => console.log('CANCEL'), []);

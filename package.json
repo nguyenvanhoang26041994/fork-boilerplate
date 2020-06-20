@@ -1,5 +1,5 @@
 {
-  "name": "rc-neumorphism",
+  "name": "fork-boilerplate",
   "version": "1.0.3",
   "description": "",
   "main": "index.js",
@@ -16,27 +16,27 @@
     "deploy": "yarn build && now --prod",
     "make-icons": "node .guide/cli/make-icons",
     "guide": "node .guide/cli/make-guide",
-    "build-neu-scss": "node-sass rc-neumorphism/src --output rc-neumorphism/lib",
-    "build-neu-js": "babel --config-file rc-neumorphism/babel.config.js --out-dir rc-neumorphism/lib rc-neumorphism/src --verbose",
-    "build-neu": "yarn rimraf \"rc-neumorphism/lib\" && yarn build-neu-js && yarn build-neu-scss",
-    "neu:lint": "eslint --config ./rc-neumorphism/.eslintrc ./rc-neumorphism/src"
+    "build-fork-scss": "node-sass fork-ui/src --output fork-ui/lib",
+    "build-fork-js": "babel --config-file fork-ui/babel.config.js --out-dir fork-ui/lib fork-ui/src --verbose",
+    "build-fork": "yarn rimraf \"fork-ui/lib\" && yarn build-fork-js && yarn build-fork-scss",
+    "fork:lint": "eslint --config ./fork-ui/.eslintrc ./fork-ui/src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nguyenvanhoang26041994/rc-neumorphism.git"
+    "url": "git+https://github.com/nguyenvanhoang26041994/fork-boilerplate.git"
   },
   "author": "Hoang Nguyen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nguyenvanhoang26041994/rc-neumorphism/issues"
+    "url": "https://github.com/nguyenvanhoang26041994/fork-boilerplate/issues"
   },
-  "homepage": "https://github.com/nguyenvanhoang26041994/rc-neumorphism#readme",
+  "homepage": "https://github.com/nguyenvanhoang26041994/fork-boilerplate#readme",
   "dependencies": {
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
     "markdown": "^0.5.0",
     "prop-types": "^15.7.2",
-    "rc-neumorphism": "1.7.3",
+    "fork-ui": "1.7.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-markdown": "^4.3.1",

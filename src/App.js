@@ -1,4 +1,4 @@
-const ConfigProvider = require('@@/rc-neumorphism/src/components/ConfigProvider').default({
+const ConfigProvider = require('@@/fork-ui/src/components/ConfigProvider').default({
   lang: {},
   icons: require('./used-icons').default,
 });

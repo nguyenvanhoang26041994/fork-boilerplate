@@ -1,6 +1,6 @@
 import React from 'react';
-import { Icon, Tooltip } from '@/rc-neumorphism/core';
-import list from '@@/rc-neumorphism/src/components/Icon/svg';
+import { Icon, Tooltip } from '@/fork-ui/core';
+import list from '@@/fork-ui/src/components/Icon/svg';
 
 const IconBox = ({ name }) => {
   return (

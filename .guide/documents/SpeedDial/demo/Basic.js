@@ -1,5 +1,5 @@
 import React from "react";
-import { SpeedDial, Button } from "@/rc-neumorphism/core";
+import { SpeedDial, Button } from "@/fork-ui/core";
 
 const Demo = () => {
   return (

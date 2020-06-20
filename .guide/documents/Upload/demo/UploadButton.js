@@ -1,5 +1,5 @@
 import React from 'react';
-import { Upload } from '@/rc-neumorphism/core';
+import { Upload } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

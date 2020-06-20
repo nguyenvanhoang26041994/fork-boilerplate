@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typo } from '@/rc-neumorphism/core';
+import { Typo } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

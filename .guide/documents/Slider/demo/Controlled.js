@@ -1,5 +1,5 @@
 import React, { useState, useCallback }  from 'react';
-import { Slider, Button, ButtonGroup, Switch } from '@/rc-neumorphism/core';
+import { Slider, Button, ButtonGroup, Switch } from '@/fork-ui/core';
 
 const Demo = () => {
   const [value, setValue] = useState(77);

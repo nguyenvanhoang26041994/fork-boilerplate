@@ -28,7 +28,7 @@ Trace:
 
 npm manifest: 
   {
-    "name": "rc-neumorphism",
+    "name": "fork-ui",
     "version": "1.0.3",
     "description": "",
     "main": "index.js",
@@ -45,19 +45,19 @@ npm manifest:
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/nguyenvanhoang26041994/rc-neumorphism.git"
+      "url": "git+https://github.com/nguyenvanhoang26041994/fork-ui.git"
     },
     "author": "Hoang Nguyen",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/nguyenvanhoang26041994/rc-neumorphism/issues"
+      "url": "https://github.com/nguyenvanhoang26041994/fork-ui/issues"
     },
-    "homepage": "https://github.com/nguyenvanhoang26041994/rc-neumorphism#readme",
+    "homepage": "https://github.com/nguyenvanhoang26041994/fork-ui#readme",
     "dependencies": {
       "classnames": "^2.2.6",
       "lodash": "^4.17.15",
       "prop-types": "^15.7.2",
-      "rc-neumorphism": "1.7.0",
+      "fork-ui": "1.7.0",
       "react": "^16.9.0",
       "react-dom": "^16.9.0",
       "react-router-dom": "^5.0.1",
@@ -7890,9 +7890,9 @@ Lockfile:
       iconv-lite "0.4.24"
       unpipe "1.0.0"
   
-  rc-neumorphism@1.7.0:
+  fork-ui@1.7.0:
     version "1.7.0"
-    resolved "https://registry.yarnpkg.com/rc-neumorphism/-/rc-neumorphism-1.7.0.tgz#44f1c47286cd420c4d1840d6883cc08735f52bd1"
+    resolved "https://registry.yarnpkg.com/fork-ui/-/fork-ui-1.7.0.tgz#44f1c47286cd420c4d1840d6883cc08735f52bd1"
     integrity sha512-EjfgR3HvEvS/ARSpfPPGJ0JFPJOtbF54xLXd5RBuOAknBoks6CZjAZ/WsSpNasK+QLpJWDDJbknF76gFGI3GtA==
     dependencies:
       classnames "^2.2.6"

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Switch } from '@/rc-neumorphism/core';
+import { Switch } from '@/fork-ui/core';
 
 const Wrapper = styled.div`
   display: flex;

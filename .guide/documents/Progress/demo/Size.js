@@ -1,5 +1,5 @@
 import React  from 'react';
-import { Progress } from '@/rc-neumorphism/core';
+import { Progress } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

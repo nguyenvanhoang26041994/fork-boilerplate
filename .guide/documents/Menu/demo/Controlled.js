@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Menu, Divider } from '@/rc-neumorphism/core';
+import { Menu, Divider } from '@/fork-ui/core';
 
 const Demo = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);

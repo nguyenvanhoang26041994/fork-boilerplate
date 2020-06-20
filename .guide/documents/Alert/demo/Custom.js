@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Button, Avatar, Icon, helper } from '@/rc-neumorphism/core';
+import { Button, Avatar, Icon, helper } from '@/fork-ui/core';
 
 const avatarLink = '';
 

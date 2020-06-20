@@ -1,5 +1,5 @@
 import React from 'react';
-import { QueryBuilder } from '@/rc-neumorphism/core';
+import { QueryBuilder } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

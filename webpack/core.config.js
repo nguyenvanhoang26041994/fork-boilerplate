@@ -4,8 +4,8 @@ const CompressionPlugin = require('compression-webpack-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    'rc-neumorphism': path.join(process.cwd(), './rc-neumorphism/src/components/core'),
-    'rc-neumorphism-css': path.join(process.cwd(), './rc-neumorphism/src/style/core.scss'),
+    'fork-ui': path.join(process.cwd(), './fork-ui/src/components/core'),
+    'fork-ui-css': path.join(process.cwd(), './fork-ui/src/style/core.scss'),
   },
   output: {
     filename: '[name].js',

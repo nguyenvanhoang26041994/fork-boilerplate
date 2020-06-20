@@ -1,5 +1,5 @@
 import React from 'react';
-import { Affix, Button } from '@/rc-neumorphism/core';
+import { Affix, Button } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

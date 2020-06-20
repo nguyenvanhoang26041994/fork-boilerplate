@@ -1,5 +1,5 @@
 import React, { useContext, useCallback } from 'react';
-import { Switch } from '@/rc-neumorphism/core';
+import { Switch } from '@/fork-ui/core';
 
 import AppContext from '@/AppContext';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { Breadcrumb } from '@/rc-neumorphism/core';
+import { Breadcrumb } from '@/fork-ui/core';
 
 const Demo = () => {
   const history = useHistory();

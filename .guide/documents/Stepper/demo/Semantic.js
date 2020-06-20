@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stepper } from '@/rc-neumorphism/core';
+import { Stepper } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

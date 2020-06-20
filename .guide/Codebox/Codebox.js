@@ -3,7 +3,7 @@ import cn from 'classnames';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
-import { Icon, Typo } from '@/rc-neumorphism/core';
+import { Icon, Typo } from '@/fork-ui/core';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';

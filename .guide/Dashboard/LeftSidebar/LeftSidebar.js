@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import cn from 'classnames';
 import styled from 'styled-components';
 import { useHistory, useLocation } from 'react-router-dom';
-import { Icon, Menu } from '@/rc-neumorphism/core';
+import { Icon, Menu } from '@/fork-ui/core';
 import { mapRouter, mapMenuItem } from '../../map-config';
 
 const LeftSidebarContainer = styled.div`

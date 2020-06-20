@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Popover, Stepper } from '@/rc-neumorphism/core';
+import { Button, Popover, Stepper } from '@/fork-ui/core';
 
 const StepperDemo = () => {
   return (

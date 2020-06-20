@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { Checkbox } from '@/rc-neumorphism/core';
+import { Checkbox } from '@/fork-ui/core';
 
 const Wrapper = styled.div`
   display: flex;

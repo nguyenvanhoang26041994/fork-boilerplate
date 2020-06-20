@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loader } from '@/rc-neumorphism/core';
+import { Loader } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

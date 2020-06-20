@@ -1,7 +1,7 @@
 import React  from 'react';
 import styled from 'styled-components';
 
-import { Chip } from '@/rc-neumorphism/core';
+import { Chip } from '@/fork-ui/core';
 
 const Wrapper = styled.div`
   display: flex;

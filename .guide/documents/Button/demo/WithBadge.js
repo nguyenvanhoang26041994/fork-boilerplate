@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, Badge } from '@/rc-neumorphism/core';
+import { Button, Badge } from '@/fork-ui/core';
 
 const Wrapper = styled.div`
   display: flex;

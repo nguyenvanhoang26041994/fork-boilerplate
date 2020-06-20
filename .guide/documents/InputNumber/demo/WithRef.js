@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from 'react';
-import { InputNumber } from '@/rc-neumorphism/core';
+import { InputNumber } from '@/fork-ui/core';
 
 const Demo = () => {
   const ref = useRef();

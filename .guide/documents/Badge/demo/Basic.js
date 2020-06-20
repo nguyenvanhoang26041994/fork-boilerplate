@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge } from '@/rc-neumorphism/core';
+import { Badge } from '@/fork-ui/core';
 
 const FancyBox = ({ size, circle }) => (
   <div

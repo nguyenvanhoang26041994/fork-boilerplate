@@ -84,12 +84,12 @@ return children;
 /core
 /chart
 /icon
-require('rc-neumorphism/core').use(
+require('fork-ui/core').use(
  'home',
   'heart',
 );
 
-// import { Icon } from 'rc-neumorphism/core';
+// import { Icon } from 'fork-ui/core';
 
 
 //register-icon.js

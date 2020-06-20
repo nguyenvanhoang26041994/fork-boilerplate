@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { Radio } from '@/rc-neumorphism/core';
+import { Radio } from '@/fork-ui/core';
 
 const Wrapper = styled.div`
   display: flex;

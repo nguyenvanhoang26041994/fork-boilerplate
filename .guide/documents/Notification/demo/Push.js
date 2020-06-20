@@ -4,7 +4,7 @@ import {
   Icon,
   Avatar,
   helper,
-} from '@/rc-neumorphism/core';
+} from '@/fork-ui/core';
 
 const avatarLink = '';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Icon } from '@/rc-neumorphism/core';
+import { Divider, Icon } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

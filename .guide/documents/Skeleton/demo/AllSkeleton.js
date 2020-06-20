@@ -1,5 +1,5 @@
 import React  from 'react';
-import { Skeleton } from '@/rc-neumorphism/core';
+import { Skeleton } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

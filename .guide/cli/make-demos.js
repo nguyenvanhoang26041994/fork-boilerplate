@@ -95,7 +95,7 @@ const autoRenComponentREADME = function(componentName) {
 
   if (README || API) {
     makeFile(
-      path.resolve(`rc-neumorphism/src/components/${componentName}/README.md`),
+      path.resolve(`fork-ui/src/components/${componentName}/README.md`),
       `${README}\n${API}`
     );
   }
@@ -107,7 +107,7 @@ const makeDemo = function(documentName, demoName) {
   injectedStr += Handlebars.compile(DemoTemplate)(makeHeader(demoName, documentName));
   injectedStr += `\nDemo.code = \`${
     demoStr
-      .replace(/@\/rc-neumorphism/g, 'rc-neumorphism')
+      .replace(/@\/fork-ui/g, 'fork-ui')
       .replace(/\`/g, '\\\`')
   }\`;`;
 

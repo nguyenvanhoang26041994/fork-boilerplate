@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputNumber } from '@/rc-neumorphism/core';
+import { InputNumber } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

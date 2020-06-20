@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Rater } from '@/rc-neumorphism/core';
+import { Rater } from '@/fork-ui/core';
 
 const Demo = () => {
   const [star, setStar] = useState(1);

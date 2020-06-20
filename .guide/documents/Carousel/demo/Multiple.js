@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Icon, Badge } from '@/rc-neumorphism/core';
+import { Carousel, Icon, Badge } from '@/fork-ui/core';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

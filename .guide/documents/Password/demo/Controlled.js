@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Password } from '@/rc-neumorphism/core';
+import { Password } from '@/fork-ui/core';
 
 const Demo = () => {
   const [value, setValue] = useState('');

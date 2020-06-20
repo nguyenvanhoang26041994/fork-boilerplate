@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from '@/rc-neumorphism/core';
+import { Flex } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

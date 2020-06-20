@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Button, Alert } from '@/rc-neumorphism/core';
+import { Button, Alert } from '@/fork-ui/core';
 
 const Demo = () => {
   const [open, setOpen] = useState();

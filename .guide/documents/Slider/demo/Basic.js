@@ -1,5 +1,5 @@
 import React from 'react';
-import { Slider } from '@/rc-neumorphism/core';
+import { Slider } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

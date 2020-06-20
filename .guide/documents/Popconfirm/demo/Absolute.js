@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popconfirm, Button } from '@/rc-neumorphism/core';
+import { Popconfirm, Button } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

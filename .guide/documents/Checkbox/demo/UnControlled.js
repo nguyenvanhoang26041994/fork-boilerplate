@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox } from '@/rc-neumorphism/core';
+import { Checkbox } from '@/fork-ui/core';
 
 const Demo = () => {
   return (

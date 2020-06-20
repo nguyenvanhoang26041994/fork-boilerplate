@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, Badge, Icon } from '@/rc-neumorphism/core';
+import { Tabs, Badge, Icon } from '@/fork-ui/core';
 
 const Description = ({ content }) => {
   return (

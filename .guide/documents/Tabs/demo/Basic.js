@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Tabs } from '@/rc-neumorphism/core';
+import { Tabs } from '@/fork-ui/core';
 
 const Description = ({ content }) => {
   return (

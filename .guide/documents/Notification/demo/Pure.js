@@ -3,7 +3,7 @@ import {
   PureNotification,
   Avatar,
   Icon,
-} from '@/rc-neumorphism/core';
+} from '@/fork-ui/core';
 
 const avatarLink = '';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from '@/rc-neumorphism/core';
+import { Image } from '@/fork-ui/core';
 
 const Demo = () => (
   <Image

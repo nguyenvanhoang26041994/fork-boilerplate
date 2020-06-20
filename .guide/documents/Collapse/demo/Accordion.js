@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Collapse } from '@/rc-neumorphism/core';
+import { Collapse } from '@/fork-ui/core';
 
 const Description = () => {
   return (
