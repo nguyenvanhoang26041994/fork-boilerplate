@@ -36,7 +36,6 @@
   "homepage": "https://github.com/nguyenvanhoang26041994/fork-boilerplate#readme",
   "dependencies": {
     "classnames": "^2.2.6",
-    "fork-ui": "1.7.3",
     "lodash": "^4.17.15",
     "markdown": "^0.5.0",
     "prop-types": "^15.7.2",
