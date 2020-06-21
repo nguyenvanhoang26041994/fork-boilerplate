@@ -6,9 +6,12 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import loadable from './utils/loadable';
 import AppContext from './AppContext';
+import AppSkeleton from './AppSkeleton';
 
-const Dashboard = loadable(() => import('@@/.guide/Dashboard'));
-const SystemDesign = loadable(() => import('./SystemDesign'));
+const fallback = <AppSkeleton />;
+
+const Dashboard = loadable(() => import('@@/.guide/Dashboard'), { fallback });
+const SystemDesign = loadable(() => import('./SystemDesign'), { fallback });
 
 const App = () => {
   const [isDark, setIsDark] = useState(true);
