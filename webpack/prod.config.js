@@ -3,6 +3,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const { GenerateSW } = require('workbox-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = require('./base.config')({
   mode: 'production',
@@ -15,6 +16,10 @@ module.exports = require('./base.config')({
     publicPath: '/',
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[chunkhash].css',
+      chunkFilename: '[id].[chunkhash].css',
+    }),
     new CopyPlugin([
       {
         from: 'static',

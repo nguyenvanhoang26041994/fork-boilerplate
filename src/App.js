@@ -18,10 +18,16 @@ const App = () => {
   }), [isDark, setIsDark]);
 
   useEffect(() => {
+    // document.getElementById('app-loader').remove();
+  }, []);
+
+  useEffect(() => {
     if (isDark) {
       document.body.classList.add('dark-mode');
+      document.body.classList.remove('light-mode');
     } else {
       document.body.classList.remove('dark-mode');
+      document.body.classList.add('light-mode');
     }
   }, [isDark]);
 
