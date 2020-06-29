@@ -31,12 +31,12 @@ import {
   SpeedDial,
   PureNotification,
   PureAlert,
-  Upload,
+  // Upload,
   Divider,
   Breadcrumb,
   Carousel,
   Typo,
-  Calendar,
+  // Calendar,
   DatePicker,
 } from './fork-ui/core';
 

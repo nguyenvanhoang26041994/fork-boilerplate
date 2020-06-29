@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import getPosition from '../utils/getPosition';
 
 export default (ref, tracking = []) => {

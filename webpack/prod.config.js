@@ -37,11 +37,11 @@ module.exports = require('./base.config')({
       icons: [
         {
           src: path.resolve('src/assets/img/icon-512x512.png'),
-          sizes: [72, 96, 128, 144, 192, 384, 512],
+          sizes: [24, 48, 64],
         },
         {
           src: path.resolve('src/assets/img/icon-512x512.png'),
-          sizes: [120, 152, 167, 180],
+          sizes: [24, 48, 64],
           ios: true,
         },
       ],
@@ -53,6 +53,7 @@ module.exports = require('./base.config')({
       minRatio: 0.8,
     }),
     new GenerateSW({
+      clientsClaim: true,
       skipWaiting: true,
       include: [
         /\.(html|js|css|png|jpg|jpeg|worf|json|ico|woff2)$/,

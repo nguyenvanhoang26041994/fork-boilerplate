@@ -24,3 +24,7 @@ export const pick = (object, paths) => {
     return rs;
   }, {});
 }
+
+export const hasOwnProperty = (obj, property) => {
+  return Object.prototype.hasOwnProperty.call(obj, property);
+}
