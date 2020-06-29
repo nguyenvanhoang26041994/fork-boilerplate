@@ -492,21 +492,21 @@ export default () => {
           <InputNumber defaultValue="999" />
         </Section>
         <Section className="--space-5" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <div className="rc-overlay rc-tooltip --arrow --top" style={{ position: 'relative' }}>
+          <div className="fui-overlay fui-tooltip fui-overlay--arrow fui-overlay--top" style={{ position: 'relative' }}>
             Top Tooltip
           </div>
-          <div className="rc-overlay rc-tooltip --arrow --right" style={{ position: 'relative' }}>
+          <div className="fui-overlay fui-tooltip fui-overlay--arrow fui-overlay--right" style={{ position: 'relative' }}>
             Right Tooltip
           </div>
-          <div className="rc-overlay rc-tooltip --arrow --bottom" style={{ position: 'relative' }}>
+          <div className="fui-overlay fui-tooltip fui-overlay--arrow fui-overlay--bottom" style={{ position: 'relative' }}>
             Bottom Tooltip
           </div>
-          <div className="rc-overlay rc-tooltip --arrow --left" style={{ position: 'relative' }}>
+          <div className="fui-overlay fui-tooltip fui-overlay--arrow fui-overlay--left" style={{ position: 'relative' }}>
             Left Tooltip
           </div>
         </Section>
         <Section style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <div className="rc-overlay rc-popover --arrow --top" style={{ position: 'relative', flexGrow: 1 }}>
+          <div className="fui-overlay fui-popover fui-overlay--arrow fui-overlay--top" style={{ position: 'relative', flexGrow: 1 }}>
             <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full p-2">
               <Flex items="center">
                 <Skeleton circle size="2rem" />
