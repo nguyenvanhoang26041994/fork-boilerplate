@@ -1,5 +1,6 @@
 import React, { useState, useCallback }  from 'react';
 import { Progress, Button, ButtonGroup } from '@/fork-ui/core';
+import { Minus, Plus } from '@@/fork-ui/src/components/Icon';
 
 const Demo = () => {
   const [percent, setPercent] = useState(0.1);
@@ -25,11 +26,11 @@ const Demo = () => {
       <Progress.Linear percent={percent} />
       <div className="flex items-center mt-20">
         <ButtonGroup>
-          <Button icon="minus" onClick={onMinus} />
+          <Button icon={<Minus />} onClick={onMinus} />
           <Button onClick={() =>setPercent(0.1)}>10%</Button>
           <Button onClick={() =>setPercent(0.5)}>50%</Button>
           <Button onClick={() =>setPercent(0.9)}>90%</Button>
-          <Button icon="plus" onClick={onPlus} />
+          <Button icon={<Plus />} onClick={onPlus} />
         </ButtonGroup>
       </div>
     </div>

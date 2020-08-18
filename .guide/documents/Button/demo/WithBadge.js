@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, Badge } from '@/fork-ui/core';
+import { Inbox, Bell } from '@@/fork-ui/src/components/Icon';
 
 const Wrapper = styled.div`
   display: flex;
@@ -14,10 +15,10 @@ const Demo = () => {
   return (
     <Wrapper>
       <Badge count={2}>
-        <Button icon="bell" />
+        <Button icon={<Bell />} />
       </Badge>
       <Badge overlap count={9}>
-        <Button circle icon="inbox" />
+        <Button circle icon={<Inbox />} />
       </Badge>
     </Wrapper>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from '@/fork-ui/core';
+import { Power } from '@@/fork-ui/src/components/Icon';
 
 const Wrapper = styled.div`
   display: flex;
@@ -14,7 +15,7 @@ const Demo = () => {
   return (
     <Wrapper>
       <Button loading>Basic</Button>
-      <Button loading circle icon="power" />
+      <Button loading circle icon={<Power />} />
     </Wrapper>
   );
 };

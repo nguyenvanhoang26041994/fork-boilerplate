@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icon, Badge, Avatar, Popover, Menu, Button, QueryBuilder } from '@/fork-ui/core';
+import { Badge, Avatar, Popover, Menu, Button } from '@/fork-ui/core';
+import { Bell, MessageCircle, IndentDecrease, IndentIncrease, Search } from '@@/fork-ui/src/components/Icon';
 import DarkModeToggle from '@/containers/DarkModeToggle';
 
 const TopNavContainer = styled.nav`
@@ -44,17 +45,17 @@ const TopNavigation = ({ toggleExpand, isExpanded }) => {
             <Button
               circle
               glassed
-              icon={isExpanded ? 'indent-decrease' : 'indent-increase'}
+              icon={isExpanded ? <IndentDecrease /> : <IndentIncrease />}
               onClick={toggleExpand}
             />
-            <Button circle glassed icon="search" className="ml-2" />
+            <Button circle glassed icon={<Search />} className="ml-2" />
           </NavLeft>
           <NavRight>
             <Badge count={14} className="mr-8">
-              <Icon name="message-circle" fontSize="1.28rem"/>
+              <MessageCircle fontSize="1.28rem"/>
             </Badge>
             <Badge count={5} className="mr-8">
-              <Icon name="bell" fontSize="1.25rem"/>
+              <Bell fontSize="1.25rem"/>
             </Badge>
             <DarkModeToggle className="mx-5" />
             <Popover

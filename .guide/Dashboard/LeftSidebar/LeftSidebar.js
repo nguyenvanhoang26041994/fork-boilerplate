@@ -2,7 +2,8 @@ import React, { useMemo } from 'react';
 import cn from 'classnames';
 import styled from 'styled-components';
 import { useHistory, useLocation } from 'react-router-dom';
-import { Icon, Menu } from '@/fork-ui/core';
+import { Menu } from '@/fork-ui/core';
+import { Home } from '@@/fork-ui/src/components/Icon';
 import { mapRouter, mapMenuItem } from '../../map-config';
 
 const LeftSidebarContainer = styled.div`
@@ -119,7 +120,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
         <MainLeftSidebar className={cn({ 'hide-scrollbar': isExpanded })} {...otherProps}>
           <TopWrapper>
             <LogoWrapper>
-              <Icon name="home" size="1.75rem" onClick={() => history.push('/')} />
+              <Home size="1.75rem" onClick={() => history.push('/')} />
             </LogoWrapper>
           </TopWrapper>
           {theMenu}

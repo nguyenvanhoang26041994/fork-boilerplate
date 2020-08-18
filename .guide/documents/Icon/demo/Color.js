@@ -1,12 +1,12 @@
 import React from 'react';
-import { Icon } from '@/fork-ui/core';
+import { Activity, Alarm, Adjustments } from '@@/fork-ui/src/components/Icon';
 
 const Demo = () => {
   return (
     <div className="flex">
-      <Icon className="mr-5" name="activity" color="blueviolet" />
-      <Icon className="mr-5" name="alarm" color="red" />
-      <Icon className="mr-5" name="adjustments" color="#00ffe9" />
+      <Activity className="mr-5" color="blueviolet" />
+      <Alarm className="mr-5" color="red" />
+      <Adjustments className="mr-5" color="#00ffe9" />
     </div>
   );
 };

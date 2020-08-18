@@ -10,7 +10,6 @@ import {
   Tabs,
   Slider,
   Loader,
-  Icon,
   Collapse,
   ButtonGroup,
   Pagination,
@@ -39,6 +38,7 @@ import {
   // Calendar,
   DatePicker,
 } from './fork-ui/core';
+import { Messages } from '@@/fork-ui/src/components/Icon';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -230,54 +230,54 @@ export default () => {
         </Section>
         <Section style={{ paddingTop: '30px', paddingBottom: '30px' }}>
           <Tabs>
-            <Tabs.Item key="_1" title="React" icon="send"><ReactTab /></Tabs.Item>
-            <Tabs.Item key="_4" title="Javascript" icon="thumb-up"><ReactTab /></Tabs.Item>
-            <Tabs.Item key="_5" title="Badge" icon={<Badge leftTop count="2" className="mr-4"><Icon name="messages" /></Badge>} ><ReactTab /></Tabs.Item>
-            <Tabs.Item key="_7" title="Fresh" icon="repeat" fresh ><ReactTab /></Tabs.Item>
+            <Tabs.Item key="_1" title="React" icon={<Send />}><ReactTab /></Tabs.Item>
+            <Tabs.Item key="_4" title="Javascript" icon={<ThumbUp />}><ReactTab /></Tabs.Item>
+            <Tabs.Item key="_5" title="Badge" icon={<Badge leftTop count="2" className="mr-4"><Messages /></Badge>} ><ReactTab /></Tabs.Item>
+            <Tabs.Item key="_7" title="Fresh" icon={<Repeat />} fresh ><ReactTab /></Tabs.Item>
           </Tabs>
         </Section>
         <Section style={{ paddingTop: '30px', paddingBottom: '30px' }}>
           <Collapse defaultActiveKeys={['_4']} accordion>
-            <Collapse.Item key="_1" title="Contact" icon="send"><ReactTab /></Collapse.Item>
-            <Collapse.Item key="_3" title="Skills" icon="layers-difference" ><ReactTab /></Collapse.Item>
-            <Collapse.Item key="_4" title="Experiences" icon={<Badge leftTop count="2" className="mr-4"><Icon name="messages" /></Badge>} ><ReactTab /></Collapse.Item>
-            <Collapse.Item key="_6" title="Hobbit" icon="repeat" fresh><ReactTab /></Collapse.Item>
+            <Collapse.Item key="_1" title="Contact" icon={<Send />}><ReactTab /></Collapse.Item>
+            <Collapse.Item key="_3" title="Skills" icon={<LayersDifference />} ><ReactTab /></Collapse.Item>
+            <Collapse.Item key="_4" title="Experiences" icon={<Badge leftTop count="2" className="mr-4"><Messages /></Badge>} ><ReactTab /></Collapse.Item>
+            <Collapse.Item key="_6" title="Hobbit" icon={<Repeat />} fresh><ReactTab /></Collapse.Item>
           </Collapse>
         </Section>
         <Section className="--space-10" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
           <div>
             <Menu>
               <Menu.ItemGroup key="group-action" title="Action">
-                <Menu.Item key="copy" icon="copy" title="Copy" />
-                <Menu.Item key="tool" icon="tool" title="Config" />
-                <Menu.Sub key="sub-other" icon="share" title="Other">
-                  <Menu.Item key="rating" icon="star" title="Rating" />
-                  <Menu.Item key="follow" icon="bell" title="Follow" />
+                <Menu.Item key="copy" icon={<Copy />} title="Copy" />
+                <Menu.Item key="tool" icon={<Tool />} title="Config" />
+                <Menu.Sub key="sub-other" icon={<Share />} title="Other">
+                  <Menu.Item key="rating" icon={<Star />} title="Rating" />
+                  <Menu.Item key="follow" icon={<Bell />} title="Follow" />
                 </Menu.Sub>
                 <Menu.Item
                   key="message"
-                  icon="message"
+                  icon={<Message />}
                   title="Message"
                 />
-                <Menu.Item key="heart" icon="heart" title="Love" />
+                <Menu.Item key="heart" icon={<Heart />} title="Love" />
               </Menu.ItemGroup>
             </Menu>
           </div>
           <div>
             <Menu iconOnly>
               <Menu.ItemGroup key="group-action" title="Action">
-                <Menu.Item key="copy" icon="copy" title="Copy" />
-                <Menu.Item key="tool" icon="tool" title="Config" />
-                <Menu.Sub key="sub-other" defaultExpanded icon="share" title="Other">
-                  <Menu.Item key="rating" icon="star" title="Rating" />
-                  <Menu.Item key="follow" icon="bell" title="Follow" />
+                <Menu.Item key="copy" icon={<Copy />} title="Copy" />
+                <Menu.Item key="tool" icon={<Tool />} title="Config" />
+                <Menu.Sub key="sub-other" defaultExpanded icon={<Share />} title="Other">
+                  <Menu.Item key="rating" icon={<Star />} title="Rating" />
+                  <Menu.Item key="follow" icon={<Bell />} title="Follow" />
                 </Menu.Sub>
                 <Menu.Item
                   key="message"
-                  icon="message"
+                  icon={<Message />}
                   title="Message"
                 />
-                <Menu.Item key="heart" icon="heart" title="Love" />
+                <Menu.Item key="heart" icon={<Heart />} title="Love" />
               </Menu.ItemGroup>
             </Menu>
           </div>
@@ -317,15 +317,15 @@ export default () => {
           </Carousel>
         </Section>
         <Section col style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <Divider left dashed title={<Icon name="power" />} />
+          <Divider left dashed title={<Power />} />
           <Divider left title="LEFT TITLE" />
-          <Divider center dashed title={<Icon name="copy" />} />
+          <Divider center dashed title={<Copy />} />
           <Divider
             right
             dashed
             title={(
               <span>
-                <Icon name="copy" className="mr-3" />
+                <Copy className="mr-3" />
                 RIGHT TITLE
               </span>
             )}
@@ -337,12 +337,12 @@ export default () => {
         <Section className="--space-5">
           <Button>Button</Button>
           <ButtonGroup>
-            <Button><Icon name="send" />Send</Button>
-            <Button><Icon name="repeat" />Repeat</Button>
-            <Button><Icon name="cloud-download" />Download</Button>
+            <Button><Send />Send</Button>
+            <Button><Repeat />Repeat</Button>
+            <Button><CloudDownload />Download</Button>
           </ButtonGroup>
-          <Button loading><Icon name="send" />Send</Button>
-          <Button loading circle icon="repeat" />
+          <Button loading><Send />Send</Button>
+          <Button loading circle icon={<Repeat />} />
         </Section>
         <Section col style={{ paddingTop: '20px', paddingBottom: '20px' }}>
           <Flex className="w-full">
@@ -413,7 +413,7 @@ export default () => {
           </Badge>
           <Badge
             color="#0089e4"
-            icon={<Icon name="check" style={{ strokeWidth: 3 }} />}
+            icon={<Check style={{ strokeWidth: 3 }} />}
           >
             <Boxer size="50px" />
           </Badge>
@@ -424,20 +424,20 @@ export default () => {
           <Chip label="Sơn Lê" />
           <SpeedDial right defaultVisible overlay={
             <React.Fragment>
-              <SpeedDial.Button glassed icon="cloud-download" />
-              <SpeedDial.Button glassed icon="copy" />
-              <SpeedDial.Button glassed icon="trash" />
-              <SpeedDial.Button glassed icon="send" />
+              <SpeedDial.Button glassed icon={<CloudDownload />} />
+              <SpeedDial.Button glassed icon={<Copy />} />
+              <SpeedDial.Button glassed icon={<Trash />} />
+              <SpeedDial.Button glassed icon={<Send />} />
             </React.Fragment>
           }>
-            <Button icon="dots" />
+            <Button icon={<Dots />} />
           </SpeedDial>
         </Section>
         <Section style={{ paddingTop: '10px', paddingBottom: '30px' }}>
           <Breadcrumb>
-            <Breadcrumb.Item title={<div className="flex items-center"><Icon name="home" className="mr-2" /><span>Home</span></div>} />
-            <Breadcrumb.Item title={<div className="flex items-center"><Icon name="apps" className="mr-2" /><span>Application</span></div>} />
-            <Breadcrumb.Item title={<div className="flex items-center"><Icon name="send" className="mr-2" /><span>Button</span></div>} />
+            <Breadcrumb.Item title={<div className="flex items-center"><Home className="mr-2" /><span>Home</span></div>} />
+            <Breadcrumb.Item title={<div className="flex items-center"><Apps className="mr-2" /><span>Application</span></div>} />
+            <Breadcrumb.Item title={<div className="flex items-center"><Send className="mr-2" /><span>Button</span></div>} />
           </Breadcrumb>
         </Section>
         <Section className="--space-10" style={{ paddingTop: '10px', paddingBottom: '30px' }}>
@@ -459,33 +459,33 @@ export default () => {
           <Select placeholder="Please chose your option">
             <Select.Option
               key="message"
-              icon="message"
+              icon={<Message />}
               title="Message"
             />
             <Select.Group key="group-action" title="Action">
-              <Select.Option key="copy" icon="copy" title="Copy" />
-              <Select.Option key="tool" icon="tool" title="Config" />
-              <Select.Option key="heart" icon="heart" title="Love" />
+              <Select.Option key="copy" icon={<Copy />} title="Copy" />
+              <Select.Option key="tool" icon={<Tool />} title="Config" />
+              <Select.Option key="heart" icon={<Heart />} title="Love" />
             </Select.Group>
             <Select.Group key="group-other" title="Other">
-              <Select.Option key="rating" icon="star" title="Rating" />
-              <Select.Option key="follow" icon="bell" title="Follow" />
+              <Select.Option key="rating" icon={<Star />} title="Rating" />
+              <Select.Option key="follow" icon={<Bell />} title="Follow" />
             </Select.Group>
           </Select>
           <Select multiple placeholder="Please chose your options">
             <Select.Option
               key="message"
-              icon="message"
+              icon={<Message />}
               title="Message"
             />
             <Select.Group key="group-action" title="Action">
-              <Select.Option key="copy" icon="copy" title="Copy" />
-              <Select.Option key="tool" icon="tool" title="Config" />
-              <Select.Option key="heart" icon="heart" title="Love" />
+              <Select.Option key="copy" icon={<Copy />} title="Copy" />
+              <Select.Option key="tool" icon={<Tool />} title="Config" />
+              <Select.Option key="heart" icon={<Heart />} title="Love" />
             </Select.Group>
             <Select.Group key="group-other" title="Other">
-              <Select.Option key="rating" icon="star" title="Rating" />
-              <Select.Option key="follow" icon="bell" title="Follow" />
+              <Select.Option key="rating" icon={<Star />} title="Rating" />
+              <Select.Option key="follow" icon={<Bell />} title="Follow" />
             </Select.Group>
           </Select>
           <Textarea placeholder="The placeholder" defaultValue="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
@@ -535,8 +535,8 @@ export default () => {
               </Flex>
             </Dialog.Body>
             <Dialog.Footer className="flex justify-end">
-              <Button glassed><Icon name="apps" />Cancel</Button>
-              <Button glassed style={{ marginLeft: '0.5em' }}><Icon name="send" />OK</Button>
+              <Button glassed><Apps />Cancel</Button>
+              <Button glassed style={{ marginLeft: '0.5em' }}><Send />OK</Button>
             </Dialog.Footer>
           </Dialog>
         </Section>

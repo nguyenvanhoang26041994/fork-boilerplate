@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { Form, Button, Select } from '@/fork-ui/core';
+import { Messages, Power, Copy } from '@@/fork-ui/src/components/Icon';
 
 const Demo = () => {
   const onChange = useCallback((e) => {
@@ -29,17 +30,17 @@ const Demo = () => {
         <Select.Option
           key="male"
           title="Male"
-          icon="message"
+          icon={<Messages />}
         />
         <Select.Option
           key="female"
           title="Female"
-          icon="power"
+          icon={<Power />}
         />
         <Select.Option
           key="other"
           title="Other"
-          icon="copy"
+          icon={<Copy />}
         />
       </Form.Select>
       <Form.InputNumber

@@ -1,44 +1,45 @@
 import React from 'react';
 import { Menu } from '@/fork-ui/core';
+import { Message, Heart, Star, Bell, Tool, Power, Copy, Dots } from '@@/fork-ui/src/components/Icon';
 
 const Demo = () => {
   return (
     <Menu>
-      <Menu.Sub key="sub-action" title="Action" icon="dots">
+      <Menu.Sub key="sub-action" title="Action" icon={<Dots />}>
         <Menu.Item
           key="copy"
-          icon="copy"
+          icon={<Copy />}
           title="Copy"
         />
         <Menu.Item
           key="tool"
-          icon="tool"
+          icon={<Tool />}
           title="Config"
         />
         <Menu.Item
           key="message"
-          icon="message"
+          icon={<Message />}
           title="Message"
         />
         <Menu.Item
           key="heart"
-          icon="heart"
+          icon={<Heart />}
           title="Love"
         />
       </Menu.Sub>
       <Menu.Sub
         key="sub-other"
         title="Other"
-        icon="power"
+        icon={<Power />}
       >
         <Menu.Item
           key="rating"
-          icon="star"
+          icon={<Star />}
           title="Rating"
         />
         <Menu.Item
           key="follow"
-          icon="bell"
+          icon={<Bell />}
           title="Follow"
         />
       </Menu.Sub>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, Switch } from '@/fork-ui/core';
+import { Message, Heart, Star, Bell, CaretDown, Tool, Copy, Dots, Clock } from '@@/fork-ui/src/components/Icon';
 
 const Demo = () => {
   const [isIconOnly, setIsIconOnly] = useState(true);
@@ -19,31 +20,31 @@ const Demo = () => {
         <Menu.ItemGroup key="group-action" title="Action">
           <Menu.Item
             key="copy"
-            icon="copy"
+            icon={<Copy />}
             title="Copy"
           />
           <Menu.Item
             key="tool"
-            icon="tool"
+            icon={<Tool />}
             title="Config"
           />
           <Menu.Item
             key="message"
-            icon="message"
+            icon={<Message />}
             title="Message"
           />
-          <Menu.Item key="heart" icon="heart" title="Love" />
+          <Menu.Item key="heart" icon={<Heart />} title="Love" />
         </Menu.ItemGroup>
         <Menu.ItemGroup key="group-other" title="Other">
           <Menu.Item
             key="rating"
-            icon="star"
+            icon={<Star />}
             titleOnly
             title="Rating"
           />
           <Menu.Item
             key="follow"
-            icon="bell"
+            icon={<Bell />}
             titleOnly
             title="Follow"
           />
@@ -51,16 +52,16 @@ const Demo = () => {
         <Menu.Sub
           key="sub-order"
           title="Order"
-          icon="dots"
+          icon={<Dots />}
         >
           <Menu.Item
             key="alarm"
-            icon="clock"
+            icon={<Clock />}
             title="Alarm"
           />
           <Menu.Item
             key="break-down"
-            icon="caret-down"
+            icon={<CaretDown />}
             title="Break down"
           />
         </Menu.Sub>

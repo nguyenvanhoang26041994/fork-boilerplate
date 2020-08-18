@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { Collapse } from '@/fork-ui/core';
+import { Messages, DeviceDesktop, Power } from '@@/fork-ui/src/components/Icon';
 
 const Description = () => {
   return (
@@ -19,21 +20,21 @@ const Demo = () => {
         <Collapse.Item
           title="Collapse One"
           key="panel-1"
-          icon="messages"
+          icon={<Messages />}
         >
           <Description />
         </Collapse.Item>
         <Collapse.Item
           title="Collapse Two"
           key="panel-2"
-          icon="device-desktop"
+          icon={<DeviceDesktop />}
         >
           <Description />
         </Collapse.Item>
         <Collapse.Item
           title="Collapse Three"
           key="panel-3"
-          icon="power"
+          icon={<Power />}
         >
           <Description />
         </Collapse.Item>

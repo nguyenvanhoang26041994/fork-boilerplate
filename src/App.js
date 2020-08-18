@@ -1,6 +1,5 @@
 const ConfigProvider = require('@@/fork-ui/src/components/ConfigProvider').default({
   lang: {},
-  icons: require('./used-icons').default,
 });
 import React, { useState, useMemo, useEffect } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';

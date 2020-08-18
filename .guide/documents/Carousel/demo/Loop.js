@@ -1,5 +1,6 @@
 import React from 'react';
-import { Carousel, Icon, Badge } from '@/fork-ui/core';
+import { Carousel, Badge } from '@/fork-ui/core';
+import { Messages } from '@@/fork-ui/src/components/Icon';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -17,7 +18,7 @@ const Demo = () => {
             }}
           >
             <Badge count={id}>
-              <Icon name="messages" size="5rem" />
+              <Messages size="5rem" />
             </Badge>
           </div>
         </Carousel.Item>

@@ -1,48 +1,64 @@
+import React from 'react';
+import {
+  CaretDown,
+  Template,
+  Apps,
+  Typography,
+  Mouse,
+  Photo,
+  Box,
+  LayoutSidebar,
+  Browser,
+  DotsVertical,
+  Bell,
+  DeviceDesktop
+} from '@@/fork-ui/src/components/Icon';
+
 const leftSidebar = {
   Popular: {
     type: 'group',
     items: {
       QueryBuilder: {
-        icon: 'template',
+        icon: <Template />,
       },
       Flex: {
-        icon: 'template',
+        icon: <Template />,
       },
       Icon: {
-        icon: 'apps',
+        icon: <Apps />,
       },
       Typography: {
-        icon: 'typography',
+        icon: <Typography />,
       },
       Button: {
-        icon: 'mouse',
+        icon: <Mouse />,
       },
       Image: {
-        icon: 'photo',
+        icon: <Photo />,
       },
       Form: {
-        icon: 'box',
+        icon: <Box />,
       },
       Drawer: {
-        icon: 'layout-sidebar',
+        icon: <LayoutSidebar />,
       },
       Modal: {
-        icon: 'browser',
+        icon: <Browser />,
       },
       Menu: {
-        icon: 'dots-vertical',
+        icon: <DotsVertical />,
       },
       Tabs: {
-        icon: 'browser',
+        icon: <Browser />,
       },
       Collapse: {
-        icon: 'caret-down',
+        icon: <CaretDown />,
       },
     }
   },
   Components: {
     type: 'sub',
-    icon: 'device-desktop',
+    icon: <DeviceDesktop />,
     items: {
       Box: {},
       Badge: {},
@@ -67,7 +83,7 @@ const leftSidebar = {
   },
   Form: {
     type: 'sub',
-    icon: 'box',
+    icon: <Box />,
     items: {
       Textbox: {},
       Password: {},
@@ -78,7 +94,7 @@ const leftSidebar = {
   },
   Overlay: {
     type: 'sub',
-    icon: 'bell',
+    icon: <Bell />,
     items: {
       Affix: {},
       Anchor: {},

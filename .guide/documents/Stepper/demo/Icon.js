@@ -1,6 +1,8 @@
 import React from 'react';
 import { Stepper } from '@/fork-ui/core';
+import { Home, Message, Copy, Power } from '@@/fork-ui/src/components/Icon';
 
+Message
 const Demo = () => {
   return (
     <div className="flex flex-col w-full">
@@ -8,27 +10,27 @@ const Demo = () => {
         <Stepper.Step
           title="Step One"
           completed
-          icon="home"
+          icon={<Home />}
         >
           Description One
         </Stepper.Step>
         <Stepper.Step
           title="Step Two"
-          icon="message"
+          icon={<Message />}
         >
           Description Two
         </Stepper.Step>
         <Stepper.Step
           title="Step Three"
           canceled
-          icon="copy"
+          icon={<Copy />}
         >
           Description Three
         </Stepper.Step>
         <Stepper.Step
           title="Step Four"
           processing
-          icon="power"
+          icon={<Power />}
         >
           Description Four
         </Stepper.Step>

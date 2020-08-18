@@ -2,10 +2,10 @@ import React from 'react';
 import {
   PureNotification,
   Avatar,
-  Icon,
 } from '@/fork-ui/core';
 
 const avatarLink = '';
+import { Globe } from '@@/fork-ui/src/components/Icon';
 
 const Demo = () => {
   return (
@@ -23,8 +23,7 @@ const Demo = () => {
               send you a friend request
             </span>
             <div className="mt-1 text-gray-600">
-              <Icon
-                name="globe"
+              <Globe
                 className="mr-2"
                 fontSize="0.85em"
               />
@@ -48,8 +47,7 @@ const Demo = () => {
               send you a friend request
             </span>
             <div className="mt-1 text-gray-600">
-              <Icon
-                name="globe"
+              <Globe
                 className="mr-2" fontSize="0.85em"
               />
               5 minues ago

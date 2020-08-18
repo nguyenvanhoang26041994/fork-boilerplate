@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
-import { Button, Avatar, Icon, helper } from '@/fork-ui/core';
+import { Button, Avatar, helper } from '@/fork-ui/core';
+import { Globe } from '@@/fork-ui/src/components/Icon';
 
 const avatarLink = '';
 
@@ -24,8 +25,7 @@ const Demo = () => {
                 follow you, please be carefull
               </span>
               <div className="mt-1 text-gray-600">
-                <Icon
-                  name="globe"
+                <Globe
                   className="mr-2"
                   fontSize="0.85em"
                 />

@@ -5,7 +5,7 @@ import LeftSidebar from './LeftSidebar';
 import TopNavigation from './TopNavigation';
 import SystemDesign from '../../src/SystemDesign';
 import loadable from '@/utils/loadable';
-import { Breadcrumb, Icon, Loader, ScrollUp } from '@/fork-ui/core';
+import { Breadcrumb, Loader, ScrollUp } from '@/fork-ui/core';
 import { mapBreadcrumb } from '../map-config';
 
 const fallback = (
@@ -38,15 +38,6 @@ const Dashboard = ({}) => {
       <LeftSidebar isExpanded={isExpanded} />
       <div className="flex-1 flex flex-col">
         <TopNavigation toggleExpand={toggleExpand} isExpanded={isExpanded} />
-        {{!-- <Breadcrumb className="m-1">
-          {breadcrumb.map(props => (
-            <Breadcrumb.Item
-              key={props.key}
-              title={props.icon ? (<Icon name={props.icon} />) : props.title}
-              href={props._href}
-            />
-          ))}
-        </Breadcrumb> --}}
         <div className="flex m-1">
           <div className="flex-1">
             <Switch>

@@ -1,18 +1,19 @@
 import React from 'react';
-import { Divider, Icon } from '@/fork-ui/core';
+import { Divider } from '@/fork-ui/core';
+import { Power, Copy } from '@@/fork-ui/src/components/Icon';
 
 const Demo = () => {
   return (
     <div className="w-full">
-      <Divider left dashed title={<Icon name="power" />} />
+      <Divider left dashed title={<Power />} />
       <Divider left title="LEFT TITLE" />
-      <Divider right dashed title={<Icon name="copy" />} />
+      <Divider right dashed title={<Copy />} />
       <Divider
         right
         dashed
         title={(
           <span>
-            <Icon name="copy" className="mr-3" />
+            <Copy className="mr-3" />
             RIGHT TITLE
           </span>
         )}

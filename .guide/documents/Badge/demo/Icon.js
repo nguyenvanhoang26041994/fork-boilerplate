@@ -1,5 +1,6 @@
 import React from 'react';
-import { Badge, Icon } from '@/fork-ui/core';
+import { Badge } from '@/fork-ui/core';
+import { Message, Check } from '@@/fork-ui/src/components/Icon';
 
 const FancyBox = ({ size, circle }) => (
   <div
@@ -15,11 +16,11 @@ const FancyBox = ({ size, circle }) => (
 const Demo = () => {
   return (
     <div className="flex">
-      <Badge icon="message" className="mr-5">
+      <Badge icon={<Message />} className="mr-5">
         <FancyBox size="50px" />
       </Badge>
       <Badge
-        icon={<Icon name="check" />}
+        icon={<Check />}
         className="mr-5">
         <FancyBox size="50px"
       />
@@ -28,7 +29,7 @@ const Demo = () => {
         overlap
         bottomRight
         color="#0df316"
-        icon={<Icon name="check" />}
+        icon={<Check />}
         bottomRight
       >
         <FancyBox size="50px" circle />

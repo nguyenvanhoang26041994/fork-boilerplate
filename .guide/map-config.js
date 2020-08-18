@@ -1,4 +1,6 @@
+import React from 'react';
 import leftSidebar from '@@/guide.config';
+import { Point, Home, DeviceDesktop, Box, Bell } from '@@/fork-ui/src/components/Icon'
 
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -44,7 +46,7 @@ const mapMenuItem = (function() {
           _items[iKey].title = iKey;
 
           if (leftSidebar[lSBKey].type === 'sub') {
-            _items[iKey].icon = 'point';
+            _items[iKey].icon = <Point />;
             _items[iKey].titleOnly = true;
           }
         });
@@ -61,27 +63,27 @@ const mapBreadcrumb = (function() {
   const _home = {
     key: 'home',
     title: 'Home',
-    icon: 'home',
+    icon: <Home />,
     _href: '/',
   };
   
   const _components = {
     key: 'components',
     title: 'Components',
-    icon: 'device-desktop',
+    icon: <DeviceDesktop />,
     _href: '/',
   };
   
   const _overlay = {
     key: 'overlay',
-    icon: 'bell',
+    icon: <Bell />,
     title: 'Overlay',
     _href: '/',
   };
   
   const _form = {
     key: 'form',
-    icon: 'box',
+    icon: <Box />,
     title: 'Form',
     _href: '/',
   };

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Tabs, Badge, Icon } from '@/fork-ui/core';
+import { Tabs, Badge } from '@/fork-ui/core';
+import { Bell, Messages } from '@@/fork-ui/src/components/Icon';
 
 const Description = ({ content }) => {
   return (
@@ -21,7 +22,7 @@ const Demo = () => {
           key="tab-1"
           icon={(
             <Badge className="mr-4" count={2}>
-              <Icon name="bell" />
+              <Bell />
             </Badge>
           )}
         >
@@ -32,7 +33,7 @@ const Demo = () => {
           key="tab-2"
           iconRight={(
             <Badge className="ml-2" count={122}>
-              <Icon name="messages" />
+              <Messages />
             </Badge>
           )}
         >

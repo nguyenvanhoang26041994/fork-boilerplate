@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Rater } from '@/fork-ui/core';
+import { Heart } from '@@/fork-ui/src/components/Icon';
 
 const Demo = () => {
   const [star, setStar] = useState(1);
@@ -7,7 +8,7 @@ const Demo = () => {
 
   return (
     <Rater
-      icon="heart"
+      icon={<Heart />}
       star={star}
       onChange={onChange}
     />

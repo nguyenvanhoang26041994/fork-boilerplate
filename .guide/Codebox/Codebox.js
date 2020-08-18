@@ -3,7 +3,8 @@ import cn from 'classnames';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
-import { Icon, Typo } from '@/fork-ui/core';
+import { Typo } from '@/fork-ui/core';
+import { Code, DotsVertical } from '@@/fork-ui/src/components/Icon';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -99,14 +100,14 @@ const Codebox = ({ className, Component }) => {
       <CodeboxHeader>
         {Component.header}
         <div>
-          <Icon
+          <Code
             className="__code mr-3"
-            glassed name="code"
+            glassed
             onClick={toggleShowCode}
           />
-          <Icon
+          <DotsVertical
             className="__option"
-            glassed name="dots-vertical"
+            glassed
           />
         </div>
       </CodeboxHeader>

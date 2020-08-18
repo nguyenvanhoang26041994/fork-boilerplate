@@ -1,13 +1,14 @@
 import React from 'react';
 import { SpeedDial, Button } from '@/fork-ui/core';
+import { CloudDownload, Coin, ColorSwatch } from '@@/fork-ui/src/components/Icon';
 
 const SpeedDialDemo = ({ ...otherProps }) => {
   return (
     <SpeedDial {...otherProps} overlay={
       <React.Fragment>
-        <SpeedDial.Button disabled onClick={() => console.log('Hi')} icon="cloud-download" />
-        <SpeedDial.Button primary onClick={() => console.log('Hello')} icon="coin" />
-        <SpeedDial.Button onClick={() => console.log('Chào')} icon="color-swatch" />
+        <SpeedDial.Button disabled onClick={() => console.log('Hi')} icon={<CloudDownload />} />
+        <SpeedDial.Button primary onClick={() => console.log('Hello')} icon={<Coin />} />
+        <SpeedDial.Button onClick={() => console.log('Chào')} icon={<ColorSwatch />} />
       </React.Fragment>
     }/>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Button, ButtonGroup } from '@/fork-ui/core';
+import { Power, Message, Bell } from '@@/fork-ui/src/components/Icon';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,19 +16,19 @@ const Demo = () => {
   return (
     <Wrapper>
       <ButtonGroup>
-        <Button icon="power" />
-        <Button icon="message" />
-        <Button icon="bell" />
+        <Button icon={<Power />} />
+        <Button icon={<Message />} />
+        <Button icon={<Bell />} />
       </ButtonGroup>
       <ButtonGroup primary>
-        <Button icon="power" />
-        <Button icon="message" />
-        <Button icon="bell" />
+        <Button icon={<Power />} />
+        <Button icon={<Message />} />
+        <Button icon={<Bell />} />
       </ButtonGroup>
       <ButtonGroup glassed>
-        <Button icon="power" />
-        <Button icon="message" />
-        <Button icon="bell" />
+        <Button icon={<Power />} />
+        <Button icon={<Message />} />
+        <Button icon={<Bell />} />
       </ButtonGroup>
     </Wrapper>
   );
