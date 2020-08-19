@@ -1,19 +1,5 @@
-import { config } from '../../ConfigProvider';
+import React from 'react';
 
-const icons = config.icons.reduce((_icons, icon) => {
-  try {
-    _icons[icon] = require(`./${icon}`).default;
-    return _icons;
-  } catch (e) {
-    console.error(`${icon} not exsist!`);
-  }
-}, {});
-
-export default icons;
-/*
-const icons = {
-  {{#each importers}}
-  '{{this}}': require('./{{this}}').default,
-  {{/each}}
-};
-*/
+{{#each importers}}
+{{this}}
+{{/each}}

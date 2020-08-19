@@ -3,14 +3,8 @@ const ConfigProvider = require('@@/fork-ui/src/components/ConfigProvider').defau
 });
 import React, { useState, useMemo, useEffect } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import loadable from './utils/loadable';
 import AppContext from './AppContext';
-import AppSkeleton from './AppSkeleton';
-
-const fallback = <AppSkeleton />;
-
-const Dashboard = loadable(() => import('@@/.guide/Dashboard'), { fallback });
-const SystemDesign = loadable(() => import('./SystemDesign'), { fallback });
+import NewGuide from './NewGuide';
 
 const App = () => {
   const [isDark, setIsDark] = useState(true);
@@ -18,10 +12,6 @@ const App = () => {
     isDark,
     setIsDark,
   }), [isDark, setIsDark]);
-
-  useEffect(() => {
-    // document.getElementById('app-loader').remove();
-  }, []);
 
   useEffect(() => {
     if (isDark) {
@@ -38,9 +28,9 @@ const App = () => {
       <AppContext.Provider value={appValue}>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route exact path="/document/*" component={Dashboard} />
-            <Route path="" component={Dashboard} />
+            <Route exact path="/" component={NewGuide} />
+            <Route exact path="/document/*" component={NewGuide} />
+            <Route path="" component={NewGuide} />
           </Switch>
         </BrowserRouter>
       </AppContext.Provider>

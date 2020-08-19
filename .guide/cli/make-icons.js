@@ -1,4 +1,3 @@
-const fs = require('fs-extra');
 const path = require('path');
 const Handlebars = require('handlebars');
 const readFolder = require('./utils/read-folder');
@@ -7,28 +6,12 @@ const makeFile = require('./utils/make-file');
 
 const rcNeumorphismRoot = path.resolve('fork-ui');
 const TablerIconTemplate = readFile(path.join(__dirname, '/templates/Icon/svg/tabler-icon.hbs'));
-const TablerIconTemplate2 = readFile(path.join(__dirname, '/templates/Icon/svg/tabler-icon2.hbs'));
-const IndexTemplate = readFile(path.join(__dirname, '/templates/Icon/svg/index.hbs'));
-const IndexTemplate2 = readFile(path.join(__dirname, '/templates/Icon/svg/index2.hbs'));
 
-const makeTablerIcon = function(iconName) {
-  let str = TablerIconTemplate;
-  let svg = readFile(path.resolve(`tabler-icons/icons/${iconName}.svg`));
-  svg = svg
-    .replace(/\<svg .+\>/, '<svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">')
-    .replace(/\n+$/, '')
-    .replace('stroke-dasharray', 'strokeDasharray')
-    .replace('stroke-dashoffset', 'strokeDashoffset');
-
-  str = str.replace('__INJECT__FLAG__', svg);
-
-  makeFile(path.join(rcNeumorphismRoot, `/src/components/Icon/svg/${iconName}.js`), str);
-};
 function capitalizeFirstLetter(str) {
   return str.split('-').map(_str => _str.charAt(0).toUpperCase() + _str.slice(1)).join('');
 }
-const makeTablerIcon2 = function(iconName) {
-  let str = TablerIconTemplate2;
+const makeTablerIcon = function(iconName) {
+  let str = TablerIconTemplate;
   let svg = readFile(path.resolve(`tabler-icons/icons/${iconName}.svg`));
   svg = svg
     .replace(/\<svg .+\>/, '<svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">')
@@ -47,21 +30,7 @@ const makeTablerIcons = function() {
     .filter(icon => /.svg$/.test(icon))
     .map(icon => icon.replace(/.svg$/, ''));
 
-  icons.map(iconName => makeTablerIcon(iconName));
-
-  makeFile(
-    path.join(rcNeumorphismRoot, '/src/components/Icon/svg/index.js'),
-    Handlebars.compile(IndexTemplate)({ importers: icons })
-  );
-};
-
-const makeTablerIcons2 = function() {
-  let icons = readFolder(path.resolve('tabler-icons/icons')) || [];
-  icons = icons
-    .filter(icon => /.svg$/.test(icon))
-    .map(icon => icon.replace(/.svg$/, ''));
-
-  icons = icons.map(iconName => makeTablerIcon2(iconName));
+  icons = icons.map(iconName => makeTablerIcon(iconName));
   const header = 'import React from \'react\';\nimport enhancerIcon from \'\.\/enhancerIcon\';\n\n';
 
   makeFile(
@@ -73,7 +42,7 @@ const makeTablerIcons2 = function() {
 const makeFlagIcons = function() {}
 
 const makeIcons = function() {
-  makeTablerIcons2();
+  makeTablerIcons();
   makeFlagIcons();
 };
 
