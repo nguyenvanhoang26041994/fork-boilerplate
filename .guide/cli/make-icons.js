@@ -17,7 +17,8 @@ const makeTablerIcon = function(iconName) {
     .replace(/\<svg .+\>/, '<svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">')
     .replace(/\n+$/, '')
     .replace('stroke-dasharray', 'strokeDasharray')
-    .replace('stroke-dashoffset', 'strokeDashoffset');
+    .replace('stroke-dashoffset', 'strokeDashoffset')
+    .replace('xlink:href', 'xlinkHref');
 
   str = str.replace('__INJECT__FLAG__', svg);
 

@@ -8,8 +8,8 @@ const IconBoxWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 5rem;
+  height: 5rem;
 
   &:hover {
     color: var(--primary--500);
@@ -37,7 +37,7 @@ const IconBox = ({ Icon, name }) => {
 
   return (
     <IconBoxWrapper>
-      {isCopied ? <Check color="green" /> : <Icon fontSize="1.5rem" onClick={onClick} />}
+      {isCopied ? <Check color="green" fontSize="1.25rem" /> : <Icon fontSize="1.25rem" onClick={onClick} />}
     </IconBoxWrapper>
   );
 };

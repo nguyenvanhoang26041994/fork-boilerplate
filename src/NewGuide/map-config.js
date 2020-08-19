@@ -1,5 +1,5 @@
 import React from 'react';
-import leftSidebar from './guide.config';
+import leftSidebar from '../../guide.config';
 import { Point, Home, DeviceDesktop, Box, Bell } from '@@/fork-ui/src/components/Icon';
 
 function capitalizeFirstLetter(str) {

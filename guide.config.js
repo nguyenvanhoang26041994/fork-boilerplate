@@ -2,7 +2,7 @@ import React from 'react';
 import {
   CaretDown,
   Template,
-  Apps,
+  GridDots,
   Typography,
   Mouse,
   Photo,
@@ -11,7 +11,8 @@ import {
   Browser,
   DotsVertical,
   Bell,
-  DeviceDesktop
+  DeviceDesktop,
+  LayoutCards
 } from '@@/fork-ui/src/components/Icon';
 
 const leftSidebar = {
@@ -19,13 +20,13 @@ const leftSidebar = {
     type: 'group',
     items: {
       QueryBuilder: {
-        icon: <Template />,
+        icon: <LayoutCards />,
       },
       Flex: {
         icon: <Template />,
       },
       Icon: {
-        icon: <Apps />,
+        icon: <GridDots />,
       },
       Typography: {
         icon: <Typography />,
