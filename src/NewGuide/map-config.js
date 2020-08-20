@@ -1,12 +1,11 @@
 import React from 'react';
 import leftSidebar from '../../guide.config';
-import { Point, Home, DeviceDesktop, Box, Bell } from '@@/fork-ui/src/components/icons';
+import { Point } from '@@/fork-ui/src/components/icons';
 
-function capitalizeFirstLetter(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+const splitCamelCase = str => {
+  return str.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
 }
 
-const _mapRouterForBreadcrumb = {};
 const mapRouter = (function() {
   const _mapRouter = {};
   const leftSidebarKeys = Object.keys(leftSidebar);
@@ -20,7 +19,6 @@ const mapRouter = (function() {
       const _key = `/document/${iKeyLowerCase}`;
       const _value = iKeyLowerCase;
       _mapRouter[_key] = _value;
-      _mapRouterForBreadcrumb[_key] = lSBKey;
     });
   });
 
@@ -35,7 +33,7 @@ const mapMenuItem = (function() {
     _mapMenuItem[lSBKey] = {
       ...leftSidebar[lSBKey],
       key: `${leftSidebar[lSBKey].type}-${lSBKey.toLowerCase()}`,
-      title: lSBKey,
+      title: splitCamelCase(lSBKey),
       items: (function() {
         const _items = {...leftSidebar[lSBKey].items};
         const itemKeys = Object.keys(leftSidebar[lSBKey].items);
@@ -43,7 +41,7 @@ const mapMenuItem = (function() {
         itemKeys.forEach(iKey => {
           _items[iKey] = {...leftSidebar[lSBKey].items[iKey]};
           _items[iKey].key = iKey.toLowerCase();
-          _items[iKey].title = iKey;
+          _items[iKey].title = splitCamelCase(iKey);
 
           if (leftSidebar[lSBKey].type === 'sub') {
             _items[iKey].icon = <Point />;
@@ -59,67 +57,7 @@ const mapMenuItem = (function() {
   return _mapMenuItem;
 })();
 
-const mapBreadcrumb = (function() {
-  const _home = {
-    key: 'home',
-    title: 'Home',
-    icon: <Home />,
-    _href: '/',
-  };
-  
-  const _components = {
-    key: 'components',
-    title: 'Components',
-    icon: <DeviceDesktop />,
-    _href: '/',
-  };
-  
-  const _overlay = {
-    key: 'overlay',
-    icon: <Bell />,
-    title: 'Overlay',
-    _href: '/',
-  };
-  
-  const _form = {
-    key: 'form',
-    icon: <Box />,
-    title: 'Form',
-    _href: '/',
-  };
-
-  const _mapBreadcrumb = {
-    '/': [],
-  };
-
-  Object.keys(mapRouter).forEach(key => {
-    const inject = [_home];
-    if (_mapRouterForBreadcrumb[key] === 'Components') {
-      inject.push(_components);
-    }
-
-    if (_mapRouterForBreadcrumb[key] === 'Form') {
-      inject.push(_form);
-    }
-
-    if (_mapRouterForBreadcrumb[key] === 'Overlay') {
-      inject.push(_overlay);
-    }
-
-    const self = {
-      key: mapRouter[key],
-      _href: key,
-      title: capitalizeFirstLetter(mapRouter[key]),
-    };
-    inject.push(self);
-    _mapBreadcrumb[key] = inject;
-  });
-
-  return _mapBreadcrumb; 
-})();
-
 export {
   mapRouter,
   mapMenuItem,
-  mapBreadcrumb,
 };

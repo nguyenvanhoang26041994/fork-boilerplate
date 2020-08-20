@@ -11,7 +11,8 @@ import {
   Bell,
   LayoutCards,
   Eye,
-  Dots
+  Dots,
+  User
 } from '@@/fork-ui/src/components/icons';
 
 const leftSidebar = {
@@ -39,14 +40,9 @@ const leftSidebar = {
       SpeedDial: {
         icon: <Dots />,
       },
-      QueryBuilder: {
-        icon: <LayoutCards />,
-      },
       Flex: {
         icon: <Template />,
       },
-      Breadcrumb: {},
-      Avatar: {},
     }
   },
   DataDisplay: {
@@ -62,7 +58,11 @@ const leftSidebar = {
       Tooltip: {},
       Timeline: {},
       Carousel: {},
+      Stepper: {},
       Chip: {},
+      Breadcrumb: {},
+      Pagination: {},
+      Avatar: {},
     }
   },
   Feedback: {
@@ -98,6 +98,7 @@ const leftSidebar = {
       Progress: {},
       Loader: {},
       Skeleton: {},
+      Box: {},
     }
   },
   Staff: {
@@ -106,11 +107,9 @@ const leftSidebar = {
     items: {
       Affix: {},
       Anchor: {},
-      Box: {},
-      Stepper: {},
       Divider: {},
-      Pagination: {},
       Upload: {},
+      QueryBuilder: {},
     },
   },
 };
