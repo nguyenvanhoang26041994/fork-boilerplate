@@ -13,26 +13,26 @@ import {
   Bell,
   DeviceDesktop,
   LayoutCards
-} from '@@/fork-ui/src/components/Icon';
+} from '@@/fork-ui/src/components/icons';
 
 const leftSidebar = {
   Popular: {
     type: 'group',
     items: {
+      Icon: {
+        icon: <GridDots />,
+      },
+      Button: {
+        icon: <Mouse />,
+      },
+      Typography: {
+        icon: <Typography />,
+      },
       QueryBuilder: {
         icon: <LayoutCards />,
       },
       Flex: {
         icon: <Template />,
-      },
-      Icon: {
-        icon: <GridDots />,
-      },
-      Typography: {
-        icon: <Typography />,
-      },
-      Button: {
-        icon: <Mouse />,
       },
       Image: {
         icon: <Photo />,

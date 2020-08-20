@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
-import { Rater } from '@/fork-ui/core';
-import { Heart } from '@@/fork-ui/src/components/Icon';
+import { Rater } from '@@/fork-ui/src/components/core';
+import { Heart } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
   const [star, setStar] = useState(1);

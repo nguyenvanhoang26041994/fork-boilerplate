@@ -1,6 +1,6 @@
 import React, { useState, useCallback }  from 'react';
-import { Progress, Button, ButtonGroup } from '@/fork-ui/core';
-import { Minus, Plus } from '@@/fork-ui/src/components/Icon';
+import { Progress, Button, ButtonGroup } from '@@/fork-ui/src/components/core';
+import { Minus, Plus } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
   const [percent, setPercent] = useState(0.1);

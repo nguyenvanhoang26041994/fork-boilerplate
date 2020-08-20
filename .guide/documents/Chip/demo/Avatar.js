@@ -1,7 +1,7 @@
 import React  from 'react';
 import styled from 'styled-components';
 
-import { Chip, Avatar } from '@/fork-ui/core';
+import { Chip, Avatar } from '@@/fork-ui/src/components/core';
 
 const Wrapper = styled.div`
   display: flex;

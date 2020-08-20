@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox } from '@/fork-ui/core';
+import { Checkbox } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

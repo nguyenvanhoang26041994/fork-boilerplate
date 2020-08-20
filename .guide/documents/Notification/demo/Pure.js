@@ -2,10 +2,10 @@ import React from 'react';
 import {
   PureNotification,
   Avatar,
-} from '@/fork-ui/core';
+} from '@@/fork-ui/src/components/core';
 
 const avatarLink = '';
-import { Globe } from '@@/fork-ui/src/components/Icon';
+import { Globe } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
   return (

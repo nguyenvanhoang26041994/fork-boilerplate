@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Badge, Avatar, Popover, Menu, Button } from '@/fork-ui/core';
-import { Bell, MessageCircle, IndentDecrease, IndentIncrease, Search } from '@@/fork-ui/src/components/Icon';
+import { Badge, Avatar, Popover, Menu, Button } from '@@/fork-ui/src/components/core';
+import { Bell, MessageCircle, IndentDecrease, IndentIncrease, Search } from '@@/fork-ui/src/components/icons';
 import DarkModeToggle from '@/containers/DarkModeToggle';
 
 const TopNavContainer = styled.nav`

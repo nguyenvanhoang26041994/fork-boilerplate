@@ -1,5 +1,5 @@
 import React from 'react';
-import { Skeleton } from '@/fork-ui/core';
+import { Skeleton } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

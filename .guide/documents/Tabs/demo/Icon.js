@@ -1,6 +1,6 @@
 import React from 'react';
-import { Tabs } from '@/fork-ui/core';
-import { DeviceDesktop, Message, Copy, Tool } from '@@/fork-ui/src/components/Icon';
+import { Tabs } from '@@/fork-ui/src/components/core';
+import { DeviceDesktop, Message, Copy, Tool } from '@@/fork-ui/src/components/icons';
 
 const Description = ({ content }) => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu } from '@/fork-ui/core';
+import { Menu } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

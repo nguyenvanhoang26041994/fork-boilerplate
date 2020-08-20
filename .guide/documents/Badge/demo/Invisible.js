@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Badge, Switch } from '@/fork-ui/core';
+import { Badge, Switch } from '@@/fork-ui/src/components/core';
 
 const FancyBox = ({ size, circle }) => (
   <div

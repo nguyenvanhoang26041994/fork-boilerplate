@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Collapse, Divider } from '@/fork-ui/core';
+import { Collapse, Divider } from '@@/fork-ui/src/components/core';
 
 const Description = () => {
   return (

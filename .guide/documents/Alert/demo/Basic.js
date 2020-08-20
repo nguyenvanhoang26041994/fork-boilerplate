@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Button, Alert } from '@/fork-ui/core';
+import { Button, Alert } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const [open, setOpen] = useState();

@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from 'react';
-import { InputNumber } from '@/fork-ui/core';
+import { InputNumber } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const ref = useRef();

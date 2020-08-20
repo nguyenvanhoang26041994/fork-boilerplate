@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Button, ButtonGroup } from '@/fork-ui/core';
-import { Power, Message, Bell } from '@@/fork-ui/src/components/Icon';
+import { Button, ButtonGroup } from '@@/fork-ui/src/components/core';
+import { Power, Message, Bell } from '@@/fork-ui/src/components/icons';
 
 const Wrapper = styled.div`
   display: flex;

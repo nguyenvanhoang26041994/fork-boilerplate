@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import { Collapse } from '@/fork-ui/core';
-import { Messages, DeviceDesktop, Power } from '@@/fork-ui/src/components/Icon';
+import { Collapse } from '@@/fork-ui/src/components/core';
+import { Messages, DeviceDesktop, Power } from '@@/fork-ui/src/components/icons';
 
 const Description = () => {
   return (

@@ -1,58 +1,36 @@
 import React from 'react';
 import Markdown from '@@/.guide/Markdown';
-import { Anchor } from '@/fork-ui/core';
+import { Anchor } from '@@/fork-ui/src/components/core';
 import Codebox from '@@/.guide/Codebox';
 
 {{#each importers}}
-import {{this}} from './demo/{{this}}';
+import {{this}} from '@@/.guide/_documents/{{../documentName}}/demo/{{this}}';
 {{/each}}
-
-const README = '';
-const API = '';
 
 export default () => {
   return (
     <div className="flex flex-wrap">
       <div className="flex flex-col w-1/3">
-        {{!-- <Markdown md={README} /> --}}
         {{#each importersLeft}}
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ {{this}} } />
         </div>
         {{/each}}
-        {{!-- <Markdown md={API} /> --}}
       </div>
       <div className="flex flex-col w-1/3" style={ { paddingLeft: '1px' } }>
-        {{!-- <Markdown md={README} /> --}}
         {{#each importersMiddle}}
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ {{this}} } />
         </div>
         {{/each}}
-        {{!-- <Markdown md={API} /> --}}
       </div>
       <div className="flex flex-col w-1/3" style={ { paddingLeft: '1px' } }>
-        {{!-- <Markdown md={README} /> --}}
         {{#each importersRight}}
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ {{this}} } />
         </div>
         {{/each}}
-        {{!-- <Markdown md={API} /> --}}
       </div>
-      {{!-- <div className="pl-1" style={ { flexBasis: '200px' } }>
-        <Anchor
-          top={69}
-          style={ {
-            backgroundColor: 'var(--rc-color--300)',
-            height: 'calc(100vh - 69px',
-          } }
-        >
-          {{#each importers}}
-           <Anchor.Link key={`#${ {{this}}.href}` } title={ {{this}}.anchorTitle } />
-          {{/each}}
-        </Anchor>
-      </div> --}}
     </div>
   );
 };

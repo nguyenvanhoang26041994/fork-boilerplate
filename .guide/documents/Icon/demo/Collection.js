@@ -1,6 +1,6 @@
 import React from 'react';
-import { Tooltip } from '@/fork-ui/core';
-import * as list from '@@/fork-ui/src/components/Icon';
+import { Tooltip } from '@@/fork-ui/src/components/core';
+import * as list from '@@/fork-ui/src/components/icons';
 
 const IconBox = ({ Icon, name }) => {
   return (

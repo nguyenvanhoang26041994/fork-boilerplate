@@ -1,5 +1,5 @@
 import React from 'react';
-import { QueryBuilder } from '@/fork-ui/core';
+import { QueryBuilder } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

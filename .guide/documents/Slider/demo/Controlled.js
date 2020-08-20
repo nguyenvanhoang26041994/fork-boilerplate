@@ -1,5 +1,5 @@
 import React, { useState, useCallback }  from 'react';
-import { Slider, Button, ButtonGroup, Switch } from '@/fork-ui/core';
+import { Slider, Button, ButtonGroup, Switch } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const [value, setValue] = useState(77);

@@ -61,53 +61,12 @@ const injectMarkdown = function(documentName, demoName) {
   return '';
 };
 
-const readREADME = function(documentName) {
-  const markdownPath = path.join(__dirname, `../documents/${documentName}/README.md`);
-
-  if (fs.pathExistsSync(markdownPath)) {
-    return readFile(markdownPath);
-  }
-
-  return '';
-};
-
-const readAPI = function(documentName) {
-  const markdownPath = path.join(__dirname, `../documents/${documentName}/API.md`);
-
-  if (fs.pathExistsSync(markdownPath)) {
-    return readFile(markdownPath);
-  }
-
-  return '';
-};
-
-const injectREADME = function(documentName) {
-  return readREADME(documentName).replace(/\`/g, '\\\`');
-};
-
-const injectAPI = function(documentName) {
-  return readAPI(documentName).replace(/\`/g, '\\\`');
-};
-
-const autoRenComponentREADME = function(componentName) {
-  const README = readREADME(componentName);
-  const API = readAPI(componentName);
-
-  if (README || API) {
-    makeFile(
-      path.resolve(`fork-ui/src/components/${componentName}/README.md`),
-      `${README}\n${API}`
-    );
-  }
-};
-
 const makeDemo = function(documentName, demoName) {
   let demoStr = readFile(path.join(__dirname, `../documents/${documentName}/demo/${demoName}.js`));
   let injectedStr = demoStr;
   injectedStr += Handlebars.compile(DemoTemplate)(makeHeader(demoName, documentName));
   injectedStr += `\nDemo.code = \`${
     demoStr
-      .replace(/@\/fork-ui/g, 'fork-ui')
       .replace(/\`/g, '\\\`')
   }\`;`;
 
@@ -148,19 +107,13 @@ const makeDocument = function(documentName) {
       importersLeft: importersLeft,
       importersMiddle: importersMiddle,
       importersRight: importersRight,
+      documentName: documentName,
     });
-
-    const README = injectREADME(documentName);
-    const API = injectAPI(documentName);
-
-    injectStr = injectStr.replace('const README = \'\';', `const README = \`${README}\`;`);
-    injectStr = injectStr.replace('const API = \'\';', `const API = \`${API}\`;`);
 
     makeFile(
       path.join(__dirname, `../_documents/${documentName}/Document.js`),
       injectStr
     );
-    autoRenComponentREADME(documentName);
 };
 
 const makeDocuments = function() {

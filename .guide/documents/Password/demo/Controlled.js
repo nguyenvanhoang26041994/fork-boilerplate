@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Password } from '@/fork-ui/core';
+import { Password } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const [value, setValue] = useState('');

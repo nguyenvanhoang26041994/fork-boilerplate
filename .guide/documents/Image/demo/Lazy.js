@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from '@/fork-ui/core';
+import { Image } from '@@/fork-ui/src/components/core';
 
 const Demo = () => (
   <Image

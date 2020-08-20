@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Button, helper } from '@/fork-ui/core';
+import { Button, helper } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const onOpen = useCallback(() => {

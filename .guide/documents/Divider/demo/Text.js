@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider } from '@/fork-ui/core';
+import { Divider } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

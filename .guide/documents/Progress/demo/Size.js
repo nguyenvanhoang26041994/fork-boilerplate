@@ -1,5 +1,5 @@
 import React  from 'react';
-import { Progress } from '@/fork-ui/core';
+import { Progress } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Collapse } from '@/fork-ui/core';
+import { Collapse } from '@@/fork-ui/src/components/core';
 
 const Description = () => {
   return (

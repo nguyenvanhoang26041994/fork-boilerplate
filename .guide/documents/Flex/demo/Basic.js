@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from '@/fork-ui/core';
+import { Flex } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

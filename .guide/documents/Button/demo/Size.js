@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from '@/fork-ui/core';
+import { Button } from '@@/fork-ui/src/components/core';
 
 const Wrapper = styled.div`
   display: flex;

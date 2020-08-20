@@ -1,6 +1,6 @@
 import React from 'react';
-import { Stepper } from '@/fork-ui/core';
-import { Home, Message, Copy, Power } from '@@/fork-ui/src/components/Icon';
+import { Stepper } from '@@/fork-ui/src/components/core';
+import { Home, Message, Copy, Power } from '@@/fork-ui/src/components/icons';
 
 Message
 const Demo = () => {

@@ -38,7 +38,7 @@ import {
   // Calendar,
   DatePicker,
 } from './fork-ui/core';
-import { Messages, Send, ThumbUp, Repeat, LayersDifference, Star, Bell, Copy, Tool, Share, Heart, Power, CloudDownload, Apps, Message, Check, Trash, Dots, Home } from '@@/fork-ui/src/components/Icon';
+import { Messages, Send, ThumbUp, Repeat, LayersDifference, Star, Bell, Copy, Tool, Share, Heart, Power, CloudDownload, Apps, Message, Check, Trash, Dots, Home } from '@@/fork-ui/src/components/icons';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

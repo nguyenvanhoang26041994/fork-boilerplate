@@ -1,5 +1,5 @@
 import React from 'react';
-import { Slider } from '@/fork-ui/core';
+import { Slider } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

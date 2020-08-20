@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-import { Badge } from '@/fork-ui/core';
+import { Badge } from '@@/fork-ui/src/components/core';
 
 const FancyBox = ({
   size = '50px',

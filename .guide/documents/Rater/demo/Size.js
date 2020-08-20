@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Rater } from '@/fork-ui/core';
+import { Rater } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const [star, setStar] = useState(1);

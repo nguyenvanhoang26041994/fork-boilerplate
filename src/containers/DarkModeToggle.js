@@ -1,5 +1,5 @@
 import React, { useContext, useCallback } from 'react';
-import { Switch } from '@/fork-ui/core';
+import { Switch } from '@@/fork-ui/src/components/core';
 
 import AppContext from '@/AppContext';
 

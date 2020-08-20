@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Tabs } from '@/fork-ui/core';
+import { Tabs } from '@@/fork-ui/src/components/core';
 
 const Description = ({ content }) => {
   return (

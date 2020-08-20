@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Form } from '@/fork-ui/core';
+import { Form } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const onChange = useCallback((e) => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Breadcrumb } from '@/fork-ui/core';
-import { Home, DeviceDesktop } from '@@/fork-ui/src/components/Icon';
+import { Breadcrumb } from '@@/fork-ui/src/components/core';
+import { Home, DeviceDesktop } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
   return (

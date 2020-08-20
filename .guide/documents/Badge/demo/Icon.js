@@ -1,6 +1,6 @@
 import React from 'react';
-import { Badge } from '@/fork-ui/core';
-import { Message, Check } from '@@/fork-ui/src/components/Icon';
+import { Badge } from '@@/fork-ui/src/components/core';
+import { Message, Check } from '@@/fork-ui/src/components/icons';
 
 const FancyBox = ({ size, circle }) => (
   <div

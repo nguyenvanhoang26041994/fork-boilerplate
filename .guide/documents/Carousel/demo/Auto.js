@@ -1,6 +1,6 @@
 import React from 'react';
-import { Carousel, Badge } from '@/fork-ui/core';
-import { Messages } from '@@/fork-ui/src/components/Icon';
+import { Carousel, Badge } from '@@/fork-ui/src/components/core';
+import { Messages } from '@@/fork-ui/src/components/icons';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

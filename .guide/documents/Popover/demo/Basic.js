@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Popover, Stepper } from '@/fork-ui/core';
+import { Button, Popover, Stepper } from '@@/fork-ui/src/components/core';
 
 const StepperDemo = () => {
   return (

@@ -7,6 +7,12 @@ import { ScrollUp } from '@@/fork-ui/src/components/core';
 
 import SystemDesign from '../SystemDesign';
 import IconGuide from './guides/IconGuide';
+import ButtonGuide from './guides/ButtonGuide';
+import DrawerGuide from './guides/DrawerGuide';
+import MenuGuide from './guides/MenuGuide';
+import BadgeGuide from './guides/BadgeGuide';
+import TabsGuide from './guides/TabsGuide';
+import CollapseGuide from './guides/CollapseGuide';
 
 const Dashboard = ({}) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -21,6 +27,12 @@ const Dashboard = ({}) => {
           <div className="flex-1">
             <Switch>
               <Route path="/document/icon" component={ IconGuide } />
+              <Route path="/document/button" component={ ButtonGuide } />
+              <Route path="/document/drawer" component={ DrawerGuide } />
+              <Route path="/document/menu" component={ MenuGuide } />
+              <Route path="/document/badge" component={ BadgeGuide } />
+              <Route path="/document/tabs" component={ TabsGuide } />
+              <Route path="/document/collapse" component={ CollapseGuide } />
               <Route path="/" component={SystemDesign} />
             </Switch>
           </div>

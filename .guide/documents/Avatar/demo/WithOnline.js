@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Badge } from '@/fork-ui/core';
+import { Avatar, Badge } from '@@/fork-ui/src/components/core';
 
 const avatarLink = '';
 

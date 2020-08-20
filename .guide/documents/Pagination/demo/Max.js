@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Pagination } from '@/fork-ui/core';
+import { Pagination } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const [activePage, setActivePage] = useState(1);

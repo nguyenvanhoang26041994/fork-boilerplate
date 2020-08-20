@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popconfirm, Button } from '@/fork-ui/core';
+import { Popconfirm, Button } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

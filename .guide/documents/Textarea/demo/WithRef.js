@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from 'react';
-import { Textarea } from '@/fork-ui/core';
+import { Textarea } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const ref = useRef();

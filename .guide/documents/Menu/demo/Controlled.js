@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Menu, Divider } from '@/fork-ui/core';
+import { Menu, Divider } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);

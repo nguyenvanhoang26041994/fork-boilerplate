@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '@/fork-ui/core';
+import { Avatar } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

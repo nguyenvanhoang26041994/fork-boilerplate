@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loader } from '@/fork-ui/core';
+import { Loader } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

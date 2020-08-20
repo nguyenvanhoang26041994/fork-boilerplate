@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { PureConfirm } from '@/fork-ui/core';
+import { PureConfirm } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const onCancel = useCallback(() => console.log('CANCEL'), []);

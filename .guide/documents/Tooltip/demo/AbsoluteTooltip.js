@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Tooltip } from '@/fork-ui/core';
+import { Button, Tooltip } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

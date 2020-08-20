@@ -1,5 +1,5 @@
 import React from 'react';
-import { Anchor } from '@/fork-ui/core';
+import { Anchor } from '@@/fork-ui/src/components/core';
 
 const Link = ({ id, children }) => (
   <a className="px-5" id={id} style={{ height: '100px'}}>

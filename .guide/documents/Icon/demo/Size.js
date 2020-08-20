@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alarm } from '@@/fork-ui/src/components/Icon';
+import { Alarm } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
   return (

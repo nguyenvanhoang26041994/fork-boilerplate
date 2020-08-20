@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import copyToClipboard from '@@/fork-ui/src/utils/copyToClipboard';
-import * as icons from '@@/fork-ui/src/components/Icon';
+import * as icons from '@@/fork-ui/src/components/icons';
 const Check = icons.Check;
 
 const IconBoxWrapper = styled.div`

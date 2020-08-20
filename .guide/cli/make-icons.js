@@ -35,7 +35,7 @@ const makeTablerIcons = function() {
   const header = 'import React from \'react\';\nimport enhancerIcon from \'\.\/enhancerIcon\';\n\n';
 
   makeFile(
-    path.join(rcNeumorphismRoot, '/src/components/Icon/index.js'),
+    path.join(rcNeumorphismRoot, '/src/components/icons/index.js'),
     header + icons.join('\n')
   );
 };

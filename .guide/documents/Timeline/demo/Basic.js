@@ -1,6 +1,6 @@
 import React from 'react';
-import { Timeline } from '@/fork-ui/core';
-import { Globe } from '@@/fork-ui/src/components/Icon';
+import { Timeline } from '@@/fork-ui/src/components/core';
+import { Globe } from '@@/fork-ui/src/components/icons';
 
 const NotificationBox = ({ requester, time }) => {
   return (

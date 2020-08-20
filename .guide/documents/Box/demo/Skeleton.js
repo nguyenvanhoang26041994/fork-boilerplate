@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import { Box, Form, Button, Select, Skeleton } from '@/fork-ui/core';
+import { Box, Form, Button, Select, Skeleton } from '@@/fork-ui/src/components/core';
 
 const formSkeleton = (
   <div className="w-full">

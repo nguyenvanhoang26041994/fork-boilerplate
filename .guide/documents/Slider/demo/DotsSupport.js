@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Slider } from '@/fork-ui/core';
+import { Slider } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const [dots] = useState([10,30, 50, 80, 96]);

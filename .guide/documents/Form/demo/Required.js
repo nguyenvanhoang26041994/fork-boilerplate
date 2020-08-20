@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import { Form, Select } from '@/fork-ui/core';
-import { Message, Power, Copy } from '@@/fork-ui/src/components/Icon';
+import { Form, Select } from '@@/fork-ui/src/components/core';
+import { Message, Power, Copy } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
   const onChange = useCallback((e) => {

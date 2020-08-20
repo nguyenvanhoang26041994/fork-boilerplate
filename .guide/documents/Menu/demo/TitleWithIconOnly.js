@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Menu, Switch } from '@/fork-ui/core';
-import { Message, Heart, Star, Bell, CaretDown, Tool, Copy, Dots, Clock } from '@@/fork-ui/src/components/Icon';
+import { Menu, Switch } from '@@/fork-ui/src/components/core';
+import { Message, Heart, Star, Bell, CaretDown, Tool, Copy, Dots, Clock } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
   const [isIconOnly, setIsIconOnly] = useState(true);

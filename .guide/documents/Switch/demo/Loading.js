@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Switch } from '@/fork-ui/core';
+import { Switch } from '@@/fork-ui/src/components/core';
 
 const Wrapper = styled.div`
   display: flex;

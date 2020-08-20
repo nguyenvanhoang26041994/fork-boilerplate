@@ -1,5 +1,5 @@
 import React from 'react';
-import { Textarea } from '@/fork-ui/core';
+import { Textarea } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

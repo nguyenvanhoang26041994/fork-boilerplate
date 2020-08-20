@@ -1,5 +1,5 @@
 import React from 'react';
-import { Upload } from '@/fork-ui/core';
+import { Upload } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (

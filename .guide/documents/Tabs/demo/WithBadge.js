@@ -1,6 +1,6 @@
 import React from 'react';
-import { Tabs, Badge } from '@/fork-ui/core';
-import { Bell, Messages } from '@@/fork-ui/src/components/Icon';
+import { Tabs, Badge } from '@@/fork-ui/src/components/core';
+import { Bell, Messages } from '@@/fork-ui/src/components/icons';
 
 const Description = ({ content }) => {
   return (

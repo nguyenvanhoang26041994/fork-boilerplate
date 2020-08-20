@@ -3,8 +3,8 @@ import cn from 'classnames';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
-import { Typo } from '@/fork-ui/core';
-import { Code, DotsVertical } from '@@/fork-ui/src/components/Icon';
+import { Typo } from '@@/fork-ui/src/components/core';
+import { Code, DotsVertical } from '@@/fork-ui/src/components/icons';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';

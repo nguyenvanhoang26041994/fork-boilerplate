@@ -3,8 +3,8 @@ import {
   Button,
   Avatar,
   helper,
-} from '@/fork-ui/core';
-import { Globe } from '@@/fork-ui/src/components/Icon';
+} from '@@/fork-ui/src/components/core';
+import { Globe } from '@@/fork-ui/src/components/icons';
 
 const avatarLink = '';
 
