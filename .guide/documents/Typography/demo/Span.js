@@ -4,6 +4,7 @@ import { Typo } from '@@/fork-ui/src/components/core';
 const Demo = () => {
   return (
     <div>
+      <Typo>Normal typo</Typo>
       <Typo span>Typo Span</Typo>
       <Typo underline>
         Typo Underline

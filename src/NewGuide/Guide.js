@@ -13,6 +13,8 @@ import MenuGuide from './guides/MenuGuide';
 import BadgeGuide from './guides/BadgeGuide';
 import TabsGuide from './guides/TabsGuide';
 import CollapseGuide from './guides/CollapseGuide';
+import TypoGuide from './guides/TypoGuide';
+import SpeedDialGuide from './guides/SpeedDialGuide';
 
 const Dashboard = ({}) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -33,6 +35,8 @@ const Dashboard = ({}) => {
               <Route path="/document/badge" component={ BadgeGuide } />
               <Route path="/document/tabs" component={ TabsGuide } />
               <Route path="/document/collapse" component={ CollapseGuide } />
+              <Route path="/document/typography" component={ TypoGuide } />
+              <Route path="/document/speeddial" component={ SpeedDialGuide } />
               <Route path="/" component={SystemDesign} />
             </Switch>
           </div>

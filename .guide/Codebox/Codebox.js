@@ -91,8 +91,8 @@ const CodeboxDemo = styled.div`
     padding: 2rem 1rem;
 `;
 
-const Codebox = ({ className, Component }) => {
-  const [showCode, setShowCode] = useState(true);
+const Codebox = ({ className, defaultShowCode, Component }) => {
+  const [showCode, setShowCode] = useState(defaultShowCode);
   const toggleShowCode = useCallback(() => setShowCode(prev => !prev), [setShowCode]);
 
   return (
@@ -123,5 +123,7 @@ const Codebox = ({ className, Component }) => {
     </CodeboxWrapper>
   );
 };
-
+Codebox.defaultProps = {
+  defaultShowCode: true,
+}
 export default Codebox;

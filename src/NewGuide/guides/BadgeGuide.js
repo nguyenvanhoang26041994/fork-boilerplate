@@ -1,6 +1,4 @@
 import React from 'react';
-import Markdown from '@@/.guide/Markdown';
-import { Anchor } from '@@/fork-ui/src/components/core';
 import Codebox from '@@/.guide/Codebox';
 
 import Basic from '@@/.guide/_documents/Badge/demo/Basic';

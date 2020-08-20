@@ -1,18 +1,17 @@
 import React from 'react';
 import {
-  CaretDown,
+  Notification,
   Template,
   GridDots,
   Typography,
   Mouse,
   Photo,
   Box,
-  LayoutSidebar,
-  Browser,
   DotsVertical,
   Bell,
-  DeviceDesktop,
-  LayoutCards
+  LayoutCards,
+  Eye,
+  Dots
 } from '@@/fork-ui/src/components/icons';
 
 const leftSidebar = {
@@ -28,58 +27,53 @@ const leftSidebar = {
       Typography: {
         icon: <Typography />,
       },
-      QueryBuilder: {
-        icon: <LayoutCards />,
-      },
-      Flex: {
-        icon: <Template />,
-      },
       Image: {
         icon: <Photo />,
       },
       Form: {
         icon: <Box />,
       },
-      Drawer: {
-        icon: <LayoutSidebar />,
-      },
-      Modal: {
-        icon: <Browser />,
-      },
       Menu: {
         icon: <DotsVertical />,
       },
-      Tabs: {
-        icon: <Browser />,
+      SpeedDial: {
+        icon: <Dots />,
       },
-      Collapse: {
-        icon: <CaretDown />,
+      QueryBuilder: {
+        icon: <LayoutCards />,
       },
-    }
-  },
-  Components: {
-    type: 'sub',
-    icon: <DeviceDesktop />,
-    items: {
-      Box: {},
-      Badge: {},
-      Checkbox: {},
-      Radio: {},
-      Switch: {},
+      Flex: {
+        icon: <Template />,
+      },
       Breadcrumb: {},
       Avatar: {},
-      Carousel: {},
+    }
+  },
+  DataDisplay: {
+    type: 'sub',
+    icon: <Eye />,
+    items: {
+      Tabs: {},
+      Modal: {},
+      Drawer: {},
+      Badge: {},
+      Collapse: {},
+      Popover: {},
+      Tooltip: {},
       Timeline: {},
-      Stepper: {},
+      Carousel: {},
       Chip: {},
-      Divider: {},
-      Pagination: {},
-      Progress: {},
-      Slider: {},
+    }
+  },
+  Feedback: {
+    type: 'sub',
+    icon: <Notification />,
+    items: {
+      Confirm: {},
+      Popconfirm: {},
+      Alert: {},
+      Notification: {},
       Rater: {},
-      Loader: {},
-      Skeleton: {},
-      Upload: {},
     },
   },
   Form: {
@@ -91,21 +85,32 @@ const leftSidebar = {
       Textarea: {},
       InputNumber: {},
       Select: {},
+      Checkbox: {},
+      Radio: {},
+      Switch: {},
+      Slider: {},
     }
   },
-  Overlay: {
+  Loading: {
+    type: 'sub',
+    icon: <Bell />,
+    items: {
+      Progress: {},
+      Loader: {},
+      Skeleton: {},
+    }
+  },
+  Staff: {
     type: 'sub',
     icon: <Bell />,
     items: {
       Affix: {},
       Anchor: {},
-      Confirm: {},
-      Tooltip: {},
-      Popconfirm: {},
-      Popover: {},
-      Alert: {},
-      Notification: {},
-      SpeedDial: {},
+      Box: {},
+      Stepper: {},
+      Divider: {},
+      Pagination: {},
+      Upload: {},
     },
   },
 };
