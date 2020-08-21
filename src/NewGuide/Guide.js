@@ -39,12 +39,12 @@ import QueryBuilderDocument from '@@/.guide/_documents/QueryBuilder/Document';
 import RadioDocument from '@@/.guide/_documents/Radio/Document';
 import RaterDocument from '@@/.guide/_documents/Rater/Document';
 import SelectDocument from '@@/.guide/_documents/Select/Document';
-import SkeletonDocument from '@@/.guide/_documents/Skeleton/Document';
+import SkeletonGuide from './guides/SkeletonGuide';
 import SliderDocument from '@@/.guide/_documents/Slider/Document';
 import SpeedDialGuide from './guides/SpeedDialGuide';
 import StepperGuide from './guides/StepperGuide';
 import SwitchDocument from '@@/.guide/_documents/Switch/Document';
-import TabsGuide from './guides/ModalGuide';
+import TabsGuide from './guides/TabsGuide';
 import TextareaDocument from '@@/.guide/_documents/Textarea/Document';
 import TextboxDocument from '@@/.guide/_documents/Textbox/Document';
 import TimelineGuide from './guides/TimelineGuide';
@@ -97,7 +97,7 @@ const Dashboard = ({}) => {
               <Route path="/document/radio" component={ RadioDocument } />
               <Route path="/document/rater" component={ RaterDocument } />
               <Route path="/document/select" component={ SelectDocument } />
-              <Route path="/document/skeleton" component={ SkeletonDocument } />
+              <Route path="/document/skeleton" component={ SkeletonGuide } />
               <Route path="/document/slider" component={ SliderDocument } />
               <Route path="/document/speeddial" component={ SpeedDialGuide } />
               <Route path="/document/stepper" component={ StepperGuide } />

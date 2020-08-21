@@ -9,12 +9,12 @@ export default () => {
     <div className="flex flex-wrap">
       <div className="flex flex-col w-1/2">
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Header } />
+          <Codebox Component={ Header } defaultShowCode />
         </div>
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Span } />
+          <Codebox Component={ Span } defaultShowCode />
         </div>
       </div>
     </div>
