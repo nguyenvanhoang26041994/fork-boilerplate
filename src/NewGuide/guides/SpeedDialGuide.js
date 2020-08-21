@@ -11,20 +11,20 @@ export default () => {
     <div className="flex flex-wrap">
       <div className="flex flex-col w-1/3">
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Basic } defaultShowCode={false} />
+          <Codebox Component={ Basic } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ AbsoluteSpeedDial } defaultShowCode={false} />
-        </div>
-      </div>
-      <div className="flex flex-col w-1/3" style={ { paddingLeft: '1px' } }>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Placement } defaultShowCode={false} />
+          <Codebox Component={ AbsoluteSpeedDial } />
         </div>
       </div>
       <div className="flex flex-col w-1/3" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ HorizontalDirection } defaultShowCode={false} />
+          <Codebox Component={ Placement } />
+        </div>
+      </div>
+      <div className="flex flex-col w-1/3" style={ { paddingLeft: '1px' } }>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ HorizontalDirection } />
         </div>
       </div>
     </div>

@@ -64,7 +64,7 @@ const Dashboard = ({}) => {
         <div className="flex m-1">
           <div className="flex-1">
             <Switch>
-            <Route path="/document/affix" component={ AffixDocument } />
+              <Route path="/document/affix" component={ AffixDocument } />
               <Route path="/document/alert" component={ AlertDocument } />
               <Route path="/document/anchor" component={ AnchorDocument } />
               <Route path="/document/avatar" component={ AvatarDocument } />

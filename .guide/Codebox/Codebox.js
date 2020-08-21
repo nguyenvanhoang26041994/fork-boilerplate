@@ -3,7 +3,7 @@ import cn from 'classnames';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
-import { Typo } from '@@/fork-ui/src/components/core';
+import { Animated } from '@@/fork-ui/src/components/core';
 import { Code, DotsVertical } from '@@/fork-ui/src/components/icons';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -24,8 +24,6 @@ const CodeBlock = ({ language, value }) => {
 };
 
 const CodeMarkdownWrapper = styled.div`
-  display: ${props => props.show ? 'block' : 'none'};
-
   > pre {
     margin: 0 !important;
     border-radius: 0 !important;
@@ -43,12 +41,14 @@ const CodeMarkdown = ({ show, children }) => {
   const source = useMemo(() => `\`\`\`jsx\n${children}\n\`\`\``, [children]);
 
   return (
-    <CodeMarkdownWrapper className="code-box-code" show={show}>
-      <ReactMarkdown
-        source={source}
-        renderers={{ code: CodeBlock }}
-      />
-    </CodeMarkdownWrapper>
+    <Animated.Expand isExpanded={show}>
+      <CodeMarkdownWrapper className="code-box-code">
+        <ReactMarkdown
+          source={source}
+          renderers={{ code: CodeBlock }}
+        />
+      </CodeMarkdownWrapper>
+    </Animated.Expand>
   );
 };
 
@@ -114,9 +114,6 @@ const Codebox = ({ className, defaultShowCode, Component }) => {
       <CodeboxDemo>
         <Component />
       </CodeboxDemo>
-      {/* <DescriptionMarkdown>
-        {Component.markdown}
-      </DescriptionMarkdown> */}
       <CodeMarkdown show={showCode}>
         {Component.code}
       </CodeMarkdown>
@@ -124,6 +121,6 @@ const Codebox = ({ className, defaultShowCode, Component }) => {
   );
 };
 Codebox.defaultProps = {
-  defaultShowCode: true,
+  defaultShowCode: false,
 }
 export default Codebox;
