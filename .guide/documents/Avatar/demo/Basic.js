@@ -1,23 +1,31 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Avatar } from '@@/fork-ui/src/components/core';
 
-const avatarLink = '';
+const avatarLink = 'https://i.pinimg.com/originals/ce/53/c5/ce53c5bcd350ba856e5c53c343376fb2.jpg';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const Demo = () => {
   return (
-    <div className="flex">
+    <Wrapper>
+      <Avatar name="H" />
       <Avatar
         src={avatarLink}
-        className="mr-3"
-        name="Hoàng Nguyễn"
+        name="H"
       />
       <Avatar
         src={avatarLink}
-        className="mr-3"
         square
-        name="Hoàng Nguyễn"
+        name="H"
       />
-    </div>
+    </Wrapper>
   );
 };
 

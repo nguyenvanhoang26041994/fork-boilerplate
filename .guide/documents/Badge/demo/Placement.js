@@ -32,20 +32,20 @@ const Demo = () => {
     <div className="flex flex-col w-full items-center">
       <div className="flex">
         <FancyBox hidden className="m-5" />
-        <Badge count={7} placement="top-left" className="m-5">
+        <Badge count={7} topLeft className="m-5">
           <FancyBox>TL</FancyBox>
         </Badge>
-        <Badge count={7} placement="top" className="m-5">
+        <Badge count={7} top className="m-5">
           <FancyBox>T</FancyBox>
         </Badge>
-        <Badge count={7} placement="top-right" className="m-5">
+        <Badge count={7} topRight className="m-5">
           <FancyBox>TR</FancyBox>
         </Badge>
         <FancyBox hidden className="m-5" />
       </div>
 
       <div className="flex">
-        <Badge count={7} placement="left-top" className="m-5">
+        <Badge count={7} leftTop className="m-5">
           <FancyBox>LT</FancyBox>
         </Badge>
         <FancyBox hidden className="m-5" />
@@ -57,38 +57,38 @@ const Demo = () => {
       </div>
 
       <div className="flex">
-        <Badge count={7} placement="left" className="m-5">
+        <Badge count={7} left className="m-5">
           <FancyBox>L</FancyBox>
         </Badge>
         <FancyBox hidden className="m-5" />
         <FancyBox hidden className="m-5" />
         <FancyBox hidden className="m-5" />
-        <Badge count={7} placement="right" className="m-5">
+        <Badge count={7} right className="m-5">
           <FancyBox>R</FancyBox>
         </Badge>
       </div>
 
       <div className="flex">
-        <Badge count={7} placement="left-bottom" className="m-5">
+        <Badge count={7} leftBottom className="m-5">
           <FancyBox>LB</FancyBox>
         </Badge>
         <FancyBox hidden className="m-5" />
         <FancyBox hidden className="m-5" />
         <FancyBox hidden className="m-5" />
-        <Badge count={7} placement="right-bottom" className="m-5">
+        <Badge count={7} rightBottom className="m-5">
           <FancyBox>RB</FancyBox>
         </Badge>
       </div>
 
       <div className="flex">
         <FancyBox hidden className="m-5" />
-        <Badge count={7} placement="bottom-left" className="m-5">
+        <Badge count={7} bottomLeft className="m-5">
           <FancyBox>BL</FancyBox>
         </Badge>
-        <Badge count={7} placement="bottom" className="m-5">
+        <Badge count={7} bottom className="m-5">
           <FancyBox>B</FancyBox>
         </Badge>
-        <Badge count={7} placement="bottom-right" className="m-5">
+        <Badge count={7} bottomRight className="m-5">
           <FancyBox>BR</FancyBox>
         </Badge>
         <FancyBox hidden className="m-5" />

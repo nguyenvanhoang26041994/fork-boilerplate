@@ -15,10 +15,19 @@ const FancyBox = ({ size, circle }) => (
 const Demo = () => {
   return (
     <div className="flex">
+      <Badge className="mr-5">
+        <FancyBox size="50px" />
+      </Badge>
       <Badge count={7} className="mr-5">
         <FancyBox size="50px" />
       </Badge>
-      <Badge count={999}>
+      <Badge count={999} className="mr-5">
+        <FancyBox size="50px" />
+      </Badge>
+      <Badge dot className="mr-5">
+        <FancyBox size="50px" />
+      </Badge>
+      <Badge count={999} dot>
         <FancyBox size="50px" />
       </Badge>
     </div>

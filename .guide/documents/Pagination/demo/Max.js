@@ -10,7 +10,7 @@ const Demo = () => {
       activePage={activePage}
       total={300}
       pageSize={10}
-      max={10}
+      max={7}
       onChange={onChange}
     />
   );

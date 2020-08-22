@@ -1,14 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Checkbox } from '@@/fork-ui/src/components/core';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const Demo = () => {
   return (
-    <div className="flex">
-      <Checkbox className="mr-5" />
-      <Checkbox defaultChecked className="mr-5" />
-      <Checkbox disabled className="mr-5" />
-      <Checkbox disabled defaultChecked className="mr-5" />
-    </div>
+    <Wrapper>
+      <Checkbox />
+      <Checkbox defaultChecked />
+    </Wrapper>
   );
 };
 

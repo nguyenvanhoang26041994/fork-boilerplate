@@ -11,6 +11,10 @@ const IconBoxWrapper = styled.div`
   width: 5rem;
   height: 5rem;
 
+  .fui-icon {
+    cursor: pointer;
+  }
+
   &:hover {
     color: var(--primary--500);
     transform: scale(1.2);

@@ -68,7 +68,7 @@ const TopNavigation = ({ toggleExpand, isExpanded }) => {
                 </Menu>
               )}
             >
-              <Avatar name="Hoàng Nguyễn" />
+              <Avatar name="H" />
             </Popover>
           </NavRight>
         </MainTopNav>

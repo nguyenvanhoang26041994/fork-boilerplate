@@ -33,63 +33,63 @@ const Demo = () => {
     <div className="flex flex-col w-full items-center">
       <div className="flex">
         <FancyBox hidden className="m-5" />
-        <Badge count={7} overlap placement="top-left" className="m-5">
+        <Badge count={7} overlap topLeft className="m-5">
           <FancyBox>TL</FancyBox>
         </Badge>
-        <Badge count={7} overlap placement="top" className="m-5">
+        <Badge count={7} overlap top className="m-5">
           <FancyBox>T</FancyBox>
         </Badge>
-        <Badge count={7} overlap placement="top-right" className="m-5">
+        <Badge count={7} overlap topRight className="m-5">
           <FancyBox>TR</FancyBox>
         </Badge>
         <FancyBox hidden className="m-5" />
       </div>
 
       <div className="flex">
-        <Badge count={7} overlap placement="left-top" className="m-5">
+        <Badge count={7} overlap leftTop className="m-5">
           <FancyBox>LT</FancyBox>
         </Badge>
         <FancyBox hidden className="m-5" />
         <FancyBox hidden className="m-5" />
         <FancyBox hidden className="m-5" />
-        <Badge count={7} overlap placement="right-top" className="m-5">
+        <Badge count={7} placement="right-top" className="m-5">
           <FancyBox>RT</FancyBox>
         </Badge>
       </div>
 
       <div className="flex">
-        <Badge count={7} overlap placement="left" className="m-5">
+        <Badge count={7} overlap left className="m-5">
           <FancyBox>L</FancyBox>
         </Badge>
         <FancyBox hidden className="m-5" />
         <FancyBox hidden className="m-5" />
         <FancyBox hidden className="m-5" />
-        <Badge count={7} overlap placement="right" className="m-5">
+        <Badge count={7} overlap right className="m-5">
           <FancyBox>R</FancyBox>
         </Badge>
       </div>
 
       <div className="flex">
-        <Badge count={7} overlap placement="left-bottom" className="m-5">
+        <Badge count={7} overlap leftBottom className="m-5">
           <FancyBox>LB</FancyBox>
         </Badge>
         <FancyBox hidden className="m-5" />
         <FancyBox hidden className="m-5" />
         <FancyBox hidden className="m-5" />
-        <Badge count={7} overlap placement="right-bottom" className="m-5">
+        <Badge count={7} overlap rightBottom className="m-5">
           <FancyBox>RB</FancyBox>
         </Badge>
       </div>
 
       <div className="flex">
         <FancyBox hidden className="m-5" />
-        <Badge count={7} overlap placement="bottom-left" className="m-5">
+        <Badge count={7} overlap bottomLeft className="m-5">
           <FancyBox>BL</FancyBox>
         </Badge>
-        <Badge count={7} overlap placement="bottom" className="m-5">
+        <Badge count={7} overlap bottom className="m-5">
           <FancyBox>B</FancyBox>
         </Badge>
-        <Badge count={7} overlap placement="bottom-right" className="m-5">
+        <Badge count={7} overlap bottomRight className="m-5">
           <FancyBox>BR</FancyBox>
         </Badge>
         <FancyBox hidden className="m-5" />

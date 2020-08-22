@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from '@@/fork-ui/src/components/core';
-import { Refresh } from '@@/fork-ui/src/components/icons';
+import { Refresh, Dots } from '@@/fork-ui/src/components/icons';
 
 const Wrapper = styled.div`
   display: flex;
@@ -18,6 +18,7 @@ const Demo = () => {
       <Button outlined color="green">Green</Button>
       <Button rounded outlined primary>PRIMARY</Button>
       <Button outlined danger icon={<Refresh />} />
+      <Button primary circle outlined icon={<Dots />} />
     </Wrapper>
   );
 };

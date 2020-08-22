@@ -18,7 +18,7 @@ export default () => {
     <div className="flex flex-wrap">
       <div className="flex flex-col w-1/2">
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Basic } />
+          <Codebox Component={ Basic } defaultShowCode />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ WithIcon } />
@@ -35,7 +35,7 @@ export default () => {
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Size } />
+          <Codebox Component={ Size } defaultShowCode />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Popular } />

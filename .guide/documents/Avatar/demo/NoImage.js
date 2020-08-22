@@ -1,22 +1,29 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Avatar } from '@@/fork-ui/src/components/core';
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const Demo = () => {
   return (
-    <div className="flex">
-      <Avatar name="Hoàng Nguyễn" className="mr-3" />
+    <Wrapper>
+      <Avatar name="H" />
       <Avatar
-        name="Hoàng Nguyễn"
-        className="mr-3"
+        name="H"
         color="orange"
       />
       <Avatar
-        name="Hoàng Nguyễn"
-        className="mr-3"
+        name="H"
         color="#19b39d"
       />
-      <Avatar name="Hoàng Nguyễn" square />
-    </div>
+      <Avatar name="H" square />
+    </Wrapper>
   );
 };
 
