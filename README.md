@@ -8,3 +8,5 @@ Skeleton
 Pagination
 Badge
 Avatar
+Typography
+ScrollUp

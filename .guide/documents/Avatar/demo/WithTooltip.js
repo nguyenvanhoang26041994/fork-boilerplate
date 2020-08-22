@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 const Demo = () => {
   return (
     <Wrapper>
-      <Tooltip title="H">
+      <Tooltip title="Hoàng Nguyễn">
         <Avatar name="H" />
       </Tooltip>
       <Tooltip title="H">

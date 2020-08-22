@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Menu } from '@@/fork-ui/src/components/core';
 import { Home } from '@@/fork-ui/src/components/icons';
-import { mapRouter, mapMenuItem } from '../../map-config';
+import { mapRouter, mapMenuItem } from '@@/.guide/map-config';
 
 const LeftSidebarContainer = styled.div`
   width: 5rem;
@@ -87,20 +87,9 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
         onItemClick={key => history.push(`/document/${key}`)}
       >
         {Object.keys(mapMenuItem).map(key => {
-          if (mapMenuItem[key].type === 'group') {
-            return (
-              <Menu.ItemGroup title={mapMenuItem[key].title} key={mapMenuItem[key].key}>
-                {Object.keys(mapMenuItem[key].items).map(_key => {
-                  return (
-                    <Menu.Item {...mapMenuItem[key].items[_key]} />
-                  );
-                })}
-              </Menu.ItemGroup>
-            );
-          }
           if (mapMenuItem[key].type === 'sub') {
             return (
-              <Menu.Sub title={mapMenuItem[key].title} key={mapMenuItem[key].key} icon={mapMenuItem[key].icon} defaultExpanded>
+              <Menu.Sub title={mapMenuItem[key].title} key={mapMenuItem[key].key} icon={mapMenuItem[key].icon}>
                 {Object.keys(mapMenuItem[key].items).map(_key => {
                   return (
                     <Menu.Item {...mapMenuItem[key].items[_key]} />
@@ -109,6 +98,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
               </Menu.Sub>
             );
           }
+          return <Menu.Item {...mapMenuItem[key]} />
         })}
       </MenuStyled>
     );

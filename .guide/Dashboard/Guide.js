@@ -1,11 +1,11 @@
 import React, { useState, useCallback } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import LeftSidebar from './LeftSidebar';
-import TopNavigation from './TopNavigation';
+import LeftSidebar from '@@/.guide/Dashboard/LeftSidebar';
+import TopNavigation from '@@/.guide/Dashboard/TopNavigation';
 import { ScrollUp } from '@@/fork-ui/src/components/core';
 
-import SystemDesign from '../SystemDesign';
+import SystemDesign from '@@/src/SystemDesign';
 import AffixDocument from '@@/.guide/_documents/Affix/Document';
 import AlertDocument from '@@/.guide/_documents/Alert/Document';
 import AnchorDocument from '@@/.guide/_documents/Anchor/Document';
@@ -80,7 +80,7 @@ const Dashboard = ({}) => {
               <Route path="/document/divider" component={ DividerDocument } />
               <Route path="/document/drawer" component={ DrawerGuide } />
               <Route path="/document/flex" component={ FlexGuide } />
-              <Route path="/document/form" component={ FormGuide } />
+              <Route path="/document/inputfield" component={ FormGuide } />
               <Route path="/document/icon" component={ IconGuide } />
               <Route path="/document/image" component={ ImageGuide } />
               <Route path="/document/inputnumber" component={ InputNumberDocument } />

@@ -4,7 +4,7 @@ const ConfigProvider = require('@@/fork-ui/src/components/ConfigProvider').defau
 import React, { useState, useMemo, useEffect } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import AppContext from './AppContext';
-import NewGuide from './NewGuide';
+import Dashboard from '@@/.guide/Dashboard';
 
 const App = () => {
   const [isDark, setIsDark] = useState(true);
@@ -28,9 +28,9 @@ const App = () => {
       <AppContext.Provider value={appValue}>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={NewGuide} />
-            <Route exact path="/document/*" component={NewGuide} />
-            <Route path="" component={NewGuide} />
+            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/document/*" component={Dashboard} />
+            <Route path="" component={Dashboard} />
           </Switch>
         </BrowserRouter>
       </AppContext.Provider>

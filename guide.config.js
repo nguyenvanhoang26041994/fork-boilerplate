@@ -8,42 +8,36 @@ import {
   Photo,
   Box,
   DotsVertical,
-  Bell,
-  LayoutCards,
+  Rotate2,
   Eye,
   Dots,
-  User
+  Braces,
 } from '@@/fork-ui/src/components/icons';
 
 const leftSidebar = {
-  Popular: {
-    type: 'group',
-    items: {
-      Icon: {
-        icon: <GridDots />,
-      },
-      Button: {
-        icon: <Mouse />,
-      },
-      Typography: {
-        icon: <Typography />,
-      },
-      Image: {
-        icon: <Photo />,
-      },
-      Form: {
-        icon: <Box />,
-      },
-      Menu: {
-        icon: <DotsVertical />,
-      },
-      SpeedDial: {
-        icon: <Dots />,
-      },
-      Flex: {
-        icon: <Template />,
-      },
-    }
+  Icon: {
+    icon: <GridDots />,
+  },
+  Button: {
+    icon: <Mouse />,
+  },
+  Typography: {
+    icon: <Typography />,
+  },
+  Image: {
+    icon: <Photo />,
+  },
+  InputField: {
+    icon: <Box />,
+  },
+  Menu: {
+    icon: <DotsVertical />,
+  },
+  SpeedDial: {
+    icon: <Dots />,
+  },
+  Flex: {
+    icon: <Template />,
   },
   DataDisplay: {
     type: 'sub',
@@ -76,7 +70,7 @@ const leftSidebar = {
       Rater: {},
     },
   },
-  Form: {
+  FormField: {
     type: 'sub',
     icon: <Box />,
     items: {
@@ -93,7 +87,7 @@ const leftSidebar = {
   },
   Loading: {
     type: 'sub',
-    icon: <Bell />,
+    icon: <Rotate2 />,
     items: {
       Progress: {},
       Loader: {},
@@ -103,7 +97,7 @@ const leftSidebar = {
   },
   Staff: {
     type: 'sub',
-    icon: <Bell />,
+    icon: <Braces />,
     items: {
       Affix: {},
       Anchor: {},
