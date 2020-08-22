@@ -13,3 +13,4 @@ Avatar
 Typography
 ScrollUp
 Tabs
+Collapse

@@ -76,4 +76,3 @@ export {
   mapRouter,
   mapMenuItem,
 };
-console.log(mapMenuItem, mapRouter)
