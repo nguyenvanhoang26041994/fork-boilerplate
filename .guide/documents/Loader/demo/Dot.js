@@ -1,14 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import Wrapper from '@@/.guide/shared/Wrapper';
 import { Loader } from '@@/fork-ui/src/components/core';
-
-const Wrapper = styled.div`
-  display: flex;
-
-  > * {
-    margin-right: 2rem;
-  }
-`;
 
 const Demo = () => {
   return (

@@ -1,22 +1,14 @@
 import React, { useState } from 'react';
 import { Badge, Switch } from '@@/fork-ui/src/components/core';
 
-const FancyBox = ({ size, circle }) => (
-  <div
-    style={{
-      height: size,
-      width: size,
-      backgroundColor: 'var(--secondary-bg)',
-      borderRadius: circle ? '100rem' : '0.5rem',
-    }}
-  />
-);
+import Wrapper from '@@/.guide/shared/Wrapper';
+import FancyBox from '@@/.guide/shared/FancyBox';
 
 const Demo = () => {
   const [invisible, setInvisible] = useState(true);
 
   return (
-    <div>
+    <Wrapper span="2rem">
       <Badge count={999} invisible={invisible}>
         <FancyBox size="50px" />
       </Badge>
@@ -25,7 +17,7 @@ const Demo = () => {
         checked={invisible}
         onChange={e => setInvisible(e.target.checked)}
       />
-    </div>
+    </Wrapper>
   );
 };
 

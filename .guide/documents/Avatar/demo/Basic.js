@@ -1,16 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Avatar } from '@@/fork-ui/src/components/core';
-
-const avatarLink = 'https://i.pinimg.com/originals/ce/53/c5/ce53c5bcd350ba856e5c53c343376fb2.jpg';
-
-const Wrapper = styled.div`
-  display: flex;
-
-  > * {
-    margin-right: 0.5rem;
-  }
-`;
+import Wrapper from '@@/.guide/shared/Wrapper';
+import { avatarLink } from '@@/.guide/shared/staff';
+import {
+  Avatar,
+  AvatarGroup,
+  Badge,
+  Tooltip,
+} from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (
@@ -20,11 +16,25 @@ const Demo = () => {
         src={avatarLink}
         name="H"
       />
-      <Avatar
-        src={avatarLink}
-        square
-        name="H"
-      />
+      <AvatarGroup className="ml-5">
+        <Avatar name="H" />
+        <Tooltip title="H">
+          <Avatar name="M" />
+        </Tooltip>
+        <Badge count={1} dot color="#0df316" overlap bottomRight>
+          <Avatar src={avatarLink} name="H" />
+        </Badge>
+      </AvatarGroup>
+      <AvatarGroup overflowAvatar={3} className="ml-5">
+        <Avatar name="H" />
+        <Avatar name="O" />
+        <Avatar name="A" />
+        <Avatar name="N" />
+        <Avatar name="G" />
+        <Avatar name="H" />
+        <Avatar name="H" />
+        <Avatar name="H" />
+      </AvatarGroup>
     </Wrapper>
   );
 };

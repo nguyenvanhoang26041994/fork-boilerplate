@@ -2,30 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 
 import { Badge } from '@@/fork-ui/src/components/core';
-
-const FancyBox = ({
-  size = '50px',
-  style,
-  children,
-  hidden,
-  className,
-}) => (
-  <div
-    className={cn(
-      'flex items-center justify-center',
-      className,
-    )}
-    style={{
-      height: size,
-      width: size,
-      visibility: hidden ? 'hidden' : null,
-      backgroundColor: 'var(--secondary-bg)',
-      ...style
-    }}
-  >
-    {children}
-  </div>
-);
+import FancyBox from '@@/.guide/shared/FancyBox';
 
 const Demo = () => {
   return (

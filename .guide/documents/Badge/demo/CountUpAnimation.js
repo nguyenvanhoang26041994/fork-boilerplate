@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Badge } from '@@/fork-ui/src/components/core';
 
-const FancyBox = ({ size, circle }) => (
-  <div
-    style={{
-      height: size,
-      width: size,
-      backgroundColor: 'var(--secondary-bg)',
-      borderRadius: circle ? '100rem' : '0.5rem',
-    }}
-  />
-);
+import Wrapper from '@@/.guide/shared/Wrapper';
+import FancyBox from '@@/.guide/shared/FancyBox';
 
 const Demo = () => {
   const [count, setCount] = useState(0);
@@ -22,11 +14,11 @@ const Demo = () => {
   }, []);
 
   return (
-    <div className="flex">
+    <Wrapper span="2rem">
       <Badge count={count}>
         <FancyBox size="50px" />
       </Badge>
-    </div>
+    </Wrapper>
   );
 };
 

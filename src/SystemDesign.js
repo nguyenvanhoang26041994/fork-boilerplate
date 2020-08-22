@@ -1,16 +1,12 @@
 import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
+import Codebox from '@@/.guide/Codebox';
 import {
-  Radio,
-  Switch,
-  Checkbox,
   Flex,
   Button,
   Badge,
   Slider,
   Loader,
-  Collapse,
-  ButtonGroup,
   Pagination,
   Stepper,
   Progress,
@@ -24,32 +20,57 @@ import {
   Textarea,
   Select,
   InputNumber,
-  Chip,
   Dialog,
-  SpeedDial,
   PureNotification,
   PureAlert,
-  // Upload,
   Divider,
   Breadcrumb,
   Carousel,
-  Typo,
-  // Calendar,
   DatePicker,
 } from './fork-ui/core';
-import { Messages, Send, Repeat, LayersDifference, Star, Bell, Copy, Tool, Share, Heart, Power, CloudDownload, Apps, Message, Check, Trash, Dots, Home } from '@@/fork-ui/src/components/icons';
+import { Send, Star, Bell, Copy, Tool, Share, Heart, Power, Apps, Message, Check, Trash, Dots, Home } from '@@/fork-ui/src/components/icons';
 import DemoContent from '@@/.guide/shared/DemoContent';
 import TabsBasicGuide from '@@/.guide/_documents/Tabs/demo/Basic';
 import CollapseBasicGuide from '@@/.guide/_documents/Collapse/demo/Basic';
+import ButtonBasicGuide from '@@/.guide/_documents/Button/demo/Basic';
+import RadioBasicGuide from '@@/.guide/_documents/Radio/demo/Basic';
+import CheckboxBasicGuide from '@@/.guide/_documents/Checkbox/demo/Basic';
+import SwitchBasicGuide from '@@/.guide/_documents/Switch/demo/Basic';
+import AllSkeletonGuide from '@@/.guide/_documents/Skeleton/demo/AllSkeleton';
+import TypographyGuide from '@@/.guide/_documents/Typography/demo/Basic';
+import AvatarGuide from '@@/.guide/_documents/Avatar/demo/Basic';
+import AllBadgeGuide from '@@/.guide/_documents/Badge/demo/AllBadge';
+import AllLoaderGuide from '@@/.guide/_documents/Loader/demo/AllLoader';
+import PaginationBasicGuide from '@@/.guide/_documents/Pagination/demo/Basic';
+
+ButtonBasicGuide.header = 'BUTTON';
+TabsBasicGuide.header = 'TABS';
+CollapseBasicGuide.header = 'COLLAPSE';
+AllSkeletonGuide.header = 'SKELETON';
+RadioBasicGuide.header = 'RADIO';
+CheckboxBasicGuide.header = 'CHECKBOX';
+SwitchBasicGuide.header = 'SWITCH';
+TypographyGuide.header = 'TYPOGRAPHY';
+AvatarGuide.header = 'AVATAR';
+AllBadgeGuide.header = 'BADGE';
+AllLoaderGuide.header = 'LOADER';
+PaginationBasicGuide.header = 'PAGINATION';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const Wrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 0.5rem;
+  }
+`;
 
 const ColorWrapper = styled(Flex)`
   min-width: 7rem;
   min-height: 7rem;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--overlay--shadow);
   border-radius: var(--border-radius);
   overflow: hidden;
 `;
@@ -67,36 +88,6 @@ const Color = ({ value }) => (
 const SectionWrapper = styled(Flex)`
   width: 100%;
   padding: 0.5rem;
-
-  &.--space-5 {
-    > * {
-      margin-right: 10px;
-    }
-  }
-
-  &.--col.--space-5 {
-    > * {
-      margin-bottom: 0.5em;
-    }
-  }
-
-  &.--space-10 {
-    > * {
-      margin-right: 1em;
-    }
-  }
-
-  &.--col.--space-10 {
-    > * {
-      margin-bottom: 1em;
-    }
-  }
-
-  &.--space-20 {
-    > * {
-      margin-right: 3em;
-    }
-  }
 `;
 
 const Section = ({ ...otherProps }) => {
@@ -133,307 +124,70 @@ const NotificationBox = () => {
   );
 };
 
-export default () => {
-  const [activePage, setActivePage] = useState(1);
-  const onChange = useCallback((page) => setActivePage(page), []);
+const ColorGuide = () => (
+  <Wrapper>
+    <Color value="var(--red--500)" />
+    <Color value="var(--orange--500)" />
+    <Color value="var(--green--500)" />
+    <Color value="var(--blue--500)" />
+  </Wrapper>
+);
 
+ColorGuide.header = 'COLOR PALELLE';
+ColorGuide.code = `
+<Color value="var(--red--500)" />
+<Color value="var(--orange--500)" />
+<Color value="var(--green--500)" />
+<Color value="var(--blue--500)" />
+`;
+
+export default () => {
   return (
-    <Flex span="full" style={{ backgroundColor: 'var(--bg)' }}>
+    <Flex span="full" style={{ backgroundColor: 'var(---bg)' }}>
       <Flex col span="1/2">
-        <Section className="--space-10">
-          <Color value="var(--red--500)" />
-          <Color value="var(--orange--500)" />
-          <Color value="var(--green--500)" />
-          <Color value="var(--blue--500)" />
-          <Color value="var(--bg)" />
-          <Color value="var(--secondary-bg)" />
-        </Section>
-        <Section col style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <Typo h6>Heading</Typo>
-          <Typo h5>Heading</Typo>
-          <Typo h4>Heading</Typo>
-          <Typo h3>Heading</Typo>
-          <Typo h2>Heading</Typo>
-          <Typo h1>Heading</Typo>
-          <Typo p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </Typo>
-          <Typo p underline>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </Typo>
-          <Typo p through>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </Typo>
-          <Typo p italic>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </Typo>
-          <Typo p strong>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </Typo>
-        </Section>
-        <Section col style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <Flex items="center">
-            <Skeleton circle size="2rem" />
-            <Flex col className="ml-2 flex-1">
-              <Skeleton p  w="70%" />
-              <Skeleton p  w="20%" />
-            </Flex>
-          </Flex>
-          <Skeleton rect w="100%" h="200px" />
-        </Section>
-        <Section style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <TabsBasicGuide />
-        </Section>
-        <Section style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <CollapseBasicGuide />
-        </Section>
-        <Section className="--space-10" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <div>
-            <Menu>
-              <Menu.ItemGroup key="group-action" title="Action">
-                <Menu.Item key="copy" icon={<Copy />} title="Copy" />
-                <Menu.Item key="tool" icon={<Tool />} title="Config" />
-                <Menu.Sub key="sub-other" icon={<Share />} title="Other">
-                  <Menu.Item key="rating" icon={<Star />} title="Rating" />
-                  <Menu.Item key="follow" icon={<Bell />} title="Follow" />
-                </Menu.Sub>
-                <Menu.Item
-                  key="message"
-                  icon={<Message />}
-                  title="Message"
-                />
-                <Menu.Item key="heart" icon={<Heart />} title="Love" />
-              </Menu.ItemGroup>
-            </Menu>
-          </div>
-          <div>
-            <Menu iconOnly>
-              <Menu.ItemGroup key="group-action" title="Action">
-                <Menu.Item key="copy" icon={<Copy />} title="Copy" />
-                <Menu.Item key="tool" icon={<Tool />} title="Config" />
-                <Menu.Sub key="sub-other" defaultExpanded icon={<Share />} title="Other">
-                  <Menu.Item key="rating" icon={<Star />} title="Rating" />
-                  <Menu.Item key="follow" icon={<Bell />} title="Follow" />
-                </Menu.Sub>
-                <Menu.Item
-                  key="message"
-                  icon={<Message />}
-                  title="Message"
-                />
-                <Menu.Item key="heart" icon={<Heart />} title="Love" />
-              </Menu.ItemGroup>
-            </Menu>
-          </div>
-          <div style={{  paddingLeft: '30px' }}>
-          <Timeline className="mb-5" reverse>
-            <Timeline.Item>
-              <NotificationBox />
-            </Timeline.Item>
-            <Timeline.Item>
-              <NotificationBox />
-            </Timeline.Item>
-            <Timeline.Item>
-              <NotificationBox />
-            </Timeline.Item>
-            <Timeline.Item>
-              <NotificationBox />
-            </Timeline.Item>
-            <Timeline.Item>
-              <NotificationBox />
-            </Timeline.Item>
-          </Timeline>
-          </div>
-        </Section>
-        <Section className="w-full">
-          <Carousel>
-            {listProduct.map(id => (
-              <Carousel.Item key={id}>
-                <Flex col items="center" justify="center"
-                  style={{
-                    minWidth: '16rem',
-                  }}
-                >
-                  <DemoContent className="w-full" />
-                </Flex>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </Section>
-        <Section col style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <Divider left dashed title={<Power />} />
-          <Divider left title="LEFT TITLE" />
-          <Divider center dashed title={<Copy />} />
-          <Divider
-            right
-            dashed
-            title={(
-              <span>
-                <Copy className="mr-3" />
-                RIGHT TITLE
-              </span>
-            )}
-          />
-        </Section>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ ColorGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ TypographyGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ AvatarGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ AllLoaderGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ AllSkeletonGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ TabsBasicGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ CollapseBasicGuide } />
+        </div>
       </Flex>
 
-      <Flex col span="1/2">
-        <Section className="--space-5">
-          <Button>Button</Button>
-          <ButtonGroup>
-            <Button><Send />Send</Button>
-            <Button><Repeat />Repeat</Button>
-            <Button><CloudDownload />Download</Button>
-          </ButtonGroup>
-          <Button loading><Send />Send</Button>
-          <Button loading circle icon={<Repeat />} />
-        </Section>
-        <Section col style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-          <Flex className="w-full">
-            <Section className="--space-10" style={{ width: 200 }}>
-              <Radio name="_1" />
-              <Radio name="_1" defaultChecked />
-              <Checkbox defaultChecked />
-              <Switch defaultChecked />
-            </Section>
-            <Stepper activeStep={2} className="flex-1">
-              <Stepper.Step title="Step One">
-                Description One
-              </Stepper.Step>
-              <Stepper.Step title="Step Two">
-                Description Two
-              </Stepper.Step>
-              <Stepper.Step title="Step Three">
-                Description Three
-              </Stepper.Step>
-              <Stepper.Step title="Step Four">
-                Description Four
-              </Stepper.Step>
-            </Stepper>
-          </Flex>
-        </Section>
-        <Section style={{ paddingTop: '30px', paddingBottom: '10px' }}>
-          <Progress.Circle percent={0.75} />
-          <Flex style={{ flexGrow: 1, padding: '0 2rem' }} items="center">
-            <Flex col className="w-full">
-              <Progress.Linear percent={0.75} />
-              <Rater
-                max={7}
-                star={5}
-                fontSize="1.5rem"
-              />
-            </Flex>
-          </Flex>
-        </Section>
-        <Section className="--space-10" style={{ paddingTop: '10px', paddingBottom: '30px' }}>
-          <Loader.Dots />
-          <Loader.Dots wave />
-          <Loader.Spinner />
-          <div class="flex-1">
-            <Slider defaultValue={80} className="w-full" />
-          </div>
-        </Section>
-        <Section className="--space-10" style={{ paddingTop: '30px', paddingBottom: '10px' }}>
-          <Pagination
-            activePage={activePage}
-            total={300}
-            pageSize={10}
-            max={10}
-            onChange={onChange}
-          />
-        </Section>
-        <Section className="--space-5" style={{ paddingTop: '10px', paddingBottom: '10px' }} items="center">
-          <Avatar name="H" />
-          <Badge
-            dot
-            overlap
-            color="#0df316"
-            bottomRight
-          >
-            <Avatar name="H" />
-          </Badge>
-          <Badge count={7} className="mr-5">
-            <Boxer size="50px" />
-          </Badge>
-          <Badge
-            color="#0089e4"
-            icon={<Check style={{ strokeWidth: 3 }} />}
-          >
-            <Boxer size="50px" />
-          </Badge>
-          <Badge dot color="#4caf50">
-            <Boxer size="50px" />
-          </Badge>
-          <Chip label="Hoàng Nguyễn" />
-          <Chip label="Sơn Lê" />
-          <SpeedDial right defaultVisible overlay={
-            <React.Fragment>
-              <SpeedDial.Button glassed icon={<CloudDownload />} />
-              <SpeedDial.Button glassed icon={<Copy />} />
-              <SpeedDial.Button glassed icon={<Trash />} />
-              <SpeedDial.Button glassed icon={<Send />} />
-            </React.Fragment>
-          }>
-            <Button icon={<Dots />} />
-          </SpeedDial>
-        </Section>
-        <Section style={{ paddingTop: '10px', paddingBottom: '30px' }}>
-          <Breadcrumb>
-            <Breadcrumb.Item title={<div className="flex items-center"><Home className="mr-2" /><span>Home</span></div>} />
-            <Breadcrumb.Item title={<div className="flex items-center"><Apps className="mr-2" /><span>Application</span></div>} />
-            <Breadcrumb.Item title={<div className="flex items-center"><Send className="mr-2" /><span>Button</span></div>} />
-          </Breadcrumb>
-        </Section>
-        <Section className="--space-10" style={{ paddingTop: '10px', paddingBottom: '30px' }}>
-          <div>
-            <DatePicker.SingleCalendar />
-          </div>
-          <div>
-            <DatePicker.RangeCalendar />
-          </div>
-        </Section>
-        <Section className="--space-10" style={{ paddingTop: '10px', paddingBottom: '30px' }}>
-          <div>
-            <DatePicker.CoupleCalendar />
-          </div>
-        </Section>
-        <Section col className="--col --space-5" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <Textbox placeholder="The placeholder" defaultValue="hoang.nguyen@notexsist.com" />
-          <Password placeholder="The placeholder" defaultValue="123456789" />
-          <Select placeholder="Please chose your option">
-            <Select.Option
-              key="message"
-              icon={<Message />}
-              title="Message"
-            />
-            <Select.Group key="group-action" title="Action">
-              <Select.Option key="copy" icon={<Copy />} title="Copy" />
-              <Select.Option key="tool" icon={<Tool />} title="Config" />
-              <Select.Option key="heart" icon={<Heart />} title="Love" />
-            </Select.Group>
-            <Select.Group key="group-other" title="Other">
-              <Select.Option key="rating" icon={<Star />} title="Rating" />
-              <Select.Option key="follow" icon={<Bell />} title="Follow" />
-            </Select.Group>
-          </Select>
-          <Select multiple placeholder="Please chose your options">
-            <Select.Option
-              key="message"
-              icon={<Message />}
-              title="Message"
-            />
-            <Select.Group key="group-action" title="Action">
-              <Select.Option key="copy" icon={<Copy />} title="Copy" />
-              <Select.Option key="tool" icon={<Tool />} title="Config" />
-              <Select.Option key="heart" icon={<Heart />} title="Love" />
-            </Select.Group>
-            <Select.Group key="group-other" title="Other">
-              <Select.Option key="rating" icon={<Star />} title="Rating" />
-              <Select.Option key="follow" icon={<Bell />} title="Follow" />
-            </Select.Group>
-          </Select>
-          <Textarea placeholder="The placeholder" defaultValue="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
-          <InputNumber defaultValue="999" />
-        </Section>
+      <Flex col span="1/2" style={ { paddingLeft: '1px' } }>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ ButtonBasicGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ RadioBasicGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ CheckboxBasicGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ SwitchBasicGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ AllBadgeGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ PaginationBasicGuide } />
+        </div>
+        
         <Section className="--space-5" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
           <div className="fui-overlay fui-tooltip fui-overlay--arrow fui-overlay--top" style={{ position: 'relative' }}>
             Top Tooltip
@@ -447,60 +201,6 @@ export default () => {
           <div className="fui-overlay fui-tooltip fui-overlay--arrow fui-overlay--left" style={{ position: 'relative' }}>
             Left Tooltip
           </div>
-        </Section>
-        <Section style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <div className="fui-overlay fui-popover fui-overlay--arrow fui-overlay--top" style={{ position: 'relative', flexGrow: 1 }}>
-            <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full p-2">
-              <Flex items="center">
-                <Skeleton circle size="2rem" />
-                <Flex col className="ml-2 flex-1">
-                  <Skeleton p  w="70%" />
-                  <Skeleton p  w="20%" />
-                </Flex>
-              </Flex>
-              <Skeleton rect w="100%" h="200px" />
-            </Flex>
-            </div>
-        </Section>
-        <Section style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <Dialog className="w-full">
-            <Dialog.Header>Dialog Title</Dialog.Header>
-            <Dialog.Body>
-              <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full">
-                <Flex items="center">
-                  <Skeleton circle size="2rem" />
-                  <Flex col className="ml-2 flex-1">
-                    <Skeleton p  w="70%" />
-                    <Skeleton p  w="20%" />
-                  </Flex>
-                </Flex>
-                <Skeleton rect w="100%" h="200px" />
-              </Flex>
-            </Dialog.Body>
-            <Dialog.Footer className="flex justify-end">
-              <Button glassed><Apps />Cancel</Button>
-              <Button glassed style={{ marginLeft: '0.5em' }}><Send />OK</Button>
-            </Dialog.Footer>
-          </Dialog>
-        </Section>
-        <Section>
-          <PureNotification title="Notification title" className="w-full">
-            <Flex col style={{ padding: '0.5 1.5rem' }}>
-              <Flex items="center">
-                <Skeleton circle size="2rem" />
-                <Flex col className="ml-2 flex-1">
-                  <Skeleton p  w="70%" />
-                  <Skeleton p  w="20%" />
-                </Flex>
-              </Flex>
-            </Flex>
-          </PureNotification>
-        </Section>
-        <Section col className="--col --space-5">
-          <PureAlert info title="Info title" className="w-full" />
-          <PureAlert success title="Success title" className="w-full" />
-          <PureAlert error title="Error title" className="w-full" />
-          <PureAlert warning title="Warning title" className="w-full" />
         </Section>
       </Flex>
     </Flex>

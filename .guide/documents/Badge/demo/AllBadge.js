@@ -1,34 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Badge } from '@@/fork-ui/src/components/core';
 
 import Wrapper from '@@/.guide/shared/Wrapper';
 import FancyBox from '@@/.guide/shared/FancyBox';
 
 const Demo = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => setCount(prev => prev + 1), 3000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <Wrapper span="2rem">
-      <Badge
-        count={7}
-        color="#0089e4"
-        className="mr-5"
-      >
+      <Badge count={999} dot>
         <FancyBox size="50px" />
       </Badge>
-      <Badge
-        count={21}
-        color="blueviolet"
-        className="mr-5"
-      >
+      <Badge count={7} className="mr-5">
         <FancyBox size="50px" />
       </Badge>
-      <Badge
-        count={176}
-        color="purple"
-        className="mr-5"
-      >
+      <Badge count={999} overflowCount={99}>
         <FancyBox size="50px" />
       </Badge>
-      <Badge count={999} color="#4caf50">
+      <Badge count={count}>
         <FancyBox size="50px" />
       </Badge>
     </Wrapper>
