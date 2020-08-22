@@ -12,3 +12,4 @@ Badge
 Avatar
 Typography
 ScrollUp
+Tabs

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import {
   Radio,
@@ -7,7 +7,6 @@ import {
   Flex,
   Button,
   Badge,
-  Tabs,
   Slider,
   Loader,
   Collapse,
@@ -38,7 +37,10 @@ import {
   // Calendar,
   DatePicker,
 } from './fork-ui/core';
-import { Messages, Send, ThumbUp, Repeat, LayersDifference, Star, Bell, Copy, Tool, Share, Heart, Power, CloudDownload, Apps, Message, Check, Trash, Dots, Home } from '@@/fork-ui/src/components/icons';
+import { Messages, Send, Repeat, LayersDifference, Star, Bell, Copy, Tool, Share, Heart, Power, CloudDownload, Apps, Message, Check, Trash, Dots, Home } from '@@/fork-ui/src/components/icons';
+import DemoContent from '@@/.guide/shared/DemoContent';
+import TabsBasicGuide from '@@/.guide/_documents/Tabs/demo/Basic';
+import CollapseBasicGuide from '@@/.guide/_documents/Collapse/demo/Basic';
 
 const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -103,28 +105,6 @@ const Section = ({ ...otherProps }) => {
   );
 };
 
-const Loren = () => (
-  <div className="w-full">
-    <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full">
-      <Flex items="center" className="mb-5">
-        <Badge
-          dot
-          overlap
-          color="#0df316"
-          bottomRight
-        >
-          <Avatar name="Hoang Nguyen" size="1.5rem" />
-        </Badge>
-        <Flex col className="ml-2 flex-1">
-          <Skeleton p  w="70%" />
-          <Skeleton p  w="20%" />
-        </Flex>
-      </Flex>
-      <Skeleton rect w="100%" h="200px" />
-    </Flex>
-  </div>
-);
-
 const Boxer = styled.div`
   width: 3em;
   height: 3em;
@@ -142,7 +122,7 @@ const NotificationBox = () => {
           color="#0df316"
           bottomRight
         >
-          <Avatar name="Hoang Nguyen" size="0.75rem" />
+          <Avatar name="H" size="0.75rem" />
         </Badge>
       </div>
       <Flex col className="ml-2 flex-1">
@@ -151,33 +131,6 @@ const NotificationBox = () => {
       </Flex>
     </Flex>
   );
-};
-
-const ReactTab = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-
-    return () => clearTimeout(timer);
-  }, []);
-  
-  if (loading) {
-    return (
-      <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full">
-        <Flex items="center">
-          <Skeleton circle size="2rem" />
-          <Flex col className="ml-2 flex-1">
-            <Skeleton p  w="70%" />
-            <Skeleton p  w="20%" />
-          </Flex>
-        </Flex>
-        <Skeleton rect w="100%" h="200px" />
-      </Flex>
-    )
-  }
-
-  return <Loren />;
 };
 
 export default () => {
@@ -229,20 +182,10 @@ export default () => {
           <Skeleton rect w="100%" h="200px" />
         </Section>
         <Section style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <Tabs>
-            <Tabs.Item key="_1" title="React" icon={<Send />}><ReactTab /></Tabs.Item>
-            <Tabs.Item key="_4" title="Javascript" icon={<ThumbUp />}><ReactTab /></Tabs.Item>
-            <Tabs.Item key="_5" title="Badge" icon={<Badge leftTop count="2" className="mr-4"><Messages /></Badge>} ><ReactTab /></Tabs.Item>
-            <Tabs.Item key="_7" title="Fresh" icon={<Repeat />} fresh ><ReactTab /></Tabs.Item>
-          </Tabs>
+          <TabsBasicGuide />
         </Section>
         <Section style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <Collapse defaultActiveKeys={['_4']} accordion>
-            <Collapse.Item key="_1" title="Contact" icon={<Send />}><ReactTab /></Collapse.Item>
-            <Collapse.Item key="_3" title="Skills" icon={<LayersDifference />} ><ReactTab /></Collapse.Item>
-            <Collapse.Item key="_4" title="Experiences" icon={<Badge leftTop count="2" className="mr-4"><Messages /></Badge>} ><ReactTab /></Collapse.Item>
-            <Collapse.Item key="_6" title="Hobbit" icon={<Repeat />} fresh><ReactTab /></Collapse.Item>
-          </Collapse>
+          <CollapseBasicGuide />
         </Section>
         <Section className="--space-10" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
           <div>
@@ -310,7 +253,7 @@ export default () => {
                     minWidth: '16rem',
                   }}
                 >
-                  <ReactTab className="w-full" />
+                  <DemoContent className="w-full" />
                 </Flex>
               </Carousel.Item>
             ))}
@@ -399,14 +342,14 @@ export default () => {
           />
         </Section>
         <Section className="--space-5" style={{ paddingTop: '10px', paddingBottom: '10px' }} items="center">
-          <Avatar name="Hoang Nguyen" />
+          <Avatar name="H" />
           <Badge
             dot
             overlap
             color="#0df316"
             bottomRight
           >
-            <Avatar name="Hoang Nguyen" />
+            <Avatar name="H" />
           </Badge>
           <Badge count={7} className="mr-5">
             <Boxer size="50px" />

@@ -1,30 +1,32 @@
-import React, { useCallback } from 'react';
-import { Collapse } from '@@/fork-ui/src/components/core';
-
-const Description = () => {
-  return (
-    <div
-      className="flex items-center justify-center"
-      style={{ height: '10rem' }}
-    >
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    </div>
-  );
-};
+import React from 'react';
+import { Collapse, Badge } from '@@/fork-ui/src/components/core';
+import { MailOpened } from '@@/fork-ui/src/components/icons';
+import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
-  const onActiveKeysChange = useCallback(keys => console.log(keys), []);
   return (
     <div className="flex flex-col w-full">
-      <Collapse defaultActiveKeys={['panel-2']} onActiveKeysChange={onActiveKeysChange}>
-        <Collapse.Item title="Collapse One" key="panel-1">
-          <Description />
+      <Collapse defaultActivePanels={['panel-1']}>
+        <Collapse.Item title="NORMAL PANEL" key="panel-1">
+          <DemoContent />
         </Collapse.Item>
-        <Collapse.Item title="Collapse Two" key="panel-2">
-          <Description />
+        <Collapse.Item fresh title="FRESH PANEL" key="panel-2">
+          <DemoContent />
         </Collapse.Item>
-        <Collapse.Item title="Collapse Three" key="panel-3">
-          <Description />
+        <Collapse.Item title="DISABLED PANEL" disabled key="panel-3">
+          <DemoContent />
+        </Collapse.Item>
+        <Collapse.Item
+          title={<span className="flex">WITH ICON<MailOpened className="ml-2" /></span>}
+          key="panel-4"
+        >
+          <DemoContent />
+        </Collapse.Item>
+        <Collapse.Item
+          title={<Badge count={99} topRight dot><span>WITH BADGE</span></Badge>}
+          key="panel-5"
+        >
+          <DemoContent />
         </Collapse.Item>
       </Collapse>
     </div>
