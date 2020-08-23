@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "forkui-pro",
+  "name": "neumorphism-pro",
   "builds": [{
     "src": "package.json",
     "use": "@now/static-build",

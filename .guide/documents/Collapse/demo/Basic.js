@@ -9,9 +9,11 @@ import {
 import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
+  const [props] = Collapse.useCollapse({});
+
   return (
     <div className="flex flex-col w-full">
-      <Collapse defaultActivePanels={['panel-1']}>
+      <Collapse {...props}>
         <Collapse.Item
           title={(
             <span className="flex">

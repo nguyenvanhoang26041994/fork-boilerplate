@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Tabs, Badge, Tooltip } from '@@/fork-ui/src/components/core';
 import { MailOpened, BrandMessenger } from '@@/fork-ui/src/components/icons';
 import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
+  const [value, setValue] = useState('tab-2');
+  const onChange = useCallback(key => setValue(key), [setValue]);
+
   return (
     <div className="flex flex-col w-full">
-      <Tabs defaultActiveTab="tab-2">
+      <Tabs value={value} onChange={onChange}>
         <Tabs.Item title="NORMAL TAB" key="tab-1">
           <DemoContent />
         </Tabs.Item>
