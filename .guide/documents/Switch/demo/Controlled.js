@@ -1,14 +1,6 @@
 import React, { useState, useCallback } from 'react';
-import styled from 'styled-components';
+import Wrapper from '@@/.guide/shared/Wrapper';
 import { Switch } from '@@/fork-ui/src/components/core';
-
-const Wrapper = styled.div`
-  display: flex;
-
-  > * {
-    margin-right: 0.5rem;
-  }
-`;
 
 const Demo = () => {
   const [checked, setChecked] = useState(false);

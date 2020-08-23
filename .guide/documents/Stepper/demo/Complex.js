@@ -1,5 +1,10 @@
 import React from 'react';
-import { Stepper, ButtonGroup, Button } from '@@/fork-ui/src/components/core';
+import {
+  Stepper,
+  ButtonGroup,
+  Button,
+} from '@@/fork-ui/src/components/core';
+import { Truck, ThumbUp } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
   const {
@@ -12,33 +17,43 @@ const Demo = () => {
     handleFinish,
   } = Stepper.useSteps({
     maxStepIdx: 3,
-    optional: [1, 2]
+    optional: [1, 2],
+    defaultActiveStep: 1,
+    defaultStepInfo: {
+      0: 'completed',
+    },
   });
 
   return (
     <div className="flex flex-col w-full">
-      <Stepper className="mb-10" activeStep={activeStep}>
+      <Stepper
+        className="mb-10"
+        activeStep={activeStep}
+        getStatus={getStatus}
+      >
         <Stepper.Step
           title="Step One"
-          status={getStatus(0)}
+          icon={<Truck />}
+          canceledTitle="You can't skip this step"
         >
           Description One
         </Stepper.Step>
         <Stepper.Step
           title="Step Optional"
-          status={getStatus(1)}
+          canceledTitle="You can skip this step"
         >
           Description Two
         </Stepper.Step>
         <Stepper.Step
           title="Step Optional"
-          status={getStatus(2)}
+          canceledTitle="You can skip this step"
         >
           Description Three
         </Stepper.Step>
         <Stepper.Step
-          title="Step Four"
-          status={getStatus(3)}
+          title="Step Finsh"
+          icon={<ThumbUp />}
+          canceledTitle="You can't skip this step"
         >
           Description Four
         </Stepper.Step>

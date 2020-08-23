@@ -12,6 +12,9 @@ import {
   Eye,
   Dots,
   Braces,
+  LayoutSidebar,
+  LayoutBottombar,
+  DeviceLaptop
 } from '@@/fork-ui/src/components/icons';
 
 const leftSidebar = {
@@ -23,6 +26,15 @@ const leftSidebar = {
   },
   Typography: {
     icon: <Typography />,
+  },
+  Tabs: {
+    icon: <DeviceLaptop />,
+  },
+  Modal: {
+    icon: <LayoutBottombar />,
+  },
+  Drawer: {
+    icon: <LayoutSidebar />,
   },
   Image: {
     icon: <Photo />,
@@ -43,9 +55,6 @@ const leftSidebar = {
     type: 'sub',
     icon: <Eye />,
     items: {
-      Tabs: {},
-      Modal: {},
-      Drawer: {},
       Badge: {},
       Collapse: {},
       Popover: {},
@@ -104,6 +113,7 @@ const leftSidebar = {
       Divider: {},
       Upload: {},
       QueryBuilder: {},
+      Dialog: {},
     },
   },
 };

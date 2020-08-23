@@ -9,22 +9,20 @@ import Right from '@@/.guide/_documents/Timeline/demo/Right';
 export default () => {
   return (
     <div className="flex flex-wrap">
-      <div className="flex flex-col w-1/3">
+      <div className="flex flex-col w-1/2">
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Basic } />
+          <Codebox Component={ Basic } defaultShowCode />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Right } />
+          <Codebox Component={ Reverse } />
         </div>
       </div>
-      <div className="flex flex-col w-1/3" style={ { paddingLeft: '1px' } }>
+      <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ CustomIcon } />
         </div>
-      </div>
-      <div className="flex flex-col w-1/3" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Reverse } />
+          <Codebox Component={ Right } />
         </div>
       </div>
     </div>

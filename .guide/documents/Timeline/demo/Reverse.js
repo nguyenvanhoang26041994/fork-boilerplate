@@ -1,59 +1,19 @@
 import React from 'react';
 import { Timeline } from '@@/fork-ui/src/components/core';
-import { Globe } from '@@/fork-ui/src/components/icons';
-
-const NotificationBox = ({ requester, time }) => {
-  return (
-    <div
-      className="flex flex-col px-3 pb-3 mb-10 rounded-lg"
-    >
-      <span>
-        <a className="text-blue-600">{requester} </a>
-        send you a friend request
-      </span>
-      <div className="mt-1 text-gray-600">
-        <Globe
-          className="mr-2" fontSize="0.85em"
-        />
-        {time}
-      </div>
-    </div>
-  );
-};
+import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
   return (
     <div className="flex flex-col w-full">
-      <Timeline className="mb-5" reverse>
+      <Timeline reverse>
         <Timeline.Item>
-          <NotificationBox
-            requester="Sơn Lê"
-            time="5 day ago"
-          />
+          <DemoContent />
         </Timeline.Item>
         <Timeline.Item>
-          <NotificationBox
-            requester="Hoàng Nguyễn"
-            time="4 day ago"
-          />
+          <DemoContent />
         </Timeline.Item>
         <Timeline.Item>
-          <NotificationBox
-            requester="Seventeen"
-            time="3 day ago"
-          />
-        </Timeline.Item>
-        <Timeline.Item>
-          <NotificationBox
-            requester="Alan Walker"
-            time="2 day ago"
-          />
-        </Timeline.Item>
-        <Timeline.Item>
-          <NotificationBox
-            requester="Hoàng Nguyễn"
-            time="1 day ago"
-          />
+          <DemoContent />
         </Timeline.Item>
       </Timeline>
     </div>

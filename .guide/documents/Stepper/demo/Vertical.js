@@ -1,23 +1,21 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import { Stepper, ButtonGroup, Button } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
-  const [activeStep, setActiveStep] = useState(0);
-  const next = useCallback(() => {
-    setActiveStep(prev => prev + 1); 
-  }, []);
-
-  const reset = useCallback(() => {
-    setActiveStep(0); 
-  }, []);
-
-  const finish = useCallback(() => {
-    setActiveStep(4); 
-  }, []);
+  const {
+    getStatus,
+    activeStep,
+    handleReset,
+    handleNext,
+    handleCancel,
+    handleFinish,
+  } = Stepper.useSteps({
+    maxStepIdx: 3,
+  });
 
   return (
     <div className="flex flex-col w-full">
-      <Stepper className="mb-10" activeStep={activeStep} vertical>
+      <Stepper className="mb-10" activeStep={activeStep} getStatus={getStatus} vertical>
         <Stepper.Step title="Step One">
           Description One
         </Stepper.Step>
@@ -32,9 +30,10 @@ const Demo = () => {
         </Stepper.Step>
       </Stepper>
       <ButtonGroup>
-        <Button onClick={reset}>Reset</Button>
-        <Button onClick={next}>Next</Button>
-        <Button onClick={finish}>Finish</Button>
+        <Button onClick={handleReset}>Reset</Button>
+        <Button onClick={handleNext}>Next</Button>
+        <Button onClick={handleCancel}>Cancel</Button>
+        <Button onClick={handleFinish}>Finish</Button>
       </ButtonGroup>
     </div>
   );

@@ -1,35 +1,8 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Codebox from '@@/.guide/Codebox';
-import {
-  Flex,
-  Button,
-  Badge,
-  Slider,
-  Loader,
-  Pagination,
-  Stepper,
-  Progress,
-  Menu,
-  Timeline,
-  Rater,
-  Skeleton,
-  Avatar,
-  Textbox,
-  Password,
-  Textarea,
-  Select,
-  InputNumber,
-  Dialog,
-  PureNotification,
-  PureAlert,
-  Divider,
-  Breadcrumb,
-  Carousel,
-  DatePicker,
-} from './fork-ui/core';
-import { Send, Star, Bell, Copy, Tool, Share, Heart, Power, Apps, Message, Check, Trash, Dots, Home } from '@@/fork-ui/src/components/icons';
-import DemoContent from '@@/.guide/shared/DemoContent';
+import { Flex } from './fork-ui/core';
+
 import TabsBasicGuide from '@@/.guide/_documents/Tabs/demo/Basic';
 import CollapseBasicGuide from '@@/.guide/_documents/Collapse/demo/Basic';
 import ButtonBasicGuide from '@@/.guide/_documents/Button/demo/Basic';
@@ -42,6 +15,12 @@ import AvatarGuide from '@@/.guide/_documents/Avatar/demo/Basic';
 import AllBadgeGuide from '@@/.guide/_documents/Badge/demo/AllBadge';
 import AllLoaderGuide from '@@/.guide/_documents/Loader/demo/AllLoader';
 import PaginationBasicGuide from '@@/.guide/_documents/Pagination/demo/Basic';
+import StepperGuide from '@@/.guide/_documents/Stepper/demo/Complex';
+import TimelineGuide from '@@/.guide/_documents/Timeline/demo/Basic';
+import TooltipDesign from '@@/.guide/_documents/Tooltip/demo/Design';
+import RaterGuide from '@@/.guide/_documents/Rater/demo/Basic';
+import CarouselGuide from '@@/.guide/_documents/Carousel/demo/Basic';
+import DialogDesign from '@@/.guide/_documents/Dialog/demo/Design';
 
 ButtonBasicGuide.header = 'BUTTON';
 TabsBasicGuide.header = 'TABS';
@@ -55,8 +34,12 @@ AvatarGuide.header = 'AVATAR';
 AllBadgeGuide.header = 'BADGE';
 AllLoaderGuide.header = 'LOADER';
 PaginationBasicGuide.header = 'PAGINATION';
-
-const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+StepperGuide.header = 'STEPPER';
+TooltipDesign.header = 'TOOLIP DEISGN';
+TimelineGuide.header = 'TIMELINE';
+RaterGuide.header = 'RATER';
+DialogDesign.header = 'DIALOG DESIGN';
+CarouselGuide.header = 'CAROUSEL';
 
 const Wrapper = styled.div`
   display: flex;
@@ -84,45 +67,6 @@ const Color = ({ value }) => (
     <ColorShower style={{ backgroundColor: value }} />
   </ColorWrapper>
 );
-
-const SectionWrapper = styled(Flex)`
-  width: 100%;
-  padding: 0.5rem;
-`;
-
-const Section = ({ ...otherProps }) => {
-  return (
-    <SectionWrapper {...otherProps} />
-  );
-};
-
-const Boxer = styled.div`
-  width: 3em;
-  height: 3em;
-  border-radius: var(--border-radius);
-  background-color: var(--secondary-bg);
-`;
-
-const NotificationBox = () => {
-  return (
-    <Flex className="mb-5" style={{ width: 300 }}>
-      <div>
-        <Badge
-          dot
-          overlap
-          color="#0df316"
-          bottomRight
-        >
-          <Avatar name="H" size="0.75rem" />
-        </Badge>
-      </div>
-      <Flex col className="ml-2 flex-1">
-        <Skeleton p  w="70%" />
-        <Skeleton p  w="20%" />
-      </Flex>
-    </Flex>
-  );
-};
 
 const ColorGuide = () => (
   <Wrapper>
@@ -166,6 +110,9 @@ export default () => {
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ CollapseBasicGuide } />
         </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ DialogDesign } />
+        </div>
       </Flex>
 
       <Flex col span="1/2" style={ { paddingLeft: '1px' } }>
@@ -187,21 +134,21 @@ export default () => {
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ PaginationBasicGuide } />
         </div>
-        
-        <Section className="--space-5" style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-          <div className="fui-overlay fui-tooltip fui-overlay--arrow fui-overlay--top" style={{ position: 'relative' }}>
-            Top Tooltip
-          </div>
-          <div className="fui-overlay fui-tooltip fui-overlay--arrow fui-overlay--right" style={{ position: 'relative' }}>
-            Right Tooltip
-          </div>
-          <div className="fui-overlay fui-tooltip fui-overlay--arrow fui-overlay--bottom" style={{ position: 'relative' }}>
-            Bottom Tooltip
-          </div>
-          <div className="fui-overlay fui-tooltip fui-overlay--arrow fui-overlay--left" style={{ position: 'relative' }}>
-            Left Tooltip
-          </div>
-        </Section>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ StepperGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ TooltipDesign } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ RaterGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ TimelineGuide } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ CarouselGuide } />
+        </div>
       </Flex>
     </Flex>
   );

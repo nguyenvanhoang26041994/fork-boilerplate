@@ -37,7 +37,7 @@ import PopoverGuide from './guides/PopoverGuide';
 import ProgressDocument from '@@/.guide/_documents/Progress/Document';
 import QueryBuilderDocument from '@@/.guide/_documents/QueryBuilder/Document';
 import RadioGuide from './guides/RadioGuide';
-import RaterDocument from '@@/.guide/_documents/Rater/Document';
+import RaterGuide from './guides/RaterGuide';
 import SelectDocument from '@@/.guide/_documents/Select/Document';
 import SkeletonGuide from './guides/SkeletonGuide';
 import SliderDocument from '@@/.guide/_documents/Slider/Document';
@@ -95,7 +95,7 @@ const Dashboard = ({}) => {
               <Route path="/document/progress" component={ ProgressDocument } />
               <Route path="/document/querybuilder" component={ QueryBuilderDocument } />
               <Route path="/document/radio" component={ RadioGuide } />
-              <Route path="/document/rater" component={ RaterDocument } />
+              <Route path="/document/rater" component={ RaterGuide } />
               <Route path="/document/select" component={ SelectDocument } />
               <Route path="/document/skeleton" component={ SkeletonGuide } />
               <Route path="/document/slider" component={ SliderDocument } />

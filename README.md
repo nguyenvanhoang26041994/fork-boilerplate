@@ -14,3 +14,7 @@ Typography
 ScrollUp
 Tabs
 Collapse
+Rater
+Tooltip
+Timeline
+Stepper
