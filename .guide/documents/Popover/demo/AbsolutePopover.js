@@ -2,14 +2,11 @@ import React from 'react';
 import { Button, Stepper, Popover } from '@@/fork-ui/src/components/core';
 
 const StepperDemo = () => {
+  const [props] = Stepper.useStepper({ defaultActiveStep: 3 });
+
   return (
     <div className="p-2">
-      <Stepper
-        activeStep={3}
-        style={{
-          width: '400px'
-        }}
-      >
+      <Stepper {...props} style={{ width: '400px' }}>
         <Stepper.Step title="Ordered" />
         <Stepper.Step title="Prepared" />
         <Stepper.Step title="Shiped" />

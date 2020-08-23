@@ -15,7 +15,7 @@ import AvatarGuide from '@@/.guide/_documents/Avatar/demo/Basic';
 import AllBadgeGuide from '@@/.guide/_documents/Badge/demo/AllBadge';
 import AllLoaderGuide from '@@/.guide/_documents/Loader/demo/AllLoader';
 import PaginationBasicGuide from '@@/.guide/_documents/Pagination/demo/Basic';
-import StepperGuide from '@@/.guide/_documents/Stepper/demo/Complex';
+import StepperGuide from '@@/.guide/_documents/Stepper/demo/Design';
 import TimelineGuide from '@@/.guide/_documents/Timeline/demo/Basic';
 import TooltipDesign from '@@/.guide/_documents/Tooltip/demo/Design';
 import RaterGuide from '@@/.guide/_documents/Rater/demo/Basic';

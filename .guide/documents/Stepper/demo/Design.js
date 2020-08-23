@@ -1,18 +1,15 @@
 import React from 'react';
-import {
-  Stepper,
-  ButtonGroup,
-  Button,
-} from '@@/fork-ui/src/components/core';
+import { Stepper } from '@@/fork-ui/src/components/core';
 import { Truck, ThumbUp } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
-  const [props, stepper] = Stepper.useStepper({
+  const [props] = Stepper.useStepper({
     maxStepIdx: 3,
     optional: [1, 2],
-    defaultActiveStep: 1,
+    defaultActiveStep: 3,
     defaultStepInfo: {
       0: 'completed',
+      1: 'canceled',
     },
   });
 
@@ -46,13 +43,6 @@ const Demo = () => {
           Description Four
         </Stepper.Step>
       </Stepper>
-      <ButtonGroup>
-        <Button onClick={stepper.handleReset}>Reset</Button>
-        <Button onClick={stepper.handleNext}>Next</Button>
-        <Button onClick={stepper.handleSkip}>Skip</Button>
-        <Button onClick={stepper.handleCancel}>Cancel</Button>
-        <Button onClick={stepper.handleFinish}>Finish</Button>
-      </ButtonGroup>
     </div>
   );
 };

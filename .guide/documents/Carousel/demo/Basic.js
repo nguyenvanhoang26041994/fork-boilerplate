@@ -2,12 +2,17 @@ import React from 'react';
 import { Carousel } from '@@/fork-ui/src/components/core';
 import DemoContent from '@@/.guide/shared/DemoContent';
 
-const listProduct = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Demo = () => {
+  const [props] = Carousel.useCarousel({
+    loop: true,
+    maxValue: list.length - 1,
+  });
+
   return (
-    <Carousel loop>
-      {listProduct.map(id => (
+    <Carousel {...props}>
+      {list.map(id => (
         <Carousel.Item key={id}>
           <DemoContent />
         </Carousel.Item>
