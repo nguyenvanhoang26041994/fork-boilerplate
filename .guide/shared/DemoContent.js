@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Flex, Badge, Avatar, Skeleton } from '@@/fork-ui/src/components/core';
+import { Flex, Badge, Avatar, Skeleton, Rater } from '@@/fork-ui/src/components/core';
 
 const Loren = () => (
   <div className="w-full">
@@ -16,7 +16,7 @@ const Loren = () => (
         </Badge>
         <Flex col className="ml-2 flex-1">
           <Skeleton p  w="70%" />
-          <Skeleton p  w="20%" />
+          <Rater star={4} />
         </Flex>
       </Flex>
       <Skeleton rect w="100%" h="200px" />

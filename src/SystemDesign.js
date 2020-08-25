@@ -1,157 +1,82 @@
 import React from 'react';
-import styled from 'styled-components';
 import Codebox from '@@/.guide/Codebox';
 import { Flex } from './fork-ui/core';
 
-import TabsBasicGuide from '@@/.guide/_documents/Tabs/demo/Basic';
-import CollapseBasicGuide from '@@/.guide/_documents/Collapse/demo/Basic';
-import ButtonBasicGuide from '@@/.guide/_documents/Button/demo/Basic';
-import RadioBasicGuide from '@@/.guide/_documents/Radio/demo/Basic';
-import CheckboxBasicGuide from '@@/.guide/_documents/Checkbox/demo/Basic';
-import SwitchBasicGuide from '@@/.guide/_documents/Switch/demo/Basic';
-import AllSkeletonGuide from '@@/.guide/_documents/Skeleton/demo/AllSkeleton';
-import TypographyGuide from '@@/.guide/_documents/Typography/demo/Basic';
-import AvatarGuide from '@@/.guide/_documents/Avatar/demo/Basic';
-import AllBadgeGuide from '@@/.guide/_documents/Badge/demo/AllBadge';
-import AllLoaderGuide from '@@/.guide/_documents/Loader/demo/AllLoader';
-import PaginationBasicGuide from '@@/.guide/_documents/Pagination/demo/Basic';
-import StepperGuide from '@@/.guide/_documents/Stepper/demo/Design';
-import TimelineGuide from '@@/.guide/_documents/Timeline/demo/Basic';
-import TooltipDesign from '@@/.guide/_documents/Tooltip/demo/Design';
-import RaterGuide from '@@/.guide/_documents/Rater/demo/Basic';
-import CarouselGuide from '@@/.guide/_documents/Carousel/demo/Basic';
-import DialogDesign from '@@/.guide/_documents/Dialog/demo/Design';
-import FullDialogComponent from '@@/.guide/_documents/Dialog/demo/FullDialogComponent';
-
-ButtonBasicGuide.header = 'BUTTON';
-TabsBasicGuide.header = 'TABS';
-CollapseBasicGuide.header = 'COLLAPSE';
-AllSkeletonGuide.header = 'SKELETON';
-RadioBasicGuide.header = 'RADIO';
-CheckboxBasicGuide.header = 'CHECKBOX';
-SwitchBasicGuide.header = 'SWITCH';
-TypographyGuide.header = 'TYPOGRAPHY';
-AvatarGuide.header = 'AVATAR';
-AllBadgeGuide.header = 'BADGE';
-AllLoaderGuide.header = 'LOADER';
-PaginationBasicGuide.header = 'PAGINATION';
-StepperGuide.header = 'STEPPER';
-TooltipDesign.header = 'TOOLIP DEISGN';
-TimelineGuide.header = 'TIMELINE';
-RaterGuide.header = 'RATER';
-DialogDesign.header = 'DIALOG DESIGN';
-CarouselGuide.header = 'CAROUSEL';
-
-const Wrapper = styled.div`
-  display: flex;
-
-  > * {
-    margin-right: 0.5rem;
-  }
-`;
-
-const ColorWrapper = styled(Flex)`
-  min-width: 7rem;
-  min-height: 7rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-`;
-const ColorShower = styled.div`
-  width: 100%;
-  height: 100%;
-`;
-
-const Color = ({ value }) => (
-  <ColorWrapper>
-    <ColorShower style={{ backgroundColor: value }} />
-  </ColorWrapper>
-);
-
-const ColorGuide = () => (
-  <Wrapper>
-    <Color value="var(--red--500)" />
-    <Color value="var(--orange--500)" />
-    <Color value="var(--green--500)" />
-    <Color value="var(--blue--500)" />
-  </Wrapper>
-);
-
-ColorGuide.header = 'COLOR PALELLE';
-ColorGuide.code = `
-<Color value="var(--red--500)" />
-<Color value="var(--orange--500)" />
-<Color value="var(--green--500)" />
-<Color value="var(--blue--500)" />
-`;
+import TypographyAllDesign from '@@/.guide/_documents/CoreComponent/demo/Typography';
+import CheckboxAllDesign from '@@/.guide/_documents/CoreComponent/demo/Checkbox';
+import ColorPalette from '@@/.guide/_documents/CoreComponent/demo/ColorPalette';
+import AvatarAllDesign from '@@/.guide/_documents/CoreComponent/demo/Avatar';
+import LoaderAllDesign from '@@/.guide/_documents/CoreComponent/demo/Loader';
+import TabsAllDesign from '@@/.guide/_documents/CoreComponent/demo/Tabs';
+import SkeletonAllDesign from '@@/.guide/_documents/CoreComponent/demo/Skeleton';
+import CollapseAllDesign from '@@/.guide/_documents/CoreComponent/demo/Collapse';
+import DialogAllDesign from '@@/.guide/_documents/CoreComponent/demo/Dialog';
+import ButtonAllDesign from '@@/.guide/_documents/CoreComponent/demo/Button';
+import BadgeAllDesign from '@@/.guide/_documents/CoreComponent/demo/Badge';
+import PaginationAllDesign from '@@/.guide/_documents/CoreComponent/demo/Pagination';
+import StepperAllDesign from '@@/.guide/_documents/CoreComponent/demo/Stepper';
+import TooltipAllDesign from '@@/.guide/_documents/CoreComponent/demo/Tooltip';
+import RaterAllDesign from '@@/.guide/_documents/CoreComponent/demo/Rater';
+import TimelineAllDesign from '@@/.guide/_documents/CoreComponent/demo/Timeline';
+import CarouselAllDesign from '@@/.guide/_documents/CoreComponent/demo/Carousel';
 
 export default () => {
   return (
     <Flex span="full" style={{ backgroundColor: 'var(---bg)' }}>
       <Flex col span="1/2">
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ ColorGuide } />
+          <Codebox Component={ ColorPalette } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ TypographyGuide } />
+          <Codebox Component={ TypographyAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ AvatarGuide } />
+          <Codebox Component={ AvatarAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ AllLoaderGuide } />
+          <Codebox Component={ LoaderAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ AllSkeletonGuide } />
+          <Codebox Component={ TabsAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ TabsBasicGuide } />
+          <Codebox Component={ SkeletonAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ CollapseBasicGuide } />
+          <Codebox Component={ CollapseAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ DialogDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ FullDialogComponent } />
+          <Codebox Component={ DialogAllDesign } />
         </div>
       </Flex>
 
       <Flex col span="1/2" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ ButtonBasicGuide } />
+          <Codebox Component={ ButtonAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ RadioBasicGuide } />
+          <Codebox Component={ CheckboxAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ CheckboxBasicGuide } />
+          <Codebox Component={ BadgeAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ SwitchBasicGuide } />
+          <Codebox Component={ PaginationAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ AllBadgeGuide } />
+          <Codebox Component={ StepperAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ PaginationBasicGuide } />
+          <Codebox Component={ TooltipAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ StepperGuide } />
+          <Codebox Component={ RaterAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ TooltipDesign } />
+          <Codebox Component={ TimelineAllDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ RaterGuide } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ TimelineGuide } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ CarouselGuide } />
+          <Codebox Component={ CarouselAllDesign } />
         </div>
       </Flex>
     </Flex>
