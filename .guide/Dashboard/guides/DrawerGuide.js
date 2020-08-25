@@ -6,6 +6,8 @@ import ClickOutside from '@@/.guide/_documents/Drawer/demo/ClickOutside';
 import Closable from '@@/.guide/_documents/Drawer/demo/Closable';
 import Placement from '@@/.guide/_documents/Drawer/demo/Placement';
 import Width from '@@/.guide/_documents/Drawer/demo/Width';
+import Refresh from '@@/.guide/_documents/Drawer/demo/Refresh';
+import Footer from '@@/.guide/_documents/Drawer/demo/Footer';
 
 export default () => {
   return (
@@ -13,6 +15,9 @@ export default () => {
       <div className="flex flex-col w-1/3">
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Basic } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Refresh } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Placement } />
@@ -29,6 +34,9 @@ export default () => {
       <div className="flex flex-col w-1/3" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Closable } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Footer } />
         </div>
       </div>
     </div>

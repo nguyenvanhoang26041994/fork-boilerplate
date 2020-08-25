@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Button, Drawer } from '@@/fork-ui/src/components/core';
+import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
   const [open, setOpen] = useState();
@@ -12,12 +13,12 @@ const Demo = () => {
       <Drawer
         open={open}
         onClose={onClose}
-        className="w-1/3"
-        closable={false}
+        className="w-1/2"
       >
-        <Drawer.Header closable={false}>Drawer Title</Drawer.Header>
+        <Drawer.Header closable>DRAWER TITLE</Drawer.Header>
         <Drawer.Body>
-          <Button onClick={onClose}>Close</Button>
+          <DemoContent />
+          <DemoContent />
         </Drawer.Body>
       </Drawer>
       <Button onClick={onOpen}>Open Drawer</Button>

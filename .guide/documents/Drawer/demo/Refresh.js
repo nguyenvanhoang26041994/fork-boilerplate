@@ -12,11 +12,10 @@ const Demo = () => {
     <div className="flex">
       <Drawer
         open={open}
-        left
         onClose={onClose}
         className="w-1/2"
       >
-        <Drawer.Header>DRAWER TITLE</Drawer.Header>
+        <Drawer.Header refreshable>DRAWER TITLE</Drawer.Header>
         <Drawer.Body>
           <DemoContent />
           <DemoContent />

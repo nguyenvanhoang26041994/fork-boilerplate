@@ -21,6 +21,7 @@ import TooltipDesign from '@@/.guide/_documents/Tooltip/demo/Design';
 import RaterGuide from '@@/.guide/_documents/Rater/demo/Basic';
 import CarouselGuide from '@@/.guide/_documents/Carousel/demo/Basic';
 import DialogDesign from '@@/.guide/_documents/Dialog/demo/Design';
+import FullDialogComponent from '@@/.guide/_documents/Dialog/demo/FullDialogComponent';
 
 ButtonBasicGuide.header = 'BUTTON';
 TabsBasicGuide.header = 'TABS';
@@ -112,6 +113,9 @@ export default () => {
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ DialogDesign } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ FullDialogComponent } />
         </div>
       </Flex>
 
