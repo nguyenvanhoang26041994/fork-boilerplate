@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Badge, Avatar, Popover, Menu, Button } from '@@/fork-ui/src/components/core';
-import { Bell, MessageCircle, IndentDecrease, IndentIncrease, Search } from '@@/fork-ui/src/components/icons';
+import { Bell, MessageCircle, IndentDecrease, IndentIncrease, Search, Maximize } from '@@/fork-ui/src/components/icons';
 import DarkModeToggle from '@/containers/DarkModeToggle';
 
 const TopNavContainer = styled.nav`
@@ -36,9 +36,9 @@ const NavRight = styled.div`
   align-items: center;
 `;
 
-const TopNavigation = ({ toggleExpand, isExpanded }) => {
+const TopNavigation = ({ toggleExpand, toggleFullScreen, isExpanded, ...otherProps }) => {
   return (
-    <TopNavContainer>
+    <TopNavContainer {...otherProps}>
       <TopNavWrapper>
         <MainTopNav>
           <NavLeft>
@@ -48,6 +48,7 @@ const TopNavigation = ({ toggleExpand, isExpanded }) => {
               icon={isExpanded ? <IndentDecrease /> : <IndentIncrease />}
               onClick={toggleExpand}
             />
+            <Button circle glassed icon={<Maximize />} onClick={toggleFullScreen} className="ml-2" />
             <Button circle glassed icon={<Search />} className="ml-2" />
           </NavLeft>
           <NavRight>

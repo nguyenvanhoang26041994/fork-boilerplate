@@ -17,23 +17,29 @@ const Demo = () => {
         name="H"
       />
       <AvatarGroup className="ml-5">
-        <Avatar name="H" />
-        <Tooltip title="H">
-          <Avatar name="M" />
+        <Avatar name="M" />
+        <Tooltip title="Hoàng Nguyễn">
+          <Avatar name="H" />
         </Tooltip>
-        <Badge count={1} dot color="#0df316" overlap bottomRight>
+        <Badge overlap bottomRight badge={<Badge.Dot color="#0df316" />}>
           <Avatar src={avatarLink} name="H" />
         </Badge>
       </AvatarGroup>
       <AvatarGroup overflowAvatar={3} className="ml-5">
         <Avatar name="H" />
-        <Avatar name="O" />
-        <Avatar name="A" />
-        <Avatar name="N" />
-        <Avatar name="G" />
+        <Avatar name="P" />
+        <Avatar name="K" />
+        <Avatar name="J" />
+        <Avatar name="Q" />
+        <Avatar name="V" />
+        <Avatar name="F" />
+        <Avatar name="L" />
+      </AvatarGroup>
+      <AvatarGroup overflowAvatar={3} className="ml-5">
         <Avatar name="H" />
-        <Avatar name="H" />
-        <Avatar name="H" />
+        <Avatar name="P" />
+        <Avatar name="K" />
+        <Avatar name="J" />
       </AvatarGroup>
     </Wrapper>
   );

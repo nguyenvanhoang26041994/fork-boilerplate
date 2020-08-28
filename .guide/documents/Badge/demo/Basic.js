@@ -7,19 +7,13 @@ import FancyBox from '@@/.guide/shared/FancyBox';
 const Demo = () => {
   return (
     <Wrapper span="2rem">
-      <Badge className="mr-5">
+      <Badge badge={<Badge.Counter count={7} />}>
         <FancyBox size="50px" />
       </Badge>
-      <Badge count={7} className="mr-5">
+      <Badge badge={<Badge.Counter count={999} />}>
         <FancyBox size="50px" />
       </Badge>
-      <Badge count={999} className="mr-5">
-        <FancyBox size="50px" />
-      </Badge>
-      <Badge dot className="mr-5">
-        <FancyBox size="50px" />
-      </Badge>
-      <Badge count={999} dot>
+      <Badge badge={<Badge.Dot />}>
         <FancyBox size="50px" />
       </Badge>
     </Wrapper>

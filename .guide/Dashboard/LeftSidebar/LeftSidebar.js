@@ -74,7 +74,7 @@ const MenuStyled = styled(Menu)`
   }
 `;
 
-const LeftSidebar = ({ isExpanded, ...otherProps }) => {
+const LeftSidebar = ({ isExpanded, style, ...otherProps }) => {
   const history = useHistory();
   const location = useLocation();
   const selectedKeys = useMemo(() => [mapRouter[location.pathname]], [location.pathname]);
@@ -105,7 +105,7 @@ const LeftSidebar = ({ isExpanded, ...otherProps }) => {
   }, [mapMenuItem, isExpanded, selectedKeys]);
 
   return (
-    <LeftSidebarContainer className={cn({ '--expanded': isExpanded })}>
+    <LeftSidebarContainer className={cn({ '--expanded': isExpanded })} style={style}>
       <LeftSidebarWrapper className={cn({ '--expanded': isExpanded })}>
         <MainLeftSidebar className={cn({ 'hide-scrollbar': isExpanded })} {...otherProps}>
           <TopWrapper>

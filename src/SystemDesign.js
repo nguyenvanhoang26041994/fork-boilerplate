@@ -19,66 +19,100 @@ import TooltipAllDesign from '@@/.guide/_documents/CoreComponent/demo/Tooltip';
 import RaterAllDesign from '@@/.guide/_documents/CoreComponent/demo/Rater';
 import TimelineAllDesign from '@@/.guide/_documents/CoreComponent/demo/Timeline';
 import CarouselAllDesign from '@@/.guide/_documents/CoreComponent/demo/Carousel';
+import MenuAllDesign from '@@/.guide/_documents/CoreComponent/demo/Menu';
+import ChipAllDesign from '@@/.guide/_documents/CoreComponent/demo/Chip';
+import ProgressAllDesign from '@@/.guide/_documents/CoreComponent/demo/Progress';
+import LineProgressAllDesign from '@@/.guide/_documents/CoreComponent/demo/LineProgress';
+import DividerAllDesign from '@@/.guide/_documents/CoreComponent/demo/Divider';
+
+import AllPortalComponent from '@@/.guide/_documents/CoreComponent/demo/AllPortalComponent';
+import TableDesign from '@@/.guide/_documents/CoreComponent/demo/Table';
 
 export default () => {
   return (
-    <Flex span="full" style={{ backgroundColor: 'var(---bg)' }}>
-      <Flex col span="1/2">
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ ColorPalette } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ TypographyAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ AvatarAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ LoaderAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ TabsAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ SkeletonAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ CollapseAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ DialogAllDesign } />
-        </div>
-      </Flex>
+    <Flex col span="full">
+      <Flex span="full" style={{ backgroundColor: 'var(---bg)' }}>
+        <Flex col span="1/2">
+          <div className="w-full" style={ { paddingBottom: '0px' } }>
+            <Codebox Component={ ColorPalette } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ TypographyAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '0px' } }>
+            <Codebox Component={ AvatarAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '0px' } }>
+            <Codebox Component={ RaterAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ LoaderAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ ProgressAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ LineProgressAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ MenuAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ TabsAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ SkeletonAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ CollapseAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ DialogAllDesign } />
+          </div>
+        </Flex>
 
-      <Flex col span="1/2" style={ { paddingLeft: '1px' } }>
+        <Flex col span="1/2" style={ { paddingLeft: '1px' } }>
+          <div className="w-full" style={ { paddingBottom: '0px' } }>
+            <Codebox Component={ ButtonAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ CheckboxAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '0px' } }>
+            <Codebox Component={ BadgeAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '0px' } }>
+            <Codebox Component={ ChipAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ TooltipAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '0px' } }>
+            <Codebox Component={ PaginationAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ StepperAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ DividerAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ TimelineAllDesign } />
+          </div>
+          <div className="flex flex-col flex-1 w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ CarouselAllDesign } className="flex-1" />
+          </div>
+        </Flex>
+      </Flex>
+      <Flex col span="full">
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ ButtonAllDesign } />
+          <Codebox Component={ TableDesign } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ CheckboxAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ BadgeAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ PaginationAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ StepperAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ TooltipAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ RaterAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ TimelineAllDesign } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ CarouselAllDesign } />
+          <Codebox Component={ AllPortalComponent } />
         </div>
       </Flex>
     </Flex>
+
   );
 };

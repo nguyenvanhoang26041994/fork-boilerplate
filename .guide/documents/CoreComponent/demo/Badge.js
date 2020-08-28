@@ -1,39 +1,41 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Badge } from '@@/fork-ui/src/components/core';
+import { Star } from '@@/fork-ui/src/components/icons';
 
 import Wrapper from '@@/.guide/shared/Wrapper';
 import FancyBox from '@@/.guide/shared/FancyBox';
 
 const Demo = () => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => setCount(prev => prev + 1), 3000);
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <Wrapper span="2rem">
-      <Badge count={999} dot>
+      <Badge badge={<Badge.Dot />}>
         <FancyBox size="50px" />
       </Badge>
-      <Badge count={7} className="mr-5">
+      <Badge badge={<Badge.Dot color="blue" />}>
         <FancyBox size="50px" />
       </Badge>
-      <Badge count={999} overflowCount={99}>
+      <Badge badge={<Badge.Counter count={7} />} className="mr-5">
         <FancyBox size="50px" />
       </Badge>
-      <Badge count={999} overflowCount={99} color="purple">
+      <Badge badge={<Badge.Counter count={999} overflowCount={99} />}>
         <FancyBox size="50px" />
       </Badge>
-      <Badge count={999} overflowCount={99} color="var(--primary--500)">
+      <Badge badge={(
+        <Badge.Counter
+          count={999}
+          overflowCount={99}
+          color="purple"
+        />
+      )}>
         <FancyBox size="50px" />
       </Badge>
-      <Badge count={999} overflowCount={99} color="var(--green--500)">
+      <Badge badge={<Badge.Icon icon={<Star />} />}>
         <FancyBox size="50px" />
       </Badge>
-      <Badge count={count}>
+      <Badge badge={<Badge.Label label="PURPLE" color="purple" />}>
+        <FancyBox size="50px" />
+      </Badge>
+      <Badge badge={<Badge.Label label="NEW" />}>
         <FancyBox size="50px" />
       </Badge>
     </Wrapper>

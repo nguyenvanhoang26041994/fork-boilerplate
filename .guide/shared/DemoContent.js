@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Flex, Badge, Avatar, Skeleton, Rater } from '@@/fork-ui/src/components/core';
 
 const Loren = () => (
-  <div className="w-full">
+  <div className="w-full" style={{ minWidth: '500px' }}>
     <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full">
       <Flex items="center" className="mb-5">
         <Badge
@@ -35,7 +35,7 @@ const DemoContent = () => {
   
   if (loading) {
     return (
-      <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full">
+      <Flex col style={{ padding: '0.5 1.5rem', minWidth: '500px' }} span="full">
         <Flex items="center">
           <Skeleton circle size="2rem" />
           <Flex col className="ml-2 flex-1">

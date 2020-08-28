@@ -52,16 +52,6 @@ const CodeMarkdown = ({ show, children }) => {
   );
 };
 
-const DescriptionMarkdown = ({ children }) => {
-  return (
-    <div className="code-box-description">
-      <ReactMarkdown
-        source={children}
-      />
-    </div>
-  );
-};
-
 const CodeboxWrapper = styled.div`
   width: 100%;
   background-color: var(--bg);
@@ -88,26 +78,22 @@ const CodeboxHeader = styled.h2`
 
 const CodeboxDemo = styled.div`
     display: flex;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 4rem 1rem;
 `;
 
-const Codebox = ({ className, defaultShowCode, Component }) => {
+const Codebox = ({ className, defaultShowCode, Component, ...otherProps }) => {
   const [showCode, setShowCode] = useState(defaultShowCode);
   const toggleShowCode = useCallback(() => setShowCode(prev => !prev), [setShowCode]);
 
   return (
-    <CodeboxWrapper className={className} id={Component.href}>
+    <CodeboxWrapper className={className} id={Component.href} {...otherProps}>
       <CodeboxHeader>
         {Component.header}
         <div>
           <Code
-            className="__code mr-3"
+            className="__code"
             glassed
             onClick={toggleShowCode}
-          />
-          <DotsVertical
-            className="__option"
-            glassed
           />
         </div>
       </CodeboxHeader>
