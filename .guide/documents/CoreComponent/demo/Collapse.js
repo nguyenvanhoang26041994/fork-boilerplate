@@ -48,9 +48,9 @@ const Demo = () => {
         </Collapse.Item>
         <Collapse.Item
           title={(
-            <Badge count={99} topRight dot>
+            <Badge.Dot topRight>
               <span><MailOpened className="mr-2" />WITH BADGE</span>
-            </Badge>
+            </Badge.Dot>
           )}
           key="panel-5"
         >

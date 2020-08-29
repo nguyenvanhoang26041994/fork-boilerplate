@@ -14,12 +14,12 @@ const Wrapper = styled.div`
 const Demo = () => {
   return (
     <Wrapper>
-      <Badge count={2}>
+      <Badge.Counter count={2}>
         <Button icon={<Bell />} />
-      </Badge>
-      <Badge overlap count={9}>
+      </Badge.Counter>
+      <Badge.Counter overlap count={9}>
         <Button circle icon={<Inbox />} />
-      </Badge>
+      </Badge.Counter>
     </Wrapper>
   );
 };

@@ -9,9 +9,9 @@ const Demo = () => {
         <Avatar name="H" />
       </Tooltip>
       <Tooltip title="H">
-        <Badge count={1} dot color="#0df316" overlap bottomRight>
+        <Badge.Dot color="#0df316" overlap bottomRight>
           <Avatar name="H" />
-        </Badge>
+        </Badge.Dot>
       </Tooltip>
     </Wrapper>
   );

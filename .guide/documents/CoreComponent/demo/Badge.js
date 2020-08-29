@@ -8,36 +8,34 @@ import FancyBox from '@@/.guide/shared/FancyBox';
 const Demo = () => {
   return (
     <Wrapper span="2rem">
-      <Badge badge={<Badge.Dot />}>
+      <Badge.Dot>
         <FancyBox size="50px" />
-      </Badge>
-      <Badge badge={<Badge.Dot color="blue" />}>
+      </Badge.Dot>
+      <Badge.Dot color="blue">
         <FancyBox size="50px" />
-      </Badge>
-      <Badge badge={<Badge.Counter count={7} />} className="mr-5">
+      </Badge.Dot>
+      <Badge.Counter count={7} className="mr-5">
         <FancyBox size="50px" />
-      </Badge>
-      <Badge badge={<Badge.Counter count={999} overflowCount={99} />}>
+      </Badge.Counter>
+      <Badge.Counter count={999} overflowCount={99}>
         <FancyBox size="50px" />
-      </Badge>
-      <Badge badge={(
-        <Badge.Counter
-          count={999}
-          overflowCount={99}
-          color="purple"
-        />
-      )}>
+      </Badge.Counter>
+      <Badge.Counter
+        count={999}
+        overflowCount={99}
+        color="purple"
+      >
         <FancyBox size="50px" />
-      </Badge>
-      <Badge badge={<Badge.Icon icon={<Star />} />}>
+      </Badge.Counter>
+      <Badge.Icon icon={<Star />}>
         <FancyBox size="50px" />
-      </Badge>
-      <Badge badge={<Badge.Label label="PURPLE" color="purple" />}>
+      </Badge.Icon>
+      <Badge.Label label="PURPLE" color="purple">
         <FancyBox size="50px" />
-      </Badge>
-      <Badge badge={<Badge.Label label="NEW" />}>
+      </Badge.Label>
+      <Badge.Label label="NEW">
         <FancyBox size="50px" />
-      </Badge>
+      </Badge.Label>
     </Wrapper>
   );
 };

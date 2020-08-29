@@ -5,15 +5,13 @@ const Loren = () => (
   <div className="w-full" style={{ minWidth: '500px' }}>
     <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full">
       <Flex items="center" className="mb-5">
-        <Badge
-          count={1}
-          dot
+        <Badge.Dot
           overlap
           color="#0df316"
           bottomRight
         >
           <Avatar name="H" size="1.5rem" />
-        </Badge>
+        </Badge.Dot>
         <Flex col className="ml-2 flex-1">
           <Skeleton p  w="70%" />
           <Rater star={4} />

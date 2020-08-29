@@ -9,9 +9,9 @@ const Demo = () => {
 
   return (
     <Wrapper span="2rem">
-      <Badge count={999} invisible={invisible}>
+      <Badge.Counter count={999}>
         <FancyBox size="50px" />
-      </Badge>
+      </Badge.Counter>
       <Switch
         className="mt-10"
         checked={invisible}

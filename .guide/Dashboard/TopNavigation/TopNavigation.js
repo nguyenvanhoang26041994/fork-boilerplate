@@ -52,12 +52,12 @@ const TopNavigation = ({ toggleExpand, toggleFullScreen, isExpanded, ...otherPro
             <Button circle glassed icon={<Search />} className="ml-2" />
           </NavLeft>
           <NavRight>
-            <Badge count={14} className="mr-8">
+            <Badge.Counter count={14} className="mr-8">
               <MessageCircle fontSize="1.28rem"/>
-            </Badge>
-            <Badge count={5} className="mr-8">
+            </Badge.Counter>
+            <Badge.Counter count={5} className="mr-8">
               <Bell fontSize="1.25rem"/>
-            </Badge>
+            </Badge.Counter>
             <DarkModeToggle className="mx-5" />
             <Popover
               absolute

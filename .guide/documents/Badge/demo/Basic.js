@@ -7,15 +7,15 @@ import FancyBox from '@@/.guide/shared/FancyBox';
 const Demo = () => {
   return (
     <Wrapper span="2rem">
-      <Badge badge={<Badge.Counter count={7} />}>
+      <Badge.Counter count={7}>
         <FancyBox size="50px" />
-      </Badge>
-      <Badge badge={<Badge.Counter count={999} />}>
+      </Badge.Counter>
+      <Badge.Counter count={999}>
         <FancyBox size="50px" />
-      </Badge>
-      <Badge badge={<Badge.Dot />}>
+      </Badge.Counter>
+      <Badge.Dot>
         <FancyBox size="50px" />
-      </Badge>
+      </Badge.Dot>
     </Wrapper>
   );
 };

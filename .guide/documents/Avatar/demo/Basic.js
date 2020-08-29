@@ -21,9 +21,9 @@ const Demo = () => {
         <Tooltip title="H">
           <Avatar name="M" />
         </Tooltip>
-        <Badge count={1} dot color="#0df316" overlap bottomRight>
+        <Badge.Dot color="#0df316" overlap bottomRight>
           <Avatar src={avatarLink} name="H" />
-        </Badge>
+        </Badge.Dot>
       </AvatarGroup>
       <AvatarGroup overflowAvatar={3} className="ml-5">
         <Avatar name="H" />

@@ -26,9 +26,9 @@ const Demo = () => {
         </Tabs.Item>
         <Tabs.Item
           title={(
-            <Badge topRight badge={<Badge.Dot />}>
+            <Badge.Dot topRight>
               <span>WITH BADGE</span>
-            </Badge>
+            </Badge.Dot>
           )}
           key="tab-5"
         >
@@ -37,9 +37,9 @@ const Demo = () => {
         <Tabs.Item
           title={(
             <Tooltip top title="You have new 99 unread messages!">
-              <Badge topRight badge={<Badge.Counter count={99} />}>
+              <Badge.Counter topRight count={99}>
                 <BrandMessenger />
-              </Badge>
+              </Badge.Counter>
             </Tooltip>
           )}
           key="tab-6"
