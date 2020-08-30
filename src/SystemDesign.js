@@ -24,9 +24,12 @@ import ChipAllDesign from '@@/.guide/_documents/CoreComponent/demo/Chip';
 import ProgressAllDesign from '@@/.guide/_documents/CoreComponent/demo/Progress';
 import LineProgressAllDesign from '@@/.guide/_documents/CoreComponent/demo/LineProgress';
 import DividerAllDesign from '@@/.guide/_documents/CoreComponent/demo/Divider';
+import SingleSliderAllDesign from '@@/.guide/_documents/CoreComponent/demo/SingleSlider';
+import ImageAllDesign from '@@/.guide/_documents/CoreComponent/demo/Image';
 
 import AllPortalComponent from '@@/.guide/_documents/CoreComponent/demo/AllPortalComponent';
 import TableDesign from '@@/.guide/_documents/CoreComponent/demo/Table';
+import Flexbox from '@@/.guide/_documents/CoreComponent/demo/Flexbox';
 
 export default () => {
   return (
@@ -66,8 +69,8 @@ export default () => {
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ CollapseAllDesign } />
           </div>
-          <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ DialogAllDesign } />
+          <div className="flex flex-col flex-1 w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ DialogAllDesign } className="flex-1" />
           </div>
         </Flex>
 
@@ -77,6 +80,9 @@ export default () => {
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ CheckboxAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ SingleSliderAllDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '0px' } }>
             <Codebox Component={ BadgeAllDesign } />
@@ -99,8 +105,11 @@ export default () => {
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ TimelineAllDesign } />
           </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ CarouselAllDesign } />
+          </div>
           <div className="flex flex-col flex-1 w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ CarouselAllDesign } className="flex-1" />
+            <Codebox Component={ ImageAllDesign } className="flex-1" />
           </div>
         </Flex>
       </Flex>
@@ -111,6 +120,9 @@ export default () => {
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ AllPortalComponent } />
         </div>
+        {/* <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Flexbox } />
+        </div> */}
       </Flex>
     </Flex>
 

@@ -91,7 +91,7 @@ const leftSidebar = {
       Checkbox: {},
       Radio: {},
       Switch: {},
-      Slider: {},
+      // Slider: {},
     }
   },
   Loading: {
