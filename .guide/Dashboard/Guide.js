@@ -25,7 +25,7 @@ import FlexGuide from './guides/FlexGuide';
 import FormGuide from './guides/FormGuide';
 import IconGuide from './guides/IconGuide';
 import ImageGuide from './guides/ImageGuide';
-import InputNumberDocument from '@@/.guide/_documents/InputNumber/Document';
+import NumberDocument from '@@/.guide/_documents/Number/Document';
 import LoaderGuide from './guides/LoaderGuide';
 import MenuGuide from './guides/MenuGuide';
 import ModalGuide from './guides/ModalGuide';
@@ -83,7 +83,7 @@ const Dashboard = ({}) => {
               <Route path="/document/inputfield" component={ FormGuide } />
               <Route path="/document/icon" component={ IconGuide } />
               <Route path="/document/image" component={ ImageGuide } />
-              <Route path="/document/inputnumber" component={ InputNumberDocument } />
+              <Route path="/document/Number" component={ NumberDocument } />
               <Route path="/document/loader" component={ LoaderGuide } />
               <Route path="/document/menu" component={ MenuGuide } />
               <Route path="/document/modal" component={ ModalGuide } />

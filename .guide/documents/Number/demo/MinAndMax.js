@@ -1,9 +1,9 @@
 import React from 'react';
-import { InputNumber } from '@@/fork-ui/src/components/core';
+import { Number } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (
-    <InputNumber
+    <Number
       min={5}
       max={10}
       placeholder="The placeholder"

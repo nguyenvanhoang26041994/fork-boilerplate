@@ -6,10 +6,13 @@ const makeFile = require('./utils/make-file');
 
 const rcNeumorphismRoot = path.resolve('fork-ui');
 const TablerIconTemplate = readFile(path.join(__dirname, '/templates/Icon/svg/tabler-icon.hbs'));
+const mapNumberChar = ['zero-', 'one-', 'two-', 'three-', 'four-', 'five-', 'six-', 'seven-', 'eight-', 'nine-'];
 
 function capitalizeFirstLetter(str) {
-  return str.split('-').map(_str => _str.charAt(0).toUpperCase() + _str.slice(1)).join('');
+  let _str = str.replace(/^\d/, char => mapNumberChar[char]);
+  return _str.split('-').map(__str => __str.charAt(0).toUpperCase() + __str.slice(1)).join('');
 }
+
 const makeTablerIcon = function(iconName) {
   let str = TablerIconTemplate;
   let svg = readFile(path.resolve(`tabler-icons/icons/${iconName}.svg`));
@@ -29,10 +32,10 @@ const makeTablerIcons = function() {
   let icons = readFolder(path.resolve('tabler-icons/icons')) || [];
   icons = icons
     .filter(icon => /.svg$/.test(icon))
-    .map(icon => icon.replace(/.svg$/, ''));
+    .map(icon => icon.replace(/.svg$/, ''))
 
   icons = icons.map(iconName => makeTablerIcon(iconName));
-  const header = 'import React from \'react\';\nimport enhancerIcon from \'\.\/enhancerIcon\';\n\n';
+  const header = '// THANK TO https://github.com/tabler/tabler-icons\nimport React from \'react\';\nimport enhancerIcon from \'\.\/enhancerIcon\';\n\n';
 
   makeFile(
     path.join(rcNeumorphismRoot, '/src/components/icons/index.js'),

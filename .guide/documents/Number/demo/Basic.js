@@ -1,10 +1,9 @@
 import React from 'react';
-import { InputNumber } from '@@/fork-ui/src/components/core';
+import { Number } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (
-    <InputNumber
-      step={10}
+    <Number
       placeholder="The placeholder"
       onChange={e => console.log(e.target.value)}
     />

@@ -46,7 +46,7 @@ const Demo = () => {
           icon={<Copy />}
         />
       </Form.Select>
-      <Form.InputNumber
+      <Form.Number
         required
         label="Age"
         placeholder="Your age"

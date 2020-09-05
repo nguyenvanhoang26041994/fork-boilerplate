@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from 'react';
-import { InputNumber } from '@@/fork-ui/src/components/core';
+import { Number } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   const ref = useRef();
@@ -9,7 +9,7 @@ const Demo = () => {
   }, [ref]);
 
   return (
-    <InputNumber
+    <Number
       ref={ref}
       placeholder="The placeholder"
       onChange={onChange}

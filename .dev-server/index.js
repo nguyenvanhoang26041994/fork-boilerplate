@@ -19,7 +19,7 @@ const middleware = webpackDevMiddleware(compiler, {
 });
 
 app.use(compression());
-app.use('/static', express.static('static'));
+app.use('/static', express.static('src/static'));
 app.use(middleware);
 app.use(webpackHotMiddleware(compiler));
 

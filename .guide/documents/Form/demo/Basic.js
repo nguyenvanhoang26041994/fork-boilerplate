@@ -21,34 +21,6 @@ const Demo = () => {
         name="password"
         onChange={onChange}
       />
-      <Form.Select
-        label="Sex"
-        placeholder="Your gender"
-        name="password"
-        onChange={onChange}
-      >
-        <Select.Option
-          key="male"
-          title="Male"
-          icon={<Messages />}
-        />
-        <Select.Option
-          key="female"
-          title="Female"
-          icon={<Power />}
-        />
-        <Select.Option
-          key="other"
-          title="Other"
-          icon={<Copy />}
-        />
-      </Form.Select>
-      <Form.InputNumber
-        label="Age"
-        placeholder="Your age"
-        name="age"
-        onChange={onChange}
-      />
       <Form.Textarea
         label="Comment"
         placeholder="Comment here"

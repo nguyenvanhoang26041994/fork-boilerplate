@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Badge, Avatar, Popover, Menu, Button } from '@@/fork-ui/src/components/core';
-import { Bell, MessageCircle, IndentDecrease, IndentIncrease, Search, Maximize } from '@@/fork-ui/src/components/icons';
+import { Button } from '@@/fork-ui/src/components/core';
+import { IndentDecrease, IndentIncrease, Search, Maximize } from '@@/fork-ui/src/components/icons';
 import DarkModeToggle from '@/containers/DarkModeToggle';
 
 const TopNavContainer = styled.nav`
@@ -48,29 +48,11 @@ const TopNavigation = ({ toggleExpand, toggleFullScreen, isExpanded, ...otherPro
               icon={isExpanded ? <IndentDecrease /> : <IndentIncrease />}
               onClick={toggleExpand}
             />
-            <Button circle glassed icon={<Maximize />} onClick={toggleFullScreen} className="ml-2" />
             <Button circle glassed icon={<Search />} className="ml-2" />
           </NavLeft>
           <NavRight>
-            <Badge.Counter count={14} className="mr-8">
-              <MessageCircle fontSize="1.28rem"/>
-            </Badge.Counter>
-            <Badge.Counter count={5} className="mr-8">
-              <Bell fontSize="1.25rem"/>
-            </Badge.Counter>
+            <Button circle glassed icon={<Maximize />} onClick={toggleFullScreen} className="mr-2" />
             <DarkModeToggle className="mx-5" />
-            <Popover
-              absolute
-              bottomRight
-              overlay={(
-                <Menu>
-                  <Menu.Item title="Change password" />
-                  <Menu.Item title="Logout" />
-                </Menu>
-              )}
-            >
-              <Avatar name="H" />
-            </Popover>
           </NavRight>
         </MainTopNav>
       </TopNavWrapper>

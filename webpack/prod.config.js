@@ -22,7 +22,7 @@ module.exports = require('./base.config')({
     }),
     new CopyPlugin([
       {
-        from: 'static',
+        from: 'src/static',
         to: 'static',
       },
     ]),
