@@ -101,13 +101,13 @@ const IconGuide = () => {
           <Codebox Component={ Basic } defaultShowCode />
         </Flex>
         <Flex style={{ paddingBottom: '1px' }}>
-          <Codebox Component={ Color } defaultShowCode />
+          <Codebox Component={ Color } />
         </Flex>
         <Flex style={{ paddingBottom: '1px' }}>
-          <Codebox Component={ Size } defaultShowCode />
+          <Codebox Component={ Size } />
         </Flex>
         <Flex style={{ paddingBottom: '1px' }}>
-          <Codebox Component={ Stroke } defaultShowCode />
+          <Codebox Component={ Stroke } />
         </Flex>
       </Flex>
       <Flex span="1/2" style={{ paddingLeft: '1px' }} >

@@ -1,16 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-
+import Wrapper from '@@/.guide/shared/Wrapper';
 import { Button, ButtonGroup } from '@@/fork-ui/src/components/core';
 import { Power, Message, Bell } from '@@/fork-ui/src/components/icons';
-
-const Wrapper = styled.div`
-  display: flex;
-
-  > * {
-    margin-right: 1rem;
-  }
-`;
 
 const Demo = () => {
   return (
@@ -25,7 +16,7 @@ const Demo = () => {
         <Button icon={<Message />} />
         <Button icon={<Bell />} />
       </ButtonGroup>
-      <ButtonGroup glassed>
+      <ButtonGroup danger>
         <Button icon={<Power />} />
         <Button icon={<Message />} />
         <Button icon={<Bell />} />
