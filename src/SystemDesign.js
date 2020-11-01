@@ -4,6 +4,7 @@ import { Flex } from './fork-ui/core';
 
 import TypographyAllDesign from '@@/.guide/_documents/CoreComponent/demo/Typography';
 import CheckboxAllDesign from '@@/.guide/_documents/CoreComponent/demo/Checkbox';
+import SwitchAllDesign from '@@/.guide/_documents/CoreComponent/demo/Switch';
 import ColorPalette from '@@/.guide/_documents/CoreComponent/demo/ColorPalette';
 import AvatarAllDesign from '@@/.guide/_documents/CoreComponent/demo/Avatar';
 import LoaderAllDesign from '@@/.guide/_documents/CoreComponent/demo/Loader';
@@ -85,6 +86,9 @@ export default () => {
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ CheckboxAllDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ SwitchAllDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ NativeInput } />
