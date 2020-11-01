@@ -6,6 +6,7 @@ import Controlled from '@@/.guide/_documents/Switch/demo/Controlled';
 import Loading from '@@/.guide/_documents/Switch/demo/Loading';
 import UnControlled from '@@/.guide/_documents/Switch/demo/UnControlled';
 import Disabled from '@@/.guide/_documents/Switch/demo/Disabled';
+import Size from '@@/.guide/_documents/Switch/demo/Size';
 import Custom from '@@/.guide/_documents/Switch/demo/Custom';
 
 export default () => {
@@ -26,6 +27,9 @@ export default () => {
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Loading } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Size } />
         </div>
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
