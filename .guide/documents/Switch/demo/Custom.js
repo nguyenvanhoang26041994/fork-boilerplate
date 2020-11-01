@@ -9,7 +9,7 @@ const SuccessSwitch = styled(Switch)`
   .fswitch-input {
     &:checked,
     &:disabled:checked {
-      + .fswitch-fake {
+      + .fswitch-mark {
         color: var(--green);
         background-color: currentColor;
       }
@@ -23,7 +23,7 @@ const DangerSwitch = styled(Switch)`
   .fswitch-input {
     &:checked,
     &:disabled:checked {
-      + .fswitch-fake {
+      + .fswitch-mark {
         color: var(--red);
         background-color: currentColor;
       }
@@ -37,7 +37,7 @@ const PurpleSwitch = styled(Switch)`
   .fswitch-input {
     &:checked,
     &:disabled:checked {
-      + .fswitch-fake {
+      + .fswitch-mark {
         color: purple;
         background-color: currentColor;
       }
@@ -46,17 +46,17 @@ const PurpleSwitch = styled(Switch)`
 `;
 
 const MinialSwitch = styled(Switch)`
-  .fswitch-mark {
+  .fswitch-lever {
     margin: 0;
   }
 
-  .fswitch-fake {
+  .fswitch-mark {
     height: 50%;
   }
 
   .fswitch-input:checked {
-    + .fswitch-fake {
-        .fswitch-mark {
+    + .fswitch-mark {
+        .fswitch-lever {
           transform: translateX(1.77em);
         }
       }

@@ -75,6 +75,12 @@ const Demo = () => {
           }
         </Button>
       </SwitchButton>
+      <Button
+        primary={checked}
+        circle
+        icon={checked ? <MoonStars /> : <Bulb />}
+        onClick={toggle}
+      />
     </Wrapper>
   );
 };
