@@ -8,6 +8,7 @@ import UnControlled from '@@/.guide/_documents/Switch/demo/UnControlled';
 import Disabled from '@@/.guide/_documents/Switch/demo/Disabled';
 import Size from '@@/.guide/_documents/Switch/demo/Size';
 import Custom from '@@/.guide/_documents/Switch/demo/Custom';
+import SwitchButton from '@@/.guide/_documents/Switch/demo/SwitchButton';
 
 export default () => {
   return (
@@ -30,6 +31,9 @@ export default () => {
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Size } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ SwitchButton } />
         </div>
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
