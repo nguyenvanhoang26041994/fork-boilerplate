@@ -6,7 +6,6 @@ const Demo = () => {
   return (
     <Wrapper>
       <Switch defaultChecked />
-      <Switch />
     </Wrapper>
   );
 };

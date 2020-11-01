@@ -7,8 +7,6 @@ const Demo = () => {
     <Wrapper>
       <Switch defaultChecked />
       <Switch />
-      <Switch loading />
-      <Switch loading defaultChecked />
     </Wrapper>
   );
 };

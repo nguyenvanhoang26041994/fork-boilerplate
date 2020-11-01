@@ -5,13 +5,9 @@ import Wrapper from '@@/.guide/shared/Wrapper';
 
 
 const PinkRadio = styled(Radio)`
-  .fradio-input {
-    &:hover {
-      + .fradio-mark {
-        color: pink;
-      }
-    }
+  color: pink;
 
+  .fradio-input {
     &:checked,
     &:disabled:checked {
       + .fradio-mark {
@@ -22,13 +18,9 @@ const PinkRadio = styled(Radio)`
 `;
 
 const DangerRadio = styled(Radio)`
-  .fradio-input {
-    &:hover {
-      + .fradio-mark {
-        color: var(--red);
-      }
-    }
+  color: var(--red);
 
+  .fradio-input {
     &:checked,
     &:disabled:checked {
       + .fradio-mark {
@@ -39,13 +31,9 @@ const DangerRadio = styled(Radio)`
 `;
 
 const SuccessRadio = styled(Radio)`
-  .fradio-input {
-    &:hover {
-      + .fradio-mark {
-        color: var(--green);
-      }
-    }
+  color: var(--green);
 
+  .fradio-input {
     &:checked,
     &:disabled:checked {
       + .fradio-mark {

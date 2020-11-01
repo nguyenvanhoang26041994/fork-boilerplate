@@ -14,7 +14,11 @@ import {
   Braces,
   LayoutSidebar,
   LayoutBottombar,
-  DeviceLaptop
+  DeviceLaptop,
+  Circle,
+  ToggleRight,
+  Checkbox,
+  User,
 } from '@@/fork-ui/src/components/icons';
 
 const leftSidebar = {
@@ -23,6 +27,21 @@ const leftSidebar = {
   },
   Button: {
     icon: <Mouse />,
+  },
+  Checkbox: {
+    icon: <Checkbox />,
+  },
+  Radio: {
+    icon: <Circle />,
+  },
+  Switch: {
+    icon: <ToggleRight />,
+  },
+  Avatar: {
+    icon: <User />,
+  },
+  Badge: {
+    icon: <Notification />,
   },
   Typography: {
     icon: <Typography />,
@@ -55,7 +74,6 @@ const leftSidebar = {
     type: 'sub',
     icon: <Eye />,
     items: {
-      Badge: {},
       Collapse: {},
       Popover: {},
       Tooltip: {},
@@ -65,7 +83,6 @@ const leftSidebar = {
       Chip: {},
       Breadcrumb: {},
       Pagination: {},
-      Avatar: {},
     }
   },
   Feedback: {
@@ -88,9 +105,6 @@ const leftSidebar = {
       Textarea: {},
       // Number: {},
       // Select: {},
-      Checkbox: {},
-      Radio: {},
-      Switch: {},
       // Slider: {},
     }
   },

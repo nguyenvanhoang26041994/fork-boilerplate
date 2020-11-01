@@ -4,13 +4,9 @@ import Wrapper from '@@/.guide/shared/Wrapper';
 import { Checkbox } from '@@/fork-ui/src/components/core';
 
 const PinkCheckbox = styled(Checkbox)`
-  .fcbox-input {
-    &:hover {
-      + .fcbox-mark {
-        color: pink;
-      }
-    }
+  color: pink;
 
+  .fcbox-input {
     &:checked,
     &:disabled:checked {
       + .fcbox-mark {
@@ -21,13 +17,9 @@ const PinkCheckbox = styled(Checkbox)`
 `;
 
 const DangerCheckbox = styled(Checkbox)`
-  .fcbox-input {
-    &:hover {
-      + .fcbox-mark {
-        color: var(--red);
-      }
-    }
+  color: var(--red);
 
+  .fcbox-input {
     &:checked,
     &:disabled:checked {
       + .fcbox-mark {
@@ -38,13 +30,9 @@ const DangerCheckbox = styled(Checkbox)`
 `;
 
 const SuccessCheckbox = styled(Checkbox)`
-  .fcbox-input {
-    &:hover {
-      + .fcbox-mark {
-        color: var(--green);
-      }
-    }
+  color: var(--green);
 
+  .fcbox-input {
     &:checked,
     &:disabled:checked {
       + .fcbox-mark {
