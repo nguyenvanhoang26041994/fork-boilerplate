@@ -4,6 +4,8 @@ import copyToClipboard from '@@/fork-ui/src/utils/copyToClipboard';
 import Codebox from '@@/.guide/Codebox';
 import Basic from '@@/.guide/_documents/Icon/demo/Basic';
 import Color from '@@/.guide/_documents/Icon/demo/Color';
+import Size from '@@/.guide/_documents/Icon/demo/Size';
+import Stroke from '@@/.guide/_documents/Icon/demo/Stroke';
 
 import { Textbox, Flex } from '@@/fork-ui/src/components/core';
 import * as allIcons from '@@/fork-ui/src/components/icons';
@@ -26,18 +28,35 @@ const IconBoxWrapper = styled.div`
   }
 
   &:hover {
-    color: var(--primary--500);
+    color: var(--primary);
     transform: scale(1.2);
     transition: 0.25s;
   }
 `;
+
 const IconGuideWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: var(--bg);
 `;
 
-const SearchBox = styled(Textbox)``;
+const SearchBox = styled(Textbox)`
+  border-radius: 0;
+  background-color: var(--bg);
+  border-color: transparent;
+  border-bottom: 1px solid var(--primary);
+
+  &:focus,
+  &:hover {
+    background-color: var(--bg);
+    border-color: transparent;
+    border-bottom: 1px solid var(--primary);
+  }
+`;
+const SearchBoxWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const IconBox = ({ Icon, name }) => {
   const [isCopied, setIsCopied] = useState(false);
@@ -48,13 +67,16 @@ const IconBox = ({ Icon, name }) => {
 
   useEffect(() => {
     if (isCopied) {
-      setTimeout(() => setIsCopied(false), 2500);
+      setTimeout(() => setIsCopied(false), 1000);
     }
-  }, [isCopied]);
+  }, [isCopied, setIsCopied]);
 
   return (
     <IconBoxWrapper>
-      {isCopied ? <Check color="green" fontSize="1.25rem" /> : <Icon fontSize="1.25rem" onClick={onClick} />}
+      {isCopied
+        ? <Check color="var(--primary)" fontSize="1.25rem" />
+        : <Icon fontSize="1.25rem" style={{ cursor: 'pointer' }} onClick={onClick} />
+      }
     </IconBoxWrapper>
   );
 };
@@ -73,21 +95,31 @@ const IconGuide = () => {
   }, [searchStr]);
 
   return (
-    <Flex col>
-      <Flex span="full" style={ { paddingBottom: '1px' } }>
-        <Flex span="1/2">
+    <Flex>
+      <Flex col span="1/2">
+        <Flex style={{ paddingBottom: '1px' }}>
           <Codebox Component={ Basic } defaultShowCode />
         </Flex>
-        <Flex span="1/2" style={ { paddingLeft: '1px' } }>
+        <Flex style={{ paddingBottom: '1px' }}>
           <Codebox Component={ Color } defaultShowCode />
         </Flex>
+        <Flex style={{ paddingBottom: '1px' }}>
+          <Codebox Component={ Size } defaultShowCode />
+        </Flex>
+        <Flex style={{ paddingBottom: '1px' }}>
+          <Codebox Component={ Stroke } defaultShowCode />
+        </Flex>
       </Flex>
-      <SearchBox className="mb-1" placeholder="What's icon you looking for?" onChange={debounceChange} ref={searchRef} />
-      <IconGuideWrapper>
-        <div className="flex w-full flex-wrap">
-          {_icons}
-        </div>
-      </IconGuideWrapper>
+      <Flex span="1/2" style={{ paddingLeft: '1px' }} >
+          <SearchBoxWrapper className="w-full">
+            <SearchBox placeholder="What's icon you looking for?" onChange={debounceChange} ref={searchRef} />
+            <IconGuideWrapper>
+              <div className="flex justify-center w-full flex-wrap">
+                {_icons}
+              </div>
+            </IconGuideWrapper>
+          </SearchBoxWrapper>
+        </Flex>
     </Flex>
   );
 };

@@ -27,20 +27,20 @@ const Demo = () => {
         <Flex span="1/4" style={{ height: '130px', backgroundColor: 'var(--primary--200)' }} />
         <Flex span="1/4" style={{ height: '130px', backgroundColor: 'var(--primary--300)' }} />
         <Flex span="1/4" style={{ height: '130px', backgroundColor: 'var(--primary--400)' }} />
-        <Flex span="1/4" style={{ height: '130px', backgroundColor: 'var(--primary--500)' }} />
+        <Flex span="1/4" style={{ height: '130px', backgroundColor: 'var(--primary)' }} />
       </Flex>
       <Flex style={{ marginBottom: '1px' }}>
         <Flex span="1/5" style={{ height: '130px', backgroundColor: 'var(--primary--200)' }} />
         <Flex span="1/5" style={{ height: '130px', backgroundColor: 'var(--primary--300)' }} />
         <Flex span="1/5" style={{ height: '130px', backgroundColor: 'var(--primary--400)' }} />
-        <Flex span="1/5" style={{ height: '130px', backgroundColor: 'var(--primary--500)' }} />
+        <Flex span="1/5" style={{ height: '130px', backgroundColor: 'var(--primary)' }} />
         <Flex span="1/5" style={{ height: '130px', backgroundColor: 'var(--primary--600)' }} />
       </Flex>
       <Flex style={{ marginBottom: '1px' }}>
         <Flex span="1/6" style={{ height: '130px', backgroundColor: 'var(--primary--200)' }} />
         <Flex span="1/6" style={{ height: '130px', backgroundColor: 'var(--primary--300)' }} />
         <Flex span="1/6" style={{ height: '130px', backgroundColor: 'var(--primary--400)' }} />
-        <Flex span="1/6" style={{ height: '130px', backgroundColor: 'var(--primary--500)' }} />
+        <Flex span="1/6" style={{ height: '130px', backgroundColor: 'var(--primary)' }} />
         <Flex span="1/6" style={{ height: '130px', backgroundColor: 'var(--primary--600)' }} />
         <Flex span="1/6" style={{ height: '130px', backgroundColor: 'var(--primary--700)' }} />
       </Flex>

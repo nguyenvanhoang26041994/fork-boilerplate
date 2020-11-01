@@ -1,13 +1,14 @@
 import React from 'react';
+import Wrapper from '@@/.guide/shared/Wrapper';
 import { Alarm } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
   return (
-    <div className="flex">
-      <Alarm className="mr-5" size="1rem" />
-      <Alarm className="mr-5" size="1.5rem" />
-      <Alarm className="mr-5" size="30px" />
-    </div>
+    <Wrapper>
+      <Alarm size="1rem" />
+      <Alarm size="1.5rem" />
+      <Alarm size="30px" />
+    </Wrapper>
   );
 };
 

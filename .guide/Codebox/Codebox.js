@@ -74,6 +74,11 @@ const CodeboxHeader = styled.h2`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .__code {
+    cursor: pointer;
+    color: var(--primary);
+  }
 `;
 
 const CodeboxDemo = styled.div`
@@ -92,7 +97,6 @@ const Codebox = ({ className, defaultShowCode, Component, ...otherProps }) => {
         <div>
           <Code
             className="__code"
-            glassed
             onClick={toggleShowCode}
           />
         </div>

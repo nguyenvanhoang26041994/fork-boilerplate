@@ -1,13 +1,14 @@
 import React from 'react';
+import Wrapper from '@@/.guide/shared/Wrapper';
 import { BrandGithub, Alarm, Adjustments } from '@@/fork-ui/src/components/icons';
 
 const Demo = () => {
   return (
-    <div className="flex">
-      <BrandGithub className="mr-5" color="blueviolet" />
-      <Alarm className="mr-5" color="red" />
-      <Adjustments className="mr-5" color="#00ffe9" />
-    </div>
+    <Wrapper>
+      <BrandGithub color="var(--primary)" />
+      <Alarm color="red" />
+      <Adjustments color="#00ffe9" />
+    </Wrapper>
   );
 };
 

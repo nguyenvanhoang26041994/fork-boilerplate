@@ -25,7 +25,7 @@ const makeTablerIcon = function(iconName) {
 
   str = str.replace('__INJECT__FLAG__', svg);
 
-  return Handlebars.compile(str)({ componentName: capitalizeFirstLetter(iconName) })
+  return Handlebars.compile(str)({ componentName: capitalizeFirstLetter(iconName), originalName: iconName })
 };
 
 const makeTablerIcons = function() {

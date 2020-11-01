@@ -14,17 +14,14 @@ import {
 const Demo = () => (
   <Wrapper>
     <Button>Basic</Button>
-    <Button rounded>Rounded</Button>
     <Button rounded primary>Primary</Button>
-    <Button outlined rounded primary>Outlined</Button>
+    <Button bordered rounded primary>Bordered</Button>
+    <Button transparent>Transparent</Button>
     <Button disabled circle icon={<Check />} />
     <Button loading circle icon={<Check />} />
-    <Button circle icon={<Cast />} />
     <Button circle icon={<PlaneDeparture />} />
     <Button circle icon={<Rotate2 />} />
-    <Button circle glassed icon={<Camera />} />
     <Button circle primary outlined icon={<Inbox />} />
-    <Button circle transparent icon={<Calendar />} />
   </Wrapper>
 );
 

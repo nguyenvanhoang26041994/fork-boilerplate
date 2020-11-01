@@ -6,7 +6,7 @@ const Demo = () => {
     <Flex col span="full">
       <Flex
         style={{
-          backgroundColor: 'var(--primary--500)',
+          backgroundColor: 'var(--primary)',
           height: '5rem',
         }}
       />
