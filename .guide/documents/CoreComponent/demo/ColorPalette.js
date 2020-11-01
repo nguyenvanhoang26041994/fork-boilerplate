@@ -14,10 +14,12 @@ const ColorWrapper = styled.div`
 const Demo = () => {
   return (
     <Wrapper>
-      <ColorWrapper style={{ backgroundColor: 'var(--red--500)' }} />
-      <ColorWrapper style={{ backgroundColor: 'var(--orange--500)' }} />
-      <ColorWrapper style={{ backgroundColor: 'var(--green--500)' }} />
-      <ColorWrapper style={{ backgroundColor: 'var(--blue--500)' }} />
+      <ColorWrapper style={{ backgroundColor: 'var(--primary)' }} />
+      <ColorWrapper style={{ backgroundColor: 'var(--red)' }} />
+      <ColorWrapper style={{ backgroundColor: 'var(--green)' }} />
+      <ColorWrapper style={{ backgroundColor: 'var(--menu--bg)' }} />
+      <ColorWrapper style={{ backgroundColor: 'var(--sub-menu--bg)' }} />
+      <ColorWrapper style={{ backgroundColor: 'var(--button--bg)' }} />
     </Wrapper>
   );
 };

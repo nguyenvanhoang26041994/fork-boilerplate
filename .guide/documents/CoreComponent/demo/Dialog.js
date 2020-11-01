@@ -4,7 +4,7 @@ import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
   return (
-    <Dialog class="w-full" style={{ boxShadow: 'var(--overlay--shadow)' }}>
+    <Dialog className="w-full" style={{ boxShadow: 'var(--overlay--shadow)' }}>
       <Dialog.Header freshable>DIALOG HEADER</Dialog.Header>
       <Dialog.Body>
         <DemoContent />

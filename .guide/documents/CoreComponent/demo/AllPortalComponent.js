@@ -59,7 +59,6 @@ const Demo = () => {
         <Modal.Header freshable>MODAL TITLE</Modal.Header>
         <Modal.Body>
           <DemoContent />
-          <DemoContent />
         </Modal.Body>
         <Modal.Footer>
           <Button>Save</Button>

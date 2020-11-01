@@ -5,10 +5,9 @@ import { Checkbox } from '@@/fork-ui/src/components/core';
 const Demo = () => {
   return (
     <Wrapper>
-      <Checkbox />
-      <Checkbox checked />
-      <Checkbox disabled />
-      <Checkbox disabled checked />
+      <Checkbox defaultChecked />
+      <Checkbox defaultChecked size="1.2em" />
+      <Checkbox defaultChecked size="1.5em" />
     </Wrapper>
   );
 };
