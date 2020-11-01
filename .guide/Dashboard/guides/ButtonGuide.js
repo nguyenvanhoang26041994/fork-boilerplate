@@ -23,9 +23,6 @@ export default () => {
           <Codebox Component={ Color } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Custom } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ GroupButton } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
@@ -47,6 +44,9 @@ export default () => {
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ WithBadge } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Custom } />
         </div>
       </div>
     </div>

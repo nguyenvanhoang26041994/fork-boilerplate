@@ -39,9 +39,9 @@ const leftSidebar = {
   Image: {
     icon: <Photo />,
   },
-  InputField: {
-    icon: <Box />,
-  },
+  // InputField: {
+  //   icon: <Box />,
+  // },
   Menu: {
     icon: <DotsVertical />,
   },
@@ -101,7 +101,7 @@ const leftSidebar = {
       Progress: {},
       Loader: {},
       Skeleton: {},
-      Box: {},
+      // Box: {},
     }
   },
   Staff: {
