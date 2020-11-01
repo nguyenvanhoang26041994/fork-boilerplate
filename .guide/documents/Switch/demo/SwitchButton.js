@@ -13,7 +13,7 @@ const SwitchButton = styled.div`
   overflow: hidden;
 
   .fbtn {
-    border-radius: 0;
+    border-radius: 999px;
     background-color: var(--button--bg);
 
     &:hover {
@@ -27,43 +27,48 @@ const SwitchButton = styled.div`
   .f-selected:focus {
     color: #fff;
     background-color: var(--primary);
-    border-radius: 999px;
   }
 `;
 
 const Demo = () => {
-  const [_, { checked, setChecked }] = Switch.useSwitch(false);
+  const [_, { checked, setChecked, toggle }] = Switch.useSwitch(false);
 
   return (
     <Wrapper>
       <SwitchButton>
-        <Button className={{ 'f-selected': !checked }} onClick={() => setChecked(false)}>
+        <Button
+          className={{ 'f-selected': !checked }}
+          onClick={() => setChecked(false)}
+        >
           <MoonStars />
           <span>Dark</span>
         </Button>
-        <Button className={{ 'f-selected': checked }} onClick={() => setChecked(true)}>
+        <Button
+          className={{ 'f-selected': checked }}
+          onClick={() => setChecked(true)}
+        >
           <Sun />
           <span>Light</span>
         </Button>
       </SwitchButton>
-      <SwitchButton>
-        <Button className={{ 'f-selected': !checked }} onClick={() => setChecked(false)}>
+      <SwitchButton onClick={toggle}>
+        <Button className={{ 'f-selected': !checked }}>
           <MoonStars />
           {checked && <span>Dark</span>}
         </Button>
-        <Button className={{ 'f-selected': checked }} onClick={() => setChecked(true)}>
+        <Button className={{ 'f-selected': checked }}>
           <Sun />
           {!checked && <span>Light</span>}
         </Button>
       </SwitchButton>
-      <SwitchButton>
-        <Button className={{ 'f-selected': !checked }} onClick={() => setChecked(false)}>
+      <SwitchButton onClick={toggle}>
+        <Button className={{ 'f-selected': !checked }}>
           {!checked
             ? <MoonStars />
             : <span>Dark</span>
           }
         </Button>
-        <Button className={{ 'f-selected': checked }} onClick={() => setChecked(true)}>
+        <Button className={{ 'f-selected': checked }}>
           {checked
             ? <Sun />
             : <span>Light</span>
