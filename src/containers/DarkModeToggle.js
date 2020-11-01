@@ -2,7 +2,7 @@ import React, { useContext, useCallback } from 'react';
 import styled from 'styled-components';
 
 import { Button } from '@@/fork-ui/src/components/core';
-import { MoonStars, Sun } from '@@/fork-ui/src/components/icons';
+import { MoonStars, Bulb } from '@@/fork-ui/src/components/icons';
 
 import AppContext from '@/AppContext';
 
@@ -45,7 +45,7 @@ const DarkModeToggle = (props) => {
       </Button>
       <Button className={{ 'f-selected': !isDark }}>
         {!isDark
-          ? <Sun />
+          ? <Bulb />
           : <span>Light</span>
         }
       </Button>

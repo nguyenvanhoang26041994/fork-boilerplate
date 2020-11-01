@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Wrapper from '@@/.guide/shared/Wrapper';
 import { Switch, Button } from '@@/fork-ui/src/components/core';
-import { MoonStars, Sun } from '@@/fork-ui/src/components/icons';
+import { MoonStars, Bulb } from '@@/fork-ui/src/components/icons';
 
 const SwitchButton = styled.div`
   display: flex;
@@ -47,7 +47,7 @@ const Demo = () => {
           className={{ 'f-selected': checked }}
           onClick={() => setChecked(true)}
         >
-          <Sun />
+          <Bulb />
           <span>Light</span>
         </Button>
       </SwitchButton>
@@ -57,7 +57,7 @@ const Demo = () => {
           {checked && <span>Dark</span>}
         </Button>
         <Button className={{ 'f-selected': checked }}>
-          <Sun />
+          <Bulb />
           {!checked && <span>Light</span>}
         </Button>
       </SwitchButton>
@@ -70,7 +70,7 @@ const Demo = () => {
         </Button>
         <Button className={{ 'f-selected': checked }}>
           {checked
-            ? <Sun />
+            ? <Bulb />
             : <span>Light</span>
           }
         </Button>
