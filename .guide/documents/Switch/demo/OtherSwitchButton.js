@@ -25,6 +25,7 @@ const SwitchButton = styled.div`
   .f-selected:hover,
   .f-selected:focus {
     color: #fff;
+    font-weight: 600;
     background-color: var(--primary);
   }
 `;
