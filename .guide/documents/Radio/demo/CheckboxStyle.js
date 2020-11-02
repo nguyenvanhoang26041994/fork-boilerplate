@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Radio } from '@@/fork-ui/src/components/core';
+import { Radio, RadioGroup } from '@@/fork-ui/src/components/core';
 import Wrapper from '@@/.guide/shared/Wrapper';
 
 const StyledRadio = styled(Radio)`
@@ -17,15 +17,15 @@ const StyledRadio = styled(Radio)`
 // Note: content: '\\\\2713' in real code, not '\\2713' as display;
 
 const Demo = () => {
-  const [props] = Radio.Group.useRadioGroup('value-1');
-  // const [{ value, onChange }] = Radio.Group.useRadioGroup('value-1');
+  const [props] = RadioGroup.useRadioGroup('value-1');
+  // const [{ value, onChange }] = RadioGroup.useRadioGroup('value-1');
 
   return (
     <Wrapper>
-      <Radio.Group {...props}>
+      <RadioGroup {...props}>
         <StyledRadio value="value-1" />
         <StyledRadio value="value-2" />
-      </Radio.Group>
+      </RadioGroup>
     </Wrapper>
   );
 };

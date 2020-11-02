@@ -51,15 +51,6 @@ const DemoTemplate = readFile(path.join(__dirname, '/templates/Document/demo/Dem
 const IndexTemplate = readFile(path.join(__dirname, '/templates/Document/index.hbs'));
 const DocumentTemplate = readFile(path.join(__dirname, '/templates/Document/Document.hbs'));
 
-const injectMarkdown = function(documentName, demoName) {
-  const markdownPath = path.join(__dirname, `../documents/${documentName}/markdown/${demoName}.md`);
-
-  if (fs.pathExistsSync(markdownPath)) {
-    return readFile(markdownPath).replace(/\`/g, '\\\`');
-  }
-
-  return '';
-};
 
 const makeDemo = function(documentName, demoName) {
   let demoStr = readFile(path.join(__dirname, `../documents/${documentName}/demo/${demoName}.js`));
@@ -68,9 +59,8 @@ const makeDemo = function(documentName, demoName) {
   injectedStr += `\nDemo.code = \`${
     demoStr
       .replace(/\`/g, '\\\`')
+      .replace(/\$/g, '\\\$')
   }\`;`;
-
-  injectedStr += `\nDemo.markdown = \`${injectMarkdown(documentName, demoName)}\``;
 
   makeFile(path.join(__dirname, `../_documents/${documentName}/demo/${demoName}.js`), injectedStr);
 };

@@ -11,7 +11,7 @@ const FancyBox = ({
 }) => (
   <div
     className={cn(
-      'flex items-center justify-center',
+      'fancy-box flex items-center justify-center',
       className,
     )}
     style={{

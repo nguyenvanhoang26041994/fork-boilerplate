@@ -32,7 +32,7 @@ const SwitchButton = styled.div`
 `;
 
 const Demo = () => {
-  const [_, { checked, setChecked, toggle }] = Switch.useSwitch(false);
+  const [{ checked }, { setChecked, toggle }] = Switch.useSwitch(false);
 
   return (
     <Wrapper>
