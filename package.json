@@ -20,9 +20,9 @@
     "build-fork-js": "babel --config-file fork-ui/babel.config.js --out-dir fork-ui/lib fork-ui/src --verbose",
     "build-fork": "yarn rimraf \"fork-ui/lib\" && yarn build-fork-js && yarn build-fork-scss",
     "fork:lint": "eslint --config ./fork-ui/.eslintrc ./fork-ui/src",
-    "pull-fork-ui": "git clone https://github.com/nguyenvanhoang26041994/fork-ui.git",
-    "pull-tabler-icon": "git clone https://github.com/nguyenvanhoang26041994/tabler-icons.git",
-    "init-all": "yarn pull-fork-ui && yarn pull-tabler-icon && yarn make-icons && yarn guide"
+    "submodule-fork-ui": "git submodule add https://github.com/nguyenvanhoang26041994/fork-ui.git",
+    "submodule-tabler-icon": "git submodule add https://github.com/nguyenvanhoang26041994/tabler-icons.git",
+    "init-all": "yarn submodule-fork-ui && yarn submodule-tabler-icon && yarn make-icons && yarn guide"
   },
   "repository": {
     "type": "git",
