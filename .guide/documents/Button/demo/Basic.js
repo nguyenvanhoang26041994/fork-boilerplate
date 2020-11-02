@@ -7,7 +7,6 @@ const Demo = () => (
     <Button>Basic</Button>
     <Button primary>Primary</Button>
     <Button rounded>Rounded</Button>
-    <Button transparent>Transparent</Button>
   </Wrapper>
 );
 

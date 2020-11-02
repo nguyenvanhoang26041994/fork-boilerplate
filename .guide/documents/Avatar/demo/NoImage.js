@@ -5,16 +5,10 @@ import { Avatar } from '@@/fork-ui/src/components/core';
 const Demo = () => {
   return (
     <Wrapper>
-      <Avatar name="H" />
-      <Avatar
-        name="H"
-        color="orange"
-      />
-      <Avatar
-        name="H"
-        color="#19b39d"
-      />
-      <Avatar name="H" square />
+      <Avatar>H</Avatar>
+      <Avatar color="orange">H</Avatar>
+      <Avatar color="#19b39d">H</Avatar>
+      <Avatar square>H</Avatar>
     </Wrapper>
   );
 };

@@ -10,18 +10,21 @@ const Demo = () => {
       <Avatar
         size="0.85rem"
         src={avatarLink}
-        name="H"
-      />
+      >
+        H
+      </Avatar>
       <Avatar
         size="2rem"
         src={avatarLink}
-        name="H"
-      />
+      >
+        H
+      </Avatar>
       <Avatar
         size="40px"
         src={avatarLink}
-        name="H"
-      />
+      >
+        H
+      </Avatar>
     </Wrapper>
   );
 };

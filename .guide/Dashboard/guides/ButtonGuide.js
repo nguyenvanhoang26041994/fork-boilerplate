@@ -11,6 +11,7 @@ import FluidGroupButton from '@@/.guide/_documents/Button/demo/FluidGroupButton'
 import Color from '@@/.guide/_documents/Button/demo/Color';
 import Disabled from '@@/.guide/_documents/Button/demo/Disabled';
 import Custom from '@@/.guide/_documents/Button/demo/Custom';
+import Ghost from '@@/.guide/_documents/Button/demo/Ghost';
 
 export default () => {
   return (
@@ -18,6 +19,9 @@ export default () => {
       <div className="flex flex-col w-1/2">
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Basic } defaultShowCode />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Ghost } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ WithIcon } />

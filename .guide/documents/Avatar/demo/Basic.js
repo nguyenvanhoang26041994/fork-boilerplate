@@ -11,29 +11,26 @@ import {
 const Demo = () => {
   return (
     <Wrapper>
-      <Avatar name="H" />
-      <Avatar
-        src={avatarLink}
-        name="H"
-      />
+      <Avatar>H</Avatar>
+      <Avatar src={avatarLink}>H</Avatar>
       <AvatarGroup className="ml-5">
-        <Avatar name="H" />
+        <Avatar>H</Avatar>
         <Tooltip title="H">
-          <Avatar name="M" />
+          <Avatar>H</Avatar>
         </Tooltip>
         <Badge.Dot color="#0df316" overlap bottomRight>
-          <Avatar src={avatarLink} name="H" />
+          <Avatar src={avatarLink}>H</Avatar>
         </Badge.Dot>
       </AvatarGroup>
-      <AvatarGroup overflowAvatar={3} className="ml-5">
-        <Avatar name="H" />
-        <Avatar name="O" />
-        <Avatar name="A" />
-        <Avatar name="N" />
-        <Avatar name="G" />
-        <Avatar name="H" />
-        <Avatar name="H" />
-        <Avatar name="H" />
+      <AvatarGroup overflow={3} className="ml-5">
+        <Avatar>H</Avatar>
+        <Avatar>L</Avatar>
+        <Avatar>S</Avatar>
+        <Avatar>Y</Avatar>
+        <Avatar>Q</Avatar>
+        <Avatar>X</Avatar>
+        <Avatar>S</Avatar>
+        <Avatar>OP</Avatar>
       </AvatarGroup>
     </Wrapper>
   );

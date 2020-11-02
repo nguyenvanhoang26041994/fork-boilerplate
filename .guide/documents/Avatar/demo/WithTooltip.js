@@ -6,11 +6,11 @@ const Demo = () => {
   return (
     <Wrapper>
       <Tooltip title="Hoàng Nguyễn">
-        <Avatar name="H" />
+        <Avatar>H</Avatar>
       </Tooltip>
       <Tooltip title="H">
         <Badge.Dot color="#0df316" overlap bottomRight>
-          <Avatar name="H" />
+          <Avatar>H</Avatar>
         </Badge.Dot>
       </Tooltip>
     </Wrapper>

@@ -7,13 +7,13 @@ const Demo = () => {
   return (
     <Wrapper>
       <Badge.Dot color="#0df316" overlap bottomRight>
-        <Avatar src={avatarLink} name="H" />
+        <Avatar src={avatarLink}>H</Avatar>
       </Badge.Dot>
       <Badge.Dot color="#0df316" bottomRight>
-        <Avatar src={avatarLink} square name="H" />
+        <Avatar src={avatarLink} square>H</Avatar>
       </Badge.Dot>
       <Badge.Dot color="#0df316" overlap bottomRight>
-        <Avatar name="H" />
+        <Avatar>H</Avatar>
       </Badge.Dot>
     </Wrapper>
   );
