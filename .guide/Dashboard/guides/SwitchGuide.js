@@ -1,7 +1,7 @@
 import React from 'react';
 import Codebox from '@@/.guide/Codebox';
 
-import Basic from '@@/.guide/_documents/Switch/demo/Basic';
+import Basic from '@@/.guide/_documents/Switch/demo/Switch';
 import Controlled from '@@/.guide/_documents/Switch/demo/Controlled';
 import Loading from '@@/.guide/_documents/Switch/demo/Loading';
 import UnControlled from '@@/.guide/_documents/Switch/demo/UnControlled';

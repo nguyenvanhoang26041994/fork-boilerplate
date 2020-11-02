@@ -1,7 +1,7 @@
 import React from 'react';
 import Codebox from '@@/.guide/Codebox';
 
-import Basic from '@@/.guide/_documents/Checkbox/demo/Basic';
+import Basic from '@@/.guide/_documents/Checkbox/demo/Checkbox';
 import Controlled from '@@/.guide/_documents/Checkbox/demo/Controlled';
 import UnControlled from '@@/.guide/_documents/Checkbox/demo/UnControlled';
 import Size from '@@/.guide/_documents/Checkbox/demo/Size';

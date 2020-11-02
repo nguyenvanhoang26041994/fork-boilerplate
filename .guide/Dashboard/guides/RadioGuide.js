@@ -1,7 +1,7 @@
 import React from 'react';
 import Codebox from '@@/.guide/Codebox';
 
-import Basic from '@@/.guide/_documents/Radio/demo/Basic';
+import Basic from '@@/.guide/_documents/Radio/demo/Radio';
 import Size from '@@/.guide/_documents/Radio/demo/Size';
 import Controlled from '@@/.guide/_documents/Radio/demo/Controlled';
 import Custom from '@@/.guide/_documents/Radio/demo/Custom';

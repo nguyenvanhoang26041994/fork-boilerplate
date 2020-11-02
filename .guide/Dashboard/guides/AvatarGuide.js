@@ -1,7 +1,7 @@
 import React from 'react';
 import Codebox from '@@/.guide/Codebox';
 
-import Basic from '@@/.guide/_documents/Avatar/demo/Basic';
+import Basic from '@@/.guide/_documents/Avatar/demo/Avatar';
 import Size from '@@/.guide/_documents/Avatar/demo/Size';
 import WithOnline from '@@/.guide/_documents/Avatar/demo/WithOnline';
 import NoImage from '@@/.guide/_documents/Avatar/demo/NoImage';

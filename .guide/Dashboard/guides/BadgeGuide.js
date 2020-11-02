@@ -1,7 +1,7 @@
 import React from 'react';
 import Codebox from '@@/.guide/Codebox';
 
-import Basic from '@@/.guide/_documents/Badge/demo/Basic';
+import Basic from '@@/.guide/_documents/Badge/demo/Badge';
 import OverflowCount from '@@/.guide/_documents/Badge/demo/OverflowCount';
 import Custom from '@@/.guide/_documents/Badge/demo/Custom';
 import Overlap from '@@/.guide/_documents/Badge/demo/Overlap';

@@ -1,7 +1,7 @@
 import React from 'react';
 import Codebox from '@@/.guide/Codebox';
 
-import Basic from '@@/.guide/_documents/Button/demo/Basic';
+import Basic from '@@/.guide/_documents/Button/demo/Button';
 import Size from '@@/.guide/_documents/Button/demo/Size';
 import WithIcon from '@@/.guide/_documents/Button/demo/WithIcon';
 import WithBadge from '@@/.guide/_documents/Button/demo/WithBadge';

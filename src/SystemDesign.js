@@ -3,17 +3,18 @@ import Codebox from '@@/.guide/Codebox';
 import { Flex } from './fork-ui/core';
 
 import TypographyAllDesign from '@@/.guide/_documents/CoreComponent/demo/Typography';
-import CheckboxAllDesign from '@@/.guide/_documents/CoreComponent/demo/Checkbox';
-import SwitchAllDesign from '@@/.guide/_documents/CoreComponent/demo/Switch';
+import CheckboxDesign from '@@/.guide/_documents/Checkbox/demo/Checkbox';
+import RadioDesign from '@@/.guide/_documents/Radio/demo/Radio';
+import SwitchDesign from '@@/.guide/_documents/Switch/demo/Switch';
 import ColorPalette from '@@/.guide/_documents/CoreComponent/demo/ColorPalette';
-import AvatarAllDesign from '@@/.guide/_documents/CoreComponent/demo/Avatar';
+import AvatarDesign from '@@/.guide/_documents/Avatar/demo/Avatar';
 import LoaderAllDesign from '@@/.guide/_documents/CoreComponent/demo/Loader';
 import TabsAllDesign from '@@/.guide/_documents/CoreComponent/demo/Tabs';
 import SkeletonAllDesign from '@@/.guide/_documents/CoreComponent/demo/Skeleton';
 import CollapseAllDesign from '@@/.guide/_documents/CoreComponent/demo/Collapse';
 import DialogAllDesign from '@@/.guide/_documents/CoreComponent/demo/Dialog';
-import ButtonAllDesign from '@@/.guide/_documents/CoreComponent/demo/Button';
-import BadgeAllDesign from '@@/.guide/_documents/CoreComponent/demo/Badge';
+import ButtonDesign from '@@/.guide/_documents/Button/demo/Button';
+import BadgeDesign from '@@/.guide/_documents/Badge/demo/Badge';
 import PaginationAllDesign from '@@/.guide/_documents/CoreComponent/demo/Pagination';
 import StepperAllDesign from '@@/.guide/_documents/CoreComponent/demo/Stepper';
 import TooltipAllDesign from '@@/.guide/_documents/CoreComponent/demo/Tooltip';
@@ -46,7 +47,7 @@ export default () => {
             <Codebox Component={ TypographyAllDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ AvatarAllDesign } />
+            <Codebox Component={ AvatarDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ RaterAllDesign } />
@@ -82,13 +83,16 @@ export default () => {
 
         <Flex col span="1/2" style={ { paddingLeft: '1px' } }>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ ButtonAllDesign } />
+            <Codebox Component={ ButtonDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ CheckboxAllDesign } />
+            <Codebox Component={ CheckboxDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ SwitchAllDesign } />
+            <Codebox Component={ RadioDesign } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ SwitchDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ NativeInput } />
@@ -97,7 +101,7 @@ export default () => {
             <Codebox Component={ SingleSliderAllDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ BadgeAllDesign } />
+            <Codebox Component={ BadgeDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ ChipAllDesign } />
