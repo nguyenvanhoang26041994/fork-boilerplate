@@ -1,30 +1,31 @@
 import React from 'react';
-import { Typo } from '@@/fork-ui/src/components/core';
+import { Typo, Flex } from '@@/fork-ui/src/components/core';
+
+const typo = `Lorem ipsum is a pseudo-Latin 
+text used in web design, 
+typography, 
+layout, 
+and printing in place of English to emphasise design elements over content`;
 
 const Demo = () => {
   return (
-    <div>
-      <Typo>Normal typo</Typo>
-      <Typo span>Typo Span</Typo>
-      <Typo underline>
-        Typo Underline
-      </Typo>
-      <Typo disabled>
-        Typo Disabled
-      </Typo>
-      <Typo through>
-        Typo Line-Through
-      </Typo>
-      <Typo strong>
-        Typo Strong
-      </Typo>
-      <Typo italic>
-        Typo Italic
-      </Typo>
-      <Typo color="#d800ff">
-        Typo Color
-      </Typo>
-    </div>
+    <Flex col>
+      <Typo>{typo}</Typo>
+      <br />
+      <Typo span>{typo}</Typo>
+      <br />
+      <Typo u>{typo}</Typo>
+      <br />
+      <Typo disabled>{typo}</Typo>
+      <br />
+      <Typo through>{typo}</Typo>
+      <br />
+      <Typo b>{typo}</Typo>
+      <br />
+      <Typo i>{typo}</Typo>
+      <br />
+      <Typo color="var(--primary)">{typo}</Typo>
+    </Flex>
   );
 };
 

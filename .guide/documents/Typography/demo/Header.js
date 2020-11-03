@@ -4,9 +4,9 @@ import { Typo, Flex } from '@@/fork-ui/src/components/core';
 const Demo = () => {
   return (
     <Flex col span="full">
-      <Typo h3>H3</Typo>
-      <Typo h2>H2</Typo>
-      <Typo h1>H1</Typo>
+      <Typo h3>Lorem Ipsum</Typo>
+      <Typo h2>Lorem Ipsum</Typo>
+      <Typo h1>Lorem Ipsum</Typo>
     </Flex>
   );
 };

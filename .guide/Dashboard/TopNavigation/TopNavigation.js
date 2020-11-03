@@ -44,14 +44,14 @@ const TopNavigation = ({ toggleExpand, toggleFullScreen, isExpanded, ...otherPro
           <NavLeft>
             <Button
               circle
-              glassed
+              ghost
               icon={isExpanded ? <IndentDecrease /> : <IndentIncrease />}
               onClick={toggleExpand}
             />
-            <Button circle glassed icon={<Search />} className="ml-2" />
+            <Button circle ghost icon={<Search />} className="ml-2" />
           </NavLeft>
           <NavRight>
-            <Button circle glassed icon={<Maximize />} onClick={toggleFullScreen} className="mr-2" />
+            <Button circle ghost icon={<Maximize />} onClick={toggleFullScreen} className="mr-2" />
             <DarkModeToggle className="mx-5" />
           </NavRight>
         </MainTopNav>

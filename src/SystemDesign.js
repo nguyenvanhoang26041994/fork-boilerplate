@@ -2,7 +2,7 @@ import React from 'react';
 import Codebox from '@@/.guide/Codebox';
 import { Flex } from './fork-ui/core';
 
-import TypographyAllDesign from '@@/.guide/_documents/CoreComponent/demo/Typography';
+import TypographyDesign from '@@/.guide/_documents/Typography/demo/Typography';
 import CheckboxDesign from '@@/.guide/_documents/Checkbox/demo/Checkbox';
 import RadioDesign from '@@/.guide/_documents/Radio/demo/Radio';
 import SwitchDesign from '@@/.guide/_documents/Switch/demo/Switch';
@@ -27,13 +27,11 @@ import ProgressAllDesign from '@@/.guide/_documents/CoreComponent/demo/Progress'
 import LineProgressAllDesign from '@@/.guide/_documents/CoreComponent/demo/LineProgress';
 import DividerAllDesign from '@@/.guide/_documents/CoreComponent/demo/Divider';
 import SingleSliderAllDesign from '@@/.guide/_documents/CoreComponent/demo/SingleSlider';
-import ImageAllDesign from '@@/.guide/_documents/CoreComponent/demo/Image';
 import NativeInput from '@@/.guide/_documents/CoreComponent/demo/NativeInput';
 import NotificationAllDesign from '@@/.guide/_documents/CoreComponent/demo/Notification';
 
 import AllPortalComponent from '@@/.guide/_documents/CoreComponent/demo/AllPortalComponent';
 import TableDesign from '@@/.guide/_documents/CoreComponent/demo/Table';
-import Flexbox from '@@/.guide/_documents/CoreComponent/demo/Flexbox';
 
 export default () => {
   return (
@@ -44,7 +42,7 @@ export default () => {
             <Codebox Component={ ColorPalette } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ TypographyAllDesign } />
+            <Codebox Component={ TypographyDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ AvatarDesign } />

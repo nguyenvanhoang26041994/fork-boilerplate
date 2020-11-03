@@ -1,6 +1,7 @@
 import React from 'react';
 import Codebox from '@@/.guide/Codebox';
 
+import Typography from '@@/.guide/_documents/Typography/demo/Typography';
 import Header from '@@/.guide/_documents/Typography/demo/Header';
 import Span from '@@/.guide/_documents/Typography/demo/Span';
 
@@ -8,6 +9,9 @@ export default () => {
   return (
     <div className="flex flex-wrap">
       <div className="flex flex-col w-1/2">
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Typography } defaultShowCode />
+        </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Header } defaultShowCode />
         </div>
