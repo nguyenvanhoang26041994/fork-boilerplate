@@ -9,10 +9,7 @@ const Demo = () => {
       <Badge.Dot color="#0df316" overlap bottomRight>
         <Avatar src={avatarLink}>H</Avatar>
       </Badge.Dot>
-      <Badge.Dot color="#0df316" bottomRight>
-        <Avatar src={avatarLink} square>H</Avatar>
-      </Badge.Dot>
-      <Badge.Dot color="#0df316" overlap bottomRight>
+      <Badge.Dot color="var(--primary)" overlap bottomRight>
         <Avatar>H</Avatar>
       </Badge.Dot>
     </Wrapper>
