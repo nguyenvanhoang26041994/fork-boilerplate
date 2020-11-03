@@ -3,8 +3,8 @@ import cn from 'classnames';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
-import { Animated } from '@@/fork-ui/src/components/core';
-import { Code, DotsVertical } from '@@/fork-ui/src/components/icons';
+import { Animated, ButtonGroup, Button } from '@@/fork-ui/src/components/core';
+import { Braces, ThumbUp, Message2 } from '@@/fork-ui/src/components/icons';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -56,13 +56,13 @@ const CodeboxWrapper = styled.div`
   width: 100%;
   background-color: var(--bg);
 
-  .__code {
+  .show-when-codebox-hover {
     opacity: 0;
     transition: opacity 0.25s;
   }
 
   &:hover {
-    .__code {
+    .show-when-codebox-hover {
       opacity: 1;
     }
   }
@@ -74,16 +74,14 @@ const CodeboxHeader = styled.h2`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .__code {
-    cursor: pointer;
-    color: var(--primary);
-  }
 `;
 
 const CodeboxDemo = styled.div`
     display: flex;
     padding: 1rem 1rem 4rem 1rem;
+`;
+
+const ButtonGroupStyled = styled(ButtonGroup)`
 `;
 
 const Codebox = ({ className, defaultShowCode, Component, ...otherProps }) => {
@@ -94,12 +92,21 @@ const Codebox = ({ className, defaultShowCode, Component, ...otherProps }) => {
     <CodeboxWrapper className={className} id={Component.href} {...otherProps}>
       <CodeboxHeader>
         {Component.header}
-        <div>
-          <Code
-            className="__code"
-            onClick={toggleShowCode}
+        <ButtonGroupStyled className="show-when-codebox-hover" color="ghost">
+          <Button
+            icon={<ThumbUp />}
           />
-        </div>
+          <Button
+            icon={<Message2 />}
+          />
+          <Button
+            icon={<Braces />}
+            onClick={toggleShowCode}
+            style={{
+              color: showCode ? 'var(--primary)' : null,
+            }}
+          />
+        </ButtonGroupStyled>
       </CodeboxHeader>
       <CodeboxDemo>
         <Component />
