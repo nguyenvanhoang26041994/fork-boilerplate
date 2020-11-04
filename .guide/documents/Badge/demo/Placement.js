@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import cn from 'classnames';
 import {
   Badge,
   Flex,
@@ -36,11 +36,10 @@ const SwitchButton = styled.div`
 `;
 
 const FlexStyled = styled(Flex)`
-  .fancy-box {
-    border-radius: ${props => props.overlap
-      ? '999px !important'
-      : '0.5rem !important'
-    };
+  &.fancy-box-circle {
+    .fancy-box {
+      border-radius: 999px !important;
+    }
   }
 `;
 
@@ -48,7 +47,7 @@ const Demo = () => {
   const [{ checked }, { toggle }] = Switch.useSwitch(false);
 
   return (
-    <FlexStyled span="full" col items="center" overlap={checked}>
+    <FlexStyled span="full" col items="center" className={cn({ 'fancy-box-circle': checked })}>
       <Flex col span="full" items="center">
         <Flex>
           <FancyBox hidden className="m-5" />
