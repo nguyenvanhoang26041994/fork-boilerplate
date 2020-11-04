@@ -8,7 +8,7 @@ import RadioDesign from '@@/.guide/_documents/Radio/demo/Radio';
 import SwitchDesign from '@@/.guide/_documents/Switch/demo/Switch';
 import ColorPalette from '@@/.guide/_documents/CoreComponent/demo/ColorPalette';
 import AvatarDesign from '@@/.guide/_documents/Avatar/demo/Avatar';
-import LoaderAllDesign from '@@/.guide/_documents/CoreComponent/demo/Loader';
+import LoaderDesign from '@@/.guide/_documents/Loader/demo/Loader';
 import TabsAllDesign from '@@/.guide/_documents/CoreComponent/demo/Tabs';
 import SkeletonDesign from '@@/.guide/_documents/Skeleton/demo/Skeleton';
 import CollapseAllDesign from '@@/.guide/_documents/CoreComponent/demo/Collapse';
@@ -51,7 +51,7 @@ export default () => {
             <Codebox Component={ RaterAllDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ LoaderAllDesign } />
+            <Codebox Component={ LoaderDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '0px' } }>
             <Codebox Component={ ProgressAllDesign } />

@@ -4,12 +4,11 @@ import { Loader } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (
-    <Wrapper>
+    <Wrapper span="2em">
       <Loader.Spinner />
-      <Loader.Spinner color="red" />
-      <Loader.Spinner color="purple" />
-      <Loader.Spinner color="yellow" />
-      <Loader.Spinner size="2rem" />
+      <Loader.Spinner color="var(--red)" />
+      <Loader.Spinner color="var(--green)" />
+      <Loader.Spinner color="pink" size="2em" />
     </Wrapper>
   );
 };

@@ -4,12 +4,11 @@ import { Loader } from '@@/fork-ui/src/components/core';
 
 const Demo = () => {
   return (
-    <Wrapper>
+    <Wrapper span="2em">
       <Loader.Dots />
-      <Loader.Dots color="red" />
-      <Loader.Dots color="purple" />
-      <Loader.Dots color="yellow" />
-      <Loader.Dots size="2rem" />
+      <Loader.Dots color="var(--red)" />
+      <Loader.Dots color="var(--green)" />
+      <Loader.Dots color="pink" size="2em" />
     </Wrapper>
   );
 };
