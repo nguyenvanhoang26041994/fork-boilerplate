@@ -44,7 +44,7 @@ const TopNavigation = ({ toggleExpand, toggleFullScreen, isExpanded, ...otherPro
           <NavLeft>
             <Button
               circle
-              ghost
+              color={isExpanded ? 'primary' : 'ghost'}
               icon={isExpanded ? <IndentDecrease /> : <IndentIncrease />}
               onClick={toggleExpand}
             />

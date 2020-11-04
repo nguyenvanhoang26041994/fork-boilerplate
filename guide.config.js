@@ -19,6 +19,13 @@ import {
   ToggleRight,
   Checkbox,
   User,
+  GripHorizontal,
+  Line,
+  ChevronDown,
+  PageBreak,
+  LoaderQuarter,
+  Bookmark,
+  StarHalf,
 } from '@@/fork-ui/src/components/icons';
 
 const leftSidebar = {
@@ -46,8 +53,29 @@ const leftSidebar = {
   Typography: {
     icon: <Typography />,
   },
+  Skeleton: {
+    icon: <GripHorizontal />,
+  },
+  Loader: {
+    icon: <LoaderQuarter />,
+  },
+  Divider: {
+    icon: <Line />,
+  },
+  Chip: {
+    icon: <Bookmark />,
+  },
+  Pagination: {
+    icon: <PageBreak />,
+  },
   Tabs: {
     icon: <DeviceLaptop />,
+  },
+  Collapse: {
+    icon: <ChevronDown />,
+  },
+  Rater: {
+    icon: <StarHalf />,
   },
   Modal: {
     icon: <LayoutBottombar />,
@@ -58,9 +86,6 @@ const leftSidebar = {
   Image: {
     icon: <Photo />,
   },
-  // InputField: {
-  //   icon: <Box />,
-  // },
   Menu: {
     icon: <DotsVertical />,
   },
@@ -74,15 +99,14 @@ const leftSidebar = {
     type: 'sub',
     icon: <Eye />,
     items: {
-      Collapse: {},
       Popover: {},
       Tooltip: {},
       Timeline: {},
       Carousel: {},
       Stepper: {},
-      Chip: {},
+      
       Breadcrumb: {},
-      Pagination: {},
+      
     }
   },
   Feedback: {
@@ -93,7 +117,6 @@ const leftSidebar = {
       Popconfirm: {},
       Alert: {},
       Notification: {},
-      Rater: {},
     },
   },
   FormField: {
@@ -103,9 +126,6 @@ const leftSidebar = {
       Textbox: {},
       Password: {},
       Textarea: {},
-      // Number: {},
-      // Select: {},
-      // Slider: {},
     }
   },
   Loading: {
@@ -113,8 +133,7 @@ const leftSidebar = {
     icon: <Rotate2 />,
     items: {
       Progress: {},
-      Loader: {},
-      Skeleton: {},
+      
       // Box: {},
     }
   },
@@ -124,7 +143,6 @@ const leftSidebar = {
     items: {
       Affix: {},
       Anchor: {},
-      Divider: {},
       Upload: {},
       QueryBuilder: {},
       Dialog: {},
