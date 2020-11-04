@@ -10,7 +10,7 @@ const Loren = () => (
           color="#0df316"
           bottomRight
         >
-          <Avatar name="H" size="1.5rem" />
+          <Avatar size="1.5rem">OP</Avatar>
         </Badge.Dot>
         <Flex col className="ml-2 flex-1">
           <Skeleton p  w="70%" />

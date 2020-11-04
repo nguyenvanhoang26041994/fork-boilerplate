@@ -12,11 +12,7 @@ const Demo = () => {
       render: (setOpen) => (
         <div className="flex flex-col">
           <div className="flex mb-5">
-            <Avatar
-              src={avatarLink}
-              name="Hoàng Nguyễn"
-              className="mr-3 text-lg"
-            />
+            <Avatar src={avatarLink} className="mr-3">H</Avatar>
             <div className="flex flex-col">
               <span>
                 <a className="text-blue-600 mr-2">

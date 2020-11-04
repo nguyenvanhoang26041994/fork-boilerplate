@@ -10,7 +10,7 @@ import ColorPalette from '@@/.guide/_documents/CoreComponent/demo/ColorPalette';
 import AvatarDesign from '@@/.guide/_documents/Avatar/demo/Avatar';
 import LoaderAllDesign from '@@/.guide/_documents/CoreComponent/demo/Loader';
 import TabsAllDesign from '@@/.guide/_documents/CoreComponent/demo/Tabs';
-import SkeletonAllDesign from '@@/.guide/_documents/CoreComponent/demo/Skeleton';
+import SkeletonDesign from '@@/.guide/_documents/Skeleton/demo/Skeleton';
 import CollapseAllDesign from '@@/.guide/_documents/CoreComponent/demo/Collapse';
 import DialogAllDesign from '@@/.guide/_documents/CoreComponent/demo/Dialog';
 import ButtonDesign from '@@/.guide/_documents/Button/demo/Button';
@@ -66,7 +66,7 @@ export default () => {
             <Codebox Component={ TabsAllDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ SkeletonAllDesign } />
+            <Codebox Component={ SkeletonDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ CollapseAllDesign } />
