@@ -15,7 +15,6 @@ const Demo = () => {
     total: 100,
     pageSize: 10,
     currentPage: 2,
-    max: 7,
   });
 
   return (
