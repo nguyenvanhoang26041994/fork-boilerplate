@@ -18,7 +18,7 @@ const RevertPrimaryChip = styled(Chip)`
 
 const Demo = () => {
   return (
-    <Wrapper style={{ fontSize: '1.125rem' }}>
+    <Wrapper>
       <PrimaryChip rounded>
         Stackoverflow
       </PrimaryChip>

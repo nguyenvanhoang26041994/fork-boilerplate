@@ -6,7 +6,7 @@ import Closable from '@@/.guide/_documents/Chip/demo/Closable';
 import CustomColor from '@@/.guide/_documents/Chip/demo/CustomColor';
 import CustomBehavior from '@@/.guide/_documents/Chip/demo/CustomBehavior';
 import Size from '@@/.guide/_documents/Chip/demo/Size';
-import WithAvatarAndSize from '@@/.guide/_documents/Chip/demo/WithAvatarAndSize';
+import Avatar from '@@/.guide/_documents/Chip/demo/Avatar';
 
 export default () => {
   return (
@@ -22,7 +22,7 @@ export default () => {
           <Codebox Component={ Size } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ WithAvatarAndSize } />
+          <Codebox Component={ Avatar } />
         </div>
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>

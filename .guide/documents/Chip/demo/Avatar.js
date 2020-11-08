@@ -7,13 +7,11 @@ const Demo = () => {
   return (
     <Wrapper>
       <Chip
-        size="1.5rem"
         avatar={<Avatar src={avatarLink} square>S</Avatar>}
       >
         Slack
       </Chip>
       <Chip
-        size="1.5rem"
         rounded
         closable
         avatar={<Avatar src={avatarLink}>VS</Avatar>}
