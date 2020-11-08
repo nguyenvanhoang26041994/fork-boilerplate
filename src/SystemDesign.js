@@ -22,10 +22,10 @@ import RaterAllDesign from '@@/.guide/_documents/CoreComponent/demo/Rater';
 import TimelineAllDesign from '@@/.guide/_documents/CoreComponent/demo/Timeline';
 import CarouselAllDesign from '@@/.guide/_documents/CoreComponent/demo/Carousel';
 import MenuAllDesign from '@@/.guide/_documents/CoreComponent/demo/Menu';
-import ChipAllDesign from '@@/.guide/_documents/CoreComponent/demo/Chip';
+import ChipDesign from '@@/.guide/_documents/Chip/demo/Chip';
 import ProgressAllDesign from '@@/.guide/_documents/CoreComponent/demo/Progress';
 import LineProgressAllDesign from '@@/.guide/_documents/CoreComponent/demo/LineProgress';
-import DividerAllDesign from '@@/.guide/_documents/CoreComponent/demo/Divider';
+import DividerDesign from '@@/.guide/_documents/Divider/demo/Divider';
 import SingleSliderAllDesign from '@@/.guide/_documents/CoreComponent/demo/SingleSlider';
 import NativeInput from '@@/.guide/_documents/CoreComponent/demo/NativeInput';
 import NotificationAllDesign from '@@/.guide/_documents/CoreComponent/demo/Notification';
@@ -102,7 +102,7 @@ export default () => {
             <Codebox Component={ BadgeDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ ChipAllDesign } />
+            <Codebox Component={ ChipDesign } />
           </div>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ TooltipAllDesign } />
@@ -113,9 +113,9 @@ export default () => {
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ StepperAllDesign } />
           </div>
-          <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ DividerAllDesign } />
-          </div>
+          {/* <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ DividerDesign } />
+          </div> */}
           <div className="w-full" style={ { paddingBottom: '1px' } }>
             <Codebox Component={ TimelineAllDesign } />
           </div>

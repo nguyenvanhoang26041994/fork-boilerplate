@@ -1,27 +1,12 @@
 import React  from 'react';
-import styled from 'styled-components';
-
+import Wrapper from '@@/.guide/shared/Wrapper';
 import { Chip } from '@@/fork-ui/src/components/core';
-
-const Wrapper = styled.div`
-  display: flex;
-
-  > * {
-    margin-right: 0.5rem;
-  }
-`;
 
 const Demo = () => {
   return (
     <Wrapper>
-      <Chip
-        size="1.5rem"
-        label="Sơn Lê"
-      />
-      <Chip
-        size="18px"
-        label="Owner"
-      />
+      <Chip size="20px">20px</Chip>
+      <Chip size="2rem">2rem</Chip>
     </Wrapper>
   );
 };

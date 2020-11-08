@@ -59,9 +59,9 @@ const leftSidebar = {
   Loader: {
     icon: <LoaderQuarter />,
   },
-  Divider: {
-    icon: <Line />,
-  },
+  // Divider: {
+  //   icon: <Line />,
+  // },
   Chip: {
     icon: <Bookmark />,
   },
