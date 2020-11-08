@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Pagination } from '@@/fork-ui/src/components/core';
 
 const fetchPage = (callback) => {
@@ -21,35 +21,18 @@ const Demo = () => {
     currentPage: 2,
   });
 
-  const [isLoading, setLoading] = useState(true);
-
-  const customOnChange = useCallback((page) => {
-    setLoading(true);
-    onChange(page);
-    fetchPage(() => setLoading(false));
-  }, [setLoading, onChange]);
-
-  const customGoNext = useCallback(() => {
-    setLoading(true);
-    goNext();
-    fetchPage(() => setLoading(false));
-  }, [setLoading, goNext]);
-
-  const customGoPrev = useCallback(() => {
-    setLoading(true);
-    goPrev();
-    fetchPage(() => setLoading(false));
-  }, [setLoading, goPrev]);
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetchPage(() => setLoading(false));
-  }, []);
+  }, [currentPage]);
 
   return (
     <Pagination>
       <Pagination.Prev
         rounded
-        onClick={customGoPrev}
+        onClick={goPrev}
         disabled={isFirstPage}
       />
       {Pagination.loop(startPage, endPage, (page) => (
@@ -58,14 +41,14 @@ const Demo = () => {
           rounded
           active={page === currentPage}
           loading={isLoading && page === currentPage}
-          onClick={() => customOnChange(page)}
+          onClick={() => onChange(page)}
         >
           <a href="javascript:void(0);">{page}</a>
         </Pagination.Page>
       ))}
       <Pagination.Next
         rounded
-        onClick={customGoNext}
+        onClick={goNext}
         disabled={isLastPage}
       />
     </Pagination>
