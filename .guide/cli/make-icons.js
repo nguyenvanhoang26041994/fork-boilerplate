@@ -35,11 +35,11 @@ const makeTablerIcons = function() {
     .map(icon => icon.replace(/.svg$/, ''))
 
   icons = icons.map(iconName => makeTablerIcon(iconName));
-  const header = '// THANK TO https://github.com/tabler/tabler-icons\nimport React from \'react\';\nimport enhancerIcon from \'\.\/enhancerIcon\';\n\n';
+  const header = '// THANK TO https://github.com/tabler/tabler-icons\nimport React from \'react\';\nimport enhancerIcon from \'\.\/enhancerIcon\';\nconst all = {};\n\n';
 
   makeFile(
     path.join(rcNeumorphismRoot, '/src/components/icons/index.js'),
-    header + icons.join('\n')
+    header + icons.join('\n') + 'export default all;\n'
   );
 };
 

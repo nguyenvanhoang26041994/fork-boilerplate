@@ -8,12 +8,11 @@ import Size from '@@/.guide/_documents/Icon/demo/Size';
 import Stroke from '@@/.guide/_documents/Icon/demo/Stroke';
 
 import { Textbox, Flex } from '@@/fork-ui/src/components/core';
-import * as allIcons from '@@/fork-ui/src/components/icons';
+import allIcons, { Check } from '@@/fork-ui/src/components/icons';
 import fuzzysort from '@@/fork-ui/src/libs/fuzzysort';
 import { debounce } from '@@/fork-ui/src/utils/helpers';
 
 const icons = Object.keys(allIcons);
-const Check = allIcons.Check;
 
 const IconBoxWrapper = styled.div`
   display: flex;
@@ -58,12 +57,12 @@ const SearchBoxWrapper = styled.div`
   flex-direction: column;
 `;
 
-const IconBox = ({ Icon, name }) => {
+const IconBox = ({ Icon }) => {
   const [isCopied, setIsCopied] = useState(false);
   const onClick = useCallback(() => {
-    copyToClipboard(name);
+    copyToClipboard(Icon.displayName);
     setIsCopied(true);
-  }, [name, setIsCopied]);
+  }, [Icon.displayName, setIsCopied]);
 
   useEffect(() => {
     if (isCopied) {
@@ -89,9 +88,9 @@ const IconGuide = () => {
 
   const _icons = useMemo(() => {
     if (searchStr.trim()) {
-      return fuzzysort.go(searchStr, icons).map(obj => <IconBox name={obj.target} Icon={allIcons[obj.target]} key={obj.target} />)
+      return fuzzysort.go(searchStr, icons).map(obj => <IconBox Icon={allIcons[obj.target]} key={obj.target} />)
     }
-    return icons.map(name => <IconBox name={name} Icon={allIcons[name]} key={name} />);
+    return icons.map(name => <IconBox Icon={allIcons[name]} key={name} />);
   }, [searchStr]);
 
   return (

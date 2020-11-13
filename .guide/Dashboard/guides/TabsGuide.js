@@ -2,6 +2,7 @@ import React from 'react';
 import Codebox from '@@/.guide/Codebox';
 
 import Tabs from '@@/.guide/_documents/Tabs/demo/Tabs';
+import CustomStyle from '@@/.guide/_documents/Tabs/demo/Custom';
 
 export default () => {
   return (
@@ -13,7 +14,7 @@ export default () => {
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Tabs } defaultShowCode />
+          <Codebox Component={ CustomStyle } defaultShowCode />
         </div>
       </div>
     </div>

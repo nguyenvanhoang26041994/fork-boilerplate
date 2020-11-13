@@ -3,7 +3,7 @@ import { Tabs, Flex } from '@@/fork-ui/src/components/core';
 import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
-  const [{ currentTab, onChange }] = Tabs.useTabs({
+  const [{ currentTab }, { setCurrentTab }] = Tabs.useTabs({
     currentTab: 'fresh-tab',
   });
 
@@ -11,27 +11,33 @@ const Demo = () => {
     <Flex col span="full">
       <Tabs>
         <Tabs.Tab
-          value="normal-tab"
           active={currentTab === 'normal-tab'}
-          onClick={() => onChange('normal-tab')}
+          onClick={() => setCurrentTab('normal-tab')}
         >
           Normal Tab
         </Tabs.Tab>
         <Tabs.Tab
-          value="fresh-tab"
           active={currentTab === 'fresh-tab'}
-          onClick={() => onChange('fresh-tab')}
+          onClick={() => setCurrentTab('fresh-tab')}
         >
           Fresh Tab
         </Tabs.Tab>
         <Tabs.Tab
-          value="other-tab"
           active={currentTab === 'other-tab'}
-          onClick={() => onChange('other-tab')}
+          onClick={() => setCurrentTab('other-tab')}
         >
           Other Tab
         </Tabs.Tab>
       </Tabs>
+      <Tabs.Content active={currentTab === 'normal-tab'}>
+        <DemoContent />
+      </Tabs.Content>
+      <Tabs.Content active={currentTab === 'fresh-tab'} fresh>
+        <DemoContent />
+      </Tabs.Content>
+      <Tabs.Content active={currentTab === 'other-tab'}>
+        <DemoContent />
+      </Tabs.Content>
     </Flex>
   );
 };
