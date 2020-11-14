@@ -6,41 +6,14 @@ import Wrapper from '@@/.guide/shared/Wrapper';
 
 const PinkRadio = styled(Radio)`
   color: pink;
-
-  .fradio-input {
-    &:checked,
-    &:disabled:checked {
-      + .fradio-mark {
-        color: pink;
-      }
-    }
-  }
 `;
 
 const DangerRadio = styled(Radio)`
   color: var(--red);
-
-  .fradio-input {
-    &:checked,
-    &:disabled:checked {
-      + .fradio-mark {
-        color: var(--red);
-      }
-    }
-  }
 `;
 
 const SuccessRadio = styled(Radio)`
   color: var(--green);
-
-  .fradio-input {
-    &:checked,
-    &:disabled:checked {
-      + .fradio-mark {
-        color: var(--green);
-      }
-    }
-  }
 `;
 
 const Demo = () => {

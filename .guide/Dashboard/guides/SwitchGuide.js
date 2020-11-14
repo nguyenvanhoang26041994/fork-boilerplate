@@ -6,7 +6,6 @@ import Controlled from '@@/.guide/_documents/Switch/demo/Controlled';
 import Loading from '@@/.guide/_documents/Switch/demo/Loading';
 import UnControlled from '@@/.guide/_documents/Switch/demo/UnControlled';
 import Disabled from '@@/.guide/_documents/Switch/demo/Disabled';
-import Size from '@@/.guide/_documents/Switch/demo/Size';
 import Custom from '@@/.guide/_documents/Switch/demo/Custom';
 import SwitchButton from '@@/.guide/_documents/Switch/demo/SwitchButton';
 import OtherSwitchButton from '@@/.guide/_documents/Switch/demo/OtherSwitchButton';
@@ -29,9 +28,6 @@ export default () => {
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Loading } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Size } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ SwitchButton } />
