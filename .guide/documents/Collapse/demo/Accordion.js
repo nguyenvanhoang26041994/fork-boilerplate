@@ -1,5 +1,9 @@
 import React from 'react';
-import { Collapse, Badge } from '@@/fork-ui/src/components/core';
+import {
+  Collapse,
+  Badge,
+  Flex
+} from '@@/fork-ui/src/components/core';
 import {
   MailOpened,
   PlaneDeparture,
@@ -9,10 +13,21 @@ import {
 import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
-  const [props] = Collapse.useCollapse({ accordion: true });
+  const [props] = Collapse.useCollapse({
+    accordion: true,
+    defaultValue: ['panel-1'],
+  });
 
   return (
-    <div className="flex flex-col w-full">
+    <Flex
+      col
+      span="full"
+      className="p-5"
+      style={{
+        backgroundColor: 'var(--body-bg)',
+        borderRadius: 'var(--border-radius)',
+      }}
+    >
       <Collapse {...props}>
         <Collapse.Item
           title={(
@@ -57,7 +72,7 @@ const Demo = () => {
           <DemoContent />
         </Collapse.Item>
       </Collapse>
-    </div>
+    </Flex>
   );
 };
 

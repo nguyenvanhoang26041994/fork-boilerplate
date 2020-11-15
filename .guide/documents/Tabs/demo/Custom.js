@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Tabs, Flex, Button } from '@@/fork-ui/src/components/core';
+import { Tabs, Flex } from '@@/fork-ui/src/components/core';
 import {
   BluetoothConnected,
   BrandGithub,
@@ -23,7 +23,7 @@ const AdderTab = styled(Tabs.Tab)`
   border-color: transparent;
 `;
 
-const StyledContent = styled(Tabs.Content)`
+const StyledPanel = styled(Tabs.Panel)`
   background-color: rgba(0, 0, 0, 0.3);
 `;
 
@@ -33,7 +33,24 @@ const Demo = () => {
   });
 
   return (
-    <Flex col span="full">
+    <Flex
+      col
+      span="full"
+      className="p-5"
+      style={{
+        backgroundColor: 'var(--body-bg)',
+        borderRadius: 'var(--border-radius)',
+      }}
+    >
+      <StyledPanel active={currentTab === 'normal-tab'}>
+        <DemoContent />
+      </StyledPanel>
+      <StyledPanel active={currentTab === 'fresh-tab'} fresh>
+        <DemoContent />
+      </StyledPanel>
+      <StyledPanel active={currentTab === 'other-tab'}>
+        <DemoContent />
+      </StyledPanel>
       <Tabs>
         <StyledTab
           active={currentTab === 'normal-tab'}
@@ -53,19 +70,16 @@ const Demo = () => {
         >
           <BrandTabler />
         </StyledTab>
-        <AdderTab>
+        <AdderTab
+          active={currentTab === 'adder-tab'}
+          onClick={() => setCurrentTab('adder-tab')}
+        >
           <Plus />
         </AdderTab>
       </Tabs>
-      <StyledContent active={currentTab === 'normal-tab'}>
+      <StyledPanel active={currentTab === 'adder-tab'}>
         <DemoContent />
-      </StyledContent>
-      <StyledContent active={currentTab === 'fresh-tab'} fresh>
-        <DemoContent />
-      </StyledContent>
-      <StyledContent active={currentTab === 'other-tab'}>
-        <DemoContent />
-      </StyledContent>
+      </StyledPanel>
     </Flex>
   );
 };

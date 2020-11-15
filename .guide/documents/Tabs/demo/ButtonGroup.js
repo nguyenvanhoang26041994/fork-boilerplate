@@ -1,5 +1,11 @@
 import React from 'react';
-import { Tabs, Flex } from '@@/fork-ui/src/components/core';
+import {
+  Tabs,
+  Flex,
+  Button,
+  ButtonGroup,
+} from '@@/fork-ui/src/components/core';
+import { RefreshAlert } from '@@/fork-ui/src/components/icons';
 import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
@@ -17,26 +23,34 @@ const Demo = () => {
         borderRadius: 'var(--border-radius)',
       }}
     >
-      <Tabs>
-        <Tabs.Tab
-          active={currentTab === 'normal-tab'}
+      <ButtonGroup fluid>
+        <Button
           onClick={() => setCurrentTab('normal-tab')}
+          primary={'normal-tab' === currentTab}
         >
-          Normal Tab
-        </Tabs.Tab>
-        <Tabs.Tab
-          active={currentTab === 'fresh-tab'}
+          NORMAL TAB
+        </Button>
+        <Button
           onClick={() => setCurrentTab('fresh-tab')}
+          primary={'fresh-tab' === currentTab}
         >
-          Fresh Tab
-        </Tabs.Tab>
-        <Tabs.Tab
-          active={currentTab === 'other-tab'}
+          <RefreshAlert />
+          FRESH TAB
+        </Button>
+        <Button
           onClick={() => setCurrentTab('other-tab')}
+          primary={'other-tab' === currentTab}
         >
-          Other Tab
-        </Tabs.Tab>
-      </Tabs>
+          OTHER TAB
+        </Button>
+        <Button
+          onClick={() => setCurrentTab('disabled-tab')}
+          primary={'disabled-tab' === currentTab}
+          disabled
+        >
+          DISABLED TAB
+        </Button>
+      </ButtonGroup>
       <Tabs.Panel active={currentTab === 'normal-tab'}>
         <DemoContent />
       </Tabs.Panel>
@@ -44,6 +58,9 @@ const Demo = () => {
         <DemoContent />
       </Tabs.Panel>
       <Tabs.Panel active={currentTab === 'other-tab'}>
+        <DemoContent />
+      </Tabs.Panel>
+      <Tabs.Panel active={currentTab === 'disabled-tab'}>
         <DemoContent />
       </Tabs.Panel>
     </Flex>

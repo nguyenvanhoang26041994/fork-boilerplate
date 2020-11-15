@@ -74,6 +74,9 @@ const leftSidebar = {
   Collapse: {
     icon: <ChevronDown />,
   },
+  Menu: {
+    icon: <DotsVertical />,
+  },
   Rater: {
     icon: <StarHalf />,
   },
@@ -85,9 +88,6 @@ const leftSidebar = {
   },
   Image: {
     icon: <Photo />,
-  },
-  Menu: {
-    icon: <DotsVertical />,
   },
   SpeedDial: {
     icon: <Dots />,

@@ -17,7 +17,7 @@ const Loren = () => (
           <Rater star={4} />
         </Flex>
       </Flex>
-      <Skeleton rect w="100%" h="200px" />
+      <Skeleton rect w="100%" h="300px" />
     </Flex>
   </div>
 );
