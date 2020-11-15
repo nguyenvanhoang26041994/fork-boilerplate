@@ -13,7 +13,7 @@ import {
 import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
-  const [props] = Collapse.useCollapse({
+  const [{ onChange, isActive }] = Collapse.useCollapse({
     accordion: true,
     defaultValue: ['panel-1'],
   });
@@ -28,49 +28,45 @@ const Demo = () => {
         borderRadius: 'var(--border-radius)',
       }}
     >
-      <Collapse {...props}>
-        <Collapse.Item
+      <Collapse>
+        <Collapse.Panel
           title={(
             <span className="flex">
               <Share className="mr-2" />NORMAL PANEL
             </span>
           )}
-          key="panel-1"
+          value="panel-1"
+          active={isActive('panel-1')}
+          onClick={() => onChange('panel-1')}
         >
           <DemoContent />
-        </Collapse.Item>
-        <Collapse.Item 
+        </Collapse.Panel>
+        <Collapse.Panel 
           fresh
           title={(
             <span className="flex">
               <Rotate2 className="mr-2" />FRESH PANEL
             </span>
           )}
-          key="panel-2"
+          value="panel-2"
+          active={isActive('panel-2')}
+          onClick={() => onChange('panel-2')}
         >
           <DemoContent />
-        </Collapse.Item>
-        <Collapse.Item
+        </Collapse.Panel>
+        <Collapse.Panel
           title={(
             <span className="flex">
               <PlaneDeparture className="mr-2" />DISABLED PANEL
             </span>
           )}
           disabled
-          key="panel-3"
+          value="panel-3"
+          active={isActive('panel-3')}
+          onClick={() => onChange('panel-3')}
         >
           <DemoContent />
-        </Collapse.Item>
-        <Collapse.Item
-          title={(
-            <Badge.Dot topRight>
-              <span><MailOpened className="mr-2" />WITH BADGE</span>
-            </Badge.Dot>
-          )}
-          key="panel-5"
-        >
-          <DemoContent />
-        </Collapse.Item>
+        </Collapse.Panel>
       </Collapse>
     </Flex>
   );

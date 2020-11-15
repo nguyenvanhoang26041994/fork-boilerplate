@@ -1,5 +1,10 @@
 import React from 'react';
 import { Tabs, Flex } from '@@/fork-ui/src/components/core';
+import {
+  Refresh,
+  Briefcase,
+} from '@@/fork-ui/src/components/icons';
+
 import DemoContent from '@@/.guide/shared/DemoContent';
 
 const Demo = () => {
@@ -22,19 +27,21 @@ const Demo = () => {
           active={currentTab === 'normal-tab'}
           onClick={() => setCurrentTab('normal-tab')}
         >
-          Normal Tab
+          This tab always saved panel
         </Tabs.Tab>
         <Tabs.Tab
           active={currentTab === 'fresh-tab'}
           onClick={() => setCurrentTab('fresh-tab')}
         >
-          Fresh Tab
+          <Refresh className="mr-2" />
+          <span>This tab always refresh panel</span>
         </Tabs.Tab>
         <Tabs.Tab
-          active={currentTab === 'other-tab'}
-          onClick={() => setCurrentTab('other-tab')}
+          disabled
+          active={currentTab === 'disabled-tab'}
+          onClick={() => setCurrentTab('disabled-tab')}
         >
-          Other Tab
+          The disabled tab
         </Tabs.Tab>
       </Tabs>
       <Tabs.Panel active={currentTab === 'normal-tab'}>
@@ -43,7 +50,7 @@ const Demo = () => {
       <Tabs.Panel active={currentTab === 'fresh-tab'} fresh>
         <DemoContent />
       </Tabs.Panel>
-      <Tabs.Panel active={currentTab === 'other-tab'}>
+      <Tabs.Panel active={currentTab === 'disabled-tab'}>
         <DemoContent />
       </Tabs.Panel>
     </Flex>
