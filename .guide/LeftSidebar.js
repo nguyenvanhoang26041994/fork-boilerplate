@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Menu } from '@fork-ui/components/core';
 import { Home } from '@fork-ui/components/icons';
-import { mapRouter, mapMenuItem } from '../map-config';
+import { mapRouter, mapMenuItem } from './map-config';
 
 const LeftSidebarContainer = styled.div`
   width: 5rem;

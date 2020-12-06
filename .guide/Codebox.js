@@ -1,6 +1,7 @@
-import React, { useMemo, useState, useCallback } from 'react';
+import React, { useMemo, useState, useCallback, useContext } from 'react';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
+import GuideContext from './GuideContext';
 
 import { Animated, ButtonGroup, Button } from '@fork-ui/components/core';
 import { Braces, ThumbUp, Message2 } from '@fork-ui/components/icons';
@@ -8,7 +9,9 @@ import { Braces, ThumbUp, Message2 } from '@fork-ui/components/icons';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const CodeBlock = ({ language, value, isDark }) => {
+const CodeBlock = ({ language, value }) => {
+  const { isDark } = useContext(GuideContext);
+
   return (
     <SyntaxHighlighter
       language={language}
@@ -41,7 +44,7 @@ const CodeMarkdown = ({ show, isDark, children }) => {
       <CodeMarkdownWrapper className="code-box-code">
         <ReactMarkdown
           source={source}
-          renderers={{ code: props => <CodeBlock {...props} isDark={isDark} /> }}
+          renderers={{ code: CodeBlock }}
         />
       </CodeMarkdownWrapper>
     </Animated.Expand>

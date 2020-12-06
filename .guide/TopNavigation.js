@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Button } from '@fork-ui/components/core';
 import { IndentDecrease, IndentIncrease, Search, Maximize, MoonStars, Bulb } from '@fork-ui/components/icons';
 
+import GuideContext from './GuideContext';
+
 const TopNavContainer = styled.nav`
   position: sticky;
   top: 0;

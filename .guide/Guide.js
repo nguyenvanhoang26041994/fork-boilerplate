@@ -1,42 +1,45 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
-import LeftSidebar from './components/LeftSidebar';
-import TopNavigation from './components/TopNavigation';
+import GuideContext from './GuideContext';
+
+import LeftSidebar from './LeftSidebar';
+import TopNavigation from './TopNavigation';
 import { ScrollUp } from '@fork-ui/components/core';
 
-import AvatarGuide from './components/_documents/Avatar';
-import BadgeGuide from './components/_documents/Badge';
-import ButtonGuide from './components/_documents/Button';
-import CarouselGuide from './components/_documents/Carousel';
-import CheckboxGuide from './components/_documents/Checkbox';
-import ChipGuide from './components/_documents/Chip';
-import CollapseGuide from './components/_documents/Collapse';
-import DrawerGuide from './components/_documents/Drawer';
-import FlexGuide from './components/_documents/Flex';
-import FormGuide from './components/_documents/Form';
-import IconGuide from './components/_documents/Icon';
-import ImageGuide from './components/_documents/Image';
-import LoaderGuide from './components/_documents/Loader';
-import MenuGuide from './components/_documents/Menu';
-import ModalGuide from './components/_documents/Modal';
-import PaginationGuide from './components/_documents/Pagination';
-import PopoverGuide from './components/_documents/Popover';
-import RadioGuide from './components/_documents/Radio';
-import RaterGuide from './components/_documents/Rater';
-import SkeletonGuide from './components/_documents/Skeleton';
-import SpeedDialGuide from './components/_documents/SpeedDial';
-import StepperGuide from './components/_documents/Stepper';
-import SwitchGuide from './components/_documents/Switch';
-import TabsGuide from './components/_documents/Tabs';
-import TimelineGuide from './components/_documents/Timeline';
-import TooltipGuide from './components/_documents/Tooltip';
-import TypographyGuide from './components/_documents/Typography';
+import AvatarGuide from './_documents/Avatar';
+import BadgeGuide from './_documents/Badge';
+import ButtonGuide from './_documents/Button';
+import CarouselGuide from './_documents/Carousel';
+import CheckboxGuide from './_documents/Checkbox';
+import ChipGuide from './_documents/Chip';
+import CollapseGuide from './_documents/Collapse';
+import DrawerGuide from './_documents/Drawer';
+import FlexGuide from './_documents/Flex';
+import FormGuide from './_documents/Form';
+import IconGuide from './_documents/Icon';
+import ImageGuide from './_documents/Image';
+import LoaderGuide from './_documents/Loader';
+import MenuGuide from './_documents/Menu';
+import ModalGuide from './_documents/Modal';
+import PaginationGuide from './_documents/Pagination';
+import PopoverGuide from './_documents/Popover';
+import RadioGuide from './_documents/Radio';
+import RaterGuide from './_documents/Rater';
+import SkeletonGuide from './_documents/Skeleton';
+import SpeedDialGuide from './_documents/SpeedDial';
+import StepperGuide from './_documents/Stepper';
+import SwitchGuide from './_documents/Switch';
+import TabsGuide from './_documents/Tabs';
+import TimelineGuide from './_documents/Timeline';
+import TooltipGuide from './_documents/Tooltip';
+import TypographyGuide from './_documents/Typography';
 
 const Guide = () => {
   const [isDark, setIsDark] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = useCallback(() => setIsExpanded(prev => !prev), []);
+  const toggleIsDark = useCallback(() => setIsDark(val => !val), [setIsDark]);
 
   useEffect(() => {
     if (isDark) {
@@ -49,11 +52,17 @@ const Guide = () => {
   }, [isDark]);
 
   return (
+    <GuideContext.Provider value={{ isDark, setIsDark, toggleIsDark }}>
       <BrowserRouter>
         <div id="main-admin" className="flex">
           <LeftSidebar isExpanded={isExpanded} />
           <div className="flex-1 flex flex-col">
-            <TopNavigation toggleExpand={toggleExpand} isExpanded={isExpanded} />
+            <TopNavigation
+              toggleExpand={toggleExpand}
+              isExpanded={isExpanded}
+              isDark={isDark}
+              toggleIsDark={toggleIsDark}
+            />
             <div className="flex m-1">
               <div className="flex-1">
               <Switch>
@@ -92,6 +101,7 @@ const Guide = () => {
           <ScrollUp />
         </div>
       </BrowserRouter>
+    </GuideContext.Provider>
   );
 };
 

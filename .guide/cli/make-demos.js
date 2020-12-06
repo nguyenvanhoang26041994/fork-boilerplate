@@ -27,7 +27,7 @@ const makeHeader = function(demoName, componentName) {
 const DemoTemplate = readFile(path.join(__dirname, '/templates/Demo.hbs'));
 
 const makeDemo = function(documentName, demoName) {
-  let demoStr = readFile(path.join(__dirname, `../components/documents/${documentName}/${demoName}.js`));
+  let demoStr = readFile(path.join(__dirname, `../documents/${documentName}/${demoName}.js`));
   let injectedStr = demoStr;
   injectedStr += Handlebars.compile(DemoTemplate)(makeHeader(demoName, documentName));
   injectedStr += `\nDemo.code = \`${
@@ -36,15 +36,15 @@ const makeDemo = function(documentName, demoName) {
       .replace(/\$/g, '\\\$')
   }\`;`;
 
-  makeFile(path.join(__dirname, `../components/_documents/${documentName}/${demoName}.js`), injectedStr);
+  makeFile(path.join(__dirname, `../_documents/${documentName}/${demoName}.js`), injectedStr);
 };
 
 const makeDocument = function(documentName) {
   makeFile(
-    path.join(__dirname, `../components/_documents/${documentName}/index.js`),
-    readFile(path.join(__dirname, `../components/documents/${documentName}/index.js`)),
+    path.join(__dirname, `../_documents/${documentName}/index.js`),
+    readFile(path.join(__dirname, `../documents/${documentName}/index.js`)),
   );
-  let demos = readFolder(path.join(__dirname, `../components/documents/${documentName}/`)) || [];
+  let demos = readFolder(path.join(__dirname, `../documents/${documentName}/`)) || [];
   demos = demos
     .filter(demo => demo !== 'index.js')
     .filter(demo => /.js$/.test(demo))
@@ -54,7 +54,7 @@ const makeDocument = function(documentName) {
 };
 
 const makeDocuments = function() {
-  let documents = readFolder(path.join(__dirname, '../components/documents')) || [];
+  let documents = readFolder(path.join(__dirname, '../documents')) || [];
   documents.map(documentName => makeDocument(documentName));
 };
 
