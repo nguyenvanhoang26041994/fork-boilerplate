@@ -19,8 +19,7 @@ module.exports = (options) => ({
   output: options.output,
   resolve: {
     alias: {
-      '@': path.resolve('src'),
-      '@@': path.resolve(),
+      '@fork-ui': path.resolve('fork-ui'),
     },
   },
   module: {

@@ -1,10 +1,10 @@
 import React from 'react';
 import Codebox from '../../Codebox';
 
-import Basic from '.Checkbox';
-import Controlled from '.Controlled';
-import UnControlled from '.UnControlled';
-import Custom from '.Custom';
+import Basic from './Checkbox';
+import Controlled from './Controlled';
+import UnControlled from './UnControlled';
+import Custom from './Custom';
 
 export default () => {
   return (

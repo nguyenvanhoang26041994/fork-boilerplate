@@ -1,5 +1,5 @@
 import React from 'react';
-import leftSidebar from '@@/guide.config';
+import leftSidebar from '../guide.config';
 import { Point } from '@fork-ui/components/icons';
 
 const splitCamelCase = str => {

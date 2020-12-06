@@ -16,6 +16,7 @@
     "deploy": "yarn build && vercel --prod",
     "make-icons": "node .guide/cli/make-icons",
     "guide": "node .guide/cli/make-guide",
+    "start-guide": "yarn guide && node .guide/server.js --config .guide/webpack.config.js",
     "build-fork-scss": "node-sass fork-ui/src --output fork-ui/lib",
     "build-fork-js": "babel --config-file fork-ui/babel.config.js --out-dir fork-ui/lib fork-ui/src --verbose",
     "build-fork": "yarn rimraf \"fork-ui/lib\" && yarn build-fork-js && yarn build-fork-scss",

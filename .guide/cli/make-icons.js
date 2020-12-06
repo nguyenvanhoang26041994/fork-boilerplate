@@ -38,7 +38,7 @@ const makeTablerIcons = function() {
   const header = '// THANK TO https://github.com/tabler/tabler-icons\nimport React from \'react\';\nimport enhancerIcon from \'\.\/enhancerIcon\';\nconst all = {};\n\n';
 
   makeFile(
-    path.join(rcNeumorphismRoot, '/src/components/icons/index.js'),
+    path.join(rcNeumorphismRoot, '/components/icons/index.js'),
     header + icons.join('\n') + 'export default all;\n'
   );
 };

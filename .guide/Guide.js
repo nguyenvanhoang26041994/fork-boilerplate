@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import LeftSidebar from './components/LeftSidebar';
@@ -6,7 +6,7 @@ import TopNavigation from './components/TopNavigation';
 import { ScrollUp } from '@fork-ui/components/core';
 
 import AvatarGuide from './components/_documents/Avatar';
-import BadgeGuide from './components/_documents/Badgee';
+import BadgeGuide from './components/_documents/Badge';
 import ButtonGuide from './components/_documents/Button';
 import CarouselGuide from './components/_documents/Carousel';
 import CheckboxGuide from './components/_documents/Checkbox';

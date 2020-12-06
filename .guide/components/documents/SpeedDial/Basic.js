@@ -1,5 +1,5 @@
-import React from "react";
-import { SpeedDial, Button } from "@fork-ui/src/components/core";
+import React from 'react';
+import { SpeedDial, Button } from '@fork-ui/components/core';
 import { CloudDownload, Coin, ColorSwatch, Plus } from '@fork-ui/components/icons';
 
 const Demo = () => {
