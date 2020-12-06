@@ -8,7 +8,7 @@ module.exports = {
   mode: 'development',
   entry: [
     'webpack-hot-middleware/client?reload=true',
-    path.join(process.cwd(), '.guide/index.js'),
+    path.join(__dirname, 'index.js'),
   ],
   output: {
     filename: '[name].js',
@@ -17,7 +17,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@fork-ui': path.resolve('./fork-ui'),
+      '@fork-ui': path.join(__dirname, '../fork-ui'),
     },
   },
   module: {
@@ -42,7 +42,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: '.guide/index.html',
+      template: path.join(__dirname, 'index.html'),
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
