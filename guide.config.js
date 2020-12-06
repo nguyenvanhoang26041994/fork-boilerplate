@@ -6,10 +6,9 @@ import {
   Typography,
   Mouse,
   Photo,
-  Box,
+  ArrowRightCircle,
   DotsVertical,
-  Rotate2,
-  Eye,
+  Point,
   Dots,
   Braces,
   LayoutSidebar,
@@ -20,7 +19,7 @@ import {
   Checkbox,
   User,
   GripHorizontal,
-  Line,
+  Bell,
   ChevronDown,
   PageBreak,
   LoaderQuarter,
@@ -28,7 +27,6 @@ import {
   StarHalf,
   Clock,
   DeviceMobileRotated,
-  PlayerTrackNext
 } from '@fork-ui/components/icons';
 
 const leftSidebar = {
@@ -80,11 +78,11 @@ const leftSidebar = {
   Timeline: {
     icon: <Clock />,
   },
+  Stepper: {
+    icon: <ArrowRightCircle />
+  },
   Carousel: {
     icon: <DeviceMobileRotated />
-  },
-  Stepper: {
-    icon: <PlayerTrackNext />
   },
   Menu: {
     icon: <DotsVertical />,
@@ -107,43 +105,38 @@ const leftSidebar = {
   Flex: {
     icon: <Template />,
   },
-  DataDisplay: {
-    type: 'sub',
-    icon: <Eye />,
-    items: {
-      Popover: {},
-      Tooltip: {},
-      Breadcrumb: {},
-      
-    }
+  Popover: {
+    icon: <Point />,
   },
-  Feedback: {
-    type: 'sub',
-    icon: <Notification />,
-    items: {
-      Confirm: {},
-      Popconfirm: {},
-      Alert: {},
-      Notification: {},
-    },
+  Tooltip: {
+    icon: <Point />,
   },
-  FormField: {
-    type: 'sub',
-    icon: <Box />,
-    items: {
-      Textbox: {},
-      Password: {},
-      Textarea: {},
-    }
+  Breadcrumb: {
+    icon: <Point />,
   },
-  Loading: {
-    type: 'sub',
-    icon: <Rotate2 />,
-    items: {
-      Progress: {},
-      
-      // Box: {},
-    }
+  Confirm: {
+    icon: <Point />,
+  },
+  Popconfirm: {
+    icon: <Point />,
+  },
+  Alert: {
+    icon: <Point />,
+  },
+  Notification: {
+    icon: <Bell />,
+  },
+  Textbox: {
+    icon: <Point />,
+  },
+  Password: {
+    icon: <Point />,
+  },
+  Textarea: {
+    icon: <Point />,
+  },
+  Progress: {
+    icon: <Point />,
   },
   Staff: {
     type: 'sub',
