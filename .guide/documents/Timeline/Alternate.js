@@ -1,23 +1,21 @@
 import React from 'react';
-import { Timeline, Badge, Tooltip } from '@fork-ui/components/core';
-import {
-  Ban,
-  Bell,
-  BrandGithub,
-  CloudDownload,
-  PictureInPicture,
-  Camera
-} from '@fork-ui/components/icons';
+import { Timeline, Badge } from '@fork-ui/components/core';
+import { PictureInPicture } from '@fork-ui/components/icons';
 import DemoContent2 from '../../shared/DemoContent2';
 
 const Demo = () => {
   return (
-    <Timeline>
+    <Timeline alternate>
       <Timeline.Item>
         <Timeline.Connector />
-        <Timeline.Dot>
-          <Ban />
-        </Timeline.Dot>
+        <Timeline.Dot />
+        <Timeline.Content>
+          <DemoContent2 />
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
@@ -25,57 +23,38 @@ const Demo = () => {
       <Timeline.Item>
         <Timeline.Connector />
         <Timeline.Dot>
-          <Bell />
-        </Timeline.Dot>
-        <Timeline.Content>
-          <DemoContent2 />
-        </Timeline.Content>
-      </Timeline.Item>
-      <Timeline.Item>
-        <Timeline.Connector />
-        <Timeline.Dot>
-          <BrandGithub />
-        </Timeline.Dot>
-        <Timeline.Content>
-          <DemoContent2 />
-        </Timeline.Content>
-      </Timeline.Item>
-      <Timeline.Item>
-        <Timeline.Connector />
-        <Timeline.Dot>
-          <Tooltip top title="11:00 AM">
-            <div>
-              <CloudDownload />
-            </div>
-          </Tooltip>
-        </Timeline.Dot>
-        <Timeline.Content>
-          <DemoContent2 />
-        </Timeline.Content>
-      </Timeline.Item>
-      <Timeline.Item>
-        <Timeline.Connector
-          style={{
-            borderStyle: 'solid',
-            borderColor: 'var(--green)'
-          }}
-        />
-        <Timeline.Dot>
-          <Badge.Label label="10:00 AM">
-            <Camera />
-          </Badge.Label>
-        </Timeline.Dot>
-        <Timeline.Content>
-          <DemoContent2 />
-        </Timeline.Content>
-      </Timeline.Item>
-      <Timeline.Item>
-        <Timeline.Connector />
-        <Timeline.Dot>
-          <Badge.Label label="9:00 AM">
+          <Badge.Label top label="9:00 AM">
             <PictureInPicture />
           </Badge.Label>
         </Timeline.Dot>
+        <Timeline.Content>
+          <DemoContent2 />
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
+        <Timeline.Content>
+          <DemoContent2 />
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
+        <Timeline.Content>
+          <DemoContent2 />
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
+        <Timeline.Content>
+          <DemoContent2 />
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>

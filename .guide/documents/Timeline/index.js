@@ -5,6 +5,7 @@ import Basic from './Basic';
 import CustomIcon from './CustomIcon';
 import Reverse from './Reverse';
 import Right from './Right';
+import Alternate from './Alternate';
 
 export default () => {
   return (
@@ -16,13 +17,16 @@ export default () => {
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Reverse } />
         </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Right } />
+        </div>
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ CustomIcon } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Right } />
+          <Codebox Component={ Alternate } />
         </div>
       </div>
     </div>

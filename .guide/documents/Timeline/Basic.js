@@ -1,23 +1,33 @@
 import React from 'react';
 import { Timeline } from '@fork-ui/components/core';
-import { History, Calendar } from '@fork-ui/components/icons';
 import DemoContent2 from '../../shared/DemoContent2';
+import DemoContent from '../../shared/DemoContent';
 
 const Demo = () => {
   return (
-    <div className="flex flex-col w-full">
-      <Timeline>
-        <Timeline.Item>
+    <Timeline>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
+        <Timeline.Content>
+          <DemoContent />
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
+        <Timeline.Content>
           <DemoContent2 />
-        </Timeline.Item>
-        <Timeline.Item>
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
+        <Timeline.Content>
           <DemoContent2 />
-        </Timeline.Item>
-        <Timeline.Item>
-          <DemoContent2 />
-        </Timeline.Item>
-      </Timeline>
-    </div>
+        </Timeline.Content>
+      </Timeline.Item>
+    </Timeline>
   );
 };
 

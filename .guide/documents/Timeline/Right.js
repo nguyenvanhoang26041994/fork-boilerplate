@@ -1,22 +1,32 @@
 import React from 'react';
 import { Timeline } from '@fork-ui/components/core';
-import DemoContent from '../../shared/DemoContent';
+import DemoContent2 from '../../shared/DemoContent2';
 
 const Demo = () => {
   return (
-    <div className="flex flex-col w-full">
-      <Timeline right>
-        <Timeline.Item>
-          <DemoContent />
-        </Timeline.Item>
-        <Timeline.Item>
-          <DemoContent />
-        </Timeline.Item>
-        <Timeline.Item>
-          <DemoContent />
-        </Timeline.Item>
-      </Timeline>
-    </div>
+    <Timeline right>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
+        <Timeline.Content>
+          <DemoContent2 />
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
+        <Timeline.Content>
+          <DemoContent2 />
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Connector />
+        <Timeline.Dot />
+        <Timeline.Content>
+          <DemoContent2 />
+        </Timeline.Content>
+      </Timeline.Item>
+    </Timeline>
   );
 };
 
