@@ -26,7 +26,10 @@ import {
   LoaderQuarter,
   Bookmark,
   StarHalf,
-} from '@@/fork-ui/src/components/icons';
+  Clock,
+  DeviceMobileRotated,
+  PlayerTrackNext
+} from '@fork-ui/components/icons';
 
 const leftSidebar = {
   Icon: {
@@ -74,6 +77,15 @@ const leftSidebar = {
   Collapse: {
     icon: <ChevronDown />,
   },
+  Timeline: {
+    icon: <Clock />,
+  },
+  Carousel: {
+    icon: <DeviceMobileRotated />
+  },
+  Stepper: {
+    icon: <PlayerTrackNext />
+  },
   Menu: {
     icon: <DotsVertical />,
   },
@@ -101,10 +113,6 @@ const leftSidebar = {
     items: {
       Popover: {},
       Tooltip: {},
-      Timeline: {},
-      Carousel: {},
-      Stepper: {},
-      
       Breadcrumb: {},
       
     }

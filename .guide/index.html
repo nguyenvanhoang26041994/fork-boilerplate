@@ -1,0 +1,93 @@
+<!DOCTYPE html >
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GUIDE for FORK-UI</title>
+  <style>
+    html {
+      font-size: 13px;
+      font-family: "Josefin Sans", sans-serif;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    .pre-skeleton {
+      background-color: #191919;
+    }
+    .pre-skeleton--circle {
+      height: 2.5em !important;
+      width: 2.5em !important;
+      border-radius: 100rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pre-skeleton--rect,
+    .pre-skeleton--paragraph {
+      width: 100%;
+      border-radius: 0.5em;
+      margin-bottom: 0.5rem;
+    }
+
+    .pre-skeleton--rect {
+      height: 1.5em;
+    }
+
+    .pre-skeleton--paragraph {
+      height: 1.5rem !important;
+    }
+  </style>
+</head>
+<body class="light-mode common-scrollbar">
+  <noscript>If you're seeing this message, that means
+    <strong>JavaScript has been disabled on your browser</strong>, please
+    <strong>enable JS</strong> to make this app work.
+  </noscript>
+  <div id="app" style="min-width: 100%;">
+    <div style="width: 100vw; height: 100vh; display: flex; flex-direction: column; background-color: #000;">
+      <div class="pre-skeleton" style="height: 5rem; display: flex; justify-content: flex-end; align-items: center; padding: 0 1rem;">
+        <div style="display: flex;">
+          <div class="pre-skeleton pre-skeleton--circle" style="font-size: 1.25rem;"></div>
+          <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 0.5rem;">
+            <div class="pre-skeleton pre-skeleton--paragraph" style="width: 100px"></div>
+            <div class="pre-skeleton pre-skeleton--rect" style="height: 10px"></div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-grow: 1;">
+        <div class="pre-skeleton" style="display: flex; flex-direction: column; align-items: center; width: 5rem; height: 100%; padding: 0 0.5rem; font-size: 1.5rem;">
+          <div class="pre-skeleton pre-skeleton--circle"></div>
+          <div class="pre-skeleton pre-skeleton--circle"></div>
+          <div class="pre-skeleton pre-skeleton--circle"></div>
+          <div class="pre-skeleton pre-skeleton--circle"></div>
+        </div>
+        <div style="display:flex; flex-grow: 1; flex-direction: column;">
+          <div style="flex-grow: 1; width: 100%; padding: 1rem; display: flex; flex-direction: column;">
+            <div style="display: flex;">
+              <div class="pre-skeleton pre-skeleton--circle" style="font-size: 1.5rem;"></div>
+              <div style="display: flex; flex-direction: column; flex-grow: 1; margin-left: 1rem;">
+                <div class="pre-skeleton pre-skeleton--paragraph" style="width: 50%"></div>
+                <div class="pre-skeleton pre-skeleton--paragraph" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="pre-skeleton pre-skeleton--rect" style="flex-grow: 1;"></div>
+          </div>
+          <div style="flex-grow: 1; width: 100%; padding: 1rem; display: flex; flex-direction: column;">
+            <div style="display: flex;">
+              <div class="pre-skeleton pre-skeleton--circle" style="font-size: 1.5rem;"></div>
+              <div style="display: flex; flex-direction: column; flex-grow: 1; margin-left: 1rem;">
+                <div class="pre-skeleton pre-skeleton--paragraph" style="width: 50%"></div>
+                <div class="pre-skeleton pre-skeleton--paragraph" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="pre-skeleton pre-skeleton--rect" style="flex-grow: 1;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap">
+</body>
+</html>
