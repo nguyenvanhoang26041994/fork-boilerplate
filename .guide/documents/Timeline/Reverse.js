@@ -7,21 +7,18 @@ const Demo = () => {
   return (
     <Timeline reverse>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot />
         <Timeline.Content>
           <DemoContent />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot />
         <Timeline.Content>
           <DemoContent2 />

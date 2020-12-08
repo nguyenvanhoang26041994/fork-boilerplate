@@ -14,7 +14,6 @@ const Demo = () => {
   return (
     <Timeline>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot>
           <Ban />
         </Timeline.Dot>
@@ -23,7 +22,6 @@ const Demo = () => {
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot>
           <Bell />
         </Timeline.Dot>
@@ -32,7 +30,6 @@ const Demo = () => {
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot>
           <BrandGithub />
         </Timeline.Dot>
@@ -41,7 +38,6 @@ const Demo = () => {
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot>
           <Tooltip top title="11:00 AM">
             <div>
@@ -54,12 +50,6 @@ const Demo = () => {
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector
-          style={{
-            borderStyle: 'solid',
-            borderColor: 'var(--green)'
-          }}
-        />
         <Timeline.Dot>
           <Badge.Label label="10:00 AM">
             <Camera />
@@ -70,7 +60,6 @@ const Demo = () => {
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot>
           <Badge.Label label="9:00 AM">
             <PictureInPicture />

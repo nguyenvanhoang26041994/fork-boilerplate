@@ -7,21 +7,18 @@ const Demo = () => {
   return (
     <Timeline alternate>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot>
           <Badge.Label top label="9:00 AM">
             <PictureInPicture />
@@ -32,28 +29,24 @@ const Demo = () => {
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Connector />
         <Timeline.Dot />
         <Timeline.Content>
           <DemoContent2 />
