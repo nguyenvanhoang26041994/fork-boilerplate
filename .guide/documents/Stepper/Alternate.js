@@ -57,13 +57,13 @@ const Demo = () => {
       'processing',
     ],
     activeStep: 1,
-    finishStep: 4,
+    finishStep: 3,
     skipable: [1, 2],
     cancelable: [0, 2],
   });
 
   return (
-    <Stepper>
+    <Stepper alternate>
       <Stepper.Step status={statuses[0]}>
         <Stepper.Button>1</Stepper.Button>
         <Stepper.Content>
@@ -160,34 +160,6 @@ const Demo = () => {
           <Stepper.Description>
             <p>Go to last step!</p>
             {activeStep === 3 && (
-              <ControlSection
-                goReset={goReset}
-                goBack={goBack}
-                goNext={goNext}
-                goSkip={goSkip}
-                goCancel={goCancel}
-                goFinish={goFinish}
-                isFinished={isFinished}
-                isSkipable={isSkipable}
-                isCancelable={isCancelable}
-                activeStep={activeStep}
-                finishStep={finishStep}
-              />
-            )}
-          </Stepper.Description>
-        </Stepper.Content>
-      </Stepper.Step>
-      <Stepper.Step status={statuses[4]}>
-        <Stepper.Button>5</Stepper.Button>
-        <Stepper.Content>
-          <Stepper.Title>
-            Step Five
-          </Stepper.Title>
-          <Stepper.Description>
-            <p>
-              Just finish the progress!
-            </p>
-            {activeStep === 4 && (
               <ControlSection
                 goReset={goReset}
                 goBack={goBack}
