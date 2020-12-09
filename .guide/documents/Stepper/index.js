@@ -4,8 +4,9 @@ import Codebox from '../../Codebox';
 import Basic from './Basic';
 import Alternate from './Alternate';
 import Vertical from './Vertical';
-// import Complex from './Complex';
-// import Icon from './Icon';
+import DotOnly from './DotOnly';
+import WithTabs from './WithTabs';
+import Icon from './Icon';
 
 
 export default () => {
@@ -17,18 +18,21 @@ export default () => {
       <div className="flex w-full" style={ { paddingBottom: '1px' } }>
         <Codebox Component={ Alternate } />
       </div>
+      <div className="flex w-full" style={ { paddingBottom: '1px' } }>
+        <Codebox Component={ WithTabs } />
+      </div>
       <div className="flex w-full">
         <div className="flex flex-col w-1/2">
-          {/* <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ Alternate } />
-          </div> */}
-          {/* <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ Basic } />
-          </div> */}
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ Vertical } />
+          </div>
         </div>
         <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
           <div className="w-full" style={ { paddingBottom: '1px' } }>
-            <Codebox Component={ Vertical } />
+            <Codebox Component={ DotOnly } />
+          </div>
+          <div className="w-full" style={ { paddingBottom: '1px' } }>
+            <Codebox Component={ Icon } />
           </div>
         </div>
       </div>

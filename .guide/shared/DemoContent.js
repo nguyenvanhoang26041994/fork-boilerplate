@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Flex, Badge, Avatar, Skeleton, Rater } from '@fork-ui/components/core';
 
-const Loren = () => (
+const Loren = ({ avatarName }) => (
   <div className="w-full">
     <Flex col style={{ padding: '0.5 1.5rem' }} className="w-full">
       <Flex items="center" className="mb-5">
@@ -10,7 +10,7 @@ const Loren = () => (
           color="#0df316"
           bottomRight
         >
-          <Avatar size="1.5rem">OP</Avatar>
+          <Avatar size="1.5rem">{avatarName}</Avatar>
         </Badge.Dot>
         <Flex col className="ml-2 flex-1">
           <Skeleton p  w="70%" animated={false} />
@@ -22,7 +22,7 @@ const Loren = () => (
   </div>
 );
 
-const DemoContent = () => {
+const DemoContent = ({ avatarName }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -46,7 +46,11 @@ const DemoContent = () => {
     )
   }
 
-  return <Loren />;
+  return <Loren avatarName={avatarName} />;
+};
+
+DemoContent.defaultProps = {
+  avatarName: 'OP'
 };
 
 export default DemoContent;
