@@ -1,17 +1,17 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import { Rater } from '@fork-ui/components/core';
 import { Heart } from '@fork-ui/components/icons';
 
+const HeartRater = props => <Rater.Item {...props}><Heart /></Rater.Item>;
 const Demo = () => {
-  const [star, setStar] = useState(1);
-  const onChange = useCallback((star) => setStar(star), []);
-
   return (
-    <Rater
-      icon={<Heart />}
-      star={star}
-      onChange={onChange}
-    />
+    <Rater>
+      <HeartRater isLight />
+      <HeartRater isLight />
+      <HeartRater isLight />
+      <HeartRater />
+      <HeartRater />
+    </Rater>
   );
 };
 

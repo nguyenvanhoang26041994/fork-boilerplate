@@ -7,19 +7,19 @@ const Demo = () => {
   return (
     <Timeline reverse>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>

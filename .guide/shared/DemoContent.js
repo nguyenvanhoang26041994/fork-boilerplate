@@ -14,7 +14,13 @@ const Loren = ({ avatarName }) => (
         </Badge.Dot>
         <Flex col className="ml-2 flex-1">
           <Skeleton p  w="70%" animated={false} />
-          <Rater star={4} />
+          <Rater>
+            <Rater.Star isLight />
+            <Rater.Star isLight />
+            <Rater.Star isLight />
+            <Rater.Star />
+            <Rater.Star />
+          </Rater>
         </Flex>
       </Flex>
       <Skeleton rect w="100%" h="300px" animated={false} />

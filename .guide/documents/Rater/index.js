@@ -2,29 +2,39 @@ import React from 'react';
 import Codebox from '../../Codebox';
 
 import Basic from './Basic';
+import WithLoopHelper from './WithLoopHelper';
+import Static from './Static';
 import Icon from './Icon';
-import Max from './Max';
 import Size from './Size';
+import CustomColor from './CustomColor';
+import CustomWithIcon from './CustomWithIcon';
 
 export default () => {
   return (
     <div className="flex flex-wrap">
-      <div className="flex flex-col w-1/3">
+      <div className="flex flex-col w-1/2">
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Basic } />
+          <Codebox Component={ Basic } defaultShowCode/>
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ WithLoopHelper } />
+        </div>
+      </div>
+      <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Static } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Icon } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Size } />
         </div>
-      </div>
-      <div className="flex flex-col w-1/3" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Icon } />
+          <Codebox Component={ CustomColor } />
         </div>
-      </div>
-      <div className="flex flex-col w-1/3" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Max } />
+          <Codebox Component={ CustomWithIcon } defaultShowCode />
         </div>
       </div>
     </div>

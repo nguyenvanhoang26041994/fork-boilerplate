@@ -14,57 +14,57 @@ const Demo = () => {
   return (
     <Timeline>
       <Timeline.Item>
-        <Timeline.Dot>
+        <Timeline.Button>
           <Ban />
-        </Timeline.Dot>
+        </Timeline.Button>
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot>
+        <Timeline.Button>
           <Bell />
-        </Timeline.Dot>
+        </Timeline.Button>
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot>
+        <Timeline.Button>
           <BrandGithub />
-        </Timeline.Dot>
+        </Timeline.Button>
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot>
+        <Timeline.Button>
           <Tooltip top title="11:00 AM">
             <div>
               <CloudDownload />
             </div>
           </Tooltip>
-        </Timeline.Dot>
+        </Timeline.Button>
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot>
+        <Timeline.Button>
           <Badge.Label label="10:00 AM">
             <Camera />
           </Badge.Label>
-        </Timeline.Dot>
+        </Timeline.Button>
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot>
+        <Timeline.Button>
           <Badge.Label label="9:00 AM">
             <PictureInPicture />
           </Badge.Label>
-        </Timeline.Dot>
+        </Timeline.Button>
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>

@@ -6,19 +6,19 @@ const Demo = () => {
   return (
     <Timeline right>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>

@@ -1,5 +1,24 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Rater } from '@fork-ui/components/core';
+
+const RedStar = styled(Rater.Star)`
+  &.frater-item-light {
+    color: var(--red);
+  }
+`;
+
+const GreenStar = styled(Rater.Star)`
+  &.frater-item-light {
+    color: var(--green);
+  }
+`;
+
+const PurpleStar = styled(Rater.Star)`
+  &.frater-item-light {
+    color: purple;
+  }
+`;
 
 const Demo = () => {
   const [{
@@ -15,12 +34,12 @@ const Demo = () => {
 
   return (
     <Rater onMouseLeave={onMouseLeave}>
-      <Rater.Star
+      <RedStar
         isLight={isLight[0]}
         onMouseEnter={onMouseEnter[0]}
         onClick={onClick[0]}
       />
-      <Rater.Star
+      <GreenStar
         isLight={isLight[1]}
         onMouseEnter={onMouseEnter[1]}
         onClick={onClick[1]}
@@ -30,7 +49,7 @@ const Demo = () => {
         onMouseEnter={onMouseEnter[2]}
         onClick={onClick[2]}
       />
-      <Rater.Star
+      <PurpleStar
         isLight={isLight[3]}
         onMouseEnter={onMouseEnter[3]}
         onClick={onClick[3]}

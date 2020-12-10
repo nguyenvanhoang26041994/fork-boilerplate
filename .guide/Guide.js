@@ -36,7 +36,7 @@ import TooltipGuide from './_documents/Tooltip';
 import TypographyGuide from './_documents/Typography';
 
 const Guide = () => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = useCallback(() => setIsExpanded(prev => !prev), []);
   const toggleIsDark = useCallback(() => setIsDark(val => !val), [setIsDark]);

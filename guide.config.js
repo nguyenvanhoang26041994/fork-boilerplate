@@ -81,37 +81,13 @@ const leftSidebar = {
   Stepper: {
     icon: <ArrowRightCircle />
   },
-  Carousel: {
-    icon: <DeviceMobileRotated />
-  },
-  Menu: {
-    icon: <DotsVertical />,
-  },
   Rater: {
     icon: <StarHalf />,
-  },
-  Modal: {
-    icon: <LayoutBottombar />,
-  },
-  Drawer: {
-    icon: <LayoutSidebar />,
-  },
-  Image: {
-    icon: <Photo />,
-  },
-  SpeedDial: {
-    icon: <Dots />,
-  },
-  Flex: {
-    icon: <Template />,
   },
   Popover: {
     icon: <Point />,
   },
   Tooltip: {
-    icon: <Point />,
-  },
-  Breadcrumb: {
     icon: <Point />,
   },
   Confirm: {
@@ -125,6 +101,30 @@ const leftSidebar = {
   },
   Notification: {
     icon: <Bell />,
+  },
+  Modal: {
+    icon: <LayoutBottombar />,
+  },
+  Drawer: {
+    icon: <LayoutSidebar />,
+  },
+  Carousel: {
+    icon: <DeviceMobileRotated />
+  },
+  Menu: {
+    icon: <DotsVertical />,
+  },
+  Image: {
+    icon: <Photo />,
+  },
+  SpeedDial: {
+    icon: <Dots />,
+  },
+  Flex: {
+    icon: <Template />,
+  },
+  Breadcrumb: {
+    icon: <Point />,
   },
   Textbox: {
     icon: <Point />,

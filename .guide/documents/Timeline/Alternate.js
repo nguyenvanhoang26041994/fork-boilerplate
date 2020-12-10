@@ -7,47 +7,47 @@ const Demo = () => {
   return (
     <Timeline alternate>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot>
+        <Timeline.Button>
           <Badge.Label top label="9:00 AM">
             <PictureInPicture />
           </Badge.Label>
-        </Timeline.Dot>
+        </Timeline.Button>
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Dot />
+        <Timeline.Button />
         <Timeline.Content>
           <DemoContent2 />
         </Timeline.Content>
