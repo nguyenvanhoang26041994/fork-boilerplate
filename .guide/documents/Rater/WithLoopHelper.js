@@ -3,8 +3,8 @@ import { Rater } from '@fork-ui/components/core';
 
 const Demo = () => {
   const [raterProps, itemProps, helper] = Rater.useRater({
-    value: 2,
-    maxValue: 4,
+    index: 2,
+    maxIndex: 4,
   });
 
   return (
