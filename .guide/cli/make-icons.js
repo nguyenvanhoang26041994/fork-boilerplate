@@ -8,6 +8,10 @@ const rcNeumorphismRoot = path.resolve('fork-ui');
 const TablerIconTemplate = readFile(path.join(__dirname, '/templates/Icon/svg/tabler-icon.hbs'));
 const mapNumberChar = ['zero-', 'one-', 'two-', 'three-', 'four-', 'five-', 'six-', 'seven-', 'eight-', 'nine-'];
 
+const mapRestrictedNames = {
+  'infinity': 'infinity-icon'
+};
+
 function capitalizeFirstLetter(str) {
   let _str = str.replace(/^\d/, char => mapNumberChar[char]);
   return _str.split('-').map(__str => __str.charAt(0).toUpperCase() + __str.slice(1)).join('');
@@ -25,7 +29,11 @@ const makeTablerIcon = function(iconName) {
 
   str = str.replace('__INJECT__FLAG__', svg);
 
-  return Handlebars.compile(str)({ componentName: capitalizeFirstLetter(iconName), originalName: iconName })
+  const _iconName = mapRestrictedNames[iconName] || iconName;
+  return Handlebars.compile(str)({
+    componentName: capitalizeFirstLetter(_iconName),
+    originalName: _iconName
+  })
 };
 
 const makeTablerIcons = function() {
