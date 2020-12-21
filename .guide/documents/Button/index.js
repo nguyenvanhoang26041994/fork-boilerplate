@@ -11,7 +11,7 @@ import FluidGroupButton from './FluidGroupButton';
 import Color from './Color';
 import Disabled from './Disabled';
 import Custom from './Custom';
-import Ghost from './Ghost';
+import Bordered from './Bordered';
 
 export default () => {
   return (
@@ -21,13 +21,13 @@ export default () => {
           <Codebox Component={ Basic } defaultShowCode />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Ghost } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ WithIcon } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Color } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Bordered } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Disabled } />

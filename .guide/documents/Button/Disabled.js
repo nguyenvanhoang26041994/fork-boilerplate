@@ -8,7 +8,6 @@ const Demo = () => {
     <Wrapper>
       <Button disabled>Basic</Button>
       <Button disabled primary>Primary</Button>
-      <Button disabled success>Success</Button>
       <Button disabled danger>Danger</Button>
       <Button disabled circle icon={<Cast />} />
     </Wrapper>

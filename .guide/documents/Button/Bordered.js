@@ -5,8 +5,9 @@ import { Button } from '@fork-ui/components/core';
 const Demo = () => {
   return (
     <Wrapper>
-      <Button primary>Primary</Button>
-      <Button danger>Danger</Button>
+      <Button border="solid">Normal</Button>
+      <Button border="solid" primary>Primary</Button>
+      <Button border="dashed" danger>Danger</Button>
     </Wrapper>
   );
 };
