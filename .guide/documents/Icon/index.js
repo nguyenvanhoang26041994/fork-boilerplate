@@ -73,8 +73,8 @@ const IconBox = ({ Icon }) => {
   return (
     <IconBoxWrapper>
       {isCopied
-        ? <Check color="var(--primary)" fontSize="1.25rem" />
-        : <Icon fontSize="1.25rem" style={{ cursor: 'pointer' }} onClick={onClick} />
+        ? <Check color="var(--primary)" size="1.25rem" />
+        : <Icon size="1.25rem" style={{ cursor: 'pointer' }} onClick={onClick} />
       }
     </IconBoxWrapper>
   );

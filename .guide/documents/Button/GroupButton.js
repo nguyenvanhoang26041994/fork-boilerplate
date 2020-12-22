@@ -11,14 +11,14 @@ const Demo = () => {
         <Button icon={<Message />} />
         <Button icon={<Bell />} />
       </ButtonGroup>
-      <ButtonGroup primary>
-        <Button icon={<Power />} />
-        <Button icon={<Message />} />
-        <Button icon={<Bell />} />
+      <ButtonGroup>
+        <Button primary icon={<Power />} />
+        <Button primary icon={<Message />} />
+        <Button primary icon={<Bell />} />
       </ButtonGroup>
       <ButtonGroup danger>
-        <Button icon={<Power />} />
-        <Button icon={<Message />} />
+        <Button primary icon={<Power />} />
+        <Button danger icon={<Message />} />
         <Button icon={<Bell />} />
       </ButtonGroup>
     </Wrapper>

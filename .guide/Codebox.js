@@ -91,14 +91,17 @@ const Codebox = ({ className, defaultShowCode, Component, isDark, ...otherProps 
     <CodeboxWrapper className={className} id={Component.href} {...otherProps}>
       <CodeboxHeader>
         {Component.header}
-        <ButtonGroupStyled className="show-when-codebox-hover" color="ghost">
+        <ButtonGroupStyled>
           <Button
+            transparent
             icon={<ThumbUp />}
           />
           <Button
+            transparent
             icon={<Message2 />}
           />
           <Button
+            transparent
             icon={<Braces />}
             onClick={toggleShowCode}
             style={{

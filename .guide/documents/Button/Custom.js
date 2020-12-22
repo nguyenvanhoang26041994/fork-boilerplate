@@ -3,51 +3,23 @@ import styled from 'styled-components';
 import Wrapper from '../../shared/Wrapper';
 import { Button } from '@fork-ui/components/core';
 
-const PrimaryBorderedButton = styled(Button)`
-  color: var(--primary);
-  border-color: currentColor;
-  background-color: transparent;
+const SuccessButton = styled(Button)`
+  background-color: var(--green);
+  border-color: var(--green);
+  color: #fff;
 
-  &:hover,
-  &:focus {
-    color: var(--primary);
-  }
-`;
-
-const PrimaryDashedButton = styled(PrimaryBorderedButton)`
-  border-style: dashed;
-`;
-
-const DangerBorderedButton = styled(Button)`
-  color: var(--red);
-  border-color: currentColor;
-  background-color: transparent;
-
-  &:hover,
-  &:focus {
-    color: var(--red);
-    background-color: rgba(78, 4, 4, 0.4);
-  }
-`;
-
-const DangerDashedButton = styled(DangerBorderedButton)`
-  border-style: dashed;
-`;
-
-const SuccessBorderedButton = styled(Button)`
-  color: var(--green);
-  border-color: currentColor;
-  background-color: transparent;
-
-  &:hover,
-  &:focus {
+  &.fbtn-solid,
+  &.fbtn-dashed {
+    background-color: transparent;
     color: var(--green);
-    background-color: rgba(19, 88, 21, 0.4);
   }
-`;
 
-const SuccessDashedButton = styled(SuccessBorderedButton)`
-  border-style: dashed;
+  &:hover,
+  &:focus {
+    background-color: var(--green-hover);
+    border-color: var(--green-hover);
+    color: #fff;
+  }
 `;
 
 const GradientButton = styled(Button)`
@@ -66,12 +38,8 @@ const GradientButton = styled(Button)`
 
 const Demo = () => (
   <Wrapper>
-    <PrimaryBorderedButton>Bordered</PrimaryBorderedButton>
-    <PrimaryDashedButton>Dashed</PrimaryDashedButton>
-    <DangerBorderedButton>Danger</DangerBorderedButton>
-    <DangerDashedButton>Danger</DangerDashedButton>
-    <SuccessBorderedButton>Success</SuccessBorderedButton>
-    <SuccessDashedButton>Success</SuccessDashedButton>
+    <SuccessButton border="solid">Solid</SuccessButton>
+    <SuccessButton border="dashed">Dashed</SuccessButton>
     <GradientButton>Gradient</GradientButton>
   </Wrapper>
 );

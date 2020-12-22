@@ -5,9 +5,10 @@ import { Button } from '@fork-ui/components/core';
 const Demo = () => {
   return (
     <Wrapper>
-      <Button border="solid">Normal</Button>
+      <Button border="dashed">Normal</Button>
       <Button border="solid" primary>Primary</Button>
       <Button border="dashed" danger>Danger</Button>
+      <Button border="dashed" transparent>Transparent</Button>
     </Wrapper>
   );
 };

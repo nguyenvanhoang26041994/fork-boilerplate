@@ -1,6 +1,12 @@
 import React from 'react';
-import Wrapper from '../../shared/Wrapper';
+import styled from 'styled-components';
 import { Button } from '@fork-ui/components/core';
+
+const Wrapper = styled.div`
+  > * {
+    margin-right: 5px;
+  }
+`;
 
 const Demo = () => {
   return (
