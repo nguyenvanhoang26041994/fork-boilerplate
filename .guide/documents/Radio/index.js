@@ -3,7 +3,8 @@ import Codebox from '../../Codebox';
 
 import Basic from './Radio';
 import Controlled from './Controlled';
-import Custom from './Custom';
+import Color from './Color';
+import Size from './Size';
 
 export default () => {
   return (
@@ -15,10 +16,13 @@ export default () => {
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Controlled } />
         </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Color } />
+        </div>
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Custom } defaultShowCode />
+          <Codebox Component={ Size } defaultShowCode />
         </div>
       </div>
     </div>
