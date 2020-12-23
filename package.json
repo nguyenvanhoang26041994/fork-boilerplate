@@ -8,8 +8,8 @@
     "yarn": ">=1.16.0"
   },
   "scripts": {
-    "fork-ui:lint-css": "stylelint fork-ui/components/ButtonGroup/*.scss",
-    "fork-ui:lint-js": "eslint fork-ui/components/ButtonGroup/*.js",
+    "fork-ui:lint-css": "stylelint fork-ui/components/Checkbox/*.scss",
+    "fork-ui:lint-js": "eslint fork-ui/components/Checkbox/*.js",
 
     "lint": "eslint ./src --",
     "clean-dist": "rimraf \"dist\"",

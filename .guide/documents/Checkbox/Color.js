@@ -5,9 +5,10 @@ import { Checkbox } from '@fork-ui/components/core';
 const Demo = () => {
   return (
     <Wrapper>
-      <Checkbox defaultChecked />
-      <Checkbox defaultChecked size="2em" />
-      <Checkbox defaultChecked size="40px" />
+      <Checkbox color="pink" defaultChecked />
+      <Checkbox color="red" defaultChecked />
+      <Checkbox color="var(--green)" defaultChecked />
+      <Checkbox color="#ff5722" defaultChecked />
     </Wrapper>
   );
 };

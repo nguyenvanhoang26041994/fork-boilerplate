@@ -91,7 +91,7 @@ const Codebox = ({ className, defaultShowCode, Component, isDark, ...otherProps 
     <CodeboxWrapper className={className} id={Component.href} {...otherProps}>
       <CodeboxHeader>
         {Component.header}
-        <ButtonGroupStyled>
+        <ButtonGroupStyled className="show-when-codebox-hover">
           <Button
             transparent
             icon={<ThumbUp />}
