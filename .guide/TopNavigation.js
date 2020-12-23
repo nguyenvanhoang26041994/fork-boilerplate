@@ -40,17 +40,19 @@ const NavRight = styled.div`
 const SwitchButton = styled.div`
   display: flex;
   align-items: center;
-  background-color: var(--button--bg);
+  background-color: var(--btn-bg);
   border-radius: 999px;
   overflow: hidden;
 
   .fbtn {
     border-radius: 999px;
-    background-color: var(--button--bg);
+    background-color: var(--btn-bg);
+    border-color: var(--btn-bg);
 
     &:hover {
       color: var(--primary);
-      background-color: var(--button--bg);
+      background-color: var(--btn-bg);
+      border-color: var(--btn-bg);
     }
   }
 
@@ -59,6 +61,7 @@ const SwitchButton = styled.div`
   .f-selected:focus {
     color: #fff;
     background-color: var(--primary);
+    border-color: var(--primary);
   }
 `;
 

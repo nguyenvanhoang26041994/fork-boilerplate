@@ -8,8 +8,8 @@
     "yarn": ">=1.16.0"
   },
   "scripts": {
-    "fork-ui:lint-css": "stylelint fork-ui/components/Radio/*.scss",
-    "fork-ui:lint-js": "eslint fork-ui/components/Radio/*.js",
+    "fork-ui:lint-css": "stylelint fork-ui/components/Switch/*.scss",
+    "fork-ui:lint-js": "eslint fork-ui/components/Switch/*.js",
 
     "lint": "eslint ./src --",
     "clean-dist": "rimraf \"dist\"",

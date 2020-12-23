@@ -6,8 +6,10 @@ const Demo = () => {
   return (
     <Wrapper>
       <Switch defaultChecked />
-      <Switch defaultChecked size="1.5rem" />
       <Switch defaultChecked size="35px" />
+      <Switch defaultChecked size="50px" />
+      <Switch defaultChecked size="80px" />
+      <Switch defaultChecked size="80px" loading />
     </Wrapper>
   );
 };

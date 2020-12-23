@@ -6,7 +6,8 @@ import Controlled from './Controlled';
 import Loading from './Loading';
 import UnControlled from './UnControlled';
 import Disabled from './Disabled';
-import Custom from './Custom';
+import Size from './Size';
+import Color from './Color';
 import SwitchButton from './SwitchButton';
 import OtherSwitchButton from './OtherSwitchButton';
 
@@ -29,16 +30,19 @@ export default () => {
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ Loading } />
         </div>
+      </div>
+      <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Size } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Color } />
+        </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ SwitchButton } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ OtherSwitchButton } />
-        </div>
-      </div>
-      <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Custom } defaultShowCode />
         </div>
       </div>
     </div>

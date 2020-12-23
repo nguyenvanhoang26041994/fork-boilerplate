@@ -5,10 +5,9 @@ import { Switch } from '@fork-ui/components/core';
 const Demo = () => {
   return (
     <Wrapper>
-      <Switch defaultChecked />
-      <Switch />
-      <Switch disabled />
-      <Switch disabled defaultChecked />
+      <Switch color="var(--green)" defaultChecked />
+      <Switch color="red" defaultChecked />
+      <Switch color="#ff5722" loading defaultChecked />
     </Wrapper>
   );
 };
