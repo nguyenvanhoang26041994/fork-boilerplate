@@ -8,7 +8,7 @@ const ip = require('ip');
 
 const app = express();
 
-const webpackConfig = require('./webpack.config');
+const webpackConfig = require('./webpack/dev.config');
 const compiler = webpack(webpackConfig);
 const middleware = webpackDevMiddleware(compiler, {
   publicPath: webpackConfig.output.publicPath,

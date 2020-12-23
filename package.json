@@ -13,10 +13,12 @@
 
     "lint": "eslint ./src --",
     "clean-dist": "rimraf \"dist\"",
+    "clean-guide-dist": "rimraf \".guide/dist\"",
     "build": "yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/prod.config.js",
+    "build-guide": "yarn clean-guide-dist && yarn guide && cross-env NODE_ENV=production webpack --config .guide/webpack/prod.config.js",
     "build-core": "yarn clean-dist && cross-env NODE_ENV=production webpack --config webpack/core.config.js",
     "dev": "cross-env NODE_ENV=development node .dev-server",
-    "deploy": "yarn build && vercel --prod",
+    "deploy-guide": "yarn build-guide && vercel --prod",
     "make-icons": "node .guide/cli/make-icons",
     "guide": "node .guide/cli/make-guide",
     "start-guide": "yarn guide && node .guide/server.js",
