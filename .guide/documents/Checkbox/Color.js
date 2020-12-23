@@ -9,6 +9,7 @@ const Demo = () => {
       <Checkbox color="red" defaultChecked />
       <Checkbox color="var(--green)" defaultChecked />
       <Checkbox color="#ff5722" defaultChecked />
+      <Checkbox color="#ff5722" disabled defaultChecked />
     </Wrapper>
   );
 };
