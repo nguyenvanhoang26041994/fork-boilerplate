@@ -80,20 +80,12 @@ const TopNavigation = ({ toggleExpand, toggleFullScreen, isExpanded, isDark, tog
             <Button circle ghost icon={<Search />} className="ml-2" />
           </NavLeft>
           <NavRight>
-            <SwitchButton onClick={toggleIsDark} className="mx-5">
-              <Button className={{ 'f-selected': isDark }}>
-                {isDark
-                  ? <MoonStars />
-                  : <span>Dark</span>
-                }
-              </Button>
-              <Button className={{ 'f-selected': !isDark }}>
-                {!isDark
-                  ? <Bulb />
-                  : <span>Light</span>
-                }
-              </Button>
-            </SwitchButton>
+            <Button
+              primary={isDark}
+              circle
+              icon={isDark ? <Bulb /> : <MoonStars />}
+              onClick={toggleIsDark}
+            />
             <Button circle ghost icon={<Maximize />} onClick={toggleFullScreen} className="ml-2" />
           </NavRight>
         </MainTopNav>

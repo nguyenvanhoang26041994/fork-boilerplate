@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import styled from 'styled-components';
 
 import GuideContext from './GuideContext';
-
 import LeftSidebar from './LeftSidebar';
 import TopNavigation from './TopNavigation';
-import { ScrollUp } from '@fork-ui/components/core';
+import { ScrollUp, Button } from '@fork-ui/components/core';
+import { Maximize } from '@fork-ui/components/icons';
 
 import AvatarGuide from './_documents/Avatar';
 import BadgeGuide from './_documents/Badge';
@@ -35,11 +36,27 @@ import TimelineGuide from './_documents/Timeline';
 import TooltipGuide from './_documents/Tooltip';
 import TypographyGuide from './_documents/Typography';
 
+const ToggleFullScreen = ({ toggleFullScreen, className }) => (
+  <Button
+    className={className}
+    onClick={toggleFullScreen}
+    circle
+    icon={<Maximize />}
+  />
+);
+const ToogleFullScreenFloatingButton = styled(ToggleFullScreen)`
+  position: fixed;
+  bottom: 4rem;
+  right: 1rem;
+`;
+
 const Guide = () => {
   const [isDark, setIsDark] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isFullScreen, setIsFullScreen] = useState(false);
   const toggleExpand = useCallback(() => setIsExpanded(prev => !prev), []);
   const toggleIsDark = useCallback(() => setIsDark(val => !val), [setIsDark]);
+  const toggleFullScreen = useCallback(() => setIsFullScreen(val => !val), [setIsFullScreen]);
 
   useEffect(() => {
     if (isDark) {
@@ -55,13 +72,15 @@ const Guide = () => {
     <GuideContext.Provider value={{ isDark, setIsDark, toggleIsDark }}>
       <BrowserRouter>
         <div id="main-admin" className="flex">
-          <LeftSidebar isExpanded={isExpanded} />
+          <LeftSidebar isExpanded={isExpanded} style={{ display: isFullScreen ? 'none' : null }} />
           <div className="flex-1 flex flex-col">
             <TopNavigation
               toggleExpand={toggleExpand}
               isExpanded={isExpanded}
               isDark={isDark}
               toggleIsDark={toggleIsDark}
+              toggleFullScreen={toggleFullScreen}
+              style={{ display: isFullScreen ? 'none' : null }}
             />
             <div className="flex m-1">
               <div className="flex-1">
@@ -94,10 +113,11 @@ const Guide = () => {
                 <Route path="/document/tooltip" component={ TooltipGuide } />
                 <Route path="/document/typography" component={ TypographyGuide } />
                 <Route path="/" component={IconGuide} />
-                </Switch>
+              </Switch>
               </div>
             </div>
           </div>
+          {isFullScreen && <ToogleFullScreenFloatingButton toggleFullScreen={toggleFullScreen} />}
           <ScrollUp />
         </div>
       </BrowserRouter>
