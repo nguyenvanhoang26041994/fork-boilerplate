@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Wrapper from '../../shared/Wrapper';
-import { Switch, Button } from '@fork-ui/components/core';
+import { Button, useSwitch } from '@fork-ui/components/core';
 import { MoonStars, Bulb } from '@fork-ui/components/icons';
 
 const SwitchButton = styled.div`
@@ -35,7 +35,7 @@ const SwitchButton = styled.div`
 `;
 
 const Demo = () => {
-  const [{ checked, toggle }, { setChecked }] = Switch.useSwitch(false);
+  const [{ checked, toggle }, { setChecked }] = useSwitch(false);
 
   return (
     <Wrapper>

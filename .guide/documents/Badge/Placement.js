@@ -73,7 +73,7 @@ const Demo = () => {
           <FancyBox hidden className="m-5" />
           <FancyBox hidden className="m-5" />
           <FancyBox hidden className="m-5" />
-          <Badge.Counter count={7} placement="right-top" className="m-5" overlap={checked}>
+          <Badge.Counter count={7} rightTop className="m-5" overlap={checked}>
             <FancyBox>RT</FancyBox>
           </Badge.Counter>
         </Flex>
