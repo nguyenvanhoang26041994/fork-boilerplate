@@ -45,11 +45,11 @@ const leftSidebar = {
   Switch: {
     icon: <ToggleRight />,
   },
-  Avatar: {
-    icon: <User />,
-  },
   Badge: {
     icon: <Notification />,
+  },
+  Avatar: {
+    icon: <User />,
   },
   Typography: {
     icon: <Typography />,

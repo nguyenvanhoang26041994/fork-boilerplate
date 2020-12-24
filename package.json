@@ -8,8 +8,8 @@
     "yarn": ">=1.16.0"
   },
   "scripts": {
-    "fork-ui:lint-css": "stylelint fork-ui/components/Switch/*.scss",
-    "fork-ui:lint-js": "eslint fork-ui/components/Switch/*.js",
+    "fork-ui:lint-css": "stylelint fork-ui/components/Badge/*.scss",
+    "fork-ui:lint-js": "eslint fork-ui/components/Badge/*.js",
 
     "lint": "eslint ./src --",
     "clean-dist": "rimraf \"dist\"",

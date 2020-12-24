@@ -19,7 +19,7 @@ const FancyBox = ({
       width: size,
       visibility: hidden ? 'hidden' : null,
       borderRadius: circle ? '100rem' : '0.5rem',
-      backgroundColor: 'var(--secondary-bg)',
+      backgroundColor: 'var(--btn-bg)',
       ...style
     }}
   >
