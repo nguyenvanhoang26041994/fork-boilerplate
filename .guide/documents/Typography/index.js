@@ -4,6 +4,7 @@ import Codebox from '../../Codebox';
 import Typography from './Typography';
 import Header from './Header';
 import Span from './Span';
+import Color from './Color';
 
 export default () => {
   return (
@@ -18,7 +19,10 @@ export default () => {
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Span } defaultShowCode />
+          <Codebox Component={ Span } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Color } />
         </div>
       </div>
     </div>
