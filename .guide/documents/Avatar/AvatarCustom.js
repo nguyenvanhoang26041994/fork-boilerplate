@@ -13,7 +13,7 @@ const PinkAvatar = styled(Avatar)`
   cursor: pointer;
 
   &:hover {
-    background-color: var(--avatar--bg);
+    background-color: var(--avatar-bg);
     color: pink;
   }
 `;
