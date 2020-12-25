@@ -8,8 +8,8 @@
     "yarn": ">=1.16.0"
   },
   "scripts": {
-    "fork-ui:lint-css": "stylelint fork-ui/components/Avatar/*.scss",
-    "fork-ui:lint-js": "eslint fork-ui/components/Avatar/*.js",
+    "fork-ui:lint-css": "stylelint fork-ui/components/AvatarGroup/*.scss",
+    "fork-ui:lint-js": "eslint fork-ui/components/AvatarGroup/*.js",
 
     "lint": "eslint ./src --",
     "clean-dist": "rimraf \"dist\"",
