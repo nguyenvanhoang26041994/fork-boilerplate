@@ -8,8 +8,8 @@
     "yarn": ">=1.16.0"
   },
   "scripts": {
-    "fork-ui:lint-css": "stylelint fork-ui/components/Skeleton/*.scss",
-    "fork-ui:lint-js": "eslint fork-ui/components/Skeleton/*.js",
+    "fork-ui:lint-css": "stylelint fork-ui/components/Typography/*.scss",
+    "fork-ui:lint-js": "eslint fork-ui/components/Typography/*.js",
 
     "lint": "eslint ./src --",
     "clean-dist": "rimraf \"dist\"",
