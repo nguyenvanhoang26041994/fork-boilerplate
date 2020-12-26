@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import { Skeleton, Flex } from '@fork-ui/components/core';
 
 const Demo = () => {

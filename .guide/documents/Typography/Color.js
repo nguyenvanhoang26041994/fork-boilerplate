@@ -14,7 +14,7 @@ const Demo = () => {
       <br />
       <Typo color="red">{typo}</Typo>
       <br />
-      <Typo color="var(--txt-color-low-emphasis)">{typo}</Typo>
+      <Typo color="var(--color-low-emphasis)">{typo}</Typo>
       <br />
       <Typo color="var(--primary)">{typo}</Typo>
     </Flex>
