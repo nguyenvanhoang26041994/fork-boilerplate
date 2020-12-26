@@ -7,7 +7,7 @@ const Demo = () => {
     <Wrapper span="3rem">
       <Loader.Dots />
       <Loader.Dots wave />
-      <Loader.Spinner/>
+      <Loader.Spinner />
     </Wrapper>
   );
 };
