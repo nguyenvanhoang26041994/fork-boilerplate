@@ -8,29 +8,29 @@ import {
 } from '@fork-ui/components/core';
 
 const Demo = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [pending, setPending] = useState(false);
+  const [completed, setCompleted] = useState(false);
   const [percent, setPercent] = useSimulateProgress({
-    isLoading: isLoading,
-    isLoaded: isLoaded,
+    pending: pending,
+    completed: completed,
   });
 
   const onStartLoading = useCallback(() => {
-    setIsLoading(true);
-    setIsLoaded(false);
+    setPending(true);
+    setCompleted(false);
     setPercent(0);
 
     setTimeout(() => {
-      setIsLoading(false);
-      setIsLoaded(true);
+      setPending(false);
+      setCompleted(true);
     }, 2000);
-  }, [setIsLoading, setIsLoaded, setPercent]);
+  }, [setPending, setCompleted, setPercent]);
 
   const onResetSimulate = useCallback(() => {
-    setIsLoading(false);
-    setIsLoaded(false);
+    setPending(false);
+    setCompleted(false);
     setPercent(0);
-  }, [setIsLoading, setIsLoaded, setPercent]);
+  }, [setPending, setCompleted, setPercent]);
 
   return (
     <Flex col span="full">
@@ -39,11 +39,11 @@ const Demo = () => {
           {Math.floor(percent)}
           <span>%</span>
         </Progress.Circle>
-        <Progress.Linear percent={percent} animated={!isLoaded} />
+        <Progress.Linear percent={percent} animated={!completed} />
       </Flex>
       <ButtonGroup className="mt-10">
-        <Button onClick={onStartLoading} disabled={isLoading}>Start Loading</Button>
-        <Button onClick={onResetSimulate} disabled={isLoading}>Reset</Button>
+        <Button onClick={onStartLoading} disabled={pending}>Start Loading</Button>
+        <Button onClick={onResetSimulate} disabled={pending}>Reset</Button>
       </ButtonGroup>
     </Flex>
   );
