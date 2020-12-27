@@ -8,8 +8,8 @@
     "yarn": ">=1.16.0"
   },
   "scripts": {
-    "fork-ui:lint-css": "stylelint fork-ui/components/Loader/*.scss",
-    "fork-ui:lint-js": "eslint fork-ui/components/Loader/*.js",
+    "fork-ui:lint-css": "stylelint fork-ui/components/Progress/*.scss",
+    "fork-ui:lint-js": "eslint fork-ui/components/Progress/*.js",
 
     "lint": "eslint ./src --",
     "clean-dist": "rimraf \"dist\"",

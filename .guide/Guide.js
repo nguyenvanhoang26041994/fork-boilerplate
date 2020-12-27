@@ -21,6 +21,7 @@ import FormGuide from './_documents/Form';
 import IconGuide from './_documents/Icon';
 import ImageGuide from './_documents/Image';
 import LoaderGuide from './_documents/Loader';
+import ProgressGuide from './_documents/Progress';
 import MenuGuide from './_documents/Menu';
 import ModalGuide from './_documents/Modal';
 import PaginationGuide from './_documents/Pagination';
@@ -98,6 +99,7 @@ const Guide = () => {
                 <Route path="/document/icon" component={ IconGuide } />
                 <Route path="/document/image" component={ ImageGuide } />
                 <Route path="/document/loader" component={ LoaderGuide } />
+                <Route path="/document/progress" component={ ProgressGuide } />
                 <Route path="/document/menu" component={ MenuGuide } />
                 <Route path="/document/modal" component={ ModalGuide } />
                 <Route path="/document/pagination" component={ PaginationGuide } />

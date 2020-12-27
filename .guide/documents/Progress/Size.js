@@ -1,12 +1,26 @@
 import React  from 'react';
 import { Progress } from '@fork-ui/components/core';
+import Wrapper from '../../shared/Wrapper';
 
 const Demo = () => {
   return (
-    <div className="flex items-center">
-      <Progress.Circle percent={0.27} r={30} className="mr-3" />
-      <Progress.Circle percent={0.77} r={60} className="mr-3" />
-    </div>
+    <Wrapper>
+      <Progress.Circle
+        percent={86}
+        size={50}
+      />
+      <Progress.Circle
+        percent={86}
+        size={50}
+        strokeWidth={6}
+      />
+      <Progress.Circle percent={77} />
+      <Progress.Circle
+        percent={89}
+        size={250}
+        strokeWidth={6}
+      />
+    </Wrapper>
   );
 };
 

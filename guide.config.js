@@ -26,6 +26,7 @@ import {
   Bookmark,
   StarHalf,
   Clock,
+  Loader,
   DeviceMobileRotated,
 } from '@fork-ui/components/icons';
 
@@ -59,6 +60,9 @@ const leftSidebar = {
   },
   Loader: {
     icon: <LoaderQuarter />,
+  },
+  Progress: {
+    icon: <Loader />,
   },
   // Divider: {
   //   icon: <Line />,
@@ -133,9 +137,6 @@ const leftSidebar = {
     icon: <Point />,
   },
   Textarea: {
-    icon: <Point />,
-  },
-  Progress: {
     icon: <Point />,
   },
   Staff: {
