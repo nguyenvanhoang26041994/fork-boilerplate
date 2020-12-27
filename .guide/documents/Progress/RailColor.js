@@ -7,7 +7,7 @@ const Demo = () => {
     <Wrapper>
       <Progress.Circle
         percent={32}
-        railColor={false}
+        railColor="transparent"
       />
       <Progress.Circle
         percent={32}
