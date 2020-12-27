@@ -11,6 +11,7 @@ import Linear from './Linear';
 import LinearColor from './LinearColor';
 import LinearSize from './LinearSize';
 import AnimatedLinear from './AnimatedLinear';
+import SimulateProgress from './SimulateProgress';
 
 export default () => {
   return (
@@ -33,8 +34,11 @@ export default () => {
         </div>
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
+      <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ SimulateProgress } defaultShowCode />
+        </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Custom } defaultShowCode />
+          <Codebox Component={ Custom } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ CustomBackground } />
