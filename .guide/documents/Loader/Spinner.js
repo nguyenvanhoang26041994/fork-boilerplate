@@ -8,7 +8,7 @@ const Demo = () => {
       <Loader.Spinner />
       <Loader.Spinner color="var(--red)" />
       <Loader.Spinner color="var(--green)" />
-      <Loader.Spinner color="pink" size="2em" />
+      <Loader.Spinner color="pink" size={32} />
     </Wrapper>
   );
 };

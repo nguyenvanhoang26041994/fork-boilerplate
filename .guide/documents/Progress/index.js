@@ -7,6 +7,7 @@ import RailColor from './RailColor';
 import Size from './Size';
 import Custom from './Custom';
 import CustomBackground from './CustomBackground';
+import Linear from './Linear';
 
 export default () => {
   return (
@@ -19,10 +20,7 @@ export default () => {
           <Codebox Component={ Size } />
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ Color } />
-        </div>
-        <div className="w-full" style={ { paddingBottom: '1px' } }>
-          <Codebox Component={ RailColor } />
+          <Codebox Component={ Linear } />
         </div>
       </div>
       <div className="flex flex-col w-1/2" style={ { paddingLeft: '1px' } }>
@@ -31,6 +29,12 @@ export default () => {
         </div>
         <div className="w-full" style={ { paddingBottom: '1px' } }>
           <Codebox Component={ CustomBackground } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ Color } />
+        </div>
+        <div className="w-full" style={ { paddingBottom: '1px' } }>
+          <Codebox Component={ RailColor } />
         </div>
       </div>
     </div>

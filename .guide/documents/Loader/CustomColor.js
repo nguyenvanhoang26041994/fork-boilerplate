@@ -67,17 +67,19 @@ const spinnerainbow = keyframes`
 `;
 
 const SpinnerRainbowLoader = styled(Loader.Spinner)`
-  animation-name: ${spinnerainbow};
+  .floader-spinner-spin {
+    animation-name: ${spinnerainbow};
+  }
 `;
 // NOTE ___CSS_0___ is ${spinnerainbow}, this bug from lib we use to demo code
 
 const Demo = () => {
   return (
     <Wrapper span="2em">
-      <MixedColor size="2em" />
-      <RainbowLoader size="2em" />
-      <WaveRainbowLoader wave size="2em" />
-      <SpinnerRainbowLoader size="2em" />
+      <MixedColor size={32} />
+      <RainbowLoader size={32} />
+      <WaveRainbowLoader wave size={32} />
+      <SpinnerRainbowLoader size={32} />
     </Wrapper>
   );
 };

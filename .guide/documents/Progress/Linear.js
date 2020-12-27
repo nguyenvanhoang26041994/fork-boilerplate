@@ -28,10 +28,7 @@ const Demo = () => {
 
   return (
     <Flex col span="full">
-      <Progress.Circle percent={percent}>
-        {Math.floor(percent)}
-        <span>%</span>
-      </Progress.Circle>
+      <Progress.Linear percent={percent} />
       <ButtonGroup className="mt-10">
         <Button icon={<Minus />} onClick={onMinus} />
         <Button onClick={() =>setPercent(10)}>10%</Button>

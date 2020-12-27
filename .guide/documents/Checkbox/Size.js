@@ -6,8 +6,8 @@ const Demo = () => {
   return (
     <Wrapper>
       <Checkbox defaultChecked />
-      <Checkbox defaultChecked size="2em" />
-      <Checkbox defaultChecked size="40px" />
+      <Checkbox defaultChecked size={30} />
+      <Checkbox defaultChecked size={40} />
     </Wrapper>
   );
 };

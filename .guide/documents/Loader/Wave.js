@@ -8,7 +8,7 @@ const Demo = () => {
       <Loader.Dots wave />
       <Loader.Dots wave color="var(--red)" />
       <Loader.Dots wave color="var(--green)" />
-      <Loader.Dots wave color="pink" size="2em" />
+      <Loader.Dots wave color="pink" size={32} />
     </Wrapper>
   );
 };
