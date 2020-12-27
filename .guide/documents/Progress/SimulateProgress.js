@@ -8,29 +8,24 @@ import {
 } from '@fork-ui/components/core';
 
 const Demo = () => {
-  const [pending, setPending] = useState(false);
-  const [completed, setCompleted] = useState(false);
+  const [status, setStatus] = useState();
   const [percent, setPercent] = useSimulateProgress({
-    pending: pending,
-    completed: completed,
+    status: status,
   });
 
   const onStartLoading = useCallback(() => {
-    setPending(true);
-    setCompleted(false);
+    setStatus('loading');
     setPercent(0);
 
     setTimeout(() => {
-      setPending(false);
-      setCompleted(true);
+      setStatus('completed');
     }, 2000);
-  }, [setPending, setCompleted, setPercent]);
+  }, [setStatus, setPercent]);
 
   const onResetSimulate = useCallback(() => {
-    setPending(false);
-    setCompleted(false);
+    setStatus('completed');
     setPercent(0);
-  }, [setPending, setCompleted, setPercent]);
+  }, [setStatus, setPercent]);
 
   return (
     <Flex col span="full">
@@ -39,11 +34,11 @@ const Demo = () => {
           {Math.floor(percent)}
           <span>%</span>
         </Progress.Circle>
-        <Progress.Linear percent={percent} animated={!completed} />
+        <Progress.Linear percent={percent} animated={status === 'loading'} />
       </Flex>
       <ButtonGroup className="mt-10">
-        <Button onClick={onStartLoading} disabled={pending}>Start Loading</Button>
-        <Button onClick={onResetSimulate} disabled={pending}>Reset</Button>
+        <Button onClick={onStartLoading} disabled={status === 'loading'}>Start Loading</Button>
+        <Button onClick={onResetSimulate} disabled={status === 'loading'}>Reset</Button>
       </ButtonGroup>
     </Flex>
   );
