@@ -11,7 +11,7 @@ const Demo = () => {
     <Wrapper span="2rem">
       <PureBadge
         overlap
-        bottomRight
+        bottomEnd
         badge={(
           <Avatar
             style={{ border: '2px solid var(--bg)' }}
@@ -26,7 +26,7 @@ const Demo = () => {
         <FancyBox circle size="50px" />
       </PureBadge>
       <PureBadge
-        topRight
+        topEnd
         badge={<Stars className="fbadge-ui" color="var(--primary)" />}
       >
         <FancyBox size="50px" />

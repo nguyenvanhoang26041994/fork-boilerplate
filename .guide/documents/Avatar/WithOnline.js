@@ -6,10 +6,10 @@ import { Avatar, Badge } from '@fork-ui/components/core';
 const Demo = () => {
   return (
     <Wrapper>
-      <Badge.Dot color="#0df316" overlap bottomRight>
+      <Badge.Dot color="#0df316" overlap bottomEnd>
         <Avatar src={avatarLink}>H</Avatar>
       </Badge.Dot>
-      <Badge.Dot color="var(--primary)" overlap bottomRight>
+      <Badge.Dot color="var(--primary)" overlap bottomEnd>
         <Avatar>H</Avatar>
       </Badge.Dot>
     </Wrapper>

@@ -50,68 +50,132 @@ const Demo = () => {
   const [{ checked, toggle }] = Switch.useSwitch(false);
 
   return (
-    <FlexStyled span="full" col items="center" className={cn({ 'fancy-box-circle': checked })}>
+    <FlexStyled
+      span="full"
+      col items="center"
+      className={cn({ 'fancy-box-circle': checked })}
+    >
       <Flex col span="full" items="center">
         <Flex>
           <FancyBox hidden className="m-5" />
-          <Badge.Counter count={7} topLeft className="m-5" overlap={checked}>
-            <FancyBox>TL</FancyBox>
+          <Badge.Counter
+            count={7}
+            topStart
+            className="m-5"
+            overlap={checked}
+          >
+            <FancyBox>TS</FancyBox>
           </Badge.Counter>
-          <Badge.Counter count={7} top className="m-5" overlap={checked}>
+          <Badge.Counter
+            count={7}
+            top
+            className="m-5"
+            overlap={checked}
+          >
             <FancyBox>T</FancyBox>
           </Badge.Counter>
-          <Badge.Counter count={7} topRight className="m-5" overlap={checked}>
-            <FancyBox>TR</FancyBox>
+          <Badge.Counter
+            count={7}
+            topEnd
+            className="m-5"
+            overlap={checked}
+          >
+            <FancyBox>TE</FancyBox>
           </Badge.Counter>
           <FancyBox hidden className="m-5" />
         </Flex>
 
         <Flex>
-          <Badge.Counter count={7} leftTop className="m-5" overlap={checked}>
-            <FancyBox>LT</FancyBox>
+          <Badge.Counter
+            count={7}
+            leftStart
+            className="m-5"
+            overlap={checked}
+          >
+            <FancyBox>LS</FancyBox>
           </Badge.Counter>
           <FancyBox hidden className="m-5" />
           <FancyBox hidden className="m-5" />
           <FancyBox hidden className="m-5" />
-          <Badge.Counter count={7} rightTop className="m-5" overlap={checked}>
-            <FancyBox>RT</FancyBox>
+          <Badge.Counter
+            count={7}
+            rightStart
+            className="m-5"
+            overlap={checked}
+          >
+            <FancyBox>RS</FancyBox>
           </Badge.Counter>
         </Flex>
 
         <Flex>
-          <Badge.Counter count={7} left className="m-5" overlap={checked}>
+          <Badge.Counter
+            count={7}
+            left
+            className="m-5"
+            overlap={checked}
+          >
             <FancyBox>L</FancyBox>
           </Badge.Counter>
           <FancyBox hidden className="m-5" />
           <FancyBox hidden className="m-5" />
           <FancyBox hidden className="m-5" />
-          <Badge.Counter count={7} right className="m-5" overlap={checked}>
+          <Badge.Counter
+            count={7}
+            right
+            className="m-5"
+            overlap={checked}
+          >
             <FancyBox>R</FancyBox>
           </Badge.Counter>
         </Flex>
 
         <Flex>
-          <Badge.Counter count={7} leftBottom className="m-5" overlap={checked}>
-            <FancyBox>LB</FancyBox>
+          <Badge.Counter
+            count={7}
+            leftEnd
+            className="m-5"
+            overlap={checked}
+          >
+            <FancyBox>LE</FancyBox>
           </Badge.Counter>
           <FancyBox hidden className="m-5" />
           <FancyBox hidden className="m-5" />
           <FancyBox hidden className="m-5" />
-          <Badge.Counter count={7} rightBottom className="m-5" overlap={checked}>
-            <FancyBox>RB</FancyBox>
+          <Badge.Counter
+            count={7}
+            rightEnd
+            className="m-5"
+            overlap={checked}
+          >
+            <FancyBox>RE</FancyBox>
           </Badge.Counter>
         </Flex>
 
         <Flex>
           <FancyBox hidden className="m-5" />
-          <Badge.Counter count={7} bottomLeft className="m-5" overlap={checked}>
-            <FancyBox>BL</FancyBox>
+          <Badge.Counter
+            count={7}
+            bottomStart
+            className="m-5"
+            overlap={checked}
+          >
+            <FancyBox>BS</FancyBox>
           </Badge.Counter>
-          <Badge.Counter count={7} bottom className="m-5" overlap={checked}>
+          <Badge.Counter
+            count={7}
+            bottom
+            className="m-5"
+            overlap={checked}
+          >
             <FancyBox>B</FancyBox>
           </Badge.Counter>
-          <Badge.Counter count={7} bottomRight className="m-5" overlap={checked}>
-            <FancyBox>BR</FancyBox>
+          <Badge.Counter
+            count={7}
+            bottomEnd
+            className="m-5"
+            overlap={checked}
+          >
+            <FancyBox>BE</FancyBox>
           </Badge.Counter>
           <FancyBox hidden className="m-5" />
         </Flex>
