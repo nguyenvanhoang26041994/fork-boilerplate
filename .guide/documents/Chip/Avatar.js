@@ -7,7 +7,7 @@ const Demo = () => {
   return (
     <Wrapper>
       <Chip
-        avatar={<Avatar src={avatarLink} square>S</Avatar>}
+        avatar={<Avatar square>S</Avatar>}
       >
         Slack
       </Chip>

@@ -5,9 +5,9 @@ import { Avatar } from '@fork-ui/components/core';
 const Demo = () => {
   return (
     <Wrapper>
-      <Avatar size="1rem">SM</Avatar>
-      <Avatar size="20px">MD</Avatar>
-      <Avatar size="25px">LG</Avatar>
+      <Avatar size={40}>SM</Avatar>
+      <Avatar size={70}>MD</Avatar>
+      <Avatar size={100}>LG</Avatar>
     </Wrapper>
   );
 };

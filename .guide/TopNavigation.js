@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from '@fork-ui/components/core';
+import { Button, Tooltip } from '@fork-ui/components/core';
 import { IndentDecrease, IndentIncrease, Search, Maximize, MoonStars, Bulb } from '@fork-ui/components/icons';
 
 import GuideContext from './GuideContext';
@@ -80,12 +80,14 @@ const TopNavigation = ({ toggleExpand, toggleFullScreen, isExpanded, isDark, tog
             <Button circle ghost icon={<Search />} className="ml-2" />
           </NavLeft>
           <NavRight>
-            <Button
-              primary={isDark}
-              circle
-              icon={isDark ? <Bulb /> : <MoonStars />}
-              onClick={toggleIsDark}
-            />
+            <Tooltip title="Toggle Darkmode">
+              <Button
+                primary={isDark}
+                circle
+                icon={isDark ? <Bulb /> : <MoonStars />}
+                onClick={toggleIsDark}
+              />
+            </Tooltip>
             <Button circle ghost icon={<Maximize />} onClick={toggleFullScreen} className="ml-2" />
           </NavRight>
         </MainTopNav>

@@ -19,10 +19,9 @@ const PinkAvatar = styled(Avatar)`
 `;
 
 const StyledAvatarGroup = styled(AvatarGroup)`
-  font-size: 0.9em;
   position: relative;
-  width: 4.7em;
-  height: 4.7em;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
 
   > * {
@@ -51,10 +50,9 @@ const TeamAvatar = () => (
 );
 
 const StyledAvatarGroup2 = styled(AvatarGroup)`
-  font-size: 0.9em;
   position: relative;
-  width: 5em;
-  height: 5.5em;
+  width: 65px;
+  height: 71px;
   cursor: pointer;
 
   > * {

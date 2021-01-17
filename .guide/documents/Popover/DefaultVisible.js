@@ -1,31 +1,19 @@
 import React from 'react';
-import { Button, Popover, Stepper } from '@fork-ui/components/core';
+import { Button, Popover } from '@fork-ui/components/core';
 
-const StepperDemo = () => {
-  return (
-    <div className="p-2">
-      <Stepper
-        activeStep={3}
-        style={{
-          width: '400px'
-        }}
-      >
-        <Stepper.Step title="Ordered" />
-        <Stepper.Step title="Prepared" />
-        <Stepper.Step title="Shiped" />
-        <Stepper.Step title="Completed" />
-      </Stepper>
-    </div>
-  );
-};
+import IconStepper from '../Stepper/Icon';
+
+const OverlayContent = () => (
+  <div className="p-5">
+    <IconStepper />
+  </div>
+);
+
 
 const Demo = () => {
   return (
     <div className="flex">
-      <Popover
-        overlay={<StepperDemo />}
-        defaultVisible
-      >
+      <Popover overlay={<OverlayContent />} showOnCreate>
         <Button className="mr-2">Click</Button>
       </Popover>
     </div>

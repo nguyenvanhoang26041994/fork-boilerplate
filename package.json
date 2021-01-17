@@ -8,9 +8,8 @@
     "yarn": ">=1.16.0"
   },
   "scripts": {
-    "fork-ui:lint-css": "stylelint fork-ui/components/Progress/*.scss",
-    "fork-ui:lint-js": "eslint fork-ui/components/Progress/*.js",
-
+    "fork-ui:lint-css": "stylelint fork-ui/components/**/*.scss",
+    "fork-ui:lint-js": "eslint fork-ui/components/*.js",
     "lint": "eslint ./src --",
     "clean-dist": "rimraf \"dist\"",
     "clean-guide-dist": "rimraf \".guide/dist\"",
@@ -42,6 +41,7 @@
   },
   "homepage": "https://github.com/nguyenvanhoang26041994/fork-boilerplate#readme",
   "dependencies": {
+    "@tippyjs/react": "^4.2.0",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
     "markdown": "^0.5.0",
@@ -54,6 +54,7 @@
     "react-syntax-highlighter": "^12.2.1",
     "resize-observer-polyfill": "^1.5.1",
     "styled-components": "^5.1.0",
+    "tippy.js": "^6.2.7",
     "workbox-window": "^4.3.1",
     "yarn": "^1.22.4"
   },

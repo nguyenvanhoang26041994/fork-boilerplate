@@ -6,64 +6,64 @@ const Demo = () => {
     <div className="flex flex-col w-full items-center">
       <div className="flex">
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
-        <Tooltip topLeft title="top-left">
-          <Button className="m-2" style={{ width: '3em' }}>TL</Button>
+        <Tooltip topStart title="top-start">
+          <Button style={{ width: '3em' }} className="m-2">TL</Button>
         </Tooltip>
         <Tooltip top title="top">
-          <Button className="m-2" style={{ width: '3em' }}>T</Button>
+          <Button style={{ width: '3em' }} className="m-2">T</Button>
         </Tooltip>
-        <Tooltip topRight title="top-right">
-          <Button className="m-2" style={{ width: '3em' }}>TR</Button>
+        <Tooltip topEnd title="top-end">
+          <Button style={{ width: '3em' }} className="m-2">TR</Button>
         </Tooltip>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
       </div>
 
       <div className="flex">
-        <Tooltip leftTop title="left-top">
-          <Button className="m-2" style={{ width: '3em' }}>LT</Button>
+        <Tooltip leftStart title="left-start">
+          <Button style={{ width: '3em' }} className="m-2">LT</Button>
         </Tooltip>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
-        <Tooltip rightTop title="right-top">
-          <Button className="m-2" style={{ width: '3em' }}>RT</Button>
+        <Tooltip rightStart title="right-start">
+          <Button style={{ width: '3em' }} className="m-2">RT</Button>
         </Tooltip>
       </div>
 
       <div className="flex">
         <Tooltip left title="left">
-          <Button className="m-2" style={{ width: '3em' }}>L</Button>
+          <Button style={{ width: '3em' }} className="m-2">L</Button>
         </Tooltip>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Tooltip right title="right">
-          <Button className="m-2" style={{ width: '3em' }}>R</Button>
+          <Button style={{ width: '3em' }} className="m-2">R</Button>
         </Tooltip>
       </div>
 
       <div className="flex">
-        <Tooltip leftBottom title="left-bottom">
-          <Button className="m-2" style={{ width: '3em' }}>LB</Button>
+        <Tooltip leftEnd title="left-end">
+          <Button style={{ width: '3em' }} className="m-2">LB</Button>
         </Tooltip>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
-        <Tooltip rightBottom title="right-bottom">
-          <Button className="m-2" style={{ width: '3em' }}>RB</Button>
+        <Tooltip rightEnd title="right-end">
+          <Button style={{ width: '3em' }} className="m-2">RB</Button>
         </Tooltip>
       </div>
 
       <div className="flex">
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
-        <Tooltip bottomLeft title="bottom-left">
-          <Button className="m-2" style={{ width: '3em' }}>BL</Button>
+        <Tooltip bottomStart title="bottom-start">
+          <Button style={{ width: '3em' }} className="m-2">BL</Button>
         </Tooltip>
         <Tooltip bottom title="bottom">
-          <Button className="m-2" style={{ width: '3em' }}>B</Button>
+          <Button style={{ width: '3em' }} className="m-2">B</Button>
         </Tooltip>
-        <Tooltip bottomRight title="bottom-right">
-          <Button className="m-2" style={{ width: '3em' }}>BR</Button>
+        <Tooltip bottomEnd title="bottom-end">
+          <Button style={{ width: '3em' }} className="m-2">BR</Button>
         </Tooltip>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
       </div>
