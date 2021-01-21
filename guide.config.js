@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  AlertCircle,
   Notification,
   Template,
   GridDots,
@@ -28,6 +29,10 @@ import {
   Clock,
   Loader,
   DeviceMobileRotated,
+  Message2,
+  Message,
+  QuestionMark,
+  Help,
 } from '@fork-ui/components/icons';
 
 const leftSidebar = {
@@ -89,19 +94,19 @@ const leftSidebar = {
     icon: <StarHalf />,
   },
   Popover: {
-    icon: <Point />,
+    icon: <Message />,
   },
   Tooltip: {
-    icon: <Point />,
+    icon: <Message2 />,
   },
   Confirm: {
-    icon: <Point />,
+    icon: <QuestionMark />,
   },
   Popconfirm: {
-    icon: <Point />,
+    icon: <Help />,
   },
   Alert: {
-    icon: <Point />,
+    icon: <AlertCircle />,
   },
   Notification: {
     icon: <Bell />,

@@ -1,21 +1,32 @@
-import React, { useState, useCallback } from 'react';
-import { Button, Modal } from '@fork-ui/components/core';
+import React from 'react';
+import { Button, Modal, useModal } from '@fork-ui/components/core';
+import { X } from '@fork-ui/components/icons';
+
+import VerticalStepper from '../Stepper/Vertical';
 
 const Demo = () => {
-  const [open, setOpen] = useState();
-
-  const onClose = useCallback(() => setOpen(false), []);
-  const onOpen = useCallback(() => setOpen(true), []);
+  const [{ open, show, hide }] = useModal(false);
 
   return (
     <div className="flex">
-      <Modal open={open} onClose={onClose}>
-        <Modal.Header>Modal Title</Modal.Header>
+      <Modal open={open}>
+        <Modal.Header>
+          <Modal.HeaderTitle>MODAL HEADER TITLE</Modal.HeaderTitle>
+          <Modal.HeaderSupportButtons>
+            <Button circle transparent icon={<X />} onClick={hide} />
+          </Modal.HeaderSupportButtons>
+        </Modal.Header>
         <Modal.Body>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          <VerticalStepper />
         </Modal.Body>
+        <Modal.Footer>
+          <Button primary onClick={hide} className="mr-2">
+            Next
+          </Button>
+          <Button onClick={hide}>Close</Button>
+        </Modal.Footer>
       </Modal>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button onClick={show}>Open Modal</Button>
     </div>
   );
 };

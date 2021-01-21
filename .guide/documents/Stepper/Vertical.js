@@ -73,7 +73,7 @@ const Demo = () => {
   });
 
   return (
-    <Stepper vertical>
+    <Stepper vertical style={{ minWidth: '430px' }}>
       <Stepper.Step status={statuses[0]}>
         <Stepper.Button>1</Stepper.Button>
         <Stepper.Content>

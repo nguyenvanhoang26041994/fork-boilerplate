@@ -1,26 +1,23 @@
-import React, { useState, useCallback } from 'react';
-import { Button, Confirm } from '@fork-ui/components/core';
+import React from 'react';
+import { Button, Confirm, useModal } from '@fork-ui/components/core';
+
+import IconStepper from '../Stepper/Icon';
 
 const Demo = () => {
-  const [open, setOpen] = useState();
-
-  const onCancel = useCallback(() => console.log('CANCEL'), []);
-  const onClose = useCallback(() => setOpen(false), []);
-  const onOk = useCallback(() => console.log('OK'), []);
-  const onOpen = useCallback(() => setOpen(true), []);
+  const [{ open, show, hide }] = useModal(false);
 
   return (
     <div className="flex">
       <Confirm
         open={open}
-        onClose={onClose}
-        onCancel={onCancel}
-        onOk={onOk}
-        title="Confirm Title"
+        onClose={hide}
+        onCancel={hide}
+        onOk={hide}
+        title="CONFIRM TITLE"
       >
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        <IconStepper />
       </Confirm>
-      <Button onClick={onOpen}>Open Confirm</Button>
+      <Button onClick={show}>Open Confirm</Button>
     </div>
   );
 };

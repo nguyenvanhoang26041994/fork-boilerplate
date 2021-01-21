@@ -9,7 +9,7 @@ const Demo = () => {
 
   return (
     <div className="flex">
-      <Modal open={open} style={{ width: 800 }}>
+      <Modal open={open} centered>
         <Modal.Header>
           <Modal.HeaderTitle>MODAL HEADER TITLE</Modal.HeaderTitle>
           <Modal.HeaderSupportButtons>

@@ -36,6 +36,7 @@ import TabsGuide from './_documents/Tabs';
 import TimelineGuide from './_documents/Timeline';
 import TooltipGuide from './_documents/Tooltip';
 import TypographyGuide from './_documents/Typography';
+import ConfirmGuide from './_documents/Confirm';
 
 const ToggleFullScreen = ({ toggleFullScreen, className }) => (
   <Button
@@ -52,7 +53,7 @@ const ToogleFullScreenFloatingButton = styled(ToggleFullScreen)`
 `;
 
 const Guide = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const toggleExpand = useCallback(() => setIsExpanded(prev => !prev), []);
@@ -92,6 +93,7 @@ const Guide = () => {
                 <Route path="/document/carousel" component={ CarouselGuide } />
                 <Route path="/document/checkbox" component={ CheckboxGuide } />
                 <Route path="/document/chip" component={ ChipGuide } />
+                <Route path="/document/confirm" component={ ConfirmGuide } />
                 <Route path="/document/collapse" component={ CollapseGuide } />
                 <Route path="/document/drawer" component={ DrawerGuide } />
                 <Route path="/document/flex" component={ FlexGuide } />
