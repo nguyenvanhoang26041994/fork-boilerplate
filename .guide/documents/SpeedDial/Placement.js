@@ -19,26 +19,26 @@ const Demo = () => {
     <div className="flex flex-col w-full items-center">
       <div className="flex">
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
-        <SpeedDialDemo topLeft title="top-left">
+        <SpeedDialDemo topStart title="top-start">
           <Button className="m-2" style={{ width: '3em' }}>TL</Button>
         </SpeedDialDemo>
         <SpeedDialDemo top title="top">
           <Button className="m-2" style={{ width: '3em' }}>T</Button>
         </SpeedDialDemo>
-        <SpeedDialDemo topRight title="top-right">
+        <SpeedDialDemo topEnd title="top-end">
           <Button className="m-2" style={{ width: '3em' }}>TR</Button>
         </SpeedDialDemo>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
       </div>
 
       <div className="flex">
-        <SpeedDialDemo leftTop title="left-top">
+        <SpeedDialDemo leftStart title="left-start">
           <Button className="m-2" style={{ width: '3em' }}>LT</Button>
         </SpeedDialDemo>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
-        <SpeedDialDemo rightTop title="right-top">
+        <SpeedDialDemo rightStart title="right-start">
           <Button className="m-2" style={{ width: '3em' }}>RT</Button>
         </SpeedDialDemo>
       </div>
@@ -56,26 +56,26 @@ const Demo = () => {
       </div>
 
       <div className="flex">
-        <SpeedDialDemo leftBottom title="left-bottom">
+        <SpeedDialDemo leftEnd title="left-end">
           <Button className="m-2" style={{ width: '3em' }}>LB</Button>
         </SpeedDialDemo>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
-        <SpeedDialDemo rightBottom title="right-bottom">
+        <SpeedDialDemo rightEnd title="right-end">
           <Button className="m-2" style={{ width: '3em' }}>RB</Button>
         </SpeedDialDemo>
       </div>
 
       <div className="flex">
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>
-        <SpeedDialDemo bottomLeft title="bottom-left">
+        <SpeedDialDemo bottomStart title="bottom-start">
           <Button className="m-2" style={{ width: '3em' }}>BL</Button>
         </SpeedDialDemo>
         <SpeedDialDemo bottom title="bottom">
           <Button className="m-2" style={{ width: '3em' }}>B</Button>
         </SpeedDialDemo>
-        <SpeedDialDemo bottomRight title="bottom-right">
+        <SpeedDialDemo bottomEnd title="bottom-end">
           <Button className="m-2" style={{ width: '3em' }}>BR</Button>
         </SpeedDialDemo>
         <Button disabled className="m-2" style={{ width: '3em', visibility: 'hidden' }}></Button>

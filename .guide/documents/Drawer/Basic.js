@@ -1,27 +1,35 @@
-import React, { useState, useCallback } from 'react';
-import { Button, Drawer } from '@fork-ui/components/core';
+import React from 'react';
+import {
+  Button,
+  Drawer,
+  useModal,
+} from '@fork-ui/components/core';
+import { X } from '@fork-ui/components/icons';
+
 import DemoContent from '../../shared/DemoContent';
 
 const Demo = () => {
-  const [open, setOpen] = useState();
-
-  const onClose = useCallback(() => setOpen(false), []);
-  const onOpen = useCallback(() => setOpen(true), []);
+  const [{ open, show, hide }] = useModal(false);
 
   return (
     <div className="flex">
-      <Drawer
-        open={open}
-        onClose={onClose}
-        className="w-1/2"
-      >
-        <Drawer.Header>DRAWER TITLE</Drawer.Header>
+      <Drawer open={open} style={{ minWidth: 900 }}>
+        <Drawer.Header>
+          <Drawer.HeaderTitle>DRAWER TITLE</Drawer.HeaderTitle>
+          <Drawer.HeaderButtons>
+            <Button transparent circle icon={<X />} onClick={hide} />
+          </Drawer.HeaderButtons>
+        </Drawer.Header>
         <Drawer.Body>
           <DemoContent />
           <DemoContent />
         </Drawer.Body>
+        <Drawer.Footer>
+          <Button primary onClick={hide} className="mr-2">OK</Button>
+          <Button onClick={hide}>Cancle</Button>
+        </Drawer.Footer>
       </Drawer>
-      <Button onClick={onOpen}>Open Drawer</Button>
+      <Button onClick={show}>Open Drawer</Button>
     </div>
   );
 };

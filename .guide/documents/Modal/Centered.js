@@ -12,9 +12,9 @@ const Demo = () => {
       <Modal open={open} centered>
         <Modal.Header>
           <Modal.HeaderTitle>MODAL HEADER TITLE</Modal.HeaderTitle>
-          <Modal.HeaderSupportButtons>
+          <Modal.HeaderButtons>
             <Button circle transparent icon={<X />} onClick={hide} />
-          </Modal.HeaderSupportButtons>
+          </Modal.HeaderButtons>
         </Modal.Header>
         <Modal.Body>
           <VerticalStepper />
