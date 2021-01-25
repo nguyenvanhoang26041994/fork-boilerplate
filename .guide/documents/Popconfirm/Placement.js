@@ -1,5 +1,24 @@
 import React from 'react';
-import { Popconfirm, Button } from '@fork-ui/components/core';
+import { Popconfirm, Button, Typo } from '@fork-ui/components/core';
+import { QuestionMark } from '@fork-ui/components/icons';
+
+const QuestionMarkPopconfirm = ({ children, ...otherProps }) => (
+  <Popconfirm
+    content={(
+      <div class="flex items-center">
+        <QuestionMark size="10em" stroke="2" color="var(--primary)" />
+        <div>
+          <Typo h2>Hey handsome!</Typo>
+          <Typo>Keep in mind, Confirm is Modal, as alway should be.</Typo>
+          <Typo>Are you sure you want to continue this decision?.</Typo>
+        </div>
+      </div>
+    )}
+    {...otherProps}
+  >
+   {children}
+  </Popconfirm>
+);
 
 const Demo = () => {
   return (
@@ -10,15 +29,15 @@ const Demo = () => {
           className="m-2"
           style={{ width: "3em", visibility: "hidden" }}
         ></Button>
-        <Popconfirm title="Popconfirm Title" topLeft title="top-left">
-          <Button className="m-2" style={{ width: "3em" }}>TL</Button>
-        </Popconfirm>
-        <Popconfirm title="Popconfirm Title" top title="top">
+        <QuestionMarkPopconfirm topStart>
+          <Button className="m-2" style={{ width: "3em" }}>TS</Button>
+        </QuestionMarkPopconfirm>
+        <QuestionMarkPopconfirm top>
           <Button className="m-2" style={{ width: "3em" }}>T</Button>
-        </Popconfirm>
-        <Popconfirm title="Popconfirm Title" topRight title="top-right">
-          <Button className="m-2" style={{ width: "3em" }}>TR</Button>
-        </Popconfirm>
+        </QuestionMarkPopconfirm>
+        <QuestionMarkPopconfirm topEnd>
+          <Button className="m-2" style={{ width: "3em" }}>TE</Button>
+        </QuestionMarkPopconfirm>
         <Button
           disabled
           className="m-2"
@@ -27,9 +46,9 @@ const Demo = () => {
       </div>
 
       <div className="flex">
-        <Popconfirm title="Popconfirm Title" leftTop title="left-top">
-          <Button className="m-2" style={{ width: "3em" }}>LT</Button>
-        </Popconfirm>
+        <QuestionMarkPopconfirm leftStart>
+          <Button className="m-2" style={{ width: "3em" }}>LS</Button>
+        </QuestionMarkPopconfirm>
         <Button
           disabled
           className="m-2"
@@ -45,15 +64,15 @@ const Demo = () => {
           className="m-2"
           style={{ width: "3em", visibility: "hidden" }}
         ></Button>
-        <Popconfirm title="Popconfirm Title" rightTop title="right-top">
-          <Button className="m-2" style={{ width: "3em" }}>RT</Button>
-        </Popconfirm>
+        <QuestionMarkPopconfirm rightStart>
+          <Button className="m-2" style={{ width: "3em" }}>RS</Button>
+        </QuestionMarkPopconfirm>
       </div>
 
       <div className="flex">
-        <Popconfirm title="Popconfirm Title" left title="left">
+        <QuestionMarkPopconfirm left>
           <Button className="m-2" style={{ width: "3em" }}>L</Button>
-        </Popconfirm>
+        </QuestionMarkPopconfirm>
         <Button
           disabled
           className="m-2"
@@ -69,15 +88,15 @@ const Demo = () => {
           className="m-2"
           style={{ width: "3em", visibility: "hidden" }}
         ></Button>
-        <Popconfirm title="Popconfirm Title" right title="right">
+        <QuestionMarkPopconfirm right>
           <Button className="m-2" style={{ width: "3em" }}>R</Button>
-        </Popconfirm>
+        </QuestionMarkPopconfirm>
       </div>
 
       <div className="flex">
-        <Popconfirm title="Popconfirm Title" leftBottom title="left-bottom">
-          <Button className="m-2" style={{ width: "3em" }}>LB</Button>
-        </Popconfirm>
+        <QuestionMarkPopconfirm leftEnd>
+          <Button className="m-2" style={{ width: "3em" }}>LE</Button>
+        </QuestionMarkPopconfirm>
         <Button
           disabled
           className="m-2"
@@ -93,9 +112,9 @@ const Demo = () => {
           className="m-2"
           style={{ width: "3em", visibility: "hidden" }}
         ></Button>
-        <Popconfirm title="Popconfirm Title" rightBottom title="right-bottom">
-          <Button className="m-2" style={{ width: "3em" }}>RB</Button>
-        </Popconfirm>
+        <QuestionMarkPopconfirm rightEnd>
+          <Button className="m-2" style={{ width: "3em" }}>RE</Button>
+        </QuestionMarkPopconfirm>
       </div>
 
       <div className="flex">
@@ -104,15 +123,15 @@ const Demo = () => {
           className="m-2"
           style={{ width: "3em", visibility: "hidden" }}
         ></Button>
-        <Popconfirm title="Popconfirm Title" bottomLeft title="bottom-left">
-          <Button className="m-2" style={{ width: "3em" }}>BL</Button>
-        </Popconfirm>
-        <Popconfirm title="Popconfirm Title" bottom title="bottom">
+        <QuestionMarkPopconfirm bottomStart>
+          <Button className="m-2" style={{ width: "3em" }}>BS</Button>
+        </QuestionMarkPopconfirm>
+        <QuestionMarkPopconfirm bottom>
           <Button className="m-2" style={{ width: "3em" }}>B</Button>
-        </Popconfirm>
-        <Popconfirm title="Popconfirm Title" bottomRight title="bottom-right">
-          <Button className="m-2" style={{ width: "3em" }}>BR</Button>
-        </Popconfirm>
+        </QuestionMarkPopconfirm>
+        <QuestionMarkPopconfirm bottomEnd>
+          <Button className="m-2" style={{ width: "3em" }}>BE</Button>
+        </QuestionMarkPopconfirm>
         <Button
           disabled
           className="m-2"

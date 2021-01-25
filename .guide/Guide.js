@@ -26,6 +26,7 @@ import MenuGuide from './_documents/Menu';
 import ModalGuide from './_documents/Modal';
 import PaginationGuide from './_documents/Pagination';
 import PopoverGuide from './_documents/Popover';
+import PopconfirmGuide from './_documents/Popconfirm';
 import RadioGuide from './_documents/Radio';
 import RaterGuide from './_documents/Rater';
 import SkeletonGuide from './_documents/Skeleton';
@@ -115,6 +116,7 @@ const Guide = () => {
                 <Route path="/document/tabs" component={ TabsGuide } />
                 <Route path="/document/timeline" component={ TimelineGuide } />
                 <Route path="/document/tooltip" component={ TooltipGuide } />
+                <Route path="/document/popconfirm" component={ PopconfirmGuide } />
                 <Route path="/document/typography" component={ TypographyGuide } />
                 <Route path="/" component={IconGuide} />
               </Switch>
