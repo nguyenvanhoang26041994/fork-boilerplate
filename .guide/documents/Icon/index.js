@@ -21,6 +21,7 @@ const IconBoxWrapper = styled.div`
   align-items: center;
   width: 5rem;
   height: 5rem;
+  font-size: 1.35rem;
 
   .fui-icon {
     cursor: pointer;
@@ -73,8 +74,8 @@ const IconBox = ({ Icon }) => {
   return (
     <IconBoxWrapper>
       {isCopied
-        ? <Check color="var(--primary)" size="1.25rem" />
-        : <Icon size="1.25rem" style={{ cursor: 'pointer' }} onClick={onClick} />
+        ? <Check color="var(--primary)" />
+        : <Icon style={{ cursor: 'pointer' }} onClick={onClick} />
       }
     </IconBoxWrapper>
   );
