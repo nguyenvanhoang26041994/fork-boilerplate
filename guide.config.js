@@ -90,9 +90,9 @@ const leftSidebar = {
   Stepper: {
     icon: <ArrowRightCircle />
   },
-  Rater: {
-    icon: <StarHalf />,
-  },
+  // Rater: {
+  //   icon: <StarHalf />,
+  // },
   Popover: {
     icon: <Message />,
   },
@@ -117,44 +117,44 @@ const leftSidebar = {
   Drawer: {
     icon: <LayoutSidebar />,
   },
-  Carousel: {
-    icon: <DeviceMobileRotated />
-  },
+  // Carousel: {
+  //   icon: <DeviceMobileRotated />
+  // },
   Menu: {
     icon: <DotsVertical />,
   },
   Image: {
     icon: <Photo />,
   },
-  SpeedDial: {
-    icon: <Dots />,
-  },
+  // SpeedDial: {
+  //   icon: <Dots />,
+  // },
   Flex: {
     icon: <Template />,
   },
   Breadcrumb: {
     icon: <Point />,
   },
-  Textbox: {
-    icon: <Point />,
-  },
-  Password: {
-    icon: <Point />,
-  },
-  Textarea: {
-    icon: <Point />,
-  },
-  Staff: {
-    type: 'sub',
-    icon: <Braces />,
-    items: {
-      Affix: {},
-      Anchor: {},
-      Upload: {},
-      QueryBuilder: {},
-      Dialog: {},
-    },
-  },
+  // Textbox: {
+  //   icon: <Point />,
+  // },
+  // Password: {
+  //   icon: <Point />,
+  // },
+  // Textarea: {
+  //   icon: <Point />,
+  // },
+  // Staff: {
+  //   type: 'sub',
+  //   icon: <Braces />,
+  //   items: {
+  //     Affix: {},
+  //     Anchor: {},
+  //     Upload: {},
+  //     QueryBuilder: {},
+  //     Dialog: {},
+  //   },
+  // },
 };
 
 export default leftSidebar;

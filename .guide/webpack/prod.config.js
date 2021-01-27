@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -47,6 +48,29 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
+    new GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
+      include: [
+        /\.(html|js|css|png|jpg|jpeg|worf|json|ico|woff2)$/,
+      ],
+      runtimeCaching: [
+        {
+          urlPattern: /^http.*/,
+          handler: 'NetworkFirst',
+          options: {
+            networkTimeoutSeconds: 7,
+            cacheName: 'http-cache',
+            cacheableResponse: {
+              statuses: [0, 200, 206],
+            },
+            expiration: {
+              maxAgeSeconds: 60 * 60 * 24,
+            },
+          },
+        }
+      ],
+    })
   ],
   devtool: 'eval-source-map',
   target: 'web',
