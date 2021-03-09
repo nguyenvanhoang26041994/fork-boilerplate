@@ -38,6 +38,7 @@ import TimelineGuide from './_documents/Timeline';
 import TooltipGuide from './_documents/Tooltip';
 import TypographyGuide from './_documents/Typography';
 import ConfirmGuide from './_documents/Confirm';
+import MultiSelectGuide from './_documents/MultiSelect';
 
 const ToggleFullScreen = ({ toggleFullScreen, className }) => (
   <Button
@@ -88,6 +89,7 @@ const Guide = () => {
             <div className="flex m-1">
               <div className="flex-1">
               <Switch>
+                <Route path="/document/multiselect" component={ MultiSelectGuide } />
                 <Route path="/document/avatar" component={ AvatarGuide } />
                 <Route path="/document/badge" component={ BadgeGuide } />
                 <Route path="/document/button" component={ ButtonGuide } />

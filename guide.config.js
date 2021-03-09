@@ -117,24 +117,27 @@ const leftSidebar = {
   Drawer: {
     icon: <LayoutSidebar />,
   },
+  MultiSelect: {
+    icon: <LayoutSidebar />,
+  }
   // Carousel: {
   //   icon: <DeviceMobileRotated />
   // },
-  Menu: {
-    icon: <DotsVertical />,
-  },
-  Image: {
-    icon: <Photo />,
-  },
+  // Menu: {
+  //   icon: <DotsVertical />,
+  // },
+  // Image: {
+  //   icon: <Photo />,
+  // },
   // SpeedDial: {
   //   icon: <Dots />,
   // },
-  Flex: {
-    icon: <Template />,
-  },
-  Breadcrumb: {
-    icon: <Point />,
-  },
+  // Flex: {
+  //   icon: <Template />,
+  // },
+  // Breadcrumb: {
+  //   icon: <Point />,
+  // },
   // Textbox: {
   //   icon: <Point />,
   // },
