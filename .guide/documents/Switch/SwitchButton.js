@@ -35,7 +35,7 @@ const SwitchButton = styled.div`
 `;
 
 const Demo = () => {
-  const [{ checked, toggle }, { setChecked }] = useSwitch(false);
+  const [{ checked, toggle, setChecked }] = useSwitch(false);
 
   return (
     <Wrapper>
@@ -80,8 +80,8 @@ const Demo = () => {
         </Button>
       </SwitchButton>
       <Button
-        primary={checked}
-        circle
+        color={checked ? 'primary' : ''}
+        shape="circle"
         icon={checked ? <MoonStars /> : <Bulb />}
         onClick={toggle}
       />
