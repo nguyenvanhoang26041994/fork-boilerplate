@@ -30,10 +30,18 @@ const makeTablerIcon = function(iconName) {
   str = str.replace('__INJECT__FLAG__', svg);
 
   const _iconName = mapRestrictedNames[iconName] || iconName;
-  return Handlebars.compile(str)({
-    componentName: capitalizeFirstLetter(_iconName),
+  const componentName = capitalizeFirstLetter(_iconName);
+  const componentString = Handlebars.compile(str)({
+    componentName: componentName,
     originalName: _iconName
-  })
+  });
+
+  makeFile(
+    path.join(rcNeumorphismRoot, `/components/icons/all/${componentName}.js`),
+    componentString
+  );
+
+  return componentName;
 };
 
 const makeTablerIcons = function() {
@@ -43,11 +51,12 @@ const makeTablerIcons = function() {
     .map(icon => icon.replace(/.svg$/, ''))
 
   icons = icons.map(iconName => makeTablerIcon(iconName));
-  const header = '// THANK TO https://github.com/tabler/tabler-icons\nimport React from \'react\';\nimport enhancerIcon from \'\.\/enhancerIcon\';\nconst all = {};\n\n';
+  const header = '// THANK TO https://github.com/tabler/tabler-icons\n';
 
+  icons = icons.map(componentName => `export { default as ${componentName} } from './all/${componentName}';`);
   makeFile(
     path.join(rcNeumorphismRoot, '/components/icons/index.js'),
-    header + icons.join('\n') + 'export default all;\n'
+    header + icons.join('\n')
   );
 };
 

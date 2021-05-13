@@ -15,7 +15,7 @@ const Demo = () => {
   return (
     <Wrapper>
       <Button loading>Basic</Button>
-      <Button loading circle icon={<Power />} />
+      <Button loading shape="circle" icon={<Power />} />
     </Wrapper>
   );
 };

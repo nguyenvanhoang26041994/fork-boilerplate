@@ -12,13 +12,13 @@ const Demo = () => {
         <Button icon={<Bell />} />
       </ButtonGroup>
       <ButtonGroup>
-        <Button primary icon={<Power />} />
-        <Button primary icon={<Message />} />
-        <Button primary icon={<Bell />} />
+        <Button color="primary" icon={<Power />} />
+        <Button color="primary" icon={<Message />} />
+        <Button color="primary" icon={<Bell />} />
       </ButtonGroup>
-      <ButtonGroup danger>
-        <Button primary icon={<Power />} />
-        <Button danger icon={<Message />} />
+      <ButtonGroup color="danger">
+        <Button color="primary" icon={<Power />} />
+        <Button color="danger" icon={<Message />} />
         <Button icon={<Bell />} />
       </ButtonGroup>
     </Wrapper>

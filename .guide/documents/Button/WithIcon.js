@@ -7,7 +7,7 @@ const Demo = () => {
   return (
     <Wrapper>
       <Button icon={<Power />} />
-      <Button circle icon={<Power />} />
+      <Button shape="circle" icon={<Power />} />
       <Button>
         <Power />
         <span>Shutdown</span>

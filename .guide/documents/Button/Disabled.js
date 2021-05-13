@@ -7,9 +7,9 @@ const Demo = () => {
   return (
     <Wrapper>
       <Button disabled>Basic</Button>
-      <Button disabled primary>Primary</Button>
-      <Button disabled danger>Danger</Button>
-      <Button disabled circle icon={<Cast />} />
+      <Button disabled color="primary">Primary</Button>
+      <Button disabled color="danger">Danger</Button>
+      <Button disabled shape="circle" icon={<Cast />} />
     </Wrapper>
   );
 };

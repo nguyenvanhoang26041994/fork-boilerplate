@@ -1,4 +1,8 @@
-export const {{componentName}} = enhancerIcon('{{originalName}}', '{{componentName}}', (props) => (
+import React from 'react';
+import enhancerIcon from '../enhancerIcon';
+
+const {{componentName}} = enhancerIcon('{{originalName}}', '{{componentName}}', (props) => (
 __INJECT__FLAG__
 ));
-all['{{originalName}}'] = {{componentName}};
+
+export default {{componentName}};

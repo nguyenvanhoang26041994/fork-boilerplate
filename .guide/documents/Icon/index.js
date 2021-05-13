@@ -8,10 +8,11 @@ import Size from './Size';
 import Stroke from './Stroke';
 
 import { Textbox, Flex } from '@fork-ui/components/core';
-import allIcons, { Check } from '@fork-ui/components/icons';
+import * as allIcons from '@fork-ui/components/icons';
 import fuzzysort from '@fork-ui/libs/fuzzysort';
 import { debounce } from '@fork-ui/utils/helpers';
 
+const Check = allIcons.Check;
 const icons = Object.keys(allIcons);
 
 const IconBoxWrapper = styled.div`
@@ -21,7 +22,7 @@ const IconBoxWrapper = styled.div`
   align-items: center;
   width: 5rem;
   height: 5rem;
-  font-size: 1.35rem;
+  font-size: 1.5rem;
 
   .fui-icon {
     cursor: pointer;

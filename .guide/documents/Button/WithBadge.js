@@ -18,7 +18,7 @@ const Demo = () => {
         <Button icon={<Bell />} />
       </Badge.Counter>
       <Badge.Counter overlap count={9}>
-        <Button circle icon={<Inbox />} />
+        <Button shape="circle" icon={<Inbox />} />
       </Badge.Counter>
     </Wrapper>
   );

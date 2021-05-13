@@ -6,9 +6,9 @@ const Demo = () => {
   return (
     <Wrapper>
       <Button>Basic</Button>
-      <Button primary>Primary</Button>
-      <Button danger>Danger</Button>
-      <Button transparent>Transparent</Button>
+      <Button color="primary">Primary</Button>
+      <Button color="danger">Danger</Button>
+      <Button color="transparent">Transparent</Button>
     </Wrapper>
   );
 };
