@@ -13,7 +13,7 @@ const Demo = () => {
       <AvatarGroup>
         <Avatar>HG</Avatar>
         <Avatar>OP</Avatar>
-        <Badge.Dot color="#0df316" overlap bottomEnd>
+        <Badge.Dot color="#0df316" overlap placement="bottom-end">
           <Avatar src={avatarLink}>OP</Avatar>
         </Badge.Dot>
       </AvatarGroup>

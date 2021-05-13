@@ -41,7 +41,7 @@ const StyledAvatarGroup = styled(AvatarGroup)`
 `;
 
 const TeamAvatar = () => (
-  <Badge.Dot color="var(--green)" bottomEnd overlap>
+  <Badge.Dot color="var(--green)" placement="bottom-end" overlap>
     <StyledAvatarGroup>
       <Avatar>OP</Avatar>
       <Avatar>H</Avatar>
@@ -82,7 +82,7 @@ const StyledAvatarGroup2 = styled(AvatarGroup)`
 `;
 
 const TeamAvatar2 = () => (
-  <Badge.Label color="var(--green)" topEnd label="PARTY">
+  <Badge.Label color="var(--green)" placement="top-end" label="PARTY">
     <StyledAvatarGroup2>
       <Avatar>OP</Avatar>
       <Avatar>H</Avatar>

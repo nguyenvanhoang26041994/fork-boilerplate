@@ -55,7 +55,7 @@ const ToogleFullScreenFloatingButton = styled(ToggleFullScreen)`
 `;
 
 const Guide = () => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const toggleExpand = useCallback(() => setIsExpanded(prev => !prev), []);

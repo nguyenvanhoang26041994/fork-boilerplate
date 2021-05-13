@@ -6,7 +6,7 @@ import { Avatar } from '@fork-ui/components/core';
 const Demo = () => {
   return (
     <Wrapper>
-      <Avatar square>OP</Avatar>
+      <Avatar shape="square">OP</Avatar>
       <Avatar>OP</Avatar>
       <Avatar src={avatarLink}>H</Avatar>
     </Wrapper>

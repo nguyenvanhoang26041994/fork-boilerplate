@@ -1,36 +1,32 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
 import { Skeleton, Flex } from '@fork-ui/components/core';
 
-const customize = keyframes`
-  0% {
-    background-color: var(--primary);
-  }
-  100% {
-    background-color: #fff;
-  }
-`;
-
-const StyledSkeleton = styled(Skeleton)`
-  background-color: var(--primary);
-
-  &.fskele-animated {
-    animation-name: ${customize};
-  }
-`;
-
-// ___CSS_0___ is ${customize}, this bug belong the lib we use to demo code
 const Demo = () => {
   return (
-    <Flex col style={{ padding: '0.5 1.5rem' }} span="full">
-      <Flex items="center">
-        <StyledSkeleton circle size="2rem" animated />
-        <Flex col className="ml-2 flex-1">
-          <StyledSkeleton p w="70%" animated />
-          <StyledSkeleton p w="20%" animated />
+    <Flex col style={{ padding: '0.5 1.5rem' }} span="full" className="fskele-animated">
+      <Flex items="center" className="mb-5">
+        <Skeleton shape="circle" size="2rem" />
+        <Flex col className="ml-5 flex-1">
+          <Skeleton shape="p" w="70%" />
+          <Skeleton shape="p" w="20%" />
+          <Skeleton shape="p" w="40%" />
         </Flex>
       </Flex>
-      <StyledSkeleton rect w="100%" h="200px" animated />
+      <Skeleton shape="rect" w="100%" h="200px" />
+      <Skeleton shape="rect" w="60%" h="40px" />
+      <Skeleton shape="p" w="30%" />
+      <Skeleton shape="p" w="40%" />
+      <Skeleton shape="p" w="100%" />
+      <Flex items="center" className="mt-5">
+        <Skeleton shape="rect" w="200px" h="200px" />
+        <Flex col className="ml-10 flex-1">
+          <Skeleton shape="p" w="70%" />
+          <Skeleton shape="p" w="20%" />
+          <Skeleton shape="p" w="40%" />
+          <Skeleton shape="rect" w="100%" h="100px" />
+          <Skeleton shape="p" w="80%" />
+        </Flex>
+      </Flex>
     </Flex>
   );
 };

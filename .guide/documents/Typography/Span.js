@@ -12,17 +12,17 @@ const Demo = () => {
     <Flex col>
       <Typo>{typo}</Typo>
       <br />
-      <Typo span>{typo}</Typo>
+      <Typo tag="span">{typo}</Typo>
       <br />
-      <Typo u>{typo}</Typo>
+      <Typo textDecoration="u">{typo}</Typo>
       <br />
       <Typo disabled>{typo}</Typo>
       <br />
-      <Typo through>{typo}</Typo>
+      <Typo textDecoration="through">{typo}</Typo>
       <br />
-      <Typo b>{typo}</Typo>
+      <Typo bold>{typo}</Typo>
       <br />
-      <Typo i>{typo}</Typo>
+      <Typo fontStyle="italic">{typo}</Typo>
       <br />
       <Typo color="var(--primary)">{typo}</Typo>
     </Flex>

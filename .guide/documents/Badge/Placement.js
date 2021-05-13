@@ -52,7 +52,8 @@ const Demo = () => {
   return (
     <FlexStyled
       span="full"
-      col items="center"
+      col
+      items="center"
       className={cn({ 'fancy-box-circle': checked })}
     >
       <Flex col span="full" items="center">
@@ -60,7 +61,7 @@ const Demo = () => {
           <FancyBox hidden className="m-5" />
           <Badge.Counter
             count={7}
-            topStart
+            placement="top-start"
             className="m-5"
             overlap={checked}
           >
@@ -68,7 +69,7 @@ const Demo = () => {
           </Badge.Counter>
           <Badge.Counter
             count={7}
-            top
+            placement="top"
             className="m-5"
             overlap={checked}
           >
@@ -76,7 +77,7 @@ const Demo = () => {
           </Badge.Counter>
           <Badge.Counter
             count={7}
-            topEnd
+            placement="top-end"
             className="m-5"
             overlap={checked}
           >
@@ -88,7 +89,7 @@ const Demo = () => {
         <Flex>
           <Badge.Counter
             count={7}
-            leftStart
+            placement="left-start"
             className="m-5"
             overlap={checked}
           >
@@ -99,7 +100,7 @@ const Demo = () => {
           <FancyBox hidden className="m-5" />
           <Badge.Counter
             count={7}
-            rightStart
+            placement="right-start"
             className="m-5"
             overlap={checked}
           >
@@ -110,7 +111,7 @@ const Demo = () => {
         <Flex>
           <Badge.Counter
             count={7}
-            left
+            placement="left"
             className="m-5"
             overlap={checked}
           >
@@ -121,7 +122,7 @@ const Demo = () => {
           <FancyBox hidden className="m-5" />
           <Badge.Counter
             count={7}
-            right
+            placement="right"
             className="m-5"
             overlap={checked}
           >
@@ -132,7 +133,7 @@ const Demo = () => {
         <Flex>
           <Badge.Counter
             count={7}
-            leftEnd
+            placement="left-end"
             className="m-5"
             overlap={checked}
           >
@@ -143,7 +144,7 @@ const Demo = () => {
           <FancyBox hidden className="m-5" />
           <Badge.Counter
             count={7}
-            rightEnd
+            placement="right-end"
             className="m-5"
             overlap={checked}
           >
@@ -155,7 +156,7 @@ const Demo = () => {
           <FancyBox hidden className="m-5" />
           <Badge.Counter
             count={7}
-            bottomStart
+            placement="bottom-start"
             className="m-5"
             overlap={checked}
           >
@@ -163,7 +164,7 @@ const Demo = () => {
           </Badge.Counter>
           <Badge.Counter
             count={7}
-            bottom
+            placement="bottom"
             className="m-5"
             overlap={checked}
           >
@@ -171,7 +172,7 @@ const Demo = () => {
           </Badge.Counter>
           <Badge.Counter
             count={7}
-            bottomEnd
+            placement="bottom-end"
             className="m-5"
             overlap={checked}
           >
