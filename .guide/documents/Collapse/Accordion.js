@@ -3,11 +3,9 @@ import {
   Collapse,
   Flex
 } from '@fork-ui/components/core';
-import {
-  PlaneDeparture,
-  Share,
-  Rotate2,
-} from '@fork-ui/components/icons';
+import PlaneDeparture from '@fork-ui/components/icons/all/PlaneDeparture';
+import Share from '@fork-ui/components/icons/all/Share';
+import Rotate2 from '@fork-ui/components/icons/all/Rotate2';
 import DemoContent from '../../shared/DemoContent';
 
 const Demo = () => {

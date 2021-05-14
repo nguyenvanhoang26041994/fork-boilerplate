@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Modal, useModal } from '@fork-ui/components/core';
-import { X } from '@fork-ui/components/icons';
+import X from '@fork-ui/components/icons/all/X';
 
 import VerticalStepper from '../Stepper/Vertical';
 

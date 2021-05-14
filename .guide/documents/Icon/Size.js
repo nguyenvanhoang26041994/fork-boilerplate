@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrapper from '../../shared/Wrapper';
-import { Alarm } from '@fork-ui/components/icons';
+import Alarm from '@fork-ui/components/icons/all/Alarm';
 
 const Demo = () => {
   return (

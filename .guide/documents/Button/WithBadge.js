@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, Badge } from '@fork-ui/components/core';
-import { Inbox, Bell } from '@fork-ui/components/icons';
+import Inbox from '@fork-ui/components/icons/all/Inbox';
+import Bell from '@fork-ui/components/icons/all/Bell';
 
 const Wrapper = styled.div`
   display: flex;

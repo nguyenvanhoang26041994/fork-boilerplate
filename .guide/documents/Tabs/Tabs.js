@@ -1,8 +1,6 @@
 import React from 'react';
 import { Tabs, Flex } from '@fork-ui/components/core';
-import {
-  Refresh,
-} from '@fork-ui/components/icons';
+import Refresh from '@fork-ui/components/icons/all/Refresh';
 
 import DemoContent from '../../shared/DemoContent';
 

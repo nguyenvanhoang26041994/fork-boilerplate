@@ -1,7 +1,9 @@
 
 import React from 'react';
 import { Stepper } from '@fork-ui/components/core';
-import { Home, Message, Copy } from '@fork-ui/components/icons';
+import Home from '@fork-ui/components/icons/all/Home';
+import Message from '@fork-ui/components/icons/all/Message';
+import Copy from '@fork-ui/components/icons/all/Copy';
 
 const Demo = () => {
   const [{

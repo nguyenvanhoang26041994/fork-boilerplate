@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Tabs, Flex } from '@fork-ui/components/core';
-import {
-  BluetoothConnected,
-  BrandGithub,
-  BrandTabler,
-  Plus,
-} from '@fork-ui/components/icons';
+import BluetoothConnected from '@fork-ui/components/icons/all/BluetoothConnected';
+import BrandGithub from '@fork-ui/components/icons/all/BrandGithub';
+import BrandTabler from '@fork-ui/components/icons/all/BrandTabler';
+import Plus from '@fork-ui/components/icons/all/Plus';
 import DemoContent from '../../shared/DemoContent';
 
 const StyledTab = styled(Tabs.Tab)`

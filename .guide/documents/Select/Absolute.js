@@ -1,6 +1,11 @@
 import React from 'react';
 import { Select } from '@fork-ui/components/core';
-import { Message, Copy, Tool, Heart, Star, Bell } from '@fork-ui/components/icons';
+import Message from '@fork-ui/components/icons/all/Message';
+import Copy from '@fork-ui/components/icons/all/Copy';
+import Tool from '@fork-ui/components/icons/all/Tool';
+import Heart from '@fork-ui/components/icons/all/Heart';
+import Star from '@fork-ui/components/icons/all/Star';
+import Bell from '@fork-ui/components/icons/all/Bell';
 
 const Demo = () => {
   return (

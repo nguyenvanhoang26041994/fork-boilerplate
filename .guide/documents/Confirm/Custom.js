@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Modal, Typo, useModal } from '@fork-ui/components/core';
-import { QuestionMark, X } from '@fork-ui/components/icons';
+import QuestionMark from '@fork-ui/components/icons/all/QuestionMark';
+import X from '@fork-ui/components/icons/all/X';
 
 const Demo = () => {
   const [{ open, show, hide }] = useModal(false);

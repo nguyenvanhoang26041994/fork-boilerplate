@@ -1,14 +1,15 @@
 {
-  "version": 2,
-  "builds": [{
-    "src": "package.json",
-    "use": "@now/static-build",
-    "config": { "distDir": ".guide/dist" }
-  }],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": ".guide/dist" }
+    }
+  ],
    "trailingSlash": false,
    "rewrites": [
-    {
-      "source": "/(.*)", "destination": "/index.html"
-    }
+      {
+        "source": "/(.*)", "destination": "/index.html"
+      }
    ]
 }

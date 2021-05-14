@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge, Avatar } from '@fork-ui/components/core';
-import { Stars } from '@fork-ui/components/icons';
+import Stars from '@fork-ui/components/icons/all/Stars';
 import Wrapper from '../../shared/Wrapper';
 import FancyBox from '../../shared/FancyBox';
 

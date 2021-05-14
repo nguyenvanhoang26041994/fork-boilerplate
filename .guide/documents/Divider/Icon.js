@@ -1,6 +1,8 @@
 import React from 'react';
 import { Divider } from '@fork-ui/components/core';
-import { Power, Copy, Messages } from '@fork-ui/components/icons';
+import Power from '@fork-ui/components/icons/all/Power';
+import Copy from '@fork-ui/components/icons/all/Copy';
+import Messages from '@fork-ui/components/icons/all/Messages';
 
 const Demo = () => {
   return (

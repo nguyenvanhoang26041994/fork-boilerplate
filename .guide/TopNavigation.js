@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, Tooltip } from '@fork-ui/components/core';
-import { IndentDecrease, IndentIncrease, Search, Maximize, MoonStars, Bulb } from '@fork-ui/components/icons';
-
-import GuideContext from './GuideContext';
+import IndentDecrease from '@fork-ui/components/icons/all/IndentDecrease';
+import IndentIncrease from '@fork-ui/components/icons/all/IndentIncrease';
+import Search from '@fork-ui/components/icons/all/Search';
+import Maximize from '@fork-ui/components/icons/all/Maximize';
+import MoonStars from '@fork-ui/components/icons/all/MoonStars';
+import Bulb from '@fork-ui/components/icons/all/Bulb';
 
 const TopNavContainer = styled.nav`
   position: sticky;

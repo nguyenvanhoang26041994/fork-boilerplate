@@ -1,10 +1,8 @@
 import React from 'react';
 import { Progress } from '@fork-ui/components/core';
-import {
-  Check,
-  X,
-  AlertCircle,
-} from '@fork-ui/components/icons';
+import Check from '@fork-ui/components/icons/all/Check';
+import X from '@fork-ui/components/icons/all/X';
+import AlertCircle from '@fork-ui/components/icons/all/AlertCircle';
 import Wrapper from '../../shared/Wrapper';
 
 const Demo = () => {

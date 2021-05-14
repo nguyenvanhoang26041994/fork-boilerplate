@@ -1,6 +1,6 @@
 import React from 'react';
 import { Popconfirm, Button, Typo } from '@fork-ui/components/core';
-import { QuestionMark } from '@fork-ui/components/icons';
+import QuestionMark from '@fork-ui/components/icons/all/QuestionMark';
 
 const Demo = () => {
   return (

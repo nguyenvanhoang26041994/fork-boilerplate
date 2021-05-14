@@ -5,7 +5,7 @@ import {
   Button,
   ButtonGroup,
 } from '@fork-ui/components/core';
-import { RefreshAlert } from '@fork-ui/components/icons';
+import RefreshAlert from '@fork-ui/components/icons/all/RefreshAlert';
 import DemoContent from '../../shared/DemoContent';
 
 const Demo = () => {

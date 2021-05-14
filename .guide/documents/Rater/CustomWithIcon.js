@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Rater } from '@fork-ui/components/core';
-import {
-  MoodCry,
-  MoodSad,
-  MoodNeutral,
-  MoodKid,
-  MoodHappy
-} from '@fork-ui/components/icons';
+import MoodCry from '@fork-ui/components/icons/all/MoodCry';
+import MoodSad from '@fork-ui/components/icons/all/MoodSad';
+import MoodNeutral from '@fork-ui/components/icons/all/MoodNeutral';
+import MoodKid from '@fork-ui/components/icons/all/MoodKid';
+import MoodHappy from '@fork-ui/components/icons/all/MoodHappy';
 
 const RaterItemStyled = styled(Rater.Item)`
   &.frater-item-light {

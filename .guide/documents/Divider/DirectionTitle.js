@@ -1,6 +1,7 @@
 import React from 'react';
 import { Divider } from '@fork-ui/components/core';
-import { Power, Copy } from '@fork-ui/components/icons';
+import Power from '@fork-ui/components/icons/all/Power';
+import Copy from '@fork-ui/components/icons/all/Copy';
 
 const Demo = () => {
   return (

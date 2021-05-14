@@ -5,7 +5,8 @@ import {
   Button,
   Flex,
 } from '@fork-ui/components/core';
-import { Minus, Plus } from '@fork-ui/components/icons';
+import Minus from '@fork-ui/components/icons/all/Minus';
+import Plus from '@fork-ui/components/icons/all/Plus';
 
 const Demo = () => {
   const [percent, setPercent] = useState(60);

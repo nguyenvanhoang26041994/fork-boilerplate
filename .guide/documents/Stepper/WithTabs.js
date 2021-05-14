@@ -6,13 +6,11 @@ import {
   Tabs,
   Flex,
 } from '@fork-ui/components/core';
-import {
-  ChevronRight,
-  ChevronLeft,
-  Refresh,
-  Ban,
-  X
-} from '@fork-ui/components/icons';
+import ChevronRight from '@fork-ui/components/icons/all/ChevronRight';
+import ChevronLeft from '@fork-ui/components/icons/all/ChevronLeft';
+import Refresh from '@fork-ui/components/icons/all/Refresh';
+import Ban from '@fork-ui/components/icons/all/Ban';
+import X from '@fork-ui/components/icons/all/X';
 import DemoContent from '../../shared/DemoContent';
 
 const ControlSection = ({

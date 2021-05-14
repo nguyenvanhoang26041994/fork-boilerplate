@@ -1,7 +1,9 @@
 import React from 'react';
 import Wrapper from '../../shared/Wrapper';
 import { Button, ButtonGroup } from '@fork-ui/components/core';
-import { Power, Message, Bell } from '@fork-ui/components/icons';
+import Power from '@fork-ui/components/icons/all/Power';
+import Message from '@fork-ui/components/icons/all/Message';
+import Bell from '@fork-ui/components/icons/all/Bell';
 
 const Demo = () => {
   return (

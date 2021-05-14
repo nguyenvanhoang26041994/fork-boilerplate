@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Dialog } from '@fork-ui/components/core';
-import { Send } from '@fork-ui/components/icons';
+import Send from '@fork-ui/components/icons/all/Send';
 import DemoContent from '../../shared/DemoContent';
 
 const Demo = () => {

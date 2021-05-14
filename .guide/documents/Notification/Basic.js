@@ -4,7 +4,7 @@ import {
   Notification,
   Avatar,
 } from '@fork-ui/components/core';
-import { Globe } from '@fork-ui/components/icons';
+import Globe from '@fork-ui/components/icons/all/Globe';
 
 const avatarLink = '';
 

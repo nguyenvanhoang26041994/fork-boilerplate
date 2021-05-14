@@ -3,7 +3,7 @@ import cn from 'classnames';
 import styled from 'styled-components';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Menu } from '@fork-ui/components/core';
-import { Home } from '@fork-ui/components/icons';
+import Home from '@fork-ui/components/icons/all/Home';
 import { mapRouter, mapMenuItem } from './map-config';
 
 const LeftSidebarContainer = styled.div`

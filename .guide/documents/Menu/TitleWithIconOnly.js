@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Menu, Switch } from '@fork-ui/components/core';
-import { Message, Heart, Star, Bell, CaretDown, Tool, Copy, Dots, Clock } from '@fork-ui/components/icons';
+import Message from '@fork-ui/components/icons/all/Message';
+import Heart from '@fork-ui/components/icons/all/Heart';
+import Star from '@fork-ui/components/icons/all/Star';
+import Bell from '@fork-ui/components/icons/all/Bell';
+import CaretDown from '@fork-ui/components/icons/all/CaretDown';
+import Tool from '@fork-ui/components/icons/all/Tool';
+import Copy from '@fork-ui/components/icons/all/Copy';
+import Dots from '@fork-ui/components/icons/all/Dots';
+import Clock from '@fork-ui/components/icons/all/Clock';
 
 const Demo = () => {
   const [isIconOnly, setIsIconOnly] = useState(true);

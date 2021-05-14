@@ -6,7 +6,7 @@ import GuideContext from './GuideContext';
 import LeftSidebar from './LeftSidebar';
 import TopNavigation from './TopNavigation';
 import { ScrollUp, Button } from '@fork-ui/components/core';
-import { Maximize } from '@fork-ui/components/icons';
+import Maximize from '@fork-ui/components/icons/all/Maximize';
 
 import AvatarGuide from './_documents/Avatar';
 import BadgeGuide from './_documents/Badge';
@@ -18,7 +18,7 @@ import CollapseGuide from './_documents/Collapse';
 import DrawerGuide from './_documents/Drawer';
 import FlexGuide from './_documents/Flex';
 import FormGuide from './_documents/Form';
-import IconGuide from './_documents/Icon';
+// import IconGuide from './_documents/Icon';
 import ImageGuide from './_documents/Image';
 import LoaderGuide from './_documents/Loader';
 import ProgressGuide from './_documents/Progress';
@@ -101,7 +101,7 @@ const Guide = () => {
                 <Route path="/document/drawer" component={ DrawerGuide } />
                 <Route path="/document/flex" component={ FlexGuide } />
                 <Route path="/document/inputfield" component={ FormGuide } />
-                <Route path="/document/icon" component={ IconGuide } />
+                {/* <Route path="/document/icon" component={ IconGuide } /> */}
                 <Route path="/document/image" component={ ImageGuide } />
                 <Route path="/document/loader" component={ LoaderGuide } />
                 <Route path="/document/progress" component={ ProgressGuide } />

@@ -1,6 +1,6 @@
 import React from 'react';
 import leftSidebar from '../guide.config';
-import { Point } from '@fork-ui/components/icons';
+import Point from '@fork-ui/components/icons/all/Point';
 
 const splitCamelCase = str => {
   return str.replace(/([a-z0-9])([A-Z])/g, '$1 $2');

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Timeline, Badge } from '@fork-ui/components/core';
-import { PictureInPicture } from '@fork-ui/components/icons';
+import PictureInPicture from '@fork-ui/components/icons/all/PictureInPicture';
 import DemoContent2 from '../../shared/DemoContent2';
 
 const Demo = () => {

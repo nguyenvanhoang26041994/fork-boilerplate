@@ -38,6 +38,17 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      },
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,

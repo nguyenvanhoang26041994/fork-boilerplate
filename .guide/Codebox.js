@@ -4,7 +4,9 @@ import ReactMarkdown from 'react-markdown';
 import GuideContext from './GuideContext';
 
 import { Animated, ButtonGroup, Button } from '@fork-ui/components/core';
-import { Braces, ThumbUp, Message2 } from '@fork-ui/components/icons';
+import Braces from '@fork-ui/components/icons/all/Braces';
+import ThumbUp from '@fork-ui/components/icons/all/ThumbUp';
+import Message2 from '@fork-ui/components/icons/all/Message2';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';

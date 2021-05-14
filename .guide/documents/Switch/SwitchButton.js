@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 import Wrapper from '../../shared/Wrapper';
 import { Button, useSwitch } from '@fork-ui/components/core';
-import { MoonStars, Bulb } from '@fork-ui/components/icons';
+import MoonStars from '@fork-ui/components/icons/all/MoonStars';
+import Bulb from '@fork-ui/components/icons/all/Bulb';
 
 const SwitchButton = styled.div`
   display: flex;

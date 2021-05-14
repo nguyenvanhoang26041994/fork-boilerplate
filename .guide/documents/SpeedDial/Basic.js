@@ -1,6 +1,9 @@
 import React from 'react';
 import { SpeedDial, Button } from '@fork-ui/components/core';
-import { CloudDownload, Coin, ColorSwatch, Plus } from '@fork-ui/components/icons';
+import Plus from '@fork-ui/components/icons/all/Plus';
+import CloudDownload from '@fork-ui/components/icons/all/CloudDownload';
+import Coin from '@fork-ui/components/icons/all/Coin';
+import ColorSwatch from '@fork-ui/components/icons/all/ColorSwatch';
 
 const Demo = () => {
   return (

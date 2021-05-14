@@ -4,7 +4,7 @@ import {
   Drawer,
   useModal,
 } from '@fork-ui/components/core';
-import { X } from '@fork-ui/components/icons';
+import X from '@fork-ui/components/icons/all/X';
 
 import DemoContent from '../../shared/DemoContent';
 

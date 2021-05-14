@@ -1,7 +1,7 @@
 import React from 'react';
 import Wrapper from '../../shared/Wrapper';
 import { Button } from '@fork-ui/components/core';
-import { Power } from '@fork-ui/components/icons';
+import Power from '@fork-ui/components/icons/all/Power';
 
 const Demo = () => {
   return (

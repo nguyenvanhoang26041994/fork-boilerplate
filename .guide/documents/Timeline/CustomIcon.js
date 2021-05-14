@@ -1,13 +1,11 @@
 import React from 'react';
 import { Timeline, Badge, Tooltip } from '@fork-ui/components/core';
-import {
-  Ban,
-  Bell,
-  BrandGithub,
-  CloudDownload,
-  PictureInPicture,
-  Camera
-} from '@fork-ui/components/icons';
+import Ban from '@fork-ui/components/icons/all/Ban';
+import Bell from '@fork-ui/components/icons/all/Bell';
+import BrandGithub from '@fork-ui/components/icons/all/BrandGithub';
+import CloudDownload from '@fork-ui/components/icons/all/CloudDownload';
+import PictureInPicture from '@fork-ui/components/icons/all/PictureInPicture';
+import Camera from '@fork-ui/components/icons/all/Camera';
 import DemoContent2 from '../../shared/DemoContent2';
 
 const Demo = () => {

@@ -1,6 +1,13 @@
 import React from 'react';
 import { Menu } from '@fork-ui/components/core';
-import { Message, Heart, Star, Bell, Tool, Power, Copy, Dots } from '@fork-ui/components/icons';
+import Message from '@fork-ui/components/icons/all/Message';
+import Heart from '@fork-ui/components/icons/all/Heart';
+import Star from '@fork-ui/components/icons/all/Star';
+import Bell from '@fork-ui/components/icons/all/Bell';
+import Tool from '@fork-ui/components/icons/all/Tool';
+import Power from '@fork-ui/components/icons/all/Power';
+import Copy from '@fork-ui/components/icons/all/Copy';
+import Dots from '@fork-ui/components/icons/all/Dots';
 
 const Demo = () => {
   return (

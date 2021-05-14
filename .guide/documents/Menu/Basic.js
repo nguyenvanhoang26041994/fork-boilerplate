@@ -2,17 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
 
-import {
-  Message,
-  Heart,
-  Star,
-  Bell,
-  Tool,
-  Power,
-  Copy,
-  Dots
-} from '@fork-ui/components/icons';
-
 const StyledMenu = styled.div`
   background-color: var(--menu--bg);
   max-width: 220px;
