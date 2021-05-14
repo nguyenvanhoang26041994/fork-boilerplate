@@ -44,13 +44,17 @@ const makeDocument = function(documentName) {
     path.join(__dirname, `../_documents/${documentName}/index.js`),
     readFile(path.join(__dirname, `../documents/${documentName}/index.js`)),
   );
+  makeFile(
+    path.join(__dirname, `../_documents/${documentName}/loadable.js`),
+    `import loadable from '../../loadable';\nexport default loadable(() => import('./index'))`
+  );
   let demos = readFolder(path.join(__dirname, `../documents/${documentName}/`)) || [];
   demos = demos
     .filter(demo => demo !== 'index.js')
     .filter(demo => /.js$/.test(demo))
     .map(demo => demo.replace(/.js$/, ''));
 
-    demos.map(demoName => makeDemo(documentName, demoName));
+  demos.map(demoName => makeDemo(documentName, demoName));
 };
 
 const makeDocuments = function() {

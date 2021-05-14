@@ -8,37 +8,37 @@ import TopNavigation from './TopNavigation';
 import { ScrollUp, Button } from '@fork-ui/components/core';
 import Maximize from '@fork-ui/components/icons/all/Maximize';
 
-import AvatarGuide from './_documents/Avatar';
-import BadgeGuide from './_documents/Badge';
-import ButtonGuide from './_documents/Button';
-import CarouselGuide from './_documents/Carousel';
-import CheckboxGuide from './_documents/Checkbox';
-import ChipGuide from './_documents/Chip';
-import CollapseGuide from './_documents/Collapse';
-import DrawerGuide from './_documents/Drawer';
-import FlexGuide from './_documents/Flex';
-import FormGuide from './_documents/Form';
-// import IconGuide from './_documents/Icon';
-import ImageGuide from './_documents/Image';
-import LoaderGuide from './_documents/Loader';
-import ProgressGuide from './_documents/Progress';
-import MenuGuide from './_documents/Menu';
-import ModalGuide from './_documents/Modal';
-import PaginationGuide from './_documents/Pagination';
-import PopoverGuide from './_documents/Popover';
-import PopconfirmGuide from './_documents/Popconfirm';
-import RadioGuide from './_documents/Radio';
-import RaterGuide from './_documents/Rater';
-import SkeletonGuide from './_documents/Skeleton';
-import SpeedDialGuide from './_documents/SpeedDial';
-import StepperGuide from './_documents/Stepper';
-import SwitchGuide from './_documents/Switch';
-import TabsGuide from './_documents/Tabs';
-import TimelineGuide from './_documents/Timeline';
-import TooltipGuide from './_documents/Tooltip';
-import TypographyGuide from './_documents/Typography';
-import ConfirmGuide from './_documents/Confirm';
-import MultiSelectGuide from './_documents/MultiSelect';
+import AvatarGuide from './_documents/Avatar/loadable';
+import BadgeGuide from './_documents/Badge/loadable';
+import ButtonGuide from './_documents/Button/loadable';
+import CarouselGuide from './_documents/Carousel/loadable';
+import CheckboxGuide from './_documents/Checkbox/loadable';
+import ChipGuide from './_documents/Chip/loadable';
+import CollapseGuide from './_documents/Collapse/loadable';
+import DrawerGuide from './_documents/Drawer/loadable';
+import FlexGuide from './_documents/Flex/loadable';
+import FormGuide from './_documents/Form/loadable';
+// import IconGuide from './_documents/Icon/loadable';
+import ImageGuide from './_documents/Image/loadable';
+import LoaderGuide from './_documents/Loader/loadable';
+import ProgressGuide from './_documents/Progress/loadable';
+import MenuGuide from './_documents/Menu/loadable';
+import ModalGuide from './_documents/Modal/loadable';
+import PaginationGuide from './_documents/Pagination/loadable';
+import PopoverGuide from './_documents/Popover/loadable';
+import PopconfirmGuide from './_documents/Popconfirm/loadable';
+import RadioGuide from './_documents/Radio/loadable';
+import RaterGuide from './_documents/Rater/loadable';
+import SkeletonGuide from './_documents/Skeleton/loadable';
+import SpeedDialGuide from './_documents/SpeedDial/loadable';
+import StepperGuide from './_documents/Stepper/loadable';
+import SwitchGuide from './_documents/Switch/loadable';
+import TabsGuide from './_documents/Tabs/loadable';
+import TimelineGuide from './_documents/Timeline/loadable';
+import TooltipGuide from './_documents/Tooltip/loadable';
+import TypographyGuide from './_documents/Typography/loadable';
+import ConfirmGuide from './_documents/Confirm/loadable';
+import MultiSelectGuide from './_documents/MultiSelect/loadable';
 
 const ToggleFullScreen = ({ toggleFullScreen, className }) => (
   <Button
@@ -120,7 +120,7 @@ const Guide = () => {
                 <Route path="/document/tooltip" component={ TooltipGuide } />
                 <Route path="/document/popconfirm" component={ PopconfirmGuide } />
                 <Route path="/document/typography" component={ TypographyGuide } />
-                <Route path="/" component={IconGuide} />
+                {/* <Route path="/" component={IconGuide} /> */}
               </Switch>
               </div>
             </div>
