@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": ">=10.15.3",
-    "yarn": ">=1.16.0"
+    "node": "~12.14.0",
+    "yarn": "~1.21.1"
   },
   "scripts": {
     "fork-ui:lint-css": "stylelint fork-ui/components/**/*.scss",
