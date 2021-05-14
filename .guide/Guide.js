@@ -18,7 +18,7 @@ import CollapseGuide from './_documents/Collapse/loadable';
 import DrawerGuide from './_documents/Drawer/loadable';
 import FlexGuide from './_documents/Flex/loadable';
 import FormGuide from './_documents/Form/loadable';
-// import IconGuide from './_documents/Icon/loadable';
+import IconGuide from './_documents/Icon/loadable';
 import ImageGuide from './_documents/Image/loadable';
 import LoaderGuide from './_documents/Loader/loadable';
 import ProgressGuide from './_documents/Progress/loadable';
@@ -101,7 +101,7 @@ const Guide = () => {
                 <Route path="/document/drawer" component={ DrawerGuide } />
                 <Route path="/document/flex" component={ FlexGuide } />
                 <Route path="/document/inputfield" component={ FormGuide } />
-                {/* <Route path="/document/icon" component={ IconGuide } /> */}
+                <Route path="/document/icon" component={ IconGuide } />
                 <Route path="/document/image" component={ ImageGuide } />
                 <Route path="/document/loader" component={ LoaderGuide } />
                 <Route path="/document/progress" component={ ProgressGuide } />
@@ -120,7 +120,7 @@ const Guide = () => {
                 <Route path="/document/tooltip" component={ TooltipGuide } />
                 <Route path="/document/popconfirm" component={ PopconfirmGuide } />
                 <Route path="/document/typography" component={ TypographyGuide } />
-                {/* <Route path="/" component={IconGuide} /> */}
+                <Route path="/" component={IconGuide} />
               </Switch>
               </div>
             </div>
