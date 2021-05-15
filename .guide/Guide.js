@@ -39,6 +39,7 @@ import TooltipGuide from './_documents/Tooltip/loadable';
 import TypographyGuide from './_documents/Typography/loadable';
 import ConfirmGuide from './_documents/Confirm/loadable';
 import MultiSelectGuide from './_documents/MultiSelect/loadable';
+import SystemDesign from './SystemDesign/loadable';
 
 const ToggleFullScreen = ({ toggleFullScreen, className }) => (
   <Button
@@ -120,7 +121,7 @@ const Guide = () => {
                 <Route path="/document/tooltip" component={ TooltipGuide } />
                 <Route path="/document/popconfirm" component={ PopconfirmGuide } />
                 <Route path="/document/typography" component={ TypographyGuide } />
-                <Route path="/" component={IconGuide} />
+                <Route path="/" component={SystemDesign} />
               </Switch>
               </div>
             </div>

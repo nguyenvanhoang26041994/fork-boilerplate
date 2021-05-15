@@ -5,10 +5,8 @@ import { Loader } from '@fork-ui/components/core';
 const Demo = () => {
   return (
     <Wrapper span="2em">
-      <Loader.Dots wave />
-      <Loader.Dots wave color="var(--red)" />
-      <Loader.Dots wave color="var(--green)" />
-      <Loader.Dots wave color="pink" size={32} />
+      <Loader.Dots animation="wave" />
+      <Loader.Dots animation="wave" color="var(--green)" size="32px" />
     </Wrapper>
   );
 };

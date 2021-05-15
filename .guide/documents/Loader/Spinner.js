@@ -6,9 +6,8 @@ const Demo = () => {
   return (
     <Wrapper span="2em">
       <Loader.Spinner />
-      <Loader.Spinner color="var(--red)" />
-      <Loader.Spinner color="var(--green)" />
-      <Loader.Spinner color="pink" size={32} />
+      <Loader.Spinner color="var(--red)" size="50px" />
+      <Loader.Spinner color="pink" size="5em" />
     </Wrapper>
   );
 };

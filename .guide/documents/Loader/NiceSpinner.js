@@ -4,13 +4,10 @@ import Wrapper from '../../shared/Wrapper';
 
 const Demo = () => {
   return (
-    <Wrapper span="3rem" className="items-center justify-center">
-      <Loader.Dots />
-      <Loader.Dots animation="wave" />
-      <Loader.Spinner />
+    <Wrapper span="3rem">
       <Loader.NiceSpinner />
-      <Loader.Attract />
-      <Loader.Liquid />
+      <Loader.NiceSpinner size="100" color="var(--green)" />
+      <Loader.NiceSpinner size="150" color="skeleton" />
     </Wrapper>
   );
 };

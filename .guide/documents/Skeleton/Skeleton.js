@@ -12,11 +12,6 @@ const Demo = () => {
           <Skeleton shape="p" w="40%" />
         </Flex>
       </Flex>
-      <Skeleton shape="rect" w="100%" h="200px" />
-      <Skeleton shape="rect" w="60%" h="40px" />
-      <Skeleton shape="p" w="30%" />
-      <Skeleton shape="p" w="40%" />
-      <Skeleton shape="p" w="100%" />
       <Flex items="center" className="mt-5">
         <Skeleton shape="rect" w="200px" h="200px" />
         <Flex col className="ml-10 flex-1">
