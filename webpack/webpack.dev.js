@@ -7,7 +7,6 @@ module.exports = Object.assign({}, webpackBaseConfig, {
   output: {
     path: path.join(rootDir, 'dist'),
     filename: '[name].js',
-    chunkIds: 'named',
   },
   devServer: {
     contentBase: path.join(rootDir, 'public'),

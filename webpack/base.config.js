@@ -46,7 +46,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(rootDir, 'src/index.html'),
-    })
+      inject: 'body',
+    }),
   ],
   resolve: {
     alias: {
