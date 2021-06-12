@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.prod.js",
     "make:core": "node .toolkit/make-core-component/excute",
     "make:component": "node .toolkit/make-component/excute",
     "make:container": "node .toolkit/make-container/excute",

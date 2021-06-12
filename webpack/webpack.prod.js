@@ -6,7 +6,9 @@ module.exports = Object.assign({}, webpackBaseConfig, {
   mode: 'production',
   output: {
     path: path.join(rootDir, 'dist'),
-    filename: '[name].[contenthash].js'
+    filename: '[name].[contenthash].js',
   },
-  optimization: {},
+  optimization: {
+    chunkIds: 'named'
+  },
 });
