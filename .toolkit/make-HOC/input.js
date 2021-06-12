@@ -1,4 +1,4 @@
 module.exports = {
   path: '',
-  withHOC: 'withTheHOC'
+  withHOC: process.argv[2],
 };
