@@ -1,6 +1,0 @@
-[submodule "fork-ui"]
-	path = fork-ui
-	url = https://github.com/nguyenvanhoang26041994/fork-ui.git
-[submodule "tabler-icons"]
-	path = tabler-icons
-	url = https://github.com/nguyenvanhoang26041994/tabler-icons.git

@@ -1,0 +1,23 @@
+import React from 'react';
+import cn from 'classnames';
+import PropTypes from 'prop-types';
+
+const {{Component}} = React.forwardRef(({ className, ...otherProps }, ref) => {
+  return (
+    <div
+      ref={ref}
+      className={cn('f{{kebabClassName}}', className)}
+      {...otherProps}
+    >
+
+    </div>
+  );
+});
+
+{{Component}}.displayName = '{{Component}}';
+{{Component}}.propTypes = {
+  className: PropTypes.string,
+};
+{{Component}}.defaultProps = {};
+
+export default {{Component}};

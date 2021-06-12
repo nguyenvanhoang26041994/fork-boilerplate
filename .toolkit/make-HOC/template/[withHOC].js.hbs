@@ -1,0 +1,19 @@
+import React from 'react';
+// import PropTypes from 'prop-types';
+
+const {{withHOC}} = (InputComponent) => {
+  const OutputComponent = (props) => {
+    return (
+      <InputComponent {...props} />
+    );
+  };
+
+  OutputComponent.displayName = `{{withHOC}}(${InputComponent.displayName || InputComponent.name || 'Anonymous'})`;
+  OutputComponent.propTypes = {};
+  OutputComponent.defaultProps = {};
+
+  return OutputComponent;
+};
+
+export default {{withHOC}};
+

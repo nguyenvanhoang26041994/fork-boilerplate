@@ -1,82 +1,67 @@
-const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const rootDir = process.cwd();
 
-function as(entry) {
-  if (/\.css$/.test(entry)) return 'style';
-  if (/\.woff$/.test(entry)) return 'font';
-  if (/\.png$/.test(entry)) return 'image';
-  return 'script';
-}
-
-module.exports = (options) => ({
-  mode: options.mode,
-  entry: options.entry,
-  output: options.output,
-  resolve: {
-    alias: {
-      '@fork-ui': path.resolve('fork-ui'),
+module.exports = {
+  entry: {
+    vendors: [
+      'react',
+      'react-dom',
+      'classnames',
+      'prop-types',
+      'styled-components',
+      'lodash',
+      'redux',
+      'react-redux',
+      'react-router-dom',
+    ],
+    priorities: {
+      import: [
+        path.join(rootDir, 'fork-ui/utils/lazy'),
+        path.join(rootDir, 'fork-ui/HOCs/withIconEnhancer'),
+        path.join(rootDir, 'fork-ui/HOCs/withIconLazy')
+      ],
+      dependOn: 'vendors',
     },
+    main: {
+      import: path.join(rootDir, 'src/index.js'),
+      dependOn: 'priorities',
+    }
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: options.babelQuery,
-        },
-      },
-      {
-        test: /\.s?css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.html$/,
-        use: 'html-loader',
-      },
-    ],
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all'
+          loader: 'babel-loader'
         }
       },
-    },
+      {
+        test: /\.(scss|sass)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ]
   },
   plugins: [
-    new webpack.EnvironmentPlugin({
-      NODE_ENV: process.env.NODE_ENV,
-    }),
     new HtmlWebpackPlugin({
-      inject: true,
-      template: 'src/index.html',
-    }),
-    new FaviconsWebpackPlugin(path.resolve('src/assets/img/icon-512x512.png')),
-    new PreloadWebpackPlugin({
-      as,
-      rel: 'preload',
-      include: ['vendors', 'main'],
-    }),
-    new PreloadWebpackPlugin({
-      as,
-      rel: 'prefetch',
-    }),
-    new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'defer',
-    }),
-    ...options.plugins,
+      template: path.join(rootDir, 'src/index.html'),
+    })
   ],
-  devtool: options.devtool,
-  target: 'web',
-  performance: options.performance || {},
-});
+  resolve: {
+    alias: {
+      '@components': path.join(rootDir, 'src/components'),
+      '@containers': path.join(rootDir, 'src/containers'),
+      '@hooks': path.join(rootDir, 'src/hooks'),
+      '@HOCs': path.join(rootDir, 'src/HOCs'),
+      '@pages': path.join(rootDir, 'src/pages'),
+      '@utils': path.join(rootDir, 'src/utils'),
+      '@reducers': path.join(rootDir, 'src/reducers'),
+      '@selectors': path.join(rootDir, 'src/selectors'),
+      '@constants': path.join(rootDir, 'src/constants'),
+      '@store': path.join(rootDir, 'src/store'),
+      '@fork-ui': path.join(rootDir, 'fork-ui'),
+      '@style-guide': path.join(rootDir, '.style-guide'),
+    }
+  },
+};

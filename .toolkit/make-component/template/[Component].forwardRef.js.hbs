@@ -1,0 +1,23 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import { {{Component}}Wrapper } from './styled';
+
+const {{Component}} = React.forwardRef(({ className, ...otherProps }, ref) => {
+  return (
+    <{{Component}}Wrapper
+      ref={ref}
+      className={className}
+      {...otherProps}
+    >
+    </{{Component}}Wrapper>
+  );
+});
+
+{{Component}}.displayName = '{{Component}}';
+{{Component}}.propTypes = {
+  className: PropTypes.string,
+};
+{{Component}}.defaultProps = {};
+
+export default {{Component}};

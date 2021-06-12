@@ -1,0 +1,19 @@
+import React from 'react';
+import cn from 'classnames';
+import PropTypes from 'prop-types';
+
+const {{Component}} = ({ className, ...otherProps }) => {
+  return (
+    <div className={cn('f{{kebabClassName}}', className)} {...otherProps}>
+
+    </div>
+  );
+};
+
+{{Component}}.displayName = '{{Component}}';
+{{Component}}.propTypes = {
+  className: PropTypes.string,
+};
+{{Component}}.defaultProps = {};
+
+export default {{Component}};

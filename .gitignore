@@ -3,8 +3,4 @@ node_modules
 .DS_Store
 npm-debug.log
 .idea
-/.guide/_documents
-/.guide/dist
-.now
-.vercel
 yarn.lock

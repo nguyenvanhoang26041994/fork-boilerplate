@@ -1,0 +1,5 @@
+import withIconLazy from '../HOCs/withIconLazy';
+
+{{#each icons}}
+export const {{this.Component}} = withIconLazy('{{this.Component}}', () => import('./{{this.Component}}'));
+{{/each}}
