@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, Tooltip } from '@fork-ui/components/core';
+import VisualSearch from '@fork-ui/components/VisualSearch';
 import IndentDecrease from '@fork-ui/components/icons/all/IndentDecrease';
 import IndentIncrease from '@fork-ui/components/icons/all/IndentIncrease';
 import Search from '@fork-ui/components/icons/all/Search';
@@ -67,8 +68,43 @@ const SwitchButton = styled.div`
     border-color: var(--primary);
   }
 `;
-
+console.log(VisualSearch);
 const TopNavigation = ({ toggleExpand, toggleFullScreen, isExpanded, isDark, toggleIsDark, ...otherProps }) => {
+  const {
+    facets,
+    setFacets,
+    addFacetAt,
+    addFacetToLast,
+    removeFacetAt,
+    removeLeftFacetAt,
+    removeLastFacet,
+    removeAllFacet,
+  } = VisualSearch.useStore([
+    { type: 'Text', props: { value: 'ReactJS'} },
+    { type: 'Text', props: { value: 'Angular'} },
+    { type: 'Text', props: { value: 'Vue'} },
+    { type: 'Text', props: { value: 'JS'} },
+  ]);
+
+  const {
+    onFacetClose,
+    onInputKeyDown,
+    onInputBlur,
+    mainInputRef,
+    visualSearchRef,
+    onMainInputKeyDown,
+    onMainInputBlur,
+    onVisualSearchFocus,
+  } = VisualSearch.useHandler({
+    facets,
+    setFacets,
+    addFacetAt,
+    addFacetToLast,
+    removeFacetAt,
+    removeLeftFacetAt,
+    removeLastFacet,
+    removeAllFacet
+  });
   return (
     <TopNavContainer {...otherProps}>
       <TopNavWrapper>
@@ -80,7 +116,17 @@ const TopNavigation = ({ toggleExpand, toggleFullScreen, isExpanded, isDark, tog
               icon={isExpanded ? <IndentDecrease /> : <IndentIncrease />}
               onClick={toggleExpand}
             />
-            <Button circle ghost icon={<Search />} className="ml-2" />
+            {/* <VisualSearch
+              facets={facets}
+              onFacetClose={onFacetClose}
+              onInputKeyDown={onInputKeyDown}
+              onInputBlur={onInputBlur}
+              mainInputRef={mainInputRef}
+              visualSearchRef={visualSearchRef}
+              onMainInputKeyDown={onMainInputKeyDown}
+              onMainInputBlur={onMainInputBlur}
+              onVisualSearchFocus={onVisualSearchFocus}
+            /> */}
           </NavLeft>
           <NavRight>
             <Tooltip title="Toggle Darkmode">

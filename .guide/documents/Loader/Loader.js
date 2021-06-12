@@ -7,10 +7,10 @@ const Demo = () => {
     <Wrapper span="3rem" className="items-center justify-center">
       <Loader.Dots />
       <Loader.Dots animation="wave" />
+      <Loader.Dots animation="move" />
       <Loader.Spinner />
       <Loader.NiceSpinner />
       <Loader.Attract />
-      <Loader.Liquid />
     </Wrapper>
   );
 };

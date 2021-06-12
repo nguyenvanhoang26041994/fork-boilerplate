@@ -52,11 +52,14 @@ const makeTablerIcons = function() {
 
   icons = icons.map(iconName => makeTablerIcon(iconName));
   const header = '// THANK TO https://github.com/tabler/tabler-icons\n';
+  const loadabledImport = `import loadable from '../../utils/loadable';\n`;
 
-  icons = icons.map(componentName => `export { default as ${componentName} } from './all/${componentName}';`);
+  // icons = icons.map(componentName => `export { default as ${componentName} } from './all/${componentName}';`);
+  icons = icons.map(componentName => `const _${componentName} = loadable(() => import('./all/${componentName}'));\n_${componentName}.displayName = '${componentName}Loadable';\nexport const ${componentName} = _${componentName};`);
+
   makeFile(
     path.join(rcNeumorphismRoot, '/components/icons/index.js'),
-    header + icons.join('\n')
+    header + loadabledImport + icons.join('\n')
   );
 };
 

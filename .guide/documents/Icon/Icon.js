@@ -1,12 +1,12 @@
 import React from 'react';
 import Wrapper from '../../shared/Wrapper';
-import { BrandGithub, Alarm, Adjustments } from '@fork-ui/components/icons';
+import { X, Trash, Adjustments } from '@fork-ui/components/icons';
 
 const Demo = () => {
   return (
     <Wrapper>
-      <BrandGithub />
-      <Alarm />
+      <X />
+      <Trash />
       <Adjustments />
     </Wrapper>
   );
