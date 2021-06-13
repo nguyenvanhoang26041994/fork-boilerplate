@@ -1,6 +1,9 @@
 import React from 'react';
 import { DemoBox } from '@style-guide/components';
 import Button from './Button';
+import Size from './Size';
+import Color from './Color';
+// __INJECTED_LINE__
 import * as allCode from './code';
 
 export default () => {

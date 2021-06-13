@@ -1,13 +1,14 @@
 import React from 'react';
 import { DemoBox } from '@style-guide/components';
-import {{MainGuide}} from './{{MainGuide}}';
+import {{Component}} from './{{Component}}';
+// __INJECTED_LINE__
 import * as allCode from './code';
 
 export default () => {
   return (
     <div>
-      <DemoBox name={allCode.{{MainGuide}}.demoName} code={allCode.{{MainGuide}}.code}>
-        <{{MainGuide}} />
+      <DemoBox name={allCode.{{Component}}.demoName} code={allCode.{{Component}}.code}>
+        <{{Component}} />
       </DemoBox>
     </div>
   );
