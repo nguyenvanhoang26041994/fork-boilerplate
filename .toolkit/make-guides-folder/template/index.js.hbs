@@ -1,18 +1,14 @@
 import React from 'react';
 import { DemoBox } from '@style-guide/components';
-
-import LazyIcon from './LazyIcon';
-import Icon from './Icon';
-
+import {{MainGuide}} from './{{MainGuide}}';
 import * as allCode from './code';
 
 export default () => {
   return (
     <div>
-      <DemoBox name={allCode.Icon.demoName} code={allCode.Icon.code}>
-        <Icon />
+      <DemoBox name={allCode.{{MainGuide}}.demoName} code={allCode.{{MainGuide}}.code}>
+        <{{MainGuide}} />
       </DemoBox>
-      <LazyIcon />
     </div>
   );
 };

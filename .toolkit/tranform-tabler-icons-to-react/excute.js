@@ -2,7 +2,7 @@ const path = require('path');
 const rimraf = require('rimraf');
 const { reduce } = require('lodash');
 const Handlebars = require('handlebars');
-const { makeFile, readFile, readFolder, isExist } = require('../utils/file-system');
+const { makeFile, readFile, readFolder } = require('../utils/file-system');
 const input = require('./input');
 const getIconReactInfo = require('./getIconReactInfo');
 
