@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 import lazy from '@utils/lazy';
 
-const IconGuides = lazy(() => import('../guides/Icon'));
-const ButtonGuides = lazy(() => import('../guides/Button'));
+const IconGuides = lazy(() => import(/* webpackPrefetch: true */ '../guides/Icon'));
+const ButtonGuides = lazy(() => import(/* webpackPrefetch: true */ '../guides/Button'));
 // __INJECTED_LINE_GUIDE__
 
 const StyleGuide = () => {
