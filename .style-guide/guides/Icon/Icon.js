@@ -2,7 +2,7 @@ import React from 'react';
 import { Wrapper } from '@style-guide/components';
 import { BrandGithub, Alarm, Adjustments } from '@fork-ui/icons/lazy';
 
-const Demo = () => {
+export default () => {
   return (
     <Wrapper>
       <BrandGithub />
@@ -11,5 +11,3 @@ const Demo = () => {
     </Wrapper>
   );
 };
-
-export default Demo;
