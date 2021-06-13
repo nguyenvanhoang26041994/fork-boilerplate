@@ -13,7 +13,7 @@
     "make:icons": "node .toolkit/make-icons/excute",
     "make:HOC": "node .toolkit/make-HOC/excute",
     "make:hook": "node .toolkit/make-hook/excute",
-    "make:guides-folder": "node .toolkit/make-guides-folder/excute",
+    "make:guides": "node .toolkit/make-guides/excute",
     "make:guide": "node .toolkit/make-guide/excute",
     "transform:icons": "node .toolkit/transform-tabler-icons-to-react/excute",
     "transform:guides": "node .toolkit/transform-guides-for-demo-box/excute",

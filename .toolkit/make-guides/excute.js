@@ -37,4 +37,13 @@ const SPLIT_STRING_REGEX = /([A-Z]{1}[a-z0-9]+)/g;
     path.join(input.guidesPath, `${input.Component}/code.js`),
     Handlebars.compile(hbs['code.js'])({ Component: input.Component, demoName: demoName })
   );
+
+  // inject to StylGuide
+  const currentStyledGuide = readFile(input.StyleGuidePath);
+  makeFile(
+    input.StyleGuidePath,
+    currentStyledGuide
+      .replace('// __INJECTED_LINE_GUIDE__', `const ${input.Component}Guides = lazy(() => import(/* webpackPrefetch: true */ '../guides/${input.Component}'));\n// __INJECTED_LINE_GUIDE__'`)
+      .replace('{/* __INJECTED_LINE_ROUTER__ */}', `<Route path={\`\${path}/${input.Component.toLowerCase()}\`} component={${input.Component}Guides} />\n        {/* __INJECTED_LINE_ROUTER__ */}`)
+  );
 })();
