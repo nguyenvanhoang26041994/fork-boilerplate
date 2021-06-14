@@ -5,6 +5,7 @@ const rootDir = process.cwd();
 module.exports = {
   entry: {
     vendors: [
+      'resize-observer-polyfill',
       'react',
       'react-dom',
       'classnames',

@@ -145,3 +145,19 @@ export default LazyIconDemo;
   demoName: 'Lazy Icon',
 }
 
+
+export const SomeNiceIcons = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Icon } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Icon />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Some Nice Icons',
+}
