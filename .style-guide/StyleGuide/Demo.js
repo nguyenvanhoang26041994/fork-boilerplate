@@ -29,8 +29,8 @@ const Wrapper = styled.div`
   background-color: var(--bg);
 `;
 
-export default ({ name, children, centered, style }) => (
-  <Wrapper style={style}>
+export default ({ name, children, centered, style, className }) => (
+  <Wrapper style={style} className={className}>
     <DemoName>
       {name}
     </DemoName>

@@ -17,16 +17,18 @@ import TabsMainGuide from '@style-guide/guides/Tabs/Tabs';
 import CollapseMainGuide from '@style-guide/guides/Collapse/Collapse';
 import StepperMainGuide from '@style-guide/guides/Stepper/Stepper';
 import PaginationMainGuide from '@style-guide/guides/Pagination/Pagination';
+import ProgressMainGuide from '@style-guide/guides/Progress/Progress';
+import FormFieldMainGuide from '@style-guide/guides/FormField/FormField';
 
 const AllGuide = () => {
   return (
     <Flex col w="full">
-      <Flex row w="full" id="colors" style={{ paddingBottom: '1px' }}>
+      <Flex row w="full" style={{ paddingBottom: '1px' }}>
         <Demo name="Colors">
           <ColorsMainGuide />
         </Demo>
       </Flex>
-      <Flex row w="full" id="skeleton-and-button" style={{ paddingBottom: '1px' }}>
+      <Flex row w="full" style={{ paddingBottom: '1px' }}>
         <Flex w="1/2" style={{ paddingRight: '1px' }}>
           <Demo name="Skeleton">
             <SkeletonMainGuide />
@@ -45,7 +47,7 @@ const AllGuide = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex row w="full" id="checkbox" style={{ paddingBottom: '1px' }}>
+      <Flex row w="full" style={{ paddingBottom: '1px' }}>
         <Flex col w="1/3" style={{ paddingRight: '1px' }}>
           <div style={{ paddingBottom: '1px' }}>
             <Demo name="Switch" centered>
@@ -62,7 +64,7 @@ const AllGuide = () => {
               <RadioMainGuide />
             </Demo>
           </div>
-          <Demo name="Collapse">
+          <Demo name="Collapse" className="flex-1">
             <CollapseMainGuide />
           </Demo>
         </Flex>
@@ -94,13 +96,30 @@ const AllGuide = () => {
               <StepperMainGuide />
             </Demo>
           </Flex>
-          <Flex w="full">
-            <Flex w="1/2" style={{ paddingright: '1px' }}>
-              <Demo name="Pagination">
+          <Flex w="full" className="flex-1">
+            <Flex w="1/2" style={{ paddingRight: '1px' }}>
+              <Demo name="Pagination" centered>
                 <PaginationMainGuide />
               </Demo>
             </Flex>
+            <Flex w="1/2">
+              <Demo name="Progress" centered>
+                <ProgressMainGuide />
+              </Demo>
+            </Flex>
           </Flex>
+        </Flex>
+      </Flex>
+      <Flex row w="full" style={{ paddingBottom: '1px' }}>
+        <Flex w="1/2" style={{ paddingRight: '1px' }}>
+          <Demo name="Dialog">
+            
+          </Demo>
+        </Flex>
+        <Flex w="1/2">
+          <Demo name="Form Field">
+            <FormFieldMainGuide />
+          </Demo>
         </Flex>
       </Flex>
     </Flex>

@@ -22,6 +22,8 @@ const TabsGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/g
 const CollapseGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Collapse'));
 const StepperGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Stepper'));
 const PaginationGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Pagination'));
+const ProgressGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Progress'));
+const FormFieldGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/FormField'));
 // __INJECTED_LINE_GUIDE__
 
 const StyleGuide = () => {
@@ -45,6 +47,8 @@ const StyleGuide = () => {
         <Route path={`${path}/collapse`} component={CollapseGuides} />
         <Route path={`${path}/stepper`} component={StepperGuides} />
         <Route path={`${path}/pagination`} component={PaginationGuides} />
+        <Route path={`${path}/progress`} component={ProgressGuides} />
+        <Route path={`${path}/formfield`} component={FormFieldGuides} />
         {/* __INJECTED_LINE_ROUTER__ */}
       </Switch>
     </BrowserRouter>
