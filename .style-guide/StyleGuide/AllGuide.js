@@ -19,6 +19,7 @@ import StepperMainGuide from '@style-guide/guides/Stepper/Stepper';
 import PaginationMainGuide from '@style-guide/guides/Pagination/Pagination';
 import ProgressMainGuide from '@style-guide/guides/Progress/Progress';
 import FormFieldMainGuide from '@style-guide/guides/FormField/FormField';
+import DialogMainGuide from '@style-guide/guides/Dialog/Dialog';
 
 const AllGuide = () => {
   return (
@@ -113,7 +114,7 @@ const AllGuide = () => {
       <Flex row w="full" style={{ paddingBottom: '1px' }}>
         <Flex w="1/2" style={{ paddingRight: '1px' }}>
           <Demo name="Dialog">
-            
+            <DialogMainGuide />
           </Demo>
         </Flex>
         <Flex w="1/2">
