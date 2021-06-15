@@ -20,6 +20,7 @@ import PaginationMainGuide from '@style-guide/guides/Pagination/Pagination';
 import ProgressMainGuide from '@style-guide/guides/Progress/Progress';
 import FormFieldMainGuide from '@style-guide/guides/FormField/FormField';
 import DialogMainGuide from '@style-guide/guides/Dialog/Dialog';
+import TooltipMainGuide from '@style-guide/guides/Tooltip/Tooltip';
 
 const AllGuide = () => {
   return (
@@ -112,10 +113,17 @@ const AllGuide = () => {
         </Flex>
       </Flex>
       <Flex row w="full" style={{ paddingBottom: '1px' }}>
-        <Flex w="1/2" style={{ paddingRight: '1px' }}>
-          <Demo name="Dialog">
-            <DialogMainGuide />
-          </Demo>
+        <Flex col w="1/2" style={{ paddingRight: '1px' }}>
+          <Flex w="full" style={{ paddingBottom: '1px' }}>
+            <Demo name="Dialog">
+              <DialogMainGuide />
+            </Demo>
+          </Flex>
+          <Flex w="full">
+            <Demo name="Tooltip">
+              <TooltipMainGuide />
+            </Demo>
+          </Flex>
         </Flex>
         <Flex w="1/2">
           <Demo name="Form Field">
