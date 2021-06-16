@@ -21,6 +21,7 @@ import ProgressMainGuide from '@style-guide/guides/Progress/Progress';
 import FormFieldMainGuide from '@style-guide/guides/FormField/FormField';
 import DialogMainGuide from '@style-guide/guides/Dialog/Dialog';
 import TooltipMainGuide from '@style-guide/guides/Tooltip/Tooltip';
+import PopoverMainGuide from '@style-guide/guides/Popover/Popover';
 
 const AllGuide = () => {
   return (
@@ -119,15 +120,32 @@ const AllGuide = () => {
               <DialogMainGuide />
             </Demo>
           </Flex>
-          <Flex w="full">
+          <Flex w="full" className="flex-1">
             <Demo name="Tooltip">
               <TooltipMainGuide />
             </Demo>
           </Flex>
         </Flex>
         <Flex w="1/2">
-          <Demo name="Form Field">
+          <Demo name="Form Field" className="flex-1">
             <FormFieldMainGuide />
+          </Demo>
+        </Flex>
+      </Flex>
+      <Flex row w="full" style={{ paddingBottom: '1px' }}>
+        <Flex w="1/3" style={{ paddingRight: '1px' }}>
+          <Demo name="Popover">
+            <PopoverMainGuide />
+          </Demo>
+        </Flex>
+        <Flex w="1/3" style={{ paddingRight: '1px' }}>
+          <Demo name="Popover">
+            <PopoverMainGuide />
+          </Demo>
+        </Flex>
+        <Flex w="1/3">
+          <Demo name="Popover">
+            <PopoverMainGuide />
           </Demo>
         </Flex>
       </Flex>

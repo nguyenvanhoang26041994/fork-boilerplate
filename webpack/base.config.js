@@ -66,4 +66,7 @@ module.exports = {
       '@style-guide': path.join(rootDir, '.style-guide'),
     }
   },
+  watchOptions: {
+    ignored: ['**/node_modules', path.join(rootDir, 'fork-ui/src/icons')],
+  },
 };

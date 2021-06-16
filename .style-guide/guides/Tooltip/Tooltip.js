@@ -25,8 +25,7 @@ export default () => {
         className="tippy-box ftooltip"
         data-placement="top"
         style={{
-          maxWidth:
-          '200px',
+          maxWidth: '200px',
           backgroundColor: 'var(--skeleton-color)',
           color: 'var(--color)',
         }}
