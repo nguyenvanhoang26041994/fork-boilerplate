@@ -21,7 +21,8 @@
     "sub:update": "git submodule update",
     "sub:fork-ui": "git submodule add https://github.com/nguyenvanhoang26041994/fork-ui.git",
     "sub:tabler-icons": "git submodule add https://github.com/nguyenvanhoang26041994/tabler-icons.git",
-    "init:start": "yarn sub:update"
+    "init:start": "yarn sub:update",
+    "deploy": "yarn build && firebase deploy --only hosting:fork-boilerplate"
   },
   "author": "Hoang Nguyen",
   "license": "MIT",

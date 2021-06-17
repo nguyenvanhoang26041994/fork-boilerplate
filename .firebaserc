@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "fork-boilerplate"
+  },
+  "targets": {
+    "fork-boilerplate": {
+      "hosting": {
+        "fork-boilerplate": [
+          "fork-boilerplate"
+        ]
+      }
+    }
+  }
+}
