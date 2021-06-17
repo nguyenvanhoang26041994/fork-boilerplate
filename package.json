@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "yarn build",
     "dev": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.prod.js",
     "make:core": "node .toolkit/make-core-component/excute",
