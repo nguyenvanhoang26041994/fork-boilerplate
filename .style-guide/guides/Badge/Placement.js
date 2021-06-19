@@ -1,151 +1,10 @@
-export const Badge = {
-  code: `import React from 'react';
-import { Wrapper, FancyBox } from '@style-guide/components';
-import { Badge } from '@fork-ui/core';
-
-export default () => {
-  return (
-    <Wrapper span="2rem">
-      <Badge.Dot overlap>
-        <FancyBox size="50px" circle/>
-      </Badge.Dot>
-      <Badge.Dot>
-        <FancyBox size="50px" />
-      </Badge.Dot>
-      <Badge.Counter count={7}>
-        <FancyBox size="50px" />
-      </Badge.Counter>
-      <Badge.Label label="NEW">
-        <FancyBox size="50px" />
-      </Badge.Label>
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Badge',
-}
-
-export const Color = {
-  code: `import React from 'react';
-import { Wrapper, FancyBox } from '@style-guide/components';
-import { Badge } from '@fork-ui/core';
-
-export default () => {
-  return (
-    <Wrapper span="25px">
-      <Badge.Dot color="var(--green)">
-        <FancyBox size="50px" />
-      </Badge.Dot>
-      <Badge.Counter count={7} color="var(--primary)">
-        <FancyBox size="50px" />
-      </Badge.Counter>
-      <Badge.Label label="NEW" color="pink">
-        <FancyBox size="50px" />
-      </Badge.Label>
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Color',
-}
-
-export const Custom = {
-  code: `import React from 'react';
-import { Wrapper, FancyBox } from '@style-guide/components';
-import { Badge, Avatar } from '@fork-ui/core';
-import { Stars } from '@fork-ui/icons/lazy';
-
-const PureBadge = Badge.PureBadge;
-
-export default () => {
-  return (
-    <Wrapper span="2rem">
-      <PureBadge
-        overlap
-        placement="bottom-end"
-        badge={(
-          <Avatar
-            style={{ border: '2px solid var(--bg)' }}
-            className="fbadge-ui"
-            color="var(--primary)"
-            size="0.5em"
-          >
-            HG
-          </Avatar>
-        )}
-      >
-        <FancyBox circle size="50px" />
-      </PureBadge>
-      <PureBadge
-        placement="top-end"
-        badge={<Stars className="fbadge-ui" color="var(--primary)" />}
-      >
-        <FancyBox size="50px" />
-      </PureBadge>
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Custom',
-}
-
-export const OverflowCount = {
-  code: `import React from 'react';
-import { Wrapper, FancyBox } from '@style-guide/components';
-import { Badge } from '@fork-ui/core';
-
-export default () => {
-  return (
-    <Wrapper span="2em">
-      <Badge.Counter count={999} overflow={50}>
-        <FancyBox size="50px" />
-      </Badge.Counter>
-      <Badge.Counter
-        count={999}
-        overflow={50}
-        renderOverflow={overflow => \`More than \${overflow}\`}
-      >
-        <FancyBox size="50px" />
-      </Badge.Counter>
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Overflow Count',
-}
-
-export const Overlap = {
-  code: `import React from 'react';
-import { Wrapper, FancyBox } from '@style-guide/components';
-import { Badge } from '@fork-ui/core';
-
-export default () => {
-  return (
-    <Wrapper span="20px">
-      <Badge.Dot overlap>
-        <FancyBox circle size="50px" />
-      </Badge.Dot>
-      <Badge.Counter count={7} overlap>
-        <FancyBox circle size="50px" />
-      </Badge.Counter>
-      <Badge.Label label="NEW" overlap>
-        <FancyBox circle size="50px" />
-      </Badge.Label>
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Overlap',
-}
-
-export const Placement = {
-  code: `import React from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
 import { FancyBox } from '@style-guide/components';
 import { Badge, Flex, Switch, Button } from '@fork-ui/core';
 
-const SwitchButton = styled.div\`
+const SwitchButton = styled.div`
   display: flex;
   align-items: center;
   background-color: var(--btn-bg);
@@ -169,15 +28,15 @@ const SwitchButton = styled.div\`
     background-color: var(--primary);
     border-color: var(--primary);
   }
-\`;
+`;
 
-const FlexStyled = styled(Flex)\`
+const FlexStyled = styled(Flex)`
   &.fancy-box-circle {
     .fancy-box {
       border-radius: 999px !important;
     }
   }
-\`;
+`;
 
 export default () => {
   const [{ checked, toggle }] = Switch.useSwitch(false);
@@ -322,7 +181,3 @@ export default () => {
     </FlexStyled>
   );
 };
-`,
-  demoName: 'Placement',
-}
-
