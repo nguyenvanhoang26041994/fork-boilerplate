@@ -1,5 +1,5 @@
 import React from 'react';
-import { DemoBox } from '@style-guide/components';
+import DemoBox from '@style-guide/containers/DemoBox';
 import Tooltip from './Tooltip';
 import Placement from './Placement';
 // __INJECTED_LINE__

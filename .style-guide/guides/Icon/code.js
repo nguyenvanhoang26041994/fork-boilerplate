@@ -1,3 +1,21 @@
+export const Color = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { BrandGithub, Alarm, Adjustments } from '@fork-ui/icons/lazy';
+
+export default () => {
+  return (
+    <Wrapper>
+      <BrandGithub color="var(--primary)" />
+      <Alarm color="red" />
+      <Adjustments color="#00ffe9" />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Color',
+}
+
 export const Icon = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
@@ -145,19 +163,60 @@ export default LazyIconDemo;
   demoName: 'Lazy Icon',
 }
 
-
-export const SomeNiceIcons = {
+export const Size = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
-import { Icon } from '@fork-ui/core';
+import { Alarm } from '@fork-ui/icons/lazy';
 
 export default () => {
   return (
     <Wrapper>
-      <Icon />
+      <Alarm size="1rem" />
+      <Alarm size="1.5rem" />
+      <Alarm size="30px" />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Size',
+}
+
+export const SomeNiceIcons = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import {
+  X, AdjustmentsAlt, AdjustmentsHorizontal,
+  Alarm, AlertCircle, Apps,
+  Archive, Bookmarks, BellMinus,
+  BellRinging, Ban, HandFinger,
+  LayoutGrid, BluetoothConnected, BrandFacebook,
+  BuildingCommunity, Check
+} from '@fork-ui/icons/lazy';
+
+export default () => {
+  return (
+    <Wrapper>
+      <X />
+      <AdjustmentsAlt />
+      <AdjustmentsHorizontal />
+      <Alarm />
+      <AlertCircle />
+      <Apps />
+      <Archive />
+      <Bookmarks />
+      <BellMinus />
+      <BellRinging />
+      <Ban />
+      <HandFinger />
+      <LayoutGrid />
+      <BluetoothConnected />
+      <BrandFacebook />
+      <BuildingCommunity />
+      <Check />
     </Wrapper>
   );
 };
 `,
   demoName: 'Some Nice Icons',
 }
+

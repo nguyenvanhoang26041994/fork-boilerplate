@@ -1,14 +1,13 @@
 import React from 'react';
 import { Wrapper } from '@style-guide/components';
 import { Button } from '@fork-ui/core';
+import { Power } from '@fork-ui/icons/lazy';
 
 export default () => {
   return (
     <Wrapper>
-      <Button>Basic</Button>
-      <Button color="primary">Primary</Button>
-      <Button color="danger">Danger</Button>
-      <Button color="transparent">Transparent</Button>
+      <Button loading>Basic</Button>
+      <Button loading shape="circle" icon={<Power />} />
     </Wrapper>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import {
   BrowserRouter,
   Switch,
@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom';
 import lazy from '@utils/lazy';
 import { withLayout } from '@style-guide/containers/layout';
+import CodeDrawer from '@style-guide/containers/CodeDrawer';
+import CodeDrawerContext from '@style-guide/containers/CodeDrawer/CodeDrawer.Context';
 
 const AllGuide = lazy(() => import(/* webpackPrefetch: true */ './AllGuide'));
 const IconGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Icon'));
@@ -29,33 +31,62 @@ const DialogGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide
 const TooltipGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Tooltip'));
 const PopoverGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Popover'));
 
+const useCodeDrawer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [code, setCode] = useState(null);
+  const [header, setHeader] = useState(null);
+  const doClose = useCallback(({}) => {
+    setIsOpen(false);
+    setCode(null);
+    setHeader(null);
+  }, [setIsOpen, setCode, setHeader]);
+  const doOpen = useCallback((_code, _header) => {
+    setIsOpen(true);
+    setCode(_code);
+    setHeader(_header);
+  }, [setIsOpen, setCode, setHeader]);
+
+  return {
+    isOpen,
+    setIsOpen,
+    doClose,
+    doOpen,
+    code,
+    header,
+  }
+};
+
 const Document = () => {
   let { path } = useRouteMatch();
+  const codeDrawer = useCodeDrawer();
+
   return (
-    <Switch>
-      <Route exact path={path} component={AllGuide} />
-      <Route path={`${path}/icon`} component={IconGuides} />
-      <Route path={`${path}/button`} component={ButtonGuides} />
-      <Route path={`${path}/skeleton`} component={SkeletonGuides} />
-      <Route path={`${path}/checkbox`} component={CheckboxGuides} />
-      <Route path={`${path}/radio`} component={RadioGuides} />
-      <Route path={`${path}/switch`} component={SwitchGuides} />
-      <Route path={`${path}/colors`} component={ColorsGuides} />
-      <Route path={`${path}/badge`} component={BadgeGuides} />
-      <Route path={`${path}/loader`} component={LoaderGuides} />
-      <Route path={`${path}/avatar`} component={AvatarGuides} />
-      <Route path={`${path}/tabs`} component={TabsGuides} />
-      <Route path={`${path}/collapse`} component={CollapseGuides} />
-      <Route path={`${path}/stepper`} component={StepperGuides} />
-      <Route path={`${path}/pagination`} component={PaginationGuides} />
-      <Route path={`${path}/progress`} component={ProgressGuides} />
-      <Route path={`${path}/formfield`} component={FormFieldGuides} />
-      <Route path={`${path}/dialog`} component={DialogGuides} />
-      <Route path={`${path}/tooltip`} component={TooltipGuides} />
-      <Route path={`${path}/popover`} component={PopoverGuides} />
-      {/* <Route path={`${path}/typo`} component={TypoGuides} /> */}
-      {/* __INJECTED_LINE_ROUTER__ */}
-    </Switch>
+    <CodeDrawerContext.Provider value={codeDrawer}>
+      <Switch>
+        <Route exact path={path} component={AllGuide} />
+        <Route path={`${path}/icon`} component={IconGuides} />
+        <Route path={`${path}/button`} component={ButtonGuides} />
+        <Route path={`${path}/skeleton`} component={SkeletonGuides} />
+        <Route path={`${path}/checkbox`} component={CheckboxGuides} />
+        <Route path={`${path}/radio`} component={RadioGuides} />
+        <Route path={`${path}/switch`} component={SwitchGuides} />
+        <Route path={`${path}/colors`} component={ColorsGuides} />
+        <Route path={`${path}/badge`} component={BadgeGuides} />
+        <Route path={`${path}/loader`} component={LoaderGuides} />
+        <Route path={`${path}/avatar`} component={AvatarGuides} />
+        <Route path={`${path}/tabs`} component={TabsGuides} />
+        <Route path={`${path}/collapse`} component={CollapseGuides} />
+        <Route path={`${path}/stepper`} component={StepperGuides} />
+        <Route path={`${path}/pagination`} component={PaginationGuides} />
+        <Route path={`${path}/progress`} component={ProgressGuides} />
+        <Route path={`${path}/formfield`} component={FormFieldGuides} />
+        <Route path={`${path}/dialog`} component={DialogGuides} />
+        <Route path={`${path}/tooltip`} component={TooltipGuides} />
+        <Route path={`${path}/popover`} component={PopoverGuides} />
+        {/* __INJECTED_LINE_ROUTER__ */}
+      </Switch>
+      <CodeDrawer />
+    </CodeDrawerContext.Provider>
   );
 };
 

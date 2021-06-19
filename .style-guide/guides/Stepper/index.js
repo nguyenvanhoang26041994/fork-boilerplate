@@ -1,5 +1,5 @@
 import React from 'react';
-import { DemoBox } from '@style-guide/components';
+import DemoBox from '@style-guide/containers/DemoBox';
 import Stepper from './Stepper';
 import Alternate from './Alternate';
 // __INJECTED_LINE__

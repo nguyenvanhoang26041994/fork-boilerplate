@@ -1,5 +1,5 @@
 import React from 'react';
-import { DemoBox } from '@style-guide/components';
+import DemoBox from '@style-guide/containers/DemoBox';
 import Typo from './Typo';
 // __INJECTED_LINE__
 import * as allCode from './code';

@@ -6,10 +6,13 @@ import { Progress } from '@fork-ui/core';
 export default () => {
   return (
     <Wrapper>
-      <Progress />
+      <Progress.Circle percent={65}>
+        <span>65%</span>
+      </Progress.Circle>
     </Wrapper>
   );
 };
 `,
   demoName: 'Progress',
 }
+

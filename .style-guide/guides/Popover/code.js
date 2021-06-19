@@ -1,15 +1,29 @@
 export const Popover = {
   code: `import React from 'react';
-import { Wrapper } from '@style-guide/components';
-import { Popover } from '@fork-ui/core';
+import { DemoContent } from '@style-guide/components';
 
 export default () => {
   return (
-    <Wrapper>
-      <Popover />
-    </Wrapper>
+    <div
+      className="tippy-box fpopover"
+      data-placement="top"
+      style={{ width: '100%' }}
+    >
+      <div className="tippy-content">
+        <DemoContent />
+      </div>
+      <div
+        className="tippy-arrow"
+        style={{
+          position: 'absolute',
+          left: '0px',
+          transform: 'translate3d(250px, 0px, 0px)',
+        }}
+      />
+    </div>
   );
 };
 `,
   demoName: 'Popover',
 }
+

@@ -44,6 +44,6 @@ const SPLIT_STRING_REGEX = /([A-Z]{1}[a-z0-9]+)/g;
     input.StyleGuidePath,
     currentStyledGuide
       .replace('// __INJECTED_LINE_GUIDE__', `const ${input.Component}Guides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/${input.Component}'));\n// __INJECTED_LINE_GUIDE__`)
-      .replace('{/* __INJECTED_LINE_ROUTER__ */}', `<Route path={\`\${path}/${input.Component.toLowerCase()}\`} component={${input.Component}Guides} />\n        {/* __INJECTED_LINE_ROUTER__ */}`)
+      .replace('{/* __INJECTED_LINE_ROUTER__ */}', `<Route path={\`\${path}/${input.Component.toLowerCase()}\`} component={${input.Component}Guides} />\n          {/* __INJECTED_LINE_ROUTER__ */}`)
   );
 })();

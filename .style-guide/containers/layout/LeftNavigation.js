@@ -41,7 +41,7 @@ const MenuItem = styled.li`
   }
 `;
 const Container = styled.section`
-  margin-right: 2px;
+  padding-right: 2px;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -88,11 +88,15 @@ const MenuItemEnhander = ({ path, ...otherProps }) => {
   );
 };
 const LeftNavigation = ({ minimal }) => {
+  const history = useHistory();
   return (
     <Container>
       <Wrapper className={cn({'--is-minimal': minimal })}>
         <Header>
-          <Home size="20px" color="var(--primary)" />
+          <Home
+            size="20px" color="var(--primary)"
+            onClick={() => history.push('/document')}
+          />
         </Header>
         <Body>
           <Menu>

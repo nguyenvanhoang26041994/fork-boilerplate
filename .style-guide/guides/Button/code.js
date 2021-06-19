@@ -56,3 +56,83 @@ export default () => {
   demoName: 'Size',
 }
 
+
+export const Bordered = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Button } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Button />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Bordered',
+}
+
+export const Disabled = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Button } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Button />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Disabled',
+}
+
+export const WithIcon = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Button } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Button />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'With Icon',
+}
+
+export const WithLoader = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Button } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Button />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'With Loader',
+}
+
+export const WithBadge = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Button } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Button />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'With Badge',
+}

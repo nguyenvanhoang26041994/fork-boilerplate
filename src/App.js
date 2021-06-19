@@ -4,6 +4,7 @@ import {
   BrowserRouter,
   Switch,
   Route,
+  Redirect
 } from 'react-router-dom';
 import useDarkMode from './hooks/useDarkMode';
 import AppContext from './AppContext';
@@ -19,6 +20,9 @@ const App = () => {
         <BrowserRouter>
           <Switch>
             <Route path="/document" component={Document} />
+            <Route>
+              <Redirect to="/document" />
+            </Route>
           </Switch>
         </BrowserRouter>
       </AppContext.Provider>
