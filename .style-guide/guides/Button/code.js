@@ -1,3 +1,22 @@
+export const Bordered = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Button } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Button border="dashed">Normal</Button>
+      <Button border="solid" color="primary">Primary</Button>
+      <Button border="dashed" color="danger">Danger</Button>
+      <Button border="dashed" color="transparent">Transparent</Button>
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Bordered',
+}
+
 export const Button = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
@@ -32,12 +51,35 @@ import { Button } from '@fork-ui/core';
 export default () => {
   return (
     <Wrapper>
-      <Button />
+      <Button>Basic</Button>
+      <Button color="primary">Primary</Button>
+      <Button color="danger">Danger</Button>
+      <Button color="transparent">Transparent</Button>
     </Wrapper>
   );
 };
 `,
   demoName: 'Color',
+}
+
+export const Disabled = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Button } from '@fork-ui/core';
+import { Cast } from '@fork-ui/icons/lazy';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Button disabled>Basic</Button>
+      <Button disabled color="primary">Primary</Button>
+      <Button disabled color="danger">Danger</Button>
+      <Button disabled shape="circle" icon={<Cast />} />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Disabled',
 }
 
 export const Size = {
@@ -48,7 +90,9 @@ import { Button } from '@fork-ui/core';
 export default () => {
   return (
     <Wrapper>
-      <Button />
+      <Button size="0.85rem">0.85rem</Button>
+      <Button size="1.5em">1.5em</Button>
+      <Button size="25px">25px</Button>
     </Wrapper>
   );
 };
@@ -56,48 +100,52 @@ export default () => {
   demoName: 'Size',
 }
 
-
-export const Bordered = {
+export const WithBadge = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
-import { Button } from '@fork-ui/core';
+import { Button, Badge } from '@fork-ui/core';
+import { Bell, Inbox } from '@fork-ui/icons/lazy';
 
 export default () => {
   return (
     <Wrapper>
-      <Button />
+      <Badge.Counter count={2}>
+        <Button icon={<Bell />} />
+      </Badge.Counter>
+      <Badge.Counter overlap count={9}>
+        <Button shape="circle" icon={<Inbox />} />
+      </Badge.Counter>
     </Wrapper>
   );
 };
 `,
-  demoName: 'Bordered',
-}
-
-export const Disabled = {
-  code: `import React from 'react';
-import { Wrapper } from '@style-guide/components';
-import { Button } from '@fork-ui/core';
-
-export default () => {
-  return (
-    <Wrapper>
-      <Button />
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Disabled',
+  demoName: 'With Badge',
 }
 
 export const WithIcon = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
 import { Button } from '@fork-ui/core';
+import { Power } from '@fork-ui/icons/lazy';
 
 export default () => {
   return (
     <Wrapper>
-      <Button />
+      <Button icon={<Power />} />
+      <Button shape="circle" icon={<Power />} />
+      <Button>
+        <Power />
+        <span>Shutdown</span>
+      </Button>
+      <Button>
+        <span>Shutdown</span>
+        <Power />
+      </Button>
+      <Button>
+        <Power />
+        <span>Shutdown</span>
+        <Power />
+      </Button>
     </Wrapper>
   );
 };
@@ -109,11 +157,13 @@ export const WithLoader = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
 import { Button } from '@fork-ui/core';
+import { Power } from '@fork-ui/icons/lazy';
 
 export default () => {
   return (
     <Wrapper>
-      <Button />
+      <Button loading>Basic</Button>
+      <Button loading shape="circle" icon={<Power />} />
     </Wrapper>
   );
 };
@@ -121,18 +171,3 @@ export default () => {
   demoName: 'With Loader',
 }
 
-export const WithBadge = {
-  code: `import React from 'react';
-import { Wrapper } from '@style-guide/components';
-import { Button } from '@fork-ui/core';
-
-export default () => {
-  return (
-    <Wrapper>
-      <Button />
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'With Badge',
-}

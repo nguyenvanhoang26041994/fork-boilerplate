@@ -139,7 +139,7 @@ const LazyIconDemo = () => {
   const searchRef = useRef();
   const [searchStr, setSearchStr] = useState('');
   const onChange = useCallback(e => setSearchStr(searchRef.current.value), [searchRef, setSearchStr]);
-  const debounceChange = useMemo(() => debounce(onChange, 500), [onChange]);
+  const debounceChange = useMemo(() => debounce(onChange, 200), [onChange]);
 
   const _icons = useMemo(() => {
     if (searchStr.trim()) {
