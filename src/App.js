@@ -5,17 +5,23 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import useDarkMode from './hooks/useDarkMode';
+import AppContext from './AppContext';
 
-import StyleGuide from '@style-guide';
+import Document from '@style-guide/pages/document';
 
 const App = () => {
+  const { isDark, toggleDark } = useDarkMode();
+
   return (
     <GlobalStore>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/document" component={StyleGuide} />
-        </Switch>
-      </BrowserRouter>
+      <AppContext.Provider value={{ isDark, toggleDark }}>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/document" component={Document} />
+          </Switch>
+        </BrowserRouter>
+      </AppContext.Provider>
     </GlobalStore>
   );
 };
