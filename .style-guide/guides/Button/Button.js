@@ -7,10 +7,10 @@ export default () => {
   return (
     <Wrapper className="mb-5">
       <Button>Basic</Button>
-      <Button loading shape="circle" icon={<Power />} />
-      <Button shape="rounded" color="primary">Primary</Button>
+      <Button loading rounded icon={<Power />} />
+      <Button rounded color="primary">Primary</Button>
       <Button border="dashed" color="danger">Danger</Button>
-      <Button shape="circle" icon={<Power />} />
+      <Button rounded icon={<Power />} />
       <ButtonGroup>
         <Button color="primary" icon={<Power />} />
         <Button color="primary" icon={<Message />} />

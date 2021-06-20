@@ -7,7 +7,7 @@ export default () => {
   return (
     <Wrapper>
       <Button loading>Basic</Button>
-      <Button loading shape="circle" icon={<Power />} />
+      <Button loading rounded icon={<Power />} />
     </Wrapper>
   );
 };

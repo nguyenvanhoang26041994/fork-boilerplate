@@ -106,6 +106,7 @@ const LeftNavigation = ({ minimal }) => {
       <Wrapper className={cn({'--is-minimal': minimal })}>
         <Header>
           <Home
+            className="cursor-pointer"
             size="20px" color="var(--primary)"
             onClick={() => history.push('/document')}
           />

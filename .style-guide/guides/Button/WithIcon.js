@@ -7,7 +7,7 @@ export default () => {
   return (
     <Wrapper>
       <Button icon={<Power />} />
-      <Button shape="circle" icon={<Power />} />
+      <Button rounded icon={<Power />} />
       <Button>
         <Power />
         <span>Shutdown</span>

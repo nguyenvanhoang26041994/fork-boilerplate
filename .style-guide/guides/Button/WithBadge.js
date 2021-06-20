@@ -10,7 +10,7 @@ export default () => {
         <Button icon={<Bell />} />
       </Badge.Counter>
       <Badge.Counter overlap count={9}>
-        <Button shape="circle" icon={<Inbox />} />
+        <Button rounded icon={<Inbox />} />
       </Badge.Counter>
     </Wrapper>
   );
