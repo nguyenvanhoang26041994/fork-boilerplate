@@ -1,3 +1,40 @@
+export const Color = {
+  code: `import React, { useMemo } from 'react';
+import { Wrapper } from '@style-guide/components';
+import useUniqueId from '@fork-ui/hooks/useUniqueId';
+import { Progress } from '@fork-ui/core';
+
+export default () => {
+  const linearGradientId = useUniqueId();
+
+  const _linearGradient = useMemo(() => (
+    <linearGradient
+      id={linearGradientId}
+      x1="0%"
+      y1="0%"
+      x2="100%"
+      y2="0%"
+    >
+      <stop offset="0%" stopColor="rgba(243, 8, 231, 1)" />
+      <stop offset="100%" stopColor="rgba(24, 119, 242, 1)" />
+    </linearGradient>
+  ), [linearGradientId]);
+
+  return (
+    <Wrapper>
+      <Progress.Circle
+        percent={75}
+        linearGradient={_linearGradient}
+        color={\`url(#\${linearGradientId})\`}
+      />
+      <Progress.Circle percent={68} color="var(--green)" />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Color',
+}
+
 export const Linear = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
@@ -63,7 +100,6 @@ export default () => {
           {Math.floor(percent)}
           <span>%</span>
         </Progress.Circle>
-        <Progress.Linear percent={percent} animated={status === 'loading'} />
       </Flex>
       <ButtonGroup className="mt-10">
         <Button onClick={onStartLoading} disabled={status === 'loading'}>Start Loading</Button>
@@ -100,19 +136,3 @@ export default () => {
   demoName: 'Size',
 }
 
-
-export const Color = {
-  code: `import React from 'react';
-import { Wrapper } from '@style-guide/components';
-import { Progress } from '@fork-ui/core';
-
-export default () => {
-  return (
-    <Wrapper>
-      <Progress />
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Color',
-}

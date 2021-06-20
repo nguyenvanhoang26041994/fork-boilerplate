@@ -11,29 +11,7 @@ export default () => {
   return (
     <Flex wrap>
       <Flex w="full" style={{ paddingBottom: '1px' }}>
-        <Flex w="1/3" style={{ paddingRight: '1px' }}>
-          <DemoBox name={allCode.Pagination.demoName} code={allCode.Pagination.code}>
-            <Pagination />
-          </DemoBox>
-        </Flex>
-        <Flex w="1/3" style={{ paddingRight: '1px' }}>
-          <DemoBox name={allCode.Pagination.demoName} code={allCode.Pagination.code}>
-            <Pagination />
-          </DemoBox>
-        </Flex>
-        <Flex w="1/3">
-          <DemoBox name={allCode.Pagination.demoName} code={allCode.Pagination.code}>
-            <Pagination />
-          </DemoBox>
-        </Flex>
-      </Flex>
-      <Flex w="full" style={{ paddingBottom: '1px' }}>
-        <Flex w="1/2" style={{ paddingRight: '1px' }}>
-          <DemoBox name={allCode.Pagination.demoName} code={allCode.Pagination.code}>
-            <Pagination />
-          </DemoBox>
-        </Flex>
-        <Flex w="1/2">
+        <Flex w="full">
           <DemoBox name={allCode.Pagination.demoName} code={allCode.Pagination.code}>
             <Pagination />
           </DemoBox>
