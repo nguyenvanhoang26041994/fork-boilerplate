@@ -17,3 +17,51 @@ export default () => {
   demoName: 'Radio',
 }
 
+
+export const Color = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Radio } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Radio />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Color',
+}
+
+export const Size = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Radio } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Radio />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Size',
+}
+
+export const Controlled = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Radio } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper>
+      <Radio />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Controlled',
+}
