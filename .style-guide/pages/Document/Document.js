@@ -1,6 +1,5 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 import {
-  BrowserRouter,
   Switch,
   Route,
   useRouteMatch,
@@ -8,7 +7,7 @@ import {
 import lazy from '@utils/lazy';
 import { withLayout } from '@style-guide/containers/layout';
 import CodeDrawer from '@style-guide/containers/CodeDrawer';
-import CodeDrawerContext from '@style-guide/containers/CodeDrawer/CodeDrawer.Context';
+import CodeDrawerContext from '@style-guide/contexts/CodeDrawer';
 
 const AllGuide = lazy(() => import(/* webpackPrefetch: true */ './AllGuide'));
 const IconGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Icon'));
@@ -31,37 +30,12 @@ const DialogGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide
 const TooltipGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Tooltip'));
 const PopoverGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Popover'));
 
-const useCodeDrawer = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [code, setCode] = useState(null);
-  const [header, setHeader] = useState(null);
-  const doClose = useCallback(({}) => {
-    setIsOpen(false);
-    setCode(null);
-    setHeader(null);
-  }, [setIsOpen, setCode, setHeader]);
-  const doOpen = useCallback((_code, _header) => {
-    setIsOpen(true);
-    setCode(_code);
-    setHeader(_header);
-  }, [setIsOpen, setCode, setHeader]);
-
-  return {
-    isOpen,
-    setIsOpen,
-    doClose,
-    doOpen,
-    code,
-    header,
-  }
-};
-
 const Document = () => {
   let { path } = useRouteMatch();
-  const codeDrawer = useCodeDrawer();
+  const codeDrawerValue = CodeDrawerContext.useValue();
 
   return (
-    <CodeDrawerContext.Provider value={codeDrawer}>
+    <CodeDrawerContext.Context.Provider value={codeDrawerValue}>
       <Switch>
         <Route exact path={path} component={AllGuide} />
         <Route path={`${path}/icon`} component={IconGuides} />
@@ -86,7 +60,7 @@ const Document = () => {
         {/* __INJECTED_LINE_ROUTER__ */}
       </Switch>
       <CodeDrawer />
-    </CodeDrawerContext.Provider>
+    </CodeDrawerContext.Context.Provider>
   );
 };
 

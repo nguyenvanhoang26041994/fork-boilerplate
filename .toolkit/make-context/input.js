@@ -4,5 +4,5 @@ const Context = process.argv[2];
 
 module.exports = {
   Context: Context,
-  outputPath: path.join(rootDir, 'src/contexts'),
+  contextPath: path.join(rootDir, 'src/contexts'),
 };

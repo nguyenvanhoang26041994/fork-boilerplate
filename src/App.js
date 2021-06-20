@@ -6,17 +6,15 @@ import {
   Route,
   Redirect
 } from 'react-router-dom';
-import useDarkMode from './hooks/useDarkMode';
-import AppContext from './AppContext';
-
+import DarkMode from '@contexts/DarkMode';
 import Document from '@style-guide/pages/document';
 
 const App = () => {
-  const { isDark, toggleDark } = useDarkMode();
+  const darkMode = DarkMode.useValue();
 
   return (
     <GlobalStore>
-      <AppContext.Provider value={{ isDark, toggleDark }}>
+      <DarkMode.Context.Provider value={darkMode}>
         <BrowserRouter>
           <Switch>
             <Route path="/document" component={Document} />
@@ -25,7 +23,7 @@ const App = () => {
             </Route>
           </Switch>
         </BrowserRouter>
-      </AppContext.Provider>
+      </DarkMode.Context.Provider>
     </GlobalStore>
   );
 };

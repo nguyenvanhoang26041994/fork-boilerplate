@@ -53,6 +53,7 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.join(rootDir, 'src'),
+      '@contexts': path.join(rootDir, 'src/contexts'),
       '@components': path.join(rootDir, 'src/components'),
       '@containers': path.join(rootDir, 'src/containers'),
       '@hooks': path.join(rootDir, 'src/hooks'),

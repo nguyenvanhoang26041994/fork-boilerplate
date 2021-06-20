@@ -16,6 +16,8 @@
     "make:hook": "node .toolkit/make-hook/excute",
     "make:guides": "node .toolkit/make-guides/excute",
     "make:guide": "node .toolkit/make-guide/excute",
+    "make:context": "node .toolkit/make-context/excute",
+    "make:context:style-guide": "node .toolkit/make-context/excute.style-guide",
     "transform:icons": "node .toolkit/transform-tabler-icons-to-react/excute",
     "transform:guides": "node .toolkit/transform-guides-for-demo-box/excute",
     "sub:update": "git submodule update",

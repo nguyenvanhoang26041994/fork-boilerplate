@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Button } from '@fork-ui/core';
-import AppContext from '@/AppContext';
+import DarkMode from '@contexts/DarkMode';
 import { IndentDecrease, Search, IndentIncrease, BulbOff, Moon } from '@fork-ui/icons/lazy';
 
 const Container = styled.div`
@@ -23,7 +23,7 @@ const Left = styled.div``;
 const Right = styled.div``;
 
 const TopNavigation = ({ onToggleLeftMinimal, isLeftMinimal }) => {
-  const { isDark, toggleDark } = useContext(AppContext);
+  const { isDark, toggleDark } = DarkMode.useContext();
 
   return (
     <Container>

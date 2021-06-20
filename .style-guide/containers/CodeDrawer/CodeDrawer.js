@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coy, okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Drawer } from '@fork-ui/core';
-import Context from './CodeDrawer.Context';
-import AppContext from '@/AppContext';
+import DarkMode from '@contexts/DarkMode';
+import CodeDrawerContext from '@style-guide/contexts/CodeDrawer';
 
 const CodeMarkdownWrapper = styled.div`
   width: 100%;
@@ -23,8 +23,8 @@ const CodeMarkdownWrapper = styled.div`
 `;
 
 const CodeDrawer = () => {
-  const { isOpen, doClose, code, header } = useContext(Context);
-  const { isDark } = useContext(AppContext);
+  const { isOpen, doClose, code } = CodeDrawerContext.useContext();
+  const { isDark } = DarkMode.useContext();
 
   return (
     <Drawer isOpen={isOpen} style={{ minWidth: 900 }}>
