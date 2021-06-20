@@ -22,6 +22,7 @@ import FormFieldMainGuide from '@style-guide/guides/FormField/FormField';
 import DialogMainGuide from '@style-guide/guides/Dialog/Dialog';
 import TooltipMainGuide from '@style-guide/guides/Tooltip/Tooltip';
 import PopoverMainGuide from '@style-guide/guides/Popover/Popover';
+import AlertMainGuide from '@style-guide/guides/Alert/Alert';
 
 const AllGuide = () => {
   return (
@@ -138,14 +139,9 @@ const AllGuide = () => {
             <PopoverMainGuide />
           </Demo>
         </Flex>
-        <Flex w="1/3" style={{ paddingRight: '1px' }}>
-          <Demo name="Popover">
-            <PopoverMainGuide />
-          </Demo>
-        </Flex>
-        <Flex w="1/3">
-          <Demo name="Popover">
-            <PopoverMainGuide />
+        <Flex w="2/3">
+          <Demo name="Alert">
+            <AlertMainGuide />
           </Demo>
         </Flex>
       </Flex>

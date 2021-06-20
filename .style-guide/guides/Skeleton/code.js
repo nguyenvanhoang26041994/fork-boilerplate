@@ -4,7 +4,7 @@ import { Skeleton, Flex } from '@fork-ui/core';
 
 export default () => {
   return (
-    <Flex col style={{ padding: '0.5rem 1.5rem' }} w="full" className="fskele-animated">
+    <Flex col style={{ padding: '8px' }} w="full" className="fskele-animated">
       <Flex items="center" className="mb-5">
         <Skeleton shape="circle" size="2rem" />
         <Flex col className="ml-5 flex-1">
@@ -23,7 +23,6 @@ export default () => {
           <Skeleton shape="p" w="80%" />
         </Flex>
       </Flex>
-      <Skeleton shape="rect" w="100%" h="400px" />
     </Flex>
   );
 };

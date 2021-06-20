@@ -29,6 +29,11 @@ const FormFieldGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-gu
 const DialogGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Dialog'));
 const TooltipGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Tooltip'));
 const PopoverGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Popover'));
+const TimelineGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Timeline'));
+const AlertGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Alert'));
+const ModalGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Modal'));
+const DrawerGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Drawer'));
+// __INJECTED_LINE_GUIDE__
 
 const Document = () => {
   let { path } = useRouteMatch();
@@ -57,6 +62,10 @@ const Document = () => {
         <Route path={`${path}/dialog`} component={DialogGuides} />
         <Route path={`${path}/tooltip`} component={TooltipGuides} />
         <Route path={`${path}/popover`} component={PopoverGuides} />
+        <Route path={`${path}/timeline`} component={TimelineGuides} />
+        <Route path={`${path}/alert`} component={AlertGuides} />
+        <Route path={`${path}/modal`} component={ModalGuides} />
+        <Route path={`${path}/drawer`} component={DrawerGuides} />
         {/* __INJECTED_LINE_ROUTER__ */}
       </Switch>
       <CodeDrawer />
