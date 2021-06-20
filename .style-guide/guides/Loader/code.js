@@ -54,6 +54,41 @@ export default () => {
   demoName: 'Loader',
 }
 
+export const Move = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Loader } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper span="20px">
+      <Loader.Dots animation="move" />
+      <Loader.Dots animation="move" color="var(--green)" size="32px" />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Move',
+}
+
+export const NiceSpinner = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Loader } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <Wrapper span="30px">
+      <Loader.NiceSpinner />
+      <Loader.NiceSpinner size="100" color="var(--green)" />
+      <Loader.NiceSpinner size="150" color="skeleton" />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Nice Spinner',
+}
+
 export const Spinner = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
