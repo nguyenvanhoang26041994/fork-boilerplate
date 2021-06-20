@@ -21,6 +21,15 @@ import {
   ArrowRightCircle,
   Message,
   Message2,
+  Typography,
+  Tag,
+  Line,
+  QuestionMark,
+  MessageReport,
+  AlertTriangle,
+  Bell,
+  LayoutBottombar,
+  LayoutSidebar
 } from '@fork-ui/icons/lazy';
 
 const MenuItemIcon = styled.div`
@@ -42,12 +51,15 @@ const MenuItem = styled.li`
 `;
 const Container = styled.section`
   padding-right: 2px;
+  display: flex;
+  flex-direction: column;
 `;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 200px;
   min-height: 100vh;
+  flex: 1;
   background-color: var(--bg);
 
   &.--is-minimal {
@@ -142,6 +154,12 @@ const LeftNavigation = ({ minimal }) => {
               </MenuItemIcon>
               <MenuItemName>Avatar</MenuItemName>
             </MenuItemEnhander>
+            <MenuItemEnhander path="/document/typography">
+              <MenuItemIcon>
+                <Typography />
+              </MenuItemIcon>
+              <MenuItemName>Typography</MenuItemName>
+            </MenuItemEnhander>
             <MenuItemEnhander path="/document/skeleton">
               <MenuItemIcon>
                 <GripHorizontal />
@@ -159,6 +177,12 @@ const LeftNavigation = ({ minimal }) => {
                 <Loader />
               </MenuItemIcon>
               <MenuItemName>Progress</MenuItemName>
+            </MenuItemEnhander>
+            <MenuItemEnhander path="/document/chip">
+              <MenuItemIcon>
+                <Tag />
+              </MenuItemIcon>
+              <MenuItemName>Chip</MenuItemName>
             </MenuItemEnhander>
             <MenuItemEnhander path="/document/pagination">
               <MenuItemIcon>
@@ -184,6 +208,12 @@ const LeftNavigation = ({ minimal }) => {
               </MenuItemIcon>
               <MenuItemName>Stepper</MenuItemName>
             </MenuItemEnhander>
+            <MenuItemEnhander path="/document/timeline">
+              <MenuItemIcon>
+                <Line />
+              </MenuItemIcon>
+              <MenuItemName>Timeline</MenuItemName>
+            </MenuItemEnhander>
             <MenuItemEnhander path="/document/popover">
               <MenuItemIcon>
                 <Message />
@@ -195,6 +225,42 @@ const LeftNavigation = ({ minimal }) => {
                 <Message2 />
               </MenuItemIcon>
               <MenuItemName>Tooltip</MenuItemName>
+            </MenuItemEnhander>
+            <MenuItemEnhander path="/document/confirm">
+              <MenuItemIcon>
+                <QuestionMark />
+              </MenuItemIcon>
+              <MenuItemName>Confirm</MenuItemName>
+            </MenuItemEnhander>
+            <MenuItemEnhander path="/document/popconfirm">
+              <MenuItemIcon>
+                <MessageReport />
+              </MenuItemIcon>
+              <MenuItemName>Popconfirm</MenuItemName>
+            </MenuItemEnhander>
+            <MenuItemEnhander path="/document/alert">
+              <MenuItemIcon>
+                <AlertTriangle />
+              </MenuItemIcon>
+              <MenuItemName>Alert</MenuItemName>
+            </MenuItemEnhander>
+            <MenuItemEnhander path="/document/notification">
+              <MenuItemIcon>
+                <Bell />
+              </MenuItemIcon>
+              <MenuItemName>Notification</MenuItemName>
+            </MenuItemEnhander>
+            <MenuItemEnhander path="/document/modal">
+              <MenuItemIcon>
+                <LayoutBottombar />
+              </MenuItemIcon>
+              <MenuItemName>Modal</MenuItemName>
+            </MenuItemEnhander>
+            <MenuItemEnhander path="/document/drawer">
+              <MenuItemIcon>
+                <LayoutSidebar />
+              </MenuItemIcon>
+              <MenuItemName>Drawer</MenuItemName>
             </MenuItemEnhander>
           </Menu>
         </Body>

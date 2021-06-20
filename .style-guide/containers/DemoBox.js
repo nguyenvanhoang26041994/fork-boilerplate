@@ -28,10 +28,8 @@ const DemoBoxHeader = styled.h2`
 `;
 
 const Demo = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
+  padding: 18px;
+  min-height: 200px;
 `;
 
 const DemoBox = ({ children, name, code }) => {

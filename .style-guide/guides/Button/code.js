@@ -82,6 +82,66 @@ export default () => {
   demoName: 'Disabled',
 }
 
+export const FluidGroupButton = {
+  code: `import React from 'react';
+import { Button, ButtonGroup } from '@fork-ui/core';
+
+export default () => {
+  return (
+    <ButtonGroup fluid>
+      <Button>
+        FLUID BUTTON ONE
+      </Button>
+      <Button>
+        FLUID BUTTON TWO
+      </Button>
+      <Button>
+        FLUID BUTTON THREE
+      </Button>
+      <Button>
+        FLUID BUTTON FOUR
+      </Button>
+      <Button>
+        FLUID BUTTON FIVE
+      </Button>
+    </ButtonGroup>
+  );
+};
+`,
+  demoName: 'Fluid Group Button',
+}
+
+export const GroupButton = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { Button, ButtonGroup } from '@fork-ui/core';
+import { Power, Message, Bell } from '@fork-ui/icons/lazy';
+
+export default () => {
+  return (
+    <Wrapper>
+      <ButtonGroup>
+        <Button icon={<Power />} />
+        <Button icon={<Message />} />
+        <Button icon={<Bell />} />
+      </ButtonGroup>
+      <ButtonGroup>
+        <Button color="primary" icon={<Power />} />
+        <Button color="primary" icon={<Message />} />
+        <Button color="primary" icon={<Bell />} />
+      </ButtonGroup>
+      <ButtonGroup color="danger">
+        <Button color="primary" icon={<Power />} />
+        <Button color="danger" icon={<Message />} />
+        <Button icon={<Bell />} />
+      </ButtonGroup>
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Group Button',
+}
+
 export const Size = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
@@ -89,7 +149,7 @@ import { Button } from '@fork-ui/core';
 
 export default () => {
   return (
-    <Wrapper>
+    <Wrapper style={{ display: 'block' }}>
       <Button size="0.85rem">0.85rem</Button>
       <Button size="1.5em">1.5em</Button>
       <Button size="25px">25px</Button>
@@ -108,7 +168,7 @@ import { Bell, Inbox } from '@fork-ui/icons/lazy';
 
 export default () => {
   return (
-    <Wrapper>
+    <Wrapper span="20px">
       <Badge.Counter count={2}>
         <Button icon={<Bell />} />
       </Badge.Counter>

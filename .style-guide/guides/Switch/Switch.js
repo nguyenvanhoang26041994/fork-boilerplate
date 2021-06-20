@@ -6,10 +6,7 @@ export default () => {
   return (
     <Wrapper>
       <Switch defaultChecked />
-      <Switch />
-      <Switch disabled />
       <Switch disabled defaultChecked />
-      <Switch loading />
       <Switch loading checked />
     </Wrapper>
   );

@@ -5,7 +5,7 @@ import { Bell, Inbox } from '@fork-ui/icons/lazy';
 
 export default () => {
   return (
-    <Wrapper>
+    <Wrapper span="20px">
       <Badge.Counter count={2}>
         <Button icon={<Bell />} />
       </Badge.Counter>
