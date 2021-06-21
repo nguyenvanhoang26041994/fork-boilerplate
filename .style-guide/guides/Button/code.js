@@ -231,3 +231,13 @@ export default () => {
   demoName: 'With Loader',
 }
 
+
+export const Custom = {
+  code: ``,
+  demoName: 'Custom',
+}
+
+export const AA = {
+  code: ``,
+  demoName: 'AA',
+}

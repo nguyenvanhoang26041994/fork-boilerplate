@@ -1,15 +1,12 @@
-import React from 'react';
-import DemoBox from '@style-guide/containers/DemoBox';
+import withGuides from '@style-guide/HOCs/withGuides';
 import Typo from './Typo';
 // __INJECTED_LINE__
+
 import * as allCode from './code';
 
-export default () => {
-  return (
-    <div>
-      <DemoBox name={allCode.Typo.demoName} code={allCode.Typo.code}>
-        <Typo />
-      </DemoBox>
-    </div>
-  );
-};
+const demos = [
+  { Component: Typo, name: 'Typo' },
+  // __INJECTED_ITEM__
+];
+
+export default withGuides(demos, allCode);

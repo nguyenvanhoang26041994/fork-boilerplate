@@ -1,15 +1,12 @@
-import React from 'react';
-import DemoBox from '@style-guide/containers/DemoBox';
+import withGuides from '@style-guide/HOCs/withGuides';
 import FormField from './FormField';
 // __INJECTED_LINE__
+
 import * as allCode from './code';
 
-export default () => {
-  return (
-    <div>
-      <DemoBox name={allCode.FormField.demoName} code={allCode.FormField.code}>
-        <FormField />
-      </DemoBox>
-    </div>
-  );
-};
+const demos = [
+  { Component: FormField, name: 'FormField' },
+  // __INJECTED_ITEM__
+];
+
+export default withGuides(demos, allCode);

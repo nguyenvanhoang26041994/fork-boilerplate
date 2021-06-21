@@ -1,8 +1,7 @@
-import React, { useCallback, useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { ButtonGroup, Button } from '@fork-ui/core';
 import { Braces } from '@fork-ui/icons/lazy';
-import CodeDrawerContext from '@style-guide/contexts/CodeDrawer';
 
 const DemoBoxWrapper = styled.div`
   width: 100%;
@@ -32,9 +31,7 @@ const Demo = styled.div`
   min-height: 200px;
 `;
 
-const DemoBox = ({ children, name, code }) => {
-  const { doOpen } = CodeDrawerContext.useContext();
-
+const DemoBox = ({ children, name, onViewCodeClick }) => {
   return (
     <DemoBoxWrapper>
       <DemoBoxHeader>
@@ -43,7 +40,7 @@ const DemoBox = ({ children, name, code }) => {
           <Button
             color="transparent"
             icon={<Braces />}
-            onClick={() => doOpen(code, name)}
+            onClick={onViewCodeClick}
           />
         </ButtonGroup>
       </DemoBoxHeader>

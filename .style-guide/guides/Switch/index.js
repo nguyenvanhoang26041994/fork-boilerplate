@@ -1,54 +1,22 @@
-import React from 'react';
-import { Flex } from '@fork-ui/core';
-import DemoBox from '@style-guide/containers/DemoBox';
-
-import Switch from './Switch';
+import withGuides from '@style-guide/HOCs/withGuides';
 import Color from './Color';
-import Size from './Size';
 import Controlled from './Controlled';
 import Disabled from './Disabled';
 import Loading from './Loading';
+import Size from './Size';
+import Switch from './Switch';
 // __INJECTED_LINE__
 
 import * as allCode from './code';
 
-export default () => {
-  return (
-    <Flex wrap>
-      <Flex w="full" style={{ paddingBottom: '1px' }}>
-        <Flex w="1/3" style={{ paddingRight: '1px' }}>
-          <DemoBox name={allCode.Switch.demoName} code={allCode.Switch.code}>
-            <Switch />
-          </DemoBox>
-        </Flex>
-        <Flex w="1/3" style={{ paddingRight: '1px' }}>
-          <DemoBox name={allCode.Disabled.demoName} code={allCode.Disabled.code}>
-            <Disabled />
-          </DemoBox>
-        </Flex>
-        <Flex w="1/3">
-          <DemoBox name={allCode.Color.demoName} code={allCode.Color.code}>
-            <Color />
-          </DemoBox>
-        </Flex>
-      </Flex>
-      <Flex w="full" style={{ paddingBottom: '1px' }}>
-        <Flex w="1/3" style={{ paddingRight: '1px' }}>
-          <DemoBox name={allCode.Controlled.demoName} code={allCode.Controlled.code}>
-            <Controlled />
-          </DemoBox>
-        </Flex>
-        <Flex w="1/3" style={{ paddingRight: '1px' }}>
-          <DemoBox name={allCode.Loading.demoName} code={allCode.Loading.code}>
-            <Loading />
-          </DemoBox>
-        </Flex>
-        <Flex w="1/3">
-          <DemoBox name={allCode.Size.demoName} code={allCode.Size.code}>
-            <Size />
-          </DemoBox>
-        </Flex>
-      </Flex>
-    </Flex>
-  );
-};
+const demos = [
+  { Component: Color, name: 'Color' },
+  { Component: Controlled, name: 'Controlled' },
+  { Component: Disabled, name: 'Disabled' },
+  { Component: Loading, name: 'Loading' },
+  { Component: Size, name: 'Size' },
+  { Component: Switch, name: 'Switch' },
+  // __INJECTED_ITEM__
+];
+
+export default withGuides(demos, allCode);

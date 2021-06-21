@@ -1,15 +1,14 @@
-import React from 'react';
-import DemoBox from '@style-guide/containers/DemoBox';
+import withGuides from '@style-guide/HOCs/withGuides';
 import Colors from './Colors';
+import GrayColors from './GrayColors';
 // __INJECTED_LINE__
+
 import * as allCode from './code';
 
-export default () => {
-  return (
-    <div>
-      <DemoBox name={allCode.Colors.demoName} code={allCode.Colors.code}>
-        <Colors />
-      </DemoBox>
-    </div>
-  );
-};
+const demos = [
+  { Component: Colors, name: 'Colors' },
+  { Component: GrayColors, name: 'GrayColors' },
+  // __INJECTED_ITEM__
+];
+
+export default withGuides(demos, allCode);

@@ -1,11 +1,15 @@
 import withGuides from '@style-guide/HOCs/withGuides';
-import Alert from './Alert';
+{{#each Components}}
+import {{this}} from './{{this}}';
+{{/each}}
 // __INJECTED_LINE__
 
 import * as allCode from './code';
 
 const demos = [
-  { Component: Alert, name: 'Alert' },
+  {{#each Components}}
+  { Component: {{this}}, name: '{{this}}' },
+  {{/each}}
   // __INJECTED_ITEM__
 ];
 

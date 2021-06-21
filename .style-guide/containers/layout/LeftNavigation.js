@@ -32,240 +32,273 @@ import {
   LayoutSidebar
 } from '@fork-ui/icons/lazy';
 
-const MenuItemIcon = styled.div`
-  width: 35px;
-`;
-const MenuItemName = styled.span``;
-const MenuItem = styled.li`
-  height: 40px;
+const MenuItemStyled = styled.div`
+  height: 60px;
   padding: 0 8px;
+  /* background-color: var(--bg); */
+  margin-bottom: 1px;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  cursor: pointer;
+  border-right: 2px solid transparent;
+  background-color: var(--skeleton-color);
 
-  &:hover,
-  &.--is-active {
-    background-color: var(--primary);
-    color: #fff;
+  .__avatar {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    .ficon {
+      font-size: 18px;
+    }
+  }
+
+  .__name {
+    padding: 0 10px;
+  }
+
+  &.--is-active,
+  &:hover {
+    .__avatar,
+    .__name {
+      color: var(--primary);
+    }
+    border-right-color: var(--primary);
   }
 `;
-const Container = styled.section`
-  padding-right: 2px;
-  display: flex;
-  flex-direction: column;
-`;
+
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  min-height: 100vh;
-  flex: 1;
-  background-color: var(--bg);
+  width: 270px;
 
   &.--is-minimal {
-    width: 70px;
+    width: unset;
 
-    ${MenuItem},
-    ${MenuItemIcon} {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    ${MenuItemName} {
-      display: none;
+    ${MenuItemStyled} {
+      .__name {
+        display: none;
+      }
     }
   }
+`;
+
+const Container = styled.div`
+  padding: 0 2px;
 `;
 const Header = styled.div`
   height: 70px;
+  background-color: var(--bg);
   display: flex;
   align-items: center;
-  padding-left: 22px;
-`;
-const Body = styled.div``;
-const Footer = styled.div``;
+  padding: 0 8px;
 
-const Menu = styled.ul``;
+  .__home {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+
+    .ficon {
+      font-size: 18px;
+    }
+  }
+`;
+
+const MenuItem = ({ children, active, ...otherProps }) => {
+  return (
+    <MenuItemStyled
+      {...otherProps}
+      className={cn({
+        '--is-active': active,
+      })}
+    >
+      {children}
+    </MenuItemStyled>
+  );
+};
 
 const MenuItemEnhander = ({ path, ...otherProps }) => {
   const history = useHistory();
   const location = useLocation();
+
   return (
     <MenuItem
       {...otherProps}
       onClick={() => history.push(path)}
-      className={cn({ '--is-active': location.pathname === path })}
+      active={location.pathname === path}
     />
   );
 };
+
 const LeftNavigation = ({ minimal }) => {
   const history = useHistory();
   return (
     <Container>
       <Wrapper className={cn({'--is-minimal': minimal })}>
         <Header>
-          <Home
-            className="cursor-pointer"
-            size="20px" color="var(--primary)"
-            onClick={() => history.push('/document')}
-          />
+          <div className="__home">
+            <Home onClick={() => history.push('/document')} />
+          </div>
+          <div></div>
         </Header>
-        <Body>
-          <Menu>
-            <MenuItemEnhander path="/document/icon">
-              <MenuItemIcon>
-                <GridDots />
-              </MenuItemIcon>
-              <MenuItemName>Icon</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/button">
-              <MenuItemIcon>
-                <Mouse />
-              </MenuItemIcon>
-              <MenuItemName>Button</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/checkbox">
-              <MenuItemIcon>
-                <Checkbox />
-              </MenuItemIcon>
-              <MenuItemName>Checkbox</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/radio">
-              <MenuItemIcon>
-                <Circle />
-              </MenuItemIcon>
-              <MenuItemName>Radio</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/switch">
-              <MenuItemIcon>
-                <ToggleRight />
-              </MenuItemIcon>
-              <MenuItemName>Switch</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/badge">
-              <MenuItemIcon>
-                <Notification />
-              </MenuItemIcon>
-              <MenuItemName>Badge</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/avatar">
-              <MenuItemIcon>
-                <User />
-              </MenuItemIcon>
-              <MenuItemName>Avatar</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/typography">
-              <MenuItemIcon>
-                <Typography />
-              </MenuItemIcon>
-              <MenuItemName>Typography</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/skeleton">
-              <MenuItemIcon>
-                <GripHorizontal />
-              </MenuItemIcon>
-              <MenuItemName>Skeleton</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/loader">
-              <MenuItemIcon>
-                <LoaderQuarter />
-              </MenuItemIcon>
-              <MenuItemName>Loader</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/progress">
-              <MenuItemIcon>
-                <Loader />
-              </MenuItemIcon>
-              <MenuItemName>Progress</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/chip">
-              <MenuItemIcon>
-                <Tag />
-              </MenuItemIcon>
-              <MenuItemName>Chip</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/pagination">
-              <MenuItemIcon>
-                <PageBreak />
-              </MenuItemIcon>
-              <MenuItemName>Pagination</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/tabs">
-              <MenuItemIcon>
-                <DeviceLaptop />
-              </MenuItemIcon>
-              <MenuItemName>Tabs</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/collapse">
-              <MenuItemIcon>
-                <ChevronDown />
-              </MenuItemIcon>
-              <MenuItemName>Collapse</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/stepper">
-              <MenuItemIcon>
-                <ArrowRightCircle />
-              </MenuItemIcon>
-              <MenuItemName>Stepper</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/timeline">
-              <MenuItemIcon>
-                <Line />
-              </MenuItemIcon>
-              <MenuItemName>Timeline</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/popover">
-              <MenuItemIcon>
-                <Message />
-              </MenuItemIcon>
-              <MenuItemName>Popover</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/tooltip">
-              <MenuItemIcon>
-                <Message2 />
-              </MenuItemIcon>
-              <MenuItemName>Tooltip</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/confirm">
-              <MenuItemIcon>
-                <QuestionMark />
-              </MenuItemIcon>
-              <MenuItemName>Confirm</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/popconfirm">
-              <MenuItemIcon>
-                <MessageReport />
-              </MenuItemIcon>
-              <MenuItemName>Popconfirm</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/alert">
-              <MenuItemIcon>
-                <AlertTriangle />
-              </MenuItemIcon>
-              <MenuItemName>Alert</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/notification">
-              <MenuItemIcon>
-                <Bell />
-              </MenuItemIcon>
-              <MenuItemName>Notification</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/modal">
-              <MenuItemIcon>
-                <LayoutBottombar />
-              </MenuItemIcon>
-              <MenuItemName>Modal</MenuItemName>
-            </MenuItemEnhander>
-            <MenuItemEnhander path="/document/drawer">
-              <MenuItemIcon>
-                <LayoutSidebar />
-              </MenuItemIcon>
-              <MenuItemName>Drawer</MenuItemName>
-            </MenuItemEnhander>
-          </Menu>
-        </Body>
-        <Footer></Footer>
+        <div>
+          <MenuItemEnhander path="/document/icon">
+            <div className="__avatar">
+              <GridDots />
+            </div>
+            <div className="__name">Icon</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/button">
+            <div className="__avatar">
+              <Mouse />
+            </div>
+            <div className="__name">Button</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/checkbox">
+            <div className="__avatar">
+              <Checkbox />
+            </div>
+            <div className="__name">Checkbox</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/radio">
+            <div className="__avatar">
+              <Circle />
+            </div>
+            <div className="__name">Radio</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/switch">
+            <div className="__avatar">
+              <ToggleRight />
+            </div>
+            <div className="__name">Switch</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/badge">
+            <div className="__avatar">
+              <Notification />
+            </div>
+            <div className="__name">Badge</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/avatar">
+            <div className="__avatar">
+              <User />
+            </div>
+            <div className="__name">Avatar</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/typography">
+            <div className="__avatar">
+              <Typography />
+            </div>
+            <div className="__name">Typography</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/skeleton">
+            <div className="__avatar">
+              <GripHorizontal />
+            </div>
+            <div className="__name">Skeleton</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/loader">
+            <div className="__avatar">
+              <LoaderQuarter />
+            </div>
+            <div className="__name">Loader</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/progress">
+            <div className="__avatar">
+              <Loader />
+            </div>
+            <div className="__name">Progress</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/chip">
+            <div className="__avatar">
+              <Tag />
+            </div>
+            <div className="__name">Chip</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/pagination">
+            <div className="__avatar">
+              <PageBreak />
+            </div>
+            <div className="__name">Pagination</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/tabs">
+            <div className="__avatar">
+              <DeviceLaptop />
+            </div>
+            <div className="__name">Tabs</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/collapse">
+            <div className="__avatar">
+              <ChevronDown />
+            </div>
+            <div className="__name">Collapse</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/stepper">
+            <div className="__avatar">
+              <ArrowRightCircle />
+            </div>
+            <div className="__name">Stepper</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/timeline">
+            <div className="__avatar">
+              <Line />
+            </div>
+            <div className="__name">Timeline</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/popover">
+            <div className="__avatar">
+              <Message />
+            </div>
+            <div className="__name">Popover</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/tooltip">
+            <div className="__avatar">
+              <Message2 />
+            </div>
+            <div className="__name">Tooltip</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/confirm">
+            <div className="__avatar">
+              <QuestionMark />
+            </div>
+            <div className="__name">Confirm</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/popconfirm">
+            <div className="__avatar">
+              <MessageReport />
+            </div>
+            <div className="__name">Popconfirm</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/alert">
+            <div className="__avatar">
+              <AlertTriangle />
+            </div>
+            <div className="__name">Alert</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/notification">
+            <div className="__avatar">
+              <Bell />
+            </div>
+            <div className="__name">Notification</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/modal">
+            <div className="__avatar">
+              <LayoutBottombar />
+            </div>
+            <div className="__name">Modal</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path="/document/drawer">
+            <div className="__avatar">
+              <LayoutSidebar />
+            </div>
+            <div className="__name">Drawer</div>
+          </MenuItemEnhander>
+        </div>
       </Wrapper>
     </Container>
   );

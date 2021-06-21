@@ -37,39 +37,34 @@ const DrawerGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide
 
 const Document = () => {
   let { path } = useRouteMatch();
-  const codeDrawerValue = CodeDrawerContext.useValue();
-
   return (
-    <CodeDrawerContext.Context.Provider value={codeDrawerValue}>
-      <Switch>
-        <Route exact path={path} component={AllGuide} />
-        <Route path={`${path}/icon`} component={IconGuides} />
-        <Route path={`${path}/button`} component={ButtonGuides} />
-        <Route path={`${path}/skeleton`} component={SkeletonGuides} />
-        <Route path={`${path}/checkbox`} component={CheckboxGuides} />
-        <Route path={`${path}/radio`} component={RadioGuides} />
-        <Route path={`${path}/switch`} component={SwitchGuides} />
-        <Route path={`${path}/colors`} component={ColorsGuides} />
-        <Route path={`${path}/badge`} component={BadgeGuides} />
-        <Route path={`${path}/loader`} component={LoaderGuides} />
-        <Route path={`${path}/avatar`} component={AvatarGuides} />
-        <Route path={`${path}/tabs`} component={TabsGuides} />
-        <Route path={`${path}/collapse`} component={CollapseGuides} />
-        <Route path={`${path}/stepper`} component={StepperGuides} />
-        <Route path={`${path}/pagination`} component={PaginationGuides} />
-        <Route path={`${path}/progress`} component={ProgressGuides} />
-        <Route path={`${path}/formfield`} component={FormFieldGuides} />
-        <Route path={`${path}/dialog`} component={DialogGuides} />
-        <Route path={`${path}/tooltip`} component={TooltipGuides} />
-        <Route path={`${path}/popover`} component={PopoverGuides} />
-        <Route path={`${path}/timeline`} component={TimelineGuides} />
-        <Route path={`${path}/alert`} component={AlertGuides} />
-        <Route path={`${path}/modal`} component={ModalGuides} />
-        <Route path={`${path}/drawer`} component={DrawerGuides} />
-        {/* __INJECTED_LINE_ROUTER__ */}
-      </Switch>
-      <CodeDrawer />
-    </CodeDrawerContext.Context.Provider>
+    <Switch>
+      <Route exact path={path} component={AllGuide} />
+      <Route path={`${path}/icon`} component={IconGuides} />
+      <Route path={`${path}/button`} component={ButtonGuides} />
+      <Route path={`${path}/skeleton`} component={SkeletonGuides} />
+      <Route path={`${path}/checkbox`} component={CheckboxGuides} />
+      <Route path={`${path}/radio`} component={RadioGuides} />
+      <Route path={`${path}/switch`} component={SwitchGuides} />
+      <Route path={`${path}/colors`} component={ColorsGuides} />
+      <Route path={`${path}/badge`} component={BadgeGuides} />
+      <Route path={`${path}/loader`} component={LoaderGuides} />
+      <Route path={`${path}/avatar`} component={AvatarGuides} />
+      <Route path={`${path}/tabs`} component={TabsGuides} />
+      <Route path={`${path}/collapse`} component={CollapseGuides} />
+      <Route path={`${path}/stepper`} component={StepperGuides} />
+      <Route path={`${path}/pagination`} component={PaginationGuides} />
+      <Route path={`${path}/progress`} component={ProgressGuides} />
+      <Route path={`${path}/formfield`} component={FormFieldGuides} />
+      <Route path={`${path}/dialog`} component={DialogGuides} />
+      <Route path={`${path}/tooltip`} component={TooltipGuides} />
+      <Route path={`${path}/popover`} component={PopoverGuides} />
+      <Route path={`${path}/timeline`} component={TimelineGuides} />
+      <Route path={`${path}/alert`} component={AlertGuides} />
+      <Route path={`${path}/modal`} component={ModalGuides} />
+      <Route path={`${path}/drawer`} component={DrawerGuides} />
+      {/* __INJECTED_LINE_ROUTER__ */}
+    </Switch>
   );
 };
 
