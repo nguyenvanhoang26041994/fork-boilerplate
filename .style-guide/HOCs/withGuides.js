@@ -1,17 +1,17 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Flex, Sticky } from '@fork-ui/core';
 import DemoBox from '@style-guide/containers/DemoBox';
 import SyntaxHighlighter from '@style-guide/components/SyntaxHighlighter';
 
 const DemoBoxList = styled(Flex)`
-> * {
-  margin-bottom: 2px;
-}
+  > * {
+    margin-bottom: 2px;
+  }
 `;
 
 export default (demos, allCode) => () => {
-  const [code, setCode] = useState(allCode[demos[0].name].code);
+  const [selectedName, setSelectedName] = useState(demos[0].name);
 
   return (
     <Flex wrap>
@@ -19,16 +19,17 @@ export default (demos, allCode) => () => {
         {demos.map((Demo) => (
           <DemoBox
             name={allCode[Demo.name].demoName}
-            onViewCodeClick={() => setCode(allCode[Demo.name].code)}
+            onViewCodeClick={() => setSelectedName(Demo.name)}
             key={Demo.name}
+            isActive={selectedName === Demo.name}
           >
             <Demo.Component />
           </DemoBox>
         ))}
       </DemoBoxList>
-      <Flex col w="1/2">
+      <Flex col w="1/2" style={{ backgroundColor: 'var(--bg)' }}>
         <Sticky>
-          <SyntaxHighlighter code={code} />
+          <SyntaxHighlighter code={allCode[selectedName].code} />
         </Sticky>
       </Flex>
     </Flex>

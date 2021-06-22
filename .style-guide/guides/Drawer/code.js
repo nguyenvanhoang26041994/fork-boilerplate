@@ -17,8 +17,8 @@ export default () => {
           <DemoContent />
         </Drawer.Body>
         <Drawer.Footer className="justify-center">
-          <Button onClick={doClose} border="solid">CANCEL</Button>
-          <Button onClick={doClose} color="primary" border="solid">OK</Button>
+          <Button onClick={doClose}>CANCEL</Button>
+          <Button onClick={doClose} color="primary">OK</Button>
         </Drawer.Footer>
       </Drawer>
       <Button color="primary" onClick={doOpen}>Open Modal</Button>
@@ -48,8 +48,8 @@ export default () => {
           <DemoContent />
         </Drawer.Body>
         <Drawer.Footer className="justify-center">
-          <Button onClick={doClose} border="solid">CANCEL</Button>
-          <Button onClick={doClose} color="primary" border="solid">OK</Button>
+          <Button onClick={doClose}>CANCEL</Button>
+          <Button onClick={doClose} color="primary">OK</Button>
         </Drawer.Footer>
       </Drawer>
       <Button color="primary" onClick={doOpen}>Open Modal</Button>

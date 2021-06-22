@@ -26,8 +26,8 @@ export default () => {
   return (
     <Wrapper>
       <Checkbox color="pink" defaultChecked />
-      <Checkbox color="red" defaultChecked />
-      <Checkbox color="var(--green)" defaultChecked />
+      <Checkbox color="var(--red-6)" defaultChecked />
+      <Checkbox color="var(--green-6)" defaultChecked />
       <Checkbox color="#ff5722" defaultChecked />
       <Checkbox color="#ff5722" disabled defaultChecked />
     </Wrapper>

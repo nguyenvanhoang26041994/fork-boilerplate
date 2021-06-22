@@ -7,12 +7,12 @@ import DarkMode from '@contexts/DarkMode';
 const SyntaxHighlighterStyled = styled.div`
   width: 100%;
   overflow-y: auto;
-  background-color: var(--skeleton-color);
+  background-color: var(--bg);
 
   > pre {
     margin: 0 !important;
     border-radius: 0 !important;
-    /* background-color: transparent !important; */
+    background-color: transparent !important;
     padding: 1em !important;
     .token,
     .token.arrow {
@@ -21,7 +21,7 @@ const SyntaxHighlighterStyled = styled.div`
   }
 `;
 
-const SyntaxHighlighter = ({ code, className }) => {
+const SyntaxHighlighter = ({ code, className, style }) => {
   const { isDark } = DarkMode.useContext();
 
   if (!code) {
@@ -29,8 +29,8 @@ const SyntaxHighlighter = ({ code, className }) => {
   }
 
   return (
-    <SyntaxHighlighterStyled className={className}>
-      <Prism language="jsx" style={isDark ? okaidia : coy}>
+    <SyntaxHighlighterStyled className={className} style={style}>
+      <Prism language="jsx" style={isDark ? okaidia : coy} wrapLongLines showLineNumbers>
         {code}
       </Prism>
     </SyntaxHighlighterStyled>

@@ -1,20 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
+import cn from 'classnames';
 import { ButtonGroup, Button } from '@fork-ui/core';
 import { Braces } from '@fork-ui/icons/lazy';
 
 const DemoBoxWrapper = styled.div`
   width: 100%;
   background-color: var(--bg);
+  border-right: 2px solid transparent;
 
   .show-when-codebox-hover {
     opacity: 0;
     transition: opacity 0.25s;
   }
+
   &:hover {
     .show-when-codebox-hover {
       opacity: 1;
     }
+  }
+
+  &.--is-active {
+    border-color: var(--primary);
   }
 `;
 
@@ -31,9 +38,9 @@ const Demo = styled.div`
   min-height: 200px;
 `;
 
-const DemoBox = ({ children, name, onViewCodeClick }) => {
+const DemoBox = ({ children, name, isActive, onViewCodeClick }) => {
   return (
-    <DemoBoxWrapper>
+    <DemoBoxWrapper className={cn({ '--is-active': isActive })}>
       <DemoBoxHeader>
         {name}
         <ButtonGroup className="show-when-codebox-hover">

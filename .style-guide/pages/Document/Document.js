@@ -6,8 +6,6 @@ import {
 } from 'react-router-dom';
 import lazy from '@utils/lazy';
 import { withLayout } from '@style-guide/containers/layout';
-import CodeDrawer from '@style-guide/containers/CodeDrawer';
-import CodeDrawerContext from '@style-guide/contexts/CodeDrawer';
 
 const AllGuide = lazy(() => import(/* webpackPrefetch: true */ './AllGuide'));
 const IconGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Icon'));

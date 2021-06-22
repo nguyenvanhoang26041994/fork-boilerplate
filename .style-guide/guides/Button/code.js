@@ -6,7 +6,7 @@ import { Button } from '@fork-ui/core';
 export default () => {
   return (
     <Wrapper>
-      <Button border="dashed">Normal</Button>
+      <Button border="solid">Normal</Button>
       <Button border="solid" color="primary">Primary</Button>
       <Button border="dashed" color="danger">Danger</Button>
       <Button border="dashed" color="transparent">Transparent</Button>
@@ -27,10 +27,10 @@ export default () => {
   return (
     <Wrapper className="mb-5">
       <Button>Basic</Button>
-      <Button loading shape="circle" icon={<Power />} />
-      <Button shape="rounded" color="primary">Primary</Button>
+      <Button loading rounded icon={<Power />} />
+      <Button rounded color="primary">Primary</Button>
       <Button border="dashed" color="danger">Danger</Button>
-      <Button shape="circle" icon={<Power />} />
+      <Button rounded icon={<Power />} />
       <ButtonGroup>
         <Button color="primary" icon={<Power />} />
         <Button color="primary" icon={<Message />} />
@@ -62,6 +62,48 @@ export default () => {
   demoName: 'Color',
 }
 
+export const Custom = {
+  code: `import React from 'react';
+import styled from 'styled-components';
+import { Wrapper } from '@style-guide/components';
+import { Button } from '@fork-ui/core';
+
+const GradientButton = styled(Button)\`
+  border-color: transparent;
+  background-size: 200% auto;
+  transition: 0.5s;
+  color: var(--white);
+
+  &:hover,
+  &:focus {
+    border-color: transparent;
+    background-position: right center;
+  }
+\`;
+
+const BlueGradientButton = styled(GradientButton)\`
+  background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+\`;
+const RedGradientButton = styled(GradientButton)\`
+  background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+\`;
+const OrangeGradientButton = styled(GradientButton)\`
+  background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
+\`;
+
+export default () => {
+  return (
+    <Wrapper>
+      <BlueGradientButton>HOVER ME</BlueGradientButton>
+      <RedGradientButton>HOVER ME</RedGradientButton>
+      <OrangeGradientButton>HOVER ME</OrangeGradientButton>
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Custom',
+}
+
 export const Disabled = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
@@ -71,10 +113,11 @@ import { Cast } from '@fork-ui/icons/lazy';
 export default () => {
   return (
     <Wrapper>
-      <Button disabled>Basic</Button>
+      <Button border="solid" disabled>Basic</Button>
+      <Button disabled border="dashed" color="primary">Primary</Button>
       <Button disabled color="primary">Primary</Button>
       <Button disabled color="danger">Danger</Button>
-      <Button disabled shape="circle" icon={<Cast />} />
+      <Button disabled rounded icon={<Cast />} />
     </Wrapper>
   );
 };
@@ -173,7 +216,7 @@ export default () => {
         <Button icon={<Bell />} />
       </Badge.Counter>
       <Badge.Counter overlap count={9}>
-        <Button shape="circle" icon={<Inbox />} />
+        <Button rounded icon={<Inbox />} />
       </Badge.Counter>
     </Wrapper>
   );
@@ -192,7 +235,7 @@ export default () => {
   return (
     <Wrapper>
       <Button icon={<Power />} />
-      <Button shape="circle" icon={<Power />} />
+      <Button rounded icon={<Power />} />
       <Button>
         <Power />
         <span>Shutdown</span>
@@ -223,7 +266,7 @@ export default () => {
   return (
     <Wrapper>
       <Button loading>Basic</Button>
-      <Button loading shape="circle" icon={<Power />} />
+      <Button loading rounded icon={<Power />} />
     </Wrapper>
   );
 };
@@ -231,13 +274,3 @@ export default () => {
   demoName: 'With Loader',
 }
 
-
-export const Custom = {
-  code: ``,
-  demoName: 'Custom',
-}
-
-export const AA = {
-  code: ``,
-  demoName: 'AA',
-}
