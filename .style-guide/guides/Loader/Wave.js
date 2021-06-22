@@ -6,7 +6,7 @@ export default () => {
   return (
     <Wrapper span="20px">
       <Loader.Dots animation="wave" />
-      <Loader.Dots animation="wave" color="var(--green)" size="32px" />
+      <Loader.Dots animation="wave" color="var(--green-6)" size="32px" />
     </Wrapper>
   );
 };

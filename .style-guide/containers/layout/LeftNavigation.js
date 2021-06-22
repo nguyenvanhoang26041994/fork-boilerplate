@@ -33,13 +33,11 @@ import {
 } from '@fork-ui/icons/lazy';
 
 const MenuItemStyled = styled.div`
-  height: 60px;
+  height: 55px;
   padding: 0 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
   background-color: var(--bg);
 
   .__avatar {
@@ -48,7 +46,7 @@ const MenuItemStyled = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 5px;
 
     .ficon {
       font-size: 16px;
@@ -71,7 +69,27 @@ const Wrapper = styled.div`
 `;
 
 const MenuWrapper = styled.div``;
+const Header = styled.div`
+  height: 70px;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
 
+  .__home {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+
+    .ficon {
+      font-size: 16px;
+    }
+  }
+`;
 const Container = styled.div`
   width: 270px;
   position: relative;
@@ -81,9 +99,7 @@ const Container = styled.div`
 
     ${MenuItemStyled},
     ${Header} {
-      display: flex;
       justify-content: center;
-      align-items: center;
     }
 
     ${MenuItemStyled} {
@@ -107,27 +123,6 @@ const Container = styled.div`
     left: 0;
     height: 100vh;
     overflow-y: scroll;
-  }
-`;
-const Header = styled.div`
-  height: 70px;
-  background-color: var(--bg);
-  display: flex;
-  align-items: center;
-  padding: 0 8px;
-
-  .__home {
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    cursor: pointer;
-
-    .ficon {
-      font-size: 16px;
-    }
   }
 `;
 

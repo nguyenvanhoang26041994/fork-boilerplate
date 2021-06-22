@@ -5,7 +5,7 @@ import { Badge } from '@fork-ui/core';
 export default () => {
   return (
     <Wrapper span="25px">
-      <Badge.Dot color="var(--green)">
+      <Badge.Dot color="var(--green-5)">
         <FancyBox size="50px" />
       </Badge.Dot>
       <Badge.Counter count={7} color="var(--primary)">
