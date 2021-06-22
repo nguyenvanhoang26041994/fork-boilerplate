@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { Flex } from '@fork-ui/core';
+import { Flex, Sticky } from '@fork-ui/core';
 import DemoBox from '@style-guide/containers/DemoBox';
 import SyntaxHighlighter from '@style-guide/components/SyntaxHighlighter';
 
@@ -27,7 +27,9 @@ export default (demos, allCode) => () => {
         ))}
       </DemoBoxList>
       <Flex col w="1/2">
-        <SyntaxHighlighter code={code} />
+        <Sticky>
+          <SyntaxHighlighter code={code} />
+        </Sticky>
       </Flex>
     </Flex>
   );

@@ -48,8 +48,6 @@ const MenuItemStyled = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
 
     .ficon {
       font-size: 16px;
