@@ -35,13 +35,12 @@ import {
 const MenuItemStyled = styled.div`
   height: 60px;
   padding: 0 8px;
-  /* background-color: var(--bg); */
-  margin-bottom: 1px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  border-left: 2px solid transparent;
   border-right: 2px solid transparent;
-  background-color: var(--skeleton-color);
+  background-color: var(--bg);
 
   .__avatar {
     height: 50px;
@@ -53,7 +52,7 @@ const MenuItemStyled = styled.div`
     background-color: rgba(0, 0, 0, 0.2);
 
     .ficon {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
@@ -72,10 +71,24 @@ const MenuItemStyled = styled.div`
 `;
 
 const Wrapper = styled.div`
+  width: inherit;
+`;
+
+const MenuWrapper = styled.div``;
+
+const Container = styled.div`
   width: 270px;
+  position: relative;
 
   &.--is-minimal {
-    width: unset;
+    width: 70px;
+
+    ${MenuItemStyled},
+    ${Header} {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     ${MenuItemStyled} {
       .__name {
@@ -83,10 +96,14 @@ const Wrapper = styled.div`
       }
     }
   }
-`;
 
-const Container = styled.div`
-  padding: 0 2px;
+  ${Wrapper} {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: scroll;
+  }
 `;
 const Header = styled.div`
   height: 70px;
@@ -105,7 +122,7 @@ const Header = styled.div`
     cursor: pointer;
 
     .ficon {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 `;
@@ -139,15 +156,17 @@ const MenuItemEnhander = ({ path, ...otherProps }) => {
 const LeftNavigation = ({ minimal }) => {
   const history = useHistory();
   return (
-    <Container>
-      <Wrapper className={cn({'--is-minimal': minimal })}>
-        <Header>
-          <div className="__home">
-            <Home onClick={() => history.push('/document')} />
-          </div>
-          <div></div>
-        </Header>
-        <div>
+    <Container className={cn({'--is-minimal': minimal })}>
+      <Wrapper className="hide-scrollbar">
+        <div style={{ paddingBottom: '2px' }}>
+          <Header>
+            <div className="__home">
+              <Home onClick={() => history.push('/document')} />
+            </div>
+            <div></div>
+          </Header>
+        </div>
+        <MenuWrapper>
           <MenuItemEnhander path="/document/icon">
             <div className="__avatar">
               <GridDots />
@@ -298,7 +317,7 @@ const LeftNavigation = ({ minimal }) => {
             </div>
             <div className="__name">Drawer</div>
           </MenuItemEnhander>
-        </div>
+        </MenuWrapper>
       </Wrapper>
     </Container>
   );

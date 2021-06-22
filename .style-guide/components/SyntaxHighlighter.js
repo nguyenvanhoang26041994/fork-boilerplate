@@ -7,11 +7,12 @@ import DarkMode from '@contexts/DarkMode';
 const SyntaxHighlighterStyled = styled.div`
   width: 100%;
   overflow-y: auto;
+  background-color: var(--skeleton-color);
 
   > pre {
     margin: 0 !important;
     border-radius: 0 !important;
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
     padding: 1em !important;
     .token,
     .token.arrow {

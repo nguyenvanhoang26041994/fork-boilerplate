@@ -12,6 +12,7 @@ const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  padding-left: 2px;
 `;
 
 const MainBody = styled.main`
