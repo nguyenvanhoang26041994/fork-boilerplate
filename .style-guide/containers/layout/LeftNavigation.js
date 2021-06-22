@@ -48,6 +48,7 @@ const MenuItemStyled = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
 
     .ficon {
       font-size: 16px;
@@ -60,11 +61,8 @@ const MenuItemStyled = styled.div`
 
   &.--is-active,
   &:hover {
-    .__avatar,
-    .__name {
-      color: var(--primary);
-    }
-    border-right-color: var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
   }
 `;
 
@@ -91,6 +89,14 @@ const Container = styled.div`
     ${MenuItemStyled} {
       .__name {
         display: none;
+      }
+
+      &.--is-active,
+      &:hover {
+        background-color: var(--bg);
+        .__avatar {
+          background-color: var(--primary);
+        }
       }
     }
   }
