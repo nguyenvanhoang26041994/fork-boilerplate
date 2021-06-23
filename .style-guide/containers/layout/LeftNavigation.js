@@ -156,7 +156,7 @@ const LeftNavigation = ({ minimal }) => {
   let { path } = useRouteMatch();
   return (
     <Container className={cn({'--is-minimal': minimal })}>
-      <Wrapper className="common-scrollbar">
+      <Wrapper className="common-scrollbar common-scrollbar--hover">
         <div style={{ paddingBottom: '2px' }}>
           <Header>
             <div className="__home">

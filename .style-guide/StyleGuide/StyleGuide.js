@@ -32,6 +32,7 @@ const TimelineGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-gui
 const AlertGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Alert'));
 const ModalGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Modal'));
 const DrawerGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Drawer'));
+const AutocompleteGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Autocomplete'));
 // __INJECTED_LINE_GUIDE__
 
 const StyleGuide = () => {
@@ -63,6 +64,7 @@ const StyleGuide = () => {
       <Route path={`${path}/alert`} component={AlertGuides} />
       <Route path={`${path}/modal`} component={ModalGuides} />
       <Route path={`${path}/drawer`} component={DrawerGuides} />
+      <Route path={`${path}/autocomplete`} component={AutocompleteGuides} />
       {/* __INJECTED_LINE_ROUTER__ */}
     </Switch>
   );

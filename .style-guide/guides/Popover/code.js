@@ -1,6 +1,6 @@
 export const Popover = {
   code: `import React from 'react';
-import { DemoContent } from '@style-guide/components';
+import { DemoContentV2 } from '@style-guide/components';
 
 export default () => {
   return (
@@ -9,15 +9,15 @@ export default () => {
       data-placement="top"
       style={{ width: '100%' }}
     >
-      <div className="tippy-content">
-        <DemoContent />
+      <div className="tippy-content p-5">
+        <DemoContentV2 />
       </div>
       <div
         className="tippy-arrow"
         style={{
           position: 'absolute',
           left: '0px',
-          transform: 'translate3d(250px, 0px, 0px)',
+          transform: 'translate3d(20px, 0px, 0px)',
         }}
       />
     </div>

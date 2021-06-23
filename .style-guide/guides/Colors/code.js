@@ -88,7 +88,7 @@ export default () => {
 export const GrayColors = {
   code: `import React from 'react';
 import styled from 'styled-components';
-import { ColumnWrapper } from '@style-guide/components';
+import { Wrapper } from '@style-guide/components';
 
 const ColorItem = styled.li\`
   background-color: \${props => props.color};
@@ -111,7 +111,7 @@ const ColorList = styled.ul\`
 
 export default () => {
   return (
-    <ColumnWrapper>
+    <Wrapper>
       {/* <ColorList>
         <ColorItem color="var(--dark-gray-1)" textColor="#fff" />
         <ColorItem color="var(--dark-gray-2)" textColor="#fff" />
@@ -133,7 +133,7 @@ export default () => {
         <ColorItem color="var(--light-gray-4)" textColor="#000" />
         <ColorItem color="var(--light-gray-5)" textColor="#000" />
       </ColorList> */}
-    </ColumnWrapper>
+    </Wrapper>
   );
 };
 `,

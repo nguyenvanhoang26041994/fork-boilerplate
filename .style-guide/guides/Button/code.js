@@ -67,6 +67,7 @@ export const Custom = {
 import styled from 'styled-components';
 import { Wrapper } from '@style-guide/components';
 import { Button } from '@fork-ui/core';
+import { Copy, Notification } from '@fork-ui/icons/lazy';
 
 const GradientButton = styled(Button)\`
   border-color: transparent;
@@ -94,8 +95,8 @@ const OrangeGradientButton = styled(GradientButton)\`
 export default () => {
   return (
     <Wrapper>
-      <BlueGradientButton>HOVER ME</BlueGradientButton>
-      <RedGradientButton>HOVER ME</RedGradientButton>
+      <BlueGradientButton rounded icon={<Notification />} />
+      <RedGradientButton icon={<Copy />} />
       <OrangeGradientButton>HOVER ME</OrangeGradientButton>
     </Wrapper>
   );
