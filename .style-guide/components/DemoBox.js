@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
-import { ButtonGroup, Button } from '@fork-ui/core';
+import { Button } from '@fork-ui/core';
 import { Braces } from '@fork-ui/icons/lazy';
 
 const DemoBoxWrapper = styled.div`
@@ -43,13 +43,13 @@ const DemoBox = ({ children, name, isActive, onViewCodeClick }) => {
     <DemoBoxWrapper className={cn({ '--is-active': isActive })}>
       <DemoBoxHeader>
         {name}
-        <ButtonGroup className="show-when-codebox-hover">
-          <Button
-            color="transparent"
-            icon={<Braces />}
-            onClick={onViewCodeClick}
-          />
-        </ButtonGroup>
+        <Button
+          className="show-when-codebox-hover"
+          rounded
+          color="transparent"
+          icon={<Braces />}
+          onClick={onViewCodeClick}
+        />
       </DemoBoxHeader>
       <Demo>
         {children}

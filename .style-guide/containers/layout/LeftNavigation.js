@@ -122,7 +122,6 @@ const Container = styled.div`
     top: 0;
     left: 0;
     height: 100vh;
-    overflow-y: scroll;
   }
 `;
 
@@ -157,7 +156,7 @@ const LeftNavigation = ({ minimal }) => {
   let { path } = useRouteMatch();
   return (
     <Container className={cn({'--is-minimal': minimal })}>
-      <Wrapper className="hide-scrollbar">
+      <Wrapper className="common-scrollbar">
         <div style={{ paddingBottom: '2px' }}>
           <Header>
             <div className="__home">

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Prism } from 'react-syntax-highlighter';
 import { coy, okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import ConfigPropsTool from '@style-guide/components/ConfigPropsTool';
 import DarkMode from '@contexts/DarkMode';
 
 const SyntaxHighlighterStyled = styled.div`
@@ -21,6 +22,11 @@ const SyntaxHighlighterStyled = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const SyntaxHighlighter = ({ code, className, style }) => {
   const { isDark } = DarkMode.useContext();
 
@@ -29,11 +35,14 @@ const SyntaxHighlighter = ({ code, className, style }) => {
   }
 
   return (
-    <SyntaxHighlighterStyled className={className} style={style}>
-      <Prism language="jsx" style={isDark ? okaidia : coy} wrapLongLines showLineNumbers>
-        {code}
-      </Prism>
-    </SyntaxHighlighterStyled>
+    <Wrapper>
+      {/* <ConfigPropsTool /> */}
+      <SyntaxHighlighterStyled className={className} style={style}>
+        <Prism language="jsx" style={isDark ? okaidia : coy} wrapLongLines showLineNumbers>
+          {code}
+        </Prism>
+      </SyntaxHighlighterStyled>
+    </Wrapper>
   );
 };
 

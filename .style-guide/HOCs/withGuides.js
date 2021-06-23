@@ -32,9 +32,9 @@ const DemoDetailBox = ({ code }) => {
   }, [code]);
   return (
     <DemoDetailBoxWrapper>
-      <div className="__float-actions">
+      {/* <div className="__float-actions">
         <Button rounded icon={<Copy />} onClick={onClick} />
-      </div>
+      </div> */}
       {/* <div className="__tabs">
         <ButtonGroup>
           <Button>Prop Types</Button>
