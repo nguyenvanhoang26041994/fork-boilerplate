@@ -1,10 +1,10 @@
 import React from 'react';
-import { Wrapper, ColumnWrapper,DemoContentV2 } from '@style-guide/components';
+import { Wrapper, DemoContentV2 } from '@style-guide/components';
 import { PureAlert } from '@fork-ui/core';
 
 export default () => {
   return (
-    <ColumnWrapper span="20px">
+    <Wrapper col span="20px">
       <PureAlert type="info" style={{ boxShadow: 'var(--overlay--shadow)' }}>
         <PureAlert.Header>
           INFO
@@ -41,6 +41,6 @@ export default () => {
           <DemoContentV2 />
         </PureAlert.Body>
       </PureAlert>
-    </ColumnWrapper>
+    </Wrapper>
   );
 };

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Flex, Sticky, Button, ButtonGroup } from '@fork-ui/core';
 import { Copy } from '@fork-ui/icons/lazy';
 import copyToClipboard from '@fork-ui/utils/copyToClipboard';
-import DemoBox from '@style-guide/containers/DemoBox';
+import DemoBox from '@style-guide/components/DemoBox';
 import SyntaxHighlighter from '@style-guide/components/SyntaxHighlighter';
 
 const DemoBoxList = styled(Flex)`
