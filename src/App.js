@@ -7,7 +7,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import DarkMode from '@contexts/DarkMode';
-import Document from '@style-guide/pages/document';
+import StyleGuide from '@style-guide';
 
 const App = () => {
   const darkMode = DarkMode.useValue();
@@ -17,7 +17,7 @@ const App = () => {
       <DarkMode.Context.Provider value={darkMode}>
         <BrowserRouter>
           <Switch>
-            <Route path="/document" component={Document} />
+            <Route path="/document" component={StyleGuide} />
             <Route>
               <Redirect to="/document" />
             </Route>

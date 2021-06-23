@@ -9,6 +9,7 @@ import { withLayout } from '@style-guide/containers/layout';
 
 const AllGuide = lazy(() => import(/* webpackPrefetch: true */ './AllGuide'));
 const IconGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Icon'));
+const LazyIconGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Icon/LazyIcon'));
 const ButtonGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Button'));
 const SkeletonGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Skeleton'));
 const CheckboxGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Checkbox'));
@@ -33,11 +34,12 @@ const ModalGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/
 const DrawerGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Drawer'));
 // __INJECTED_LINE_GUIDE__
 
-const Document = () => {
+const StyleGuide = () => {
   let { path } = useRouteMatch();
   return (
     <Switch>
       <Route exact path={path} component={AllGuide} />
+      <Route path={`${path}/lazy-icon`} component={LazyIconGuides} />
       <Route path={`${path}/icon`} component={IconGuides} />
       <Route path={`${path}/button`} component={ButtonGuides} />
       <Route path={`${path}/skeleton`} component={SkeletonGuides} />
@@ -66,4 +68,4 @@ const Document = () => {
   );
 };
 
-export default withLayout(Document);
+export default withLayout(StyleGuide);

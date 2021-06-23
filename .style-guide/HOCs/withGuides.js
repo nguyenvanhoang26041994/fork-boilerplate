@@ -21,12 +21,9 @@ const DemoDetailBoxWrapper = styled.div`
     top: 0;
     margin: 8px;
   }
-  /* .__tabs {
-    height: 60px;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-  } */
+`;
+
+const Wrapper = styled(Flex)`
 `;
 
 const DemoDetailBox = ({ code }) => {
@@ -56,7 +53,7 @@ export default (demos, allCode) => () => {
   }, [setSelectedName]);
 
   return (
-    <Flex wrap>
+    <Wrapper wrap>
       <DemoBoxList col w="1/2" style={{ paddingRight: '2px' }}>
         {demos.map((Demo) => (
           <DemoBox
@@ -70,10 +67,10 @@ export default (demos, allCode) => () => {
         ))}
       </DemoBoxList>
       <Flex col w="1/2" style={{ backgroundColor: 'var(--bg)' }}>
-        <Sticky>
+        <Sticky stickyClass="__demo-detail-box--stucked" className="__demo-detail-box">
           <DemoDetailBox code={allCode[selectedName].code} />
         </Sticky>
       </Flex>
-    </Flex>
+    </Wrapper>
   );
 };

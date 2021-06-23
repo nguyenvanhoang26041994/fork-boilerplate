@@ -1,7 +1,7 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import cn from 'classnames';
 import styled from 'styled-components';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
 
 import {
   Home,
@@ -154,163 +154,164 @@ const MenuItemEnhander = ({ path, ...otherProps }) => {
 
 const LeftNavigation = ({ minimal }) => {
   const history = useHistory();
+  let { path } = useRouteMatch();
   return (
     <Container className={cn({'--is-minimal': minimal })}>
       <Wrapper className="hide-scrollbar">
         <div style={{ paddingBottom: '2px' }}>
           <Header>
             <div className="__home">
-              <Home onClick={() => history.push('/document')} />
+              <Home onClick={() => history.push(path)} />
             </div>
             <div></div>
           </Header>
         </div>
         <MenuWrapper>
-          <MenuItemEnhander path="/document/icon">
+          <MenuItemEnhander path={`${path}/icon`}>
             <div className="__avatar">
               <GridDots />
             </div>
             <div className="__name">Icon</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/button">
+          <MenuItemEnhander path={`${path}/button`}>
             <div className="__avatar">
               <Mouse />
             </div>
             <div className="__name">Button</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/checkbox">
+          <MenuItemEnhander path={`${path}/checkbox`}>
             <div className="__avatar">
               <Checkbox />
             </div>
             <div className="__name">Checkbox</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/radio">
+          <MenuItemEnhander path={`${path}/radio`}>
             <div className="__avatar">
               <Circle />
             </div>
             <div className="__name">Radio</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/switch">
+          <MenuItemEnhander path={`${path}/switch`}>
             <div className="__avatar">
               <ToggleRight />
             </div>
             <div className="__name">Switch</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/badge">
+          <MenuItemEnhander path={`${path}/badge`}>
             <div className="__avatar">
               <Notification />
             </div>
             <div className="__name">Badge</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/avatar">
+          <MenuItemEnhander path={`${path}/avatar`}>
             <div className="__avatar">
               <User />
             </div>
             <div className="__name">Avatar</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/typography">
+          <MenuItemEnhander path={`${path}/typography`}>
             <div className="__avatar">
               <Typography />
             </div>
             <div className="__name">Typography</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/skeleton">
+          <MenuItemEnhander path={`${path}/skeleton`}>
             <div className="__avatar">
               <GripHorizontal />
             </div>
             <div className="__name">Skeleton</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/loader">
+          <MenuItemEnhander path={`${path}/loader`}>
             <div className="__avatar">
               <LoaderQuarter />
             </div>
             <div className="__name">Loader</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/progress">
+          <MenuItemEnhander path={`${path}/progress`}>
             <div className="__avatar">
               <Loader />
             </div>
             <div className="__name">Progress</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/chip">
+          <MenuItemEnhander path={`${path}/chip`}>
             <div className="__avatar">
               <Tag />
             </div>
             <div className="__name">Chip</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/pagination">
+          <MenuItemEnhander path={`${path}/pagination`}>
             <div className="__avatar">
               <PageBreak />
             </div>
             <div className="__name">Pagination</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/tabs">
+          <MenuItemEnhander path={`${path}/tabs`}>
             <div className="__avatar">
               <DeviceLaptop />
             </div>
             <div className="__name">Tabs</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/collapse">
+          <MenuItemEnhander path={`${path}/collapse`}>
             <div className="__avatar">
               <ChevronDown />
             </div>
             <div className="__name">Collapse</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/stepper">
+          <MenuItemEnhander path={`${path}/stepper`}>
             <div className="__avatar">
               <ArrowRightCircle />
             </div>
             <div className="__name">Stepper</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/timeline">
+          <MenuItemEnhander path={`${path}/timeline`}>
             <div className="__avatar">
               <Line />
             </div>
             <div className="__name">Timeline</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/popover">
+          <MenuItemEnhander path={`${path}/popover`}>
             <div className="__avatar">
               <Message />
             </div>
             <div className="__name">Popover</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/tooltip">
+          <MenuItemEnhander path={`${path}/tooltip`}>
             <div className="__avatar">
               <Message2 />
             </div>
             <div className="__name">Tooltip</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/confirm">
+          <MenuItemEnhander path={`${path}/confirm`}>
             <div className="__avatar">
               <QuestionMark />
             </div>
             <div className="__name">Confirm</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/popconfirm">
+          <MenuItemEnhander path={`${path}/popconfirm`}>
             <div className="__avatar">
               <MessageReport />
             </div>
             <div className="__name">Popconfirm</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/alert">
+          <MenuItemEnhander path={`${path}/alert`}>
             <div className="__avatar">
               <AlertTriangle />
             </div>
             <div className="__name">Alert</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/notification">
+          <MenuItemEnhander path={`${path}/notification`}>
             <div className="__avatar">
               <Bell />
             </div>
             <div className="__name">Notification</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/modal">
+          <MenuItemEnhander path={`${path}/modal`}>
             <div className="__avatar">
               <LayoutBottombar />
             </div>
             <div className="__name">Modal</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path="/document/drawer">
+          <MenuItemEnhander path={`${path}/drawer`}>
             <div className="__avatar">
               <LayoutSidebar />
             </div>
