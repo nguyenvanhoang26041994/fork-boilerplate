@@ -6,7 +6,7 @@ import { PureAlert } from '@fork-ui/core';
 export default () => {
   return (
     <Wrapper col span="20px">
-      <PureAlert type="info" style={{ boxShadow: 'var(--overlay--shadow)' }}>
+      <PureAlert type="info" style={{ boxShadow: 'var(--popover-box-shadow)' }}>
         <PureAlert.Header>
           INFO
           <PureAlert.Closer />
@@ -15,7 +15,7 @@ export default () => {
           <DemoContentV2 />
         </PureAlert.Body>
       </PureAlert>
-      <PureAlert type="success" style={{ boxShadow: 'var(--overlay--shadow)' }}>
+      <PureAlert type="success" style={{ boxShadow: 'var(--popover-box-shadow)' }}>
         <PureAlert.Header>
           SUCCESS
           <PureAlert.Closer />
@@ -24,7 +24,7 @@ export default () => {
           <DemoContentV2 />
         </PureAlert.Body>
       </PureAlert>
-      <PureAlert type="warning" style={{ boxShadow: 'var(--overlay--shadow)' }}>
+      <PureAlert type="warning" style={{ boxShadow: 'var(--popover-box-shadow)' }}>
         <PureAlert.Header>
           WARNING
           <PureAlert.Closer />
@@ -33,7 +33,7 @@ export default () => {
           <DemoContentV2 />
         </PureAlert.Body>
       </PureAlert>
-      <PureAlert type="error" style={{ boxShadow: 'var(--overlay--shadow)' }}>
+      <PureAlert type="error" style={{ boxShadow: 'var(--popover-box-shadow)' }}>
         <PureAlert.Header>
           ERROR
           <PureAlert.Closer />

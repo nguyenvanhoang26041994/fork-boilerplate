@@ -7,8 +7,8 @@ import Custom from './Custom';
 import * as allCode from './code';
 
 const demos = [
-  { Component: Placement, name: 'Placement' },
   { Component: Tooltip, name: 'Tooltip' },
+  { Component: Placement, name: 'Placement' },
   { Component: Custom, name: 'Custom' },
   // __INJECTED_ITEM__
 ];

@@ -39,6 +39,7 @@ const MenuItemStyled = styled.div`
   display: flex;
   align-items: center;
   background-color: var(--bg);
+  color: var(--color-low-emphasis);
 
   .__avatar {
     height: 50px;

@@ -4,16 +4,6 @@ import styled from 'styled-components';
 import { Wrapper } from '@style-guide/components';
 import { Tooltip, Button } from '@fork-ui/core';
 
-const BlurTooltip = styled(Tooltip)\`
-  .tippy-content {
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
-  }
-  .tippy-arrow {
-    color: rgba(0, 0, 0, 0.6);
-  }
-\`;
-
 const PrimaryTooltip = styled(Tooltip)\`
   .tippy-content {
     background-color: var(--primary);
@@ -37,17 +27,6 @@ const DangerTooltip = styled(Tooltip)\`
 export default () => {
   return (
     <Wrapper>
-      <BlurTooltip
-        title={(
-          <div>
-            <b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry
-            <br />
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-          </div>
-        )}
-      >
-        <Button>Hover me</Button>
-      </BlurTooltip>
       <PrimaryTooltip
         title={(
           <div>
@@ -160,7 +139,7 @@ export default () => {
       <div
         className="tippy-box ftooltip"
         data-placement="top"
-        style={{ maxWidth: '200px', boxShadow: 'var(--overlay--shadow)' }}
+        style={{ maxWidth: '200px', boxShadow: 'var(--popover-box-shadow)' }}
       >
         <div className="tippy-content">
           <b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry

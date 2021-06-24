@@ -5,7 +5,7 @@ import { Send } from '@fork-ui/icons/lazy';
 
 export default () => {
   return (
-    <Dialog className="w-full" style={{ boxShadow: 'var(--overlay--shadow)' }}>
+    <Dialog className="w-full" style={{ boxShadow: 'var(--popover-box-shadow)' }}>
       <Dialog.Header>
         <span>HEADER</span>
         <Dialog.Closer />

@@ -7,7 +7,7 @@ export default () => {
       <div
         className="tippy-box ftooltip"
         data-placement="top"
-        style={{ maxWidth: '200px', boxShadow: 'var(--overlay--shadow)' }}
+        style={{ maxWidth: '200px', boxShadow: 'var(--popover-box-shadow)' }}
       >
         <div className="tippy-content">
           <b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry

@@ -3,7 +3,7 @@ import { Flex, Skeleton } from '@fork-ui/core';
 
 const DemoContent = () => {
   return (
-    <Flex col className="flex-1 fskele-animated">
+    <Flex col className="flex-1 fskele-animated" style={{ minWidth: '400px' }}>
       <Skeleton shape="p" w="70%" />
       <Skeleton shape="p" w="40%" />
       <Flex row w="full">
