@@ -24,13 +24,14 @@ export default () => {
       <div
         className="tippy-box ftooltip"
         data-placement="top"
-        style={{
-          maxWidth: '200px',
-          backgroundColor: 'var(--skeleton-color)',
-          color: 'var(--color)',
-        }}
       >
-        <div className="tippy-content">
+        <div className="tippy-content"
+          style={{
+            maxWidth: '200px',
+            backgroundColor: 'var(--skeleton-color)',
+            color: 'var(--color)',
+          }}
+        >
           <b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry
         </div>
         <div

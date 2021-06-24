@@ -69,6 +69,6 @@ module.exports = {
     }
   },
   watchOptions: {
-    ignored: ['**/node_modules', path.join(rootDir, 'fork-ui/src/icons')],
+    ignored: ['**/node_modules', path.join(rootDir, 'fork-ui/icons')],
   },
 };
