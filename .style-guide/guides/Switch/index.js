@@ -10,12 +10,12 @@ import Switch from './Switch';
 import * as allCode from './code';
 
 const demos = [
-  { Component: Color, name: 'Color' },
-  { Component: Controlled, name: 'Controlled' },
+  { Component: Switch, name: 'Switch' },
   { Component: Disabled, name: 'Disabled' },
   { Component: Loading, name: 'Loading' },
+  { Component: Color, name: 'Color' },
+  { Component: Controlled, name: 'Controlled' },
   { Component: Size, name: 'Size' },
-  { Component: Switch, name: 'Switch' },
   // __INJECTED_ITEM__
 ];
 

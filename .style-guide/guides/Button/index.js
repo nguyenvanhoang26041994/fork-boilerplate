@@ -15,13 +15,13 @@ import WithLoader from './WithLoader';
 import * as allCode from './code';
 
 const demos = [
-  { Component: Bordered, name: 'Bordered' },
   { Component: Button, name: 'Button' },
   { Component: Color, name: 'Color' },
-  { Component: Custom, name: 'Custom' },
   { Component: Disabled, name: 'Disabled' },
-  { Component: FluidGroupButton, name: 'FluidGroupButton' },
+  { Component: Bordered, name: 'Bordered' },
   { Component: GroupButton, name: 'GroupButton' },
+  { Component: Custom, name: 'Custom' },
+  { Component: FluidGroupButton, name: 'FluidGroupButton' },
   { Component: Size, name: 'Size' },
   { Component: WithBadge, name: 'WithBadge' },
   { Component: WithIcon, name: 'WithIcon' },

@@ -8,9 +8,9 @@ import Size from './Size';
 import * as allCode from './code';
 
 const demos = [
+  { Component: Radio, name: 'Radio' },
   { Component: Color, name: 'Color' },
   { Component: Controlled, name: 'Controlled' },
-  { Component: Radio, name: 'Radio' },
   { Component: Size, name: 'Size' },
   // __INJECTED_ITEM__
 ];

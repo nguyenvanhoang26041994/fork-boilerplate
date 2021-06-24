@@ -12,10 +12,10 @@ import * as allCode from './code';
 const demos = [
   { Component: Badge, name: 'Badge' },
   { Component: Color, name: 'Color' },
-  { Component: Custom, name: 'Custom' },
   { Component: OverflowCount, name: 'OverflowCount' },
   { Component: Overlap, name: 'Overlap' },
   { Component: Placement, name: 'Placement' },
+  { Component: Custom, name: 'Custom' },
   // __INJECTED_ITEM__
 ];
 

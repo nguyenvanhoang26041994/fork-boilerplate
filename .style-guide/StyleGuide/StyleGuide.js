@@ -33,6 +33,8 @@ const AlertGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/
 const ModalGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Modal'));
 const DrawerGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Drawer'));
 const AutocompleteGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Autocomplete'));
+const SelectGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Select'));
+const ConfirmGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Confirm'));
 // __INJECTED_LINE_GUIDE__
 
 const StyleGuide = () => {
@@ -65,6 +67,8 @@ const StyleGuide = () => {
       <Route path={`${path}/modal`} component={ModalGuides} />
       <Route path={`${path}/drawer`} component={DrawerGuides} />
       <Route path={`${path}/autocomplete`} component={AutocompleteGuides} />
+      <Route path={`${path}/select`} component={SelectGuides} />
+      <Route path={`${path}/confirm`} component={ConfirmGuides} />
       {/* __INJECTED_LINE_ROUTER__ */}
     </Switch>
   );

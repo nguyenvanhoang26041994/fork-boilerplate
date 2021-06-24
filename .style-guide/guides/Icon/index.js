@@ -9,8 +9,8 @@ import SomeNiceIcons from './SomeNiceIcons';
 import * as allCode from './code';
 
 const demos = [
-  { Component: Color, name: 'Color' },
   { Component: Icon, name: 'Icon' },
+  { Component: Color, name: 'Color' },
   // { Component: LazyIcon, name: 'LazyIcon' },
   { Component: Size, name: 'Size' },
   { Component: SomeNiceIcons, name: 'SomeNiceIcons' },

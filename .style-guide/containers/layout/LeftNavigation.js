@@ -33,7 +33,7 @@ import {
 } from '@fork-ui/icons/lazy';
 
 const MenuItemStyled = styled.div`
-  height: 55px;
+  height: 45px;
   padding: 0 8px;
   cursor: pointer;
   display: flex;
@@ -42,8 +42,8 @@ const MenuItemStyled = styled.div`
   color: var(--color-low-emphasis);
 
   .__avatar {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,8 +78,8 @@ const Header = styled.div`
   padding: 0 8px;
 
   .__home {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
