@@ -1,7 +1,7 @@
 export const Autocomplete = {
   code: `import React from 'react';
 import { Wrapper } from '@style-guide/components';
-import { Autocomplete } from '@fork-ui/core';
+import { Autocomplete, Textbox } from '@fork-ui/core';
 
 const options = [
   { uid: 1, text: 'Hoang Nguyen' },
@@ -25,7 +25,8 @@ const options = [
 export default () => {
   return (
     <Wrapper>
-      <Autocomplete options={options} placement="bottom-start" />
+      <Autocomplete options={options}>
+      </Autocomplete>
     </Wrapper>
   );
 };
