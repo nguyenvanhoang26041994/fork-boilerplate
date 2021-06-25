@@ -52,6 +52,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
+      '@@': rootDir,
       '@': path.join(rootDir, 'src'),
       '@contexts': path.join(rootDir, 'src/contexts'),
       '@components': path.join(rootDir, 'src/components'),

@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import DarkMode from '@contexts/DarkMode';
 import StyleGuide from '@style-guide';
+import ChatApp from '@@/fork-chat-ui';
 
 const App = () => {
   const darkMode = DarkMode.useValue();
@@ -18,6 +19,7 @@ const App = () => {
         <BrowserRouter>
           <Switch>
             <Route path="/document" component={StyleGuide} />
+            <Route path="/chat" component={ChatApp} />
             <Route>
               <Redirect to="/document" />
             </Route>

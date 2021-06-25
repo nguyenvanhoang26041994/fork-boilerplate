@@ -67,6 +67,7 @@ const MenuItemStyled = styled.div`
 
 const Wrapper = styled.div`
   width: inherit;
+  background-color: var(--bg);
 `;
 
 const MenuWrapper = styled.div``;
