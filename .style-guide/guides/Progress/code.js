@@ -27,7 +27,7 @@ export default () => {
         linearGradient={_linearGradient}
         color={\`url(#\${linearGradientId})\`}
       />
-      <Progress.Circle percent={68} color="var(--green)" />
+      <Progress.Circle percent={68} color="var(--green-5)" />
     </Wrapper>
   );
 };

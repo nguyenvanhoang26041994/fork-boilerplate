@@ -1,41 +1,4 @@
-export const Confirm = {
-  code: `import React from 'react';
-import { Wrapper, DemoContentV2 } from '@style-guide/components';
-import { PureConfirm } from '@fork-ui/core';
-
-export default () => {
-  return (
-    <Wrapper>
-      <PureConfirm className="w-full" style={{ boxShadow: 'var(--popover-box-shadow)' }}>
-        <DemoContentV2 />
-      </PureConfirm>
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Confirm',
-}
-
-export const CustomText = {
-  code: `import React from 'react';
-import { Wrapper, DemoContentV2 } from '@style-guide/components';
-import { Popconfirm, Button } from '@fork-ui/core';
-
-export default () => {
-  return (
-    <Wrapper>
-      <Popconfirm overlay={<DemoContentV2 />} noText="Cancel" yesText="Confirm">
-        <Button color="primary">Click me</Button>
-      </Popconfirm>
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Custom Text',
-}
-
-export const Placement = {
-  code: `import React from 'react';
+import React from 'react';
 import { Popconfirm, Button } from '@fork-ui/core';
 import { DemoContentV2 } from '@style-guide/components';
 
@@ -108,25 +71,3 @@ export default () => {
     </div>
   );
 };
-`,
-  demoName: 'Placement',
-}
-
-export const Popconfirm = {
-  code: `import React from 'react';
-import { Wrapper, DemoContentV2 } from '@style-guide/components';
-import { Popconfirm, Button } from '@fork-ui/core';
-
-export default () => {
-  return (
-    <Wrapper>
-      <Popconfirm overlay={<DemoContentV2 />}>
-        <Button color="primary">Click me</Button>
-      </Popconfirm>
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Popconfirm',
-}
-

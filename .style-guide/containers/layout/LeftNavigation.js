@@ -287,12 +287,6 @@ const LeftNavigation = ({ minimal }) => {
             </div>
             <div className="__name">Confirm</div>
           </MenuItemEnhander>
-          <MenuItemEnhander path={`${path}/popconfirm`}>
-            <div className="__avatar">
-              <MessageReport />
-            </div>
-            <div className="__name">Popconfirm</div>
-          </MenuItemEnhander>
           <MenuItemEnhander path={`${path}/alert`}>
             <div className="__avatar">
               <AlertTriangle />
