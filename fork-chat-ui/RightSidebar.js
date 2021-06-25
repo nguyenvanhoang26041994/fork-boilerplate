@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   padding-left: 2px;
 `;
 
-const RightSidebar = ({ className }) => {
+const RightSidebar = ({ className, onClose }) => {
   const [{ isActive, onChange }] = Collapse.useCollapse({
     accordion: false,
     activePanels: [],
@@ -25,13 +25,13 @@ const RightSidebar = ({ className }) => {
   return (
     <Wrapper className={className}>
       <StyledDialog>
-        {/* <Header></Header> */}
+        <Dialog.Closer rounded onClick={onClose} />
         <Dialog.Body style={{ padding: 0, backgroundColor: 'var(--bg)' }}>
-          <div className="flex flex-col items-center justify-center p-5">
+          <div className="flex flex-col items-center justify-center pt-10 pb-5">
               <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
                 <Avatar size={100} src="https://avatars.githubusercontent.com/u/20764362?v=4" />
               </Badge.Dot>
-              <div style={{ fontWeight: '600' }} className="mt-5">Hoàng Nguyễn</div>
+              <div style={{ fontWeight: '600' }} className="mt-3">Hoàng Nguyễn</div>
               <div>Active Now</div>
           </div>
           <Collapse>

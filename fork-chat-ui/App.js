@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Dialog, Textarea, Avatar, Badge, Button } from '@fork-ui/core';
 import { Phone, Video, Dots, MoodSmile, Microphone, Send, InfoCircle } from '@fork-ui/icons/lazy';
@@ -90,6 +90,7 @@ const Message = ({ children, width, className }) => {
 };
 
 const App = () => {
+  const [isRightSidebarOpen, setRightSidebarOpen] = useState(true);
   return (
     <Wrapper>
       <LeftSidebar className="left-side-container" />
@@ -108,7 +109,7 @@ const App = () => {
             <div className="flex items-center">
               <Button rounded color="transparent" icon={<Phone />} />
               <Button rounded color="transparent" icon={<Video />} className="ml-2" />
-              <Button rounded color="transparent" icon={<InfoCircle />} className="ml-2" />
+              <Button rounded color="transparent" icon={<InfoCircle />} className="ml-2" onClick={() => setRightSidebarOpen(prev => !prev)} />
               <Button rounded color="transparent" icon={<Dots />} className="ml-2" />
             </div>
           </ChatHeader>
@@ -170,7 +171,12 @@ const App = () => {
           </ChatFooter>
         </ChatContainer>
       </main>
-      <RightSidebar className="right-side-container" />
+      {isRightSidebarOpen && (
+        <RightSidebar
+          className="right-side-container"
+          onClose={() => setRightSidebarOpen(false)}
+        />
+      )}
     </Wrapper>
   );
 };
