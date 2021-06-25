@@ -83,9 +83,13 @@ const LeftSidebar = ({ className }) => {
     <Wrapper className={className}>
       <StyledDialog>
         <Header>
-          <Button rounded color="transparent" icon={<MessageDots />} />
+          <Badge.Counter overlap count={14}>
+            <Button rounded border="solid" color="primary" icon={<MessageDots />} />
+          </Badge.Counter>
           <Button rounded color="transparent" icon={<Phone />} />
-          <Button rounded color="transparent" icon={<Bell />} />
+          <Badge.Counter overlap count={2}>
+            <Button rounded color="transparent" icon={<Bell />} />
+          </Badge.Counter>
           {/* <Button rounded color="transparent" icon={<Bell />} /> */}
           <Button rounded color="transparent" icon={<Settings />} />
         </Header>
@@ -103,7 +107,7 @@ const LeftSidebar = ({ className }) => {
               </div>
               <div className="flex flex-col justify-center items-end ml-3">
                 <div className="__time">07:23 AM</div>
-                <div className="__unread-count">1</div>
+                <div className="__unread-count">2</div>
               </div>
             </ChatCard>
 

@@ -134,6 +134,26 @@ const App = () => {
               <Message className="--right" width={104}>khoi flex-grow</Message>
               <Message width={38}>ùm</Message>
               <Message width={38}>:v</Message>
+              <Message width={256}>sắp phỏng vấn r, lát nữa thử xem sao :v</Message>
+              <Message width={282}>quái lạ là trước đó vẫn build dc bình thường</Message>
+              <Message width={150}>chỉ là page trắng thôi</Message>
+              <Message width={137}>giờ éo build dc luôn</Message>
+              <Message width={189}>có vẻ hơi lag :v do server cùi</Message>
+              <Message className="--right" width={139}>vercel build lau lam</Message>
+              <Message width={38}>đù</Message>
+              <Message width={190}>sao flex-direction: column nó khiến mình ko scroll dc ta :v</Message>
+              <Message className="--right" width={283}>scroll phai co mex height cho thang wrapper</Message>
+              <Message className="--right" width={146}>overflow: scoll moi co</Message>
+              <Message className="--right" width={252}>lam gi co chuyen scroll tu co cho em dc</Message>
+              <Message width={39}>ùm</Message>
+              <Message width={128}>thì e có height rồi</Message>
+              <Message width={173}>có overflow: scroll rồi luôn</Message>
+              <Message width={129}>do cái display flex</Message>
+              <Message className="--right" width={44}>thoi</Message>
+              <Message className="--right" width={159}>cho cai height 100vh di </Message>
+              <Message className="--right" width={104}>khoi flex-grow</Message>
+              <Message width={38}>ùm</Message>
+              <Message width={38}>:v</Message>
             </div>
           </ChatBody>
           <ChatFooter>

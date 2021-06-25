@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Dialog, Avatar, Badge } from '@fork-ui/core';
+import { Dialog, Avatar, Badge, Collapse } from '@fork-ui/core';
 
 const Header = styled(Dialog.Header)`
   height: 80px;
@@ -18,6 +18,10 @@ const Wrapper = styled.div`
 `;
 
 const RightSidebar = ({ className }) => {
+  const [{ isActive, onChange }] = Collapse.useCollapse({
+    accordion: false,
+    activePanels: [],
+  });
   return (
     <Wrapper className={className}>
       <StyledDialog>
@@ -30,6 +34,19 @@ const RightSidebar = ({ className }) => {
               <div style={{ fontWeight: '600' }} className="mt-5">Hoàng Nguyễn</div>
               <div>Active Now</div>
           </div>
+          <Collapse>
+            <Collapse.Panel
+              title={(
+                <span>Shared media</span>
+              )}
+              value="shared-media"
+              active={isActive('shared-media')}
+              onClick={() => onChange('shared-media')}
+            >
+              <span></span>
+            </Collapse.Panel>
+            
+          </Collapse>
         </Dialog.Body>
       </StyledDialog>
     </Wrapper>
