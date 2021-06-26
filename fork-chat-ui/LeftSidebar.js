@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Dialog, Button, Avatar, AvatarGroup, Badge } from '@fork-ui/core';
-import { MessageDots, Phone, Settings, Bell } from '@fork-ui/icons/lazy';
+import { MessageDots, Phone, Settings, Bell, Plus, VideoPlus, PhonePlus } from '@fork-ui/icons/lazy';
+import Searchbox from './Searchbox';
 
 const Header = styled(Dialog.Header)`
   height: 80px;
@@ -94,6 +95,15 @@ const LeftSidebar = ({ className }) => {
           <Button rounded color="transparent" icon={<Settings />} />
         </Header>
         <Dialog.Body style={{ padding: 0, backgroundColor: 'var(--bg)' }} className="common-scrollbar common-scrollbar--hover">
+          <div className="p-5 flex justify-between">
+            <h2 style={{ fontSize: '20px' }}>Chats</h2>
+            <div>
+              <Button border="solid" color="primary" rounded icon={<VideoPlus />} />
+              <Button border="solid" color="primary" rounded icon={<PhonePlus />} className="ml-2" />
+              <Button border="solid" color="primary" rounded icon={<Plus />} className="ml-2" />
+            </div>
+          </div>
+          <Searchbox className="pl-5 pr-5 pb-5" />
           <ChatList>
             <ChatCard>
               <div className="__avatar">
