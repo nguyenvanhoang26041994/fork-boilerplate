@@ -433,6 +433,9 @@ const NewChatApp = () => {
               </ChatHeader>
               <ChatBody className="common-scrollbar common-scrollbar--hover">
                 <div className="w-full" style={{ maxWidth: '900px', height: '100%', margin: '0 auto' }}>
+                  <div data-id="loadMoreTop" className="flex items-center justify-center">
+                    <Loader.Spinner className="p-3" />
+                  </div>
                   <div className="chat-lists">
                     <ChatSession className="--incomming --start mb-2">
                       <div className="chat-sesstion-body">
@@ -699,10 +702,9 @@ const NewChatApp = () => {
                         </div>
                       </div>
                     </ChatSession>
-
-
-
-
+                  </div>
+                  <div data-id="loadMoreBottom" className="flex items-center justify-center">
+                    <Loader.Spinner className="p-2" />
                   </div>
                 </div>
               </ChatBody>
