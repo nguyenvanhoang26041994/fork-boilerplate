@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import DarkMode from '@contexts/DarkMode';
 import StyleGuide from '@style-guide';
-import ChatApp from '@@/fork-chat-ui';
+import ChatApp from '@fork-chat-boilerplate';
 
 const App = () => {
   const darkMode = DarkMode.useValue();
