@@ -44,7 +44,7 @@ const MainChatbox = ({ scrollToBottom, className }) => {
             setIsShowSending(!!trim(e.target.value));
           }}
           onKeyPress={(e) => {
-            if (e.code === 'Enter') {
+            if (e.code === 'Enter' && trim(e.target.value)) {
               Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(e.target, '');
               e.target.dispatchEvent(new Event('input', { bubbles: true }));
               setTimeout(() => {
@@ -56,11 +56,13 @@ const MainChatbox = ({ scrollToBottom, className }) => {
       </StyledChatInputWrapper>
       <Button rounded icon={<MoodSmile />} className="ml-2" />
       <Button color="primary" rounded icon={isShowSending ? <Send /> : <ThumbUp />} className="ml-2" onClick={() => {
-        Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(ref.current, '');
-        ref.current.dispatchEvent(new Event('input', { bubbles: true }));
-        setTimeout(() => {
-          scrollToBottom();
-        }, 200);
+        if (trim(ref.current.value)) {
+          Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(ref.current, '');
+          ref.current.dispatchEvent(new Event('input', { bubbles: true }));
+          setTimeout(() => {
+            scrollToBottom();
+          }, 200);
+        }
       }} />
     </MainChatboxWrapper>
   );

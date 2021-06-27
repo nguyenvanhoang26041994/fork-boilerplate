@@ -25,7 +25,8 @@ const ChatSession = styled.div`
 
   .chat-meta {
     display: none;
-    padding: 4px 0;
+    margin: 4px 10px;
+    font-size: 11px;
   }
 
   &.--incomming.--start {
@@ -104,7 +105,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -115,7 +116,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping'
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -126,7 +127,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -137,7 +138,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Purchasing crappy things with haft the hand of cash in hand
             </div>
-            <div className="chat-meta">Message send 0:40 PM</div>
+            <div className="chat-meta">0:40 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -148,7 +149,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Now i have some thing to tell you.
             </div>
-            <div className="chat-meta">Message send 1:40 PM</div>
+            <div className="chat-meta">1:40 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -159,7 +160,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               All my night, been ready for you all my night. Been waitin' on you all my night. I'll buzz you in, just let me known when you outside. All my night you.
             </div>
-            <div className="chat-meta">Message send 1:46 PM</div>
+            <div className="chat-meta">1:46 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -173,7 +174,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -184,7 +185,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping'
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -195,7 +196,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -206,7 +207,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Purchasing crappy things with haft the hand of cash in hand
             </div>
-            <div className="chat-meta">Message send 0:40 PM</div>
+            <div className="chat-meta">0:40 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -217,7 +218,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Now i have some thing to tell you.
             </div>
-            <div className="chat-meta">Message send 1:40 PM</div>
+            <div className="chat-meta">1:40 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -228,7 +229,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               All my night, been ready for you all my night. Been waitin' on you all my night. I'll buzz you in, just let me known when you outside. All my night you.
             </div>
-            <div className="chat-meta">Message send 1:46 PM</div>
+            <div className="chat-meta">1:46 PM</div>
           </div>
         </div>
       </ChatSession><ChatSession className="--incomming --start mb-2">
@@ -238,7 +239,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -249,7 +250,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping'
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -260,7 +261,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -271,7 +272,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Purchasing crappy things with haft the hand of cash in hand
             </div>
-            <div className="chat-meta">Message send 0:40 PM</div>
+            <div className="chat-meta">0:40 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -282,7 +283,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Now i have some thing to tell you.
             </div>
-            <div className="chat-meta">Message send 1:40 PM</div>
+            <div className="chat-meta">1:40 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -293,7 +294,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               All my night, been ready for you all my night. Been waitin' on you all my night. I'll buzz you in, just let me known when you outside. All my night you.
             </div>
-            <div className="chat-meta">Message send 1:46 PM</div>
+            <div className="chat-meta">1:46 PM</div>
           </div>
         </div>
       </ChatSession><ChatSession className="--incomming --start mb-2">
@@ -303,7 +304,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -314,7 +315,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping'
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -325,7 +326,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
             </div>
-            <div className="chat-meta">Message send 0:30 PM</div>
+            <div className="chat-meta">0:30 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -336,7 +337,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Purchasing crappy things with haft the hand of cash in hand
             </div>
-            <div className="chat-meta">Message send 0:40 PM</div>
+            <div className="chat-meta">0:40 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -347,7 +348,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               Now i have some thing to tell you.
             </div>
-            <div className="chat-meta">Message send 1:40 PM</div>
+            <div className="chat-meta">1:40 PM</div>
           </div>
         </div>
       </ChatSession>
@@ -358,7 +359,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-content">
               All my night, been ready for you all my night. Been waitin' on you all my night. I'll buzz you in, just let me known when you outside. All my night you.
             </div>
-            <div className="chat-meta">Message send 1:46 PM</div>
+            <div className="chat-meta">1:46 PM</div>
           </div>
         </div>
       </ChatSession>
