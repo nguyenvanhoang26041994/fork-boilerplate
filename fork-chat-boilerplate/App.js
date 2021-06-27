@@ -14,7 +14,7 @@ import {
 import {
   Settings, Plus, Photo, ThumbUp, Moon, Search,
   Phone, Video, AlertCircle, Dots,
-  Edit, VideoPlus, Bell, Send,
+  Edit, VideoPlus, Bell, Send, Location,
 } from '@fork-ui/icons/lazy';
 import {
   AvatarGroup as RoundedAvatarGroup,
@@ -23,6 +23,8 @@ import {
 } from './core';
 import ChatCardList from './components/ChatCardList';
 import GroupChannelDetail from './components/GroupChannelDetail';
+import MainChatbox from './components/MainChatbox';
+
 import ChatSesstions from './ChatSesstions';
 import DarkMode from '@contexts/DarkMode';
 
@@ -251,7 +253,7 @@ const App = () => {
                 <div className="w-full flex items-center justify-center" style={{ maxWidth: '900px', margin: '0 auto', position: 'relative' }}>
                   <div style={{
                     position: 'absolute',
-                    top: '-40px',
+                    top: '-47px',
                     right: 0,
                     left: 'auto',
                   }}>
@@ -268,32 +270,7 @@ const App = () => {
                       <Avatar size={25} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c11.0.100.100a/p100x100/30742449_1491970024265673_1550576325926846464_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=7206a8&_nc_ohc=2oMnvtTy_7wAX-DJr5m&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=b8099de9faa431c553b0ef32be399495&oe=60DB688A" />
                     </FloatTyping>
                   </div>
-                  <div className="flex items-center w-full">
-                    <Button rounded icon={<Plus />} className="mr-2" />
-                    <Button rounded icon={<Photo />} className="mr-2" />
-                    <StyledChatInput
-                      placeholder="Aa"
-                      spellCheck={false}
-                      onChange={e => {
-                        setIsShowSending(!!trim(e.target.value));
-                      }}
-                      onKeyPress={(e) => {
-                        if (e.code === 'Enter') {
-                          Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(e.target, '');
-                          e.target.dispatchEvent(new Event('input', { bubbles: true }));
-                          setTimeout(() => {
-                            scrollToBottom();
-                          }, 200);
-                        }
-                      }}
-                    />
-                    <Button
-                      color="primary"
-                      rounded
-                      icon={isShowSending ? <Send /> : <ThumbUp />}
-                      className="ml-2"
-                    />
-                  </div>
+                  <MainChatbox scrollToBottom={scrollToBottom} />
                 </div>
               </ChatFooter>
             </ChatContainer>
