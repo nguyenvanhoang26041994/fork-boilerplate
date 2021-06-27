@@ -1,23 +1,41 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
+import { trim } from 'lodash';
+
 import {
-  Button, Badge, Avatar, AvatarGroup,
-  Dialog, Textarea, Textbox, Collapse,
+  Button,
+  Badge,
+  Avatar,
+  Dialog,
+  Textarea,
+  Textbox,
+  Collapse,
   Loader,
+  AvatarGroup
 } from '@fork-ui/core';
 import {
   Settings, Plus, Photo, ThumbUp, Moon, Search,
-  Phone, Video, ChevronDown, AlertCircle, Dots
+  Phone, Video, ChevronDown, AlertCircle, Dots,
+  Edit, VideoPlus, Bell, Send,
 } from '@fork-ui/icons/lazy';
-import { ChatCard } from './core';
+import {
+  ChatCardUser,
+  ChatCardGroup,
+  AvatarGroup as RoundedAvatarGroup,
+ } from './core';
 import DarkMode from '@contexts/DarkMode';
 
-const channels = [
-  {
+import { channels, users, groups, messages } from './fake';
 
-  }
-];
+const _users = users.reduce((rs, user) => {
+  rs[user.id] = user;
+  return rs;
+}, {});
+const _groups = groups.reduce((rs, group) => {
+  rs[group.id] = group;
+  return rs;
+}, {});
 
 const SearchboxWrapper = styled.div`
   position: relative;
@@ -32,7 +50,7 @@ const SearchboxWrapper = styled.div`
     border: 0;
     background-color: transparent;
     border-radius: 999px;
-    min-height: 45px;
+    min-height: 40px;
     padding-left: 40px;
     padding-right: 20px;
 
@@ -54,6 +72,8 @@ const Searchbox = () => {
 };
 
 const Wrapper = styled.div`
+  --header-height: 50px;
+  --nice-spacing: 25px;
   .header-wrapper {
     background-color: var(--bg);
   }
@@ -62,7 +82,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
-    height: 80px;
+    height: var(--header-height);
     border-bottom: 1px solid var(--skeleton-color);
   }
 
@@ -71,7 +91,7 @@ const Wrapper = styled.div`
   }
 
   .body-wrapper {
-    height: calc(100vh - 80px);
+    height: calc(100vh - var(--header-height));
   }
 
   .body {
@@ -108,15 +128,15 @@ const ChatContainer = styled(Dialog)`
 `;
 const ChatHeader = styled(Dialog.Header)`
   height: 80px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: var(--nice-spacing);
+  padding-right: var(--nice-spacing);
 `;
 const ChatBody = styled(Dialog.Body)`
   .chat-lists {
     margin: 0 auto;
     min-height: 100%;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: var(--nice-spacing);
+    padding-right: var(--nice-spacing);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -125,7 +145,6 @@ const ChatBody = styled(Dialog.Body)`
 const ChatFooter = styled(Dialog.Footer)`
   padding-left: 25px;
   padding-right: 25px;
-  /* border-top: 1px solid var(--skeleton-color); */
 `;
 
 const StyledChatInput = styled(Textbox)`
@@ -230,30 +249,11 @@ const ChatSession = styled.div`
   }
 `;
 
-const StyledAvatarGroup = styled(AvatarGroup)`
-  position: relative;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-
-  > * {
-    margin: 0;
-    position: absolute;
-  }
-
-  > *:nth-child(1) {
-    bottom: 0;
-    left: 0;
-  }
-
-  > *:nth-child(2) {
-    top: 0;
-    right: 0;
-  }
-`;
 const NewChatApp = () => {
   const { toggleDark } = DarkMode.useContext();
   const [isRightbarOpen, setRightbarOpen] = useState(true);
+  const [isShowSending, setIsShowSending] = useState(false);
+
   const ref = useRef();
   const scrollToBottom = useCallback(() => {
     ref.current && ref.current.scrollTo({
@@ -275,10 +275,14 @@ const NewChatApp = () => {
             <Searchbox />
           </div>
           <div className="header__left flex items-center justify-end pl-5 pr-5">
-            <Button size="18px" rounded color="transparent" icon={<Settings />} />
-            <Badge.Dot color="var(--green-6)" overlap placement="bottom-end" className="ml-3">
-              <Avatar size={45} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+            <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
+              <Avatar size={30} loading="lazy" src={_users['111'].avatar} />
             </Badge.Dot>
+            <Button rounded icon={<Moon />} onClick={toggleDark} className="ml-3" />
+            <Badge.Counter count={8} overlap placement="top-end" className="ml-3">
+              <Button rounded icon={<Bell />}/>
+            </Badge.Counter>
+            <Button rounded icon={<Settings />} className="ml-3" />
           </div>
         </header>
       </div>
@@ -286,121 +290,45 @@ const NewChatApp = () => {
         <div className="body">
           <div className="left-section">
             <Dialog style={{ height: '100%' }}>
+              <Dialog.Header style={{ height: '80px' }}>
+                <div className="w-full flex items-center justify-between">
+                  <div>
+                    <h2 style={{ fontSize: '18px', color: 'var(--heading-color)'}}>Chats</h2>
+                  </div>
+                  <div>
+                    <Button rounded icon={<Dots />} />
+                    <Button rounded icon={<VideoPlus />} className="ml-3" />
+                    <Button rounded icon={<Edit />} className="ml-3" />
+                  </div>
+                </div>
+              </Dialog.Header>
               <Dialog.Body className="common-scrollbar common-scrollbar--hover p-0">
                 <div className="w-full" style={{ height: '100%' }}>
                   <div className="chat-card-list">
-                    <ChatCard>
-                      <ChatCard.Avatar>
-                        <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
-                          <Avatar size={50} src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
-                        </Badge.Dot>
-                      </ChatCard.Avatar>
-                      <ChatCard.Content>
-                        <ChatCard.Name isHighlight>Tùng Lê</ChatCard.Name>
-                        <ChatCard.Message>H về đợi vé mòn mắt &bull; 05:43 AM</ChatCard.Message>
-                      </ChatCard.Content>
-                      <ChatCard.Meta>
-                        <ChatCard.Unread>2</ChatCard.Unread>
-                      </ChatCard.Meta>
-                    </ChatCard>
-                      {/* 
-                      <div className="flex-1 flex flex-col justify-center ml-3">
-                        <div style={{ fontWeight: '600' }}>Tùng Lê</div>
-                        <p className="__recent-message">H về đợi vé mòn mắt</p>
-                      </div>
-                      <div className="flex flex-col justify-center items-end ml-3">
-                        <div className="__time">07:23 AM</div>
-                        <div className="__unread-count">2</div>
-                      </div> */}
-
-                    <ChatCard>
-                      <div className="__avatar">
-                        <Badge.Dot color="var(--orange-6)" overlap placement="bottom-end">
-                          <Avatar size={50} src="https://scontent.xx.fbcdn.net/v/t1.6435-1/p100x100/148962648_1904322393054746_5039216451616807960_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=dbb9e7&_nc_ohc=gnHyYyj-r3wAX8ISWuP&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=6&oh=1e85474e8f2e6e15fe660984b366e707&oe=60D9E8D4" />
-                        </Badge.Dot>
-                      </div>
-                      <div className="flex-1 flex flex-col justify-center ml-3">
-                        <div style={{ fontWeight: '600' }}>Thái Sơn</div>
-                        <p className="__recent-message">Cho em hỏi cái này với anh?</p>
-                      </div>
-                      <div className="flex flex-col justify-center items-end ml-3">
-                        <div className="__time">05:43 AM</div>
-                        <div className="__unread-count">6</div>
-                      </div>
-                    </ChatCard>
-
-                    <ChatCard>
-                      <div className="__avatar">
-                        <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
-                          <Avatar size={50} src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-1/p100x100/143865111_3746460238794789_1710538082440547779_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=7206a8&_nc_ohc=9WgBlVUihKAAX8tF4W9&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-sin6-1.xx&tp=6&oh=01f24b8e880ec29878ca0d1258624b55&oe=60DAD231" />
-                        </Badge.Dot>
-                      </div>
-                      <div className="flex-1 flex flex-col justify-center ml-3">
-                        <div style={{ fontWeight: '600' }}>Nguyễn Ngọc Hân</div>
-                        <p className="__recent-message">OK thank dude</p>
-                      </div>
-                      <div className="flex flex-col justify-center items-end ml-3">
-                        <div className="__time">06:03 PM</div>
-                        <div>&nbsp;</div>
-                      </div>
-                    </ChatCard>
-
-                    <ChatCard>
-                      <div className="__avatar">
-                        <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
-                          <Avatar size={50} src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/p100x100/180904085_3892238354216551_318542444565664736_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=7206a8&_nc_ohc=MgrLjXsMiXMAX-WWTgL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=6&oh=157a71f6ef6f7cc305f7195d1c82ee10&oe=60DAA837" />
-                        </Badge.Dot>
-                      </div>
-                      <div className="flex-1 flex flex-col justify-center ml-3">
-                        <div style={{ fontWeight: '600' }}>Ngô Nhật Minh</div>
-                        <p className="__recent-message">Tối về nghiên cứu cách thức vận hành xem sao</p>
-                      </div>
-                      <div className="flex flex-col justify-center items-end ml-3">
-                        <div className="__time">06:03 PM</div>
-                        <div>&nbsp;</div>
-                      </div>
-                    </ChatCard>
-
-                    <ChatCard>
-                      <div className="__avatar">
-                        <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
-                          <Avatar size={50} src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c11.0.100.100a/p100x100/30742449_1491970024265673_1550576325926846464_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=7206a8&_nc_ohc=2oMnvtTy_7wAX-DJr5m&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=b8099de9faa431c553b0ef32be399495&oe=60DB688A" />
-                        </Badge.Dot>
-                      </div>
-                      <div className="flex-1 flex flex-col justify-center ml-3">
-                        <div style={{ fontWeight: '600' }}>Lê Thuận</div>
-                        <p className="__recent-message">You: hả</p>
-                      </div>
-                      <div className="flex flex-col justify-center items-end ml-3">
-                        <div className="__time">3 weeks ago</div>
-                        <div>&nbsp;</div>
-                      </div>
-                    </ChatCard>
-                    <ChatCard>
-                      <div className="__avatar">
-                        <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
-                          <StyledAvatarGroup>
-                            <Avatar src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c11.0.100.100a/p100x100/30742449_1491970024265673_1550576325926846464_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=7206a8&_nc_ohc=2oMnvtTy_7wAX-DJr5m&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=b8099de9faa431c553b0ef32be399495&oe=60DB688A">OP</Avatar>
-                            <Avatar src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/p100x100/180904085_3892238354216551_318542444565664736_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=7206a8&_nc_ohc=MgrLjXsMiXMAX-WWTgL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=6&oh=157a71f6ef6f7cc305f7195d1c82ee10&oe=60DAA837">H</Avatar>
-                          </StyledAvatarGroup>
-                        </Badge.Dot>
-                      </div>
-                      <div className="flex-1 flex flex-col justify-center ml-3">
-                        <div style={{ fontWeight: '600' }}>Hội Bang Cuối Tuần</div>
-                        <p className="__recent-message">Ái Vân: OK</p>
-                      </div>
-                      <div className="flex flex-col justify-center items-end ml-3">
-                        <div className="__time">3 mins ago</div>
-                        <div className="__unread-count">6</div>
-                      </div>
-                    </ChatCard>
+                    {channels.map((channel) => {
+                      if (channel.type === 'user') {
+                        return (
+                          <ChatCardUser
+                            key={channel.id}
+                            channel={channel}
+                            user={_users[channel.metaData.user.id]}
+                          />
+                        );
+                      }
+                      if (channel.type === 'group') {
+                        return (
+                          <ChatCardGroup
+                            key={channel.id}
+                            channel={channel}
+                            group={_groups[channel.metaData.group.id]}
+                          />
+                        );
+                      }
+                      return null;
+                    })}
                   </div>
                 </div>
-                
               </Dialog.Body>
-              <Dialog.Footer className="justify-start">
-                <Button rounded color="transparent" icon={<Moon />} onClick={toggleDark} />
-              </Dialog.Footer>
             </Dialog>
           </div>
           <main className="main">
@@ -410,10 +338,10 @@ const NewChatApp = () => {
                   <div>
                     <div className="flex items-center">
                       <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
-                        <StyledAvatarGroup>
+                        <RoundedAvatarGroup className="">
                           <Avatar src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c11.0.100.100a/p100x100/30742449_1491970024265673_1550576325926846464_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=7206a8&_nc_ohc=2oMnvtTy_7wAX-DJr5m&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=b8099de9faa431c553b0ef32be399495&oe=60DB688A">OP</Avatar>
                           <Avatar src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/p100x100/180904085_3892238354216551_318542444565664736_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=7206a8&_nc_ohc=MgrLjXsMiXMAX-WWTgL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=6&oh=157a71f6ef6f7cc305f7195d1c82ee10&oe=60DAA837">H</Avatar>
-                        </StyledAvatarGroup>
+                        </RoundedAvatarGroup>
                       </Badge.Dot>
                       <h1 className="ml-3" style={{ fontSize: '16px', color: 'var(--heading-color)' }}>Hội Bang Cuối Tuần</h1>
                     </div>
@@ -431,6 +359,22 @@ const NewChatApp = () => {
                     <Loader.Spinner className="p-3" />
                   </div>
                   <div className="chat-lists">
+                    {/* {messages['channel-group-grp001'].displayMessages.map((message) => (
+                      <ChatSession
+                        key={message.id}
+                        className={cn('--start mb-2', _users[message.owner.id] === '111' ? '--outcomming' : '--incomming' )}
+                      >
+                        <div className="chat-sesstion-body">
+                          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+                          <div className="chat-content-wapper">
+                            <div className="chat-content">
+                              {message.content}
+                            </div>
+                            <div className="chat-meta">Message send 0:30 PM</div>
+                          </div>
+                        </div>
+                      </ChatSession>
+                    ))} */}
                     <ChatSession className="--incomming --start mb-2">
                       <div className="chat-sesstion-body">
                         <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
@@ -731,8 +675,28 @@ const NewChatApp = () => {
                   <div className="flex items-center w-full">
                     <Button rounded icon={<Plus />} className="mr-2" />
                     <Button rounded icon={<Photo />} className="mr-2" />
-                    <StyledChatInput placeholder="Aa" spellCheck={false} />
-                    <Button color="primary" rounded icon={<ThumbUp />} className="ml-2" />
+                    <StyledChatInput
+                      placeholder="Aa"
+                      spellCheck={false}
+                      onChange={e => {
+                        setIsShowSending(!!trim(e.target.value));
+                      }}
+                      onKeyPress={(e) => {
+                        if (e.code === 'Enter') {
+                          Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(e.target, '');
+                          e.target.dispatchEvent(new Event('input', { bubbles: true }));
+                          setTimeout(() => {
+                            scrollToBottom();
+                          }, 200);
+                        }
+                      }}
+                    />
+                    <Button
+                      color="primary"
+                      rounded
+                      icon={isShowSending ? <Send /> : <ThumbUp />}
+                      className="ml-2"
+                    />
                   </div>
                 </div>
               </ChatFooter>
@@ -742,12 +706,6 @@ const NewChatApp = () => {
             <div className="right-section">
               <Dialog style={{ height: '100%' }}>
                 <Dialog.Body className="common-scrollbar common-scrollbar--hover p-0" style={{ height: '100%' }}>
-                  <div className="flex items-center justify-center">
-                    <AvatarGroup className="mt-10">
-                      <Avatar size={80} loading="lazy" alt="" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
-                      <Avatar size={80} loading="lazy" alt="" src="https://scontent.xx.fbcdn.net/v/t1.6435-1/p100x100/148962648_1904322393054746_5039216451616807960_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=dbb9e7&_nc_ohc=gnHyYyj-r3wAX8ISWuP&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=6&oh=1e85474e8f2e6e15fe660984b366e707&oe=60D9E8D4" />
-                    </AvatarGroup>
-                  </div>
                 </Dialog.Body>
               </Dialog>
             </div>

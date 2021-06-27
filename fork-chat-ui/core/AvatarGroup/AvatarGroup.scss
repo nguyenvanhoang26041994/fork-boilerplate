@@ -1,0 +1,22 @@
+.styled-avatar-group {
+  --size: 60px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
+
+  > * {
+    margin: 0;
+    position: absolute;
+  }
+
+  > *:nth-child(1) {
+    bottom: 0;
+    left: 0;
+  }
+
+  > *:nth-child(2) {
+    top: 0;
+    right: 0;
+  }
+}
