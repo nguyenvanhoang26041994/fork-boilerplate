@@ -10,6 +10,7 @@ const ChatSession = styled.div`
   }
   .chat-sesstion-sender {
     visibility: hidden;
+    flex-shrink: 0;
   }
   .chat-content-wapper {
     display: flex;
