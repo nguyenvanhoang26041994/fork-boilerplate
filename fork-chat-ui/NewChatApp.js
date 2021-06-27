@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
 import {
@@ -261,6 +261,10 @@ const NewChatApp = () => {
       behavior: 'smooth',
     });
   }, [ref]);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [])
 
   return (
     <Wrapper>
