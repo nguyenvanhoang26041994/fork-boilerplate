@@ -1,0 +1,68 @@
+.fchat-card {
+  --content-max-width: 250px;
+  display: flex;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background: var(--primary);
+    color: var(--white);
+
+    .fchat-card__name--highlight {
+      color: var(--white);
+    }
+    .fchat-card__unread {
+      color: var(--primary);
+      background-color: var(--white);
+    }
+  }
+}
+
+.fchat-card__avatar {
+  flex-shrink: 0;
+  width: 60px;
+}
+.fchat-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-left: 8px;
+}
+
+.fchat-card__name,
+.fchat-card__message {
+  max-width: var(--content-max-width);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fchat-card__name {
+  font-weight: 600;
+}
+.fchat-card__name--highlight {
+  color: var(--heading-color);
+}
+
+.fchat-card__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+.fchat-card__unread {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 999px;
+  color: var(--white);
+  background-color: var(--primary);
+}

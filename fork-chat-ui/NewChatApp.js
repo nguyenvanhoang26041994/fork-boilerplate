@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
 import {
@@ -10,7 +10,14 @@ import {
   Settings, Plus, Photo, ThumbUp, Moon, Search,
   Phone, Video, ChevronDown, AlertCircle, Dots
 } from '@fork-ui/icons/lazy';
+import { ChatCard } from './core';
 import DarkMode from '@contexts/DarkMode';
+
+const channels = [
+  {
+
+  }
+];
 
 const SearchboxWrapper = styled.div`
   position: relative;
@@ -223,39 +230,6 @@ const ChatSession = styled.div`
   }
 `;
 
-const ChatCard = styled.div`
-  display: flex;
-  padding: 8px 15px;
-  cursor: pointer;
-
-  .__recent-message {
-    font-size: 11px;
-    max-width: 138px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .__unread-count {
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 999px;
-    color: var(--white);
-    background-color: var(--primary);
-  }
-
-  &:hover {
-    background: var(--primary);
-    color: var(--white);
-
-    .__unread-count {
-      color: var(--primary);
-      background-color: var(--white);
-    }
-  }
-`;
 const StyledAvatarGroup = styled(AvatarGroup)`
   position: relative;
   width: 60px;
@@ -280,6 +254,14 @@ const StyledAvatarGroup = styled(AvatarGroup)`
 const NewChatApp = () => {
   const { toggleDark } = DarkMode.useContext();
   const [isRightbarOpen, setRightbarOpen] = useState(true);
+  const ref = useRef();
+  const scrollToBottom = useCallback(() => {
+    ref.current && ref.current.scrollTo({
+      top: 9999999,
+      behavior: 'smooth',
+    });
+  }, [ref]);
+
   return (
     <Wrapper>
       <div className="header-wrapper">
@@ -304,11 +286,20 @@ const NewChatApp = () => {
                 <div className="w-full" style={{ height: '100%' }}>
                   <div className="chat-card-list">
                     <ChatCard>
-                      <div className="__avatar">
+                      <ChatCard.Avatar>
                         <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
                           <Avatar size={50} src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
                         </Badge.Dot>
-                      </div>
+                      </ChatCard.Avatar>
+                      <ChatCard.Content>
+                        <ChatCard.Name isHighlight>Tùng Lê</ChatCard.Name>
+                        <ChatCard.Message>H về đợi vé mòn mắt &bull; 05:43 AM</ChatCard.Message>
+                      </ChatCard.Content>
+                      <ChatCard.Meta>
+                        <ChatCard.Unread>2</ChatCard.Unread>
+                      </ChatCard.Meta>
+                    </ChatCard>
+                      {/* 
                       <div className="flex-1 flex flex-col justify-center ml-3">
                         <div style={{ fontWeight: '600' }}>Tùng Lê</div>
                         <p className="__recent-message">H về đợi vé mòn mắt</p>
@@ -316,8 +307,7 @@ const NewChatApp = () => {
                       <div className="flex flex-col justify-center items-end ml-3">
                         <div className="__time">07:23 AM</div>
                         <div className="__unread-count">2</div>
-                      </div>
-                    </ChatCard>
+                      </div> */}
 
                     <ChatCard>
                       <div className="__avatar">
@@ -431,7 +421,7 @@ const NewChatApp = () => {
                   </div>
                 </div>
               </ChatHeader>
-              <ChatBody className="common-scrollbar common-scrollbar--hover">
+              <ChatBody className="common-scrollbar common-scrollbar--hover" ref={ref}>
                 <div className="w-full" style={{ maxWidth: '900px', height: '100%', margin: '0 auto' }}>
                   <div data-id="loadMoreTop" className="flex items-center justify-center">
                     <Loader.Spinner className="p-3" />
@@ -717,7 +707,7 @@ const NewChatApp = () => {
                     left: 'auto',
                   }}>
                     <Badge.Counter count={2} overlap placement="top-end">
-                      <Button rounded icon={<ChevronDown />} />
+                      <Button rounded icon={<ChevronDown />} onClick={scrollToBottom} />
                     </Badge.Counter>
                   </div>
                   <div style={{
