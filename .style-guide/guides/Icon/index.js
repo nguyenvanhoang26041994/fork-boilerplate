@@ -1,7 +1,7 @@
 import withGuides from '@style-guide/HOCs/withGuides';
 import Color from './Color';
 import Icon from './Icon';
-// import LazyIcon from './LazyIcon';
+import All from './All';
 import Size from './Size';
 import SomeNiceIcons from './SomeNiceIcons';
 // __INJECTED_LINE__
@@ -11,9 +11,9 @@ import * as allCode from './code';
 const demos = [
   { Component: Icon, name: 'Icon' },
   { Component: Color, name: 'Color' },
-  // { Component: LazyIcon, name: 'LazyIcon' },
   { Component: Size, name: 'Size' },
   { Component: SomeNiceIcons, name: 'SomeNiceIcons' },
+  { Component: All, name: 'All' },
   // __INJECTED_ITEM__
 ];
 

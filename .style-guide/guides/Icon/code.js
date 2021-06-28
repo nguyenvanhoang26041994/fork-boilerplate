@@ -1,47 +1,11 @@
-export const Color = {
-  code: `import React from 'react';
-import { Wrapper } from '@style-guide/components';
-import { BrandGithub, Alarm, Adjustments } from '@fork-ui/icons/lazy';
-
-export default () => {
-  return (
-    <Wrapper>
-      <BrandGithub color="var(--primary)" />
-      <Alarm color="red" />
-      <Adjustments color="#00ffe9" />
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Color',
-}
-
-export const Icon = {
-  code: `import React from 'react';
-import { Wrapper } from '@style-guide/components';
-import { BrandGithub, Alarm, Adjustments } from '@fork-ui/icons/lazy';
-
-export default () => {
-  return (
-    <Wrapper>
-      <BrandGithub />
-      <Alarm />
-      <Adjustments />
-    </Wrapper>
-  );
-};
-`,
-  demoName: 'Icon',
-}
-
-export const LazyIcon = {
+export const All = {
   code: `import React, { useMemo, useCallback, useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { debounce } from 'lodash';
 
 import copyToClipboard from '@fork-ui/utils/copyToClipboard';
 import fuzzysort from '@fork-ui/libs/fuzzysort';
-import * as allIcons from '@fork-ui/icons/lazy';
+import * as allIcons from '@fork-ui/icons';
 
 const icons = Object.keys(allIcons);
 const Check = allIcons.Check;
@@ -160,7 +124,43 @@ const LazyIconDemo = () => {
 
 export default LazyIconDemo;
 `,
-  demoName: 'Lazy Icon',
+  demoName: 'All',
+}
+
+export const Color = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { BrandGithub, Alarm, Adjustments } from '@fork-ui/icons/lazy';
+
+export default () => {
+  return (
+    <Wrapper>
+      <BrandGithub color="var(--primary)" />
+      <Alarm color="red" />
+      <Adjustments color="#00ffe9" />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Color',
+}
+
+export const Icon = {
+  code: `import React from 'react';
+import { Wrapper } from '@style-guide/components';
+import { BrandGithub, Alarm, Adjustments } from '@fork-ui/icons/lazy';
+
+export default () => {
+  return (
+    <Wrapper>
+      <BrandGithub />
+      <Alarm />
+      <Adjustments />
+    </Wrapper>
+  );
+};
+`,
+  demoName: 'Icon',
 }
 
 export const Size = {

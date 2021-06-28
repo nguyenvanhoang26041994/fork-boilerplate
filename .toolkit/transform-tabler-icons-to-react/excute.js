@@ -10,6 +10,7 @@ const getIconReactInfo = require('./getIconReactInfo');
   const hbs = {
     '[icon].js': readFile(path.join(__dirname, '/template/[icon].js.hbs')),
     'lazy.js': readFile(path.join(__dirname, '/template/lazy.js.hbs')),
+    'index.js': readFile(path.join(__dirname, '/template/index.js.hbs')),
   };
   const allIconInfo = reduce(
     readFolder(path.join(input.tablerIconsPath, 'icons')),
@@ -29,6 +30,12 @@ const getIconReactInfo = require('./getIconReactInfo');
   makeFile(
     path.join(input.outputPath, 'lazy.js'),
     Handlebars.compile(hbs['lazy.js'])({ icons: allIconInfo })
+  );
+
+  // create index.js
+  makeFile(
+    path.join(input.outputPath, 'index.js'),
+    Handlebars.compile(hbs['index.js'])({ icons: allIconInfo })
   );
 
   for (let i = 0; i < allIconInfo.length; i++) {

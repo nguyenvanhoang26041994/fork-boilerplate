@@ -4,7 +4,7 @@ import { debounce } from 'lodash';
 
 import copyToClipboard from '@fork-ui/utils/copyToClipboard';
 import fuzzysort from '@fork-ui/libs/fuzzysort';
-import * as allIcons from '@fork-ui/icons/lazy';
+import * as allIcons from '@fork-ui/icons';
 
 const icons = Object.keys(allIcons);
 const Check = allIcons.Check;
