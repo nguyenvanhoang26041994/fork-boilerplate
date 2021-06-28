@@ -99,7 +99,7 @@ const Wrapper = styled.div`
 
   .header__left,
   .left-section {
-    width: 420px;
+    width: 400px;
   }
   .left-section {
     flex-shrink: 0;
@@ -112,7 +112,7 @@ const Wrapper = styled.div`
   }
   .header__right,
   .right-section {
-    width: 420px;
+    width: 370px;
   }
   .right-section {
     flex-shrink: 0;

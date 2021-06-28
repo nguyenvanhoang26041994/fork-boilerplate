@@ -215,7 +215,7 @@ const users = [
   },
   {
     id: '002',
-    avatar: 'https://scontent.xx.fbcdn.net/v/t1.6435-1/p100x100/148962648_1904322393054746_5039216451616807960_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=dbb9e7&_nc_ohc=gnHyYyj-r3wAX8ISWuP&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=6&oh=1e85474e8f2e6e15fe660984b366e707&oe=60D9E8D4',
+    avatar: 'https://scontent-xsp1-3.xx.fbcdn.net/v/t1.6435-1/p100x100/148962648_1904322393054746_5039216451616807960_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=7206a8&_nc_ohc=p3tKS38xAaoAX-IIYjH&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-xsp1-3.xx&tp=6&oh=fcffa5fd47c09ac198d80ecfa9b61c72&oe=60DFD794',
     name: 'Thái Sơn',
     status: 'away',
   },

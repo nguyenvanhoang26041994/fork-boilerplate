@@ -8,7 +8,7 @@ const FloatTyping = ({ className, children, ...otherProps }) => {
       <AvatarGroup>
         {children}
       </AvatarGroup>
-      <Loader.Dots className="ml-3" size="7px" color="var(--primary)" />
+      <Loader.Dots className="ml-3" size="5px" color="var(--primary)" />
     </div>
   );
 };
