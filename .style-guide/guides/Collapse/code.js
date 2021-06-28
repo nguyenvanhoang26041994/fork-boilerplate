@@ -9,7 +9,7 @@ import {
 } from '@fork-ui/icons/lazy';
 
 export default () => {
-  const [{ isActive, onChange }] = Collapse.useCollapse({
+  const { isActive, onChange } = Collapse.useCollapse({
     accordion: true,
     activePanels: ['panel-1'],
   });
@@ -74,7 +74,7 @@ import {
 } from '@fork-ui/icons/lazy';
 
 export default () => {
-  const [{ isActive, onChange }] = Collapse.useCollapse({
+  const { isActive, onChange } = Collapse.useCollapse({
     activePanels: ['panel-1'],
   });
 

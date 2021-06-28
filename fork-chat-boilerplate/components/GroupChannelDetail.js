@@ -12,18 +12,20 @@ import {
 
 const StyledGrid = styled(Grid)`
   --cell-size: 100px;
+  --grid-gap: 4px;
   width: 100%;
   min-height: 1px;
   grid-template-columns: var(--cell-size) var(--cell-size) var(--cell-size);
   grid-auto-rows: var(--cell-size);
-  grid-gap: 2px;
-  margin: 2px;
+  grid-gap: var(--grid-gap);
+  margin: var(--grid-gap);
 
   .__image-item {
     object-fit: cover;
     width: 100%;
     height: 100%;
     cursor: pointer;
+    border-radius: 2px;
   }
 `;
 const ChannelDetailWrapper = styled(Dialog)`
@@ -41,10 +43,10 @@ const GroupChannelDetail = ({ className }) => {
   const { isActive, onChange } = Collapse.useCollapse({
     activePanels: ['shared_media']
   });
-  const { ref, bounds } = useMeasure();
+  const { ref, bounds } = useMeasure(isActive('shared_media'));
   return (
     <ChannelDetailWrapper className={className}>
-      <ChannelDetailBody className="common-scrollbar common-scrollbar--hover" ref={ref}>
+      <ChannelDetailBody className="common-scrollbar common-scrollbar--hover">
         <AvatarGroup className="mt-10 mb-5">
           <Avatar loading="lazy" size={60} src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c11.0.100.100a/p100x100/30742449_1491970024265673_1550576325926846464_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=7206a8&_nc_ohc=2oMnvtTy_7wAX-DJr5m&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=b8099de9faa431c553b0ef32be399495&oe=60DB688A">OP</Avatar>
           <Avatar loading="lazy" size={60} src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/p100x100/180904085_3892238354216551_318542444565664736_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=7206a8&_nc_ohc=MgrLjXsMiXMAX-WWTgL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=6&oh=157a71f6ef6f7cc305f7195d1c82ee10&oe=60DAA837">H</Avatar>
@@ -90,8 +92,9 @@ const GroupChannelDetail = ({ className }) => {
             onClick={() => onChange('shared_media')}
           >
             <StyledGrid
+              ref={ref}
               style={{
-                '--cell-size': `${bounds.width / 3}px`,
+                '--cell-size': `${(bounds.width / 3) - (4 * 4 / 3)}px`,
               }}
             >
               <Image src="https://i.pinimg.com/originals/ce/53/c5/ce53c5bcd350ba856e5c53c343376fb2.jpg" className="__image-item" />
@@ -108,6 +111,7 @@ const GroupChannelDetail = ({ className }) => {
             </StyledGrid>
           </Collapse.Panel>
         </Collapse>
+        <div className="w-full" style={{ height: '15px' }} />
       </ChannelDetailBody>
     </ChannelDetailWrapper>
   );

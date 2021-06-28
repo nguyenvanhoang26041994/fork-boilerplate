@@ -112,7 +112,7 @@ const Wrapper = styled.div`
   }
   .header__right,
   .right-section {
-    width: 370px;
+    width: 400px;
   }
   .right-section {
     flex-shrink: 0;
