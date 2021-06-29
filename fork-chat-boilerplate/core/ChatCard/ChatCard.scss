@@ -6,16 +6,7 @@
   position: relative;
 
   &:hover {
-    background: var(--primary);
-    color: var(--white);
-
-    .fchat-card__name--highlight {
-      color: var(--white);
-    }
-    .fchat-card__unread {
-      color: var(--primary);
-      background-color: var(--white);
-    }
+    background: var(--btn-bg);
   }
 }
 
@@ -56,13 +47,4 @@
   top: 0;
   height: 100%;
   box-sizing: border-box;
-}
-.fchat-card__unread {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 999px;
-  color: var(--white);
-  background-color: var(--primary);
 }

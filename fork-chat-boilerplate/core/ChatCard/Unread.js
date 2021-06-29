@@ -2,12 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
 import PropType from 'prop-types';
+import BadgeCounter from '@fork-ui/core/Badge/Counter'
 
-const Unread = ({ className, children }) => {
+const Unread = ({ className, count }) => {
   return (
-    <div className={cn('fchat-card__unread', className)}>
-      {children}
-    </div>
+    <BadgeCounter count={count} className={cn('fchat-card__unread', className)} overflow={99} />
   );
 };
 

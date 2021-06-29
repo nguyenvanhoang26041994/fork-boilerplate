@@ -26,7 +26,7 @@ const ChatCardUser = ({ className, user, channel }) => {
       </ChatCard.Content>
       <ChatCard.Meta>
         {channel.unread.count ?
-          <ChatCard.Unread>{channel.unread.count}</ChatCard.Unread>
+          <ChatCard.Unread count={channel.unread.count} />
           : <span>&nbsp;</span>
         }
       </ChatCard.Meta>
