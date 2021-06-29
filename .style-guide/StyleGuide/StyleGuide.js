@@ -35,6 +35,7 @@ const DrawerGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide
 const AutocompleteGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Autocomplete'));
 const SelectGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Select'));
 const ConfirmGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Confirm'));
+const GridGuides = lazy(() => import(/* webpackPrefetch: true */ '@style-guide/guides/Grid'));
 // __INJECTED_LINE_GUIDE__
 
 const StyleGuide = () => {
@@ -69,6 +70,7 @@ const StyleGuide = () => {
       <Route path={`${path}/autocomplete`} component={AutocompleteGuides} />
       <Route path={`${path}/select`} component={SelectGuides} />
       <Route path={`${path}/confirm`} component={ConfirmGuides} />
+      <Route path={`${path}/grid`} component={GridGuides} />
       {/* __INJECTED_LINE_ROUTER__ */}
     </Switch>
   );

@@ -2,32 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   Dialog, Avatar, AvatarGroup, Button, Collapse,
-  Image, Grid,
+  Image, GridImage
 } from '@fork-ui/core';
-import useMeasure from '@fork-ui/hooks/useMeasure';
 import {
-  BellOff, UserPlus, Logout, EditCircle,
-  Circle
+  BellOff, UserPlus, Logout,
 } from '@fork-ui/icons/lazy';
 
-const StyledGrid = styled(Grid)`
-  --cell-size: 100px;
-  --grid-gap: 4px;
-  width: 100%;
-  min-height: 1px;
-  grid-template-columns: var(--cell-size) var(--cell-size) var(--cell-size);
-  grid-auto-rows: var(--cell-size);
-  grid-gap: var(--grid-gap);
-  margin: var(--grid-gap);
-
-  .__image-item {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+const StyledGridImage = styled(GridImage)`
+  .fimage {
     cursor: pointer;
     border-radius: 2px;
   }
 `;
+
 const ChannelDetailWrapper = styled(Dialog)`
   height: 100%;
 `;
@@ -43,7 +30,6 @@ const GroupChannelDetail = ({ className }) => {
   const { isActive, onChange } = Collapse.useCollapse({
     activePanels: ['shared_media']
   });
-  const { ref, bounds } = useMeasure(isActive('shared_media'));
   return (
     <ChannelDetailWrapper className={className}>
       <ChannelDetailBody className="common-scrollbar common-scrollbar--hover">
@@ -57,7 +43,7 @@ const GroupChannelDetail = ({ className }) => {
         <div className="p-3">
           <Button rounded icon={<UserPlus />} className="m-2" />
           <Button rounded icon={<BellOff />} className="m-2" />
-          <Button border="solid" color="danger" rounded icon={<Logout />} className="m-2" />
+          <Button rounded icon={<Logout />} className="m-2" />
         </div>
         <Collapse className="w-full">
           <Collapse.Panel
@@ -91,24 +77,19 @@ const GroupChannelDetail = ({ className }) => {
             active={isActive('shared_media')}
             onClick={() => onChange('shared_media')}
           >
-            <StyledGrid
-              ref={ref}
-              style={{
-                '--cell-size': `${(bounds.width / 3) - (4 * 4 / 3)}px`,
-              }}
-            >
-              <Image src="https://i.pinimg.com/originals/ce/53/c5/ce53c5bcd350ba856e5c53c343376fb2.jpg" className="__image-item" />
-              <Image src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d" className="__image-item" />
-              <Image src="https://static01.nyt.com/images/2019/06/17/science/17DOGS/17DOGS-superJumbo.jpg" className="__image-item" />
-              <Image src="https://www.forbes.com/uk/advisor/wp-content/uploads/2021/05/short-coated-tan-puppy-stockpack-unsplash-scaled.jpg" className="__image-item" />
-              <Image src="https://r4x8d8k3.rocketcdn.me/wp-content/uploads/2020/05/hannah-grace-fk4tiMlDFF0-unsplash-1200x800.jpg" className="__image-item" />
-              <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS63g2102imNCwDeEwD9Thd4M2afET9wGBCxQ&usqp=CAU" className="__image-item" />
-              <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ADZSchb6mTjtrv5OYkCzkQWUVdbfl5N5Ww&usqp=CAU" className="__image-item" />
-              <Image src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2Faa095128-b828-11eb-98e3-d1306649ebf7.jpg?crop=1143%2C643%2C30%2C585" className="__image-item" />
-              <Image src="https://www.thekennelclub.org.uk/media/2470/essential-equipment-credit-vanessa-palmer-vines-the-kennel-club.jpg?mode=pad&width=1000&rnd=132139691680000000" className="__image-item" />
-              <Image src="https://parade.com/wp-content/uploads/2021/03/Top-10-Puppy-Names-of-2021.jpg" className="__image-item" />
-              <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" className="__image-item" />
-            </StyledGrid>
+            <StyledGridImage cols={3} gap={4}>
+              <Image src="https://i.pinimg.com/originals/ce/53/c5/ce53c5bcd350ba856e5c53c343376fb2.jpg" />
+              <Image src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d" />
+              <Image src="https://static01.nyt.com/images/2019/06/17/science/17DOGS/17DOGS-superJumbo.jpg" />
+              <Image src="https://www.forbes.com/uk/advisor/wp-content/uploads/2021/05/short-coated-tan-puppy-stockpack-unsplash-scaled.jpg" />
+              <Image src="https://r4x8d8k3.rocketcdn.me/wp-content/uploads/2020/05/hannah-grace-fk4tiMlDFF0-unsplash-1200x800.jpg" />
+              <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS63g2102imNCwDeEwD9Thd4M2afET9wGBCxQ&usqp=CAU" />
+              <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ADZSchb6mTjtrv5OYkCzkQWUVdbfl5N5Ww&usqp=CAU" />
+              <Image src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2Faa095128-b828-11eb-98e3-d1306649ebf7.jpg?crop=1143%2C643%2C30%2C585" />
+              <Image src="https://www.thekennelclub.org.uk/media/2470/essential-equipment-credit-vanessa-palmer-vines-the-kennel-club.jpg?mode=pad&width=1000&rnd=132139691680000000" />
+              <Image src="https://parade.com/wp-content/uploads/2021/03/Top-10-Puppy-Names-of-2021.jpg" />
+              <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+            </StyledGridImage>
           </Collapse.Panel>
         </Collapse>
         <div className="w-full" style={{ height: '15px' }} />

@@ -11,7 +11,7 @@ const FloatUnread = ({ className, count, onClick }) => {
       placement="top-end"
       className={cn('ffloat-unread', className)}
     >
-      <Button rounded icon={<ChevronDown />} onClick={onClick} />
+      <Button color="transparent" rounded icon={<ChevronDown />} onClick={onClick} />
     </Badge.Counter>
   );
 };

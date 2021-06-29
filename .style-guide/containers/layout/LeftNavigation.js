@@ -25,7 +25,7 @@ import {
   Tag,
   Line,
   QuestionMark,
-  MessageReport,
+  LayoutGrid,
   AlertTriangle,
   Bell,
   LayoutBottombar,
@@ -251,6 +251,12 @@ const LeftNavigation = ({ minimal }) => {
               <DeviceLaptop />
             </div>
             <div className="__name">Tabs</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path={`${path}/grid`}>
+            <div className="__avatar">
+              <LayoutGrid />
+            </div>
+            <div className="__name">Grid</div>
           </MenuItemEnhander>
           <MenuItemEnhander path={`${path}/collapse`}>
             <div className="__avatar">

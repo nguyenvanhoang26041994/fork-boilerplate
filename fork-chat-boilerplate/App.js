@@ -1,6 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
-import { trim } from 'lodash';
 import { withContext as withChatContext} from './fork-chat-store';
 
 import {
@@ -10,11 +9,12 @@ import {
   Dialog,
   Textbox,
   Loader,
+  Memo
 } from '@fork-ui/core';
 import {
-  Settings, Plus, Photo, ThumbUp, Moon, Search,
+  Settings, Moon, Search,
   Phone, Video, AlertCircle, Dots,
-  Edit, VideoPlus, Bell, Send, Location,
+  Edit, VideoPlus, Bell,
 } from '@fork-ui/icons/lazy';
 import {
   AvatarGroup as RoundedAvatarGroup,
@@ -75,6 +75,7 @@ const Wrapper = styled.div`
   .header-wrapper {
     background-color: var(--bg);
   }
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -145,21 +146,9 @@ const ChatFooter = styled(Dialog.Footer)`
   padding-right: 25px;
 `;
 
-const StyledChatInput = styled(Textbox)`
-  border-color: transparent;
-  border: 0;
-  background-color: var(--btn-bg);
-  border-radius: 999px;
-  resize: none;
-  min-height: 45px;
-  padding: 0 20px;
-  box-sizing: border-box;
-`;
-
 const App = () => {
   const { toggleDark } = DarkMode.useContext();
   const [isRightbarOpen, setRightbarOpen] = useState(true);
-  const [isShowSending, setIsShowSending] = useState(false);
 
   const ref = useRef();
   const scrollToBottom = useCallback(() => {
@@ -171,7 +160,7 @@ const App = () => {
 
   useEffect(() => {
     scrollToBottom();
-  }, [])
+  }, []);
 
   return (
     <Wrapper>
@@ -203,9 +192,9 @@ const App = () => {
                     <h2 style={{ fontSize: '18px', color: 'var(--heading-color)'}}>Chats</h2>
                   </div>
                   <div>
-                    <Button rounded icon={<Dots />} />
-                    <Button rounded icon={<VideoPlus />} className="ml-3" />
-                    <Button rounded icon={<Edit />} className="ml-3" />
+                    <Button color="transparent" rounded icon={<Dots />} />
+                    <Button color="transparent" rounded icon={<VideoPlus />} className="ml-3" />
+                    <Button color="transparent" rounded icon={<Edit />} className="ml-3" />
                   </div>
                 </div>
               </Dialog.Header>
@@ -232,9 +221,9 @@ const App = () => {
                     </div>
                   </div>
                   <div>
-                    <Button rounded icon={<Phone />} />
-                    <Button rounded icon={<Video />} className="ml-3" />
-                    <Button rounded icon={<AlertCircle />} className="ml-3" onClick={() => setRightbarOpen(prev => !prev)} />
+                    <Button color="transparent" rounded icon={<Phone />} />
+                    <Button color="transparent" rounded icon={<Video />} className="ml-3" />
+                    <Button color="transparent" rounded icon={<AlertCircle />} className="ml-3" onClick={() => setRightbarOpen(prev => !prev)} />
                   </div>
                 </div>
               </ChatHeader>
@@ -275,11 +264,11 @@ const App = () => {
               </ChatFooter>
             </ChatContainer>
           </main>
-          {isRightbarOpen && (
+          <Memo watch={isRightbarOpen}>
             <div className="right-section">
               <GroupChannelDetail />
             </div>
-          )}
+          </Memo>
         </div>
       </div>
     </Wrapper>

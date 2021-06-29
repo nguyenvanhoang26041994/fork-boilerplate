@@ -32,9 +32,9 @@ const MainChatbox = ({ scrollToBottom, className }) => {
 
   return (
     <MainChatboxWrapper className={className}>
-      <Button rounded icon={<Plus />} className="mr-2" />
-      <Button rounded icon={<Photo />} className="mr-2" />
-      <Button rounded icon={<Location />} className="mr-2" />
+      <Button color="transparent" rounded icon={<Plus />} className="mr-2" />
+      <Button color="transparent" rounded icon={<Photo />} className="mr-2" />
+      <Button color="transparent" rounded icon={<MoodSmile />} className="mr-2" />
       <StyledChatInputWrapper>
         <StyledChatInput
           ref={ref}
@@ -54,7 +54,6 @@ const MainChatbox = ({ scrollToBottom, className }) => {
           }}
         />
       </StyledChatInputWrapper>
-      <Button rounded icon={<MoodSmile />} className="ml-2" />
       <Button color="primary" rounded icon={isShowSending ? <Send /> : <ThumbUp />} className="ml-2" onClick={() => {
         if (trim(ref.current.value)) {
           Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(ref.current, '');
