@@ -198,7 +198,7 @@ const App = () => {
                   </div>
                 </div>
               </Dialog.Header>
-              <Dialog.Body className="common-scrollbar common-scrollbar--hover p-0">
+              <Dialog.Body className="p-0">
                 <div className="w-full" style={{ height: '100%' }}>
                   <ChatCardList />
                 </div>
@@ -227,7 +227,7 @@ const App = () => {
                   </div>
                 </div>
               </ChatHeader>
-              <ChatBody className="common-scrollbar common-scrollbar--hover" ref={ref}>
+              <ChatBody ref={ref}>
                 <div className="w-full" style={{ maxWidth: '900px', height: '100%', margin: '0 auto' }}>
                   <div data-id="loadMoreTop" className="flex items-center justify-center">
                     <Loader.Spinner className="p-3" />
