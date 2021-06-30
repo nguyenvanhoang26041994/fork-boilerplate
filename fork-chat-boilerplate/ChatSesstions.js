@@ -21,6 +21,7 @@ const ChatSession = styled.div`
     padding: 18px;
     display: inline-block;
     max-width: 550px;
+    color: var(--heading-color);
   }
 
   .chat-meta {
@@ -100,7 +101,7 @@ const ChatSesstions = ({ className }) => {
     <div className={className}>
       <ChatSession className="--incomming --start mb-2">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
@@ -111,7 +112,7 @@ const ChatSesstions = ({ className }) => {
       </ChatSession>
       <ChatSession className="--incomming mb-2">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping'
@@ -122,7 +123,7 @@ const ChatSesstions = ({ className }) => {
       </ChatSession>
       <ChatSession className="--incomming --end mb-8">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
@@ -169,7 +170,7 @@ const ChatSesstions = ({ className }) => {
 
       <ChatSession className="--incomming --start mb-2">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
@@ -180,7 +181,7 @@ const ChatSesstions = ({ className }) => {
       </ChatSession>
       <ChatSession className="--incomming mb-2">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping'
@@ -191,7 +192,7 @@ const ChatSesstions = ({ className }) => {
       </ChatSession>
       <ChatSession className="--incomming --end mb-8">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
@@ -234,7 +235,7 @@ const ChatSesstions = ({ className }) => {
         </div>
       </ChatSession><ChatSession className="--incomming --start mb-2">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
@@ -245,7 +246,7 @@ const ChatSesstions = ({ className }) => {
       </ChatSession>
       <ChatSession className="--incomming mb-2">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping'
@@ -256,7 +257,7 @@ const ChatSesstions = ({ className }) => {
       </ChatSession>
       <ChatSession className="--incomming --end mb-8">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
@@ -299,7 +300,7 @@ const ChatSesstions = ({ className }) => {
         </div>
       </ChatSession><ChatSession className="--incomming --start mb-2">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
@@ -310,7 +311,7 @@ const ChatSesstions = ({ className }) => {
       </ChatSession>
       <ChatSession className="--incomming mb-2">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping'
@@ -321,7 +322,7 @@ const ChatSesstions = ({ className }) => {
       </ChatSession>
       <ChatSession className="--incomming --end mb-8">
         <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c0.3.100.100a/p100x100/118778813_1296512784041875_3829794088342017355_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=N4v7qSIU508AX-_GAhb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=a282cd27c0b613d66f39698a22763231&oe=60DBA385" />
+          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?

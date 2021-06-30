@@ -70,7 +70,7 @@ const Searchbox = () => {
 };
 
 const Wrapper = styled.div`
-  --header-height: 50px;
+  --header-height: 70px;
   --nice-spacing: 25px;
   .header-wrapper {
     background-color: var(--bg);
@@ -213,8 +213,8 @@ const App = () => {
                     <div className="flex items-center">
                       <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
                         <RoundedAvatarGroup className="">
-                          <Avatar loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c11.0.100.100a/p100x100/30742449_1491970024265673_1550576325926846464_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=7206a8&_nc_ohc=2oMnvtTy_7wAX-DJr5m&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=b8099de9faa431c553b0ef32be399495&oe=60DB688A">OP</Avatar>
-                          <Avatar loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/p100x100/180904085_3892238354216551_318542444565664736_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=7206a8&_nc_ohc=MgrLjXsMiXMAX-WWTgL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=6&oh=157a71f6ef6f7cc305f7195d1c82ee10&oe=60DAA837">H</Avatar>
+                          <Avatar loading="lazy" src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d">OP</Avatar>
+                          <Avatar loading="lazy" src="https://www.thekennelclub.org.uk/media/2470/essential-equipment-credit-vanessa-palmer-vines-the-kennel-club.jpg?mode=pad&width=1000&rnd=132139691680000000">H</Avatar>
                         </RoundedAvatarGroup>
                       </Badge.Dot>
                       <h1 className="ml-3" style={{ fontSize: '16px', color: 'var(--heading-color)' }}>Hội Bang Cuối Tuần</h1>
@@ -256,7 +256,7 @@ const App = () => {
                   }}>
                     <FloatTyping className="flex items-center">
                       <Avatar size={25} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
-                      <Avatar size={25} loading="lazy" src="https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-1/c11.0.100.100a/p100x100/30742449_1491970024265673_1550576325926846464_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=7206a8&_nc_ohc=2oMnvtTy_7wAX-DJr5m&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-hkt1-2.xx&tp=27&oh=b8099de9faa431c553b0ef32be399495&oe=60DB688A" />
+                      <Avatar size={25} loading="lazy" src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d" />
                     </FloatTyping>
                   </div>
                   <MainChatbox scrollToBottom={scrollToBottom} />
