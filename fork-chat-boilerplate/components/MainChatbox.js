@@ -26,8 +26,7 @@ const StyledChatInputWrapper = styled.div`
   position: relative;
 `;
 
-const MainChatbox = ({ scrollToBottom, className }) => {
-  const ref = useRef();
+const MainChatbox = React.forwardRef(({ scrollToBottom, className, onSubmit }, ref) => {
   const [isShowSending, setIsShowSending] = useState(false);
 
   return (
@@ -44,9 +43,11 @@ const MainChatbox = ({ scrollToBottom, className }) => {
             setIsShowSending(!!trim(e.target.value));
           }}
           onKeyPress={(e) => {
-            if (e.code === 'Enter' && trim(e.target.value)) {
+            const message = trim(e.target.value);
+            if (e.code === 'Enter' && message) {
               Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(e.target, '');
               e.target.dispatchEvent(new Event('input', { bubbles: true }));
+              onSubmit({ message });
               setTimeout(() => {
                 scrollToBottom();
               }, 200);
@@ -55,9 +56,11 @@ const MainChatbox = ({ scrollToBottom, className }) => {
         />
       </StyledChatInputWrapper>
       <Button color="primary" rounded icon={isShowSending ? <Send /> : <ThumbUp />} className="ml-2" onClick={() => {
-        if (trim(ref.current.value)) {
+        const message = trim(e.target.value);
+        if (message) {
           Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(ref.current, '');
           ref.current.dispatchEvent(new Event('input', { bubbles: true }));
+          onSubmit({ message });
           setTimeout(() => {
             scrollToBottom();
           }, 200);
@@ -65,6 +68,6 @@ const MainChatbox = ({ scrollToBottom, className }) => {
       }} />
     </MainChatboxWrapper>
   );
-};
+});
 
 export default MainChatbox;

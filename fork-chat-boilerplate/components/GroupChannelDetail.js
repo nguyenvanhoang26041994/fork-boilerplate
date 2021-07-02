@@ -4,6 +4,7 @@ import {
   Dialog, Avatar, AvatarGroup, Button, Collapse,
   Image, GridImage, Modal, Badge, Popover
 } from '@fork-ui/core';
+import GalleryPlayer from '@fork-ui/gallery/GalleryPlayer'
 import {
   BellOff, UserPlus, Logout, Search, Pencil, ThumbUp,
   Circle, Ban, MessagesOff, Dots, Plus,
@@ -244,19 +245,13 @@ const GroupChannelDetail = ({ className }) => {
             active={isActive('shared_media')}
             onClick={() => onChange('shared_media')}
           >
-            <Modal
+            <GalleryPlayer
               isOpen={isPreviewGalleryOpen}
-              margin={0}
-              style={{ height: '100vh', top: 0, borderRadius: 0 }}
+              onClose={() => setIsPreviewGalleryOpen(false)}
               onOutsideClick={() => setIsPreviewGalleryOpen(false)}
             >
-              <Modal.Header>
-                <Modal.Closer rounded onClick={() => setIsPreviewGalleryOpen(false)} />
-              </Modal.Header>
-              <Modal.Body>
-                <Image style={{ width: '100%', height: '100%' }}src="https://i.pinimg.com/originals/ce/53/c5/ce53c5bcd350ba856e5c53c343376fb2.jpg" />
-              </Modal.Body>
-            </Modal>
+              
+            </GalleryPlayer>
             <StyledGridImage cols={3} gap={4}>
               <Image src="https://i.pinimg.com/originals/ce/53/c5/ce53c5bcd350ba856e5c53c343376fb2.jpg" onClick={() => setIsPreviewGalleryOpen(true)} />
               <Image src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d" onClick={() => setIsPreviewGalleryOpen(true)} />

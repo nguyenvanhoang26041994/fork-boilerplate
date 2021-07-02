@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 import styled from 'styled-components';
 import { Avatar } from '@fork-ui/core';
 
@@ -18,7 +19,7 @@ const ChatSession = styled.div`
     margin: 0 8px;
   }
   .chat-content {
-    padding: 18px;
+    padding: 10px;
     display: inline-block;
     max-width: 550px;
     color: var(--heading-color);
@@ -94,12 +95,18 @@ const ChatSession = styled.div`
       display: block;
     }
   }
+  .--incomming.--start.--end,
+  .--outcomming.--start.--end {
+    .chat-content {
+      border-radius: 16px;
+    }
+  }
 `;
 
-const ChatSesstions = ({ className }) => {
+const ChatSesstions = ({ className, messages }) => {
   return (
     <div className={className}>
-      <ChatSession className="--incomming --start mb-2">
+      <ChatSession className="--incomming --start mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -110,7 +117,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--incomming mb-2">
+      <ChatSession className="--incomming mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -132,7 +139,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming --start mb-2">
+      <ChatSession className="--outcomming --start mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -143,7 +150,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming mb-2">
+      <ChatSession className="--outcomming mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -168,7 +175,7 @@ const ChatSesstions = ({ className }) => {
 
 
 
-      <ChatSession className="--incomming --start mb-2">
+      <ChatSession className="--incomming --start mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -179,7 +186,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--incomming mb-2">
+      <ChatSession className="--incomming mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -201,7 +208,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming --start mb-2">
+      <ChatSession className="--outcomming --start mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -212,7 +219,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming mb-2">
+      <ChatSession className="--outcomming mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -233,7 +240,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-meta">1:46 PM</div>
           </div>
         </div>
-      </ChatSession><ChatSession className="--incomming --start mb-2">
+      </ChatSession><ChatSession className="--incomming --start mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -244,7 +251,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--incomming mb-2">
+      <ChatSession className="--incomming mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -266,7 +273,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming --start mb-2">
+      <ChatSession className="--outcomming --start mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -277,7 +284,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming mb-2">
+      <ChatSession className="--outcomming mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -298,7 +305,7 @@ const ChatSesstions = ({ className }) => {
             <div className="chat-meta">1:46 PM</div>
           </div>
         </div>
-      </ChatSession><ChatSession className="--incomming --start mb-2">
+      </ChatSession><ChatSession className="--incomming --start mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -309,7 +316,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--incomming mb-2">
+      <ChatSession className="--incomming mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -331,7 +338,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming --start mb-2">
+      <ChatSession className="--outcomming --start mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -342,7 +349,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming mb-2">
+      <ChatSession className="--outcomming mb-1">
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -353,7 +360,7 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming --end mb-8">
+      <ChatSession className={cn('--outcomming', { '--end mb-8': !messages.length, 'mb-1': messages.length })}>
         <div className="chat-sesstion-body">
           <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -364,6 +371,21 @@ const ChatSesstions = ({ className }) => {
           </div>
         </div>
       </ChatSession>
+      {messages.map((message, idx) => {
+        return (
+          <ChatSession className={cn('--outcomming', { '--end mb-8': idx === messages.length - 1, 'mb-1': idx !== messages.length - 1 })}>
+            <div className="chat-sesstion-body">
+              <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+              <div className="chat-content-wapper">
+                <div className="chat-content">
+                  {message}
+                </div>
+                <div className="chat-meta">1:46 PM</div>
+              </div>
+            </div>
+          </ChatSession>
+        );
+      })}
     </div>
   );
 };

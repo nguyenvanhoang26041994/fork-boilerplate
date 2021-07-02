@@ -29,7 +29,8 @@ import {
   AlertTriangle,
   Bell,
   LayoutBottombar,
-  LayoutSidebar
+  LayoutSidebar,
+  Search
 } from '@fork-ui/icons/lazy';
 
 const MenuItemStyled = styled.div`
@@ -257,6 +258,12 @@ const LeftNavigation = ({ minimal }) => {
               <LayoutGrid />
             </div>
             <div className="__name">Grid</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path={`${path}/searchbox`}>
+            <div className="__avatar">
+              <Search />
+            </div>
+            <div className="__name">Searchbox</div>
           </MenuItemEnhander>
           <MenuItemEnhander path={`${path}/collapse`}>
             <div className="__avatar">

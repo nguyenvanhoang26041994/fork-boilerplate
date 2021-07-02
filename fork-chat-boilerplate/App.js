@@ -9,7 +9,8 @@ import {
   Dialog,
   Textbox,
   Loader,
-  Memo
+  Memo,
+  Searchbox
 } from '@fork-ui/core';
 import {
   Settings, Moon, Search,
@@ -34,41 +35,18 @@ const _users = users.reduce((rs, user) => {
   rs[user.id] = user;
   return rs;
 }, {});
-
-const SearchboxWrapper = styled.div`
-  position: relative;
-  .search-icon {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    padding: 3px;
-    transform: translate(50%, -50%);
-  }
-  .search-input {
-    border: 0;
-    background-color: transparent;
+const StyledSearchbox = styled(Searchbox)`
+  .fsearchbox-textbox {
     border-radius: 999px;
-    min-height: 40px;
-    padding-left: 40px;
-    padding-right: 20px;
+    border-color: transparent;
+    background-color: var(--btn-bg);
+    border-color: var(--btn-bg);
 
-    &:hover,
-    &:focus {
-      background-color: var(--btn-bg);
+    &:hover {
+      border-color: var(--btn-bg);
     }
   }
 `;
-const Searchbox = () => {
-  return (
-    <SearchboxWrapper className="w-full">
-      <div className="search-icon">
-        <Search />
-      </div>
-      <Textbox className="search-input" placeholder="Search..." />
-    </SearchboxWrapper>
-  );
-};
-
 const Wrapper = styled.div`
   --header-height: 70px;
   --nice-spacing: 25px;
@@ -149,6 +127,8 @@ const ChatFooter = styled(Dialog.Footer)`
 const App = () => {
   const { toggleDark } = DarkMode.useContext();
   const [isRightbarOpen, setRightbarOpen] = useState(true);
+  const [messages, setMessages] = useState([]);
+  const inputRef = useRef();
 
   const ref = useRef();
   const scrollToBottom = useCallback(() => {
@@ -160,7 +140,12 @@ const App = () => {
 
   useEffect(() => {
     scrollToBottom();
+    inputRef.current && inputRef.current.focus();
   }, []);
+
+  const onSubmit = useCallback(({ message }) => {
+    setMessages(prev => [...prev, message]);
+  }, [setMessages]);
 
   return (
     <Wrapper>
@@ -168,7 +153,9 @@ const App = () => {
         <header className="header">
           <div className="header__left"></div>
           <div className="header__middle">
-            <Searchbox />
+            <div>
+              <StyledSearchbox placeholder="Aa" />
+            </div>
           </div>
           <div className="header__left flex items-center justify-end pl-5 pr-5">
             <Badge.Dot color="var(--green-6)" overlap placement="bottom-end">
@@ -232,7 +219,7 @@ const App = () => {
                   <div data-id="loadMoreTop" className="flex items-center justify-center">
                     <Loader.Spinner className="p-3" />
                   </div>
-                  <ChatSesstions className="chat-sessions" />
+                  <ChatSesstions className="chat-sessions" messages={messages} />
                   <div data-id="loadMoreBottom" className="flex items-center justify-center">
                     <Loader.Spinner className="p-2" />
                   </div>
@@ -259,7 +246,7 @@ const App = () => {
                       <Avatar size={25} loading="lazy" src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d" />
                     </FloatTyping>
                   </div>
-                  <MainChatbox scrollToBottom={scrollToBottom} />
+                  <MainChatbox ref={inputRef} scrollToBottom={scrollToBottom} onSubmit={onSubmit} />
                 </div>
               </ChatFooter>
             </ChatContainer>
