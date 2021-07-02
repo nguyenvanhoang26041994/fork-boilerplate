@@ -179,9 +179,9 @@ const App = () => {
                     <h2 style={{ fontSize: '18px', color: 'var(--heading-color)'}}>Chats</h2>
                   </div>
                   <div>
-                    <Button color="transparent" rounded icon={<Dots />} />
-                    <Button color="transparent" rounded icon={<VideoPlus />} className="ml-3" />
-                    <Button color="transparent" rounded icon={<Edit />} className="ml-3" />
+                    <Button rounded icon={<Dots />} />
+                    <Button rounded icon={<VideoPlus />} className="ml-3" />
+                    <Button rounded icon={<Edit />} className="ml-3" />
                   </div>
                 </div>
               </Dialog.Header>
@@ -208,9 +208,9 @@ const App = () => {
                     </div>
                   </div>
                   <div>
-                    <Button color="transparent" rounded icon={<Phone />} />
-                    <Button color="transparent" rounded icon={<Video />} className="ml-3" />
-                    <Button color="transparent" rounded icon={<AlertCircle />} className="ml-3" onClick={() => setRightbarOpen(prev => !prev)} />
+                    <Button rounded icon={<Phone />} />
+                    <Button rounded icon={<Video />} className="ml-3" />
+                    <Button rounded icon={<AlertCircle />} className="ml-3" onClick={() => setRightbarOpen(prev => !prev)} />
                   </div>
                 </div>
               </ChatHeader>
