@@ -4,7 +4,7 @@ import { GridImage, Image } from '@fork-ui/core';
 
 export default () => {
   return (
-    <GridImage cols={3} gap={4}>
+    <GridImage cols={4} gap={4}>
       <Image src="https://i.pinimg.com/originals/ce/53/c5/ce53c5bcd350ba856e5c53c343376fb2.jpg" />
       <Image src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d" />
       <Image src="https://static01.nyt.com/images/2019/06/17/science/17DOGS/17DOGS-superJumbo.jpg" />
