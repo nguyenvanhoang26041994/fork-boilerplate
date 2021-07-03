@@ -49,7 +49,6 @@ const StyledSearchbox = styled(Searchbox)`
 `;
 const Wrapper = styled.div`
   --header-height: 70px;
-  --nice-spacing: 25px;
   .header-wrapper {
     background-color: var(--bg);
   }
@@ -105,15 +104,11 @@ const ChatContainer = styled(Dialog)`
 `;
 const ChatHeader = styled(Dialog.Header)`
   height: 80px;
-  padding-left: var(--nice-spacing);
-  padding-right: var(--nice-spacing);
 `;
 const ChatBody = styled(Dialog.Body)`
   .chat-sessions {
     margin: 0 auto;
     min-height: 100%;
-    padding-left: var(--nice-spacing);
-    padding-right: var(--nice-spacing);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -194,7 +189,7 @@ const App = () => {
           </div>
           <main className="main">
             <ChatContainer>
-              <ChatHeader>
+              <ChatHeader className="px-6">
                 <div className="flex items-center justify-between w-full">
                   <div>
                     <div className="flex items-center">
@@ -219,7 +214,7 @@ const App = () => {
                   <div data-id="loadMoreTop" className="flex items-center justify-center">
                     <Loader.Spinner className="p-3" />
                   </div>
-                  <ChatSesstions className="chat-sessions" messages={messages} />
+                  <ChatSesstions className="chat-sessions px-6" messages={messages} />
                   <div data-id="loadMoreBottom" className="flex items-center justify-center">
                     <Loader.Spinner className="p-2" />
                   </div>

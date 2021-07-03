@@ -5,11 +5,11 @@ import { Avatar } from '@fork-ui/core';
 
 const ChatSession = styled.div`
   display: flex;
-  .chat-sesstion-body {
+  .chat-section-body {
     display: flex;
     align-items: flex-start;
   }
-  .chat-sesstion-sender {
+  .chat-sender-avatar {
     visibility: hidden;
     flex-shrink: 0;
   }
@@ -24,28 +24,38 @@ const ChatSession = styled.div`
     max-width: 550px;
     color: var(--heading-color);
   }
+  .chat-sender-name {
+    margin-bottom: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: none;
+    font-size: 12px;
+  }
 
   .chat-meta {
     display: none;
     margin: 4px 10px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   &.--incomming.--start {
-    .chat-sesstion-sender {
+    .chat-sender-avatar {
       visibility: visible;
+    }
+    .chat-sender-name {
+      display: block;
     }
   }
 
   &.--outcomming {
-    .chat-sesstion-sender {
+    .chat-sender-avatar {
       display: none;
     }
   }
 
   &.--outcomming {
     justify-content: flex-end;
-    .chat-sesstion-body {
+    .chat-section-body {
       flex-direction: row-reverse;
     }
     .chat-content-wapper {
@@ -107,9 +117,10 @@ const ChatSesstions = ({ className, messages }) => {
   return (
     <div className={className}>
       <ChatSession className="--incomming --start mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
             </div>
@@ -118,8 +129,9 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--incomming mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+          <div className="chat-sender-name">Tùng Nguyễn</div>
           <div className="chat-content-wapper">
             <div className="chat-content">
               Dropping'
@@ -129,9 +141,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--incomming --end mb-8">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
             </div>
@@ -140,9 +153,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming --start mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               Purchasing crappy things with haft the hand of cash in hand
             </div>
@@ -151,9 +165,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               Now i have some thing to tell you.
             </div>
@@ -162,9 +177,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming --end mb-8">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               All my night, been ready for you all my night. Been waitin' on you all my night. I'll buzz you in, just let me known when you outside. All my night you.
             </div>
@@ -176,9 +192,10 @@ const ChatSesstions = ({ className, messages }) => {
 
 
       <ChatSession className="--incomming --start mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
             </div>
@@ -187,9 +204,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--incomming mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping'
             </div>
@@ -198,9 +216,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--incomming --end mb-8">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
             </div>
@@ -209,9 +228,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming --start mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               Purchasing crappy things with haft the hand of cash in hand
             </div>
@@ -220,9 +240,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               Now i have some thing to tell you.
             </div>
@@ -231,9 +252,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming --end mb-8">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               All my night, been ready for you all my night. Been waitin' on you all my night. I'll buzz you in, just let me known when you outside. All my night you.
             </div>
@@ -241,9 +263,10 @@ const ChatSesstions = ({ className, messages }) => {
           </div>
         </div>
       </ChatSession><ChatSession className="--incomming --start mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
             </div>
@@ -252,9 +275,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--incomming mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping'
             </div>
@@ -263,9 +287,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--incomming --end mb-8">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
             </div>
@@ -274,9 +299,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming --start mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               Purchasing crappy things with haft the hand of cash in hand
             </div>
@@ -285,9 +311,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               Now i have some thing to tell you.
             </div>
@@ -296,9 +323,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming --end mb-8">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               All my night, been ready for you all my night. Been waitin' on you all my night. I'll buzz you in, just let me known when you outside. All my night you.
             </div>
@@ -306,9 +334,10 @@ const ChatSesstions = ({ className, messages }) => {
           </div>
         </div>
       </ChatSession><ChatSession className="--incomming --start mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping' baby off at home before my night shift.
             </div>
@@ -317,9 +346,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--incomming mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping'
             </div>
@@ -328,9 +358,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--incomming --end mb-8">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Tùng Nguyễn</div>
             <div className="chat-content">
               Dropping' baby off at home before my night shift. You known i can't hear none of that spend the night stuff. That kumbaya stuff wanna see nirana, but don't wanna die yet. Wanna feel that nana thought, could you come by?
             </div>
@@ -339,9 +370,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming --start mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               Purchasing crappy things with haft the hand of cash in hand
             </div>
@@ -350,9 +382,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className="--outcomming mb-1">
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               Now i have some thing to tell you.
             </div>
@@ -361,9 +394,10 @@ const ChatSesstions = ({ className, messages }) => {
         </div>
       </ChatSession>
       <ChatSession className={cn('--outcomming', { '--end mb-8': !messages.length, 'mb-1': messages.length })}>
-        <div className="chat-sesstion-body">
-          <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+        <div className="chat-section-body">
+          <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
+            <div className="chat-sender-name">Hoàng Nguyễn</div>
             <div className="chat-content">
               All my night, been ready for you all my night. Been waitin' on you all my night. I'll buzz you in, just let me known when you outside. All my night you.
             </div>
@@ -374,9 +408,10 @@ const ChatSesstions = ({ className, messages }) => {
       {messages.map((message, idx) => {
         return (
           <ChatSession className={cn('--outcomming', { '--end mb-8': idx === messages.length - 1, 'mb-1': idx !== messages.length - 1 })}>
-            <div className="chat-sesstion-body">
-              <Avatar className="chat-sesstion-sender" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+            <div className="chat-section-body">
+              <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
               <div className="chat-content-wapper">
+                <div className="chat-sender-name">Hoàng Nguyễn</div>
                 <div className="chat-content">
                   {message}
                 </div>
