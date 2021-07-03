@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn build",
     "dev": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.prod.js",
+    "build": "rimraf \"dist\" && cross-env NODE_ENV=production webpack --config webpack/webpack.prod.js",
     "make:core": "node .toolkit/make-core-component/excute",
     "make:component": "node .toolkit/make-component/excute",
     "make:container": "node .toolkit/make-container/excute",
@@ -17,7 +17,7 @@
     "make:guides": "node .toolkit/make-guides/excute",
     "make:guide": "node .toolkit/make-guide/excute",
     "make:context": "node .toolkit/make-context/excute",
-    "make:context:style-guide": "node .toolkit/make-context/excute.style-guide",
+    "make:context:fork-guide": "node .toolkit/make-context/excute.fork-guide",
     "transform:icons": "node .toolkit/transform-tabler-icons-to-react/excute",
     "transform:guides": "node .toolkit/transform-guides-for-demo-box/excute",
     "transform:guides:index": "node .toolkit/transform-guides-for-index-js/excute",

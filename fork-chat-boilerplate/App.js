@@ -7,7 +7,7 @@ import {
   Badge,
   Avatar,
   Dialog,
-  Textbox,
+  Popover,
   Loader,
   Memo,
   Searchbox
@@ -157,9 +157,18 @@ const App = () => {
               <Avatar size={30} loading="lazy" src={_users['111'].avatar} />
             </Badge.Dot>
             <Button rounded icon={<Moon />} onClick={toggleDark} className="ml-3" />
-            <Badge.Counter count={8} overlap placement="top-end" className="ml-3">
-              <Button rounded icon={<Bell />}/>
-            </Badge.Counter>
+            <Popover
+              overlay={(
+                <div></div>
+              )}
+              placement="bottom"
+            >
+              <span>
+                <Badge.Counter count={8} overlap placement="top-end" className="ml-3">
+                  <Button rounded icon={<Bell />}/>
+                </Badge.Counter>
+              </span>
+            </Popover>
             <Button rounded icon={<Settings />} className="ml-3" />
           </div>
         </header>

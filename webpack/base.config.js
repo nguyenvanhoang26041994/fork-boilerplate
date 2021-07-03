@@ -67,7 +67,7 @@ module.exports = {
       '@store': path.join(rootDir, 'src/store'),
       '@fork-ui': path.join(rootDir, 'fork-ui'),
       '@fork-chat-boilerplate': path.join(rootDir, 'fork-chat-boilerplate'),
-      '@style-guide': path.join(rootDir, '.style-guide'),
+      '@fork-guide': path.join(rootDir, 'fork-guide'),
     }
   },
   watchOptions: {

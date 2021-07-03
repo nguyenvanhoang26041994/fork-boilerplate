@@ -6,5 +6,5 @@ const [ Component, Guide ] = _path;
 module.exports = {
   Component: Component,
   Guide: Guide,
-  guidesPath: path.join(rootDir, '.style-guide/guides'),
+  guidesPath: path.join(rootDir, 'fork-guide/guides'),
 };

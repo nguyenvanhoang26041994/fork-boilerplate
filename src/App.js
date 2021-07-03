@@ -7,7 +7,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import DarkMode from '@contexts/DarkMode';
-import StyleGuide from '@style-guide';
+import StyleGuide from '@fork-guide';
 import ChatApp from '@fork-chat-boilerplate';
 
 const App = () => {
