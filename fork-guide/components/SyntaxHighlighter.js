@@ -7,7 +7,8 @@ import DarkMode from '@contexts/DarkMode';
 
 const SyntaxHighlighterStyled = styled.div`
   width: 100%;
-  overflow-y: auto;
+  max-height: 100vh;
+  overflow-y: scroll;
   background-color: var(--bg);
 
   > pre {

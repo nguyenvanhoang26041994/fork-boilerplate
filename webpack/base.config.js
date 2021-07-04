@@ -66,7 +66,7 @@ module.exports = {
       '@constants': path.join(rootDir, 'src/constants'),
       '@store': path.join(rootDir, 'src/store'),
       '@fork-ui': path.join(rootDir, 'fork-ui'),
-      '@fork-chat-boilerplate': path.join(rootDir, 'fork-chat-boilerplate'),
+      '@fork-chat': path.join(rootDir, 'fork-chat'),
       '@fork-guide': path.join(rootDir, 'fork-guide'),
     }
   },

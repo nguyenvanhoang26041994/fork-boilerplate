@@ -37,6 +37,7 @@ const SelectGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/
 const ConfirmGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Confirm'));
 const GridGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Grid'));
 const SearchboxGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Searchbox'));
+const NotificationGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Notification'));
 // __INJECTED_LINE_GUIDE__
 
 const StyleGuide = () => {
@@ -73,6 +74,7 @@ const StyleGuide = () => {
       <Route path={`${path}/confirm`} component={ConfirmGuides} />
       <Route path={`${path}/grid`} component={GridGuides} />
       <Route path={`${path}/searchbox`} component={SearchboxGuides} />
+      <Route path={`${path}/notification`} component={NotificationGuides} />
       {/* __INJECTED_LINE_ROUTER__ */}
     </Switch>
   );

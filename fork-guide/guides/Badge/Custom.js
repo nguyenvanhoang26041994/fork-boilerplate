@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper, FancyBox } from '@fork-guide/components';
-import { Badge, Avatar } from '@fork-ui/core';
-import { Stars } from '@fork-ui/icons/lazy';
+import { Badge, Button } from '@fork-ui/core';
+import { Pencil } from '@fork-ui/icons/lazy';
 
 const PureBadge = Badge.PureBadge;
 
@@ -12,23 +12,12 @@ export default () => {
         overlap
         placement="bottom-end"
         badge={(
-          <Avatar
-            style={{ border: '2px solid var(--bg)' }}
-            className="fbadge-ui"
-            color="var(--primary)"
-            size="0.5em"
-          >
-            HG
-          </Avatar>
+          <span className="fbadge-ui fbadge-ui-rounded">
+            <Button color="primary" rounded icon={<Pencil />} />
+          </span>
         )}
       >
-        <FancyBox circle size="50px" />
-      </PureBadge>
-      <PureBadge
-        placement="top-end"
-        badge={<Stars className="fbadge-ui" color="var(--primary)" />}
-      >
-        <FancyBox size="50px" />
+        <FancyBox size="120px" circle />
       </PureBadge>
     </Wrapper>
   );

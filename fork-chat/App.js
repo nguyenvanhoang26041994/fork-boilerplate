@@ -10,10 +10,11 @@ import {
   Popover,
   Loader,
   Memo,
-  Searchbox
+  Searchbox,
+  PureNotification
 } from '@fork-ui/core';
 import {
-  Settings, Moon, Search,
+  Settings, Moon, ThumbUp,
   Phone, Video, AlertCircle, Dots,
   Edit, VideoPlus, Bell,
 } from '@fork-ui/icons/lazy';
@@ -31,6 +32,7 @@ import DarkMode from '@contexts/DarkMode';
 
 import { users } from './fake';
 
+const PureBadge = Badge.PureBadge;
 const _users = users.reduce((rs, user) => {
   rs[user.id] = user;
   return rs;
@@ -123,6 +125,24 @@ const App = () => {
   const { toggleDark } = DarkMode.useContext();
   const [isRightbarOpen, setRightbarOpen] = useState(true);
   const [messages, setMessages] = useState([]);
+  const [notifications, setNotifications] = useState([
+    {
+      id: '001',
+      type: 'emoji',
+      meta: {
+        avatar: 'https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d',
+        emoji: 'thumb-up',
+      }
+    },
+    {
+      id: '002',
+      type: 'emoji',
+      meta: {
+        emoji: 'thumb-up',
+        avatar: 'https://avatars.githubusercontent.com/u/20764362?v=4'
+      }
+    }
+  ]);
   const inputRef = useRef();
 
   const ref = useRef();
@@ -158,13 +178,38 @@ const App = () => {
             </Badge.Dot>
             <Button rounded icon={<Moon />} onClick={toggleDark} className="ml-3" />
             <Popover
-              overlay={(
-                <div></div>
-              )}
+              arrow={false}
               placement="bottom"
+              overlay={(
+                <div style={{ width: 400, maxHeight: 'calc(100vh - 80px)' }}>
+                  {notifications.map((notification) => {
+                    return (
+                      <PureNotification key={notification.id}>
+                        <span>
+                          <PureBadge
+                            placement="bottom-end"
+                            overlap
+                            badge={(
+                              <span className="fbadge-ui fbadge-ui-rounded">
+                                <Button
+                                  color="primary"
+                                  rounded
+                                  icon={<ThumbUp />}
+                                />
+                              </span>
+                            )}
+                          >
+                            <Avatar size={60} src={notification.meta.avatar} />
+                          </PureBadge>
+                        </span>
+                      </PureNotification>
+                    )
+                  })}
+                </div>
+              )}
             >
-              <span>
-                <Badge.Counter count={8} overlap placement="top-end" className="ml-3">
+              <span className="ml-3">
+                <Badge.Counter count={8} overlap placement="top-end">
                   <Button rounded icon={<Bell />}/>
                 </Badge.Counter>
               </span>

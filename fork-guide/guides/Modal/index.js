@@ -3,6 +3,8 @@ import Centered from './Centered';
 import MarginView from './MarginView';
 import Modal from './Modal';
 import Width from './Width';
+import CustomCloseIcon from './CustomCloseIcon';
+import CustomHeader from './CustomHeader';
 // __INJECTED_LINE__
 
 import * as allCode from './code';
@@ -12,6 +14,8 @@ const demos = [
   { Component: MarginView, name: 'MarginView' },
   { Component: Modal, name: 'Modal' },
   { Component: Width, name: 'Width' },
+  { Component: CustomCloseIcon, name: 'CustomCloseIcon' },
+  { Component: CustomHeader, name: 'CustomHeader' },
   // __INJECTED_ITEM__
 ];
 

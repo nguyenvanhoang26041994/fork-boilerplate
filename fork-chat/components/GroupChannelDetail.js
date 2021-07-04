@@ -194,14 +194,14 @@ const GroupChannelDetail = ({ className }) => {
             onClick={() => onChange('chat_members')}
           >
             <UserCard className="--padding-wide">
-              <EnhancerAvatar userName="Tùng Lê" size={30} src="https://i.pinimg.com/originals/ce/53/c5/ce53c5bcd350ba856e5c53c343376fb2.jpg" />
+              <EnhancerAvatar userName="Tùng Lê" size={35} src="https://i.pinimg.com/originals/ce/53/c5/ce53c5bcd350ba856e5c53c343376fb2.jpg" />
               <div className="__user-info">
                 <span className="__user-name">Tùng Lê</span>
               </div>
               <Button color="transparent" rounded icon={<Dots />} className="__floated-actions" />
             </UserCard>
             <UserCard className="--padding-wide">
-              <EnhancerAvatar userName="Thái Sơn" size={30} src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d" />
+              <EnhancerAvatar userName="Thái Sơn" size={35} src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d" />
               <div className="__user-info">
                 <span className="__user-name">Thái Sơn</span>
                 <span className="__user-role">Admin</span>
@@ -209,7 +209,7 @@ const GroupChannelDetail = ({ className }) => {
               <Button color="transparent" rounded icon={<Dots />} className="__floated-actions" />
             </UserCard>
             <UserCard className="--padding-wide">
-              <EnhancerAvatar userName="Ngô Nhật Minh" size={30} src="https://r4x8d8k3.rocketcdn.me/wp-content/uploads/2020/05/hannah-grace-fk4tiMlDFF0-unsplash-1200x800.jpg" />
+              <EnhancerAvatar userName="Ngô Nhật Minh" size={35} src="https://r4x8d8k3.rocketcdn.me/wp-content/uploads/2020/05/hannah-grace-fk4tiMlDFF0-unsplash-1200x800.jpg" />
               <div className="__user-info">
                 <span className="__user-name">Ngô Nhật Minh</span>
               </div>
