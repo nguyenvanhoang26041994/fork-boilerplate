@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
+import cn from 'classnames';
 import styled from 'styled-components';
 import { withContext as withChatContext} from './fork-chat-store';
 
@@ -16,7 +17,7 @@ import {
 import {
   Settings, Moon, ThumbUp,
   Phone, Video, AlertCircle, Dots,
-  Edit, VideoPlus, Bell,
+  Edit, VideoPlus, Bell, Photo, MessageDots
 } from '@fork-ui/icons/lazy';
 import {
   AvatarGroup as RoundedAvatarGroup,
@@ -32,11 +33,29 @@ import DarkMode from '@contexts/DarkMode';
 
 import { users } from './fake';
 
-const PureBadge = Badge.PureBadge;
+const StyledNotification = styled(PureNotification)`
+  &.--red {
+    .fbadge-avatar {
+      .fbadge-ui {
+        background-color: var(--red-6);
+      }
+    }
+  }
+
+  &.--green {
+    .fbadge-avatar {
+      .fbadge-ui {
+        background-color: var(--green-6);
+      }
+    }
+  }
+`;
+
 const _users = users.reduce((rs, user) => {
   rs[user.id] = user;
   return rs;
 }, {});
+
 const StyledSearchbox = styled(Searchbox)`
   .fsearchbox-textbox {
     border-radius: 999px;
@@ -49,6 +68,7 @@ const StyledSearchbox = styled(Searchbox)`
     }
   }
 `;
+
 const Wrapper = styled.div`
   --header-height: 70px;
   .header-wrapper {
@@ -121,14 +141,43 @@ const ChatFooter = styled(Dialog.Footer)`
   padding-right: 25px;
 `;
 
+const mapNotiType = Object.freeze({
+  'emoji': {
+    BadgeIcon: ThumbUp,
+  },
+  'livestream': {
+    BadgeIcon: Video,
+    badgeColor: '--red'
+  },
+  'photo': {
+    BadgeIcon: Photo,
+  },
+  'message': {
+    BadgeIcon: MessageDots,
+    badgeColor: '--green'
+  },
+});
+
 const App = () => {
   const { toggleDark } = DarkMode.useContext();
   const [isRightbarOpen, setRightbarOpen] = useState(true);
   const [messages, setMessages] = useState([]);
+  const [isTyping, setIsTyping] = useState(false);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIsTyping(prev => !prev)
+    }, 3000);
+
+    return () => {
+      clearInterval(timer);
+    }
+  }, [setIsTyping])
   const [notifications, setNotifications] = useState([
     {
       id: '001',
       type: 'emoji',
+      isReaded: true,
       meta: {
         avatar: 'https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d',
         emoji: 'thumb-up',
@@ -136,9 +185,37 @@ const App = () => {
     },
     {
       id: '002',
-      type: 'emoji',
+      type: 'livestream',
       meta: {
-        emoji: 'thumb-up',
+        avatar: 'https://avatars.githubusercontent.com/u/20764362?v=4'
+      }
+    },
+    {
+      id: '003',
+      isReaded: true,
+      type: 'photo',
+      meta: {
+        avatar: 'https://avatars.githubusercontent.com/u/20764362?v=4'
+      }
+    },
+    {
+      id: '004',
+      type: 'message',
+      meta: {
+        avatar: 'https://avatars.githubusercontent.com/u/20764362?v=4'
+      }
+    },
+    {
+      id: '005',
+      type: 'message',
+      meta: {
+        avatar: 'https://avatars.githubusercontent.com/u/20764362?v=4'
+      }
+    },
+    {
+      id: '006',
+      type: 'message',
+      meta: {
         avatar: 'https://avatars.githubusercontent.com/u/20764362?v=4'
       }
     }
@@ -183,26 +260,27 @@ const App = () => {
               overlay={(
                 <div style={{ width: 400, maxHeight: 'calc(100vh - 80px)' }}>
                   {notifications.map((notification) => {
+                    const BadgeIcon = mapNotiType[notification.type].BadgeIcon;
+                    const badgeColor = mapNotiType[notification.type].badgeColor;
                     return (
-                      <PureNotification key={notification.id}>
-                        <span>
-                          <PureBadge
-                            placement="bottom-end"
-                            overlap
-                            badge={(
-                              <span className="fbadge-ui fbadge-ui-rounded">
-                                <Button
-                                  color="primary"
-                                  rounded
-                                  icon={<ThumbUp />}
-                                />
-                              </span>
-                            )}
-                          >
-                            <Avatar size={60} src={notification.meta.avatar} />
-                          </PureBadge>
-                        </span>
-                      </PureNotification>
+                      <StyledNotification
+                        key={notification.id}
+                        hasDot={!notification.isReaded}
+                        className={cn('w-full', badgeColor)}
+                      >
+                        <PureNotification.BadgeAvatar
+                          className="mr-5"
+                          badge={<BadgeIcon />}
+                        >
+                          <Avatar size={55} src={notification.meta.avatar} />
+                        </PureNotification.BadgeAvatar>
+                        <div>
+                          <b>Hoàng Nguyễn</b> and <b>Minh Nguyễn</b>
+                          <span> added to their stories. You can reply or react them.</span>
+                          <br />
+                          <small>5 hours ago</small>
+                        </div>
+                      </StyledNotification>
                     )
                   })}
                 </div>
@@ -269,9 +347,9 @@ const App = () => {
                     <Loader.Spinner className="p-3" />
                   </div>
                   <ChatSesstions className="chat-sessions px-6" messages={messages} />
-                  <div data-id="loadMoreBottom" className="flex items-center justify-center">
+                  {/* <div data-id="loadMoreBottom" className="flex items-center justify-center">
                     <Loader.Spinner className="p-2" />
-                  </div>
+                  </div> */}
                 </div>
               </ChatBody>
               <ChatFooter>
@@ -284,17 +362,19 @@ const App = () => {
                   }}>
                     <FloatUnread count={2} onClick={scrollToBottom} />
                   </div>
-                  <div style={{
-                    position: 'absolute',
-                    top: '-40px',
-                    right: 'auto',
-                    left: 0,
-                  }}>
-                    <FloatTyping className="flex items-center">
-                      <Avatar size={25} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
-                      <Avatar size={25} loading="lazy" src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d" />
-                    </FloatTyping>
-                  </div>
+                  {isTyping && (
+                    <div style={{
+                      position: 'absolute',
+                      top: '-40px',
+                      right: 'auto',
+                      left: 0,
+                    }}>
+                      <FloatTyping className="flex items-center">
+                        <Avatar size={25} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
+                        <Avatar size={25} loading="lazy" src="https://c.pxhere.com/photos/f8/4f/dog_pug_animal_pet_funny_cute_adorable_canine-1368002.jpg!d" />
+                      </FloatTyping>
+                    </div>
+                  )}
                   <MainChatbox ref={inputRef} scrollToBottom={scrollToBottom} onSubmit={onSubmit} />
                 </div>
               </ChatFooter>

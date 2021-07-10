@@ -4,6 +4,7 @@ import AvatarGroup from './AvatarGroup';
 import Color from './Color';
 import Size from './Size';
 import WithBadge from './WithBadge';
+import CustomAvatarGroup from './CustomAvatarGroup';
 // __INJECTED_LINE__
 
 import * as allCode from './code';
@@ -14,6 +15,7 @@ const demos = [
   { Component: Color, name: 'Color' },
   { Component: Size, name: 'Size' },
   { Component: WithBadge, name: 'WithBadge' },
+  { Component: CustomAvatarGroup, name: 'CustomAvatarGroup' },
   // __INJECTED_ITEM__
 ];
 

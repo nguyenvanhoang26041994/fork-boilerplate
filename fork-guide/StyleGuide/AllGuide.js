@@ -24,6 +24,7 @@ import TooltipMainGuide from '@fork-guide/guides/Tooltip/Tooltip';
 import PopoverMainGuide from '@fork-guide/guides/Popover/Popover';
 import AlertMainGuide from '@fork-guide/guides/Alert/Alert';
 import ConfirmMainGuide from '@fork-guide/guides/Confirm/Confirm';
+import NotificationMainGuide from '@fork-guide/guides/Notification/Notification';
 
 const AllGuide = () => {
   return (
@@ -141,8 +142,8 @@ const AllGuide = () => {
           </Demo>
         </Flex>
         <Flex w="1/3" style={{ paddingRight: '1px' }}>
-          <Demo name="Alert">
-            <AlertMainGuide />
+          <Demo name="Notification" centered>
+            <NotificationMainGuide />
           </Demo>
         </Flex>
         <Flex w="1/3">

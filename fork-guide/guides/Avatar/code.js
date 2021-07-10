@@ -109,3 +109,8 @@ export default () => {
   demoName: 'With Badge',
 }
 
+
+export const CustomAvatarGroup = {
+  code: ``,
+  demoName: 'Custom Avatar Group',
+}

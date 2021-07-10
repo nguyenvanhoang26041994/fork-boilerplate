@@ -7,7 +7,7 @@ export default () => {
 
   return (
     <React.Fragment>
-      <Modal isOpen={isOpen} w="700px" style={{ top: 3 }}>
+      <Modal isOpen={isOpen} style={{ width: 700, top: 3 }}>
         <Modal.Header>
           TITLE
           <Modal.Closer onClick={doClose} />

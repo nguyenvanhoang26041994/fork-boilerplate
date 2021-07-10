@@ -140,7 +140,7 @@ const ChatSesstions = ({ className, messages }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--incomming --end mb-8">
+      <ChatSession className="--incomming --end mb-5">
         <div className="chat-section-body">
           <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -176,7 +176,7 @@ const ChatSesstions = ({ className, messages }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming --end mb-8">
+      <ChatSession className="--outcomming --end mb-5">
         <div className="chat-section-body">
           <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -215,7 +215,7 @@ const ChatSesstions = ({ className, messages }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--incomming --end mb-8">
+      <ChatSession className="--incomming --end mb-5">
         <div className="chat-section-body">
           <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -251,7 +251,7 @@ const ChatSesstions = ({ className, messages }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming --end mb-8">
+      <ChatSession className="--outcomming --end mb-5">
         <div className="chat-section-body">
           <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -286,7 +286,7 @@ const ChatSesstions = ({ className, messages }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--incomming --end mb-8">
+      <ChatSession className="--incomming --end mb-5">
         <div className="chat-section-body">
           <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -322,7 +322,7 @@ const ChatSesstions = ({ className, messages }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--outcomming --end mb-8">
+      <ChatSession className="--outcomming --end mb-5">
         <div className="chat-section-body">
           <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -357,7 +357,7 @@ const ChatSesstions = ({ className, messages }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className="--incomming --end mb-8">
+      <ChatSession className="--incomming --end mb-5">
         <div className="chat-section-body">
           <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShph3ZbEptLqW-p-wY12RE2QvFWTjcqGWT9w&usqp=CAU" />
           <div className="chat-content-wapper">
@@ -393,7 +393,7 @@ const ChatSesstions = ({ className, messages }) => {
           </div>
         </div>
       </ChatSession>
-      <ChatSession className={cn('--outcomming', { '--end mb-8': !messages.length, 'mb-1': messages.length })}>
+      <ChatSession className={cn('--outcomming', { '--end mb-5': !messages.length, 'mb-1': messages.length })}>
         <div className="chat-section-body">
           <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
           <div className="chat-content-wapper">
@@ -407,7 +407,7 @@ const ChatSesstions = ({ className, messages }) => {
       </ChatSession>
       {messages.map((message, idx) => {
         return (
-          <ChatSession className={cn('--outcomming', { '--end mb-8': idx === messages.length - 1, 'mb-1': idx !== messages.length - 1 })}>
+          <ChatSession className={cn('--outcomming', { '--end mb-5': idx === messages.length - 1, 'mb-1': idx !== messages.length - 1 })}>
             <div className="chat-section-body">
               <Avatar className="chat-sender-avatar" size={40} loading="lazy" src="https://avatars.githubusercontent.com/u/20764362?v=4" />
               <div className="chat-content-wapper">
