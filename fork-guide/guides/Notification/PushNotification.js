@@ -12,7 +12,7 @@ const notifications = [
   {
     avatar: avatarLink,
     icon: <Photo />,
-    content: (
+    content: () => (
       <div style={{ color: 'var(--heading-color)' }}>
         <b>Hoàng Nguyễn</b> and <b>Minh Nguyễn</b>
         <span> added to their stories. You can reply or react them.</span>
@@ -24,7 +24,7 @@ const notifications = [
   {
     avatar: avatarLink2,
     icon: <Video />,
-    content: (
+    content: () => (
       <div style={{ color: 'var(--heading-color)' }}>
         <b>Nguồn Hàng Khởi Nghiệp</b>
         <span> is livelive now: "Xả Hàng Giày 39k dành cho các t/y"</span>
@@ -34,9 +34,10 @@ const notifications = [
     )
   },
   {
+    isLockBodyClick: true,
     avatar: avatarLink3,
     icon: <User />,
-    content: (
+    content: ({ doClose }) => (
       <div style={{ color: 'var(--heading-color)' }}>
         <b>Phạm Như Ngọc</b>
         <span> send you a friendiend request.</span>
@@ -44,8 +45,8 @@ const notifications = [
         <small>a day ago</small>
         <br />
         <div className="flex items-center mt-2">
-          <Button color="primary" className="mr-2">Confirm</Button>
-          <Button>Delete</Button>
+          <Button color="primary" className="mr-2" onClick={doClose}>Confirm</Button>
+          <Button onClick={doClose}>Delete</Button>
         </div>
       </div>
     )
@@ -57,35 +58,44 @@ const randomNoti = () => {
   return notifications[Math.floor(Math.random() * (max - min + 1)) + min];
 };
 const pushNotification = () => {
-  const { content, icon, avatar } = randomNoti();
+  const { content, icon, avatar, isLockBodyClick } = randomNoti();
 
-  Notification.push(({ doClose }) => (
-    (
-      <Notification style={{ width: 400 }} className="ml-20 mb-2">
+  Notification.push(({ doClose }) => {
+    const _doClose = () => {
+      if (!isLockBodyClick) {
+        doClose();
+      }
+    };
+
+    return (
+      <Notification style={{ width: 400 }} className="ml-2 mb-2">
         <Notification.Header>
           Notification
           <Notification.Closer onClick={doClose} />
         </Notification.Header>
         <Notification.Body>
-          <PureNotification hasDot>
+          <PureNotification hasDot onClick={_doClose}>
             <PureNotification.BadgeAvatar
               className="mr-5"
               badge={icon}
             >
               <Avatar src={avatar} size={55} />
             </PureNotification.BadgeAvatar>
-            {content}
+            {content({ doClose })}
           </PureNotification>
         </Notification.Body>
       </Notification>
     )
-  ));
+  });
 };
+
+const closeAll = () => Notification.closeAll();
 
 export default () => {
   return (
     <Wrapper>
       <Button color="primary" onClick={pushNotification}>Click Me</Button>
+      <Button onClick={closeAll}>Close All</Button>
     </Wrapper>
   );
 };
