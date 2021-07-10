@@ -3,12 +3,14 @@ import withGuides from '@fork-guide/HOCs/withGuides';
 import Notification from './Notification';
 import Custom from './Custom';
 import WithAvatarGroup from './WithAvatarGroup';
+import PushNotification from './PushNotification';
 // __INJECTED_LINE__
 
 import * as allCode from './code';
 
 const demos = [
   { Component: Notification, name: 'Notification' },
+  { Component: PushNotification, name: 'PushNotification' },
   { Component: Custom, name: 'Custom' },
   { Component: WithAvatarGroup, name: 'WithAvatarGroup' },
   // __INJECTED_ITEM__
