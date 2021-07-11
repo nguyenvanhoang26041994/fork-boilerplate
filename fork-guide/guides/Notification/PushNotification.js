@@ -13,7 +13,7 @@ const notifications = [
     avatar: avatarLink,
     icon: <Photo />,
     content: () => (
-      <div style={{ color: 'var(--heading-color)' }}>
+      <div>
         <b>Hoàng Nguyễn</b> and <b>Minh Nguyễn</b>
         <span> added to their stories. You can reply or react them.</span>
         <br />
@@ -25,7 +25,7 @@ const notifications = [
     avatar: avatarLink2,
     icon: <Video />,
     content: () => (
-      <div style={{ color: 'var(--heading-color)' }}>
+      <div>
         <b>Nguồn Hàng Khởi Nghiệp</b>
         <span> is livelive now: "Xả Hàng Giày 39k dành cho các t/y"</span>
         <br />
@@ -38,7 +38,7 @@ const notifications = [
     avatar: avatarLink3,
     icon: <User />,
     content: ({ doClose }) => (
-      <div style={{ color: 'var(--heading-color)' }}>
+      <div>
         <b>Phạm Như Ngọc</b>
         <span> send you a friendiend request.</span>
         <br />

@@ -51,7 +51,7 @@ const notifications = [
     id: 'id001',
     avatar: avatarLink,
     content: (
-      <div style={{ color: 'var(--heading-color)' }}>
+      <div>
         <b>Phạm Như Ngọc</b>
         <span> like your photo.</span>
         <br />
@@ -63,7 +63,7 @@ const notifications = [
     id: 'id001',
     avatar: avatarLink2,
     content: (
-      <div style={{ color: 'var(--heading-color)' }}>
+      <div>
         <b>Phạm Như Ngọc</b> and <b>Hoàng Nguyễn</b>
         <span> like your photo.</span>
         <br />
@@ -75,7 +75,7 @@ const notifications = [
     id: 'id001',
     avatar: avatarLink3,
     content: (
-      <div style={{ color: 'var(--heading-color)' }}>
+      <div>
         <b>Phạm Như Ngọc</b>, <b>Hoàng Nguyễn</b>
         <span> and 12 peoples like your photo.</span>
         <br />
