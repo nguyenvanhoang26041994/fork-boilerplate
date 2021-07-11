@@ -17,7 +17,7 @@ const StyledNotification = styled(NoticeNotification)`
     background-color: var(--green-6);
   }
 
-  .fbadge-avatar {
+  .fnotice-badge-avatar {
     .fbadge-ui {
       background-color: var(--red-6);
     }

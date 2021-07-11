@@ -60,7 +60,7 @@ const randomNoti = () => {
 const pushNotification = (placement) => {
   const { content, icon, avatar, isLockBodyClick } = randomNoti();
 
-  Notification.push(({ doClose }) => {
+  Notification.ref.push(({ doClose }) => {
     const _doClose = () => {
       if (!isLockBodyClick) {
         doClose();
@@ -68,7 +68,7 @@ const pushNotification = (placement) => {
     };
 
     return (
-      <Notification style={{ width: 400 }} className="ml-2 my-1">
+      <Notification style={{ width: 400 }} className="mx-2 my-1">
         <Notification.Header>
           Notification
           <Notification.Closer onClick={doClose} />
@@ -87,12 +87,11 @@ const pushNotification = (placement) => {
       </Notification>
     )
   }, {
-    autoClose: false,
     placement: placement,
   });
 };
 
-const closeAll = () => Notification.closeAll();
+const closeAll = () => Notification.ref.closeAll();
 export default () => {
   return (
     <Wrapper>
