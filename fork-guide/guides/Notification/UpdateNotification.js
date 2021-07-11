@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { NoticeNotification, Avatar, Notification, Button } from '@fork-ui/core';
+import { Dialog, Avatar, Notification, Button } from '@fork-ui/core';
 import { Photo } from '@fork-ui/icons/lazy';
 import {
   avatarLink,
@@ -9,12 +9,12 @@ import {
   avatarLink3
 } from '@fork-guide/staff';
 
-const StyledNotification = styled(NoticeNotification)`
+const StyledNotification = styled(Notification)`
   &:before {
     background-color: var(--green-6);
   }
 
-  .fnotice-badge-avatar {
+  .fnotification-avatar {
     .fbadge-ui {
       background-color: var(--green-6);
     }
@@ -23,23 +23,23 @@ const StyledNotification = styled(NoticeNotification)`
 const pushNotification = ({ id, avatar, content }) => {
   Notification.ref.push(({ doClose }) => {
     return (
-      <Notification style={{ width: 400 }} className="mx-2 my-1">
-        <Notification.Header>
+      <Dialog style={{ width: 400, boxShadow: 'var(--popover-box-shadow)' }} className="mx-2 my-1">
+        <Dialog.Header>
           Notification
-          <Notification.Closer onClick={doClose} />
-        </Notification.Header>
-        <Notification.Body>
+          <Dialog.Closer onClick={doClose} />
+        </Dialog.Header>
+        <Dialog.Body>
           <StyledNotification hasDot>
-            <NoticeNotification.BadgeAvatar
+            <Notification.Avatar
               className="mr-5"
               badge={<Photo />}
             >
               <Avatar src={avatar} size={55} />
-            </NoticeNotification.BadgeAvatar>
+            </Notification.Avatar>
             {content}
           </StyledNotification>
-        </Notification.Body>
-      </Notification>
+        </Dialog.Body>
+      </Dialog>
     )
   }, {
     id,

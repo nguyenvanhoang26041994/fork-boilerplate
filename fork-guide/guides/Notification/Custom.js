@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { NoticeNotification, Avatar } from '@fork-ui/core';
+import { Notification, Avatar } from '@fork-ui/core';
 import { Video } from '@fork-ui/icons/lazy';
 import {
   avatarLink,
@@ -9,7 +9,7 @@ import {
   avatarLink3
 } from '@fork-guide/staff';
 
-const StyledNotification = styled(NoticeNotification)`
+const StyledNotification = styled(Notification)`
   width: 400px;
   box-shadow: var(--popover-box-shadow);
 
@@ -17,7 +17,7 @@ const StyledNotification = styled(NoticeNotification)`
     background-color: var(--green-6);
   }
 
-  .fnotice-badge-avatar {
+  .fnotification-avatar {
     .fbadge-ui {
       background-color: var(--red-6);
     }
@@ -27,12 +27,12 @@ export default () => {
   return (
     <Wrapper>
       <StyledNotification hasDot>
-        <NoticeNotification.BadgeAvatar
+        <Notification.Avatar
           className="mr-5"
           badge={<Video />}
         >
           <Avatar src={avatarLink2} size={55} />
-        </NoticeNotification.BadgeAvatar>
+        </Notification.Avatar>
         <div>
           <b>Hoàng Nguyễn</b> and <b>Minh Nguyễn</b>
           <span> added to their stories. You can reply or react them.</span>

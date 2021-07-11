@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { NoticeNotification, Avatar, Notification, Button, ButtonGroup } from '@fork-ui/core';
+import { Dialog, Avatar, Notification, Button, ButtonGroup } from '@fork-ui/core';
 import { Photo, Video, User } from '@fork-ui/icons/lazy';
 import {
   avatarLink,
@@ -68,23 +68,23 @@ const pushNotification = (placement) => {
     };
 
     return (
-      <Notification style={{ width: 400 }} className="mx-2 my-1">
-        <Notification.Header>
+      <Dialog style={{ width: 400, boxShadow: 'var(--popover-box-shadow)' }} className="mx-2 my-1">
+        <Dialog.Header>
           Notification
-          <Notification.Closer onClick={doClose} />
-        </Notification.Header>
-        <Notification.Body>
-          <NoticeNotification hasDot onClick={_doClose}>
-            <NoticeNotification.BadgeAvatar
+          <Dialog.Closer onClick={doClose} />
+        </Dialog.Header>
+        <Dialog.Body>
+          <Notification hasDot onClick={_doClose}>
+            <Notification.Avatar
               className="mr-5"
               badge={icon}
             >
               <Avatar src={avatar} size={55} />
-            </NoticeNotification.BadgeAvatar>
+            </Notification.Avatar>
             {content({ doClose })}
-          </NoticeNotification>
-        </Notification.Body>
-      </Notification>
+          </Notification>
+        </Dialog.Body>
+      </Dialog>
     )
   }, {
     placement: placement,
