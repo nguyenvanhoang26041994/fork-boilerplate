@@ -12,7 +12,7 @@ import {
   Loader,
   Memo,
   Searchbox,
-  PureNotification
+  NoticeNotification
 } from '@fork-ui/core';
 import {
   Settings, Moon, ThumbUp,
@@ -33,7 +33,7 @@ import DarkMode from '@contexts/DarkMode';
 
 import { users } from './fake';
 
-const StyledNotification = styled(PureNotification)`
+const StyledNotification = styled(NoticeNotification)`
   &.--red {
     .fbadge-avatar {
       .fbadge-ui {
@@ -268,12 +268,12 @@ const App = () => {
                         hasDot={!notification.isReaded}
                         className={cn('w-full', badgeColor)}
                       >
-                        <PureNotification.BadgeAvatar
+                        <NoticeNotification.BadgeAvatar
                           className="mr-5"
                           badge={<BadgeIcon />}
                         >
                           <Avatar size={55} src={notification.meta.avatar} />
-                        </PureNotification.BadgeAvatar>
+                        </NoticeNotification.BadgeAvatar>
                         <div>
                           <b>Hoàng Nguyễn</b> and <b>Minh Nguyễn</b>
                           <span> added to their stories. You can reply or react them.</span>

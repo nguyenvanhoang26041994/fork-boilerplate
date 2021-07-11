@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { PureNotification, Avatar, AvatarGroup } from '@fork-ui/core';
+import { NoticeNotification, Avatar, AvatarGroup } from '@fork-ui/core';
 import { Bell } from '@fork-ui/icons/lazy';
 import {
   avatarLink,
@@ -31,7 +31,7 @@ const StyledAvatarGroup = styled(AvatarGroup)`
   }
 `;
 
-const StyledNotification = styled(PureNotification)`
+const StyledNotification = styled(NoticeNotification)`
   width: 400px;
   box-shadow: var(--popover-box-shadow);
 
@@ -49,7 +49,7 @@ export default () => {
   return (
     <Wrapper>
       <StyledNotification hasDot>
-        <PureNotification.BadgeAvatar
+        <NoticeNotification.BadgeAvatar
           className="mr-5"
           badge={<Bell />}
         >
@@ -57,7 +57,7 @@ export default () => {
             <Avatar src={avatarLink} size={40} />
             <Avatar src={avatarLink2} size={40} />
           </StyledAvatarGroup>
-        </PureNotification.BadgeAvatar>
+        </NoticeNotification.BadgeAvatar>
         <div>
           <b>Hoàng Nguyễn</b> and <b>Minh Nguyễn</b>
           <span> added to their stories. You can reply or react them.</span>

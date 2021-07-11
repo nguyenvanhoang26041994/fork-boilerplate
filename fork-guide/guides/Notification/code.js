@@ -2,7 +2,7 @@ export const Custom = {
   code: `import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { PureNotification, Avatar } from '@fork-ui/core';
+import { NoticeNotification, Avatar } from '@fork-ui/core';
 import { Video } from '@fork-ui/icons/lazy';
 import {
   avatarLink,
@@ -10,7 +10,7 @@ import {
   avatarLink3
 } from '@fork-guide/staff';
 
-const StyledNotification = styled(PureNotification)\`
+const StyledNotification = styled(NoticeNotification)\`
   width: 400px;
   box-shadow: var(--popover-box-shadow);
 
@@ -28,12 +28,12 @@ export default () => {
   return (
     <Wrapper>
       <StyledNotification hasDot>
-        <PureNotification.BadgeAvatar
+        <NoticeNotification.BadgeAvatar
           className="mr-5"
           badge={<Video />}
         >
           <Avatar src={avatarLink2} size={55} />
-        </PureNotification.BadgeAvatar>
+        </NoticeNotification.BadgeAvatar>
         <div>
           <b>Hoàng Nguyễn</b> and <b>Minh Nguyễn</b>
           <span> added to their stories. You can reply or react them.</span>
@@ -51,7 +51,7 @@ export default () => {
 export const Notification = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { PureNotification, Avatar, Notification } from '@fork-ui/core';
+import { NoticeNotification, Avatar, Notification } from '@fork-ui/core';
 import { Photo } from '@fork-ui/icons/lazy';
 import {
   avatarLink,
@@ -68,20 +68,20 @@ export default () => {
           <Notification.Closer />
         </Notification.Header>
         <Notification.Body>
-          <PureNotification hasDot>
-            <PureNotification.BadgeAvatar
+          <NoticeNotification hasDot>
+            <NoticeNotification.BadgeAvatar
               className="mr-5"
               badge={<Photo />}
             >
               <Avatar src={avatarLink} size={55} />
-            </PureNotification.BadgeAvatar>
+            </NoticeNotification.BadgeAvatar>
             <div>
               <b>Hoàng Nguyễn</b> and <b>Minh Nguyễn</b>
               <span> added to their stories. You can reply or react them.</span>
               <br />
               <small>5 hours ago</small>
             </div>
-          </PureNotification>
+          </NoticeNotification>
         </Notification.Body>
       </Notification>
     </Wrapper>
@@ -94,7 +94,7 @@ export default () => {
 export const PushNotification = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { PureNotification, Avatar, Notification, Button } from '@fork-ui/core';
+import { NoticeNotification, Avatar, Notification, Button } from '@fork-ui/core';
 import { Photo, Video, User } from '@fork-ui/icons/lazy';
 import {
   avatarLink,
@@ -168,15 +168,15 @@ const pushNotification = () => {
           <Notification.Closer onClick={doClose} />
         </Notification.Header>
         <Notification.Body>
-          <PureNotification hasDot onClick={_doClose}>
-            <PureNotification.BadgeAvatar
+          <NoticeNotification hasDot onClick={_doClose}>
+            <NoticeNotification.BadgeAvatar
               className="mr-5"
               badge={icon}
             >
               <Avatar src={avatar} size={55} />
-            </PureNotification.BadgeAvatar>
+            </NoticeNotification.BadgeAvatar>
             {content({ doClose })}
-          </PureNotification>
+          </NoticeNotification>
         </Notification.Body>
       </Notification>
     )
@@ -201,7 +201,7 @@ export const WithAvatarGroup = {
   code: `import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { PureNotification, Avatar, AvatarGroup } from '@fork-ui/core';
+import { NoticeNotification, Avatar, AvatarGroup } from '@fork-ui/core';
 import { Bell } from '@fork-ui/icons/lazy';
 import {
   avatarLink,
@@ -231,7 +231,7 @@ const StyledAvatarGroup = styled(AvatarGroup)\`
   }
 \`;
 
-const StyledNotification = styled(PureNotification)\`
+const StyledNotification = styled(NoticeNotification)\`
   width: 400px;
   box-shadow: var(--popover-box-shadow);
 
@@ -249,7 +249,7 @@ export default () => {
   return (
     <Wrapper>
       <StyledNotification hasDot>
-        <PureNotification.BadgeAvatar
+        <NoticeNotification.BadgeAvatar
           className="mr-5"
           badge={<Bell />}
         >
@@ -257,7 +257,7 @@ export default () => {
             <Avatar src={avatarLink} size={40} />
             <Avatar src={avatarLink2} size={40} />
           </StyledAvatarGroup>
-        </PureNotification.BadgeAvatar>
+        </NoticeNotification.BadgeAvatar>
         <div>
           <b>Hoàng Nguyễn</b> and <b>Minh Nguyễn</b>
           <span> added to their stories. You can reply or react them.</span>

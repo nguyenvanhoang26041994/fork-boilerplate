@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { PureNotification, Avatar, Notification, Button } from '@fork-ui/core';
+import { NoticeNotification, Avatar, Notification, Button, ButtonGroup } from '@fork-ui/core';
 import { Photo, Video, User } from '@fork-ui/icons/lazy';
 import {
   avatarLink,
@@ -57,7 +57,7 @@ const randomNoti = () => {
   const max = notifications.length - 1;
   return notifications[Math.floor(Math.random() * (max - min + 1)) + min];
 };
-const pushNotification = () => {
+const pushNotification = (placement) => {
   const { content, icon, avatar, isLockBodyClick } = randomNoti();
 
   Notification.push(({ doClose }) => {
@@ -68,34 +68,41 @@ const pushNotification = () => {
     };
 
     return (
-      <Notification style={{ width: 400 }} className="ml-2 mb-2">
+      <Notification style={{ width: 400 }} className="ml-2 my-1">
         <Notification.Header>
           Notification
           <Notification.Closer onClick={doClose} />
         </Notification.Header>
         <Notification.Body>
-          <PureNotification hasDot onClick={_doClose}>
-            <PureNotification.BadgeAvatar
+          <NoticeNotification hasDot onClick={_doClose}>
+            <NoticeNotification.BadgeAvatar
               className="mr-5"
               badge={icon}
             >
               <Avatar src={avatar} size={55} />
-            </PureNotification.BadgeAvatar>
+            </NoticeNotification.BadgeAvatar>
             {content({ doClose })}
-          </PureNotification>
+          </NoticeNotification>
         </Notification.Body>
       </Notification>
     )
+  }, {
+    autoClose: false,
+    placement: placement,
   });
 };
 
 const closeAll = () => Notification.closeAll();
-
 export default () => {
   return (
     <Wrapper>
-      <Button color="primary" onClick={pushNotification}>Click Me</Button>
+      <Button color="primary" onClick={() => pushNotification('bottom-left')}>Click Me</Button>
       <Button onClick={closeAll}>Close All</Button>
+      <ButtonGroup>
+        <Button onClick={() => pushNotification('bottom-right')}>Bottom Right</Button>
+        <Button onClick={() => pushNotification('top-left')}>Top Left</Button>
+        <Button onClick={() => pushNotification('top-right')}>Top Right</Button>
+      </ButtonGroup>
     </Wrapper>
   );
 };
