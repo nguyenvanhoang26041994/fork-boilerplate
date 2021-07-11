@@ -20,7 +20,7 @@ const StyledNotification = styled(NoticeNotification)`
     }
   }
 `;
-const pushNotification = ({ avatar, content }) => {
+const pushNotification = ({ id, avatar, content }) => {
   Notification.ref.push(({ doClose }) => {
     return (
       <Notification style={{ width: 400 }} className="mx-2 my-1">
@@ -42,12 +42,13 @@ const pushNotification = ({ avatar, content }) => {
       </Notification>
     )
   }, {
-    id: 'id001',
+    id,
   });
 };
 
 const notifications = [
   {
+    id: 'id001',
     avatar: avatarLink,
     content: (
       <div style={{ color: 'var(--heading-color)' }}>
@@ -59,6 +60,7 @@ const notifications = [
     ),
   },
   {
+    id: 'id001',
     avatar: avatarLink2,
     content: (
       <div style={{ color: 'var(--heading-color)' }}>
@@ -70,6 +72,7 @@ const notifications = [
     ),
   },
   {
+    id: 'id001',
     avatar: avatarLink3,
     content: (
       <div style={{ color: 'var(--heading-color)' }}>
@@ -96,6 +99,7 @@ export default () => {
   return (
     <Wrapper>
       <Button color="primary" onClick={_pushNotification}>Push notification</Button>
+      <Button onClick={() => Notification.ref.closeById('id001')}>Close</Button>
     </Wrapper>
   );
 };
