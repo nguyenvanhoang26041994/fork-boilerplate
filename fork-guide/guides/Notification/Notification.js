@@ -10,8 +10,8 @@ import {
 
 export default () => {
   return (
-    <Wrapper>
-      <Dialog style={{ width: 400, boxShadow: 'var(--popover-box-shadow)' }}>
+    <Wrapper col span="20px">
+      <Dialog style={{ boxShadow: 'var(--popover-box-shadow)' }}>
         <Dialog.Header>
           Notification
           <Dialog.Closer />
@@ -33,6 +33,20 @@ export default () => {
           </Notification>
         </Dialog.Body>
       </Dialog>
+      <Notification hasDot>
+        <Notification.Avatar
+          className="mr-5"
+          badge={<Photo />}
+        >
+          <Avatar src={avatarLink} size={55} />
+        </Notification.Avatar>
+        <div>
+          <b>Hoàng Nguyễn</b> and <b>Minh Nguyễn</b>
+          <span> added to their stories. You can reply or react them.</span>
+          <br />
+          <small>5 hours ago</small>
+        </div>
+      </Notification>
     </Wrapper>
   );
 };

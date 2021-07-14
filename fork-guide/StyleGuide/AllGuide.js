@@ -136,9 +136,21 @@ const AllGuide = () => {
         </Flex>
       </Flex>
       <Flex row w="full" style={{ paddingBottom: '1px' }}>
-        <Flex w="1/3" style={{ paddingRight: '1px' }}>
+        <Flex w="1/2" style={{ paddingRight: '1px' }}>
           <Demo name="Popover">
             <PopoverMainGuide />
+          </Demo>
+        </Flex>
+        <Flex w="1/2">
+          <Demo name="Confirm">
+            <ConfirmMainGuide />
+          </Demo>
+        </Flex>
+      </Flex>
+      <Flex row w="full" style={{ paddingBottom: '1px' }}>
+        <Flex w="1/3" style={{ paddingRight: '1px' }}>
+          <Demo name="Alert">
+            <AlertMainGuide />
           </Demo>
         </Flex>
         <Flex w="1/3" style={{ paddingRight: '1px' }}>
@@ -147,9 +159,7 @@ const AllGuide = () => {
           </Demo>
         </Flex>
         <Flex w="1/3">
-          <Demo name="Confirm">
-            <ConfirmMainGuide />
-          </Demo>
+
         </Flex>
       </Flex>
     </Flex>

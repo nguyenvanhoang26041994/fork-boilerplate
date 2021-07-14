@@ -1,11 +1,31 @@
 export const Alert = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Flex, Skeleton } from '@fork-ui/core';
+import { Alert, Loader } from '@fork-ui/core';
+import { Trash, Check } from '@fork-ui/icons/lazy';
 
 export default () => {
   return (
     <Wrapper col span="20px">
+      <Alert closable={false}>
+        Just simle infomation for you!
+        <span className="falert-closer" style={{ height: 32 }}>
+          <Loader.Spinner />
+        </span>
+      </Alert>
+      <Alert color="danger">
+        Something went wrong!
+      </Alert>
+      <Alert color="warning" closable={false}>
+        Just wanna warning you!
+        <Alert.Closer icon={<Trash />} />
+      </Alert>
+      <Alert color="success" closable={false}>
+        You data save success!
+        <span className="falert-closer" style={{ height: 32 }}>
+          <Check color="var(--green-6)" />
+        </span>
+      </Alert>
     </Wrapper>
   );
 };
@@ -13,17 +33,37 @@ export default () => {
   demoName: 'Alert',
 }
 
-export const HeaderAlert = {
+export const PushAlert = {
   code: `import React from 'react';
-import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
+import { Alert, Button, ButtonGroup } from '@fork-ui/core';
+
+const pushAlert = (placement) => {
+  Alert.ref.push(({ doClose }) => {
+    return (
+      <Alert className="mx-2 my-1" onClose={doClose}>Just simle infomation for you!</Alert>
+    );
+  }, {
+    placement,
+  })
+};
+
 export default () => {
   return (
     <Wrapper>
+      <Button color="primary" onClick={() => pushAlert('top-center')}>Click Me</Button>
+      <Button onClick={Alert.ref.closeAll}>Close All</Button>
+      <ButtonGroup>
+        <Button onClick={() => pushAlert('bottom-right')}>Bottom Right</Button>
+        <Button onClick={() => pushAlert('top-left')}>Top Left</Button>
+        <Button onClick={() => pushAlert('top-right')}>Top Right</Button>
+        <Button onClick={() => pushAlert('bottom-center')}>Bottom Center</Button>
+        <Button onClick={() => pushAlert('bottom-left')}>Bottom Left</Button>
+      </ButtonGroup>
     </Wrapper>
   );
 };
 `,
-  demoName: 'Header Alert',
+  demoName: 'Push Alert',
 }
 
