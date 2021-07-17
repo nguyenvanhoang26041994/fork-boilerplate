@@ -1,87 +1,3 @@
-export const AsyncSelect = {
-  code: `import React, { useState, useCallback, useRef, useImperativeHandle, useEffect } from 'react';
-import { Select } from '@fork-ui/core';
-import { find } from 'lodash';
-
-const listOption = [
-  {
-    key: 'vn',
-    name: 'Vietname',
-    currency: 'VND'
-  },
-  {
-    key: 'us',
-    name: 'United State',
-    currency: 'USD'
-  },
-  {
-    key: 'uk',
-    name: 'United Kingdom',
-    currency: 'GBP'
-  }
-];
-
-const AsyncSelect = React.forwardRef(({
-  defaultValueKey
-}, _ref) => {
-  const [selected, setSelected] = useState(null);
-  const onSelect = useCallback(option => setSelected(option), [setSelected]);
-
-  useEffect(() => {
-    setSelected();
-  }, []);
-
-  const onBottomIntersected = useCallback(() => {
-
-  }, []);
-
-  return (
-    <Select
-      overlay={(
-        <Select.Overlay>
-          <Select.OverlayBody onBottomIntersected={onBottomIntersected}>
-            {options.map((option) => (
-              <Select.Option
-                value={option}
-                disabled={option.disabled}
-                active={option.key === selected.key}
-                onSelect={onSelect}
-              >
-                {option.name} - {option.currency}
-              </Select.Option>
-            ))}
-          </Select.OverlayBody>
-        </Select.Overlay>
-      )}
-    >
-      {render(selected)}
-    </Select>
-  );
-});
-
-export default () => {
-  const { page, pageSize, setPage } = AsyncSelect.useSelect();
-
-  return (
-    <AsyncSelect
-      defaultSelected={({ setSelected }) => getSelected(defaultValue).then((selected) => {
-        setSelected(selected);
-      })}
-      options={({ searchTerm, pushOptions }) => callApi({
-        searchTerm,
-        page: page,
-        pageSize: pageSize
-      }).then((options) => {
-        pushOptions(options);
-        setPage(prev => prev + 1);
-      })}
-    />
-  );
-};
-`,
-  demoName: 'Async Select',
-}
-
 export const ControlledSelect = {
   code: `import React, { useState } from 'react';
 import { Wrapper } from '@fork-guide/components';
@@ -134,26 +50,86 @@ export default () => {
   demoName: 'Controlled Select',
 }
 
-export const ReadonlySelect = {
+export const Custom = {
   code: `import React from 'react';
-import { Wrapper } from '@fork-guide/components';
-import { Select } from '@fork-ui/core';
-import { User } from '@fork-ui/icons/lazy';
+import styled from 'styled-components';
+import { Avatar, Badge } from '@fork-ui/core';
+import { Select } from '@fork-ui/select';
+import {
+  avatarLink,
+  avatarLink2,
+  avatarLink3
+} from '@fork-guide/staff';
+const options = [
+  {
+    id: 'hoang-nguyen',
+    name: 'Hoang Nguyen',
+    jobTitle: 'Frontend Developer',
+    color: 'var(--primary)',
+    avatar: avatarLink,
+  },
+  {
+    id: 'son-le',
+    name: 'Son Le',
+    jobTitle: 'Fullstack Developer',
+    color: 'var(--red-6)',
+    avatar: avatarLink2,
+  },
+  {
+    id: 'son-nguyen',
+    name: 'Son Nguyen',
+    jobTitle: 'Mobile Developer',
+    color: 'var(--green-6)',
+    avatar: avatarLink3,
+  },
+  {
+    id: 'alex-jonhson',
+    name: 'Alex Jonhson',
+    jobTitle: 'UI/UX Designer',
+    color: 'var(--green-6)',
+    avatar: avatarLink,
+  },
+];
 
+const StyledOption = styled(Select.Option)\`
+  padding-top: 8px;
+  padding-bottom: 8px;
+\`;
 export default () => {
   return (
-    <Wrapper>
-      <Select>Vietnam - VND</Select>
-      <Select>
-        <User className="mr-2" />
-        <span>United State - USD</span>
-      </Select>
-    </Wrapper>
-
+    <Select
+      defaultValue="hoang-nguyen"
+      render={(props, selectedOption) => (
+        <Select.Single {...props}>
+          <Badge.Dot overlap placement="bottom-end" color={selectedOption.data.color}>
+            <Avatar size={24} src={selectedOption.data.avatar} />
+          </Badge.Dot>
+          <div className="flex flex-col items-start ml-3">
+            <b>{selectedOption.data.name} - {selectedOption.data.jobTitle}</b>
+          </div>
+        </Select.Single>
+      )}
+    >
+      {options.map((option) => (
+        <StyledOption
+          key={option.id}
+          value={option.id}
+          data={option}
+        >
+          <Badge.Dot overlap placement="bottom-end" color={option.color}>
+            <Avatar src={option.avatar} />
+          </Badge.Dot>
+          <div className="flex flex-col items-start ml-3">
+            <b>{option.name}</b>
+            <i>{option.jobTitle}</i>
+          </div>
+        </StyledOption>
+      ))}
+    </Select>
   );
 };
 `,
-  demoName: 'Readonly Select',
+  demoName: 'Custom',
 }
 
 export const Select = {
