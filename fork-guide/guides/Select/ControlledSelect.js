@@ -26,9 +26,11 @@ const options = [
 ];
 
 export default () => {
-  // UnControlled Select Component by using defaultSelected
+  const [selectedOption, setSelectedOption] = useState(() => Select.getDefaultSelected('us', options));
+
+  // Controlled Select Component by using selectedOption and setSelectedOption
   return (
-    <Select defaultSelected={() => Select.getDefaultSelected('us', options)}>
+    <Select selectedOption={selectedOption} setSelectedOption={setSelectedOption}>
       {options.map((option) => (
         <Select.Option
           key={option.key}

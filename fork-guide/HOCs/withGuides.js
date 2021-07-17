@@ -46,6 +46,12 @@ const DemoDetailBox = ({ code }) => {
   );
 };
 
+const mode = {
+  normal: {
+    left: '6/12',
+    right: '6/12',
+  }
+};
 export default (demos, allCode) => () => {
   const [selectedName, setSelectedName] = useState(demos[0].name);
   const onViewCodeClick = useCallback((name) => {
@@ -54,7 +60,7 @@ export default (demos, allCode) => () => {
 
   return (
     <Wrapper wrap>
-      <DemoBoxList col w="1/2" style={{ paddingRight: '2px' }}>
+      <DemoBoxList col w={mode.normal.left} style={{ paddingRight: '2px' }}>
         {demos.map((Demo) => (
           <DemoBox
             name={allCode[Demo.name].demoName}
@@ -66,7 +72,7 @@ export default (demos, allCode) => () => {
           </DemoBox>
         ))}
       </DemoBoxList>
-      <Flex col w="1/2" style={{ backgroundColor: 'var(--bg)' }}>
+      <Flex col w={mode.normal.right} style={{ backgroundColor: 'var(--bg)' }}>
         <Sticky stickyClass="__demo-detail-box--stucked" className="__demo-detail-box">
           <DemoDetailBox code={allCode[selectedName].code} />
         </Sticky>

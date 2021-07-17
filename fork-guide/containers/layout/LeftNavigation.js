@@ -325,6 +325,12 @@ const LeftNavigation = ({ minimal }) => {
             </div>
             <div className="__name">Drawer</div>
           </MenuItemEnhander>
+          <MenuItemEnhander path={`${path}/select`}>
+            <div className="__avatar">
+              <ArrowRightCircle />
+            </div>
+            <div className="__name">Select</div>
+          </MenuItemEnhander>
         </MenuWrapper>
       </Wrapper>
     </Container>
