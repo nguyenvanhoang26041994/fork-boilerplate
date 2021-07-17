@@ -1,53 +1,43 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Select } from '@fork-ui/select';
-import { find } from 'lodash';
 
 const options = [
   {
     key: 'vn',
-    name: 'Vietname',
+    text: 'Vietnam',
     currency: 'VND'
   },
   {
     key: 'us',
-    name: 'United State',
+    text: 'United State',
     currency: 'USD'
   },
   {
     key: 'uk',
-    name: 'United Kingdom',
+    text: 'United Kingdom',
     currency: 'GBP'
   },
 ];
 
 export default () => {
-  const [selectedOption, setSelectedOption] = useState(() => Select.getDefaultSelected('us', options));
-
-  // Controlled Select Component by using selectedOption and setSelectedOption
+  const [value, setValue] = useState('us');
   return (
-    <Wrapper span="10px">
+    <Wrapper span="20px">
       <div className="w-1/2">
-        <Select selectedOption={selectedOption} setSelectedOption={setSelectedOption}>
+        <Select value={value} setValue={setValue}>
           {options.map((option) => (
-            <Select.Option
-              key={option.key}
-              value={option}
-              disabled={option.key === 'disabled' }
-            >
-              {option.name}
+            <Select.Option key={option.key} value={option.key}>
+              {option.text}
             </Select.Option>
           ))}
         </Select>
       </div>
       <div className="w-1/2">
-        <Select selectedOption={selectedOption} setSelectedOption={setSelectedOption}>
+        <Select value={value} setValue={setValue}>
           {options.map((option) => (
-            <Select.Option
-              key={option.key}
-              value={option}
-            >
-              {option.name}
+            <Select.Option key={option.key} value={option.key}>
+              {option.text}
             </Select.Option>
           ))}
         </Select>

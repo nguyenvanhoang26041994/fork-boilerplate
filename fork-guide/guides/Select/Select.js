@@ -1,35 +1,30 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 import { Select } from '@fork-ui/select';
-import { find } from 'lodash';
 
 const options = [
   {
     key: 'vn',
-    name: 'Vietname',
+    text: 'Vietnam',
     currency: 'VND'
   },
   {
     key: 'us',
-    name: 'United State',
+    text: 'United State',
     currency: 'USD'
   },
   {
     key: 'uk',
-    name: 'United Kingdom',
+    text: 'United Kingdom',
     currency: 'GBP'
   },
 ];
 
 export default () => {
-  // UnControlled Select Component by using defaultSelected
   return (
-    <Select defaultSelected={() => Select.getDefaultSelected('us', options)}>
+    <Select defaultValue="us">
       {options.map((option) => (
-        <Select.Option
-          key={option.key}
-          value={option}
-        >
-          {option.name}
+        <Select.Option key={option.key} value={option.key}>
+          {option.text}
         </Select.Option>
       ))}
     </Select>
