@@ -18,11 +18,6 @@ const options = [
     name: 'United Kingdom',
     currency: 'GBP'
   },
-  {
-    key: 'disabled',
-    name: 'Disabled Option',
-    currency: 'Unknown'
-  }
 ];
 
 export default () => {
@@ -33,7 +28,6 @@ export default () => {
         <Select.Option
           key={option.key}
           value={option}
-          disabled={option.key === 'disabled' }
         >
           {option.name}
         </Select.Option>

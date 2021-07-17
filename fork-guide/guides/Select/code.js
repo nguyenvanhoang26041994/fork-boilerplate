@@ -84,6 +84,7 @@ export default () => {
 
 export const ControlledSelect = {
   code: `import React, { useCallback, useState } from 'react';
+import { Wrapper } from '@fork-guide/components';
 import { Select } from '@fork-ui/select';
 import { find } from 'lodash';
 
@@ -103,11 +104,6 @@ const options = [
     name: 'United Kingdom',
     currency: 'GBP'
   },
-  {
-    key: 'disabled',
-    name: 'Disabled Option',
-    currency: 'Unknown'
-  }
 ];
 
 export default () => {
@@ -115,17 +111,33 @@ export default () => {
 
   // Controlled Select Component by using selectedOption and setSelectedOption
   return (
-    <Select selectedOption={selectedOption} setSelectedOption={setSelectedOption}>
-      {options.map((option) => (
-        <Select.Option
-          key={option.key}
-          value={option}
-          disabled={option.key === 'disabled' }
-        >
-          {option.name}
-        </Select.Option>
-      ))}
-    </Select>
+    <Wrapper span="10px">
+      <div className="w-1/2">
+        <Select selectedOption={selectedOption} setSelectedOption={setSelectedOption}>
+          {options.map((option) => (
+            <Select.Option
+              key={option.key}
+              value={option}
+              disabled={option.key === 'disabled' }
+            >
+              {option.name}
+            </Select.Option>
+          ))}
+        </Select>
+      </div>
+      <div className="w-1/2">
+        <Select selectedOption={selectedOption} setSelectedOption={setSelectedOption}>
+          {options.map((option) => (
+            <Select.Option
+              key={option.key}
+              value={option}
+            >
+              {option.name}
+            </Select.Option>
+          ))}
+        </Select>
+      </div>
+    </Wrapper>
   );
 };
 `,
@@ -175,11 +187,6 @@ const options = [
     name: 'United Kingdom',
     currency: 'GBP'
   },
-  {
-    key: 'disabled',
-    name: 'Disabled Option',
-    currency: 'Unknown'
-  }
 ];
 
 export default () => {
@@ -190,7 +197,6 @@ export default () => {
         <Select.Option
           key={option.key}
           value={option}
-          disabled={option.key === 'disabled' }
         >
           {option.name}
         </Select.Option>
