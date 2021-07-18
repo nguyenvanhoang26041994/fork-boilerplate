@@ -283,3 +283,8 @@ export default () => {
   demoName: 'Select',
 }
 
+
+export const AsyncSelect = {
+  code: ``,
+  demoName: 'Async Select',
+}

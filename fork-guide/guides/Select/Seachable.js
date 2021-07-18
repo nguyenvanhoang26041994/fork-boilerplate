@@ -77,11 +77,11 @@ export default () => {
           renderSearchbox={(props) => (
             <Select.Searchbox
               {...props}
-              placeholder="Type your user name..."
+              placeholder="Type to search..."
             />
           )}
           optionFilter={(props, { searchRegex }) => {
-            return searchRegex && searchRegex.test(props.data.name);
+            return searchRegex.test(props.data.name) || searchRegex.test(props.data.jobTitle);
           }}
         >
           {options.map((option) => (
