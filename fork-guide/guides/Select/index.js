@@ -5,6 +5,7 @@ import ControlledSelect from './ControlledSelect';
 import Custom from './Custom';
 import Seachable from './Seachable';
 import AsyncSelect from './AsyncSelect';
+import CustomAsyncSelect from './CustomAsyncSelect';
 // __INJECTED_LINE__
 
 import * as allCode from './code';
@@ -15,6 +16,7 @@ const demos = [
   { Component: Seachable, name: 'Seachable' },
   { Component: ControlledSelect, name: 'ControlledSelect' },
   { Component: AsyncSelect, name: 'AsyncSelect' },
+  { Component: CustomAsyncSelect, name: 'CustomAsyncSelect' },
   // __INJECTED_ITEM__
 ];
 

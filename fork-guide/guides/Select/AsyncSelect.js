@@ -1,55 +1,14 @@
 import React, { useRef, useCallback } from 'react';
-import { find } from 'lodash';
 import { AsyncSelect } from '@fork-ui/select';
-
-import {
-  avatarLink,
-  avatarLink2,
-  avatarLink3
-} from '@fork-guide/staff';
-const fakeOptions = [
-  {
-    id: 'hoang-nguyen',
-    name: 'Hoang Nguyen',
-    jobTitle: 'Frontend Developer',
-    color: 'var(--primary)',
-    avatar: avatarLink,
-  },
-  {
-    id: 'son-le',
-    name: 'Son Le',
-    jobTitle: 'Fullstack Developer',
-    color: 'var(--red-6)',
-    avatar: avatarLink2,
-  },
-  {
-    id: 'son-nguyen',
-    name: 'Son Nguyen',
-    jobTitle: 'Mobile Developer',
-    color: 'var(--green-6)',
-    avatar: avatarLink3,
-  },
-  {
-    id: 'alex-jonhson',
-    name: 'Alex Jonhson',
-    jobTitle: 'UI/UX Designer',
-    color: 'var(--green-6)',
-    avatar: avatarLink,
-  },
-];
 
 const FakeAPI = {
   getOption: (id) => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(find(fakeOptions, { id }));
-      }, 2000);
-    });
+    return window.fetch(`https://60f431423cb0870017a8a15f.mockapi.io/api/users/${id}`)
+      .then(response => response.json());
   },
   getOptions: ({ page = 1, pageSize = 10, searchText = '' }) => {
-    return new Promise((resolve, reject) => {
-      resolve(fakeOptions);
-    });
+    return window.fetch('https://60f431423cb0870017a8a15f.mockapi.io/api/users')
+      .then(response => response.json());
   },
 };
 
@@ -80,9 +39,10 @@ export default () => {
 
   return (
     <AsyncSelect
-      defaultValue="alex-jonhson"
+      defaultValue="4"
       ref={ref}
       onChanged={onChanged}
+      renderSearchbox
       getSelectedOption={getSelectedOption}
       getOptions={getOptions}
     >
