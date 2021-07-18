@@ -34,7 +34,10 @@ export default () => {
         </Select>
       </div>
       <div className="w-1/2">
-        <Select value={value} setValue={setValue}>
+        <Select
+          value={value}
+          setValue={setValue}
+        >
           {options.map((option) => (
             <Select.Option key={option.key} value={option.key}>
               {option.text}

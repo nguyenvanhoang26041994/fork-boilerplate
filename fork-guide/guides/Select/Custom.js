@@ -68,7 +68,7 @@ export default () => {
           </Badge.Dot>
           <div className="flex flex-col items-start ml-3">
             <b>{option.name}</b>
-            <i>{option.jobTitle}</i>
+            <small>{option.jobTitle}</small>
           </div>
         </StyledOption>
       ))}
