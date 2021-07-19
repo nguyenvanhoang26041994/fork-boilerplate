@@ -7,6 +7,9 @@ import DemoBox from '@fork-guide/components/DemoBox';
 import SyntaxHighlighter from '@fork-guide/components/SyntaxHighlighter';
 
 const DemoBoxList = styled(Flex)`
+  max-height: calc(100vh - 72px);
+  overflow-y: scroll;
+
   > * {
     margin-bottom: 2px;
   }
@@ -14,12 +17,16 @@ const DemoBoxList = styled(Flex)`
 
 const DemoDetailBoxWrapper = styled.div`
   position: relative;
-  .__float-actions {
+  max-height: calc(100vh - 72px);
+  overflow-y: scroll;
+
+  .__actions {
     position: absolute;
-    right: 0;
     left: auto;
+    right: 0;
     top: 0;
     margin: 8px;
+    z-index: 1;
   }
 `;
 
@@ -32,15 +39,9 @@ const DemoDetailBox = ({ code }) => {
   }, [code]);
   return (
     <DemoDetailBoxWrapper>
-      {/* <div className="__float-actions">
-        <Button rounded icon={<Copy />} onClick={onClick} />
-      </div> */}
-      {/* <div className="__tabs">
-        <ButtonGroup>
-          <Button>Prop Types</Button>
-          <Button>Code</Button>
-        </ButtonGroup>
-      </div> */}
+      <div className="__actions">
+        <Button icon={<Copy />} onClick={onClick} />
+      </div>
       <SyntaxHighlighter code={code} />
     </DemoDetailBoxWrapper>
   );
@@ -73,9 +74,7 @@ export default (demos, allCode) => () => {
         ))}
       </DemoBoxList>
       <Flex col w={mode.normal.right} style={{ backgroundColor: 'var(--bg)' }}>
-        <Sticky stickyClass="__demo-detail-box--stucked" className="__demo-detail-box">
-          <DemoDetailBox code={allCode[selectedName].code} />
-        </Sticky>
+        <DemoDetailBox code={allCode[selectedName].code} />
       </Flex>
     </Wrapper>
   );

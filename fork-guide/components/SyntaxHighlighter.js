@@ -7,18 +7,20 @@ import DarkMode from '@contexts/DarkMode';
 
 const SyntaxHighlighterStyled = styled.div`
   width: 100%;
-  max-height: 100vh;
-  overflow-y: scroll;
   background-color: var(--bg);
 
   > pre {
     margin: 0 !important;
     border-radius: 0 !important;
     background-color: transparent !important;
-    padding: 1em !important;
+    padding: 0 !important;
     .token,
     .token.arrow {
       background-color: transparent !important;
+    }
+
+    > code {
+      padding: 0 !important;
     }
   }
 `;
@@ -37,7 +39,6 @@ const SyntaxHighlighter = ({ code, className, style }) => {
 
   return (
     <Wrapper>
-      {/* <ConfigPropsTool /> */}
       <SyntaxHighlighterStyled className={className} style={style}>
         <Prism language="jsx" style={isDark ? okaidia : coy} wrapLongLines showLineNumbers>
           {code}

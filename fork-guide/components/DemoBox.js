@@ -7,7 +7,7 @@ import { Braces } from '@fork-ui/icons/lazy';
 const DemoBoxWrapper = styled.div`
   width: 100%;
   background-color: var(--bg);
-  border-right: 2px solid transparent;
+  border-left: 3px solid transparent;
 
   .show-when-codebox-hover {
     opacity: 0;
@@ -22,6 +22,10 @@ const DemoBoxWrapper = styled.div`
 
   &.--is-active {
     border-color: var(--primary);
+
+    .__name {
+      color: var(--primary);
+    }
   }
 `;
 
@@ -42,7 +46,7 @@ const DemoBox = ({ children, name, isActive, onViewCodeClick }) => {
   return (
     <DemoBoxWrapper className={cn({ '--is-active': isActive })}>
       <DemoBoxHeader>
-        {name}
+        <span className="__name">{name}</span>
         <Button
           className="show-when-codebox-hover"
           rounded
