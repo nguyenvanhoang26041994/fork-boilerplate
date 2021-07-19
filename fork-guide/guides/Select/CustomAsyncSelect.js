@@ -23,31 +23,25 @@ export default () => {
     pageSize: 20,
     isHasNext: true,
   });
-  const getSelectedOption = useCallback(({ selectedValue, getSelectedOptionRequest, getSelectedOptionSuccess, getSelectedOptionFailure }) => {
-    getSelectedOptionRequest();
-    FakeAPI.getOption(selectedValue).then((option) => {
-      getSelectedOptionSuccess(option);
-    }).catch(() => {
-      getSelectedOptionFailure();
-    });
+
+  const getSelectedOption = useCallback(({ selectedValue }) => {
+    return FakeAPI.getOption(selectedValue);
   }, []);
 
-  const getOptions = useCallback(({ searchText, getOptionsRequest, getOptionsSuccess, getOptionsFailure }) => {
+  const getOptions = useCallback(({ searchText }) => {
     pagingRef.current.page = 1;
-    getOptionsRequest();
-    FakeAPI.getOptions({
+    return FakeAPI.getOptions({
       searchText,
       page: pagingRef.current.page,
       pageSize: pagingRef.current.pageSize,
     }).then((options) => {
-      getOptionsSuccess(options);
       if (options.length < pagingRef.current.pageSize) {
         pagingRef.current.isHasNext = false;
       } else {
         pagingRef.current.isHasNext = true;
       }
-    }).catch(() => {
-      getOptionsFailure();
+
+      return options;
     });
   }, []);
 
