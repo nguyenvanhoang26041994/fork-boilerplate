@@ -7,35 +7,24 @@ const FakeAPI = {
     return window.fetch(\`https://60f431423cb0870017a8a15f.mockapi.io/api/users/\${id}\`)
       .then(response => response.json());
   },
-  getOptions: ({ page = 1, pageSize = 10, searchText = '' }) => {
-    return window.fetch('https://60f431423cb0870017a8a15f.mockapi.io/api/users')
+  getOptions: ({ page = 1, pageSize = 50, searchText = '' }) => {
+    return window.fetch(\`https://60f431423cb0870017a8a15f.mockapi.io/api/users?page=\${page}&limit=\${pageSize}&name=\${searchText}\`)
       .then(response => response.json());
   },
 };
 
 export default () => {
   const ref = useRef();
-  const onChanged = () => {
-    console.log(ref.current, ref.current.value);
+  const onChanged = (selectedOption) => {
+    console.log('AsyncSelect.onChanged', selectedOption, ref.current);
   };
 
-  const getSelectedOption = useCallback(({ selectedValue, getSelectedOptionRequest, getSelectedOptionSuccess, getSelectedOptionFailure }) => {
-    getSelectedOptionRequest();
-    FakeAPI.getOption(selectedValue).then((option) => {
-      console.log(option);
-      getSelectedOptionSuccess(option);
-    }).catch(() => {
-      getSelectedOptionFailure();
-    });
+  const getSelectedOption = useCallback(({ selectedValue }) => {
+    return FakeAPI.getOption(selectedValue);
   }, []);
 
-  const getOptions = useCallback(({ searchText, getOptionsRequest, getOptionsSuccess, getOptionsFailure }) => {
-    getOptionsRequest();
-    FakeAPI.getOptions({ searchText }).then((options) => {
-      getOptionsSuccess(options);
-    }).catch(() => {
-      getOptionsFailure();
-    });
+  const getOptions = useCallback(({ searchText }) => {
+    return FakeAPI.getOptions({ searchText });
   }, []);
 
   return (
@@ -86,31 +75,23 @@ const PagingAsyncSelect = ({ value, setValue }) => {
     pageSize: 20,
     isHasNext: true,
   });
-  const getSelectedOption = useCallback(({ selectedValue, getSelectedOptionRequest, getSelectedOptionSuccess, getSelectedOptionFailure }) => {
-    getSelectedOptionRequest();
-    FakeAPI.getOption(selectedValue).then((option) => {
-      getSelectedOptionSuccess(option);
-    }).catch(() => {
-      getSelectedOptionFailure();
-    });
+  const getSelectedOption = useCallback(({ selectedValue }) => {
+    return FakeAPI.getOption(selectedValue);
   }, []);
 
-  const getOptions = useCallback(({ searchText, getOptionsRequest, getOptionsSuccess, getOptionsFailure }) => {
+  const getOptions = useCallback(({ searchText }) => {
     pagingRef.current.page = 1;
-    getOptionsRequest();
-    FakeAPI.getOptions({
+    return FakeAPI.getOptions({
       searchText,
       page: pagingRef.current.page,
       pageSize: pagingRef.current.pageSize,
     }).then((options) => {
-      getOptionsSuccess(options);
       if (options.length < pagingRef.current.pageSize) {
         pagingRef.current.isHasNext = false;
       } else {
         pagingRef.current.isHasNext = true;
       }
-    }).catch(() => {
-      getOptionsFailure();
+      return options;
     });
   }, []);
 
@@ -361,31 +342,25 @@ export default () => {
     pageSize: 20,
     isHasNext: true,
   });
-  const getSelectedOption = useCallback(({ selectedValue, getSelectedOptionRequest, getSelectedOptionSuccess, getSelectedOptionFailure }) => {
-    getSelectedOptionRequest();
-    FakeAPI.getOption(selectedValue).then((option) => {
-      getSelectedOptionSuccess(option);
-    }).catch(() => {
-      getSelectedOptionFailure();
-    });
+
+  const getSelectedOption = useCallback(({ selectedValue }) => {
+    return FakeAPI.getOption(selectedValue);
   }, []);
 
-  const getOptions = useCallback(({ searchText, getOptionsRequest, getOptionsSuccess, getOptionsFailure }) => {
+  const getOptions = useCallback(({ searchText }) => {
     pagingRef.current.page = 1;
-    getOptionsRequest();
-    FakeAPI.getOptions({
+    return FakeAPI.getOptions({
       searchText,
       page: pagingRef.current.page,
       pageSize: pagingRef.current.pageSize,
     }).then((options) => {
-      getOptionsSuccess(options);
       if (options.length < pagingRef.current.pageSize) {
         pagingRef.current.isHasNext = false;
       } else {
         pagingRef.current.isHasNext = true;
       }
-    }).catch(() => {
-      getOptionsFailure();
+
+      return options;
     });
   }, []);
 
@@ -576,7 +551,6 @@ export default () => {
 export const Select = {
   code: `import React, { useRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { Wrapper } from '@fork-guide/components';
 import { Avatar, Badge } from '@fork-ui/core';
 import { Select, AsyncSelect } from '@fork-ui/select';
 
@@ -602,31 +576,24 @@ const LazyLoadAsyncSelect = () => {
     pageSize: 20,
     isHasNext: true,
   });
-  const getSelectedOption = useCallback(({ selectedValue, getSelectedOptionRequest, getSelectedOptionSuccess, getSelectedOptionFailure }) => {
-    getSelectedOptionRequest();
-    FakeAPI.getOption(selectedValue).then((option) => {
-      getSelectedOptionSuccess(option);
-    }).catch(() => {
-      getSelectedOptionFailure();
-    });
+  const getSelectedOption = useCallback(({ selectedValue }) => {
+    return FakeAPI.getOption(selectedValue);
   }, []);
 
-  const getOptions = useCallback(({ searchText, getOptionsRequest, getOptionsSuccess, getOptionsFailure }) => {
+  const getOptions = useCallback(({ searchText }) => {
     pagingRef.current.page = 1;
-    getOptionsRequest();
-    FakeAPI.getOptions({
+    return FakeAPI.getOptions({
       searchText,
       page: pagingRef.current.page,
       pageSize: pagingRef.current.pageSize,
     }).then((options) => {
-      getOptionsSuccess(options);
       if (options.length < pagingRef.current.pageSize) {
         pagingRef.current.isHasNext = false;
       } else {
         pagingRef.current.isHasNext = true;
       }
-    }).catch(() => {
-      getOptionsFailure();
+
+      return options;
     });
   }, []);
 
@@ -720,8 +687,8 @@ const options = [
 
 export default () => {
   return (
-    <Wrapper span="10px">
-      <Select defaultValue="us">
+    <div className="flex items-center">
+      <Select defaultValue="us" className="mr-2">
         {options.map((option) => (
           <Select.Option key={option.key} value={option.key}>
             {option.text}
@@ -729,7 +696,7 @@ export default () => {
         ))}
       </Select>
       <LazyLoadAsyncSelect />
-    </Wrapper>
+    </div>
   );
 };
 `,
