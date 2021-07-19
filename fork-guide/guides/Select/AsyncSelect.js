@@ -39,7 +39,7 @@ export default () => {
 
   return (
     <AsyncSelect
-      defaultValue="4"
+      defaultValue="10"
       ref={ref}
       onChanged={onChanged}
       renderSearchbox

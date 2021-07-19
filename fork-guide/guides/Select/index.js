@@ -12,11 +12,11 @@ import * as allCode from './code';
 
 const demos = [
   { Component: Select, name: 'Select' },
+  { Component: CustomAsyncSelect, name: 'CustomAsyncSelect' },
   { Component: Custom, name: 'Custom' },
   { Component: Seachable, name: 'Seachable' },
   { Component: ControlledSelect, name: 'ControlledSelect' },
   { Component: AsyncSelect, name: 'AsyncSelect' },
-  { Component: CustomAsyncSelect, name: 'CustomAsyncSelect' },
   // __INJECTED_ITEM__
 ];
 
