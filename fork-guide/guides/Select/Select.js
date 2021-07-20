@@ -25,7 +25,7 @@ const LazyLoadAsyncSelect = () => {
     pageSize: 20,
     isHasNext: true,
   });
-  const getSelectedOption = useCallback(({ selectedValue }) => {
+  const getOption = useCallback(({ selectedValue }) => {
     return FakeAPI.getOption(selectedValue);
   }, []);
 
@@ -71,7 +71,7 @@ const LazyLoadAsyncSelect = () => {
   return (
     <AsyncSelect
       defaultValue="4"
-      getSelectedOption={getSelectedOption}
+      getOption={getOption}
       getOptions={getOptions}
       onBottomIntersecting={onBottomIntersecting}
       renderSearchbox={(props) => (

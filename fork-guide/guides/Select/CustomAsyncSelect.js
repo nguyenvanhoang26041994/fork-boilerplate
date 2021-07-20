@@ -24,7 +24,7 @@ export default () => {
     isHasNext: true,
   });
 
-  const getSelectedOption = useCallback(({ selectedValue }) => {
+  const getOption = useCallback(({ selectedValue }) => {
     return FakeAPI.getOption(selectedValue);
   }, []);
 
@@ -70,7 +70,7 @@ export default () => {
   return (
     <AsyncSelect
       defaultValue="4"
-      getSelectedOption={getSelectedOption}
+      getOption={getOption}
       getOptions={getOptions}
       onBottomIntersecting={onBottomIntersecting}
       renderSearchbox={(props) => (

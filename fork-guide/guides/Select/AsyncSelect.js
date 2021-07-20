@@ -13,7 +13,7 @@ const FakeAPI = {
 };
 
 export default () => {
-  const getSelectedOption = useCallback(({ selectedValue }) => {
+  const getOption = useCallback(({ selectedValue }) => {
     return FakeAPI.getOption(selectedValue);
   }, []);
 
@@ -25,7 +25,7 @@ export default () => {
     <AsyncSelect
       defaultValue="10"
       renderSearchbox
-      getSelectedOption={getSelectedOption}
+      getOption={getOption}
       getOptions={getOptions}
       valueKey="id"
       nameKey="name"

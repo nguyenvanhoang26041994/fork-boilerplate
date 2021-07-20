@@ -14,7 +14,7 @@ const FakeAPI = {
 };
 
 export default () => {
-  const getSelectedOption = useCallback(({ selectedValue }) => {
+  const getOption = useCallback(({ selectedValue }) => {
     return FakeAPI.getOption(selectedValue);
   }, []);
 
@@ -26,7 +26,7 @@ export default () => {
     <AsyncSelect
       defaultValue="10"
       renderSearchbox
-      getSelectedOption={getSelectedOption}
+      getOption={getOption}
       getOptions={getOptions}
       valueKey="id"
       nameKey="name"
@@ -64,7 +64,7 @@ const PagingAsyncSelect = ({ value, setValue, className }) => {
     pageSize: 20,
     isHasNext: true,
   });
-  const getSelectedOption = useCallback(({ selectedValue }) => {
+  const getOption = useCallback(({ selectedValue }) => {
     return FakeAPI.getOption(selectedValue);
   }, []);
 
@@ -111,7 +111,7 @@ const PagingAsyncSelect = ({ value, setValue, className }) => {
       className={className}
       value={value}
       setValue={setValue}
-      getSelectedOption={getSelectedOption}
+      getOption={getOption}
       getOptions={getOptions}
       onBottomIntersecting={onBottomIntersecting}
       renderSearchbox={(props) => (
@@ -331,7 +331,7 @@ export default () => {
     isHasNext: true,
   });
 
-  const getSelectedOption = useCallback(({ selectedValue }) => {
+  const getOption = useCallback(({ selectedValue }) => {
     return FakeAPI.getOption(selectedValue);
   }, []);
 
@@ -377,7 +377,7 @@ export default () => {
   return (
     <AsyncSelect
       defaultValue="4"
-      getSelectedOption={getSelectedOption}
+      getOption={getOption}
       getOptions={getOptions}
       onBottomIntersecting={onBottomIntersecting}
       renderSearchbox={(props) => (
@@ -562,7 +562,7 @@ const LazyLoadAsyncSelect = () => {
     pageSize: 20,
     isHasNext: true,
   });
-  const getSelectedOption = useCallback(({ selectedValue }) => {
+  const getOption = useCallback(({ selectedValue }) => {
     return FakeAPI.getOption(selectedValue);
   }, []);
 
@@ -608,7 +608,7 @@ const LazyLoadAsyncSelect = () => {
   return (
     <AsyncSelect
       defaultValue="4"
-      getSelectedOption={getSelectedOption}
+      getOption={getOption}
       getOptions={getOptions}
       onBottomIntersecting={onBottomIntersecting}
       renderSearchbox={(props) => (

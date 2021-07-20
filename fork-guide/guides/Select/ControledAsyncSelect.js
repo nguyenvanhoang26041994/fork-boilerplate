@@ -24,7 +24,7 @@ const PagingAsyncSelect = ({ value, setValue, className }) => {
     pageSize: 20,
     isHasNext: true,
   });
-  const getSelectedOption = useCallback(({ selectedValue }) => {
+  const getOption = useCallback(({ selectedValue }) => {
     return FakeAPI.getOption(selectedValue);
   }, []);
 
@@ -71,7 +71,7 @@ const PagingAsyncSelect = ({ value, setValue, className }) => {
       className={className}
       value={value}
       setValue={setValue}
-      getSelectedOption={getSelectedOption}
+      getOption={getOption}
       getOptions={getOptions}
       onBottomIntersecting={onBottomIntersecting}
       renderSearchbox={(props) => (
