@@ -25,7 +25,7 @@ import PopoverMainGuide from '@fork-guide/guides/Popover/Popover';
 import AlertMainGuide from '@fork-guide/guides/Alert/Alert';
 import ConfirmMainGuide from '@fork-guide/guides/Confirm/Confirm';
 import NotificationMainGuide from '@fork-guide/guides/Notification/Notification';
-import MultiSelectMainGuide from '@fork-guide/guides/MultiSelect/CustomMultiSelect';
+import MultiSelectMainGuide from '@fork-guide/guides/MultiSelect/MultiSelect';
 import SelectMainGuide from '@fork-guide/guides/Select/Select';
 
 const AllGuide = () => {
