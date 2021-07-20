@@ -22,13 +22,12 @@ const StyledOption = styled(AsyncMultiSelect.Option)`
   padding-bottom: 8px;
 `;
 
-const PagingAsyncMultiSelect = () => {
+const PagingAsyncMultiSelect = ({ value, setValue, className }) => {
   const pagingRef = useRef({
     page: 1,
     pageSize: 20,
     isHasNext: true,
   });
-  const [value] = useState(['1', '5', '12', '34']);
 
   const getOptionsByValue = useCallback(({ selectedValue }) => {
     return FakeAPI.getOptionsByIds(selectedValue);
@@ -75,7 +74,9 @@ const PagingAsyncMultiSelect = () => {
 
   return (
     <AsyncMultiSelect
-      defaultValue={value}
+      className={className}
+      value={value}
+      setValue={setValue}
       renderSearchbox={(props) => (
         <AsyncMultiSelect.Searchbox
           {...props}
@@ -118,43 +119,11 @@ const PagingAsyncMultiSelect = () => {
 };
 
 export default () => {
-  const [loader, setLoader] = useState({
-    isLoading: false,
-    isSuccess: false,
-    isFailure: false,
-  });
-  const [value] = useState(['4', '5', '6']);
-  const [options, setOptions] = useState([]);
-
-  useEffect(() => {
-    setLoader({
-      isLoading: true,
-      isSuccess: false,
-      isFailure: false,
-    });
-    FakeAPI.getOptions({}).then(_options => {
-      setOptions(_options);
-      setLoader({
-        isLoading: false,
-        isSuccess: true,
-        isFailure: false,
-      });
-    })
-  }, []);
-
-  if (loader.isSuccess) {
-    return (
-      <div className="flex flex-col">
-        <MultiSelect defaultValue={value} className="mb-2">
-          {options.map((option) => (
-            <MultiSelect.Option key={option.id} value={option.id} data={option}>
-              {option.name}
-            </MultiSelect.Option>
-          ))}
-        </MultiSelect>
-        <PagingAsyncMultiSelect />
-      </div>
-    );
-  }
-  return null;
+  const [value, setValue] = useState(['4', '32', '12']);
+  return (
+    <div className="flex flex-col">
+      <PagingAsyncMultiSelect value={value} setValue={setValue} className="mb-2" />
+      <PagingAsyncMultiSelect value={value} setValue={setValue} />
+    </div>
+  );
 };

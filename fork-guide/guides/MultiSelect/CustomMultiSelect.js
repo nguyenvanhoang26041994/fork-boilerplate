@@ -8,7 +8,7 @@ const FakeAPI = {
     return window.fetch(`https://60f431423cb0870017a8a15f.mockapi.io/api/users/${id}`)
       .then(response => response.json());
   },
-  getOptions: ({ page = 1, pageSize = 100, searchText = '' }) => {
+  getOptions: ({ page = 1, pageSize = 20, searchText = '' }) => {
     return window.fetch(`https://60f431423cb0870017a8a15f.mockapi.io/api/users?page=${page}&limit=${pageSize}&name=${searchText}`)
       .then(response => response.json());
   },
@@ -46,52 +46,48 @@ export default () => {
 
   if (loader.isSuccess) {
     return (
-      <div className="flex items-center">
-        <div className="w-full">
-          <MultiSelect
-            defaultValue={value}
-            optionFilter={(props, { searchRegex }) => {
-              return searchRegex.test(props.data.name);
-            }}
-            renderSearchbox={(props) => (
-              <MultiSelect.Searchbox
-                {...props}
-                placeholder="Type user name to search..."
-              />
-            )}
-            render={(props, selectedOptions) => (
-              <MultiSelect.Multiple {...props}>
-                {selectedOptions.map((optionProps) => (
-                  <MultiSelect.Chip closable key={optionProps.value} value={optionProps.value}>
-                    <Badge.Dot overlap placement="bottom-end" color="var(--green-6)">
-                      <Avatar size={24} src={optionProps.data.avatar} />
-                    </Badge.Dot>
-                    <span className="ml-2">
-                      {optionProps.data.name}
-                    </span>
-                  </MultiSelect.Chip>
-                ))}
-              </MultiSelect.Multiple>
-            )}
-          >
-            {options.map((option) => (
-              <StyledOption
-                key={option.id}
-                value={option.id}
-                data={option}
-              >
+      <MultiSelect
+        defaultValue={value}
+        filter={(props, { searchRegex }) => {
+          return searchRegex.test(props.data.name);
+        }}
+        renderSearchbox={(props) => (
+          <MultiSelect.Searchbox
+            {...props}
+            placeholder="Type user name to search..."
+          />
+        )}
+        render={(props, selectedOptions) => (
+          <MultiSelect.Multiple {...props}>
+            {selectedOptions.map((optionProps) => (
+              <MultiSelect.Chip closable key={optionProps.value} value={optionProps.value}>
                 <Badge.Dot overlap placement="bottom-end" color="var(--green-6)">
-                  <Avatar src={option.avatar} />
+                  <Avatar size={24} src={optionProps.data.avatar} />
                 </Badge.Dot>
-                <div className="flex flex-col items-start ml-3">
-                  <b>{option.name}</b>
-                  <small>ID: {option.id}</small>
-                </div>
-              </StyledOption>
+                <span className="ml-2">
+                  {optionProps.data.name}
+                </span>
+              </MultiSelect.Chip>
             ))}
-          </MultiSelect>
-        </div>
-      </div>
+          </MultiSelect.Multiple>
+        )}
+      >
+        {options.map((option) => (
+          <StyledOption
+            key={option.id}
+            value={option.id}
+            data={option}
+          >
+            <Badge.Dot overlap placement="bottom-end" color="var(--green-6)">
+              <Avatar src={option.avatar} />
+            </Badge.Dot>
+            <div className="flex flex-col items-start ml-3">
+              <b>{option.name}</b>
+              <small>ID: {option.id}</small>
+            </div>
+          </StyledOption>
+        ))}
+      </MultiSelect>
     );
   }
   return null;

@@ -8,7 +8,7 @@ const FakeAPI = {
         .then(response => response.json());
     }));
   },
-  getOptions: ({ page = 1, pageSize = 50, searchText = '' }) => {
+  getOptions: ({ page = 1, pageSize = 20, searchText = '' }) => {
     return window.fetch(`https://60f431423cb0870017a8a15f.mockapi.io/api/users?page=${page}&limit=${pageSize}&name=${searchText}`)
       .then(response => response.json());
   },

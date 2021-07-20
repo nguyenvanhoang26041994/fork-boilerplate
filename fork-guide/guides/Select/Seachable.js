@@ -80,7 +80,7 @@ export default () => {
               placeholder="Type to search..."
             />
           )}
-          optionFilter={(props, { searchRegex }) => {
+          filter={(props, { searchRegex }) => {
             return searchRegex.test(props.data.name) || searchRegex.test(props.data.jobTitle);
           }}
         >
