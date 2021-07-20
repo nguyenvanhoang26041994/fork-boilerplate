@@ -30,7 +30,8 @@ import {
   Bell,
   LayoutBottombar,
   LayoutSidebar,
-  Search
+  Search,
+  ChevronsDown,
 } from '@fork-ui/icons/lazy';
 
 const MenuItemStyled = styled.div`
@@ -327,9 +328,15 @@ const LeftNavigation = ({ minimal }) => {
           </MenuItemEnhander>
           <MenuItemEnhander path={`${path}/select`}>
             <div className="__avatar">
-              <ArrowRightCircle />
+              <ChevronDown />
             </div>
             <div className="__name">Select</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path={`${path}/multiselect`}>
+            <div className="__avatar">
+              <ChevronsDown />
+            </div>
+            <div className="__name">Multi Select</div>
           </MenuItemEnhander>
         </MenuWrapper>
       </Wrapper>

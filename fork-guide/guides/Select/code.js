@@ -69,7 +69,7 @@ const StyledOption = styled(AsyncSelect.Option)\`
   padding-top: 8px;
   padding-bottom: 8px;
 \`;
-const PagingAsyncSelect = ({ value, setValue }) => {
+const PagingAsyncSelect = ({ value, setValue, className }) => {
   const pagingRef = useRef({
     page: 1,
     pageSize: 20,
@@ -119,6 +119,7 @@ const PagingAsyncSelect = ({ value, setValue }) => {
 
   return (
     <AsyncSelect
+      className={className}
       value={value}
       setValue={setValue}
       getSelectedOption={getSelectedOption}
@@ -169,10 +170,10 @@ const PagingAsyncSelect = ({ value, setValue }) => {
 export default () => {
   const [value, setValue] = useState('4');
   return (
-    <Wrapper span="10px">
+    <div className="flex items-center">
+      <PagingAsyncSelect value={value} setValue={setValue} className="mr-2" />
       <PagingAsyncSelect value={value} setValue={setValue} />
-      <PagingAsyncSelect value={value} setValue={setValue} />
-    </Wrapper>
+    </div>
   );
 }
 `,
