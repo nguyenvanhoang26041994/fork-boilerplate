@@ -25,6 +25,8 @@ import PopoverMainGuide from '@fork-guide/guides/Popover/Popover';
 import AlertMainGuide from '@fork-guide/guides/Alert/Alert';
 import ConfirmMainGuide from '@fork-guide/guides/Confirm/Confirm';
 import NotificationMainGuide from '@fork-guide/guides/Notification/Notification';
+import MultiSelectMainGuide from '@fork-guide/guides/MultiSelect/CustomMultiSelect';
+import SelectMainGuide from '@fork-guide/guides/Select/Select';
 
 const AllGuide = () => {
   return (
@@ -129,10 +131,22 @@ const AllGuide = () => {
             </Demo>
           </Flex>
         </Flex>
-        <Flex w="1/2">
-          <Demo name="Form Field" className="flex-1">
-            <FormFieldMainGuide />
-          </Demo>
+        <Flex w="1/2" col>
+          <Flex w="full" style={{ paddingBottom: '1px' }}>
+            <Demo name="Form Field">
+              <FormFieldMainGuide />
+            </Demo>
+          </Flex>
+          <Flex w="full" style={{ paddingBottom: '1px' }}>
+            <Demo name="Select">
+              <SelectMainGuide />
+            </Demo>
+          </Flex>
+          <Flex w="full" className="flex-1">
+            <Demo name="Multi Select">
+              <MultiSelectMainGuide />
+            </Demo>
+          </Flex>
         </Flex>
       </Flex>
       <Flex row w="full" style={{ paddingBottom: '1px' }}>

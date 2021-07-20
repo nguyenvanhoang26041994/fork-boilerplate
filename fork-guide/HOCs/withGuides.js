@@ -8,7 +8,6 @@ import SyntaxHighlighter from '@fork-guide/components/SyntaxHighlighter';
 
 const DemoBoxList = styled(Flex)`
   max-height: calc(100vh - 72px);
-  overflow-y: scroll;
 
   > * {
     margin-bottom: 2px;
@@ -18,7 +17,6 @@ const DemoBoxList = styled(Flex)`
 const DemoDetailBoxWrapper = styled.div`
   position: relative;
   max-height: calc(100vh - 72px);
-  overflow-y: scroll;
 
   .__actions {
     position: absolute;
@@ -33,12 +31,12 @@ const DemoDetailBoxWrapper = styled.div`
 const Wrapper = styled(Flex)`
 `;
 
-const DemoDetailBox = ({ code }) => {
+const DemoDetailBox = ({ className, code }) => {
   const onClick = useCallback(() => {
     copyToClipboard(code);
   }, [code]);
   return (
-    <DemoDetailBoxWrapper>
+    <DemoDetailBoxWrapper className={className}>
       <div className="__actions">
         <Button icon={<Copy />} onClick={onClick} />
       </div>
@@ -61,7 +59,7 @@ export default (demos, allCode) => () => {
 
   return (
     <Wrapper wrap>
-      <DemoBoxList col w={mode.normal.left} style={{ paddingRight: '2px' }}>
+      <DemoBoxList col w={mode.normal.left} style={{ paddingRight: '2px' }} className="common-scrollbar">
         {demos.map((Demo) => (
           <DemoBox
             name={allCode[Demo.name].demoName}
@@ -74,7 +72,7 @@ export default (demos, allCode) => () => {
         ))}
       </DemoBoxList>
       <Flex col w={mode.normal.right} style={{ backgroundColor: 'var(--bg)' }}>
-        <DemoDetailBox code={allCode[selectedName].code} />
+        <DemoDetailBox code={allCode[selectedName].code} className="common-scrollbar" />
       </Flex>
     </Wrapper>
   );

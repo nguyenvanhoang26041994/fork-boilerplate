@@ -1,4 +1,4 @@
-export const CustomSelect = {
+export const CustomMultiSelect = {
   code: `import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Avatar, Badge } from '@fork-ui/core';
@@ -98,7 +98,7 @@ export default () => {
   return null;
 };
 `,
-  demoName: 'Custom Select',
+  demoName: 'Custom Multi Select',
 }
 
 export const MultiSelect = {
