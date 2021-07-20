@@ -14,11 +14,6 @@ const FakeAPI = {
 };
 
 export default () => {
-  const ref = useRef();
-  const onChanged = (selectedOption) => {
-    console.log('AsyncSelect.onChanged', selectedOption, ref.current);
-  };
-
   const getSelectedOption = useCallback(({ selectedValue }) => {
     return FakeAPI.getOption(selectedValue);
   }, []);
@@ -30,18 +25,12 @@ export default () => {
   return (
     <AsyncSelect
       defaultValue="10"
-      ref={ref}
-      onChanged={onChanged}
       renderSearchbox
       getSelectedOption={getSelectedOption}
       getOptions={getOptions}
-    >
-      {(option) => (
-        <AsyncSelect.Option key={option.id} value={option.id} data={option}>
-          {option.name}
-        </AsyncSelect.Option>
-      )}
-    </AsyncSelect>
+      valueKey="id"
+      nameKey="name"
+    />
   );
 };
 `,
@@ -147,13 +136,11 @@ const PagingAsyncSelect = ({ value, setValue, className }) => {
           </AsyncSelect.Single>
         );
       }}
+      valueKey="id"
+      nameKey="name"
     >
-      {(option) => (
-        <StyledOption
-          key={option.id}
-          value={option.id}
-          data={option}
-        >
+      {(props, option) => (
+        <StyledOption {...props}>
           <Badge.Dot overlap placement="bottom-end" color="var(--green-6)">
             <Avatar src={option.avatar} />
           </Badge.Dot>
@@ -415,13 +402,11 @@ export default () => {
           </AsyncSelect.Single>
         );
       }}
+      valueKey="id"
+      nameKey="name"
     >
-      {(option) => (
-        <StyledOption
-          key={option.id}
-          value={option.id}
-          data={option}
-        >
+      {(props, option) => (
+        <StyledOption {...props}>
           <Badge.Dot overlap placement="bottom-end" color="var(--green-6)">
             <Avatar src={option.avatar} />
           </Badge.Dot>
@@ -648,13 +633,11 @@ const LazyLoadAsyncSelect = () => {
           </AsyncSelect.Single>
         );
       }}
+      valueKey="id"
+      nameKey="name"
     >
-      {(option) => (
-        <StyledOption
-          key={option.id}
-          value={option.id}
-          data={option}
-        >
+      {(props, option) => (
+        <StyledOption {...props}>
           <Badge.Dot overlap placement="bottom-end" color="var(--green-6)">
             <Avatar src={option.avatar} />
           </Badge.Dot>

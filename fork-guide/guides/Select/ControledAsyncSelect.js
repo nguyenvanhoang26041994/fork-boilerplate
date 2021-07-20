@@ -96,13 +96,11 @@ const PagingAsyncSelect = ({ value, setValue, className }) => {
           </AsyncSelect.Single>
         );
       }}
+      valueKey="id"
+      nameKey="name"
     >
-      {(option) => (
-        <StyledOption
-          key={option.id}
-          value={option.id}
-          data={option}
-        >
+      {(props, option) => (
+        <StyledOption {...props}>
           <Badge.Dot overlap placement="bottom-end" color="var(--green-6)">
             <Avatar src={option.avatar} />
           </Badge.Dot>

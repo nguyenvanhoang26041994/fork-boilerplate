@@ -39,17 +39,13 @@ export default () => {
 
   if (loader.isSuccess) {
     return (
-      <div className="flex items-center">
-        <div className="w-full">
-          <MultiSelect defaultValue={value}>
-            {options.map((option) => (
-              <MultiSelect.Option key={option.id} value={option.id} data={option}>
-                {option.name}
-              </MultiSelect.Option>
-            ))}
-          </MultiSelect>
-        </div>
-      </div>
+      <MultiSelect defaultValue={value}>
+        {options.map((option) => (
+          <MultiSelect.Option key={option.id} value={option.id} data={option}>
+            {option.name}
+          </MultiSelect.Option>
+        ))}
+      </MultiSelect>
     );
   }
   return null;

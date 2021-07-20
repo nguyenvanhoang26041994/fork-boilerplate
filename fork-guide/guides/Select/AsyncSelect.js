@@ -13,11 +13,6 @@ const FakeAPI = {
 };
 
 export default () => {
-  const ref = useRef();
-  const onChanged = (selectedOption) => {
-    console.log('AsyncSelect.onChanged', selectedOption, ref.current);
-  };
-
   const getSelectedOption = useCallback(({ selectedValue }) => {
     return FakeAPI.getOption(selectedValue);
   }, []);
@@ -29,17 +24,11 @@ export default () => {
   return (
     <AsyncSelect
       defaultValue="10"
-      ref={ref}
-      onChanged={onChanged}
       renderSearchbox
       getSelectedOption={getSelectedOption}
       getOptions={getOptions}
-    >
-      {(option) => (
-        <AsyncSelect.Option key={option.id} value={option.id} data={option}>
-          {option.name}
-        </AsyncSelect.Option>
-      )}
-    </AsyncSelect>
+      valueKey="id"
+      nameKey="name"
+    />
   );
 };
