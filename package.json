@@ -23,7 +23,7 @@
     "transform:guides:index": "node .toolkit/transform-guides-for-index-js/excute",
     "sub:update": "git submodule update",
     "sub:fork-community": "git submodule add  https://github.com/nguyenvanhoang26041994/fork-community.git",
-    "sub:fork-ui": "git submodule add https://github.com/nguyenvanhoang26041994/fork-ui.git",
+    "sub:fork-ui": "git submodule add https://github.com/nguyenvanhoang26041994/fork-ui-v2.git",
     "sub:tabler-icons": "git submodule add https://github.com/nguyenvanhoang26041994/tabler-icons.git",
     "init:start": "yarn sub:update",
     "deploy": "yarn build && firebase deploy --only hosting:fork-boilerplate"
