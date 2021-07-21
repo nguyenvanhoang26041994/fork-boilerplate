@@ -2,7 +2,7 @@ import React, { useRef, useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
 import { Avatar, Badge } from '@fork-ui/core';
-import { AsyncSelect } from '@fork-ui/select';
+import { AsyncSelect } from '@fork-ui/suggestion';
 
 const FakeAPI = {
   getOption: (id) => {

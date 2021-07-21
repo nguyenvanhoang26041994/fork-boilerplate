@@ -1,5 +1,5 @@
-import React, { useRef, useCallback } from 'react';
-import { AsyncSelect } from '@fork-ui/select';
+import React, { useCallback } from 'react';
+import { AsyncSelect } from '@fork-ui/suggestion';
 
 const FakeAPI = {
   getOption: (id) => {

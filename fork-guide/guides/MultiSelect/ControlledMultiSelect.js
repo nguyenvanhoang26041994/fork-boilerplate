@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MultiSelect } from '@fork-ui/select';
+import { MultiSelect } from '@fork-ui/suggestion';
 
 const FakeAPI = {
   getOptions: ({ page = 1, pageSize = 20, searchText = '' }) => {

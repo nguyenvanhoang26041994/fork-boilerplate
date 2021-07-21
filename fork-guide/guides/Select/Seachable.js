@@ -2,7 +2,7 @@ import React, { useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
 import { Avatar, Badge } from '@fork-ui/core';
-import { Select } from '@fork-ui/select';
+import { Select } from '@fork-ui/suggestion';
 import {
   avatarLink,
   avatarLink2,
