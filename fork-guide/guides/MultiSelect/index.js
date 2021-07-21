@@ -12,11 +12,11 @@ import * as allCode from './code';
 
 const demos = [
   { Component: MultiSelect, name: 'MultiSelect' },
-  // { Component: ControlledAsyncMultiSelect, name: 'ControlledAsyncMultiSelect' },
-  { Component: CustomMultiSelect, name: 'CustomMultiSelect' },
+  { Component: ControlledAsyncMultiSelect, name: 'ControlledAsyncMultiSelect' },
+  // { Component: CustomMultiSelect, name: 'CustomMultiSelect' },
   // { Component: AsyncMultiSelect, name: 'AsyncMultiSelect' },
   // { Component: CustomAsyncMultiSelect, name: 'CustomAsyncMultiSelect' },
-  { Component: ControlledMultiSelect, name: 'ControlledMultiSelect' },
+  // { Component: ControlledMultiSelect, name: 'ControlledMultiSelect' },
   // __INJECTED_ITEM__
 ];
 
