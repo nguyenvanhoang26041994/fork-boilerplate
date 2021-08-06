@@ -1,7 +1,7 @@
-export const Autocomplete = {
+export const AutoComplete = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Autocomplete, Textbox } from '@fork-ui/core';
+import { AutoComplete } from '@fork-ui/core';
 
 const options = [
   { uid: 1, text: 'Hoang Nguyen' },
@@ -25,12 +25,17 @@ const options = [
 export default () => {
   return (
     <Wrapper>
-      <Autocomplete options={options}>
-      </Autocomplete>
+      <AutoComplete defaultValue={1}>
+        {options.map((option) => (
+          <AutoComplete.Option key={option.uid} value={option.uid} text={option.text} data={option}>
+            {option.text}
+          </AutoComplete.Option>
+        ))}
+      </AutoComplete>
     </Wrapper>
   );
 };
 `,
-  demoName: 'Autocomplete',
+  demoName: 'Auto Complete',
 }
 

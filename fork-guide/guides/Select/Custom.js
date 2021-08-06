@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Avatar, Badge } from '@fork-ui/core';
-import { Select } from '@fork-ui/suggestion';
+import { Select } from '@fork-ui/core';
 import {
   avatarLink,
   avatarLink2,

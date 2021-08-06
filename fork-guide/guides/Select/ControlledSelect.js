@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Select } from '@fork-ui/suggestion';
+import { Select } from '@fork-ui/core';
 
 const options = [
   {

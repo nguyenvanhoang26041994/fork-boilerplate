@@ -1,6 +1,6 @@
 export const AsyncMultiSelect = {
-  code: `import React, { useState, useEffect, useCallback } from 'react';
-import { AsyncMultiSelect } from '@fork-ui/select';
+  code: `import React, { useState, useCallback } from 'react';
+import { AsyncMultiSelect } from '@fork-ui/core';
 
 const FakeAPI = {
   getOptionsByIds: (ids) => {
@@ -45,7 +45,7 @@ export const ControlledAsyncMultiSelect = {
   code: `import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styled from 'styled-components';
 import { Avatar, Badge } from '@fork-ui/core';
-import { MultiSelect, AsyncMultiSelect } from '@fork-ui/select';
+import { MultiSelect, AsyncMultiSelect } from '@fork-ui/core';
 
 const FakeAPI = {
   getOption: (id) => {
@@ -177,7 +177,7 @@ export default () => {
 
 export const ControlledMultiSelect = {
   code: `import React, { useState, useEffect } from 'react';
-import { MultiSelect } from '@fork-ui/select';
+import { MultiSelect } from '@fork-ui/core';
 
 const FakeAPI = {
   getOptions: ({ page = 1, pageSize = 20, searchText = '' }) => {
@@ -241,7 +241,7 @@ export const CustomAsyncMultiSelect = {
   code: `import React, { useState, useRef, useCallback } from 'react';
 import styled from 'styled-components';
 import { Avatar, Badge } from '@fork-ui/core';
-import { AsyncMultiSelect } from '@fork-ui/select';
+import { AsyncMultiSelect } from '@fork-ui/core';
 
 const FakeAPI = {
   getOptionsByIds: (ids) => {
@@ -363,7 +363,7 @@ export const CustomMultiSelect = {
   code: `import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Avatar, Badge } from '@fork-ui/core';
-import { MultiSelect } from '@fork-ui/select';
+import { MultiSelect } from '@fork-ui/core';
 
 const FakeAPI = {
   getOption: (id) => {
@@ -462,7 +462,7 @@ export const MultiSelect = {
   code: `import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styled from 'styled-components';
 import { Avatar, Badge } from '@fork-ui/core';
-import { MultiSelect, AsyncMultiSelect } from '@fork-ui/select';
+import { MultiSelect, AsyncMultiSelect } from '@fork-ui/core';
 
 const FakeAPI = {
   getOption: (id) => {

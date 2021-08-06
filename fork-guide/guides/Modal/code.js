@@ -29,6 +29,37 @@ export default () => {
   demoName: 'Centered',
 }
 
+export const ClickOutSide = {
+  code: `import React from 'react';
+import { DemoContent } from '@fork-guide/components';
+import { Modal, Button } from '@fork-ui/core';
+
+export default () => {
+  const { isOpen, doOpen, doClose } = Modal.useModal(false);
+
+  return (
+    <React.Fragment>
+      <Modal isOpen={isOpen} style={{ width: '700px' }} onOutsideClick={doClose}>
+        <Modal.Header>
+          TITLE
+          <Modal.Closer onClick={doClose} />
+        </Modal.Header>
+        <Modal.Body>
+          <DemoContent />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={doClose}>CANCEL</Button>
+          <Button onClick={doClose} color="primary">OK</Button>
+        </Modal.Footer>
+      </Modal>
+      <Button color="primary" onClick={doOpen}>Open Modal</Button>
+    </React.Fragment>
+  );
+};
+`,
+  demoName: 'Click Out Side',
+}
+
 export const CustomCloseIcon = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';

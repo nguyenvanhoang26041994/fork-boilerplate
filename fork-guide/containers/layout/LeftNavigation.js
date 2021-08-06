@@ -32,6 +32,7 @@ import {
   LayoutSidebar,
   Search,
   ChevronsDown,
+  ChevronsUp,
 } from '@fork-ui/icons/lazy';
 
 const MenuItemStyled = styled.div`
@@ -337,6 +338,12 @@ const LeftNavigation = ({ minimal }) => {
               <ChevronsDown />
             </div>
             <div className="__name">Multi Select</div>
+          </MenuItemEnhander>
+          <MenuItemEnhander path={`${path}/autocomplete`}>
+            <div className="__avatar">
+              <ChevronsUp />
+            </div>
+            <div className="__name">Auto Complete</div>
           </MenuItemEnhander>
         </MenuWrapper>
       </Wrapper>

@@ -5,6 +5,7 @@ import Modal from './Modal';
 import Width from './Width';
 import CustomCloseIcon from './CustomCloseIcon';
 import CustomHeader from './CustomHeader';
+import ClickOutSide from './ClickOutSide';
 // __INJECTED_LINE__
 
 import * as allCode from './code';
@@ -16,6 +17,7 @@ const demos = [
   { Component: Width, name: 'Width' },
   { Component: CustomCloseIcon, name: 'CustomCloseIcon' },
   { Component: CustomHeader, name: 'CustomHeader' },
+  { Component: ClickOutSide, name: 'ClickOutSide' },
   // __INJECTED_ITEM__
 ];
 

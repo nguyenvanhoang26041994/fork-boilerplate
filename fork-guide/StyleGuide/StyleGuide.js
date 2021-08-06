@@ -32,13 +32,14 @@ const TimelineGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guid
 const AlertGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Alert'));
 const ModalGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Modal'));
 const DrawerGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Drawer'));
-const AutocompleteGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Autocomplete'));
+const AutoCompleteGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/AutoComplete'));
 const SelectGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Select'));
 const ConfirmGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Confirm'));
 const GridGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Grid'));
 const SearchboxGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Searchbox'));
 const NotificationGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Notification'));
 const MultiSelectGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/MultiSelect'));
+const ChipGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Chip'));
 // __INJECTED_LINE_GUIDE__
 
 const StyleGuide = () => {
@@ -70,13 +71,14 @@ const StyleGuide = () => {
       <Route path={`${path}/alert`} component={AlertGuides} />
       <Route path={`${path}/modal`} component={ModalGuides} />
       <Route path={`${path}/drawer`} component={DrawerGuides} />
-      <Route path={`${path}/autocomplete`} component={AutocompleteGuides} />
+      <Route path={`${path}/autocomplete`} component={AutoCompleteGuides} />
       <Route path={`${path}/select`} component={SelectGuides} />
       <Route path={`${path}/confirm`} component={ConfirmGuides} />
       <Route path={`${path}/grid`} component={GridGuides} />
       <Route path={`${path}/searchbox`} component={SearchboxGuides} />
       <Route path={`${path}/notification`} component={NotificationGuides} />
       <Route path={`${path}/multiselect`} component={MultiSelectGuides} />
+      <Route path={`${path}/chip`} component={ChipGuides} />
       {/* __INJECTED_LINE_ROUTER__ */}
     </Switch>
   );

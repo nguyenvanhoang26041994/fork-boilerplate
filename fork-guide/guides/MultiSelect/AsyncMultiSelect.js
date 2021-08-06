@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { AsyncMultiSelect } from '@fork-ui/suggestion';
+import { AsyncMultiSelect } from '@fork-ui/core';
 
 const FakeAPI = {
   getOptionsByIds: (ids) => {
