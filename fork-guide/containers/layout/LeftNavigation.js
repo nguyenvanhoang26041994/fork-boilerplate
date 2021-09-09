@@ -345,6 +345,12 @@ const LeftNavigation = ({ minimal }) => {
             </div>
             <div className="__name">Auto Complete</div>
           </MenuItemEnhander>
+          <MenuItemEnhander path={`${path}/formfield`}>
+            <div className="__avatar">
+              <DeviceLaptop />
+            </div>
+            <div className="__name">Form Field</div>
+          </MenuItemEnhander>
         </MenuWrapper>
       </Wrapper>
     </Container>

@@ -26,7 +26,7 @@ import {
 } from './core';
 import ChatCardList from './components/ChatCardList';
 import GroupChannelDetail from './components/GroupChannelDetail';
-import MainChatbox from './components/MainChatbox';
+import VChatEditor from './components/editor-module/VChatEditor';
 
 import ChatSesstions from './ChatSesstions';
 import DarkMode from '@contexts/DarkMode';
@@ -375,7 +375,7 @@ const App = () => {
                       </FloatTyping>
                     </div>
                   )}
-                  <MainChatbox ref={inputRef} scrollToBottom={scrollToBottom} onSubmit={onSubmit} />
+                  <VChatEditor ref={inputRef} scrollToBottom={scrollToBottom} onSubmit={onSubmit} />
                 </div>
               </ChatFooter>
             </ChatContainer>
