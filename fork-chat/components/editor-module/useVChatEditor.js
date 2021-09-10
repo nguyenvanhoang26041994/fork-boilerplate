@@ -86,11 +86,19 @@ export default ({ placeholder }) => {
     console.log(md);
   }, []);
 
+  const onEmojiSelect = useCallback((emoji) => {
+    const selection = editorRef.editor.getSelection();
+    const insertIndex = selection ? selection.index : 1;
+    editorRef.editor.insertEmbed(insertIndex, 'emoji', emoji, 'api');
+    editorRef.editor.setSelection(insertIndex + 1, 0);
+  }, []);
+
   return {
     containerId,
     toolbarId,
     insertEntity,
     insertMentionUser,
     onCommit,
+    onEmojiSelect,
   };
 };

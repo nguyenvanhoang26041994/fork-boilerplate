@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import data from 'emoji-mart/data/google.json';
 import styled from 'styled-components';
 import {
@@ -116,6 +116,12 @@ const Container = styled.div`
     color: var(--blue-5);
     border-radius: 5px;
   }
+
+  .ql-emoji {
+    display: inline-flex;
+    cursor: default;
+    margin: 2px;
+  }
 `;
 const ToobarButton = styled.button`
   outline: 0 !important;
@@ -166,7 +172,7 @@ const VChatEditorWrapper = styled.div`
 const VChatEditor = () => {
   const {
     containerId, toolbarId, insertEntity,
-    onCommit, insertMentionUser
+    onCommit, insertMentionUser, onEmojiSelect
   } = useVChatEditor({ placeholder: 'Aa' });
   return (
     <VChatEditorWrapper>
@@ -227,6 +233,7 @@ const VChatEditor = () => {
                 title=""
                 emoji=""
                 showSkinTones={false}
+                onSelect={onEmojiSelect}
               />
             )}
           >
