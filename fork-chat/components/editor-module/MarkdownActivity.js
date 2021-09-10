@@ -11,10 +11,11 @@ class MarkdownActivity {
       whiteSpace: ' ',
       newLine: '\n',
       asterisk: '*',
-      rightParenthesis: ')',
-      grave: '`',
-      tilde: '~',
-      underscore: '_'
+      // rightParenthesis: ')',
+      // grave: '`',
+      // tilde: '~',
+      // underscore: '_',
+      emoji: ':',
     }
     this.ignoreTags = ['PRE', ...(options.ignoreTags || [])]
     this.tags = new TagsOperators(this.quillJS, options)
@@ -81,8 +82,9 @@ class MarkdownActivity {
         case this.actionCharacters.asterisk:
         case this.actionCharacters.grave:
         case this.actionCharacters.newLine:
-        case this.actionCharacters.tilde:
-        case this.actionCharacters.underscore:
+        // case this.actionCharacters.tilde:
+        // case this.actionCharacters.underscore:
+        case this.actionCharacters.emoji:
           this.onInlineExecute.bind(this)()
           break
       }

@@ -1,12 +1,51 @@
 import React from 'react';
+import data from 'emoji-mart/data/google.json';
 import styled from 'styled-components';
 import {
   Bold, Italic, Send, Paperclip,
   MoodSmile, At, Speakerphone, Strikethrough,
   Bolt, CirclePlus, Code, Link,
 } from '@fork-ui/icons/lazy';
+import { Popover } from '@fork-ui/core';
+import { NimblePicker } from 'emoji-mart';
 import useVChatEditor from './useVChatEditor';
 
+const StyledEmojiPopover = styled(Popover)`
+  button {
+    outline: 0 !important;
+  }
+  .tippy-content {
+    padding: 0;
+  }
+  .emoji-mart {
+    border: 0;
+    border-radius: 0;
+    font-size: inherit;
+    color: var(--color);
+    background-color: var(--bg);
+  }
+  .emoji-mart-search input {
+    background-color: transparent;
+    border-color: var(--border-color);
+  }
+  .emoji-mart-search-icon {
+    fill: currentColor;
+  }
+  .emoji-mart-category-label span {
+    background-color: var(--bg);
+  }
+  .emoji-mart-bar {
+    border-color: var(--border-color);
+  }
+  .emoji-mart-anchor-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .emoji-mart-category .emoji-mart-emoji:hover:before{
+    background-color: var(--bg-hover);
+  }
+`;
 const Container = styled.div`
   &.ql-container {
     border: 1px solid var(--border-color);
@@ -21,6 +60,61 @@ const Container = styled.div`
     &.ql-blank::before {
       color: inherit;
     }
+  }
+
+  .entity-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .entity__icon {
+      margin-right: 5px;
+    }
+  }
+
+  .mention-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ql-candidate,
+  .ql-job,
+  .ql-placement,
+  .ql-file,
+  .ql-contact,
+  .ql-mention-user {
+    min-height: 25px;
+    min-width: 100px;
+    font-weight: 600;
+    border-radius: 3px;
+    display: inline-flex;
+    padding: 3px 5px;
+    cursor: pointer;
+    margin: 2px;
+
+    > span[contenteditable] {
+      display: inline-flex;
+    }
+  }
+
+  .ql-candidate,
+  .ql-placement,
+  .ql-job {
+    border: 1px solid var(--blue-5);
+    color: var(--blue-5);
+  }
+
+  .ql-contact,
+  .ql-file {
+    border: 1px solid var(--orange-5);
+    color: var(--orange-5);
+  }
+
+  .ql-mention-user {
+    background-color: var(--blue-1);
+    color: var(--blue-5);
+    border-radius: 5px;
   }
 `;
 const ToobarButton = styled.button`
@@ -70,7 +164,10 @@ const VChatEditorWrapper = styled.div`
 `;
 
 const VChatEditor = () => {
-  const { containerId, toolbarId } = useVChatEditor({ placeholder: 'Aa' });
+  const {
+    containerId, toolbarId, insertEntity,
+    onCommit, insertMentionUser
+  } = useVChatEditor({ placeholder: 'Aa' });
   return (
     <VChatEditorWrapper>
       <Container id={containerId} />
@@ -96,7 +193,22 @@ const VChatEditor = () => {
           </ToobarButton>
         </Toobar.Left>
         <Toobar.Right>
-          <ToobarButton>
+          <ToobarButton onClick={() => insertMentionUser({ id: 'kuser002', name: 'Hoang Nguyen 007' })}>
+            <CirclePlus />
+          </ToobarButton>
+          <ToobarButton onClick={() => insertEntity('file', { id: 'file0012', name: 'ABC.pdf' })}>
+            <CirclePlus />
+          </ToobarButton>
+          <ToobarButton onClick={() => insertEntity('placement', { id: 'placment012', name: 'Placement 2021' })}>
+            <CirclePlus />
+          </ToobarButton>
+          <ToobarButton onClick={() => insertEntity('job', { id: 'job0121', name: 'Frontend Developer' })}>
+            <CirclePlus />
+          </ToobarButton>
+          <ToobarButton onClick={() => insertEntity('contact', { id: 'contact110', name: 'Hoàng Nguyễn Contact' })}>
+            <CirclePlus />
+          </ToobarButton>
+          <ToobarButton onClick={() => insertEntity('candidate', { id: 'candidate001', name: 'Hoàng Nguyễn' })}>
             <CirclePlus />
           </ToobarButton>
           <ToobarButton>
@@ -105,13 +217,27 @@ const VChatEditor = () => {
           <ToobarButton>
             <At />
           </ToobarButton>
-          <ToobarButton>
-            <MoodSmile />
-          </ToobarButton>
+          <StyledEmojiPopover
+            placement="top"
+            overlay={(
+              <NimblePicker
+                theme="fork-ui"
+                set="facebook"
+                data={data}
+                title=""
+                emoji=""
+                showSkinTones={false}
+              />
+            )}
+          >
+            <ToobarButton>
+              <MoodSmile />
+            </ToobarButton>
+          </StyledEmojiPopover>
           <ToobarButton>
             <Paperclip />
           </ToobarButton>
-          <ToobarButton style={{ marginLeft: 30 }}>
+          <ToobarButton style={{ marginLeft: 30 }} onClick={onCommit}>
             <Send />
           </ToobarButton>
         </Toobar.Right>
