@@ -55,9 +55,9 @@ class MentionUser {
         return true;
       },
       // Style options
-      listItemClass: "ql-mention-list-item",
-      mentionContainerClass: "ql-mention-list-container",
-      mentionListClass: "ql-mention-list",
+      listItemClass: "fselect-option",
+      mentionContainerClass: "fselect-overlay",
+      mentionListClass: "fselect-overlay-body",
       spaceAfterInsert: true,
       selectKeys: [Keys.ENTER]
     };
