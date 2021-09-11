@@ -171,9 +171,15 @@ const VChatEditorWrapper = styled.div`
 
 const VChatEditor = () => {
   const {
-    containerId, toolbarId, insertEntity,
-    onCommit, insertMentionUser, onEmojiSelect
+    containerId,
+    toolbarId,
+    insertEntity,
+    onCommit,
+    insertMentionUser,
+    onEmojiSelect,
+    emojiButtonRef,
   } = useVChatEditor({ placeholder: 'Aa' });
+
   return (
     <VChatEditorWrapper>
       <Container id={containerId} />
@@ -237,7 +243,7 @@ const VChatEditor = () => {
               />
             )}
           >
-            <ToobarButton>
+            <ToobarButton ref={emojiButtonRef}>
               <MoodSmile />
             </ToobarButton>
           </StyledEmojiPopover>

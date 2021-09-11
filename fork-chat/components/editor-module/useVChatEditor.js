@@ -4,15 +4,33 @@ import MarkdownActivity from './MarkdownActivity';
 import { uniqueId } from '@fork-ui/utils/helpers';
 
 import './blots';
+import './mention-user';
+
+const suggestPeople = () => new Promise((resolve) => {
+  setTimeout(() => {
+    resolve([
+      { id: '01', value: 'Hoang Nguyen' },
+      { id: '02', value: 'Hoang Nguyen 2' },
+      { id: '03', value: 'Hoang Nguyen 3' },
+    ])
+  }, 100);
+});
 
 export default ({ placeholder }) => {
   const editorRef = useRef({}).current;
+  const emojiButtonRef = useRef();
   const containerId = useMemo(() => uniqueId('containerId'), []);
   const toolbarId = useMemo(() => uniqueId('toolbarId'), []);
   useLayoutEffect(() => {
     editorRef.editor = new Quill(`#${containerId}`, {
       modules: {
         toolbar: `#${toolbarId}`,
+        mentionUser: {
+          source: async function(searchTerm, renderList) {
+            const matchedPeople = await suggestPeople(searchTerm);
+            renderList(matchedPeople);
+          }
+        }
       },
       placeholder,
     });
@@ -87,6 +105,7 @@ export default ({ placeholder }) => {
   }, []);
 
   const onEmojiSelect = useCallback((emoji) => {
+    emojiButtonRef.current._tippy.hide();
     const selection = editorRef.editor.getSelection();
     const insertIndex = selection ? selection.index : 1;
     editorRef.editor.insertEmbed(insertIndex, 'emoji', emoji, 'api');
@@ -100,5 +119,6 @@ export default ({ placeholder }) => {
     insertMentionUser,
     onCommit,
     onEmojiSelect,
+    emojiButtonRef,
   };
 };
