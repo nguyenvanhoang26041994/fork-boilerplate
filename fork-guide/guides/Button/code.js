@@ -189,9 +189,8 @@ export default () => {
 export const Pin = {
   code: `import React, { useRef, useState, useCallback } from 'react';
 import styled from 'styled-components';
+import cn from 'classnames';
 import { Wrapper } from '@fork-guide/components';
-import { Button, ButtonGroup } from '@fork-ui/core';
-import { Power, Message, Bell } from '@fork-ui/icons/lazy';
 
 const StyledInput = styled.input\`
   outline: 0 !important;
@@ -204,18 +203,22 @@ const StyledInput = styled.input\`
   font-size: 60px;
   text-align: center;
   vertical-align: middle;
-  color: var(--primary);
+  color: var(--red-5);
+\`;
+
+const StyledWrapper = styled(Wrapper)\`
+  &.--is-finished {
+    > \${StyledInput} {
+      border-color: var(--primary);
+      color: var(--primary);
+    }  
+  }
 \`;
 
 const Input = ({ onValidValue, onClean, onPaste }) => {
   const [value, setValue] = useState();
   const ref = useRef();
   const onChange = useCallback((e) => {
-    if (/^\d\$/g.test(e.target.value)) {
-      setValue(e.target.value);
-      onValidValue && onValidValue(ref);
-      return;
-    }
     if (e.target.value === '') {
       setValue(e.target.value);
       onClean && onClean(ref);
@@ -224,7 +227,15 @@ const Input = ({ onValidValue, onClean, onPaste }) => {
 
     if (/^\d{4}\$/g.test(e.target.value)) {
       onPaste && onPaste(ref);
+      return;
     }
+
+    if (/^\d+\$/g.test(e.target.value)) {
+      setValue(e.target.value[e.target.value.length - 1]);
+      onValidValue && onValidValue(ref);
+      return;
+    }
+    return setValue('');
   }, [onValidValue, setValue, onPaste, onClean]);
 
   return (
@@ -238,14 +249,27 @@ const Input = ({ onValidValue, onClean, onPaste }) => {
 
 export default () => {
   const wref = useRef();
+  const [isFinished, setIsFinished] = useState(false);
+  const checkFinished = useCallback(() => {
+    let validCount = 0;
+    const inputNodes = wref.current.querySelectorAll('input');
+    inputNodes.forEach((node) => {
+      if (/^\d+\$/g.test(node.value)) {
+        validCount++;
+      }
+    });
+    setIsFinished(validCount === inputNodes.length);
+  }, [setIsFinished]);
   const onValidValue = useCallback((index) => {
     const nextInput = wref.current.querySelectorAll('input')[index + 1];
     nextInput && nextInput.focus();
-  }, []);
+    checkFinished();
+  }, [checkFinished]);
   const onClean = useCallback((index) => {
     const prevInput = wref.current.querySelectorAll('input')[index - 1];
     prevInput && prevInput.focus();
-  }, []);
+    checkFinished();
+  }, [checkFinished]);
   const onValidPasteForFirstInput = useCallback((firstInputRef) => {
     const values = firstInputRef.current.value;
     const inputNodes = wref.current.querySelectorAll('input');
@@ -254,9 +278,10 @@ export default () => {
       nativeInputValueSetter.call(node, values[index]);
       node.dispatchEvent(new Event('input', { bubbles: true }));
     });
-  }, []);
+    checkFinished();
+  }, [checkFinished]);
   return (
-    <Wrapper className="mb-5" ref={wref}>
+    <StyledWrapper className={cn({ '--is-finished': isFinished })} ref={wref}>
       <Input
         onValidValue={() => onValidValue(0)}
         onClean={() => onClean(0)}
@@ -274,7 +299,7 @@ export default () => {
         onValidValue={() => onValidValue(3)}
         onClean={() => onClean(3)}
       />
-    </Wrapper>
+    </StyledWrapper>
   );
 };
 `,
