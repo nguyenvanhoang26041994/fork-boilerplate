@@ -10,6 +10,7 @@ import Size from './Size';
 import WithBadge from './WithBadge';
 import WithIcon from './WithIcon';
 import WithLoader from './WithLoader';
+import Pin from './Pin';
 // __INJECTED_LINE__
 
 import * as allCode from './code';
@@ -26,6 +27,7 @@ const demos = [
   { Component: WithBadge, name: 'WithBadge' },
   { Component: WithIcon, name: 'WithIcon' },
   { Component: WithLoader, name: 'WithLoader' },
+  { Component: Pin, name: 'Pin' },
   // __INJECTED_ITEM__
 ];
 

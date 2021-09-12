@@ -112,7 +112,7 @@ const Container = styled.div`
   }
 
   .ql-mention-user {
-    background-color: var(--blue-1);
+    background-color: rgba(159, 202, 247, 0.1);
     color: var(--blue-5);
     border-radius: 5px;
   }

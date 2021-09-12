@@ -21,6 +21,7 @@ export default ({ placeholder }) => {
   const emojiButtonRef = useRef();
   const containerId = useMemo(() => uniqueId('containerId'), []);
   const toolbarId = useMemo(() => uniqueId('toolbarId'), []);
+
   useLayoutEffect(() => {
     editorRef.editor = new Quill(`#${containerId}`, {
       modules: {
@@ -30,7 +31,7 @@ export default ({ placeholder }) => {
             const matchedPeople = await suggestPeople(searchTerm);
             renderList(matchedPeople);
           }
-        }
+        },
       },
       placeholder,
     });
