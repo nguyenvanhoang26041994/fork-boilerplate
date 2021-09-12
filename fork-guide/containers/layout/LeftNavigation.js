@@ -351,6 +351,12 @@ const LeftNavigation = ({ minimal }) => {
             </div>
             <div className="__name">Form Field</div>
           </MenuItemEnhander>
+          <MenuItemEnhander path={`${path}/pincode`}>
+            <div className="__avatar">
+              <DeviceLaptop />
+            </div>
+            <div className="__name">Pincode</div>
+          </MenuItemEnhander>
         </MenuWrapper>
       </Wrapper>
     </Container>

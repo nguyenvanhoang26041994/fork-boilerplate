@@ -40,6 +40,7 @@ const SearchboxGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-gui
 const NotificationGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Notification'));
 const MultiSelectGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/MultiSelect'));
 const ChipGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Chip'));
+const PincodeGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Pincode'));
 // __INJECTED_LINE_GUIDE__
 
 const StyleGuide = () => {
@@ -79,6 +80,7 @@ const StyleGuide = () => {
       <Route path={`${path}/notification`} component={NotificationGuides} />
       <Route path={`${path}/multiselect`} component={MultiSelectGuides} />
       <Route path={`${path}/chip`} component={ChipGuides} />
+      <Route path={`${path}/pincode`} component={PincodeGuides} />
       {/* __INJECTED_LINE_ROUTER__ */}
     </Switch>
   );
