@@ -26,7 +26,8 @@
     "sub:fork-ui": "git submodule add https://github.com/nguyenvanhoang26041994/fork-ui-v2.git",
     "sub:tabler-icons": "git submodule add https://github.com/nguyenvanhoang26041994/tabler-icons.git",
     "init:start": "yarn sub:update",
-    "deploy": "yarn build && firebase deploy --only hosting:fork-boilerplate"
+    "deploy": "yarn build && firebase deploy --only hosting:fork-boilerplate",
+    "build-chat-app": "rimraf \"../public/chat-app\" && cross-env NODE_ENV=development webpack --config webpack/webpack.chat-app.js"
   },
   "author": "Hoang Nguyen",
   "license": "MIT",
