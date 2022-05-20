@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar, AvatarGroup, Badge } from '@fork-ui/core';
+import { Avatar, AvatarGroup, Badge } from 'fork-design';
 import { avatarLink } from '@fork-guide/staff';
 
 export default () => {

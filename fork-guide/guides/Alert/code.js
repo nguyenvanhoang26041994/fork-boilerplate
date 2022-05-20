@@ -1,7 +1,7 @@
 export const Alert = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Alert, Loader } from '@fork-ui/core';
+import { Alert, Loader } from 'fork-design';
 import { Trash, Check } from '@fork-ui/icons/lazy';
 
 export default () => {
@@ -36,7 +36,7 @@ export default () => {
 export const PushAlert = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Alert, Button, ButtonGroup } from '@fork-ui/core';
+import { Alert, Button, ButtonGroup } from 'fork-design';
 
 const pushAlert = (placement) => {
   Alert.ref.push(({ doClose }) => {
@@ -70,7 +70,7 @@ export default () => {
 export const UpdateAlert = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Alert, Button, Loader } from '@fork-ui/core';
+import { Alert, Button, Loader } from 'fork-design';
 import { Check } from '@fork-ui/icons/lazy';
 
 const ref = {

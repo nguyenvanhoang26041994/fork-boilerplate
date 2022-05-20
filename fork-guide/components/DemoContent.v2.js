@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Skeleton } from '@fork-ui/core';
+import { Flex, Skeleton } from 'fork-design';
 
 const DemoContent = () => {
   return (

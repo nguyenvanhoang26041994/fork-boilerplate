@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Progress, Flex, Button, ButtonGroup } from '@fork-ui/core';
+import { Progress, Flex, Button, ButtonGroup } from 'fork-design';
 
 export default () => {
   const [status, setStatus] = useState();

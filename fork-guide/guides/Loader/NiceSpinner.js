@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Loader } from '@fork-ui/core';
+import { Loader } from 'fork-design';
 
 export default () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Alert, Loader } from '@fork-ui/core';
+import { Alert, Loader } from 'fork-design';
 import { Trash, Check } from '@fork-ui/icons/lazy';
 
 export default () => {

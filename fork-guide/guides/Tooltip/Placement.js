@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip, Button } from '@fork-ui/core';
+import { Tooltip, Button } from 'fork-design';
 
 export default () => {
   return (

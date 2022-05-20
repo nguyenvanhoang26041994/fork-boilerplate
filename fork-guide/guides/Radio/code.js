@@ -1,7 +1,7 @@
 export const Color = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Radio } from '@fork-ui/core';
+import { Radio } from 'fork-design';
 
 export default () => {
   return (
@@ -27,7 +27,7 @@ export default () => {
 export const Controlled = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Radio } from '@fork-ui/core';
+import { Radio } from 'fork-design';
 
 export default () => {
   const [{ value, onChange }] = Radio.useRadioGroup('value-2');
@@ -59,7 +59,7 @@ export default () => {
 export const Radio = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Radio } from '@fork-ui/core';
+import { Radio } from 'fork-design';
 
 export default () => {
   return (
@@ -78,7 +78,7 @@ export default () => {
 export const Size = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Radio } from '@fork-ui/core';
+import { Radio } from 'fork-design';
 
 export default () => {
   return (

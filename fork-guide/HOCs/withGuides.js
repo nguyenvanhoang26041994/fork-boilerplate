@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { Flex, Sticky, Button, ButtonGroup } from '@fork-ui/core';
+import { Flex, Sticky, Button, ButtonGroup } from 'fork-design';
 import { Copy } from '@fork-ui/icons/lazy';
 import copyToClipboard from '@fork-ui/utils/copyToClipboard';
 import DemoBox from '@fork-guide/components/DemoBox';

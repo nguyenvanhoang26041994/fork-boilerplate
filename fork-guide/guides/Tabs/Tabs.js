@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, Flex } from '@fork-ui/core';
+import { Tabs, Flex } from 'fork-design';
 import { Refresh } from '@fork-ui/icons/lazy';
 import { DemoContent  } from '@fork-guide/components';
 

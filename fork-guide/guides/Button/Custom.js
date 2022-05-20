@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 import { Copy, Notification } from '@fork-ui/icons/lazy';
 
 const GradientButton = styled(Button)`

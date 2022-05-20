@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 
 export default () => {
   return (

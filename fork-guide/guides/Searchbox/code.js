@@ -1,7 +1,7 @@
 export const Searchbox = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Searchbox } from '@fork-ui/core';
+import { Searchbox } from 'fork-design';
 
 export default () => {
   return (

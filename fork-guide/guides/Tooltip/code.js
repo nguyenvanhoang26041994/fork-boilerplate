@@ -2,7 +2,7 @@ export const Custom = {
   code: `import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Tooltip, Button } from '@fork-ui/core';
+import { Tooltip, Button } from 'fork-design';
 
 const PrimaryTooltip = styled(Tooltip)\`
   .tippy-content {
@@ -54,7 +54,7 @@ export default () => {
 
 export const Placement = {
   code: `import React from 'react';
-import { Tooltip, Button } from '@fork-ui/core';
+import { Tooltip, Button } from 'fork-design';
 
 export default () => {
   return (

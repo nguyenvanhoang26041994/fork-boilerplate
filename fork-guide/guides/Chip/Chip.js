@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Chip } from '@fork-ui/core';
+import { Chip } from 'fork-design';
 
 export default () => {
   return (

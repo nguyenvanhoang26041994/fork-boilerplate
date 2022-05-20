@@ -1,7 +1,7 @@
 export const Avatar = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar, AvatarGroup, Badge } from '@fork-ui/core';
+import { Avatar, AvatarGroup, Badge } from 'fork-design';
 import {
   avatarLink,
   avatarLink2,
@@ -30,7 +30,7 @@ export default () => {
 export const AvatarGroup = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar, AvatarGroup, Badge } from '@fork-ui/core';
+import { Avatar, AvatarGroup, Badge } from 'fork-design';
 import { avatarLink } from '@fork-guide/staff';
 
 export default () => {
@@ -53,7 +53,7 @@ export default () => {
 export const Color = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar } from '@fork-ui/core';
+import { Avatar } from 'fork-design';
 import { avatarLink } from '@fork-guide/staff';
 
 export default () => {
@@ -73,7 +73,7 @@ export const CustomAvatarGroup = {
   code: `import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar, AvatarGroup, Badge } from '@fork-ui/core';
+import { Avatar, AvatarGroup, Badge } from 'fork-design';
 import {
   avatarLink,
   avatarLink2,
@@ -121,7 +121,7 @@ export default () => {
 export const Size = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar } from '@fork-ui/core';
+import { Avatar } from 'fork-design';
 
 export default () => {
   return (
@@ -139,7 +139,7 @@ export default () => {
 export const WithBadge = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar, Badge } from '@fork-ui/core';
+import { Avatar, Badge } from 'fork-design';
 import { avatarLink } from '@fork-guide/staff';
 
 export default () => {

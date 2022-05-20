@@ -1,6 +1,6 @@
 import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Drawer, Button } from '@fork-ui/core';
+import { Drawer, Button } from 'fork-design';
 
 export default () => {
   const { isOpen, doOpen, doClose } = Drawer.useDrawer(false);

@@ -1,7 +1,7 @@
 export const AutoComplete = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { AutoComplete } from '@fork-ui/core';
+import { AutoComplete } from 'fork-design';
 
 const options = [
   { uid: 1, text: 'Hoang Nguyen' },

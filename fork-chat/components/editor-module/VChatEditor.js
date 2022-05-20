@@ -6,7 +6,7 @@ import {
   MoodSmile, At, Speakerphone, Strikethrough,
   Bolt, CirclePlus, Code, Link,
 } from '@fork-ui/icons/lazy';
-import { Popover } from '@fork-ui/core';
+import { Popover } from 'fork-design';
 import { NimblePicker } from 'emoji-mart';
 import useVChatEditor from './useVChatEditor';
 

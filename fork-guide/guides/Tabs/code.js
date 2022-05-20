@@ -1,6 +1,6 @@
 export const Tabs = {
   code: `import React from 'react';
-import { Tabs, Flex } from '@fork-ui/core';
+import { Tabs, Flex } from 'fork-design';
 import { Refresh } from '@fork-ui/icons/lazy';
 import { DemoContent  } from '@fork-guide/components';
 
@@ -51,7 +51,7 @@ export default () => {
 export const WithButtonGroup = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Tabs, Button, ButtonGroup, Flex } from '@fork-ui/core';
+import { Tabs, Button, ButtonGroup, Flex } from 'fork-design';
 import { RefreshAlert } from '@fork-ui/icons/lazy';
 
 export default () => {

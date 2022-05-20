@@ -1,7 +1,7 @@
 export const Accordion = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Flex, Collapse } from '@fork-ui/core';
+import { Flex, Collapse } from 'fork-design';
 import {
   PlaneDeparture,
   Share,
@@ -66,7 +66,7 @@ export default () => {
 export const Collapse = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Flex, Collapse } from '@fork-ui/core';
+import { Flex, Collapse } from 'fork-design';
 import {
   PlaneDeparture,
   Share,

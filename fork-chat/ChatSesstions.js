@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import styled from 'styled-components';
-import { Avatar } from '@fork-ui/core';
+import { Avatar } from 'fork-design';
 
 const ChatSession = styled.div`
   display: flex;

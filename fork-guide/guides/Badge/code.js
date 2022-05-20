@@ -1,7 +1,7 @@
 export const Badge = {
   code: `import React from 'react';
 import { Wrapper, FancyBox } from '@fork-guide/components';
-import { Badge } from '@fork-ui/core';
+import { Badge } from 'fork-design';
 
 export default () => {
   return (
@@ -28,7 +28,7 @@ export default () => {
 export const Color = {
   code: `import React from 'react';
 import { Wrapper, FancyBox } from '@fork-guide/components';
-import { Badge } from '@fork-ui/core';
+import { Badge } from 'fork-design';
 
 export default () => {
   return (
@@ -52,7 +52,7 @@ export default () => {
 export const Custom = {
   code: `import React from 'react';
 import { Wrapper, FancyBox } from '@fork-guide/components';
-import { Badge, Button } from '@fork-ui/core';
+import { Badge, Button } from 'fork-design';
 import { Pencil } from '@fork-ui/icons/lazy';
 
 const PureBadge = Badge.PureBadge;
@@ -81,7 +81,7 @@ export default () => {
 export const OverflowCount = {
   code: `import React from 'react';
 import { Wrapper, FancyBox } from '@fork-guide/components';
-import { Badge } from '@fork-ui/core';
+import { Badge } from 'fork-design';
 
 export default () => {
   return (
@@ -106,7 +106,7 @@ export default () => {
 export const Overlap = {
   code: `import React from 'react';
 import { Wrapper, FancyBox } from '@fork-guide/components';
-import { Badge } from '@fork-ui/core';
+import { Badge } from 'fork-design';
 
 export default () => {
   return (
@@ -132,7 +132,7 @@ export const Placement = {
 import styled from 'styled-components';
 import cn from 'classnames';
 import { FancyBox } from '@fork-guide/components';
-import { Badge, Flex, Switch, Button } from '@fork-ui/core';
+import { Badge, Flex, Switch, Button } from 'fork-design';
 
 const SwitchButton = styled.div\`
   display: flex;

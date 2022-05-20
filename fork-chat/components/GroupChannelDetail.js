@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
   Dialog, Avatar, AvatarGroup, Button, Collapse,
   Image, GridImage, Modal, Badge, Popover
-} from '@fork-ui/core';
+} from 'fork-design';
 import GalleryPlayer from '@fork-ui/gallery/GalleryPlayer'
 import {
   BellOff, UserPlus, Logout, Search, Pencil, ThumbUp,

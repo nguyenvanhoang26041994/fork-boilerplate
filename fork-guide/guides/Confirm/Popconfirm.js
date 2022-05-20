@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper, DemoContentV2 } from '@fork-guide/components';
-import { Popconfirm, Button } from '@fork-ui/core';
+import { Popconfirm, Button } from 'fork-design';
 
 export default () => {
   return (

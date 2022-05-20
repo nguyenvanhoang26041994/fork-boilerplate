@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Alert, Button, Loader } from '@fork-ui/core';
+import { Alert, Button, Loader } from 'fork-design';
 import { Check } from '@fork-ui/icons/lazy';
 
 const ref = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from '@fork-ui/core';
+import { Flex } from 'fork-design';
 
 import Demo from './Demo';
 

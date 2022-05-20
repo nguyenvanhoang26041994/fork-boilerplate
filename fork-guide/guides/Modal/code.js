@@ -1,7 +1,7 @@
 export const Centered = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Modal, Button } from '@fork-ui/core';
+import { Modal, Button } from 'fork-design';
 
 export default () => {
   const { isOpen, doOpen, doClose } = Modal.useModal(false);
@@ -32,7 +32,7 @@ export default () => {
 export const ClickOutSide = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Modal, Button } from '@fork-ui/core';
+import { Modal, Button } from 'fork-design';
 
 export default () => {
   const { isOpen, doOpen, doClose } = Modal.useModal(false);
@@ -63,7 +63,7 @@ export default () => {
 export const CustomCloseIcon = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Modal, Button } from '@fork-ui/core';
+import { Modal, Button } from 'fork-design';
 import { Minus } from '@fork-ui/icons/lazy';
 
 export default () => {
@@ -95,7 +95,7 @@ export default () => {
 export const CustomHeader = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Modal, Button } from '@fork-ui/core';
+import { Modal, Button } from 'fork-design';
 import { Minus, Refresh } from '@fork-ui/icons/lazy';
 
 export default () => {
@@ -136,7 +136,7 @@ export default () => {
 export const MarginView = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Modal, Button } from '@fork-ui/core';
+import { Modal, Button } from 'fork-design';
 
 export default () => {
   const { isOpen, doOpen, doClose } = Modal.useModal(false);
@@ -167,7 +167,7 @@ export default () => {
 export const Modal = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Modal, Button } from '@fork-ui/core';
+import { Modal, Button } from 'fork-design';
 
 export default () => {
   const { isOpen, doOpen, doClose } = Modal.useModal(false);
@@ -198,7 +198,7 @@ export default () => {
 export const Width = {
   code: `import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Modal, Button } from '@fork-ui/core';
+import { Modal, Button } from 'fork-design';
 
 export default () => {
   const { isOpen, doOpen, doClose } = Modal.useModal(false);

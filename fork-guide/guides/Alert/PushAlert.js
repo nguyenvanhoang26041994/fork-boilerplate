@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Alert, Button, ButtonGroup } from '@fork-ui/core';
+import { Alert, Button, ButtonGroup } from 'fork-design';
 
 const pushAlert = (placement) => {
   Alert.ref.push(({ doClose }) => {

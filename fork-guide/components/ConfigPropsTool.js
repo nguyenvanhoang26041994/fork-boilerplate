@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Textbox, Switch, Radio, Flex } from '@fork-ui/core';
+import { Textbox, Switch, Radio, Flex } from 'fork-design';
 import { X } from '@fork-ui/icons/lazy';
 
 const StyledTextbox = styled(Textbox)`

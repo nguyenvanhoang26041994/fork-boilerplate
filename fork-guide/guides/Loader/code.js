@@ -1,7 +1,7 @@
 export const Dot = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Loader } from '@fork-ui/core';
+import { Loader } from 'fork-design';
 
 export default () => {
   return (
@@ -19,7 +19,7 @@ export default () => {
 export const Loader = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Loader } from '@fork-ui/core';
+import { Loader } from 'fork-design';
 
 export default () => {
   return (
@@ -38,7 +38,7 @@ export default () => {
 export const NiceSpinner = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Loader } from '@fork-ui/core';
+import { Loader } from 'fork-design';
 
 export default () => {
   return (
@@ -56,7 +56,7 @@ export default () => {
 export const Spinner = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Loader } from '@fork-ui/core';
+import { Loader } from 'fork-design';
 
 export default () => {
   return (
@@ -74,7 +74,7 @@ export default () => {
 export const Wave = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Loader } from '@fork-ui/core';
+import { Loader } from 'fork-design';
 
 export default () => {
   return (

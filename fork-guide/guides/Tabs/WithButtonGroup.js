@@ -1,6 +1,6 @@
 import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Tabs, Button, ButtonGroup, Flex } from '@fork-ui/core';
+import { Tabs, Button, ButtonGroup, Flex } from 'fork-design';
 import { RefreshAlert } from '@fork-ui/icons/lazy';
 
 export default () => {

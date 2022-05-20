@@ -1,6 +1,6 @@
 import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Dialog, Button } from '@fork-ui/core';
+import { Dialog, Button } from 'fork-design';
 import { Send } from '@fork-ui/icons/lazy';
 
 export default () => {

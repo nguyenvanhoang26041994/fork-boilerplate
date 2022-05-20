@@ -1,7 +1,7 @@
 export const Disabled = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { FormField } from '@fork-ui/core';
+import { FormField } from 'fork-design';
 
 export default () => {
   return (
@@ -40,7 +40,7 @@ export default () => {
 export const Filled = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { FormField } from '@fork-ui/core';
+import { FormField } from 'fork-design';
 
 export default () => {
   return (
@@ -67,7 +67,7 @@ export default () => {
 export const FormField = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { FormField, Textbox, Textarea, Password, Select, MultiSelect } from '@fork-ui/core';
+import { FormField, Textbox, Textarea, Password, Select, MultiSelect } from 'fork-design';
 
 export default () => {
   return (

@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Checkbox } from '@fork-ui/core';
+import { Checkbox } from 'fork-design';
 
 export default () => {
   const [checked, setChecked] = useState(false);

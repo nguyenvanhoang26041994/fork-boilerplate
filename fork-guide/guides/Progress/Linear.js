@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Progress } from '@fork-ui/core';
+import { Progress } from 'fork-design';
 
 export default () => {
   return (

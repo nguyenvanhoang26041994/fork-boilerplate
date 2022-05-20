@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Radio } from '@fork-ui/core';
+import { Radio } from 'fork-design';
 
 export default () => {
   return (

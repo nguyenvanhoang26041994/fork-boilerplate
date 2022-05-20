@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { trim } from 'lodash';
 
-import { Button, Textbox } from '@fork-ui/core';
+import { Button, Textbox } from 'fork-design';
 import { Plus, Photo, ThumbUp, Send, Location, MoodSmile } from '@fork-ui/icons/lazy';
 const StyledChatInput = styled(Textbox)`
   border-color: transparent;

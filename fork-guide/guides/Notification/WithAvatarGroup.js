@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Notification, Avatar, AvatarGroup } from '@fork-ui/core';
+import { Notification, Avatar, AvatarGroup } from 'fork-design';
 import { Bell } from '@fork-ui/icons/lazy';
 import {
   avatarLink,

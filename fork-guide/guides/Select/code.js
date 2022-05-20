@@ -1,6 +1,6 @@
 export const AsyncSelect = {
   code: `import React, { useCallback } from 'react';
-import { AsyncSelect } from '@fork-ui/core';
+import { AsyncSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {
@@ -41,8 +41,8 @@ export const ControledAsyncSelect = {
   code: `import React, { useRef, useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar, Badge } from '@fork-ui/core';
-import { AsyncSelect } from '@fork-ui/core';
+import { Avatar, Badge } from 'fork-design';
+import { AsyncSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {
@@ -170,7 +170,7 @@ export default () => {
 export const ControlledSelect = {
   code: `import React, { useState } from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Select } from '@fork-ui/core';
+import { Select } from 'fork-design';
 
 const options = [
   {
@@ -225,8 +225,8 @@ export default () => {
 export const Custom = {
   code: `import React from 'react';
 import styled from 'styled-components';
-import { Avatar, Badge } from '@fork-ui/core';
-import { Select } from '@fork-ui/core';
+import { Avatar, Badge } from 'fork-design';
+import { Select } from 'fork-design';
 import {
   avatarLink,
   avatarLink2,
@@ -307,8 +307,8 @@ export default () => {
 export const CustomAsyncSelect = {
   code: `import React, { useRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { Avatar, Badge } from '@fork-ui/core';
-import { AsyncSelect } from '@fork-ui/core';
+import { Avatar, Badge } from 'fork-design';
+import { AsyncSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {
@@ -427,8 +427,8 @@ export const Seachable = {
   code: `import React, { useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar, Badge } from '@fork-ui/core';
-import { Select } from '@fork-ui/core';
+import { Avatar, Badge } from 'fork-design';
+import { Select } from 'fork-design';
 import {
   avatarLink,
   avatarLink2,
@@ -537,8 +537,8 @@ export default () => {
 export const Select = {
   code: `import React, { useRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { Avatar, Badge } from '@fork-ui/core';
-import { Select, AsyncSelect } from '@fork-ui/core';
+import { Avatar, Badge } from 'fork-design';
+import { Select, AsyncSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {

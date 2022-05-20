@@ -1,6 +1,6 @@
 export const Grid = {
   code: `import React from 'react';
-import { GridImage, Image } from '@fork-ui/core';
+import { GridImage, Image } from 'fork-design';
 
 export default () => {
   return (

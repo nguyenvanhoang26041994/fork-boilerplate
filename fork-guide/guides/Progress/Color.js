@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Wrapper } from '@fork-guide/components';
 import useUniqueId from '@fork-ui/hooks/useUniqueId';
-import { Progress } from '@fork-ui/core';
+import { Progress } from 'fork-design';
 
 export default () => {
   const linearGradientId = useUniqueId();

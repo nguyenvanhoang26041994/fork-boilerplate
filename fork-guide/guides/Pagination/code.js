@@ -1,6 +1,6 @@
 export const Pagination = {
   code: `import React from 'react';
-import { Pagination } from '@fork-ui/core';
+import { Pagination } from 'fork-design';
 
 export default () => {
   const [{

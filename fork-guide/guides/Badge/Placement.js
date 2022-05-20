@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
 import { FancyBox } from '@fork-guide/components';
-import { Badge, Flex, Switch, Button } from '@fork-ui/core';
+import { Badge, Flex, Switch, Button } from 'fork-design';
 
 const SwitchButton = styled.div`
   display: flex;

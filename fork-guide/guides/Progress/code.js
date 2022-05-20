@@ -2,7 +2,7 @@ export const Color = {
   code: `import React, { useMemo } from 'react';
 import { Wrapper } from '@fork-guide/components';
 import useUniqueId from '@fork-ui/hooks/useUniqueId';
-import { Progress } from '@fork-ui/core';
+import { Progress } from 'fork-design';
 
 export default () => {
   const linearGradientId = useUniqueId();
@@ -38,7 +38,7 @@ export default () => {
 export const Linear = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Progress } from '@fork-ui/core';
+import { Progress } from 'fork-design';
 
 export default () => {
   return (
@@ -54,7 +54,7 @@ export default () => {
 export const Progress = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Progress } from '@fork-ui/core';
+import { Progress } from 'fork-design';
 
 export default () => {
   return (
@@ -71,7 +71,7 @@ export default () => {
 
 export const SimulateProgress = {
   code: `import React, { useState, useCallback } from 'react';
-import { Progress, Flex, Button, ButtonGroup } from '@fork-ui/core';
+import { Progress, Flex, Button, ButtonGroup } from 'fork-design';
 
 export default () => {
   const [status, setStatus] = useState();
@@ -115,7 +115,7 @@ export default () => {
 export const Size = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Progress } from '@fork-ui/core';
+import { Progress } from 'fork-design';
 
 export default () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 import { Braces } from '@fork-ui/icons/lazy';
 
 const DemoBoxWrapper = styled.div`

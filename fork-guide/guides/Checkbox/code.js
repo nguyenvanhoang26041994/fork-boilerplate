@@ -1,7 +1,7 @@
 export const Checkbox = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Checkbox } from '@fork-ui/core';
+import { Checkbox } from 'fork-design';
 
 export default () => {
   return (
@@ -20,7 +20,7 @@ export default () => {
 export const Color = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Checkbox } from '@fork-ui/core';
+import { Checkbox } from 'fork-design';
 
 export default () => {
   return (
@@ -40,7 +40,7 @@ export default () => {
 export const Controlled = {
   code: `import React, { useState, useCallback } from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Checkbox } from '@fork-ui/core';
+import { Checkbox } from 'fork-design';
 
 export default () => {
   const [checked, setChecked] = useState(false);
@@ -60,7 +60,7 @@ export default () => {
 export const Size = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Checkbox } from '@fork-ui/core';
+import { Checkbox } from 'fork-design';
 
 export default () => {
   return (
@@ -78,7 +78,7 @@ export default () => {
 export const UnControlled = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Checkbox } from '@fork-ui/core';
+import { Checkbox } from 'fork-design';
 
 export default () => {
   return (

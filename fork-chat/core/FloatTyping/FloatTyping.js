@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { AvatarGroup, Loader } from '@fork-ui/core';
+import { AvatarGroup, Loader } from 'fork-design';
 
 const FloatTyping = ({ className, children, ...otherProps }) => {
   return (

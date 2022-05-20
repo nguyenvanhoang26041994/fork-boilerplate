@@ -13,7 +13,7 @@ import {
   Memo,
   Searchbox,
   Notification,
-} from '@fork-ui/core';
+} from 'fork-design';
 import {
   Settings, Moon, ThumbUp,
   Phone, Video, AlertCircle, Dots,

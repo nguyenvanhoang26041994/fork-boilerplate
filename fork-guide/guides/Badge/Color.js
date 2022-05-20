@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper, FancyBox } from '@fork-guide/components';
-import { Badge } from '@fork-ui/core';
+import { Badge } from 'fork-design';
 
 export default () => {
   return (

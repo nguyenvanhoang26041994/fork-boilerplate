@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 import DarkMode from '@contexts/DarkMode';
 import { IndentDecrease, Search, IndentIncrease, BulbOff, Moon } from '@fork-ui/icons/lazy';
 

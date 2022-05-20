@@ -1,6 +1,6 @@
 export const Placement = {
   code: `import React from 'react';
-import { Popover, Button } from '@fork-ui/core';
+import { Popover, Button } from 'fork-design';
 import { DemoContentV2 } from '@fork-guide/components';
 
 export default () => {

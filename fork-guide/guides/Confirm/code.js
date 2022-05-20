@@ -1,7 +1,7 @@
 export const Confirm = {
   code: `import React from 'react';
 import { Wrapper, DemoContentV2 } from '@fork-guide/components';
-import { PureConfirm } from '@fork-ui/core';
+import { PureConfirm } from 'fork-design';
 
 export default () => {
   return (
@@ -19,7 +19,7 @@ export default () => {
 export const CustomText = {
   code: `import React from 'react';
 import { Wrapper, DemoContentV2 } from '@fork-guide/components';
-import { Popconfirm, Button } from '@fork-ui/core';
+import { Popconfirm, Button } from 'fork-design';
 
 export default () => {
   return (
@@ -36,7 +36,7 @@ export default () => {
 
 export const Placement = {
   code: `import React from 'react';
-import { Popconfirm, Button } from '@fork-ui/core';
+import { Popconfirm, Button } from 'fork-design';
 import { DemoContentV2 } from '@fork-guide/components';
 
 export default () => {
@@ -115,7 +115,7 @@ export default () => {
 export const Popconfirm = {
   code: `import React from 'react';
 import { Wrapper, DemoContentV2 } from '@fork-guide/components';
-import { Popconfirm, Button } from '@fork-ui/core';
+import { Popconfirm, Button } from 'fork-design';
 
 export default () => {
   return (

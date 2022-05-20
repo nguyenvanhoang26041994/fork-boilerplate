@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar, AvatarGroup, Badge } from '@fork-ui/core';
+import { Avatar, AvatarGroup, Badge } from 'fork-design';
 import {
   avatarLink,
   avatarLink2,

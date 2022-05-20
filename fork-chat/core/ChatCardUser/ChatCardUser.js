@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
 import PropType from 'prop-types';
-import { Badge, Avatar } from '@fork-ui/core';
+import { Badge, Avatar } from 'fork-design';
 
 import ChatCard from '../ChatCard';
 

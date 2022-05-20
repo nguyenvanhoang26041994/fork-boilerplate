@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stepper } from '@fork-ui/core';
+import { Stepper } from 'fork-design';
 
 export default () => {
   return (

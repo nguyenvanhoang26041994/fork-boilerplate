@@ -1,6 +1,6 @@
 import React from 'react';
 import { DemoContent } from '@fork-guide/components';
-import { Modal, Button } from '@fork-ui/core';
+import { Modal, Button } from 'fork-design';
 
 export default () => {
   const { isOpen, doOpen, doClose } = Modal.useModal(false);

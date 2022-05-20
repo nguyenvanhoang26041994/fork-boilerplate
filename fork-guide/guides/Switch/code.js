@@ -1,7 +1,7 @@
 export const Color = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Switch } from '@fork-ui/core';
+import { Switch } from 'fork-design';
 
 export default () => {
   return (
@@ -19,7 +19,7 @@ export default () => {
 export const Controlled = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Switch } from '@fork-ui/core';
+import { Switch } from 'fork-design';
 
 export default () => {
   const [{ checked, onChange }] = Switch.useSwitch(false);
@@ -44,7 +44,7 @@ export default () => {
 export const Disabled = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Switch } from '@fork-ui/core';
+import { Switch } from 'fork-design';
 
 export default () => {
   return (
@@ -62,7 +62,7 @@ export default () => {
 export const Loading = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Switch } from '@fork-ui/core';
+import { Switch } from 'fork-design';
 
 export default () => {
   return (
@@ -79,7 +79,7 @@ export default () => {
 export const Size = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Switch } from '@fork-ui/core';
+import { Switch } from 'fork-design';
 
 export default () => {
   return (
@@ -97,7 +97,7 @@ export default () => {
 export const Switch = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Switch } from '@fork-ui/core';
+import { Switch } from 'fork-design';
 
 export default () => {
   return (

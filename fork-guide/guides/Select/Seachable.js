@@ -1,8 +1,8 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar, Badge } from '@fork-ui/core';
-import { Select } from '@fork-ui/core';
+import { Avatar, Badge } from 'fork-design';
+import { Select } from 'fork-design';
 import {
   avatarLink,
   avatarLink2,

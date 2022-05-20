@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { FormField } from '@fork-ui/core';
+import { FormField } from 'fork-design';
 
 export default () => {
   return (

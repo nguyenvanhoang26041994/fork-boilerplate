@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup } from '@fork-ui/core';
+import { Button, ButtonGroup } from 'fork-design';
 
 export default () => {
   return (

@@ -1,7 +1,7 @@
 export const Bordered = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 
 export default () => {
   return (
@@ -20,7 +20,7 @@ export default () => {
 export const Button = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Button, ButtonGroup } from '@fork-ui/core';
+import { Button, ButtonGroup } from 'fork-design';
 import { Power, Message, Bell } from '@fork-ui/icons/lazy';
 
 export default () => {
@@ -46,7 +46,7 @@ export default () => {
 export const Color = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 
 export default () => {
   return (
@@ -66,7 +66,7 @@ export const Custom = {
   code: `import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 import { Copy, Notification } from '@fork-ui/icons/lazy';
 
 const GradientButton = styled(Button)\`
@@ -108,7 +108,7 @@ export default () => {
 export const Disabled = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 import { Cast } from '@fork-ui/icons/lazy';
 
 export default () => {
@@ -128,7 +128,7 @@ export default () => {
 
 export const FluidGroupButton = {
   code: `import React from 'react';
-import { Button, ButtonGroup } from '@fork-ui/core';
+import { Button, ButtonGroup } from 'fork-design';
 
 export default () => {
   return (
@@ -158,7 +158,7 @@ export default () => {
 export const GroupButton = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Button, ButtonGroup } from '@fork-ui/core';
+import { Button, ButtonGroup } from 'fork-design';
 import { Power, Message, Bell } from '@fork-ui/icons/lazy';
 
 export default () => {
@@ -309,7 +309,7 @@ export default () => {
 export const Size = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 
 export default () => {
   return (
@@ -327,7 +327,7 @@ export default () => {
 export const WithBadge = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Button, Badge } from '@fork-ui/core';
+import { Button, Badge } from 'fork-design';
 import { Bell, Inbox } from '@fork-ui/icons/lazy';
 
 export default () => {
@@ -349,7 +349,7 @@ export default () => {
 export const WithIcon = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 import { Power } from '@fork-ui/icons/lazy';
 
 export default () => {
@@ -380,7 +380,7 @@ export default () => {
 export const WithLoader = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Button } from '@fork-ui/core';
+import { Button } from 'fork-design';
 import { Power } from '@fork-ui/icons/lazy';
 
 export default () => {

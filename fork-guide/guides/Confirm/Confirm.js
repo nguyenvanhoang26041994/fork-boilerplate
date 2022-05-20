@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper, DemoContentV2 } from '@fork-guide/components';
-import { PureConfirm } from '@fork-ui/core';
+import { PureConfirm } from 'fork-design';
 
 export default () => {
   return (

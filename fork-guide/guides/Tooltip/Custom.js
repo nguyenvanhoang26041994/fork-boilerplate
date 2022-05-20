@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Tooltip, Button } from '@fork-ui/core';
+import { Tooltip, Button } from 'fork-design';
 
 const PrimaryTooltip = styled(Tooltip)`
   .tippy-content {

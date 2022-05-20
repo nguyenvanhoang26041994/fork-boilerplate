@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popconfirm, Button } from '@fork-ui/core';
+import { Popconfirm, Button } from 'fork-design';
 import { DemoContentV2 } from '@fork-guide/components';
 
 export default () => {

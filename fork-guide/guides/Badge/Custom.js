@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper, FancyBox } from '@fork-guide/components';
-import { Badge, Button } from '@fork-ui/core';
+import { Badge, Button } from 'fork-design';
 import { Pencil } from '@fork-ui/icons/lazy';
 
 const PureBadge = Badge.PureBadge;
