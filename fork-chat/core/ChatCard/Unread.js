@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
 import PropType from 'prop-types';
-import BadgeCounter from '@fork-ui/core/Badge/Counter'
+import BadgeCounter from 'fork-design/core/Badge/Counter'
 
 const Unread = ({ className, count }) => {
   return (

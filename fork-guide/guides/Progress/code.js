@@ -1,7 +1,7 @@
 export const Color = {
   code: `import React, { useMemo } from 'react';
 import { Wrapper } from '@fork-guide/components';
-import useUniqueId from '@fork-ui/hooks/useUniqueId';
+import useUniqueId from 'fork-design/hooks/useUniqueId';
 import { Progress } from 'fork-design';
 
 export default () => {

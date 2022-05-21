@@ -15,18 +15,13 @@ module.exports = {
       'redux',
       'react-redux',
       'react-router-dom',
+      // 'fork-design/icons/utils/lazy',
+      // 'fork-design/icons/HOCs/withIconEnhance',
+      // 'fork-design/icons/HOCs/withIconLazy',
     ],
-    priorities: {
-      import: [
-        path.join(rootDir, 'fork-ui/utils/lazy'),
-        path.join(rootDir, 'fork-ui/HOCs/withIconEnhancer'),
-        path.join(rootDir, 'fork-ui/HOCs/withIconLazy')
-      ],
-      dependOn: 'vendors',
-    },
     main: {
       import: path.join(rootDir, 'src/index.js'),
-      dependOn: 'priorities',
+      dependOn: 'vendors',
     }
   },
   module: {
@@ -65,12 +60,11 @@ module.exports = {
       '@selectors': path.join(rootDir, 'src/selectors'),
       '@constants': path.join(rootDir, 'src/constants'),
       '@store': path.join(rootDir, 'src/store'),
-      '@fork-ui': path.join(rootDir, 'fork-ui'),
       '@fork-chat': path.join(rootDir, 'fork-chat'),
       '@fork-guide': path.join(rootDir, 'fork-guide'),
     }
   },
   watchOptions: {
-    ignored: ['**/node_modules', path.join(rootDir, 'fork-ui/icons')],
+    ignored: ['**/node_modules'],
   },
 };

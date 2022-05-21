@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { Avatar, Badge } from 'fork-design';
-import { MultiSelect, AsyncMultiSelect } from 'fork-design';
+import { Avatar, Badge, MultiSelect, AsyncMultiSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {

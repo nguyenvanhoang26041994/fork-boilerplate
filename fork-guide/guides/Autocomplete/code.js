@@ -1,4 +1,4 @@
-export const AutoComplete = {
+export const Autocomplete = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { AutoComplete } from 'fork-design';
@@ -36,6 +36,6 @@ export default () => {
   );
 };
 `,
-  demoName: 'Auto Complete',
+  demoName: 'Autocomplete',
 }
 

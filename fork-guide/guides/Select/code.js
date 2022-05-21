@@ -41,8 +41,7 @@ export const ControledAsyncSelect = {
   code: `import React, { useRef, useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import { Avatar, Badge } from 'fork-design';
-import { AsyncSelect } from 'fork-design';
+import { Avatar, Badge, AsyncSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {
@@ -307,8 +306,7 @@ export default () => {
 export const CustomAsyncSelect = {
   code: `import React, { useRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { Avatar, Badge } from 'fork-design';
-import { AsyncSelect } from 'fork-design';
+import { Avatar, Badge, AsyncSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {
@@ -537,8 +535,7 @@ export default () => {
 export const Select = {
   code: `import React, { useRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { Avatar, Badge } from 'fork-design';
-import { Select, AsyncSelect } from 'fork-design';
+import { Avatar, Badge, Select, AsyncSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {

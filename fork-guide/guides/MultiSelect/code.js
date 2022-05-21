@@ -44,8 +44,7 @@ export default () => {
 export const ControlledAsyncMultiSelect = {
   code: `import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { Avatar, Badge } from 'fork-design';
-import { MultiSelect, AsyncMultiSelect } from 'fork-design';
+import { Avatar, Badge, AsyncMultiSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {
@@ -240,8 +239,7 @@ export default () => {
 export const CustomAsyncMultiSelect = {
   code: `import React, { useState, useRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { Avatar, Badge } from 'fork-design';
-import { AsyncMultiSelect } from 'fork-design';
+import { Avatar, Badge, AsyncMultiSelect } from 'fork-design';
 
 const FakeAPI = {
   getOptionsByIds: (ids) => {
@@ -362,8 +360,7 @@ export default () => {
 export const CustomMultiSelect = {
   code: `import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Avatar, Badge } from 'fork-design';
-import { MultiSelect } from 'fork-design';
+import { Avatar, Badge, MultiSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {
@@ -461,8 +458,7 @@ export default () => {
 export const MultiSelect = {
   code: `import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { Avatar, Badge } from 'fork-design';
-import { MultiSelect, AsyncMultiSelect } from 'fork-design';
+import { Avatar, Badge, MultiSelect, AsyncMultiSelect } from 'fork-design';
 
 const FakeAPI = {
   getOption: (id) => {

@@ -2,7 +2,7 @@ export const Colors = {
   code: `import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
-import copyToClipboard from '@fork-ui/utils/copyToClipboard';
+import copyToClipboard from 'fork-design/utils/copyToClipboard';
 
 import GrayColors from './GrayColors';
 

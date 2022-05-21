@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useMemo, useCallback } from 'react';
 import Quill from 'quill';
 import MarkdownActivity from './MarkdownActivity';
-import { uniqueId } from '@fork-ui/utils/helpers';
+import { uniqueId } from 'fork-design/utils/helpers';
 
 import './blots';
 import './mention-user';

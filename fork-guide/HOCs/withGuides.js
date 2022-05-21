@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback } from 'react';
 import styled from 'styled-components';
 import { Flex, Sticky, Button, ButtonGroup } from 'fork-design';
 import { Copy } from 'fork-design/icons/lazy';
-import copyToClipboard from '@fork-ui/utils/copyToClipboard';
+import copyToClipboard from 'fork-design/utils/copyToClipboard';
 import DemoBox from '@fork-guide/components/DemoBox';
 import SyntaxHighlighter from '@fork-guide/components/SyntaxHighlighter';
 

@@ -4,7 +4,7 @@ import {
   Dialog, Avatar, AvatarGroup, Button, Collapse,
   Image, GridImage, Modal, Badge, Popover
 } from 'fork-design';
-import GalleryPlayer from '@fork-ui/gallery/GalleryPlayer'
+import GalleryPlayer from 'fork-design/gallery/GalleryPlayer'
 import {
   BellOff, UserPlus, Logout, Search, Pencil, ThumbUp,
   Circle, Ban, MessagesOff, Dots, Plus,

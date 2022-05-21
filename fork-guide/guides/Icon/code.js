@@ -3,8 +3,8 @@ export const All = {
 import styled from 'styled-components';
 import { debounce } from 'lodash';
 
-import copyToClipboard from '@fork-ui/utils/copyToClipboard';
-import fuzzysort from '@fork-ui/libs/fuzzysort';
+import copyToClipboard from 'fork-design/utils/copyToClipboard';
+import fuzzysort from 'fork-design/libs/fuzzysort';
 import * as allIcons from 'fork-design/icons';
 
 const icons = Object.keys(allIcons);
