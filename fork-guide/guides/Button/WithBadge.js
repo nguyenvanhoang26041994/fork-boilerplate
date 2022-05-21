@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Button, Badge } from 'fork-design';
-import { Bell, Inbox } from '@fork-ui/icons/lazy';
+import { Bell, Inbox } from 'fork-design/icons/lazy';
 
 export default () => {
   return (

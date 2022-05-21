@@ -18,7 +18,7 @@ import {
   Settings, Moon, ThumbUp,
   Phone, Video, AlertCircle, Dots,
   Edit, VideoPlus, Bell, Photo, MessageDots
-} from '@fork-ui/icons/lazy';
+} from 'fork-design/icons';
 import {
   AvatarGroup as RoundedAvatarGroup,
   FloatTyping,

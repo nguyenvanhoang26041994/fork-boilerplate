@@ -33,7 +33,7 @@ import {
   Search,
   ChevronsDown,
   ChevronsUp,
-} from '@fork-ui/icons/lazy';
+} from 'fork-design/icons/lazy';
 
 const MenuItemStyled = styled.div`
   height: 45px;

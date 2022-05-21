@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { BrandGithub, Alarm, Adjustments } from '@fork-ui/icons/lazy';
+import { BrandGithub, Alarm, Adjustments } from 'fork-design/icons/lazy';
 
 export default () => {
   return (

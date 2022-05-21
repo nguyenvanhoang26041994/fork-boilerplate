@@ -21,7 +21,7 @@ export const Button = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Button, ButtonGroup } from 'fork-design';
-import { Power, Message, Bell } from '@fork-ui/icons/lazy';
+import { Power, Message, Bell } from 'fork-design/icons/lazy';
 
 export default () => {
   return (
@@ -67,7 +67,7 @@ export const Custom = {
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
 import { Button } from 'fork-design';
-import { Copy, Notification } from '@fork-ui/icons/lazy';
+import { Copy, Notification } from 'fork-design/icons/lazy';
 
 const GradientButton = styled(Button)\`
   border-color: transparent;
@@ -109,7 +109,7 @@ export const Disabled = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Button } from 'fork-design';
-import { Cast } from '@fork-ui/icons/lazy';
+import { Cast } from 'fork-design/icons/lazy';
 
 export default () => {
   return (
@@ -159,7 +159,7 @@ export const GroupButton = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Button, ButtonGroup } from 'fork-design';
-import { Power, Message, Bell } from '@fork-ui/icons/lazy';
+import { Power, Message, Bell } from 'fork-design/icons/lazy';
 
 export default () => {
   return (
@@ -328,7 +328,7 @@ export const WithBadge = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Button, Badge } from 'fork-design';
-import { Bell, Inbox } from '@fork-ui/icons/lazy';
+import { Bell, Inbox } from 'fork-design/icons/lazy';
 
 export default () => {
   return (
@@ -350,7 +350,7 @@ export const WithIcon = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Button } from 'fork-design';
-import { Power } from '@fork-ui/icons/lazy';
+import { Power } from 'fork-design/icons/lazy';
 
 export default () => {
   return (
@@ -381,7 +381,7 @@ export const WithLoader = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Button } from 'fork-design';
-import { Power } from '@fork-ui/icons/lazy';
+import { Power } from 'fork-design/icons/lazy';
 
 export default () => {
   return (

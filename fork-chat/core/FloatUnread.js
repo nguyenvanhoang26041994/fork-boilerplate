@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import { Badge, Button } from 'fork-design';
-import ChevronDown from '@fork-ui/icons/ChevronDown';
+import ChevronDown from 'fork-design/icons/ChevronDown';
 
 const FloatUnread = ({ className, count, onClick }) => {
   return (

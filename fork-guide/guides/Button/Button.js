@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Button, ButtonGroup } from 'fork-design';
-import { Power, Message, Bell } from '@fork-ui/icons/lazy';
+import { Power, Message, Bell } from 'fork-design/icons/lazy';
 
 export default () => {
   return (

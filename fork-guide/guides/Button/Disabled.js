@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Button } from 'fork-design';
-import { Cast } from '@fork-ui/icons/lazy';
+import { Cast } from 'fork-design/icons/lazy';
 
 export default () => {
   return (

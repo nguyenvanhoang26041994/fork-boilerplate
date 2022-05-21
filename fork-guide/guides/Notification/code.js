@@ -3,7 +3,7 @@ export const Custom = {
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
 import { Notification, Avatar } from 'fork-design';
-import { Video } from '@fork-ui/icons/lazy';
+import { Video } from 'fork-design/icons/lazy';
 import {
   avatarLink,
   avatarLink2,
@@ -52,7 +52,7 @@ export const Notification = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Dialog, Avatar, Notification } from 'fork-design';
-import { Photo } from '@fork-ui/icons/lazy';
+import { Photo } from 'fork-design/icons/lazy';
 import {
   avatarLink,
   avatarLink2,
@@ -109,7 +109,7 @@ export const PushNotification = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Dialog, Avatar, Notification, Button, ButtonGroup } from 'fork-design';
-import { Photo, Video, User } from '@fork-ui/icons/lazy';
+import { Photo, Video, User } from 'fork-design/icons/lazy';
 import {
   avatarLink,
   avatarLink2,
@@ -222,7 +222,7 @@ export const UpdateNotification = {
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
 import { Dialog, Avatar, Notification, Button } from 'fork-design';
-import { Photo } from '@fork-ui/icons/lazy';
+import { Photo } from 'fork-design/icons/lazy';
 import {
   avatarLink,
   avatarLink2,
@@ -332,7 +332,7 @@ export const WithAvatarGroup = {
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
 import { Notification, Avatar, AvatarGroup } from 'fork-design';
-import { Bell } from '@fork-ui/icons/lazy';
+import { Bell } from 'fork-design/icons/lazy';
 import {
   avatarLink,
   avatarLink2,

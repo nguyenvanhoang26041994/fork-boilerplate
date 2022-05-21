@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Dialog, Avatar, Notification, Button, ButtonGroup } from 'fork-design';
-import { Photo, Video, User } from '@fork-ui/icons/lazy';
+import { Photo, Video, User } from 'fork-design/icons/lazy';
 import {
   avatarLink,
   avatarLink2,

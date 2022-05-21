@@ -1,7 +1,7 @@
 import React from 'react';
 import { DemoContent } from '@fork-guide/components';
 import { Tabs, Button, ButtonGroup, Flex } from 'fork-design';
-import { RefreshAlert } from '@fork-ui/icons/lazy';
+import { RefreshAlert } from 'fork-design/icons/lazy';
 
 export default () => {
   const [{ currentTab }, { setCurrentTab }] = Tabs.useTabs({

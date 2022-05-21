@@ -1,7 +1,7 @@
 import React from 'react';
 import { DemoContent } from '@fork-guide/components';
 import { Modal, Button } from 'fork-design';
-import { Minus } from '@fork-ui/icons/lazy';
+import { Minus } from 'fork-design/icons/lazy';
 
 export default () => {
   const { isOpen, doOpen, doClose } = Modal.useModal(false);

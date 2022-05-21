@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { trim } from 'lodash';
 
 import { Button, Textbox } from 'fork-design';
-import { Plus, Photo, ThumbUp, Send, Location, MoodSmile } from '@fork-ui/icons/lazy';
+import { Plus, Photo, ThumbUp, Send, Location, MoodSmile } from 'fork-design/icons/lazy';
 const StyledChatInput = styled(Textbox)`
   border-color: transparent;
   border: 0;

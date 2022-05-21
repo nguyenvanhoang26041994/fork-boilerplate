@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs, Flex } from 'fork-design';
-import { Refresh } from '@fork-ui/icons/lazy';
+import { Refresh } from 'fork-design/icons/lazy';
 import { DemoContent  } from '@fork-guide/components';
 
 export default () => {

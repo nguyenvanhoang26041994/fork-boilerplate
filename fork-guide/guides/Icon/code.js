@@ -5,7 +5,7 @@ import { debounce } from 'lodash';
 
 import copyToClipboard from '@fork-ui/utils/copyToClipboard';
 import fuzzysort from '@fork-ui/libs/fuzzysort';
-import * as allIcons from '@fork-ui/icons';
+import * as allIcons from 'fork-design/icons';
 
 const icons = Object.keys(allIcons);
 const Check = allIcons.Check;
@@ -130,7 +130,7 @@ export default LazyIconDemo;
 export const Color = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { BrandGithub, Alarm, Adjustments } from '@fork-ui/icons/lazy';
+import { BrandGithub, Alarm, Adjustments } from 'fork-design/icons/lazy';
 
 export default () => {
   return (
@@ -148,7 +148,7 @@ export default () => {
 export const Icon = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { BrandGithub, Alarm, Adjustments } from '@fork-ui/icons/lazy';
+import { BrandGithub, Alarm, Adjustments } from 'fork-design/icons/lazy';
 
 export default () => {
   return (
@@ -166,7 +166,7 @@ export default () => {
 export const Size = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
-import { Alarm } from '@fork-ui/icons/lazy';
+import { Alarm } from 'fork-design/icons/lazy';
 
 export default () => {
   return (
@@ -191,7 +191,7 @@ import {
   BellRinging, Ban, HandFinger,
   LayoutGrid, BluetoothConnected, BrandFacebook,
   BuildingCommunity, Check
-} from '@fork-ui/icons/lazy';
+} from 'fork-design/icons/lazy';
 
 export default () => {
   return (

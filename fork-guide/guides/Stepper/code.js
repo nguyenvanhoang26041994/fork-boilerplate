@@ -1,7 +1,7 @@
 export const Alternate = {
   code: `import React from 'react';
 import { Stepper } from 'fork-design';
-import { Home, Message, Copy } from '@fork-ui/icons/lazy';
+import { Home, Message, Copy } from 'fork-design/icons/lazy';
 
 export default () => {
   const [{
@@ -94,7 +94,7 @@ export default () => {
 export const Stepper = {
   code: `import React from 'react';
 import { Stepper } from 'fork-design';
-import { Home, Message, Copy } from '@fork-ui/icons/lazy';
+import { Home, Message, Copy } from 'fork-design/icons/lazy';
 
 export default () => {
   const [{
@@ -158,7 +158,7 @@ export default () => {
 export const Vertical = {
   code: `import React from 'react';
 import { Stepper } from 'fork-design';
-import { Home, Message, Copy } from '@fork-ui/icons/lazy';
+import { Home, Message, Copy } from 'fork-design/icons/lazy';
 
 export default () => {
   const [{

@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@fork-guide/components';
 import { Dialog, Avatar, Notification, Button } from 'fork-design';
-import { Photo } from '@fork-ui/icons/lazy';
+import { Photo } from 'fork-design/icons/lazy';
 import {
   avatarLink,
   avatarLink2,

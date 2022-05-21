@@ -53,7 +53,7 @@ export const Custom = {
   code: `import React from 'react';
 import { Wrapper, FancyBox } from '@fork-guide/components';
 import { Badge, Button } from 'fork-design';
-import { Pencil } from '@fork-ui/icons/lazy';
+import { Pencil } from 'fork-design/icons/lazy';
 
 const PureBadge = Badge.PureBadge;
 

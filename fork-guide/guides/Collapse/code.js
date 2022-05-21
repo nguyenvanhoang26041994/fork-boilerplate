@@ -6,7 +6,7 @@ import {
   PlaneDeparture,
   Share,
   Rotate2,
-} from '@fork-ui/icons/lazy';
+} from 'fork-design/icons/lazy';
 
 export default () => {
   const { isActive, onChange } = Collapse.useCollapse({
@@ -71,7 +71,7 @@ import {
   PlaneDeparture,
   Share,
   Rotate2,
-} from '@fork-ui/icons/lazy';
+} from 'fork-design/icons/lazy';
 
 export default () => {
   const { isActive, onChange } = Collapse.useCollapse({

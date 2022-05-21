@@ -2,7 +2,7 @@ export const Alert = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Alert, Loader } from 'fork-design';
-import { Trash, Check } from '@fork-ui/icons/lazy';
+import { Trash, Check } from 'fork-design/icons/lazy';
 
 export default () => {
   return (
@@ -71,7 +71,7 @@ export const UpdateAlert = {
   code: `import React from 'react';
 import { Wrapper } from '@fork-guide/components';
 import { Alert, Button, Loader } from 'fork-design';
-import { Check } from '@fork-ui/icons/lazy';
+import { Check } from 'fork-design/icons/lazy';
 
 const ref = {
   current: null,

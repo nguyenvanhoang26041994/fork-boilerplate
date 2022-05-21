@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import cn from 'classnames';
 import { Button } from 'fork-design';
-import { Braces } from '@fork-ui/icons/lazy';
+import { Braces } from 'fork-design/icons/lazy';
 
 const DemoBoxWrapper = styled.div`
   width: 100%;

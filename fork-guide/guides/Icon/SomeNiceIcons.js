@@ -7,7 +7,7 @@ import {
   BellRinging, Ban, HandFinger,
   LayoutGrid, BluetoothConnected, BrandFacebook,
   BuildingCommunity, Check
-} from '@fork-ui/icons/lazy';
+} from 'fork-design/icons/lazy';
 
 export default () => {
   return (

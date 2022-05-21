@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Button } from 'fork-design';
 import DarkMode from '@contexts/DarkMode';
-import { IndentDecrease, Search, IndentIncrease, BulbOff, Moon } from '@fork-ui/icons/lazy';
+import { IndentDecrease, Search, IndentIncrease, BulbOff, Moon } from 'fork-design/icons/lazy';
 
 const Container = styled.div`
   width: 100%;

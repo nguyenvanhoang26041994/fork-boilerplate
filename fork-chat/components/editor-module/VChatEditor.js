@@ -5,7 +5,7 @@ import {
   Bold, Italic, Send, Paperclip,
   MoodSmile, At, Speakerphone, Strikethrough,
   Bolt, CirclePlus, Code, Link,
-} from '@fork-ui/icons/lazy';
+} from 'fork-design/icons/lazy';
 import { Popover } from 'fork-design';
 import { NimblePicker } from 'emoji-mart';
 import useVChatEditor from './useVChatEditor';

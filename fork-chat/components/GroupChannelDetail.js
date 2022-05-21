@@ -8,7 +8,7 @@ import GalleryPlayer from '@fork-ui/gallery/GalleryPlayer'
 import {
   BellOff, UserPlus, Logout, Search, Pencil, ThumbUp,
   Circle, Ban, MessagesOff, Dots, Plus,
-} from '@fork-ui/icons/lazy';
+} from 'fork-design/icons/lazy';
 
 const StyledCircle = styled(Circle)`
   color: var(--primary);

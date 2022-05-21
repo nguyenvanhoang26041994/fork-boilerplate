@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stepper } from 'fork-design';
-import { Home, Message, Copy } from '@fork-ui/icons/lazy';
+import { Home, Message, Copy } from 'fork-design/icons/lazy';
 
 export default () => {
   const [{
