@@ -21,11 +21,7 @@
     "transform:icons": "node .toolkit/transform-tabler-icons-to-react/excute",
     "transform:guides": "node .toolkit/transform-guides-for-demo-box/excute",
     "transform:guides:index": "node .toolkit/transform-guides-for-index-js/excute",
-    "sub:update": "git submodule update",
-    "sub:fork-community": "git submodule add  https://github.com/nguyenvanhoang26041994/fork-community.git",
-    "sub:fork-ui": "git submodule add https://github.com/nguyenvanhoang26041994/fork-ui-v2.git",
-    "sub:tabler-icons": "git submodule add https://github.com/nguyenvanhoang26041994/tabler-icons.git",
-    "init:start": "yarn sub:update",
+    "sub:init": "git submodule init && git submodule update",
     "deploy": "yarn build && firebase deploy --only hosting:fork-boilerplate",
     "build-chat-app": "rimraf \"../public/chat-app\" && cross-env NODE_ENV=development webpack --config webpack/webpack.chat-app.js"
   },
