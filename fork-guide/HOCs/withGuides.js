@@ -59,7 +59,7 @@ export default (demos, allCode) => () => {
 
   return (
     <Wrapper wrap>
-      <DemoBoxList col w={mode.normal.left} style={{ paddingRight: '2px' }} className="common-scrollbar">
+      <DemoBoxList direction="col" w={mode.normal.left} style={{ paddingRight: '2px' }} className="common-scrollbar">
         {demos.map((Demo) => (
           <DemoBox
             name={allCode[Demo.name].demoName}

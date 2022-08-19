@@ -7,6 +7,7 @@ export default () => {
   return (
     <Wrapper className="mb-5">
       <Button>Basic</Button>
+      <Button variant="outline">Basic</Button>
       <Button loading rounded icon={<Power />} />
       <Button rounded color="primary">Primary</Button>
       <Button border="dashed" color="danger">Danger</Button>

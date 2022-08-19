@@ -26,12 +26,31 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.tsx?$/,
+      //   use: ['ts-loader'],
+      //   exclude: /node_modules/,
+      // },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: 'babel-loader'
+      //   }
+      // },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react",
+              "@babel/preset-typescript",
+            ],
+          },
+        },
       },
       {
         test: /\.(css|scss|sass)$/,
@@ -46,6 +65,7 @@ module.exports = {
     }),
   ],
   resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
     alias: {
       '@@': rootDir,
       '@': path.join(rootDir, 'src'),
@@ -62,6 +82,7 @@ module.exports = {
       '@store': path.join(rootDir, 'src/store'),
       '@fork-chat': path.join(rootDir, 'fork-chat'),
       '@fork-guide': path.join(rootDir, 'fork-guide'),
+      'fork-design': path.join(rootDir, 'fork-design/src'),
     }
   },
   watchOptions: {

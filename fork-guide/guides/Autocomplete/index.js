@@ -1,12 +1,12 @@
 import withGuides from '@fork-guide/HOCs/withGuides';
 
-import AutoComplete from './AutoComplete';
+import Autocomplete from './Autocomplete';
 // __INJECTED_LINE__
 
 import * as allCode from './code';
 
 const demos = [
-  { Component: AutoComplete, name: 'AutoComplete' },
+  { Component: Autocomplete, name: 'Autocomplete' },
   // __INJECTED_ITEM__
 ];
 

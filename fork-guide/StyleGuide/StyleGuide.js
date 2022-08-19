@@ -32,7 +32,7 @@ const TimelineGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guid
 const AlertGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Alert'));
 const ModalGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Modal'));
 const DrawerGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Drawer'));
-const AutoCompleteGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/AutoComplete'));
+const AutocompleteGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Autocomplete'));
 const SelectGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Select'));
 const ConfirmGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Confirm'));
 const GridGuides = lazy(() => import(/* webpackPrefetch: true */ '@fork-guide/guides/Grid'));
@@ -72,7 +72,7 @@ const StyleGuide = () => {
       <Route path={`${path}/alert`} component={AlertGuides} />
       <Route path={`${path}/modal`} component={ModalGuides} />
       <Route path={`${path}/drawer`} component={DrawerGuides} />
-      <Route path={`${path}/autocomplete`} component={AutoCompleteGuides} />
+      <Route path={`${path}/autocomplete`} component={AutocompleteGuides} />
       <Route path={`${path}/select`} component={SelectGuides} />
       <Route path={`${path}/confirm`} component={ConfirmGuides} />
       <Route path={`${path}/grid`} component={GridGuides} />
