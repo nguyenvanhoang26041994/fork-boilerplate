@@ -1,16 +1,20 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es5",
-    "jsx": "react",
-    "allowJs": true,
-    "noEmit": true,
-    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2020", "dom"],
+    "jsx": "preserve",
     "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "noErrorTruncation": false,
+    "allowJs": true,
     "paths": {
-      "fork-design": ["./fork-design/src"],
-    },
+      "fork-design": ["./fork-design/src"]
+    }
   }
 }

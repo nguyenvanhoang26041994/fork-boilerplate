@@ -8,7 +8,7 @@ export default () => {
     currentTab: 'fresh-tab',
   });
   return (
-    <Flex col w="full">
+    <Flex direction="col" w="full">
       <Tabs>
         <Tabs.Tab
           active={currentTab === 'normal-tab'}

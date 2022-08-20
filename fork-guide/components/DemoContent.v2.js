@@ -3,12 +3,12 @@ import { Flex, Skeleton } from 'fork-design';
 
 const DemoContent = () => {
   return (
-    <Flex col className="flex-1 fskele-animated" style={{ minWidth: '400px' }}>
+    <Flex direction="col" className="flex-1 fskele-animated" style={{ minWidth: '400px' }}>
       <Skeleton shape="p" w="70%" />
       <Skeleton shape="p" w="40%" />
-      <Flex row w="full">
+      <Flex direction="row" w="full">
         <Skeleton shape="rect" w="200px" h="100px" />
-        <Flex col w="full" className="pl-3">
+        <Flex direction="col" w="full" className="pl-3">
           <Skeleton shape="p" w="70%" />
           <Skeleton shape="p" w="40%" />
           <Skeleton shape="p" w="50%" />

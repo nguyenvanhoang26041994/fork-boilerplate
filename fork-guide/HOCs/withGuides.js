@@ -58,7 +58,7 @@ export default (demos, allCode) => () => {
   }, [setSelectedName]);
 
   return (
-    <Wrapper wrap>
+    <Wrapper wrap="wrap">
       <DemoBoxList direction="col" w={mode.normal.left} style={{ paddingRight: '2px' }} className="common-scrollbar">
         {demos.map((Demo) => (
           <DemoBox
@@ -71,7 +71,7 @@ export default (demos, allCode) => () => {
           </DemoBox>
         ))}
       </DemoBoxList>
-      <Flex col w={mode.normal.right} style={{ backgroundColor: 'var(--bg)' }}>
+      <Flex direction="col" w={mode.normal.right} style={{ backgroundColor: 'var(--bg)' }}>
         <DemoDetailBox code={allCode[selectedName].code} className="common-scrollbar" />
       </Flex>
     </Wrapper>

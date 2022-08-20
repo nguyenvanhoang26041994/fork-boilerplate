@@ -30,33 +30,33 @@ import SelectMainGuide from '@fork-guide/guides/Select/Select';
 
 const AllGuide = () => {
   return (
-    <Flex col w="full">
-      <Flex row w="full" style={{ paddingBottom: '1px' }}>
+    <Flex direction="col" w="full">
+      <Flex direction="row" w="full" style={{ paddingBottom: '1px' }}>
         <Demo name="Colors">
           <ColorsMainGuide />
         </Demo>
       </Flex>
-      <Flex row w="full" style={{ paddingBottom: '1px' }}>
+      <Flex direction="row" w="full" style={{ paddingBottom: '1px' }}>
         <Flex w="1/2" style={{ paddingRight: '1px' }}>
           <Demo name="Skeleton">
             <SkeletonMainGuide />
           </Demo>
         </Flex>
-        <Flex col w="1/2">
+        <Flex direction="col" w="1/2">
           <Flex w="full" style={{ paddingBottom: '1px' }}>
             <Demo name="Button">
               <div><ButtonMainGuide /></div>
             </Demo>
           </Flex>
-          <Flex w="full" grow>
+          <Flex w="full" grow="grow">
             <Demo name="Badge">
               <div><BadgeMainGuide /></div>
             </Demo>
           </Flex>
         </Flex>
       </Flex>
-      <Flex row w="full" style={{ paddingBottom: '1px' }}>
-        <Flex col w="1/3" style={{ paddingRight: '1px' }}>
+      <Flex direction="row" w="full" style={{ paddingBottom: '1px' }}>
+        <Flex direction="col" w="1/3" style={{ paddingRight: '1px' }}>
           <div style={{ paddingBottom: '1px' }}>
             <Demo name="Switch" centered>
               <SwitchMainGuide />
@@ -76,7 +76,7 @@ const AllGuide = () => {
             <CollapseMainGuide />
           </Demo>
         </Flex>
-        <Flex col w="2/3">
+        <Flex direction="col" w="2/3">
           <Flex w="full" style={{ paddingBottom: '1px' }}>
             <Demo name="Loader" centered>
               <LoaderMainGuide />
@@ -118,8 +118,8 @@ const AllGuide = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex row w="full" style={{ paddingBottom: '1px' }}>
-        <Flex col w="1/2" style={{ paddingRight: '1px' }}>
+      <Flex direction="row" w="full" style={{ paddingBottom: '1px' }}>
+        <Flex direction="col" w="1/2" style={{ paddingRight: '1px' }}>
           <Flex w="full" style={{ paddingBottom: '1px' }}>
             <Demo name="Dialog">
               <DialogMainGuide />
@@ -131,7 +131,7 @@ const AllGuide = () => {
             </Demo>
           </Flex>
         </Flex>
-        <Flex w="1/2" col>
+        <Flex w="1/2" direction="col">
           <Flex w="full" style={{ paddingBottom: '1px' }}>
             <Demo name="Form Field">
               <FormFieldMainGuide />
@@ -149,7 +149,7 @@ const AllGuide = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex row w="full" style={{ paddingBottom: '1px' }}>
+      <Flex direction="row" w="full" style={{ paddingBottom: '1px' }}>
         <Flex w="1/2" style={{ paddingRight: '1px' }}>
           <Demo name="Popover">
             <PopoverMainGuide />
@@ -161,7 +161,7 @@ const AllGuide = () => {
           </Demo>
         </Flex>
       </Flex>
-      <Flex row w="full" style={{ paddingBottom: '1px' }}>
+      <Flex direction="row" w="full" style={{ paddingBottom: '1px' }}>
         <Flex w="1/3" style={{ paddingRight: '1px' }}>
           <Demo name="Alert">
             <AlertMainGuide />

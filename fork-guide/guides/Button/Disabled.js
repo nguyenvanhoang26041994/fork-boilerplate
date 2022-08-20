@@ -1,16 +1,27 @@
 import React from 'react';
-import { Wrapper } from '@fork-guide/components';
-import { Button } from 'fork-design';
-import { Cast } from 'fork-design/icons/lazy';
+import { Button, Flex } from 'fork-design';
 
 export default () => {
   return (
-    <Wrapper>
-      <Button border="solid" disabled>Basic</Button>
-      <Button disabled border="dashed" color="primary">Primary</Button>
-      <Button disabled color="primary">Primary</Button>
-      <Button disabled color="danger">Danger</Button>
-      <Button disabled rounded icon={<Cast />} />
-    </Wrapper>
+    <Flex direction="col" sx={{ gap: 10}}>
+      <Flex sx={{ gap: 10 }}>
+        <Button disabled color="primary">Primary</Button>
+        <Button disabled color="secondary">Secondary</Button>
+        <Button disabled color="success">Success</Button>
+        <Button disabled color="error">Error</Button>
+      </Flex>
+      <Flex sx={{ gap: 10 }}>
+        <Button disabled color="primary" variant="outlined">Outlined</Button>
+        <Button disabled color="primary" variant="dashed">Dashed</Button>
+      </Flex>
+      <Flex sx={{ gap: 10 }}>
+        <Button disabled color="error" variant="outlined">Outlined</Button>
+        <Button disabled color="error" variant="dashed">Dashed</Button>
+      </Flex>
+      <Flex sx={{ gap: 10 }}>
+        <Button disabled color="success" variant="outlined">Outlined</Button>
+        <Button disabled color="success" variant="dashed">Dashed</Button>
+      </Flex>
+    </Flex>
   );
 };

@@ -19,7 +19,7 @@ const Wrapper = styled(Flex)`
 const ConfigPropsTool = () => {
   return (
     <Wrapper>
-      <Flex col w="1/2" className="p-2">
+      <Flex direction="col" w="1/2" className="p-2">
         <StyledTextbox defaultValue="Don't touch me!" className="mb-2" />
         <StyledTextbox />
       </Flex>

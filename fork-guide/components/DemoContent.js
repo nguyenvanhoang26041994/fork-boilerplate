@@ -3,10 +3,10 @@ import { Flex, Skeleton } from 'fork-design';
 
 const DemoContent = () => {
   return (
-    <Flex col style={{ padding: '10px 20px' }} w="full" className="fskele-animated">
+    <Flex direction="col" style={{ padding: '10px 20px' }} w="full" className="fskele-animated">
       <Flex items="center" className="mb-5">
         <Skeleton shape="circle" size="2rem" />
-        <Flex col className="ml-5 flex-1">
+        <Flex direction="col" className="ml-5 flex-1">
           <Skeleton shape="p" w="70%" />
           <Skeleton shape="p" w="20%" />
           <Skeleton shape="p" w="40%" />
@@ -14,7 +14,7 @@ const DemoContent = () => {
       </Flex>
       <Flex items="center" className="mt-5">
         <Skeleton shape="rect" w="200px" h="200px" />
-        <Flex col className="ml-10 flex-1">
+        <Flex direction="col" className="ml-10 flex-1">
           <Skeleton shape="p" w="70%" />
           <Skeleton shape="p" w="20%" />
           <Skeleton shape="p" w="40%" />

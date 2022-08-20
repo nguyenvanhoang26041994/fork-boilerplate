@@ -1,13 +1,12 @@
 import React from 'react';
-import { Wrapper } from '@fork-guide/components';
-import { Button } from 'fork-design';
+import { Button, Flex } from 'fork-design';
 
 export default () => {
   return (
-    <Wrapper style={{ display: 'block' }}>
-      <Button size="0.85rem">0.85rem</Button>
-      <Button size="1.5em">1.5em</Button>
-      <Button size="25px">25px</Button>
-    </Wrapper>
+    <Flex sx={{ gap: 10 }}>
+      <Button size="small">Small</Button>
+      <Button size="medium">Medium</Button>
+      <Button size="large">Large</Button>
+    </Flex>
   );
 };

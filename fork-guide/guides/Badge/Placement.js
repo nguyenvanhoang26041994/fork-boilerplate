@@ -42,8 +42,8 @@ export default () => {
   const [{ checked, toggle }] = Switch.useSwitch(false);
 
   return (
-    <FlexStyled w="full" col items="center" className={cn({ 'fancy-box-circle': checked })}>
-      <Flex col w="full" items="center">
+    <FlexStyled w="full" direction="col" items="center" className={cn({ 'fancy-box-circle': checked })}>
+      <Flex direction="col" w="full" items="center">
         <Flex>
           <FancyBox hidden className="m-5" />
           <Badge.Counter

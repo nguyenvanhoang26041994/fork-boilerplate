@@ -1,5 +1,4 @@
 import withGuides from '@fork-guide/HOCs/withGuides';
-import Bordered from './Bordered';
 import Button from './Button';
 import Color from './Color';
 import Custom from './Custom';
@@ -10,7 +9,6 @@ import Size from './Size';
 import WithBadge from './WithBadge';
 import WithIcon from './WithIcon';
 import WithLoader from './WithLoader';
-import Pin from './Pin';
 // __INJECTED_LINE__
 
 import * as allCode from './code';
@@ -19,7 +17,6 @@ const demos = [
   { Component: Button, name: 'Button' },
   { Component: Color, name: 'Color' },
   { Component: Disabled, name: 'Disabled' },
-  { Component: Bordered, name: 'Bordered' },
   { Component: GroupButton, name: 'GroupButton' },
   { Component: Custom, name: 'Custom' },
   { Component: FluidGroupButton, name: 'FluidGroupButton' },
@@ -27,7 +24,6 @@ const demos = [
   { Component: WithBadge, name: 'WithBadge' },
   { Component: WithIcon, name: 'WithIcon' },
   { Component: WithLoader, name: 'WithLoader' },
-  { Component: Pin, name: 'Pin' },
   // __INJECTED_ITEM__
 ];
 

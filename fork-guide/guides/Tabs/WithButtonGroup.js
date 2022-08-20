@@ -9,7 +9,7 @@ export default () => {
   });
 
   return (
-    <Flex col w="full">
+    <Flex direction="col" w="full">
       <ButtonGroup fluid>
         <Button
           onClick={() => setCurrentTab('normal-tab')}
